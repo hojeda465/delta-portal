@@ -55,10 +55,14 @@ def chip_verif(v):
 # ---- lead + grid -------------------------------------------------------
 def card_lead(a):
     sc = SEC_COLOR.get(a["seccion"], "#0E7C86")
+    num = a.get('numero','')
+    # el número ancla se achica según su longitud para no desbordar la caja
+    n = len(num)
+    fs = 64 if n <= 5 else (50 if n <= 8 else 38)
     return f"""
     <a class="lead" href="{escape(a['archivo'])}">
       <div class="lead-num" style="--sc:{sc}">
-        <span class="ln-big">{escape(a.get('numero',''))}</span>
+        <span class="ln-big" style="font-size:{fs}px">{escape(num)}</span>
         <span class="ln-lab">{escape(a.get('numero_label',''))}</span>
       </div>
       <div class="lead-body">
