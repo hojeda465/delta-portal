@@ -1,0 +1,50 @@
+<!--
+  DELTA · Plantilla de nota (estructura de 6 capas)
+  =================================================
+  El agente Redactor usa este esqueleto. Para el estilo visual completo (CSS,
+  masthead, selector de capas, componentes de gráfico), usar como PLANTILLA
+  CANÓNICA la nota de referencia:
+      articulos/2026-07-18-inflacion-argentina.html
+  Copiar su <head><style> y su <script> de gráficos, y reemplazar solo el
+  contenido de cada bloque. Reglas de oro:
+    · Cada gráfico = una idea, con eje + fuente + unidad.
+    · Cada cifra "ESTIMACIÓN" va con su rango y la palabra "estimado".
+    · Nada de datos NO_VERIFICADOS.
+  Estructura obligatoria de la nota:
+-->
+<article>
+
+  <!-- volanta: SECCIÓN / Formato -->
+  <div class="kicker">SECCIÓN <span class="sep">/</span> <span class="fmt">Formato</span></div>
+
+  <!-- Titular claro (sin sensacionalismo) -->
+  <h1>Titular que dice el qué y el cuánto</h1>
+
+  <!-- Bajada: 2–3 frases que ya adelantan la tensión de datos -->
+  <p class="standfirst">Bajada con la promesa de la nota y su número clave.</p>
+
+  <div class="byline"><span>Por <b>Redacción Delta</b></span> · <span>fecha</span> · <span>Lectura: 30 seg → N min</span></div>
+
+  <!-- Selector de capas (copiar de la nota de referencia) -->
+
+  <!-- ① EL NÚMERO — una sola cifra ancla, gigante, con 2–3 datos de apoyo -->
+  <div class="block" id="b1"> ... hero-num ... </div>
+
+  <!-- ② LA NOTICIA — qué pasó, en lenguaje llano, 3–4 frases -->
+  <div class="block prose" id="b2"> ... </div>
+
+  <!-- ③ EL DATO EN CONTEXTO — el gráfico central + comparación histórica/internacional -->
+  <div class="block prose" id="b3"> ... figure con gráfico ... </div>
+
+  <!-- ④ CÓMO LO SABEMOS — la cocina: fuente, fecha, método, límites del dato -->
+  <div class="block" id="b4"> ... caja "cocina" ... </div>
+
+  <!-- ⑤ POR QUÉ IMPORTA — el "y esto qué": consecuencias concretas + gráfico de apoyo -->
+  <div class="block prose" id="b5"> ... </div>
+
+  <!-- ⑥ PARA IR MÁS PROFUNDO — capa técnica opcional (details desplegables) -->
+  <div class="block" id="b6"> ... details ... </div>
+
+</article>
+
+<!-- footer con FUENTES enlazadas (una por cada dato) y ficha de verificación -->

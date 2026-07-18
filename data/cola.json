@@ -1,0 +1,16 @@
+{
+  "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
+  "actualizado": "2026-07-18T14:30:00-03:00",
+  "borradores": [
+    {
+      "id": "2026-07-18-malvinas-sea-lion",
+      "titulo": "Sea Lion: cuánto petróleo hay en juego en Malvinas (y por qué podría triplicar el PBI de las islas)",
+      "seccion": "EL MUNDO EN NÚMEROS",
+      "formato": "Anatomía de un dato",
+      "generado": "2026-07-18T14:05:00-03:00",
+      "estado": "pendiente_revision",
+      "verificacion": "pendiente",
+      "notas_verificador": "2 de 3 afirmaciones numéricas confirmadas con doble fuente; la estimación de reservas recuperables tiene rango amplio — marcada como estimación."
+    }
+  ]
+}

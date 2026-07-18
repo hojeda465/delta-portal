@@ -1,0 +1,19 @@
+{
+  "descripcion": "Memoria de temas ya cubiertos o en cola. El agente Editor la consulta para no repetir noticias. Cada entrada: tema, ángulo, fecha y estado.",
+  "temas": [
+    {
+      "tema": "inflación junio 2026 / desinflación con recesión",
+      "angulo": "los números macro mejoran pero el consumo y el empleo caen",
+      "fecha": "2026-07-18",
+      "estado": "publicada",
+      "articulo_id": "2026-07-18-inflacion-argentina"
+    },
+    {
+      "tema": "petróleo en Malvinas / proyecto Sea Lion",
+      "angulo": "reservas, inversión y efecto sobre el PBI de las islas",
+      "fecha": "2026-07-18",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-18-malvinas-sea-lion"
+    }
+  ]
+}
