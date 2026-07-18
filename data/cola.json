@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-18T20:12:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-07-18-vaca-muerta-superavit-energetico",
-      "titulo": "Dos de cada tres barriles: cómo Vaca Muerta dio vuelta la balanza energética argentina",
-      "bajada": "En abril, el 67% del petróleo del país salió de un solo lugar. Ese salto de producción llevó al comercio de energía del mayor déficit en años —US$4.400 millones en rojo en 2022— al mayor superávit de su historia. El primer semestre de 2026 habría cerrado en torno a los US$7.000 millones a favor: una cifra que la entidad que la difundió todavía marca como estimada.",
-      "seccion": "PLATA",
-      "formato": "Antes / Después",
-      "numero": "67%",
-      "numero_label": "del crudo argentino ya sale de Vaca Muerta",
-      "fecha": "2026-07-18",
-      "hora": "20:12",
-      "archivo": "cola/2026-07-18-vaca-muerta-superavit-energetico.html",
-      "verificacion": "verificada",
-      "fuentes": 6,
-      "lectura": "30 seg → 11 min"
-    }
-  ]
+  "borradores": []
 }
