@@ -42,7 +42,7 @@ def actualizado_hace(iso):
 
 SEC_COLOR = {
     "PLATA": "#0E7C86", "MERCADOS": "#0A5C63", "MÁQUINAS": "#C4701F",
-    "CIENCIA": "#2E8B6F", "EL MUNDO EN NÚMEROS": "#7A5CC4",
+    "CIENCIA": "#2E8B6F", "EL MUNDO EN NÚMEROS": "#7A5CC4", "DEPORTES": "#C0392B",
 }
 
 def chip_verif(v):

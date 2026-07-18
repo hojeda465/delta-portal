@@ -10,9 +10,25 @@
     "MERCADOS",
     "MÁQUINAS",
     "CIENCIA",
-    "EL MUNDO EN NÚMEROS"
+    "EL MUNDO EN NÚMEROS",
+    "DEPORTES"
   ],
   "articulos": [
+    {
+      "id": "2026-07-18-inglaterra-francia-tercer-puesto",
+      "titulo": "Inglaterra apagó a Francia y se colgó el bronce",
+      "bajada": "Inglaterra goleó 4-1 a Francia en el partido por el tercer puesto del Mundial 2026: hizo sus cuatro goles antes del minuto 46 y Mbappé, con su gol 21 en Mundiales, igualó a Messi como máximo anotador histórico del torneo.",
+      "seccion": "DEPORTES",
+      "formato": "Infografía",
+      "numero": "4–1",
+      "numero_label": "Inglaterra–Francia · tercer puesto",
+      "fecha": "2026-07-18",
+      "hora": "20:40",
+      "archivo": "articulos/2026-07-18-inglaterra-francia-tercer-puesto.html",
+      "verificacion": "verificada",
+      "fuentes": 3,
+      "lectura": "Infografía · 2 min"
+    },
     {
       "id": "2026-07-18-vaca-muerta-superavit-energetico",
       "titulo": "Dos de cada tres barriles: cómo Vaca Muerta dio vuelta la balanza energética argentina",
