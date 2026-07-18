@@ -191,7 +191,14 @@ regenerar la portada, y luego commit + push.
 
 Para **aprobar**, basta con decirle a Delta (en una sesión de Cowork):
 > "Aprobá la nota `<id>` de la cola" — o — "Rechazá la nota `<id>`".
-La sesión ejecuta el movimiento, corre `build_portada.py`, y hace push.
+
+La sesión ejecuta el script correspondiente (que hace todo el movimiento de
+archivos y manifiestos y regenera la portada) y luego hace commit + push:
+
+```bash
+python3 scripts/aprobar.py  <id>            # publica el borrador
+python3 scripts/rechazar.py <id> "motivo"   # lo descarta y lo recuerda en cubiertas.json
+```
 
 ---
 
