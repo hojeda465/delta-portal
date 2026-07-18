@@ -14,6 +14,10 @@ from html import escape
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 
+# URL base pública del sitio. Cuando se configure un dominio propio,
+# cambiar SOLO esta línea (ej. "https://deltadiario.com").
+SITE = "https://hojeda465.github.io/delta-portal"
+
 def load(name):
     with open(os.path.join(DATA, name), encoding="utf-8") as f:
         return json.load(f)
@@ -111,6 +115,19 @@ HTML = f"""<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{escape(portal['nombre'])} — {escape(portal['tagline'])}</title>
 <meta name="description" content="{escape(portal['descripcion'])}">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="canonical" href="{SITE}/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{escape(portal['nombre'])}">
+<meta property="og:title" content="{escape(portal['nombre'])} — {escape(portal['tagline'])}">
+<meta property="og:description" content="{escape(portal['descripcion'])}">
+<meta property="og:url" content="{SITE}/">
+<meta property="og:image" content="{SITE}/assets/og-delta.png">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{escape(portal['nombre'])} — {escape(portal['tagline'])}">
+<meta name="twitter:description" content="{escape(portal['descripcion'])}">
+<meta name="twitter:image" content="{SITE}/assets/og-delta.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -246,4 +263,16 @@ HTML = f"""<!DOCTYPE html>
 out = os.path.join(ROOT, "index.html")
 with open(out, "w", encoding="utf-8") as f:
     f.write(HTML)
-print(f"OK -> {out}  ({len(articulos)} notas, {len(borradores)} en cola)")
+
+# ---- sitemap.xml (para SEO) --------------------------------------------
+urls = [f"  <url><loc>{SITE}/</loc><changefreq>hourly</changefreq><priority>1.0</priority></url>"]
+for a in articulos:
+    urls.append(
+        f"  <url><loc>{SITE}/{escape(a['archivo'])}</loc>"
+        f"<lastmod>{a['fecha']}</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>")
+sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' \
+          + "\n".join(urls) + "\n</urlset>\n"
+with open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8") as f:
+    f.write(sitemap)
+
+print(f"OK -> {out}  ({len(articulos)} notas, {len(borradores)} en cola)  + sitemap.xml")

@@ -63,7 +63,8 @@ def main(draft_id):
 
     save("articulos.json", art); save("cola.json", cola); save("cubiertas.json", cub)
 
-    # 5) regenerar portada
+    # 5) inyectar metadatos de marca/redes y regenerar portada + sitemap
+    subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "inject_meta.py")], check=True)
     subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "build_portada.py")], check=True)
     print(f"PUBLICADA: {draft['titulo']}")
 
