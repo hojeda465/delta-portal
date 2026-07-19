@@ -1,0 +1,66 @@
+/* Con Interés — hoja de estilo compartida de LECCIONES (Modo Aprendizaje) */
+:root{
+  --paper:#FAF8F4;--ink:#16130F;--ink-soft:#3C3833;--teal:#0E7C86;--teal-deep:#0A5C63;
+  --amber:#C4701F;--green:#2E8B6F;--red:#C0392B;--blue:#1F5AA8;--muted:#6B6560;--faint:#8A847C;
+  --rule:#DCD6CC;--grid:#E7E1D7;--card:#FFFFFF;--card-edge:#EAE4DA;
+  --serif:"Source Serif 4",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:720px;margin:0 auto;padding:0 22px}
+.masthead{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:50}
+.masthead .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:960px}
+.brand{font-family:var(--serif);font-weight:700;font-size:26px;letter-spacing:-.01em;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
+.brand .tri{color:var(--teal)}
+.brand .tag{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:8px;font-weight:500}
+.mh-back{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none}
+article{padding-top:36px}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);font-weight:600;margin-bottom:14px}
+.kicker .sep{color:var(--rule);margin:0 8px}
+h1{font-family:var(--serif);font-weight:700;font-size:38px;line-height:1.14;letter-spacing:-.015em;margin:0 0 16px}
+.standfirst{font-family:var(--serif);font-size:20px;line-height:1.5;color:var(--ink-soft);margin:0 0 22px}
+.byline{font-family:var(--mono);font-size:12px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:11px 0;margin-bottom:8px;display:flex;gap:14px;flex-wrap:wrap}
+.prose p{font-size:18px;line-height:1.75;margin:0 0 20px}
+.prose p b{font-weight:600}
+.block-tag{display:flex;align-items:center;gap:10px;margin:42px 0 18px}
+.block-tag .num{font-family:var(--mono);font-weight:600;font-size:13px;color:var(--paper);background:var(--amber);width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.block-tag .txt{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.block-tag .rule{flex:1;height:1px;background:var(--rule)}
+.idea{background:var(--ink);color:var(--paper);border-radius:14px;padding:26px 28px;margin:6px 0 26px}
+.idea .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#4FC0A4;margin-bottom:10px}
+.idea p{font-size:21px;line-height:1.45;margin:0;font-family:var(--serif)}
+.idea b{color:#fff}
+.analogy{background:#F3EFE7;border:1px solid var(--card-edge);border-left:3px solid var(--teal);border-radius:10px;padding:18px 20px;margin:6px 0 26px;font-size:16px;color:var(--ink-soft);line-height:1.6}
+.analogy b{color:var(--ink)}
+.example{background:var(--card);border:1px solid var(--card-edge);border-radius:12px;padding:20px;margin:6px 0 26px}
+.example .el{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-deep);font-weight:600;margin-bottom:12px}
+.example table{width:100%;border-collapse:collapse;font-size:15px}
+.example td{padding:8px 0;border-bottom:1px solid var(--grid)}
+.example td.n{font-family:var(--mono);text-align:right;font-weight:600}
+.example tr:last-child td{border-bottom:none;font-weight:700}
+.example .hl{color:var(--red)} .example .hlg{color:var(--green)}
+.steps{list-style:none;margin:6px 0 26px;padding:0;counter-reset:s}
+.steps li{position:relative;background:var(--card);border:1px solid var(--card-edge);border-radius:12px;padding:16px 18px 16px 56px;margin-bottom:10px;font-size:16px;line-height:1.55;color:var(--ink-soft)}
+.steps li::before{counter-increment:s;content:counter(s);position:absolute;left:16px;top:16px;width:26px;height:26px;background:var(--teal);color:#fff;border-radius:50%;font-family:var(--mono);font-weight:600;font-size:13px;display:flex;align-items:center;justify-content:center}
+.steps li b{color:var(--ink)}
+.warn{background:#FBF3E4;border:1px solid #EAD9B8;border-left:3px solid var(--amber);border-radius:10px;padding:16px 18px;margin:6px 0 26px;font-size:15px;color:var(--ink-soft);line-height:1.6}
+.warn b{color:var(--amber);display:block;font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+.debate{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:8px 0 24px}
+.side{background:var(--card);border:1px solid var(--card-edge);border-radius:12px;padding:18px}
+.side h4{margin:0 0 10px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;font-weight:700;display:flex;align-items:center;gap:8px}
+.side.a h4{color:var(--teal-deep)} .side.b h4{color:var(--amber)}
+.side .dot{width:11px;height:11px;border-radius:50%}
+.side.a .dot{background:var(--teal)} .side.b .dot{background:var(--amber)}
+.side ul{margin:0;padding-left:18px} .side li{font-size:14px;line-height:1.55;color:var(--ink-soft);margin-bottom:7px}
+.neutral{font-size:14px;color:var(--faint);font-family:var(--mono);text-align:center;margin:0 0 24px;line-height:1.5}
+.takeaway{border-top:2px solid var(--teal);border-bottom:2px solid var(--teal);padding:18px 0;margin:24px 0;font-family:var(--serif);font-size:20px;line-height:1.4;color:var(--teal-deep);font-weight:600}
+.next{display:flex;justify-content:space-between;align-items:center;gap:14px;background:var(--card);border:1px solid var(--card-edge);border-radius:12px;padding:16px 20px;margin:8px 0 0;text-decoration:none}
+.next .nl{font-family:var(--mono);font-size:11px;color:var(--faint);text-transform:uppercase;letter-spacing:.08em}
+.next .nt{font-family:var(--serif);font-size:17px;font-weight:600;margin-top:2px}
+.next .na{font-family:var(--mono);font-size:20px;color:var(--teal)}
+footer{border-top:2px solid var(--ink);margin-top:44px;padding:24px 0 60px}
+footer .fb{font-family:var(--serif);font-weight:700;font-size:18px} footer .fb .tri{color:var(--teal)}
+footer .fl{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:8px} footer .fl a{color:var(--teal-deep);text-decoration:none}
+footer .disc{font-size:12px;color:var(--faint);margin-top:10px;max-width:560px;line-height:1.5}
+@media(max-width:600px){h1{font-size:29px}.debate{grid-template-columns:1fr}}
