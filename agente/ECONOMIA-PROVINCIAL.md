@@ -82,8 +82,15 @@ Cada nota cierra con **fuentes enlazadas** (una por dato) y la ficha de método.
 ```
 articulos/<fecha>-economia-<provincia>.html   la nota publicada
 data/articulos.json                           manifiesto (entrada de la nota)
+provincias.html                               hub de la serie (mapa + tarjetas)
 agente/ECONOMIA-PROVINCIAL.md                 este archivo
 ```
+
+**Al publicar una provincia nueva**, además de la nota y el manifiesto, actualizar
+`provincias.html`: (1) cambiar el casillero de esa provincia de `class="prov soon"` a
+`class="prov done"` con su `href` a la nota y el tilde `<span class="chk">✓</span>`;
+(2) agregar su tarjeta en "Perfiles publicados"; (3) subir el contador ("N de 24") y el
+ancho de la barra de progreso (`width` ≈ N/24). Así el mapa se llena solo con cada perfil.
 
 Cada corrida es una sesión nueva y sin memoria: el orden de provincias ya cubiertas se lee
 de `data/cubiertas.json` / de las notas existentes para no repetir.
