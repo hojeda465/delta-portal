@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-19T04:30:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-07-19-primer-deficit-primario-era-milei",
-      "titulo": "El primer déficit primario de la era Milei: junio cerró en rojo, aunque el semestre sigue con superávit",
-      "bajada": "Por primera vez desde que asumió, el Estado nacional gastó más de lo que recaudó incluso antes de pagar la deuda: junio dejó un déficit primario de $696.843 millones. El aguinaldo y una postergación de Ganancias explican el traspié. El semestre igual cerró en azul —0,6% del PBI de superávit primario—, pero menos de la mitad de la meta anual, con el FMI mirando de cerca.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "−$696.843 M",
-      "numero_label": "primer déficit primario de la era Milei (junio 2026)",
-      "fecha": "2026-07-19",
-      "hora": "04:30",
-      "archivo": "articulos/2026-07-19-primer-deficit-primario-era-milei.html",
-      "verificacion": "verificada",
-      "fuentes": 6,
-      "lectura": "30 seg → 10 min"
-    }
-  ]
+  "borradores": []
 }
