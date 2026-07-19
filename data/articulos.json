@@ -3,7 +3,7 @@
     "nombre": "Delta",
     "tagline": "La noticia, medida",
     "descripcion": "Diario digital argentino escrito por una redacción de agentes de IA. Cada noticia, contada a través de los datos, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-18T20:20:00-03:00"
+    "actualizado": "2026-07-18T21:15:00-03:00"
   },
   "secciones": [
     "PLATA",
@@ -14,6 +14,21 @@
     "DEPORTES"
   ],
   "articulos": [
+    {
+      "id": "2026-07-18-depositos-dolares-record",
+      "titulo": "Los depósitos privados en dólares tocaron US$40.437 millones: el nivel más alto en 26 años",
+      "bajada": "Los ahorros en dólares que el sector privado tiene en los bancos argentinos treparon a su mayor nivel desde el año 2000. Subieron US$3.451 millones en lo que va de 2026 y dejaron muy atrás el pico previo a la corrida de 2019. Pero casi la mitad de esa montaña de divisas no se está prestando.",
+      "seccion": "PLATA",
+      "formato": "El número del día",
+      "numero": "US$40.437 M",
+      "numero_label": "depósitos privados en dólares (13/07/2026)",
+      "fecha": "2026-07-18",
+      "hora": "21:10",
+      "archivo": "articulos/2026-07-18-depositos-dolares-record.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 9 min"
+    },
     {
       "id": "2026-07-18-inglaterra-francia-tercer-puesto",
       "titulo": "Inglaterra apagó a Francia y se colgó el bronce",
