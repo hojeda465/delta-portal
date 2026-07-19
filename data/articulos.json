@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-19T19:49:46+00:00"
+    "actualizado": "2026-07-19T21:20:38+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -12,6 +12,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-19-carga-deuda-familias-salario",
+      "titulo": "El 24,1% del salario formal ya se va en pagar deudas: el freno oculto al consumo",
+      "bajada": "El Banco Central informó que en abril las familias destinaron el 24,1% de la masa salarial formal a pagar cuotas de préstamos y tarjetas: el nivel más alto en más de una década y por encima del pico de 2018. La morosidad se quintuplicó desde fines de 2024 y las refinanciaciones se duplicaron en seis meses. La desinflación no alcanza cuando el sueldo entra ya comprometido.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "24,1%",
+      "numero_label": "de la masa salarial formal se destinó a pagar deudas en abril 2026 (BCRA)",
+      "fecha": "2026-07-19",
+      "hora": "17:20",
+      "archivo": "articulos/2026-07-19-carga-deuda-familias-salario.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 11 min"
+    },
     {
       "id": "2026-07-19-capacidad-instalada-industria-ociosa",
       "titulo": "La industria usó el 58,4% de su capacidad en mayo: cuatro de cada diez máquinas, paradas",

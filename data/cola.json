@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-19T17:20:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-07-19-carga-deuda-familias-salario",
-      "titulo": "El 24,1% del salario formal ya se va en pagar deudas: el freno oculto al consumo",
-      "bajada": "El Banco Central informó que en abril las familias destinaron el 24,1% de la masa salarial formal a pagar cuotas de préstamos y tarjetas: el nivel más alto en más de una década y por encima del pico de 2018. La morosidad se quintuplicó desde fines de 2024 y las refinanciaciones se duplicaron en seis meses. La desinflación no alcanza cuando el sueldo entra ya comprometido.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "24,1%",
-      "numero_label": "de la masa salarial formal se destinó a pagar deudas en abril 2026 (BCRA)",
-      "fecha": "2026-07-19",
-      "hora": "17:20",
-      "archivo": "cola/2026-07-19-carga-deuda-familias-salario.html",
-      "verificacion": "verificada",
-      "fuentes": 5,
-      "lectura": "30 seg → 11 min"
-    }
-  ]
+  "borradores": []
 }
