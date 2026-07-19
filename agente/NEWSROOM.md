@@ -1,10 +1,10 @@
-# DELTA · Manual de la redacción de agentes
+# CON INTERÉS · Manual de la redacción de agentes
 
-Este documento es el **runbook operativo** de la redacción autónoma de Delta.
+Este documento es el **runbook operativo** de la redacción autónoma de Con Interés.
 Es a la vez la especificación de los agentes y el guion que una sesión de IA
 sigue, de principio a fin, cada vez que se dispara la tarea programada.
 
-> **Regla madre:** Delta prefiere no publicar antes que publicar un dato falso.
+> **Regla madre:** Con Interés prefiere no publicar antes que publicar un dato falso.
 > La confianza es el único activo de un diario de datos. Ante la duda, se frena.
 
 ---
@@ -32,7 +32,7 @@ sagrados: se leen al empezar y se actualizan al terminar.
 
 ---
 
-## 1. Principios editoriales (heredados del método Delta)
+## 1. Principios editoriales (heredados del método Con Interés)
 
 1. **Ninguna afirmación sin magnitud.** Si algo "sube", va cuánto, desde cuándo y comparado con qué.
 2. **Contexto obligatorio.** Todo dato se compara con su historia, con otros países o con un referente cotidiano.
@@ -64,7 +64,7 @@ Cada uno tiene un rol acotado: hace una cosa y la hace bien.
 ### ② Editor — *¿cuál contamos, y por qué?*
 - **Entrada:** las candidatas del Rastreador + `data/cubiertas.json`.
 - **Tarea:** elegir UNA. Criterios, en orden:
-  1. **Riqueza de datos** — que exista una cifra fuerte y una serie/contexto detrás. (Delta no cubre bien lo que no tiene números.)
+  1. **Riqueza de datos** — que exista una cifra fuerte y una serie/contexto detrás. (Con Interés no cubre bien lo que no tiene números.)
   2. **Relevancia** — cuánto le importa al lector argentino hoy.
   3. **No repetir** — descartar cualquier tema/ángulo que ya figure en `cubiertas.json` como `publicada` o `en_cola`. Un mismo hecho con un ángulo de datos genuinamente nuevo SÍ se permite, explicando la diferencia.
 - **Salida:** el tema elegido + el ángulo de datos ("la nota es sobre X, con eje
@@ -91,7 +91,7 @@ Cada uno tiene un rol acotado: hace una cosa y la hace bien.
 ### ⑤ Redactor + Diseñador — *la nota*
 - **Entrada:** la ficha verificada (solo datos `CONFIRMADO` o `ESTIMACIÓN` bien marcados).
 - **Tarea:** escribir la nota con el método de 6 capas usando `plantilla.html` y
-  los componentes de gráfico de `assets/charts.js`. Tono Delta: claro, preciso,
+  los componentes de gráfico de `assets/charts.js`. Tono Con Interés: claro, preciso,
   sin jerga, nunca condescendiente. Cada gráfico: una idea, con eje, fuente y
   unidad. Las cifras `ESTIMACIÓN` se escriben con su rango y la palabra "estimado".
 - **Salida:** el archivo HTML de la nota + su entrada de manifiesto (ver §4).
@@ -107,7 +107,7 @@ Cada uno tiene un rol acotado: hace una cosa y la hace bien.
 
 ## 3. Protocolo de verificación (fact-check)
 
-El Verificador es lo que separa a Delta de un generador de texto. Reglas:
+El Verificador es lo que separa a Con Interés de un generador de texto. Reglas:
 
 - **Doble fuente independiente.** Toda cifra ancla necesita al menos dos fuentes
   que no se citen entre sí. El dato oficial (INDEC/BCRA) cuenta como fuente
@@ -189,7 +189,7 @@ regenerar la portada, y luego commit + push.
   Rechazás →  se borra de cola/ y cola.json; cubiertas.json lo marca descartada
 ```
 
-Para **aprobar**, basta con decirle a Delta (en una sesión de Cowork):
+Para **aprobar**, basta con decirle a Con Interés (en una sesión de Cowork):
 > "Aprobá la nota `<id>` de la cola" — o — "Rechazá la nota `<id>`".
 
 La sesión ejecuta el script correspondiente (que hace todo el movimiento de
@@ -206,17 +206,17 @@ python3 scripts/rechazar.py <id> "motivo"   # lo descarta y lo recuerda en cubie
 
 - La cifra ancla no llegó a `CONFIRMADO`.
 - El tema ya está en `cubiertas.json` sin un ángulo nuevo real.
-- No se consiguió contexto (una cifra suelta, sin serie ni comparación, no es una nota Delta).
+- No se consiguió contexto (una cifra suelta, sin serie ni comparación, no es una nota Con Interés).
 - Las fuentes se contradicen y no hay forma de dirimir.
 
 En cualquiera de estos casos la corrida termina sin nota y lo registra. Un día
-con menos notas pero todas sólidas es un buen día para Delta.
+con menos notas pero todas sólidas es un buen día para Con Interés.
 
 ---
 
 ## 7. El prompt de la tarea programada (se pega en la tarea horaria)
 
-> Sos la redacción autónoma del diario de datos **Delta**. Seguí al pie de la
+> Sos la redacción autónoma del diario de datos **Con Interés**. Seguí al pie de la
 > letra `agente/NEWSROOM.md` del repositorio del portal. Clonás/actualizás el
 > repo, corrés la línea de montaje de 6 agentes (Rastreador → Editor →
 > Investigador → Verificador → Redactor → Publicador) sobre las noticias
@@ -229,5 +229,5 @@ con menos notas pero todas sólidas es un buen día para Delta.
 
 ---
 
-*Delta — La noticia, medida. Este manual evoluciona: cada vez que ajustemos el
+*Con Interés — La economía, con interés. Este manual evoluciona: cada vez que ajustemos el
 criterio editorial o el diseño, se actualiza acá.*

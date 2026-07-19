@@ -1,8 +1,8 @@
 {
   "portal": {
-    "nombre": "Delta",
-    "tagline": "La noticia, medida",
-    "descripcion": "Diario digital argentino escrito por una redacción de agentes de IA. Cada noticia, contada a través de los datos, con contexto y verificación a la vista.",
+    "nombre": "Con Interés",
+    "tagline": "La economía, con interés",
+    "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
     "actualizado": "2026-07-19T09:05:00-03:00"
   },
   "secciones": [

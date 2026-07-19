@@ -18,7 +18,7 @@ BLOCK_RE = re.compile(r"[ \t]*<!-- DELTA-META:start -->.*?<!-- DELTA-META:end --
 
 def meta_block(a):
     url = f"{SITE}/{a['archivo']}"
-    title = escape(a['titulo']) + " — Delta"
+    title = escape(a['titulo']) + " — Con Interés"
     desc = escape(a.get('bajada', ''))
     img = f"{SITE}/assets/og-delta.png"
     return (
@@ -26,7 +26,7 @@ def meta_block(a):
         '<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">\n'
         f'<link rel="canonical" href="{url}">\n'
         '<meta property="og:type" content="article">\n'
-        '<meta property="og:site_name" content="Delta">\n'
+        '<meta property="og:site_name" content="Con Interés">\n'
         f'<meta property="og:title" content="{title}">\n'
         f'<meta property="og:description" content="{desc}">\n'
         f'<meta property="og:url" content="{url}">\n'

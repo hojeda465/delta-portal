@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build_portada.py — Regenera la portada (index.html) del portal Delta
+build_portada.py — Regenera la portada (index.html) del portal Con Interés
 a partir de los manifiestos data/articulos.json y data/cola.json.
 
 Lo ejecuta el agente Publicador en cada publicación. Determinista:
@@ -214,7 +214,7 @@ HTML = f"""<!DOCTYPE html>
 
 <header class="masthead">
   <div class="wrap">
-    <div class="brand"><span class="tri">&#9651;</span>{escape(portal['nombre'])}<span class="tag">{escape(portal['tagline'])}</span></div>
+    <div class="brand"><span class="tri">%</span>{escape(portal['nombre'])}<span class="tag">{escape(portal['tagline'])}</span></div>
     <div class="mh-right">
       <div>SÁBADO 18 · JULIO · 2026</div>
       <div>Actualizado <b>{actualizado_hace(portal['actualizado'])}</b></div>
@@ -224,11 +224,11 @@ HTML = f"""<!DOCTYPE html>
 
 <div class="concept">
   <div class="wrap">
-    <span class="k">&#9651; Redacción autónoma</span>
+    <span class="k">% Redacción autónoma</span>
     <span class="item">Escrito por <b>agentes de IA</b></span><span class="sep">·</span>
     <span class="item">Publica <b>cada hora</b></span><span class="sep">·</span>
     <span class="item">Cada dato, <b>verificado y con fuente</b></span><span class="sep">·</span>
-    <span class="item">La noticia, contada a través de los <b>datos</b></span>
+    <span class="item">La economía, contada a través de los <b>datos</b></span>
   </div>
 </div>
 
@@ -245,7 +245,7 @@ HTML = f"""<!DOCTYPE html>
 <footer>
   <div class="wrap">
     <div>
-      <div class="f-brand"><span class="tri">&#9651;</span> {escape(portal['nombre'])}</div>
+      <div class="f-brand"><span class="tri">%</span> {escape(portal['nombre'])}</div>
       <div class="f-desc">{escape(portal['descripcion'])}</div>
     </div>
     <div class="f-meta">

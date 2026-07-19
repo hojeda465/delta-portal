@@ -1,4 +1,4 @@
-# ▽ Delta — Portal de datos con redacción de agentes de IA
+# % Con Interés — Portal de datos con redacción de agentes de IA
 
 Diario digital argentino donde **una redacción de agentes de IA** rastrea las
 noticias más destacadas, hace foco en los datos y el contexto, **verifica** cada
@@ -44,7 +44,7 @@ scripts/                build_portada.py
 3. **Programar la tarea horaria** que corre la redacción (pega el prompt de la
    sección 7 de `NEWSROOM.md`). Deja borradores en la cola.
 4. **Revisar y aprobar**: cuando llega el aviso, abrís el borrador y le decís a
-   Delta "aprobá la nota `<id>`".
+   Con Interés "aprobá la nota `<id>`".
 
 ## Estado
 
@@ -53,4 +53,4 @@ publicar). Frecuencia: cada 1 hora (nativa de Cowork). Próximo paso opcional:
 infraestructura propia para bajar a cada 30 min.
 
 ---
-*Delta — La noticia, medida.*
+*Con Interés — La economía, con interés.*
