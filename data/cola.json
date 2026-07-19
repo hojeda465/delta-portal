@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-19T07:30:00-03:00",
-  "borradores": []
+  "actualizado": "2026-07-19T13:15:00-03:00",
+  "borradores": [
+    {
+      "id": "2026-07-19-industria-cae-construccion-rebota",
+      "titulo": "La industria cayó 5,7% y la construcción subió 4,1%: el mismo día, dos datos de signo opuesto",
+      "bajada": "En mayo el INDEC publicó una economía partida en dos: 14 de 16 ramas fabriles en rojo mientras el ladrillo rebotaba. La caída de la industria la confirma hasta la propia Unión Industrial. El repunte mensual que festejó el Gobierno, en cambio, está en disputa.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "-5,7%",
+      "numero_label": "cayó la producción industrial en mayo (interanual)",
+      "fecha": "2026-07-19",
+      "hora": "13:15",
+      "archivo": "cola/2026-07-19-industria-cae-construccion-rebota.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 12 min"
+    }
+  ]
 }
