@@ -96,12 +96,11 @@
       "numero": "800.000",
       "numero_label": "personas en la última edición (2024), récord histórico",
       "fecha": "2026-07-19",
-      "hora": "18:00",
+      "hora": "14:30",
       "archivo": "articulos/2026-07-19-bienal-chaco-esculturas.html",
       "verificacion": "verificada",
       "fuentes": 7,
-      "lectura": "30 seg → 9 min",
-      "destacada": true
+      "lectura": "30 seg → 9 min"
     },
     {
       "seccion": "ECONOMÍA PROVINCIAL",
@@ -114,7 +113,7 @@
       "bajada": "Corrientes produce casi la mitad del arroz argentino, tiene la mayor superficie de bosques cultivados del país y el Estado más chico del NEA. Y los Esteros del Iberá, con su rewilding, le abren un futuro distinto. Con datos oficiales, sin bajada política.",
       "numero": "47,5%",
       "numero_label": "de la superficie arrocera del país: 1º productor",
-      "hora": "20:00",
+      "hora": "14:50",
       "fuentes": 6,
       "archivo": "articulos/2026-07-19-economia-corrientes.html"
     },
@@ -129,7 +128,7 @@
       "bajada": "Formosa es la provincia que menos exporta del país y una de las más dependientes de la coparticipación: ocho de cada diez pesos que gasta llegan de la Nación, y su mayor empleador es el Estado. El caso más extremo del norte argentino, contado con datos.",
       "numero": "82%",
       "numero_label": "de sus ingresos llegan de la Nación (coparticipación)",
-      "hora": "20:15",
+      "hora": "14:55",
       "fuentes": 6,
       "archivo": "articulos/2026-07-19-economia-formosa.html"
     },
@@ -144,7 +143,7 @@
       "bajada": "Misiones produce el 85% de la yerba argentina y casi todo el té; su foresto-industria la vuelve la economía más industrializada y diversificada del NEA, con la menor pobreza y la mayor autonomía fiscal de la región. La cara distinta del Noreste, con datos.",
       "numero": "85%",
       "numero_label": "de la yerba mate del país se produce acá",
-      "hora": "20:30",
+      "hora": "15:00",
       "fuentes": 6,
       "archivo": "articulos/2026-07-19-economia-misiones.html"
     },
@@ -157,7 +156,7 @@
       "numero": "1,6%",
       "numero_label": "del PBI argentino, con el 2,5% de la población",
       "fecha": "2026-07-19",
-      "hora": "19:30",
+      "hora": "14:40",
       "archivo": "articulos/2026-07-19-economia-chaco.html",
       "verificacion": "verificada",
       "fuentes": 6,

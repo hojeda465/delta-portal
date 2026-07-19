@@ -25,7 +25,10 @@ def load(name):
 art = load("articulos.json")
 cola = load("cola.json")
 portal = art["portal"]
-articulos = sorted(art["articulos"], key=lambda a: (a["fecha"], a.get("hora","")), reverse=True)
+# La nota más reciente es la que la redacción insertó ARRIBA del manifiesto (orden de
+# publicación real). NO se ordena por "hora": ese campo es un rótulo y no siempre es
+# confiable. Así la principal es siempre la última nota publicada.
+articulos = list(art["articulos"])
 borradores = cola.get("borradores", [])
 
 # ---- helpers -----------------------------------------------------------
