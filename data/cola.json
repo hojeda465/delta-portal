@@ -1,6 +1,6 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-19T00:55:00-03:00",
+  "actualizado": "2026-07-19T00:57:00-03:00",
   "borradores": [
     {
       "id": "2026-07-19-economia-conocimiento-record-exportaciones",
@@ -15,6 +15,21 @@
       "archivo": "cola/2026-07-19-economia-conocimiento-record-exportaciones.html",
       "verificacion": "verificada",
       "fuentes": 6,
+      "lectura": "30 seg → 10 min"
+    },
+    {
+      "id": "2026-07-19-recaudacion-real-junio",
+      "titulo": "La recaudación subió 23,7% en junio y aun así cayó: la inflación se comió el aumento",
+      "bajada": "ARCA recaudó $20 billones en junio, casi un cuarto más que un año atrás en pesos. Pero los precios subieron 33,5% en el mismo lapso, así que en términos reales la recaudación cayó 7,4%. Detrás del número: la baja de retenciones al campo, una prórroga de Ganancias que corrió plata a julio, y un IVA que —termómetro del consumo— también quedó en rojo.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "−7,4%",
+      "numero_label": "caída real de la recaudación tributaria (junio 2026)",
+      "fecha": "2026-07-19",
+      "hora": "00:57",
+      "archivo": "articulos/2026-07-19-recaudacion-real-junio.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
       "lectura": "30 seg → 10 min"
     }
   ]
