@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="canonical" href="https://coninteres.com/provincias.html">
+<title>Economía provincial — Con Interés</title>
+<meta name="description" content="Recorremos, provincia por provincia, cómo funciona la economía argentina: qué produce, de qué vive y hacia dónde crece cada una. Con datos oficiales y sin bajada política.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Con Interés">
+<meta property="og:title" content="Economía provincial — Con Interés">
+<meta property="og:description" content="Cómo funciona la economía de cada provincia argentina, con datos oficiales y sin bajada política. El mapa se llena a medida que avanzamos.">
+<meta property="og:url" content="https://coninteres.com/provincias.html">
+<meta property="og:image" content="https://coninteres.com/assets/og-delta.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF8F4;--ink:#16130F;--ink-soft:#3C3833;--teal:#0E7C86;--teal-deep:#0A5C63;
+    --amber:#C4701F;--green:#2E8B6F;--muted:#6B6560;--faint:#8A847C;
+    --rule:#DCD6CC;--grid:#E7E1D7;--card:#FFFFFF;--card-edge:#EAE4DA;
+    --serif:"Source Serif 4",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:820px;margin:0 auto;padding:0 22px}
+  .masthead{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:50}
+  .masthead .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:960px}
+  .brand{font-family:var(--serif);font-weight:700;font-size:26px;letter-spacing:-.01em;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
+  .brand .tri{color:var(--teal)}
+  .brand .tag{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:8px;font-weight:500}
+  .mh-back{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none}
+
+  .hero{padding:40px 0 8px}
+  .hero .kick{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-deep);font-weight:600;margin-bottom:14px}
+  .hero h1{font-family:var(--serif);font-weight:700;font-size:40px;line-height:1.12;letter-spacing:-.015em;margin:0 0 16px}
+  .hero p{font-size:18px;color:var(--ink-soft);max-width:64ch;margin:0}
+  .progress{display:flex;align-items:center;gap:12px;margin:26px 0 6px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .progress .bar{flex:1;height:6px;background:var(--grid);border-radius:99px;overflow:hidden;max-width:280px}
+  .progress .bar i{display:block;height:100%;width:4.2%;background:var(--teal);border-radius:99px}
+
+  /* ---- mapa (tilegram) ---- */
+  .mapwrap{background:var(--card);border:1px solid var(--card-edge);border-radius:16px;padding:22px;margin:22px 0 10px}
+  .maphead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px;flex-wrap:wrap;gap:8px}
+  .maphead .t{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+  .maphead .lg{display:flex;gap:16px;font-family:var(--mono);font-size:11px;color:var(--muted)}
+  .maphead .lg span{display:flex;align-items:center;gap:6px}
+  .maphead .sw{width:11px;height:11px;border-radius:3px}
+  .argmap{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;max-width:520px;margin:0 auto}
+  .prov{aspect-ratio:1/1;border-radius:9px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:3px;border:1px solid var(--card-edge);background:#F3EFE7;text-decoration:none;position:relative;transition:.15s}
+  .prov .ab{font-family:var(--mono);font-weight:600;font-size:14px;color:var(--faint);line-height:1}
+  .prov .nm{font-size:8.5px;color:var(--faint);margin-top:3px;line-height:1.05;font-weight:500}
+  .prov.soon{cursor:default}
+  .prov.done{background:var(--teal);border-color:var(--teal-deep);cursor:pointer}
+  .prov.done .ab{color:#fff;font-size:16px} .prov.done .nm{color:#CFEAE8}
+  .prov.done:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(14,124,134,.28)}
+  .prov.done .chk{position:absolute;top:4px;right:5px;font-size:9px;color:#CFEAE8}
+  .mapnote{font-family:var(--mono);font-size:11px;color:var(--faint);text-align:center;margin-top:16px;line-height:1.5}
+
+  /* ---- lista de perfiles ---- */
+  .section-t{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:38px 0 14px;display:flex;align-items:center;gap:10px}
+  .section-t .rule{flex:1;height:1px;background:var(--rule)}
+  .cards{display:grid;grid-template-columns:1fr;gap:12px}
+  .pcard{display:block;background:var(--card);border:1px solid var(--card-edge);border-radius:14px;padding:20px 22px;text-decoration:none;transition:.15s}
+  .pcard:hover{border-color:var(--teal);transform:translateY(-1px)}
+  .pcard .pk{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-deep);font-weight:600;margin-bottom:8px}
+  .pcard h3{font-family:var(--serif);font-size:22px;font-weight:700;margin:0 0 6px;line-height:1.2;color:var(--ink)}
+  .pcard p{font-size:14px;color:var(--muted);margin:0 0 12px;line-height:1.5}
+  .pcard .row{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:12px}
+  .pcard .row b{color:var(--teal-deep)}
+  .pcard .go{color:var(--teal);font-family:var(--mono);font-size:13px;font-weight:600}
+  .soonrow{font-family:var(--mono);font-size:13px;color:var(--muted);background:#F3EFE7;border:1px dashed var(--card-edge);border-radius:12px;padding:16px 20px;line-height:1.6}
+  .soonrow b{color:var(--ink)}
+
+  footer{border-top:2px solid var(--ink);margin-top:44px;padding:24px 0 60px}
+  footer .fb{font-family:var(--serif);font-weight:700;font-size:18px}footer .fb .tri{color:var(--teal)}
+  footer .fl{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:8px}footer .fl a{color:var(--teal-deep);text-decoration:none}
+  footer .disc{font-size:12px;color:var(--faint);margin-top:10px;max-width:600px;line-height:1.5}
+  @media(max-width:560px){.hero h1{font-size:30px}.argmap{max-width:340px;gap:5px}.prov .nm{font-size:7.5px}}
+</style>
+</head>
+<body>
+
+<header class="masthead"><div class="wrap">
+  <a class="brand" href="index.html"><span class="tri">%</span>Con Interés<span class="tag">La economía, con interés</span></a>
+  <a class="mh-back" href="index.html">&larr; Portada</a>
+</div></header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="kick">% Serie · Economía provincial</div>
+    <h1>La economía argentina, provincia por provincia</h1>
+    <p>Recorremos, una por una, las 24 jurisdicciones del país: qué produce cada provincia, de qué vive, cómo le va y hacia dónde puede crecer. Siempre con datos oficiales, las dos lecturas y sin bajada política. El mapa se va llenando a medida que avanzamos.</p>
+    <div class="progress"><span>1 de 24 cubiertas</span><span class="bar"><i></i></span><span>arrancamos por el NEA</span></div>
+  </div>
+
+  <div class="mapwrap">
+    <div class="maphead">
+      <div class="t">Mapa de la serie</div>
+      <div class="lg">
+        <span><span class="sw" style="background:var(--teal)"></span>Con perfil</span>
+        <span><span class="sw" style="background:#F3EFE7;border:1px solid var(--card-edge)"></span>Próximamente</span>
+      </div>
+    </div>
+    <div class="argmap">
+      <!-- fila 1 -->
+      <a class="prov soon" style="grid-column:2;grid-row:1"><span class="ab">JUJ</span><span class="nm">Jujuy</span></a>
+      <!-- fila 2 -->
+      <a class="prov soon" style="grid-column:2;grid-row:2"><span class="ab">SAL</span><span class="nm">Salta</span></a>
+      <a class="prov soon" style="grid-column:4;grid-row:2"><span class="ab">FOR</span><span class="nm">Formosa</span></a>
+      <!-- fila 3 -->
+      <a class="prov soon" style="grid-column:1;grid-row:3"><span class="ab">CAT</span><span class="nm">Catamarca</span></a>
+      <a class="prov soon" style="grid-column:2;grid-row:3"><span class="ab">TUC</span><span class="nm">Tucumán</span></a>
+      <a class="prov soon" style="grid-column:3;grid-row:3"><span class="ab">SGO</span><span class="nm">Sgo. Estero</span></a>
+      <a class="prov done" href="articulos/2026-07-19-economia-chaco.html" style="grid-column:4;grid-row:3"><span class="chk">&#10003;</span><span class="ab">CHA</span><span class="nm">Chaco</span></a>
+      <a class="prov soon" style="grid-column:6;grid-row:3"><span class="ab">MIS</span><span class="nm">Misiones</span></a>
+      <!-- fila 4 -->
+      <a class="prov soon" style="grid-column:1;grid-row:4"><span class="ab">LR</span><span class="nm">La Rioja</span></a>
+      <a class="prov soon" style="grid-column:3;grid-row:4"><span class="ab">CBA</span><span class="nm">Córdoba</span></a>
+      <a class="prov soon" style="grid-column:4;grid-row:4"><span class="ab">SF</span><span class="nm">Santa Fe</span></a>
+      <a class="prov soon" style="grid-column:5;grid-row:4"><span class="ab">CTE</span><span class="nm">Corrientes</span></a>
+      <!-- fila 5 -->
+      <a class="prov soon" style="grid-column:1;grid-row:5"><span class="ab">SJ</span><span class="nm">San Juan</span></a>
+      <a class="prov soon" style="grid-column:2;grid-row:5"><span class="ab">SL</span><span class="nm">San Luis</span></a>
+      <a class="prov soon" style="grid-column:5;grid-row:5"><span class="ab">ER</span><span class="nm">Entre Ríos</span></a>
+      <!-- fila 6 -->
+      <a class="prov soon" style="grid-column:1;grid-row:6"><span class="ab">MZA</span><span class="nm">Mendoza</span></a>
+      <a class="prov soon" style="grid-column:3;grid-row:6"><span class="ab">LP</span><span class="nm">La Pampa</span></a>
+      <a class="prov soon" style="grid-column:4;grid-row:6"><span class="ab">BA</span><span class="nm">Buenos Aires</span></a>
+      <a class="prov soon" style="grid-column:5;grid-row:6"><span class="ab">CABA</span><span class="nm">CABA</span></a>
+      <!-- fila 7 -->
+      <a class="prov soon" style="grid-column:2;grid-row:7"><span class="ab">NQN</span><span class="nm">Neuquén</span></a>
+      <a class="prov soon" style="grid-column:3;grid-row:7"><span class="ab">RN</span><span class="nm">Río Negro</span></a>
+      <!-- fila 8 -->
+      <a class="prov soon" style="grid-column:2;grid-row:8"><span class="ab">CHU</span><span class="nm">Chubut</span></a>
+      <!-- fila 9 -->
+      <a class="prov soon" style="grid-column:2;grid-row:9"><span class="ab">SC</span><span class="nm">Santa Cruz</span></a>
+      <!-- fila 10 -->
+      <a class="prov soon" style="grid-column:3;grid-row:10"><span class="ab">TDF</span><span class="nm">T. del Fuego</span></a>
+    </div>
+    <div class="mapnote">Mapa esquemático. Tocá una provincia iluminada para leer su perfil económico.</div>
+  </div>
+
+  <div class="section-t">Perfiles publicados <span class="rule"></span></div>
+  <div class="cards">
+    <a class="pcard" href="articulos/2026-07-19-economia-chaco.html">
+      <div class="pk">Chaco · NEA</div>
+      <h3>La economía del Chaco: qué produce, cuánto exporta y de qué vive</h3>
+      <p>Economía de base primaria —granos, algodón, quebracho—, sector público grande y fuerte dependencia de la Nación; pero también una apuesta a la economía del conocimiento, el turismo y la energía.</p>
+      <div class="row"><span><b>1,6%</b> del PBI nacional</span><span><b>48,1%</b> pobreza (Gran Resistencia)</span><span class="go">Leer el perfil →</span></div>
+    </a>
+  </div>
+
+  <div class="section-t">Próximas provincias <span class="rule"></span></div>
+  <div class="soonrow">Seguimos por el <b>NEA</b>: <b>Corrientes</b>, <b>Formosa</b> y <b>Misiones</b>. Después, el resto del país. ¿Querés que prioricemos alguna? Se puede reordenar.</div>
+
+</div>
+
+<footer><div class="wrap" style="max-width:820px">
+  <div class="fb"><span class="tri">%</span> Con Interés</div>
+  <div class="fl"><a href="index.html">Portada</a> · <a href="aprender.html">Modo Aprendizaje</a> · <a href="como-trabajamos.html">Cómo trabajamos</a></div>
+  <p class="disc">Serie "Economía provincial" de Con Interés. Cada perfil se elabora con fuentes oficiales (INDEC, direcciones de estadística provinciales y Ministerio de Economía), describe la estructura económica sin atribuirla a un gobierno en particular y, cuando un dato admite lecturas distintas, presenta las dos. Nada de esto constituye asesoramiento de inversión.</p>
+</div></footer>
+
+</body>
+</html>

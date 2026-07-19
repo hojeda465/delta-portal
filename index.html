@@ -59,7 +59,11 @@
   .learn-link{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;display:flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600}
   .learn-link b{background:var(--amber);color:#fff;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:999px;font-weight:600}
   .learn-link:hover{color:var(--teal)}
-  @media(max-width:560px){.learn-link{margin-left:0;width:100%;padding-top:6px}}
+  .nav-right{margin-left:auto;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .nav-right .learn-link{margin-left:0}
+  .prov-link{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;font-weight:600;white-space:nowrap;display:flex;align-items:center;gap:6px}
+  .prov-link:hover{color:var(--teal)}
+  @media(max-width:560px){.nav-right{margin-left:0;width:100%;gap:10px;padding-top:6px}}
   .empty{color:var(--muted);font-family:var(--mono);font-size:14px;padding:40px 0} .empty.small{padding:14px}
 
   .lead{display:grid;grid-template-columns:300px 1fr;gap:30px;border-bottom:1px solid var(--rule);padding-bottom:30px;margin-bottom:30px;align-items:center}
@@ -119,7 +123,7 @@
   </div>
 </header>
 
-<nav class="secnav"><div class="wrap"><button class="sec-chip active" data-filter="all" style="--sc:#16130F">Todas</button><button class="sec-chip" data-filter="ECONOMÍA" style="--sc:#0E7C86">ECONOMÍA</button><button class="sec-chip" data-filter="MERCADOS" style="--sc:#0A5C63">MERCADOS</button><button class="sec-chip" data-filter="MUNDO" style="--sc:#7A5CC4">MUNDO</button><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
+<nav class="secnav"><div class="wrap"><button class="sec-chip active" data-filter="all" style="--sc:#16130F">Todas</button><button class="sec-chip" data-filter="ECONOMÍA" style="--sc:#0E7C86">ECONOMÍA</button><button class="sec-chip" data-filter="MERCADOS" style="--sc:#0A5C63">MERCADOS</button><button class="sec-chip" data-filter="MUNDO" style="--sc:#7A5CC4">MUNDO</button><div class="nav-right"><a class="prov-link" href="provincias.html">% Economía provincial</a><a class="learn-link" href="aprender.html">Modo Aprendizaje <b>beta</b> →</a></div></div></nav>
 
 <main class="wrap">
   
