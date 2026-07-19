@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-19T11:20:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-07-19-desempleo-estable-empleo-precario",
-      "titulo": "El desempleo casi no se movió (7,8%), pero el empleo se volvió más precario por dentro",
-      "bajada": "El INDEC informó una desocupación de 7,8% en el primer trimestre, casi idéntica a la de un año atrás. Debajo del número quieto, la informalidad saltó 2,2 puntos hasta 44,2% y la subocupación subió a 11,1%: los dos únicos indicadores que el propio organismo marca como cambios \"significativos\". El trabajo no falta más que hace un año; falta trabajo mejor.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "7,8%",
-      "numero_label": "tasa de desocupación (1er trim. 2026): casi igual que un año atrás",
-      "fecha": "2026-07-19",
-      "hora": "11:20",
-      "archivo": "articulos/2026-07-19-desempleo-estable-empleo-precario.html",
-      "verificacion": "verificada",
-      "fuentes": 5,
-      "lectura": "30 seg → 11 min"
-    }
-  ]
+  "borradores": []
 }
