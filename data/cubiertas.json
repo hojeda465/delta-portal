@@ -28,6 +28,13 @@
       "fecha": "2026-07-18",
       "estado": "publicada",
       "articulo_id": "2026-07-18-depositos-dolares-record"
+    },
+    {
+      "tema": "exportaciones de granos / récord de volumen del 1er semestre 2026 (60,7 M t)",
+      "angulo": "la paradoja del campo: embarcó el mayor volumen de granos de la historia para un primer semestre (60,7 millones de toneladas, BCR) y el maíz superó a la soja por primera vez en 26 años, pero la agroexportación liquidó 13% menos dólares (US$13.378 M, CIARA-CEC) que en 2025. La caída no fue por precios sino por efecto base: en 2025 una rebaja temporal de retenciones hasta el 30/6 adelantó liquidaciones. Volumen récord CONFIRMADO (BCR + dato oficial de la Secretaría de Agricultura); caída de divisas CONFIRMADA (CIARA-CEC oficial + BCR + medios)",
+      "fecha": "2026-07-19",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-19-agro-record-toneladas-menos-dolares"
     }
   ]
 }
