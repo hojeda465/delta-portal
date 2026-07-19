@@ -98,6 +98,13 @@
       "fecha": "2026-07-19",
       "estado": "publicada",
       "articulo_id": "2026-07-19-industria-cae-construccion-rebota"
+    },
+    {
+      "tema": "mercado de trabajo / desocupación estable pero deterioro de la calidad del empleo (1er trim. 2026)",
+      "angulo": "la tasa de desocupación fue 7,8% en el 1er trim. 2026, casi idéntica al 7,9% de un año atrás (cambio 'sin significación estadística' según el INDEC). Ángulo de datos NUEVO respecto de la nota de industria/construcción (que fue producción de bienes): esta es la nota del MERCADO LABORAL vía EPH, con eje en la CALIDAD del empleo. Los dos únicos indicadores que el INDEC marca como cambios estadísticamente significativos empeoraron: informalidad de 42,0% a 44,2% (+2,2 pp) y subocupación de 10,0% a 11,1% (+1,1 pp). La tasa queda quieta porque la EPH cuenta como ocupado a quien trabaja una hora o maneja para una app, aunque pierda un empleo registrado. Contexto CEPA (atribuido, sobre datos oficiales): entre 4T2023 y 1T2026 se perdieron 216.321 puestos registrados privados (-3,4%) y crecieron monotributistas (+165.542); el empleo no registrado creció ~600.000 en ventana algo distinta (1T2024-1T2026). Cifra ancla (7,8%) CONFIRMADA por INDEC oficial + Chequeado + El Cronista + CEPA + Infobae; coherencia interna verificada (EAP aglomerados 14,61M x 7,8% ≈ 1,14M desocupados medidos; proyección nacional ~1,72M). Serie de mismo trimestre confirmada: 7,7% (1T24), 7,9% (1T25), 7,8% (1T26). Marcado como ESTIMACIÓN/ENCUESTA: expectativa IAE Business School (~mitad de pymes evaluaba reducir plantilla) y presión ampliada del mercado laboral 30,7% (CEPA). Se evitaron valores trimestrales históricos en disputa (Q3 en discrepancia 6,3% vs 6,6%): no se graficaron.",
+      "fecha": "2026-07-19",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-19-desempleo-estable-empleo-precario"
     }
   ]
 }
