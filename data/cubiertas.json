@@ -84,6 +84,13 @@
       "fecha": "2026-07-19",
       "estado": "publicada",
       "articulo_id": "2026-07-19-autos-electrificados-cuadruplican"
+    },
+    {
+      "tema": "crédito hipotecario / se derrumba en CABA mientras la compraventa aguanta (escrituras mayo 2026)",
+      "angulo": "mercado inmobiliario a dos velocidades: en mayo se firmaron 5.435 escrituras de compraventa en la Ciudad de Buenos Aires (-3,1% i.a., prácticamente plano; acumulado ene-may 23.487, -1,2%) y el monto operado subió 8,5% nominal, pero las escrituras CON hipoteca cayeron 54,8% i.a. (587 vs 1.297 en mayo 2025) y acumulan -37,2% en el año (3.387 vs 5.394). La participación de las hipotecas en las compras pasó de ~23% a 10,8% (1 de cada 5 → 1 de cada 10). Ángulo de datos NUEVO respecto de todas las notas previas (es real estate/financiamiento, no macro/fiscal): el mercado no se cae, cambia de combustible — se compra con ahorros, no con crédito. Cifra ancla CONFIRMADA por DOBLE metodología independiente: escrituras notariales (Colegio de Escribanos CABA, informe oficial 23/06/2026) y desembolsos de préstamos hipotecarios del BCRA (análisis Fundación Tejido Urbano vía LN/Ámbito: junio US$150M, -50% i.a.). Coherencia interna verificada (587/1.297=45,2%→-54,8%; 587/5.435=10,8%; 3.387/5.394=62,8%→-37,2%). Postura de refutación incluida: junio (US$150M) fue el mejor mes desde marzo (rebote mensual) y varios bancos bajaron tasas, PERO interanualmente sigue -50%; el rebote insinúa un piso, no una reactivación. Serie de desembolsos BCRA (feb 151, mar 193, abr 122, may 116, jun 150 US$M) marcada como ESTIMACIÓN.",
+      "fecha": "2026-07-19",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-19-credito-hipotecario-se-enfria"
     }
   ]
 }
