@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-19T19:30:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-07-19-superavit-comercial-record-mayo",
-      "titulo": "US$3.504 millones: el mayor superávit comercial de la serie — y a dónde van esos dólares",
-      "bajada": "Mayo dejó el saldo comercial más alto que mide el INDEC: exportaciones récord de US$9.537 millones, importaciones en baja y un superávit de US$3.504 millones. El BCRA, con otra metodología, lo confirma (US$4.322 M). La pregunta que ordena la nota: con este chorro de dólares, ¿por qué el tipo de cambio no cede?",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "US$3.504 M",
-      "numero_label": "superávit comercial de mayo 2026, el más alto de la serie del INDEC",
-      "fecha": "2026-07-19",
-      "hora": "19:30",
-      "archivo": "cola/2026-07-19-superavit-comercial-record-mayo.html",
-      "verificacion": "verificada",
-      "fuentes": 6,
-      "lectura": "30 seg → 11 min"
-    }
-  ]
+  "borradores": []
 }
