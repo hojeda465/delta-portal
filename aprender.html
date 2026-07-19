@@ -77,6 +77,9 @@
   .lesson .btn{font-family:var(--mono);font-size:12px;font-weight:600;padding:8px 14px;border-radius:999px;border:none;cursor:pointer;text-decoration:none;display:inline-block}
   .lesson .btn.go{background:var(--tc);color:#fff}
   .lesson .btn.done{background:transparent;color:var(--green);border:1px solid var(--green);cursor:default}
+  .lesson .btn.reread{background:transparent;color:var(--green);border:1px solid var(--green);cursor:pointer;transition:.15s}
+  .lesson .btn.reread:hover{background:var(--green);color:#fff}
+  .lesson.done .lt{cursor:default}
   .lesson .btn.lock{background:transparent;color:var(--faint);border:1px solid var(--card-edge);cursor:default}
   .empty-sel{text-align:center;color:var(--muted);font-family:var(--mono);font-size:14px;padding:30px}
   .reset{font-family:var(--mono);font-size:11px;color:var(--faint);background:none;border:none;cursor:pointer;margin-top:14px;text-decoration:underline}
@@ -197,7 +200,7 @@ function renderDetail(){
   let lis="";
   r.lecciones.forEach((L,i)=>{
     let cls,ln,act;
-    if(i<s.done){ cls="done"; ln="✓"; act=`<a class="btn done">Completada</a>`; }
+    if(i<s.done){ cls="done"; ln="✓"; act = L.ref ? `<a class="btn reread" href="${L.ref}" target="_blank" rel="noopener">Releer &rarr;</a>` : `<span class="btn done">Completada</span>`; }
     else if(i===s.done){
       if(!L.ref){ cls="locked"; ln=i+1; act=`<span class="btn lock">En preparación</span>`; }
       else if(gateLeft>0){ cls="locked"; ln=i+1; act=`<span class="btn lock">🔒 en ${fmtLeft(gateLeft)}</span>`; }
@@ -208,6 +211,7 @@ function renderDetail(){
       <div class="act">${act}</div></li>`;
   });
   d.className="detail on";
+  d.style.setProperty('--tc', r.color);
   d.innerHTML=`
     <div class="d-top">
       <div><h2>${r.titulo}</h2><div class="dd">${r.desc}</div></div>
