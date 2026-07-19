@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-19T05:01:00-03:00",
-  "borradores": []
+  "actualizado": "2026-07-19T06:00:00-03:00",
+  "borradores": [
+    {
+      "id": "2026-07-19-autos-electrificados-cuadruplican",
+      "titulo": "El mercado de autos se achicó, pero los híbridos y eléctricos se cuadruplicaron",
+      "bajada": "En el primer trimestre de 2026 se patentaron 19.867 vehículos electrificados, un 313% más que un año antes, mientras el mercado total de 0km caía casi 10%. Detrás del salto: importaciones chinas y un arancel del 0%.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "+313%",
+      "numero_label": "crecieron los patentamientos de híbridos y eléctricos (1er trim. 2026, i.a.)",
+      "fecha": "2026-07-19",
+      "hora": "06:00",
+      "archivo": "articulos/2026-07-19-autos-electrificados-cuadruplican.html",
+      "verificacion": "verificada",
+      "fuentes": 7,
+      "lectura": "30 seg → 10 min"
+    }
+  ]
 }

@@ -77,6 +77,13 @@
       "fecha": "2026-07-19",
       "estado": "publicada",
       "articulo_id": "2026-07-19-deficit-turismo-record"
+    },
+    {
+      "tema": "autos híbridos y eléctricos / patentamientos se cuadruplican en el 1er trimestre 2026",
+      "angulo": "mercado a dos velocidades: mientras el 0km total cayó 9,9% en el semestre (294.181 unidades, junio -12,8%), los electrificados saltaron 313,2% interanual en el 1er trimestre (19.867 unidades vs 4.808 en 2025) — casi tres cuartas partes de todo 2025 en un solo trimestre. Ángulo de datos NUEVO respecto de las notas macro (es industria/comercio exterior, no fiscal ni precios): el driver no es ambiental sino de política económica (cupo de importación con arancel 0% para electrificados de hasta US$16.000 FOB, Decreto/cupo 49-2025) y de origen (importaciones extrazona +6.000%, China). Matiz clave: 8 de cada 10 son híbridos (HEV 60%, PHEV 18%, MHEV 14%), solo 8% eléctricos puros (BEV); 7 de cada 10 0km vendidos son importados. Cifra ancla (+313,2% / 19.867 unidades) CONFIRMADA por ACARA/SIOMAA reproducida por múltiples outlets independientes (Ámbito, El Economista, Motores a Pleno) y con coherencia interna EXACTA (4.808 + incrementos por tecnología 8.090+3.424+2.072+1.473 = 19.867); trayectoria histórica 14.173 (2024) → 26.632 (2025, +87,9%, 4,6% del mercado) confirmada (economis/ACARA); cupo 0% arancel confirmado por fuente oficial (argentina.gob.ar). Se DESCARTÓ por refutación una cifra contradictoria de récord (5.647 unidades, +43,4% semestral) que no cerraba con el dato oficial. Participación proyectada 2026 marcada como en ascenso (sin cierre de semestre electrificado).",
+      "fecha": "2026-07-19",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-19-autos-electrificados-cuadruplican"
     }
   ]
 }
