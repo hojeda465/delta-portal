@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-19T05:06:45+00:00"
+    "actualizado": "2026-07-19T05:49:52+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -11,6 +11,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-19-autos-electrificados-cuadruplican",
+      "titulo": "El mercado de autos se achicó, pero los híbridos y eléctricos se cuadruplicaron",
+      "bajada": "En el primer trimestre de 2026 se patentaron 19.867 vehículos electrificados, un 313% más que un año antes, mientras el mercado total de 0km caía casi 10%. Detrás del salto: importaciones chinas y un arancel del 0%.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "+313%",
+      "numero_label": "crecieron los patentamientos de híbridos y eléctricos (1er trim. 2026, i.a.)",
+      "fecha": "2026-07-19",
+      "hora": "06:00",
+      "archivo": "articulos/2026-07-19-autos-electrificados-cuadruplican.html",
+      "verificacion": "verificada",
+      "fuentes": 7,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-07-19-deficit-turismo-record",
       "titulo": "El turismo se llevó US$7.221 millones en 2025: el rojo récord de dólares que ahora se achica por la peor razón",
