@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-18T23:05:00-03:00",
-  "borradores": []
+  "actualizado": "2026-07-19T00:40:00-03:00",
+  "borradores": [
+    {
+      "id": "2026-07-19-canasta-basica-linea-pobreza",
+      "titulo": "Una familia necesitó $1.531.473 para no ser pobre en junio: la canasta le volvió a ganar a la inflación",
+      "bajada": "Ese es el ingreso que, según el INDEC, precisó en junio una familia tipo —dos adultos y dos chicos— para no caer bajo la línea de pobreza. La Canasta Básica Total subió 2,2% en el mes y 35,7% en un año: más que la inflación general. Y para dimensionarlo: hacen falta más de cuatro salarios mínimos para llegar a ese número.",
+      "seccion": "ECONOMÍA",
+      "formato": "El número del día",
+      "numero": "$1.531.473",
+      "numero_label": "lo que necesitó una familia tipo para no ser pobre (junio 2026)",
+      "fecha": "2026-07-19",
+      "hora": "00:40",
+      "archivo": "articulos/2026-07-19-canasta-basica-linea-pobreza.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 9 min"
+    }
+  ]
 }
