@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cómo trabajamos — Con Interés</title>
+<meta name="description" content="Cómo funciona Con Interés: una redacción de agentes de IA con supervisión humana, que sintetiza la actualidad económica con datos verificados y fuentes a la vista.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="canonical" href="https://coninteres.com/como-trabajamos.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Con Interés">
+<meta property="og:title" content="Cómo trabajamos — Con Interés">
+<meta property="og:description" content="Una redacción de agentes de IA con supervisión humana. Datos verificados, fuentes a la vista, y siempre llevado a cómo impacta tu vida.">
+<meta property="og:url" content="https://coninteres.com/como-trabajamos.html">
+<meta property="og:image" content="https://coninteres.com/assets/og-delta.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF8F4;--ink:#16130F;--ink-soft:#3C3833;--teal:#0E7C86;--teal-deep:#0A5C63;
+    --amber:#C4701F;--green:#2E8B6F;--muted:#6B6560;--faint:#8A847C;--rule:#DCD6CC;
+    --grid:#E7E1D7;--card:#FFFFFF;--card-edge:#EAE4DA;
+    --serif:"Source Serif 4",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px}
+  .masthead{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:50}
+  .masthead .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:960px}
+  .brand{font-family:var(--serif);font-weight:700;font-size:26px;letter-spacing:-.01em;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
+  .brand .tri{color:var(--teal)}
+  .brand .tag{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:8px;font-weight:500}
+  .mh-back{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none}
+  article{padding-top:40px}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-deep);font-weight:600;margin-bottom:14px}
+  h1{font-family:var(--serif);font-weight:700;font-size:40px;line-height:1.12;letter-spacing:-.015em;margin:0 0 18px}
+  .lead{font-family:var(--serif);font-size:21px;line-height:1.5;color:var(--ink-soft);margin:0 0 8px}
+  .sec{margin:44px 0 0}
+  .sec-tag{display:flex;align-items:center;gap:10px;margin:0 0 16px}
+  .sec-tag .n{font-family:var(--mono);font-weight:600;font-size:13px;color:var(--paper);background:var(--teal);width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .sec-tag h2{font-family:var(--serif);font-size:24px;font-weight:600;margin:0;line-height:1.2}
+  .sec p{font-size:17px;line-height:1.7;margin:0 0 16px;color:var(--ink-soft)}
+  .sec p b{color:var(--ink)}
+  .rules{list-style:none;margin:8px 0 0;padding:0}
+  .rules li{background:var(--card);border:1px solid var(--card-edge);border-radius:12px;padding:16px 18px;margin-bottom:12px;font-size:16px;line-height:1.55;color:var(--ink-soft)}
+  .rules li b{color:var(--ink);display:block;font-family:var(--sans);font-weight:600;margin-bottom:3px}
+  .rules li .mk{color:var(--teal);font-family:var(--mono);font-weight:600;margin-right:8px}
+  .steps{display:grid;gap:10px;margin:6px 0 0}
+  .step{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--card-edge);border-radius:12px;padding:14px 16px}
+  .step .s{font-family:var(--mono);font-weight:600;font-size:12px;color:var(--teal-deep);flex:0 0 auto;padding-top:2px;width:96px}
+  .step .d{font-size:15px;line-height:1.5;color:var(--ink-soft)}
+  .step .d b{color:var(--ink)}
+  .human{background:#F3EFE7;border:1px solid var(--card-edge);border-left:3px solid var(--green);border-radius:12px;padding:20px 22px;margin:8px 0 0}
+  .human h3{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin:0 0 10px;font-weight:600}
+  .human p{font-size:16px;line-height:1.6;margin:0;color:var(--ink-soft)}
+  .human p b{color:var(--ink)}
+  .disc{font-size:13px;color:var(--faint);font-family:var(--mono);line-height:1.6;margin-top:14px}
+  footer{border-top:2px solid var(--ink);margin-top:52px;padding:26px 0 60px}
+  footer .fb{font-family:var(--serif);font-weight:700;font-size:18px;color:var(--ink)}
+  footer .fb .tri{color:var(--teal)}
+  footer .fl{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:8px}
+  footer .fl a{color:var(--teal-deep);text-decoration:none}
+  @media(max-width:600px){h1{font-size:30px}.lead{font-size:19px}.step .s{width:auto}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="tri">%</span>Con Interés<span class="tag">La economía, con interés</span></a>
+    <a class="mh-back" href="index.html">&larr; Volver a la portada</a>
+  </div>
+</header>
+
+<div class="wrap">
+<article>
+
+  <div class="kicker">Cómo trabajamos</div>
+  <h1>Menos ruido, más señal — y con las cartas sobre la mesa</h1>
+  <p class="lead">Con Interés existe para ahorrarte el trabajo de leer diez portales y adivinar qué es cierto. Sintetizamos la actualidad económica en notas con datos verificados, escritas para que cualquiera las entienda, y siempre con una pregunta en la cabeza: <b>¿y esto cómo te toca a vos?</b></p>
+
+  <div class="sec">
+    <div class="sec-tag"><span class="n">1</span><h2>Quién escribe: agentes de IA, con un humano al mando</h2></div>
+    <p>Nuestras notas las produce una <b>redacción de agentes de inteligencia artificial</b>. No lo escondemos: lo decimos con orgullo, porque es lo que nos permite cubrir mucho, rápido y con foco obsesivo en los datos. Pero la IA no publica sola: <b>cada nota la aprueba un editor humano antes de salir al aire</b>, y hay una persona responsable detrás del medio.</p>
+    <p>Creemos que esto nos hace <b>más</b> transparentes que un medio tradicional, no menos: mostramos exactamente de dónde sale cada afirmación, en vez de pedirte que confíes en una firma.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sec-tag"><span class="n">2</span><h2>El método: seis capas y doble verificación</h2></div>
+    <p>Cada nota importante se arma sobre una estructura fija, para que leas <b>en 30 segundos o en 15 minutos</b> — vos elegís cuánto profundizar:</p>
+    <div class="steps">
+      <div class="step"><span class="s">① El número</span><span class="d">La cifra que ancla todo. El gancho.</span></div>
+      <div class="step"><span class="s">② La noticia</span><span class="d">Qué pasó, en lenguaje llano, sin jerga.</span></div>
+      <div class="step"><span class="s">③ En contexto</span><span class="d">El dato comparado con su historia, con otros países o con tu día a día.</span></div>
+      <div class="step"><span class="s">④ Cómo lo sabemos</span><span class="d">La cocina: fuente, fecha, método y límites del dato.</span></div>
+      <div class="step"><span class="s">⑤ Por qué importa</span><span class="d"><b>Cómo impacta en tu vida</b> — el "y esto qué".</span></div>
+      <div class="step"><span class="s">⑥ Más profundo</span><span class="d">La capa técnica, para quien quiera bajar hasta el fondo.</span></div>
+    </div>
+    <p style="margin-top:16px">Antes de escribir, un agente <b>verificador</b> intenta refutar cada cifra y la cruza con al menos <b>dos fuentes independientes</b>. Si un dato no se puede confirmar, no entra. Preferimos una nota menos antes que un dato falso.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sec-tag"><span class="n">3</span><h2>Nuestras reglas de oro</h2></div>
+    <ul class="rules">
+      <li><b><span class="mk">%</span>El dato duro manda, no la opinión.</b> Nos basamos en fuentes primarias y objetivas: informes, resoluciones y estadísticas oficiales (INDEC, BCRA, ministerios, balances). El hecho verificable es la columna vertebral de cada nota.</li>
+      <li><b><span class="mk">%</span>Con nuestras palabras y nuestros gráficos.</b> Contamos los hechos con voz propia y construimos nuestras propias visualizaciones desde el dato crudo. No copiamos textos ni gráficos de otros medios.</li>
+      <li><b><span class="mk">%</span>Citas solo si son oficiales y verificables.</b> Si mencionamos que alguien dijo algo, es porque está en el registro público (un comunicado, una conferencia, un documento oficial) y lo enlazamos. Nada de "fuentes del mercado dicen" ni citas sin respaldo.</li>
+      <li><b><span class="mk">%</span>Cada cifra, con su fuente a la vista.</b> Toda nota lleva sus fuentes enlazadas. Lo que es estimación se marca como estimación, con su rango.</li>
+      <li><b><span class="mk">%</span>No damos consejos de inversión.</b> Te damos los datos y el contexto para que decidas vos. Con Interés informa; no recomienda comprar ni vender nada.</li>
+      <li><b><span class="mk">%</span>Para cualquiera, no solo para expertos.</b> Si una frase no se entiende sin ser economista, la reescribimos. La economía es de todos; contarla claro es parte del trabajo.</li>
+    </ul>
+  </div>
+
+  <div class="sec">
+    <div class="sec-tag"><span class="n">4</span><h2>Responsabilidad</h2></div>
+    <div class="human">
+      <h3>% Supervisión humana</h3>
+      <p>Detrás de la automatización hay <b>una persona responsable</b> que supervisa el funcionamiento del medio y aprueba las notas antes de publicarlas. La IA hace el trabajo pesado; la responsabilidad editorial es humana. Si detectás un error, lo corregimos y lo dejamos asentado — como hicimos, por ejemplo, cuando actualizamos un resultado deportivo apenas cambió el dato oficial.</p>
+    </div>
+    <p class="disc">Con Interés es un medio en desarrollo. La información proviene de fuentes públicas citadas y puede ser revisada por los organismos emisores. Nada de lo publicado constituye asesoramiento financiero, legal ni de inversión.</p>
+  </div>
+
+</article>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fb"><span class="tri">%</span> Con Interés</div>
+    <div class="fl">La economía, con interés · <a href="index.html">Portada</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

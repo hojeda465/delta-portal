@@ -247,6 +247,7 @@ HTML = f"""<!DOCTYPE html>
     <div>
       <div class="f-brand"><span class="tri">%</span> {escape(portal['nombre'])}</div>
       <div class="f-desc">{escape(portal['descripcion'])}</div>
+      <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos — método, IA y ética →</a></div>
     </div>
     <div class="f-meta">
       <div>PROTOTIPO EDITORIAL</div>

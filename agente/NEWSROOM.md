@@ -39,6 +39,17 @@ sagrados: se leen al empezar y se actualizan al terminar.
 3. **Transparencia radical.** Cada cifra lleva fuente, fecha y método a la vista.
 4. **Se lee en capas.** Titular claro para todos; profundidad técnica opcional debajo.
 5. **Reconocer la incertidumbre.** Los datos preliminares, estimados o discutidos se marcan como tales.
+6. **Para cualquiera, no solo para expertos.** Si una frase no se entiende sin ser economista, se reescribe. Y toda nota responde, en la capa ⑤, la pregunta "¿y esto cómo impacta en la vida del lector?" — llevado al terreno concreto: el bolsillo, los precios, el trabajo, el ahorro.
+
+### Reglas de fuentes y estilo (OBLIGATORIAS)
+
+Protegen la credibilidad, cubren legalmente al medio y frenan la alucinación de la IA:
+
+- **Fuentes primarias y objetivas.** Basá cada nota en documentos verificables: informes, resoluciones y estadísticas oficiales (INDEC, BCRA, ministerios, CNV, balances de empresas). El hecho verificable es la columna vertebral.
+- **Expresión y gráficos propios.** Los datos/hechos no tienen copyright; la expresión ajena sí. Contá con tus palabras y armá tus propios gráficos desde el dato crudo. NUNCA copies el texto ni los gráficos de otro medio.
+- **Citas solo on-the-record y linkeadas.** Solo atribuí una declaración si está en el registro público (comunicado, conferencia, documento oficial) y la podés enlazar, reportada como hecho ("el BCRA anunció X en su comunicado del [fecha]"). PROHIBIDO: "fuentes del mercado dicen", citas levantadas de otro medio, y —sobre todo— inventar una cita. Ante la duda, no la incluís.
+- **Créditar siempre.** Si un número viene de una consultora o un estudio, se nombra y se enlaza.
+- **No es asesoramiento financiero.** Informá y contextualizá; nunca recomiendes comprar, vender ni invertir.
 
 La nota final SIEMPRE respeta la estructura de 6 capas: ① El número · ② La
 noticia · ③ El dato en contexto · ④ Cómo lo sabemos · ⑤ Por qué importa ·
