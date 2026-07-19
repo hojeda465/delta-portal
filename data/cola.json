@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-19T07:30:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-07-19-credito-hipotecario-se-enfria",
-      "titulo": "Se compra, pero sin banco: las hipotecas se derrumbaron en la Ciudad y ya explican solo 1 de cada 10 operaciones",
-      "bajada": "En mayo se firmaron 5.435 escrituras en la Ciudad de Buenos Aires, casi las mismas que un año atrás. Pero las que llevaron crédito hipotecario cayeron 54,8% y, en cinco meses, el crédito acumula una baja del 37%. El mercado aguanta —sostenido por compradores que pagan con ahorros—, mientras el motor que prometía democratizar el acceso a la vivienda se apaga.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "−37%",
-      "numero_label": "cayó el crédito hipotecario en CABA en los primeros 5 meses de 2026 (i.a., escrituras con hipoteca)",
-      "fecha": "2026-07-19",
-      "hora": "07:30",
-      "archivo": "articulos/2026-07-19-credito-hipotecario-se-enfria.html",
-      "verificacion": "verificada",
-      "fuentes": 5,
-      "lectura": "30 seg → 11 min"
-    }
-  ]
+  "borradores": []
 }
