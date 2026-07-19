@@ -157,7 +157,7 @@ publicar se mueve a `articulos` en `data/articulos.json`):
   "id": "2026-07-19-tema-en-kebab",
   "titulo": "…",
   "bajada": "…",
-  "seccion": "PLATA | MERCADOS | MÁQUINAS | CIENCIA | EL MUNDO EN NÚMEROS",
+  "seccion": "ECONOMÍA | MERCADOS | MUNDO",
   "formato": "Anatomía de un dato | El número del día | Antes/Después | …",
   "numero": "1,9%",
   "numero_label": "qué mide la cifra ancla",

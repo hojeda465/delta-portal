@@ -6,12 +6,9 @@
     "actualizado": "2026-07-19T09:05:00-03:00"
   },
   "secciones": [
-    "PLATA",
+    "ECONOMÍA",
     "MERCADOS",
-    "MÁQUINAS",
-    "CIENCIA",
-    "EL MUNDO EN NÚMEROS",
-    "DEPORTES"
+    "MUNDO"
   ],
   "articulos": [
     {
@@ -33,7 +30,7 @@
       "id": "2026-07-19-agro-record-toneladas-menos-dolares",
       "titulo": "Récord de granos, menos dólares: el campo embarcó más toneladas que nunca y cobró US$2.000 millones menos",
       "bajada": "Argentina exportó 60,7 millones de toneladas de granos en el primer semestre, el mayor volumen de su historia para ese período. Y sin embargo, la agroexportación liquidó 13% menos dólares que un año atrás. Los dos datos son verdaderos a la vez — y la explicación no es la que parece: en 2025 una rebaja temporal de retenciones había inflado la base de comparación.",
-      "seccion": "PLATA",
+      "seccion": "ECONOMÍA",
       "formato": "Anatomía de un dato",
       "numero": "60,7 M t",
       "numero_label": "granos exportados en el 1er semestre 2026 (récord)",
@@ -48,7 +45,7 @@
       "id": "2026-07-18-depositos-dolares-record",
       "titulo": "Los depósitos privados en dólares tocaron US$40.437 millones: el nivel más alto en 26 años",
       "bajada": "Los ahorros en dólares que el sector privado tiene en los bancos argentinos treparon a su mayor nivel desde el año 2000. Subieron US$3.451 millones en lo que va de 2026 y dejaron muy atrás el pico previo a la corrida de 2019. Pero casi la mitad de esa montaña de divisas no se está prestando.",
-      "seccion": "PLATA",
+      "seccion": "MERCADOS",
       "formato": "El número del día",
       "numero": "US$40.437 M",
       "numero_label": "depósitos privados en dólares (13/07/2026)",
@@ -60,25 +57,10 @@
       "lectura": "30 seg → 9 min"
     },
     {
-      "id": "2026-07-18-inglaterra-francia-tercer-puesto",
-      "titulo": "Inglaterra le ganó 6-4 a Francia en un partidazo de 10 goles por el bronce",
-      "bajada": "Festival de 10 goles por el tercer puesto del Mundial 2026: Inglaterra se puso 4-0, resistió la reacción de Francia hasta el 4-3 y ganó 6-4. Saka hizo un hat-trick y Mbappé, con un doblete, superó a Messi como máximo goleador histórico de los Mundiales (22).",
-      "seccion": "DEPORTES",
-      "formato": "Infografía",
-      "numero": "6–4",
-      "numero_label": "Inglaterra–Francia · tercer puesto",
-      "fecha": "2026-07-18",
-      "hora": "20:40",
-      "archivo": "articulos/2026-07-18-inglaterra-francia-tercer-puesto.html",
-      "verificacion": "verificada",
-      "fuentes": 3,
-      "lectura": "Infografía · 2 min"
-    },
-    {
       "id": "2026-07-18-vaca-muerta-superavit-energetico",
       "titulo": "Dos de cada tres barriles: cómo Vaca Muerta dio vuelta la balanza energética argentina",
       "bajada": "En abril, el 67% del petróleo del país salió de un solo lugar. Ese salto de producción llevó al comercio de energía del mayor déficit en años —US$4.400 millones en rojo en 2022— al mayor superávit de su historia. El primer semestre de 2026 habría cerrado en torno a los US$7.000 millones a favor: una cifra que la entidad que la difundió todavía marca como estimada.",
-      "seccion": "PLATA",
+      "seccion": "ECONOMÍA",
       "formato": "Antes / Después",
       "numero": "67%",
       "numero_label": "del crudo argentino ya sale de Vaca Muerta",
@@ -93,7 +75,7 @@
       "id": "2026-07-18-malvinas-sea-lion",
       "titulo": "Sea Lion: cuánto petróleo hay en juego en Malvinas (y por qué podría dar vuelta la economía de las islas)",
       "bajada": "En diciembre se aprobó la inversión para extraer petróleo del mar que rodea a las Malvinas. El proyecto cuesta casi seis veces todo lo que producen las islas en un año. Argentina protesta por soberanía; los números explican por qué el tema no va a desaparecer.",
-      "seccion": "EL MUNDO EN NÚMEROS",
+      "seccion": "MUNDO",
       "formato": "Anatomía de un dato",
       "numero": "US$2.100 M",
       "numero_label": "inversión del proyecto Sea Lion",
@@ -108,7 +90,7 @@
       "id": "2026-07-18-inflacion-argentina",
       "titulo": "La inflación bajó a 1,9%: por qué los números buenos todavía no se sienten en la calle",
       "bajada": "Junio marcó la inflación mensual más baja en diez meses y el riesgo país tocó su mínimo en ocho años. Un centímetro debajo de la superficie, el salario real cae, se destruyen empleos y dos millones de personas más entraron en mora.",
-      "seccion": "PLATA",
+      "seccion": "ECONOMÍA",
       "formato": "Anatomía de un dato",
       "numero": "1,9%",
       "numero_label": "inflación de junio 2026",

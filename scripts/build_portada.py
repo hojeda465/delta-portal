@@ -30,6 +30,12 @@ borradores = cola.get("borradores", [])
 
 # ---- helpers -----------------------------------------------------------
 MESES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"]
+DIAS = ["LUN","MAR","MIÉ","JUE","VIE","SÁB","DOM"]
+try:
+    _md = datetime.date.fromisoformat(portal["actualizado"][:10])
+    FECHA_MASTHEAD = f"{DIAS[_md.weekday()]} {_md.day} · {MESES[_md.month-1].upper()} · {_md.year}"
+except Exception:
+    FECHA_MASTHEAD = ""
 def fecha_bonita(f):
     try:
         d = datetime.date.fromisoformat(f)
@@ -45,8 +51,11 @@ def actualizado_hace(iso):
         return iso
 
 SEC_COLOR = {
-    "PLATA": "#0E7C86", "MERCADOS": "#0A5C63", "MÁQUINAS": "#C4701F",
-    "CIENCIA": "#2E8B6F", "EL MUNDO EN NÚMEROS": "#7A5CC4", "DEPORTES": "#C0392B",
+    "ECONOMÍA": "#0E7C86", "MERCADOS": "#0A5C63", "MUNDO": "#7A5CC4",
+    # compat / fallback
+    "PLATA": "#0E7C86", "MÁQUINAS": "#C4701F", "CIENCIA": "#2E8B6F",
+    "EL MUNDO EN NÚMEROS": "#7A5CC4", "DEPORTES": "#C0392B", "NEGOCIOS": "#0A5C63",
+    "TECNOLOGÍA": "#C4701F",
 }
 
 def chip_verif(v):
@@ -216,7 +225,7 @@ HTML = f"""<!DOCTYPE html>
   <div class="wrap">
     <div class="brand"><span class="tri">%</span>{escape(portal['nombre'])}<span class="tag">{escape(portal['tagline'])}</span></div>
     <div class="mh-right">
-      <div>SÁBADO 18 · JULIO · 2026</div>
+      <div>{FECHA_MASTHEAD}</div>
       <div>Actualizado <b>{actualizado_hace(portal['actualizado'])}</b></div>
     </div>
   </div>
