@@ -51,7 +51,7 @@ def actualizado_hace(iso):
         return iso
 
 SEC_COLOR = {
-    "ECONOMÍA": "#0E7C86", "MERCADOS": "#0A5C63", "MUNDO": "#7A5CC4",
+    "ECONOMÍA": "#0E7C86", "ECONOMÍA PROVINCIAL": "#C4701F", "MERCADOS": "#0A5C63", "MUNDO": "#7A5CC4",
     # compat / fallback
     "PLATA": "#0E7C86", "MÁQUINAS": "#C4701F", "CIENCIA": "#2E8B6F",
     "EL MUNDO EN NÚMEROS": "#7A5CC4", "DEPORTES": "#C0392B", "NEGOCIOS": "#0A5C63",
@@ -181,11 +181,7 @@ HTML = f"""<!DOCTYPE html>
   .learn-link{{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;display:flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600}}
   .learn-link b{{background:var(--amber);color:#fff;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:999px;font-weight:600}}
   .learn-link:hover{{color:var(--teal)}}
-  .nav-right{{margin-left:auto;display:flex;align-items:center;gap:18px;flex-wrap:wrap}}
-  .nav-right .learn-link{{margin-left:0}}
-  .prov-link{{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;font-weight:600;white-space:nowrap;display:flex;align-items:center;gap:6px}}
-  .prov-link:hover{{color:var(--teal)}}
-  @media(max-width:560px){{.nav-right{{margin-left:0;width:100%;gap:10px;padding-top:6px}}}}
+  @media(max-width:560px){{.learn-link{{margin-left:0;width:100%;padding-top:6px}}}}
   .empty{{color:var(--muted);font-family:var(--mono);font-size:14px;padding:40px 0}} .empty.small{{padding:14px}}
 
   .lead{{display:grid;grid-template-columns:300px 1fr;gap:30px;border-bottom:1px solid var(--rule);padding-bottom:30px;margin-bottom:30px;align-items:center}}
@@ -245,7 +241,7 @@ HTML = f"""<!DOCTYPE html>
   </div>
 </header>
 
-<nav class="secnav"><div class="wrap">{secciones_nav}<div class="nav-right"><a class="prov-link" href="provincias.html">% Economía provincial</a><a class="learn-link" href="aprender.html">Modo Aprendizaje <b>beta</b> →</a></div></div></nav>
+<nav class="secnav"><div class="wrap">{secciones_nav}<a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
 
 <main class="wrap">
   {lead_html}
@@ -292,7 +288,7 @@ with open(out, "w", encoding="utf-8") as f:
 
 # ---- sitemap.xml (para SEO) --------------------------------------------
 urls = [f"  <url><loc>{SITE}/</loc><changefreq>hourly</changefreq><priority>1.0</priority></url>"]
-for pg in ("provincias.html", "aprender.html", "como-trabajamos.html"):
+for pg in ("aprender.html", "como-trabajamos.html"):
     urls.append(f"  <url><loc>{SITE}/{pg}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>")
 for a in articulos:
     urls.append(
