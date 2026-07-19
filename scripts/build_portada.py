@@ -122,6 +122,7 @@ HTML = f"""<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="EkVYODJUjsh6bYYbnDOTKdg_7uFxKj2wG-MCxCOwfhM" />
 <title>{escape(portal['nombre'])} — {escape(portal['tagline'])}</title>
 <meta name="description" content="{escape(portal['descripcion'])}">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
