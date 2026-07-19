@@ -49,7 +49,10 @@
 
   .secnav{border-bottom:1px solid var(--rule)}
   .secnav .wrap{display:flex;gap:8px;padding:12px 24px;flex-wrap:wrap}
-  .sec-chip{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--sc);border:1px solid var(--card-edge);padding:5px 11px;border-radius:999px;font-weight:600}
+  .sec-chip{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--sc);background:var(--paper);border:1px solid var(--card-edge);padding:6px 13px;border-radius:999px;font-weight:600;cursor:pointer;transition:.15s}
+  .sec-chip:hover{border-color:var(--sc)}
+  .sec-chip.active{background:var(--sc);color:#fff;border-color:var(--sc)}
+  .lead.is-hidden,.card.is-hidden{display:none}
 
   main{padding:30px 0 20px}
   .empty{color:var(--muted);font-family:var(--mono);font-size:14px;padding:40px 0} .empty.small{padding:14px}
@@ -107,7 +110,6 @@
     <div class="brand"><span class="tri">%</span>Con Interés<span class="tag">La economía, con interés</span></div>
     <div class="mh-right">
       <div>DOM 19 · JUL · 2026</div>
-      <div>Actualizado <b>19/07 09:05</b></div>
     </div>
   </div>
 </header>
@@ -122,11 +124,11 @@
   </div>
 </div>
 
-<nav class="secnav"><div class="wrap"><span class="sec-chip" style="--sc:#0E7C86">ECONOMÍA</span><span class="sec-chip" style="--sc:#0A5C63">MERCADOS</span><span class="sec-chip" style="--sc:#7A5CC4">MUNDO</span></div></nav>
+<nav class="secnav"><div class="wrap"><button class="sec-chip active" data-filter="all" style="--sc:#16130F">Todas</button><button class="sec-chip" data-filter="ECONOMÍA" style="--sc:#0E7C86">ECONOMÍA</button><button class="sec-chip" data-filter="MERCADOS" style="--sc:#0A5C63">MERCADOS</button><button class="sec-chip" data-filter="MUNDO" style="--sc:#7A5CC4">MUNDO</button></div></nav>
 
 <main class="wrap">
   
-    <a class="lead" href="articulos/2026-07-19-bcra-compra-record-dolares.html">
+    <a class="lead" data-sec="MERCADOS" href="articulos/2026-07-19-bcra-compra-record-dolares.html">
       <div class="lead-num" style="--sc:#0A5C63">
         <span class="ln-big" style="font-size:50px">US$532 M</span>
         <span class="ln-lab">mayor compra diaria de dólares del BCRA (14/07/2026)</span>
@@ -140,35 +142,35 @@
     </a>
   <div class="grid">
     
-    <a class="card" href="articulos/2026-07-19-agro-record-toneladas-menos-dolares.html">
+    <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-agro-record-toneladas-menos-dolares.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>Récord de granos, menos dólares: el campo embarcó más toneladas que nunca y cobró US$2.000 millones menos</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>60,7 M t</b> granos exportados en el 1er semestre 2026 (récord)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
 
-    <a class="card" href="articulos/2026-07-18-depositos-dolares-record.html">
+    <a class="card" data-sec="MERCADOS" href="articulos/2026-07-18-depositos-dolares-record.html">
       <div class="kick" style="color:#0A5C63">MERCADOS</div>
       <h3>Los depósitos privados en dólares tocaron US$40.437 millones: el nivel más alto en 26 años</h3>
       <div class="card-num" style="--sc:#0A5C63"><b>US$40.437 M</b> depósitos privados en dólares (13/07/2026)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>18 jul 2026</div>
     </a>
 
-    <a class="card" href="articulos/2026-07-18-vaca-muerta-superavit-energetico.html">
+    <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-18-vaca-muerta-superavit-energetico.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>Dos de cada tres barriles: cómo Vaca Muerta dio vuelta la balanza energética argentina</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>67%</b> del crudo argentino ya sale de Vaca Muerta</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>18 jul 2026</div>
     </a>
 
-    <a class="card" href="articulos/2026-07-18-malvinas-sea-lion.html">
+    <a class="card" data-sec="MUNDO" href="articulos/2026-07-18-malvinas-sea-lion.html">
       <div class="kick" style="color:#7A5CC4">MUNDO</div>
       <h3>Sea Lion: cuánto petróleo hay en juego en Malvinas (y por qué podría dar vuelta la economía de las islas)</h3>
       <div class="card-num" style="--sc:#7A5CC4"><b>US$2.100 M</b> inversión del proyecto Sea Lion</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>18 jul 2026</div>
     </a>
 
-    <a class="card" href="articulos/2026-07-18-inflacion-argentina.html">
+    <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-18-inflacion-argentina.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>La inflación bajó a 1,9%: por qué los números buenos todavía no se sienten en la calle</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>1,9%</b> inflación de junio 2026</div>
@@ -185,14 +187,26 @@
       <div class="f-desc">Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.</div>
       <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos — método, IA y ética →</a></div>
     </div>
-    <div class="f-meta">
-      <div>PROTOTIPO EDITORIAL</div>
-      <div>6 nota(s) publicada(s)</div>
-      <div>0 en cola de revisión</div>
-      <div>Generado por build_portada.py</div>
-    </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var chips=document.querySelectorAll('.sec-chip');
+  var lead=document.querySelector('.lead');
+  var cards=document.querySelectorAll('.card');
+  function match(el,f){ return f==='all' || (el && el.getAttribute('data-sec')===f); }
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      chips.forEach(function(x){x.classList.remove('active');});
+      c.classList.add('active');
+      var f=c.getAttribute('data-filter');
+      if(lead){ lead.classList.toggle('is-hidden', !match(lead,f)); }
+      cards.forEach(function(cd){ cd.classList.toggle('is-hidden', !match(cd,f)); });
+    });
+  });
+})();
+</script>
 
 </body>
 </html>

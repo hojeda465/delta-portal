@@ -73,7 +73,7 @@ def card_lead(a):
     n = len(num)
     fs = 64 if n <= 5 else (50 if n <= 8 else 38)
     return f"""
-    <a class="lead" href="{escape(a['archivo'])}">
+    <a class="lead" data-sec="{escape(a['seccion'])}" href="{escape(a['archivo'])}">
       <div class="lead-num" style="--sc:{sc}">
         <span class="ln-big" style="font-size:{fs}px">{escape(num)}</span>
         <span class="ln-lab">{escape(a.get('numero_label',''))}</span>
@@ -89,7 +89,7 @@ def card_lead(a):
 def card(a):
     sc = SEC_COLOR.get(a["seccion"], "#0E7C86")
     return f"""
-    <a class="card" href="{escape(a['archivo'])}">
+    <a class="card" data-sec="{escape(a['seccion'])}" href="{escape(a['archivo'])}">
       <div class="kick" style="color:{sc}">{escape(a['seccion'])}</div>
       <h3>{escape(a['titulo'])}</h3>
       <div class="card-num" style="--sc:{sc}"><b>{escape(a.get('numero',''))}</b> {escape(a.get('numero_label',''))}</div>
@@ -114,8 +114,8 @@ if borradores:
 else:
     cola_html = ""
 
-secciones_nav = "".join(
-    f'<span class="sec-chip" style="--sc:{SEC_COLOR.get(s,"#0E7C86")}">{escape(s)}</span>' for s in art.get("secciones", []))
+secciones_nav = '<button class="sec-chip active" data-filter="all" style="--sc:#16130F">Todas</button>' + "".join(
+    f'<button class="sec-chip" data-filter="{escape(s)}" style="--sc:{SEC_COLOR.get(s,"#0E7C86")}">{escape(s)}</button>' for s in art.get("secciones", []))
 
 HTML = f"""<!DOCTYPE html>
 <html lang="es">
@@ -168,7 +168,10 @@ HTML = f"""<!DOCTYPE html>
 
   .secnav{{border-bottom:1px solid var(--rule)}}
   .secnav .wrap{{display:flex;gap:8px;padding:12px 24px;flex-wrap:wrap}}
-  .sec-chip{{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--sc);border:1px solid var(--card-edge);padding:5px 11px;border-radius:999px;font-weight:600}}
+  .sec-chip{{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--sc);background:var(--paper);border:1px solid var(--card-edge);padding:6px 13px;border-radius:999px;font-weight:600;cursor:pointer;transition:.15s}}
+  .sec-chip:hover{{border-color:var(--sc)}}
+  .sec-chip.active{{background:var(--sc);color:#fff;border-color:var(--sc)}}
+  .lead.is-hidden,.card.is-hidden{{display:none}}
 
   main{{padding:30px 0 20px}}
   .empty{{color:var(--muted);font-family:var(--mono);font-size:14px;padding:40px 0}} .empty.small{{padding:14px}}
@@ -226,7 +229,6 @@ HTML = f"""<!DOCTYPE html>
     <div class="brand"><span class="tri">%</span>{escape(portal['nombre'])}<span class="tag">{escape(portal['tagline'])}</span></div>
     <div class="mh-right">
       <div>{FECHA_MASTHEAD}</div>
-      <div>Actualizado <b>{actualizado_hace(portal['actualizado'])}</b></div>
     </div>
   </div>
 </header>
@@ -258,14 +260,26 @@ HTML = f"""<!DOCTYPE html>
       <div class="f-desc">{escape(portal['descripcion'])}</div>
       <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos — método, IA y ética →</a></div>
     </div>
-    <div class="f-meta">
-      <div>PROTOTIPO EDITORIAL</div>
-      <div>{len(articulos)} nota(s) publicada(s)</div>
-      <div>{len(borradores)} en cola de revisión</div>
-      <div>Generado por build_portada.py</div>
-    </div>
   </div>
 </footer>
+
+<script>
+(function(){{
+  var chips=document.querySelectorAll('.sec-chip');
+  var lead=document.querySelector('.lead');
+  var cards=document.querySelectorAll('.card');
+  function match(el,f){{ return f==='all' || (el && el.getAttribute('data-sec')===f); }}
+  chips.forEach(function(c){{
+    c.addEventListener('click',function(){{
+      chips.forEach(function(x){{x.classList.remove('active');}});
+      c.classList.add('active');
+      var f=c.getAttribute('data-filter');
+      if(lead){{ lead.classList.toggle('is-hidden', !match(lead,f)); }}
+      cards.forEach(function(cd){{ cd.classList.toggle('is-hidden', !match(cd,f)); }});
+    }});
+  }});
+}})();
+</script>
 
 </body>
 </html>"""
