@@ -240,5 +240,42 @@ con menos notas pero todas sólidas es un buen día para Con Interés.
 
 ---
 
+## 8. Producción de lecciones (Modo Aprendizaje)
+
+Además de noticias, Con Interés produce **lecciones de concepto** para el Modo
+Aprendizaje (`/aprender.html`). Una lección NO es una noticia: es contenido
+**evergreen** que enseña un concepto y le da al lector herramientas para
+interpretar la actualidad. El propósito es hacer cultura económica.
+
+**Dónde viven:** `lecciones/<slug>.html`. Usan la hoja de estilo compartida
+`assets/leccion.css` (NO CSS inline). Referencias de oro — copiá su estructura:
+`lecciones/inflacion.html` (concepto + escuelas + debate) y
+`lecciones/presupuesto.html` (concepto práctico con pasos y tabla).
+
+**Estructura obligatoria** (bloques `.block-tag`, en este orden):
+1. **La idea** — el concepto en una frase, en la caja oscura `.idea`.
+2. **En criollo / un ejemplo** — una analogía (`.analogy`) o un ejemplo con números (`.example` + tabla).
+3. **El desarrollo:** si es teórico, las escuelas/miradas en paridad (`.schools` o `.debate`); si es práctico, pasos accionables (`.steps`).
+4. **Ojo / matiz** — caja `.warn` con el error común o la advertencia.
+5. **Aplicado** (si corresponde) — conectar con una nota real del portal y mostrar cómo interpretarla con lo aprendido.
+6. **Takeaway** (`.takeaway`) + **próxima lección** (`.next`).
+
+**Reglas de oro de las lecciones:**
+- **Imparcialidad.** Cuando hay debate (escuelas económicas, pesos vs dólares) se presentan las miradas EN PARIDAD, sin bajar línea. Es el ADN de "las dos lecturas".
+- **Desde cero.** Lenguaje llano, cero jerga sin explicar. Si no lo entiende alguien sin formación económica, se reescribe.
+- **Llevado al terreno.** Siempre "¿y esto cómo te toca a vos?".
+- **No es asesoramiento.** Nunca recomendar comprar/vender/invertir; disclaimer al pie (ver referencia).
+- **Rigor.** Definiciones correctas; cuando se citan cifras, se verifican como en una nota.
+
+**Integración:** la lección nueva se agrega a la ruta que corresponda en el array
+`RUTAS` de `aprender.html` (`t`, `m`, `ref`), en el lugar pedagógico correcto
+(teoría antes que aplicación).
+
+**Modo de trabajo:** como las notas, las lecciones nuevas van primero a **revisión
+humana** antes de publicarse — la calidad pedagógica y la imparcialidad se revisan
+con cuidado.
+
+---
+
 *Con Interés — La economía, con interés. Este manual evoluciona: cada vez que ajustemos el
 criterio editorial o el diseño, se actualiza acá.*
