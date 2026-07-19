@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-19T15:20:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-07-19-agro-record-toneladas-menos-dolares",
-      "titulo": "Récord de granos, menos dólares: el campo embarcó más toneladas que nunca y cobró US$2.000 millones menos",
-      "bajada": "Argentina exportó 60,7 millones de toneladas de granos en el primer semestre, el mayor volumen de su historia para ese período. Y sin embargo, la agroexportación liquidó 13% menos dólares que un año atrás. Los dos datos son verdaderos a la vez — y la explicación no es la que parece: en 2025 una rebaja temporal de retenciones había inflado la base de comparación.",
-      "seccion": "PLATA",
-      "formato": "Anatomía de un dato",
-      "numero": "60,7 M t",
-      "numero_label": "granos exportados en el 1er semestre 2026 (récord)",
-      "fecha": "2026-07-19",
-      "hora": "15:20",
-      "archivo": "articulos/2026-07-19-agro-record-toneladas-menos-dolares.html",
-      "verificacion": "verificada",
-      "fuentes": 5,
-      "lectura": "30 seg → 10 min"
-    }
-  ]
+  "borradores": []
 }
