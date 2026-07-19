@@ -174,10 +174,10 @@ HTML = f"""<!DOCTYPE html>
   .lead.is-hidden,.card.is-hidden{{display:none}}
 
   main{{padding:30px 0 20px}}
-  .learn-cta{{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--ink);color:var(--paper);border-radius:14px;padding:16px 22px;margin:0 0 28px;text-decoration:none;flex-wrap:wrap;transition:.15s}}
-  .learn-cta:hover{{transform:translateY(-2px)}}
-  .learn-cta b{{color:#fff}} .learn-cta .lc-t{{font-size:15px;color:#CFC9BF;max-width:64ch;line-height:1.5}}
-  .learn-cta .lc-a{{font-family:var(--mono);font-size:13px;color:#4FC0A4;font-weight:600;flex:0 0 auto}}
+  .learn-link{{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;display:flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600}}
+  .learn-link b{{background:var(--amber);color:#fff;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:999px;font-weight:600}}
+  .learn-link:hover{{color:var(--teal)}}
+  @media(max-width:560px){{.learn-link{{margin-left:0;width:100%;padding-top:6px}}}}
   .empty{{color:var(--muted);font-family:var(--mono);font-size:14px;padding:40px 0}} .empty.small{{padding:14px}}
 
   .lead{{display:grid;grid-template-columns:300px 1fr;gap:30px;border-bottom:1px solid var(--rule);padding-bottom:30px;margin-bottom:30px;align-items:center}}
@@ -237,10 +237,9 @@ HTML = f"""<!DOCTYPE html>
   </div>
 </header>
 
-<nav class="secnav"><div class="wrap">{secciones_nav}</div></nav>
+<nav class="secnav"><div class="wrap">{secciones_nav}<a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
 
 <main class="wrap">
-  <a class="learn-cta" href="aprender.html"><span class="lc-t"><b>% Modo Aprendizaje</b> — en vez de noticias sueltas, un programa paso a paso, a tu ritmo, con la economía de hoy.</span><span class="lc-a">Elegí qué aprender →</span></a>
   {lead_html}
   <div class="grid">
     {grid_html}
