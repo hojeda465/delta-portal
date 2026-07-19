@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-19T13:53:00-03:00",
-  "borradores": []
+  "actualizado": "2026-07-19T16:41:00-03:00",
+  "borradores": [
+    {
+      "id": "2026-07-19-capacidad-instalada-industria-ociosa",
+      "titulo": "La industria usó el 58,4% de su capacidad en mayo: cuatro de cada diez máquinas, paradas",
+      "bajada": "El INDEC informó que en mayo la industria trabajó al 58,4% de su capacidad instalada, por debajo de un año atrás y con cinco de doce sectores operando a menos de la mitad. La refinería de petróleo va casi a pleno (88,7%); la metalmecánica, al 38,7%, roza sus registros de pandemia. La misma foto, dos industrias adentro.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "58,4%",
+      "numero_label": "usó la industria de su capacidad instalada en mayo de 2026; el resto quedó ocioso (INDEC)",
+      "fecha": "2026-07-19",
+      "hora": "16:41",
+      "archivo": "articulos/2026-07-19-capacidad-instalada-industria-ociosa.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 10 min"
+    }
+  ]
 }

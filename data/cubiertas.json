@@ -119,6 +119,13 @@
       "fecha": "2026-07-19",
       "estado": "publicada",
       "articulo_id": "2026-07-19-venture-capital-startups"
+    },
+    {
+      "tema": "utilización de la capacidad instalada industrial / mayo 2026 (58,4%, con fuerte heterogeneidad sectorial)",
+      "angulo": "ángulo de datos NUEVO respecto de la nota de producción industrial (IPI/ISAC, que midió la variación interanual del volumen): esta nota es sobre el NIVEL de uso de la capacidad instalada —cuánto del parque fabril quedó ocioso— y sobre la brecha sectorial. En mayo la industria usó 58,4% de su capacidad (INDEC, publicado 16/07/2026), -0,5 pp vs mayo 2025 (58,9%) y -1,5 pp vs abril (59,9%): la comparación interanual, que en marzo-abril había sido positiva, volvió a rojo. 5 de 12 bloques por debajo del 50%. Techo: refinación de petróleo 88,7% (vs 73,3% may-25; gasoil +23,8%, nafta +18,3%, tracción de Vaca Muerta). Piso: metalmecánica 38,7% (vs 46,0% may-25; maquinaria agrícola -29,6%, electrodomésticos -34,1%), automotriz 45,5% (vs 56,8%), textiles 42,2%. Cifra ancla (58,4%) CONFIRMADA por INDEC (informe de prensa oficial, fuente primaria) + coherencia interna de la serie 2026 (53,6→54,6→59,8→59,9→58,4) + corroboración independiente por otra metodología: ADIMRA midió la metalúrgica en 39,8% (≈ INDEC metalmecánica 38,7%), su 3er registro más bajo tras abr-2020 (32,7%) y may-2020 (39,1%). Contexto histórico: mínimo general ~42% en abr-2020. Se distingue explícitamente de la nota IPI/ISAC (crecimiento) por medir el nivel de utilización/capacidad ociosa, no la variación de la producción.",
+      "fecha": "2026-07-19",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-19-capacidad-instalada-industria-ociosa"
     }
   ]
 }
