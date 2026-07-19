@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-19T19:30:00-03:00",
-  "borradores": []
+  "actualizado": "2026-07-19T20:00:00-03:00",
+  "borradores": [
+    {
+      "id": "2026-07-19-mineria-record-litio",
+      "titulo": "La minería batió un récord de US$3.934 millones y el litio se transformó en su nueva estrella",
+      "bajada": "En los primeros cinco meses de 2026 las exportaciones mineras crecieron 75,8% y marcaron el mayor arranque de año de la historia. El oro sigue mandando, pero el litio facturó 155,8% más en dólares despachando apenas 59% más en volumen: la diferencia la explica un precio internacional que casi se duplicó.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$3.934 M",
+      "numero_label": "en exportaciones mineras en los primeros 5 meses de 2026: un récord histórico (+75,8% i.a.)",
+      "fecha": "2026-07-19",
+      "hora": "20:00",
+      "archivo": "cola/2026-07-19-mineria-record-litio.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 11 min"
+    }
+  ]
 }
