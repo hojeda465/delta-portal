@@ -21,6 +21,13 @@
       "fecha": "2026-07-18",
       "estado": "publicada",
       "articulo_id": "2026-07-18-vaca-muerta-superavit-energetico"
+    },
+    {
+      "tema": "depósitos privados en dólares / récord de US$40.437 M (máximo en 26 años)",
+      "angulo": "el stock de dólares privados en los bancos tocó su mayor nivel desde el año 2000 (+US$3.451 M en 2026), muy por encima del pico previo a la corrida de 2019 (US$32.500 M); pero ~US$16.000 M no se vuelca al crédito. Cifra ancla oficial del BCRA (US$40.437 M al 13/07/2026) confirmada por triple fuente; el margen sin prestar se marca como aproximado",
+      "fecha": "2026-07-18",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-18-depositos-dolares-record"
     }
   ]
 }
