@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-19T13:53:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-07-19-venture-capital-startups",
-      "titulo": "El venture capital vuelve: las startups argentinas ya captaron en 2026 más que en todo 2025",
-      "bajada": "En 2025 el capital emprendedor tocó un piso en dólares: US$270 millones repartidos en 73 rondas, el menor monto desde 2022 pero el mayor número de operaciones en ese lapso. En los primeros meses de 2026 el flujo se reactivó y ya superó ese total. El asterisco Con Interés: el salto está concentrado en un puñado de mega-rondas fintech, mientras el grueso de las startups sigue peleando tickets de menos de US$5 millones.",
-      "seccion": "MERCADOS",
-      "formato": "Anatomía de un dato",
-      "numero": "US$270 M",
-      "numero_label": "captó el venture capital en startups argentinas en 2025 (73 rondas); 2026 ya lo superó",
-      "fecha": "2026-07-19",
-      "hora": "13:53",
-      "archivo": "articulos/2026-07-19-venture-capital-startups.html",
-      "verificacion": "verificada",
-      "fuentes": 6,
-      "lectura": "30 seg → 11 min"
-    }
-  ]
+  "borradores": []
 }
