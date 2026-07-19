@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-19T05:01:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-07-19-deficit-turismo-record",
-      "titulo": "El turismo se llevó US$7.221 millones en 2025: el rojo récord de dólares que ahora se achica por la peor razón",
-      "bajada": "La cuenta de viajes de la balanza de pagos dejó el año pasado el mayor déficit en tres décadas: los argentinos gastaron US$12.072 millones afuera y los turistas extranjeros dejaron apenas US$4.852 millones. En 2026 el rojo empieza a moderarse, pero no porque el país se haya vuelto más barato: es que la recesión dejó a la clase media con menos plata para viajar.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "US$7.221 M",
-      "numero_label": "déficit de la cuenta viajes en 2025 (récord en 30 años)",
-      "fecha": "2026-07-19",
-      "hora": "05:01",
-      "archivo": "articulos/2026-07-19-deficit-turismo-record.html",
-      "verificacion": "verificada",
-      "fuentes": 6,
-      "lectura": "30 seg → 11 min"
-    }
-  ]
+  "borradores": []
 }
