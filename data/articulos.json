@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-19T09:05:00-03:00"
+    "actualizado": "2026-07-19T03:42:54+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -11,6 +11,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-19-canasta-basica-linea-pobreza",
+      "titulo": "Una familia necesitó $1.531.473 para no ser pobre en junio: la canasta le volvió a ganar a la inflación",
+      "bajada": "Ese es el ingreso que, según el INDEC, precisó en junio una familia tipo —dos adultos y dos chicos— para no caer bajo la línea de pobreza. La Canasta Básica Total subió 2,2% en el mes y 35,7% en un año: más que la inflación general. Y para dimensionarlo: hacen falta más de cuatro salarios mínimos para llegar a ese número.",
+      "seccion": "ECONOMÍA",
+      "formato": "El número del día",
+      "numero": "$1.531.473",
+      "numero_label": "lo que necesitó una familia tipo para no ser pobre (junio 2026)",
+      "fecha": "2026-07-19",
+      "hora": "00:40",
+      "archivo": "articulos/2026-07-19-canasta-basica-linea-pobreza.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 9 min"
+    },
     {
       "id": "2026-07-19-bcra-compra-record-dolares",
       "titulo": "El Banco Central compró US$532 millones en un día: el récord de la era Milei, con un asterisco",
