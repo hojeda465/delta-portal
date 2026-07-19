@@ -55,6 +55,22 @@
 | LTV / CAC | s/d (sin embudo) | **[SUPUESTO]** — no medir publicidad paga hasta tenerlo |
 | Runway | s/d — sin caja declarada ni tope de gasto | **[SUPUESTO]** |
 
+## 4.b Costo de crecer (nuevo — estrategia "tráfico primero", 2026-07-19)
+
+> Bajo la decisión de Horacio de priorizar crecimiento sobre monetización, Finanzas
+> agrega la dimensión que evita "crecer gastando a ciegas". Detalle y KPIs de tráfico
+> en `negocio/metricas.md` (bloque C).
+
+| Métrica | Cómo se calcula | Estado |
+|---|---|---|
+| Gasto tokens/mes vs. tope | US$ mes ÷ tope | tope ❌ no fijado · gasto **[SUPUESTO]** |
+| Costo por artículo publicado | US$ tokens mes ÷ piezas | ~US$1–2 nota / US$2–8 lección **[SUPUESTO]** |
+| **US$ por lector nuevo ganado** ⭐ | US$ tokens mes ÷ únicos nuevos | s/d — requiere analítica (aún no instalada) |
+| Costo por suscriptor (futuro) | US$ tokens ÷ altas email | N/A hoy |
+
+> Tensión registrada: el costo escala con la **producción**, no con los ingresos (=0).
+> Por eso, bajo "crecer primero", el kill-switch (§6) es **más urgente**, no menos.
+
 ## 5. Fiscal
 
 | Ítem | Valor | Tipo |
@@ -74,8 +90,9 @@
 ---
 
 ## 7. Datos a conseguir (para pasar [SUPUESTO] → [DATO])
-1. **Gasto real de tokens** del mes (factura/consumo del proveedor de API). ← prioridad 1
-2. Costo real del dominio (registrador, vencimiento).
-3. Tope mensual de gasto que fija Horacio.
-4. Categoría de monotributo confirmada.
-5. Costo de tokens por corrida del comité.
+1. **Tráfico real** — instalar analítica (Search Console + Cloudflare/GoatCounter). ← prioridad 1 (estrategia crecimiento)
+2. **Gasto real de tokens** del mes (factura/consumo del proveedor de API). ← prioridad 1
+3. Costo real del dominio (registrador, vencimiento).
+4. Tope mensual de gasto que fija Horacio.
+5. Categoría de monotributo confirmada.
+6. Costo de tokens por corrida del comité.
