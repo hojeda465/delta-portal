@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-19T22:21:36+00:00"
+    "actualizado": "2026-07-19T23:00:47+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -12,6 +12,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-19-mineria-record-litio",
+      "titulo": "La minería batió un récord de US$3.934 millones y el litio se transformó en su nueva estrella",
+      "bajada": "En los primeros cinco meses de 2026 las exportaciones mineras crecieron 75,8% y marcaron el mayor arranque de año de la historia. El oro sigue mandando, pero el litio facturó 155,8% más en dólares despachando apenas 59% más en volumen: la diferencia la explica un precio internacional que casi se duplicó.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$3.934 M",
+      "numero_label": "en exportaciones mineras en los primeros 5 meses de 2026: un récord histórico (+75,8% i.a.)",
+      "fecha": "2026-07-19",
+      "hora": "20:00",
+      "archivo": "articulos/2026-07-19-mineria-record-litio.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 11 min"
+    },
     {
       "id": "2026-07-19-superavit-comercial-record-mayo",
       "titulo": "US$3.504 millones: el mayor superávit comercial de la serie — y a dónde van esos dólares",
