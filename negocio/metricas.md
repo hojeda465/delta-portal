@@ -74,9 +74,10 @@ Orden de instalación recomendado por Marketing:
    SEO (queries, impresiones, clicks, posición). Cubre A3 (orgánico) y A4. Requiere
    **verificar el dominio** (meta-tag o DNS).
 2. **Cloudflare Web Analytics** — gratis, sin cookies, sin banner de consentimiento. Da
-   únicos, pageviews, fuentes, países (A1, A2, A3). Requiere que el dominio esté detrás
-   de Cloudflare. **Fallback si no lo está:** GoatCounter (snippet puro, sin tocar DNS,
-   free para uso no comercial).
+   únicos, pageviews, fuentes, países (A1, A2, A3). **Confirmado (2026-07-19): el dominio
+   coninteres.com YA está detrás de Cloudflare** (resuelve a IPs 172.67.x / 104.21.x), así
+   que se activa desde la misma cuenta de Cloudflare, sin tocar DNS ni usar fallback. (El
+   fallback GoatCounter queda descartado salvo que se pierda el acceso a Cloudflare.)
 3. **Eventos custom (JS propio, ~15 líneas)** para B1, B2, B4, B5: listeners de scroll
    (25/50/75/100%), tiempo en página, y click a lecciones. Se envían al mismo proveedor
    de analítica como eventos. Scaffold ya preparado en `assets/metrics.js` (pendiente de
