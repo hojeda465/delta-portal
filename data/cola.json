@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-19T17:20:00-03:00",
-  "borradores": []
+  "actualizado": "2026-07-19T18:15:00-03:00",
+  "borradores": [
+    {
+      "id": "2026-07-19-produccion-autos-tercer-ano-baja",
+      "titulo": "La fábrica se apaga: la producción de autos cayó 18,3% y va por su tercer año en baja",
+      "bajada": "Argentina fabricó 204.658 vehículos en el primer semestre, 18,3% menos que un año atrás, según ADEFA. En la superficie el mercado 0km repunta; debajo, 7 de cada 10 autos que se venden son importados y las exportaciones también retroceden. La recuperación del auto llega por el puerto, no por la planta.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "204.658",
+      "numero_label": "vehículos fabricados en el 1er semestre 2026, un 18,3% menos que en 2025 (ADEFA)",
+      "fecha": "2026-07-19",
+      "hora": "18:15",
+      "archivo": "cola/2026-07-19-produccion-autos-tercer-ano-baja.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 11 min"
+    }
+  ]
 }
