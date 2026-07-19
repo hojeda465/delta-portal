@@ -186,6 +186,7 @@ regenerar la portada, y luego commit + push.
      └─ veredicto APTA
             → Redactor → Publicador
                  → escribe cola/<id>.html
+                 → escribe kits/<id>.md   (kit social: hilo de X + posteo de Telegram, ver §9)
                  → agrega a data/cola.json
                  → registra en data/cubiertas.json (estado: en_cola)
                  → build_portada.py  (la cola aparece en la portada)
@@ -233,10 +234,11 @@ con menos notas pero todas sólidas es un buen día para Con Interés.
 > Investigador → Verificador → Redactor → Publicador) sobre las noticias
 > argentinas más destacadas de este momento, con foco obsesivo en datos, contexto
 > y verificación. Respetás la regla madre: ante la duda, no publicás. Dejás la
-> nota resultante en la **cola de revisión** (no publicás directo), actualizás los
-> manifiestos, regenerás la portada, hacés commit y push, y avisás que hay un
-> borrador para revisar. Si ningún tema pasa la verificación, terminás sin nota y
-> lo registrás.
+> nota resultante en la **cola de revisión** (no publicás directo), dejás su **kit
+> social** listo en `kits/<id>.md` (hilo de X + posteo de Telegram, ver §9),
+> actualizás los manifiestos, regenerás la portada, hacés commit y push, y avisás que
+> hay un borrador para revisar. Si ningún tema pasa la verificación, terminás sin nota
+> y lo registrás.
 
 ---
 
@@ -265,6 +267,32 @@ interpretar la actualidad. El propósito es hacer cultura económica.
 - **Desde cero.** Lenguaje llano, cero jerga sin explicar. Si no lo entiende alguien sin formación económica, se reescribe.
 - **Llevado al terreno.** Siempre "¿y esto cómo te toca a vos?".
 - **No es asesoramiento.** Nunca recomendar comprar/vender/invertir; disclaimer al pie (ver referencia).
+
+---
+
+## 9. Producción del kit social (para X y Telegram)
+
+Cada nota que llega a la cola sale con su **kit social** listo para pegar, siguiendo
+`negocio/playbook.md`. Regla de oro operativa: **ningún agente auto-publica en redes**
+(una cuenta nueva que postea sola se expone a suspensión, y va contra las reglas de X).
+El agente **produce** el kit; el humano lo **pega** en 30 segundos.
+
+**Dónde vive:** `kits/<id>.md` (mismo `<id>` que la nota). Se escribe en la misma corrida
+que crea el borrador, con los mismos datos ya verificados de la nota.
+
+**Qué contiene** (formato fijo del playbook):
+- **Gráfico del día:** qué dato mostrar y qué imagen adjuntar. Si la nota ya trae un
+  gráfico, indicar cuál; si no, describir el gráfico a capturar (1080×1080).
+- **Hilo de X (2-4 tweets, máx. 280 caracteres c/u):** dato ancla → lectura A →
+  lectura B → "¿cómo te toca a vos?" + link a la nota + CTA suave al canal de Telegram.
+- **Posteo de Telegram (1 bloque):** título-dato, las dos lecturas en dos líneas,
+  "cómo te toca", link a la nota y la fuente.
+
+**Reglas del kit:**
+- Nunca cerramos por el lector: se dan las dos lecturas y la pregunta. Cero clickbait.
+- El dato del kit es el mismo verificado de la nota (misma fuente primaria).
+- Link canónico a la nota publicada (`https://coninteres.com/articulos/<id>.html`).
+- Hashtags argentinos moderados (1-2): #dólar #inflación #riesgopaís #Merval, según el tema.
 - **Rigor.** Definiciones correctas; cuando se citan cifras, se verifican como en una nota.
 
 **Integración:** la lección nueva se agrega a la ruta que corresponda en el array

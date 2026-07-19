@@ -68,6 +68,16 @@ def main(draft_id):
     subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "build_portada.py")], check=True)
     print(f"PUBLICADA: {draft['titulo']}")
 
+    # 6) mostrar el kit social listo para pegar (X + Telegram), si existe
+    kit = os.path.join(ROOT, "kits", f"{draft_id}.md")
+    if os.path.exists(kit):
+        print("\n===== KIT SOCIAL (copiar y pegar) =====\n")
+        print(open(kit, encoding="utf-8").read())
+        print("\n===== fin del kit =====")
+    else:
+        print(f"\n[aviso] no hay kit social en kits/{draft_id}.md — "
+              "generar el kit para X/Telegram antes de difundir (ver NEWSROOM.md §9).")
+
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Uso: python3 scripts/aprobar.py <id-del-borrador>"); sys.exit(1)
