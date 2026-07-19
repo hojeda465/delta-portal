@@ -6,7 +6,8 @@
 
 - **Reorientado:** 2026-07-19 — de tablero de costos a tablero de crecimiento.
 - **Objetivo de Fase 1:** que el producto guste y escale en lectores, gratis.
-- **Estado:** la analítica todavía NO está instalada → casi todo el tráfico es `s/d`.
+- **Estado:** medición **ACTIVA desde 19/07** — Cloudflare Web Analytics + Google Search Console
+  (sitemap enviado, 12 páginas descubiertas). Los valores siguen en `s/d` hasta juntar base real.
 
 ---
 
