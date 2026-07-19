@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-18T23:05:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-07-19-bcra-compra-record-dolares",
-      "titulo": "El Banco Central compró US$532 millones en un día: el récord de la era Milei, con un asterisco",
-      "bajada": "Fue la mayor compra diaria de dólares del BCRA en más de tres años, la punta de una racha de 126 ruedas seguidas y de US$12.000 millones acumulados en 2026. El Gobierno cumplió la meta del FMI. Pero un centímetro debajo de la superficie, las reservas netas siguen rozando el cero y buena parte de esos dólares no se ganaron: se pidieron prestados.",
-      "seccion": "MERCADOS",
-      "formato": "El número del día",
-      "numero": "US$532 M",
-      "numero_label": "mayor compra diaria de dólares del BCRA (14/07/2026)",
-      "fecha": "2026-07-19",
-      "hora": "23:05",
-      "archivo": "articulos/2026-07-19-bcra-compra-record-dolares.html",
-      "verificacion": "verificada",
-      "fuentes": 5,
-      "lectura": "30 seg → 10 min"
-    }
-  ]
+  "borradores": []
 }
