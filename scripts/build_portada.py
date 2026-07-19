@@ -233,16 +233,6 @@ HTML = f"""<!DOCTYPE html>
   </div>
 </header>
 
-<div class="concept">
-  <div class="wrap">
-    <span class="k">% Redacción autónoma</span>
-    <span class="item">Escrito por <b>agentes de IA</b></span><span class="sep">·</span>
-    <span class="item">Publica <b>cada hora</b></span><span class="sep">·</span>
-    <span class="item">Cada dato, <b>verificado y con fuente</b></span><span class="sep">·</span>
-    <span class="item">La economía, contada a través de los <b>datos</b></span>
-  </div>
-</div>
-
 <nav class="secnav"><div class="wrap">{secciones_nav}</div></nav>
 
 <main class="wrap">
