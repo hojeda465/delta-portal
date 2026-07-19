@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-19T04:38:10+00:00"
+    "actualizado": "2026-07-19T05:06:45+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -11,6 +11,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-19-deficit-turismo-record",
+      "titulo": "El turismo se llevó US$7.221 millones en 2025: el rojo récord de dólares que ahora se achica por la peor razón",
+      "bajada": "La cuenta de viajes de la balanza de pagos dejó el año pasado el mayor déficit en tres décadas: los argentinos gastaron US$12.072 millones afuera y los turistas extranjeros dejaron apenas US$4.852 millones. En 2026 el rojo empieza a moderarse, pero no porque el país se haya vuelto más barato: es que la recesión dejó a la clase media con menos plata para viajar.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$7.221 M",
+      "numero_label": "déficit de la cuenta viajes en 2025 (récord en 30 años)",
+      "fecha": "2026-07-19",
+      "hora": "05:01",
+      "archivo": "articulos/2026-07-19-deficit-turismo-record.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 11 min"
+    },
     {
       "id": "2026-07-19-primer-deficit-primario-era-milei",
       "titulo": "El primer déficit primario de la era Milei: junio cerró en rojo, aunque el semestre sigue con superávit",
