@@ -96,8 +96,11 @@ def card(a):
       <div class="meta">{chip_verif(a.get('verificacion',''))}<span class="dot"></span>{fecha_bonita(a['fecha'])}</div>
     </a>"""
 
-lead_html = card_lead(articulos[0]) if articulos else '<p class="empty">Todavía no hay notas publicadas.</p>'
-grid_html = "\n".join(card(a) for a in articulos[1:]) or '<p class="empty small">La redacción publicará más notas en las próximas horas.</p>'
+# La nota PRINCIPAL es la marcada "destacada" (elección editorial); si no hay ninguna,
+# es la primera de la lista. El resto va a la grilla, sin repetir la principal.
+lead = next((a for a in articulos if a.get("destacada")), None) or (articulos[0] if articulos else None)
+lead_html = card_lead(lead) if lead else '<p class="empty">Todavía no hay notas publicadas.</p>'
+grid_html = "\n".join(card(a) for a in articulos if a is not lead) or '<p class="empty small">La redacción publicará más notas en las próximas horas.</p>'
 
 # cola panel
 if borradores:

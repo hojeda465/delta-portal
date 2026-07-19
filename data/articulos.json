@@ -12,6 +12,22 @@
   ],
   "articulos": [
     {
+      "id": "2026-07-19-bienal-chaco-esculturas",
+      "titulo": "800.000 personas y 630 esculturas: la Bienal del Chaco, el \"mundial\" del arte contado en números",
+      "bajada": "Cada dos años, diez escultores de todo el mundo tallan mármol al aire libre en Resistencia y una ciudad entera se vuelve museo. La edición 2024 batió récord con unas 800.000 personas. La Bienal Internacional de Escultura del Chaco, explicada con datos: su historia de 38 años y cómo mueve la economía.",
+      "seccion": "ECONOMÍA",
+      "formato": "La economía de la cultura",
+      "numero": "800.000",
+      "numero_label": "personas en la última edición (2024), récord histórico",
+      "fecha": "2026-07-19",
+      "hora": "18:00",
+      "archivo": "articulos/2026-07-19-bienal-chaco-esculturas.html",
+      "verificacion": "verificada",
+      "fuentes": 7,
+      "lectura": "30 seg → 9 min",
+      "destacada": true
+    },
+    {
       "id": "2026-07-19-boom-deuda-corporativa",
       "titulo": "El boom de la deuda corporativa: las empresas y provincias captaron US$17.400 millones en dólares desde las elecciones",
       "bajada": "Empresas y provincias argentinas colocaron US$17.400 millones en deuda en dólares desde las elecciones de octubre: unos US$13.730 millones de firmas privadas y US$3.650 millones de estados provinciales. Es el mejor arranque del mercado de capitales en once años y una pieza clave del rompecabezas cambiario, porque buena parte de esos dólares es lo que le permite al Banco Central comprar reservas. El asterisco: es deuda, y hay que devolverla en dólares.",
@@ -249,8 +265,7 @@
       "archivo": "articulos/2026-07-18-inflacion-argentina.html",
       "verificacion": "verificada",
       "fuentes": 5,
-      "lectura": "30 seg → 12 min",
-      "destacada": true
+      "lectura": "30 seg → 12 min"
     }
   ]
 }
