@@ -16,7 +16,7 @@ DATA = os.path.join(ROOT, "data")
 
 # URL base pública del sitio. Cuando se configure un dominio propio,
 # cambiar SOLO esta línea (ej. "https://deltadiario.com").
-SITE = "https://hojeda465.github.io/delta-portal"
+SITE = "https://coninteres.com"
 
 def load(name):
     with open(os.path.join(DATA, name), encoding="utf-8") as f:

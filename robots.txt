@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hojeda465.github.io/delta-portal/sitemap.xml
+Sitemap: https://coninteres.com/sitemap.xml

@@ -12,7 +12,7 @@ import json, os, re
 from html import escape
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = "https://hojeda465.github.io/delta-portal"   # mantener igual que build_portada.py
+SITE = "https://coninteres.com"   # mantener igual que build_portada.py
 
 BLOCK_RE = re.compile(r"[ \t]*<!-- DELTA-META:start -->.*?<!-- DELTA-META:end -->\n?", re.S)
 
