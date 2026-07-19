@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-19T14:27:29+00:00"
+    "actualizado": "2026-07-19T15:19:08+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -11,6 +11,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-19-boom-deuda-corporativa",
+      "titulo": "El boom de la deuda corporativa: las empresas y provincias captaron US$17.400 millones en dólares desde las elecciones",
+      "bajada": "Empresas y provincias argentinas colocaron US$17.400 millones en deuda en dólares desde las elecciones de octubre: unos US$13.730 millones de firmas privadas y US$3.650 millones de estados provinciales. Es el mejor arranque del mercado de capitales en once años y una pieza clave del rompecabezas cambiario, porque buena parte de esos dólares es lo que le permite al Banco Central comprar reservas. El asterisco: es deuda, y hay que devolverla en dólares.",
+      "seccion": "MERCADOS",
+      "formato": "Anatomía de un dato",
+      "numero": "US$17.400 M",
+      "numero_label": "en deuda en dólares captaron empresas y provincias desde las elecciones de octubre",
+      "fecha": "2026-07-19",
+      "hora": "12:12",
+      "archivo": "articulos/2026-07-19-boom-deuda-corporativa.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 11 min"
+    },
     {
       "id": "2026-07-19-desempleo-estable-empleo-precario",
       "titulo": "El desempleo casi no se movió (7,8%), pero el empleo se volvió más precario por dentro",
