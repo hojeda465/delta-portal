@@ -175,6 +175,13 @@
       "fecha": "2026-07-20",
       "estado": "publicada",
       "articulo_id": "2026-07-20-salario-real-abril"
+    },
+    {
+      "tema": "ventas minoristas pyme junio 2026 / cortan 13 meses de caída (CAME, +0,9% interanual)",
+      "angulo": "el índice de ventas minoristas pyme de CAME creció 0,9% interanual en junio 2026, la primera suba tras 13 meses consecutivos de caída, pero con letra chica: intermensual desestacionalizado -1,3% y acumulado del semestre -2,5%; el repunte se atribuye a factores de una sola vez (aguinaldo/SAC + inicio del Mundial 2026). Cifra ancla CONFIRMADA como medición de CAME (informe primario + reproducida de forma consistente por Infobae, Perfil y Primera Edición); cotejada de forma independiente con la estadística oficial del INDEC (Encuesta de Supermercados abril 2026, -3,7% i.a. a precios constantes), que aún no confirma la mejora. Rubros por interanual verificados (Perfumería +9,5%, Farmacia +5,4%, Alimentos +2,9%, Textil +1,9%, Calzado -1%, Ferretería -2%, Bazar/muebles -3,1%). Ángulo de CONSUMO/comercio pyme, no cubierto antes en el portal.",
+      "fecha": "2026-07-20",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-20-ventas-pyme-cortan-caida"
     }
   ]
 }
