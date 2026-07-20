@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-20T21:08:23+00:00"
+    "actualizado": "2026-07-20T21:35:19+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -12,6 +12,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-20-mora-familias-record",
+      "titulo": "La mora de las familias llegó a 12,1%: el récord de deudas impagas que la desinflación todavía no frena",
+      "bajada": "En abril, de cada $100 que las familias le debían a los bancos, $12,10 estaban en atraso: el nivel más alto desde 2004 y más del triple que un año antes. Mientras la inflación se desacelera, la mora encadena año y medio de suba.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "12,1%",
+      "numero_label": "la mora del crédito a las familias en abril de 2026, récord desde 2004",
+      "fecha": "2026-07-20",
+      "hora": "21:30",
+      "archivo": "articulos/2026-07-20-mora-familias-record.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-07-20-bono-jubilados-congelado",
       "titulo": "El número que no se movió: el bono a los jubilados lleva más de dos años congelado en $70.000",
