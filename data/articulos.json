@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-20T16:25:23+00:00"
+    "actualizado": "2026-07-20T17:44:16+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -12,6 +12,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-20-deuda-publica-dos-lecturas",
+      "titulo": "La deuda pública bajó por segundo mes seguido — y sigue a un paso de su récord",
+      "bajada": "En junio el stock cerró en US$474.192 millones, US$5.080 millones menos que en mayo, pero a un paso del récord histórico. El Gobierno lo lee como desendeudamiento; cuánto subió la deuda con Milei depende de desde qué día se cuente.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$474.192 M",
+      "numero_label": "Deuda bruta del Estado · junio 2026",
+      "fecha": "2026-07-20",
+      "hora": "18:30",
+      "archivo": "articulos/2026-07-20-deuda-publica-dos-lecturas.html",
+      "verificacion": "verificada",
+      "fuentes": 7,
+      "lectura": "30 seg → 12 min"
+    },
     {
       "id": "2026-07-20-pagos-qr-superan-100-millones",
       "titulo": "El QR superó por primera vez los 100 millones de pagos por mes (mientras las tarjetas caen)",
