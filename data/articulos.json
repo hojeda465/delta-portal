@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-20T18:57:15+00:00"
+    "actualizado": "2026-07-20T21:08:23+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -12,6 +12,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-20-bono-jubilados-congelado",
+      "titulo": "El número que no se movió: el bono a los jubilados lleva más de dos años congelado en $70.000",
+      "bajada": "En julio las jubilaciones subieron 2,15% por movilidad, pero el bono que completa el haber mínimo sigue clavado en $70.000 desde marzo de 2024. Por eso las jubilaciones sobre la mínima le ganaron a la inflación (+10,4% real desde nov. 2023) y la mínima con bono la perdió (−9,2%). Un mismo sistema, dos jubilaciones.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "$70.000",
+      "numero_label": "el bono a jubilados, sin cambios desde marzo de 2024",
+      "fecha": "2026-07-20",
+      "hora": "19:30",
+      "archivo": "articulos/2026-07-20-bono-jubilados-congelado.html",
+      "verificacion": "verificada",
+      "fuentes": 7,
+      "lectura": "30 seg → 12 min"
+    },
     {
       "id": "2026-07-20-carne-vacuna-consumo-minimo-record-exportacion",
       "titulo": "La carne se exporta como nunca y se come como hace veinte años",
