@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- DELTA-META:start -->
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="canonical" href="https://coninteres.com/articulos/2026-07-20-soja-mercado-seis-meses.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Con Interés">
+<meta property="og:title" content="Soja: qué está diciendo el mercado sobre los próximos seis meses — Con Interés">
+<meta property="og:description" content="La soja rebotó a la zona de US$12 por bushel en Chicago tras tocar mínimos de cuatro meses. Detrás del número: oferta sudamericana récord contra una demanda china que crece pero le compra poco a Estados Unidos. Leemos la curva de futuros y los fundamentos para ver qué precio pone hoy el propio mercado.">
+<meta property="og:url" content="https://coninteres.com/articulos/2026-07-20-soja-mercado-seis-meses.html">
+<meta property="og:image" content="https://coninteres.com/assets/og-delta.png">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Soja: qué está diciendo el mercado sobre los próximos seis meses — Con Interés">
+<meta name="twitter:description" content="La soja rebotó a la zona de US$12 por bushel en Chicago tras tocar mínimos de cuatro meses. Detrás del número: oferta sudamericana récord contra una demanda china que crece pero le compra poco a Estados Unidos. Leemos la curva de futuros y los fundamentos para ver qué precio pone hoy el propio mercado.">
+<meta name="twitter:image" content="https://coninteres.com/assets/og-delta.png">
+<!-- DELTA-META:end -->
+<title>Soja: qué dice el mercado sobre los próximos seis meses — Con Interés</title>
+<style>
+  :root{
+    --bg:#f7f3ea; --panel:#fffdf8; --ink:#1d211f; --muted:#5c6360; --faint:#8a8f8b;
+    --line:#e4dccb; --teal:#0f6b64; --teal-d:#0c4a45; --amber:#c07c1e; --coral:#cf6a3f;
+    --us:#2f8f88; --br:#cf6a3f; --ar:#5f7183; --cn:#0f6b64;
+    --up:#2f7d5b; --down:#b4472e; --base:#0f6b64;
+    --dark:#10302c;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:Georgia,'Times New Roman',serif;line-height:1.62;
+    -webkit-font-smoothing:antialiased;font-size:18px}
+  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+  .mono{font-family:'SF Mono',ui-monospace,'Roboto Mono',Menlo,Consolas,monospace}
+  .sans{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif}
+
+  /* top ribbon */
+  .ribbon{background:var(--dark);color:#dfeae6;font-size:12.5px;letter-spacing:.09em;
+    text-transform:uppercase;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    text-align:center;padding:9px 16px}
+  .ribbon b{color:#e9b866}
+
+  /* masthead */
+  header.mast{border-bottom:2px solid var(--ink);margin-top:0}
+  .mast .wrap{display:flex;align-items:baseline;justify-content:space-between;padding-top:20px;padding-bottom:14px}
+  .brand{font-size:25px;font-weight:700;letter-spacing:-.01em}
+  .brand .pct{color:var(--teal);font-weight:700;margin-right:4px}
+  .brand .tag{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin-left:12px}
+  .kicker-nav{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+
+  /* article head */
+  .eyebrow{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--coral);
+    font-weight:600;margin:34px 0 14px}
+  h1{font-size:40px;line-height:1.12;letter-spacing:-.018em;margin:0 0 18px;font-weight:700}
+  .standfirst{font-size:20.5px;line-height:1.5;color:#33403c;margin:0 0 22px}
+  .byline{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:13px;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    padding:11px 0;display:flex;gap:18px;flex-wrap:wrap;letter-spacing:.02em}
+  .byline b{color:var(--ink)}
+
+  h2{font-size:15px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    letter-spacing:.12em;text-transform:uppercase;color:var(--teal-d);margin:46px 0 4px;
+    padding-bottom:8px;border-bottom:1px solid var(--line)}
+  .h2num{color:var(--amber);font-weight:700;margin-right:9px}
+  h3{font-size:22px;margin:30px 0 6px;letter-spacing:-.01em}
+  p{margin:16px 0}
+  a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(15,107,100,.3)}
+  a:hover{border-bottom-color:var(--teal)}
+  strong{font-weight:700}
+  em.q{font-style:italic;color:#3a4844}
+
+  .lead-drop::first-letter{font-size:58px;float:left;line-height:.82;padding:6px 10px 0 0;
+    color:var(--teal-d);font-weight:700}
+
+  /* figure */
+  figure{margin:30px 0;background:var(--panel);border:1px solid var(--line);border-radius:10px;
+    padding:20px 20px 16px;box-shadow:0 1px 0 rgba(0,0,0,.02)}
+  figure .fig-h{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-weight:700;font-size:16px;letter-spacing:-.01em;margin:0 0 3px;color:var(--ink)}
+  figure .fig-s{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:13px;color:var(--muted);margin:0 0 12px}
+  figcaption{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:11.5px;color:var(--faint);margin-top:11px;line-height:1.45;border-top:1px dashed var(--line);padding-top:9px}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:12.5px;color:var(--muted);margin:2px 0 10px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .swatch{width:13px;height:13px;border-radius:3px;display:inline-block}
+  .swatch.line{height:3px;width:16px;border-radius:2px}
+  svg{width:100%;height:auto;display:block;overflow:visible}
+  .gl{stroke:var(--line);stroke-width:1}
+  .axlab{fill:var(--faint);font-size:11px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+  .axunit{fill:var(--muted);font-size:11px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-weight:600}
+  .dot{cursor:pointer;transition:r .12s}
+  .anno{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:11px;font-weight:600}
+  .annobox{fill:#fffdf8;stroke:var(--line)}
+
+  /* data callout box */
+  .ficha{background:var(--dark);color:#e8f0ec;border-radius:12px;padding:22px 24px;margin:26px 0;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+  .ficha h4{margin:0 0 14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#e9b866;font-weight:700}
+  .ficha .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px}
+  .ficha .k{font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:#8fb3ac;margin-bottom:2px}
+  .ficha .v{font-size:23px;font-weight:700;letter-spacing:-.01em;line-height:1.1}
+  .ficha .v small{font-size:13px;font-weight:500;color:#b9cec8;letter-spacing:0}
+  .ficha .note{font-size:11.5px;color:#9db8b1;margin-top:14px;line-height:1.5}
+
+  table.tbl{width:100%;border-collapse:collapse;margin:22px 0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:14px}
+  table.tbl th,table.tbl td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+  table.tbl th{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:700;border-bottom:1.5px solid var(--ink)}
+  table.tbl td.num{text-align:right;font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}
+  table.tbl tr:last-child td{border-bottom:none}
+  table.tbl caption{caption-side:bottom;font-size:11.5px;color:var(--faint);text-align:left;padding-top:8px;line-height:1.45}
+
+  .scen{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:22px 0}
+  .scen .card{border:1px solid var(--line);border-radius:10px;padding:14px;background:var(--panel);
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+  .scen .card .tt{font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:700;margin-bottom:6px}
+  .scen .card .rng{font-size:20px;font-weight:700;letter-spacing:-.01em}
+  .scen .card p{font-size:12.5px;color:var(--muted);margin:8px 0 0;line-height:1.5}
+  .scen .baja .tt{color:var(--down)} .scen .base .tt{color:var(--base)} .scen .alza .tt{color:var(--up)}
+
+  .callout{border-left:3px solid var(--amber);background:#fbf3e2;padding:14px 18px;margin:24px 0;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:14.5px;border-radius:0 8px 8px 0}
+  .callout b{color:#8a5a12}
+
+  .methods{background:#eef2ef;border:1px solid #d8e0da;border-radius:12px;padding:22px 24px;margin:30px 0;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:14px}
+  .methods h4{margin:0 0 10px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-d)}
+  .methods ul{margin:8px 0 0;padding-left:20px} .methods li{margin:7px 0;line-height:1.5}
+  .flag{color:var(--down);font-weight:700}
+
+  .src{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12.5px;color:var(--muted);line-height:1.65}
+  .src h4{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-d);margin:0 0 10px}
+  .src a{word-break:break-word}
+
+  footer.foot{border-top:2px solid var(--ink);margin-top:50px;padding:26px 0 60px}
+  footer.foot .brand{font-size:20px}
+  footer .tagline{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+    font-size:13px;color:var(--muted);margin-top:6px}
+
+  .tooltip{position:fixed;pointer-events:none;background:var(--dark);color:#fff;padding:7px 10px;border-radius:7px;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:12px;line-height:1.35;
+    opacity:0;transition:opacity .1s;z-index:50;box-shadow:0 6px 20px rgba(0,0,0,.25);max-width:220px}
+  .tooltip b{color:#e9b866}
+
+  @media(max-width:620px){
+    body{font-size:17px} h1{font-size:31px} .standfirst{font-size:18px}
+    .ficha .grid{grid-template-columns:1fr} .scen{grid-template-columns:1fr}
+    .mast .wrap{flex-direction:column;gap:4px} .brand .tag{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="ribbon">Nota técnica &nbsp;·&nbsp; Datos al <b>20 de julio de 2026</b> &nbsp;·&nbsp; Análisis, sin recomendación de compra o venta</div>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="brand"><span class="pct">%</span>Con Interés<span class="tag">La economía, con interés</span></div>
+    <div class="kicker-nav">Mercados</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="eyebrow">Granos · Análisis de mercado</div>
+  <h1>Soja: qué está diciendo el mercado sobre los próximos seis meses</h1>
+  <p class="standfirst">La soja rebotó a la zona de US$12 por bushel en Chicago después de tocar mínimos de cuatro meses. Detrás de ese número hay una tensión clara: oferta sudamericana récord contra una demanda china que crece pero compra poco a Estados Unidos. Reconstruimos el patrón de cinco años, revisamos los fundamentos y leemos qué precio pone hoy el propio mercado —con futuros y estimaciones oficiales— para lo que viene.</p>
+  <div class="byline">
+    <span>Por <b>Redacción Con Interés</b></span>
+    <span>20 de julio de 2026</span>
+    <span>Lectura ~11 min</span>
+    <span>Datos: USDA · CBOT · BCR · Matba-Rofex</span>
+  </div>
+
+  <div class="ficha">
+    <h4>La foto de hoy</h4>
+    <div class="grid">
+      <div><div class="k">Soja CBOT (disponible)</div><div class="v">US$12,15 <small>/bushel · 20-jul</small></div></div>
+      <div><div class="k">Pizarra Rosario</div><div class="v">$490.000 <small>/tonelada · 19-jul</small></div></div>
+      <div><div class="k">FAS disponible (aprox.)</div><div class="v">US$325 <small>/tonelada · 15-jul</small></div></div>
+      <div><div class="k">Retención soja poroto</div><div class="v">24% <small>vigente · baja desde ene-2027</small></div></div>
+    </div>
+    <div class="note">Referencias de mercado a la fecha indicada. El precio de Chicago es el benchmark internacional; no es lo que cobra el productor argentino, que resulta de descontar retenciones, gastos y tipo de cambio (ver sección 6). Datos de portales de terceros, diferidos.</div>
+  </div>
+
+  <h2><span class="h2num">01</span>El patrón de cinco años</h2>
+  <p class="lead-drop">La historia reciente de la soja es la de una montaña y una meseta. El poroto trepó a máximos históricos de una década durante 2021 y la primera mitad de 2022 —empujado por la recuperación post-pandemia, la sequía sudamericana y, sobre todo, la invasión rusa a Ucrania—, tocando un pico cercano a <strong>US$17,6 por bushel en junio de 2022</strong>. Desde ahí empezó un mercado bajista largo: cosechas grandes en Estados Unidos y Brasil y una demanda china tibia arrastraron el precio durante más de dos años.</p>
+  <p>El piso llegó a fines de 2024, con la soja perforando los <strong>US$9,50</strong> en diciembre, y se repitió en <strong>agosto de 2025</strong> cerca de US$9,80. El giro vino después: el acuerdo comercial entre Estados Unidos y China de noviembre de 2025 y la confirmación de compras chinas dispararon el precio a un <strong>máximo de diecisiete meses</strong>. Ya en 2026 el mercado hizo un techo en US$12,14 en mayo, corrigió a mínimos de cuatro meses en junio (~US$11,2) por buen clima en el Medio Oeste estadounidense, y volvió a rebotar hasta los <strong>US$12,15 actuales</strong>.</p>
+
+  <figure>
+    <div class="fig-h">El ciclo de la soja en Chicago, 2021–2026</div>
+    <div class="fig-s">Precio del contrato cercano (nearby), reconstrucción mensual en US$ por bushel</div>
+    <div id="c-price"></div>
+    <figcaption>Reconstrucción del precio nearby continuo a partir de promedios mensuales aproximados, con máximos y mínimos anclados a datos citados (pico jun-2022, pisos dic-2024 y ago-2025, rebote nov-2025, máximo may-2026, mínimo jun-2026, disponible 20-jul-2026). Fuentes: CBOT vía Farmbucks; Yahoo Finance; Trading Economics; USDA-NASS. Para validación, contrastar contra el <em>settlement</em> oficial de CME. Ver nota metodológica al pie.</figcaption>
+  </figure>
+
+  <h2><span class="h2num">02</span>La oferta: dos gigantes y un récord brasileño</h2>
+  <p>El costado de la oferta explica buena parte de la presión bajista de fondo. Estados Unidos, históricamente el mayor productor, está relativamente <strong>estancado</strong>: su producción se movió entre 113 y 122 millones de toneladas en las últimas cinco campañas. Brasil, en cambio, tiene una trayectoria ascendente clara, sostenida por expansión de área: pasó de una campaña de sequía en 2021/22 a un <strong>récord de 180 millones de toneladas en 2025/26</strong>, y el USDA proyecta 186 millones para 2026/27.</p>
+  <p>Ese avance ya cambió el tablero: Brasil superó a Estados Unidos como mayor productor mundial hacia 2017 y hoy concentra cerca del 40% de la producción global. Argentina, tercer jugador, se consolidó en torno a <strong>50 millones de toneladas</strong> en 2025/26 tras la durísima sequía de 2022/23 (apenas 21 millones). Para 2026/27, tanto Estados Unidos (con una cosecha proyectada récord de ~121,8 millones) como Brasil apuntan a más volumen.</p>
+
+  <figure>
+    <div class="fig-h">Producción de soja: EE.UU., Brasil y Argentina</div>
+    <div class="fig-s">Millones de toneladas por campaña comercial. 2026/27 es proyección USDA</div>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--us)"></i>Estados Unidos</span>
+      <span><i class="swatch" style="background:var(--br)"></i>Brasil</span>
+      <span><i class="swatch" style="background:var(--ar)"></i>Argentina</span>
+    </div>
+    <div id="c-prod"></div>
+    <figcaption>Fuente: USDA (WASDE julio 2026 y circular Oilseeds abril 2026); Bolsa de Cereales; MAGyP. Los valores de Brasil 2021/22–2023/24 y Argentina 2021/22 son cifras USDA/locales estándar sujetas a revisión (marcadas como aproximadas en el texto). CONAB publica cifras que difieren de USDA para Brasil.</figcaption>
+  </figure>
+
+  <div class="callout"><b>Stocks:</b> la producción mundial de soja marcó un récord de ~427 millones de toneladas en 2025/26 y los stocks finales globales rondan los 125 millones —holgados—. El ajuste es puntual en Estados Unidos, donde la relación stock/uso cayó a <b>7,7%</b>, la más baja desde 2022/23. A nivel global el mercado sigue bien abastecido.</div>
+
+  <h2><span class="h2num">03</span>La demanda: China compra, pero elige a Brasil</h2>
+  <p>China es el gran comprador: importa alrededor del 60% de toda la soja que se comercia en el mundo. Y su demanda <strong>crece</strong>, no se estanca. Las aduanas chinas reportaron un récord de <strong>111,8 millones de toneladas importadas en el año calendario 2025</strong> (+6,5% interanual), y las estimaciones para las campañas 2025/26 y 2026/27 apuntan a un crecimiento moderado, empujado por más harina de soja en la dieta animal.</p>
+  <p>El problema para Estados Unidos no es cuánto compra China, sino <strong>a quién</strong>. En 2025, Brasil le vendió el 73,6% de sus importaciones; Estados Unidos cayó 24% interanual. La razón es una brecha arancelaria que sigue vigente pese a la tregua comercial: la soja estadounidense paga <strong>13% de arancel</strong> para entrar a China, contra apenas <strong>3%</strong> la brasileña. Aunque China se comprometió a comprar al menos 25 millones de toneladas anuales de soja estadounidense hasta 2028, el cumplimiento viene rezagado: entre septiembre de 2025 y marzo de 2026, China representó menos del 30% de las exportaciones estadounidenses, cerca de la mitad de su peso histórico.</p>
+
+  <figure>
+    <div class="fig-h">Importaciones de soja de China</div>
+    <div class="fig-s">Millones de toneladas por campaña comercial (USDA). 2025/26 y 2026/27 son estimaciones</div>
+    <div id="c-china"></div>
+    <figcaption>Fuente: USDA PSD (vía IndexMundi); World Grain; S&amp;P Global. El dato de aduanas chinas por año calendario (111,8 Mt en 2025) no es directamente comparable con la serie por campaña. Las estimaciones 2025/26 divergen entre fuentes (USDA ~106 Mt; S&amp;P ~110 Mt).</figcaption>
+  </figure>
+
+  <h2><span class="h2num">04</span>El tablero macro</h2>
+  <p>Cuatro variables macro completan el cuadro, y hoy juegan mayormente en contra del precio. El <strong>dólar</strong> (índice DXY ~100,8) está lateral, algo más débil en el margen —marginalmente favorable para los commodities, pero sin ser un viento de cola fuerte—. El <strong>petróleo</strong> se desplomó cerca de 38% desde su pico de abril, con el Brent debajo de US$71, tras la distensión entre Estados Unidos e Irán; un crudo barato le quita rentabilidad al biodiésel y, con eso, soporte de demanda al aceite de soja. La <strong>Reserva Federal</strong> mantuvo la tasa en 3,50%–3,75% en junio y no señala recortes cercanos: dinero caro presiona a las materias primas. Y la <strong>política comercial</strong> sigue en tregua, pero con la brecha arancelaria intacta.</p>
+
+  <table class="tbl">
+    <thead><tr><th>Variable macro</th><th>Nivel (jul-2026)</th><th>Sesgo sobre la soja</th></tr></thead>
+    <tbody>
+      <tr><td>Dólar (DXY)</td><td>~100,8 · +2,3% i.a.</td><td>Neutral / levemente + </td></tr>
+      <tr><td>Petróleo Brent</td><td>~US$71 · −38% desde abril</td><td>Negativo (biocombustibles)</td></tr>
+      <tr><td>Tasa Fed</td><td>3,50%–3,75% · sin recortes</td><td>Negativo</td></tr>
+      <tr><td>Comercio EE.UU.–China</td><td>Tregua; arancel 13% vs 3%</td><td>Negativo para oferta EE.UU.</td></tr>
+    </tbody>
+    <caption>Fuentes: Trading Economics (DXY); Al Jazeera (Brent, 2-jul-2026); Reserva Federal (FOMC, 17-jun-2026); S&amp;P Global (aranceles). El "sesgo" es una lectura direccional cualitativa, no una medición de impacto.</caption>
+  </table>
+
+  <h2><span class="h2num">05</span>Qué dice el mercado hoy: la curva de futuros</h2>
+  <p>Acá está la respuesta más directa a la pregunta "¿qué precio espera el mercado?". La curva de futuros de Chicago para los próximos seis meses está <strong>en contango leve</strong>: cada vencimiento cotiza un poco por encima del anterior, desde los US$12,15 de agosto de 2026 hasta los US$12,26 de enero de 2027, con la típica excepción estacional de septiembre. Un contango moderado significa que el mercado <strong>paga por almacenar</strong> y no está descontando una escasez inmediata de producto físico.</p>
+  <p>Hay un dato que un lector experto debe mirar con atención: el USDA proyecta un <strong>precio promedio de temporada bastante más bajo</strong> —en torno a US$10,40 por bushel para 2025/26— que los futuros vigentes. Esa divergencia entre la estimación oficial y la curva de mercado es, en sí misma, la medida de la incertidumbre: el mercado está pagando un premio sobre el escenario base del USDA, apostando a que la demanda china o un problema climático sostengan el precio.</p>
+
+  <figure>
+    <div class="fig-h">La curva de futuros de la soja en Chicago</div>
+    <div class="fig-s">Precio de cada contrato por vencimiento, en US$ por bushel · datos al 20-jul-2026</div>
+    <div class="legend">
+      <span><i class="swatch line" style="background:var(--teal)"></i>Futuros CBOT</span>
+      <span><i class="swatch line" style="background:var(--amber);height:0;border-top:2px dashed var(--amber)"></i>Estimación USDA 2025/26 (~US$10,40)</span>
+    </div>
+    <div id="c-fut"></div>
+    <figcaption>Fuente: CBOT vía Farmbucks (20-jul-2026, datos diferidos); USDA WASDE. La estimación USDA es un promedio de temporada, no un precio de contrato: se compara a modo de referencia. El quiebre a la baja en el contrato de nov-2027 refleja el descuento estacional de la nueva cosecha.</figcaption>
+  </figure>
+
+  <p>En Argentina, los futuros de <strong>Matba-Rofex</strong> dibujan la misma forma ascendente: la posición julio 2026 cotizaba US$335 por tonelada, septiembre US$339,5 y noviembre US$346, para volver a bajar en las posiciones de la nueva cosecha (mayo 2027, US$336).</p>
+
+  <h2><span class="h2num">06</span>Del precio de Chicago al bolsillo del productor argentino</h2>
+  <p>El número de Chicago no es lo que recibe el productor argentino. El precio local se construye "hacia atrás": se parte del valor de exportación (FOB), se le restan los <strong>derechos de exportación</strong> —hoy 24% para el poroto de soja—, más gastos de fobbing, fletes y comercialización, y se llega al <strong>FAS teórico</strong>, la capacidad teórica de pago al productor. Por eso, con la soja "volando" en Chicago (+21% interanual), el disponible en Rosario recién quebró los US$325 por tonelada a mediados de julio.</p>
+  <p>Dos factores locales pesan tanto como Chicago. El primero es la <strong>política de retenciones</strong>: el gobierno bajó la alícuota del poroto de 26% a 24% en diciembre de 2025 y anunció una reducción gradual adicional que <strong>arranca recién en enero de 2027</strong> —no ahora—. El mercado, sin embargo, ya descuenta parte de esa baja: la "alícuota implícita" en el precio disponible se ubicó entre 17% y 20%, por debajo del 24% nominal. El segundo es el <strong>tipo de cambio</strong>: desde abril de 2025 se eliminó el dólar blend y el exportador liquida el 100% al oficial, dentro de un esquema de flotación por bandas.</p>
+
+  <table class="tbl">
+    <thead><tr><th>Variable local (Argentina)</th><th>Dato</th><th>Fecha</th></tr></thead>
+    <tbody>
+      <tr><td>Retención soja poroto</td><td class="num">24%</td><td>vigente jul-2026</td></tr>
+      <tr><td>Retención harina de soja</td><td class="num">24%</td><td>vigente jul-2026</td></tr>
+      <tr><td>Inicio de baja gradual</td><td class="num">enero 2027</td><td>Decreto 423/2026</td></tr>
+      <tr><td>Pizarra Rosario</td><td class="num">$490.000/t</td><td>19-jul-2026</td></tr>
+      <tr><td>FAS disponible (aprox.)</td><td class="num">US$325/t</td><td>15-jul-2026</td></tr>
+      <tr><td>Alícuota implícita en el precio</td><td class="num">17–20%</td><td>2025/26</td></tr>
+      <tr><td>Peso de la soja en exportaciones</td><td class="num">~25%</td><td>2025 (INDEC)</td></tr>
+      <tr><td>Comercialización con precio fijado</td><td class="num">27%</td><td>al 15-jul (la más lenta desde 1994/95)</td></tr>
+    </tbody>
+    <caption>Fuentes: Ámbito, La Nación, Infobae y Argentina.gob.ar (retenciones, triple verificado); Infocampo e Indicadores.ar (pizarra); Cronista y BCR (FAS y comercialización); INDEC (participación). El tipo de cambio oficial exacto debe tomarse del BCRA a la fecha de publicación.</caption>
+  </table>
+
+  <h2><span class="h2num">07</span>Proyección a seis meses: tres escenarios</h2>
+  <p>El mercado no ofrece un número único, sino un rango de escenarios. La curva de futuros —la mejor apuesta agregada disponible— sugiere un <strong>escenario base</strong> en torno a los US$12 por bushel para los próximos seis meses. Alrededor de ese centro, los fundamentos definen dos desvíos posibles. Presentamos los tres como escenarios ilustrativos, <strong>no como un pronóstico puntual</strong>.</p>
+
+  <div class="scen">
+    <div class="card baja">
+      <div class="tt">▼ Bajista</div>
+      <div class="rng">US$10,5–11</div>
+      <p>Se confirman las cosechas récord de Brasil (180 Mt) y EE.UU. (121,8 Mt), la demanda china sigue anclada a Brasil y el crudo barato deprime los biocombustibles. El precio converge hacia la estimación del USDA.</p>
+    </div>
+    <div class="card base">
+      <div class="tt">● Base (curva de futuros)</div>
+      <div class="rng">US$12–12,3</div>
+      <p>Los futuros se cumplen: contango leve, oferta amplia compensada por demanda china firme. El precio se sostiene en la zona actual, sin catalizador dominante.</p>
+    </div>
+    <div class="card alza">
+      <div class="tt">▲ Alcista</div>
+      <div class="rng">US$13+</div>
+      <p>China acelera compras (o cumple el acuerdo con EE.UU.), aparece un problema climático en el verano estadounidense, o la geopolítica —Ormuz otra vez— empuja la energía. Se ajusta el balance global.</p>
+    </div>
+  </div>
+
+  <figure>
+    <div class="fig-h">Escenarios de precio a seis meses (Chicago)</div>
+    <div class="fig-s">Trayectorias ilustrativas desde el precio actual, US$ por bushel · jul-2026 a ene-2027</div>
+    <div class="legend">
+      <span><i class="swatch line" style="background:var(--up)"></i>Alcista</span>
+      <span><i class="swatch line" style="background:var(--base)"></i>Base (futuros)</span>
+      <span><i class="swatch line" style="background:var(--down)"></i>Bajista</span>
+    </div>
+    <div id="c-scen"></div>
+    <figcaption><strong>Escenarios ilustrativos, no un pronóstico.</strong> El escenario base sigue la curva de futuros CBOT vigente; los escenarios bajista y alcista representan desvíos plausibles según los fundamentos descritos, no probabilidades calculadas. No constituye asesoramiento de inversión ni recomendación comercial.</figcaption>
+  </figure>
+
+  <p>Para Argentina hay, además, un catalizador propio e independiente de Chicago: el <strong>cronograma de baja de retenciones que empieza en enero de 2027</strong>. Aun con un precio internacional planchado, cada punto de retención que baja mejora el FAS que recibe el productor. Es la variable que puede mover el precio local en dirección contraria a la del mercado global.</p>
+
+  <div class="methods">
+    <h4>Cómo leer y validar esta nota</h4>
+    <p style="margin-top:0">Esta nota está construida para que un analista del sector pueda auditarla. Distinguimos siempre <strong>dato de mercado</strong> (precios, futuros, cifras de aduana), <strong>dato oficial</strong> (USDA, INDEC, decretos) y <strong>estimación/proyección</strong>. Puntos de atención para el validador:</p>
+    <ul>
+      <li>El gráfico de precios 2021–2026 es una <strong>reconstrucción</strong> del nearby continuo con promedios mensuales aproximados; los máximos y mínimos están anclados a datos citados. Conviene contrastar contra el <em>settlement</em> oficial de CME.</li>
+      <li><span class="flag">Verificación negativa:</span> descartamos la afirmación —de circulación frecuente— de que la relación stock/consumo <em>global</em> cayó "de 29% a 25%". Con datos USDA, el ratio global ronda el 29%; el ajuste a mínimos es de <strong>Estados Unidos</strong> (stock/uso 7,7%), no del mundo.</li>
+      <li>El precio promedio de temporada del USDA (~US$10,40) es un promedio de campaña, no un contrato: se compara con los futuros a modo de referencia, no como equivalente.</li>
+      <li>La baja de retenciones a la soja anunciada en mayo de 2026 <strong>no rige hoy</strong>: el poroto sigue en 24% y el cronograma empieza en enero de 2027. La alícuota del aceite de soja tiene ambigüedad entre fuentes (24% vs 18–22%): confirmar con el anexo del Decreto 423/2026.</li>
+      <li>Datos pendientes de cierre por el validador: producción final EE.UU. 2025/26 (116 vs 118 Mt según reporte); serie Brasil 2021/22–2023/24 con PSD Online; tipo de cambio oficial a la fecha de publicación.</li>
+    </ul>
+  </div>
+
+  <div class="src">
+    <h4>Fuentes</h4>
+    <p>
+      Precios y futuros: <a href="https://farmbucks.com/futures/grain-oilseeds/soybeans">Farmbucks (CBOT)</a> · <a href="https://tradingeconomics.com/commodity/soybeans">Trading Economics</a> · <a href="https://www.cmegroup.com/markets/agriculture/oilseeds/soybean/quotes">CME Group</a> · <a href="https://es.tradingview.com/symbols/MATBAROFEX-SOJ.ROS1!/contracts/">Matba-Rofex (TradingView)</a> · <a href="https://ycharts.com/indicators/us_soybean_price">USDA-NASS / YCharts</a>.
+      Producción y stocks: <a href="https://www.dtnpf.com/agriculture/web/ag/news/article/2026/07/10/usda-releases-july-crop-production-3">DTN (WASDE julio 2026)</a> · <a href="https://www.grainjournal.com/article/1147996/usda-leaves-soybean-outlook-largely-unchanged-in-july-wasde">Grain Journal</a> · <a href="https://apps.fas.usda.gov/psdonline/circulars/oilseeds.pdf">USDA Oilseeds (circular)</a> · <a href="https://www.world-grain.com/articles/22984-brazil-wraps-up-record-soybean-harvest">World-Grain</a> · <a href="https://soygrowers.com/news-releases/how-does-u-s-soybean-production-compare-to-brazil/">American Soybean Association</a>.
+      China y macro: <a href="https://www.globaltimes.cn/page/202601/1353178.shtml">Global Times (aduanas)</a> · <a href="https://www.indexmundi.com/agriculture/?country=cn&commodity=soybean-oilseed&graph=imports">USDA PSD / IndexMundi</a> · <a href="https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/021926-analysis-tariff-gap-likely-to-keep-chinas-soybean-imports-anchored-to-brazil">S&amp;P Global</a> · <a href="https://www.aljazeera.com/economy/2026/7/2/oil-prices-fall-to-levels-not-seen-since-start-of-us-israel-war-on-iran">Al Jazeera (petróleo)</a> · <a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm">Reserva Federal</a>.
+      Argentina: <a href="https://www.bcr.com.ar/es/mercados/mercado-de-granos/noticias/reporte-mensual-del-usda-julio-2026">BCR</a> · <a href="https://www.lanacion.com.ar/economia/campo/baja-de-retenciones-una-por-una-asi-quedo-la-tabla-de-alicuotas-de-la-exportacion-de-granos-nid22052026/">La Nación (retenciones)</a> · <a href="https://www.infobae.com/economia/2026/05/21/javier-milei-anuncio-una-baja-en-las-retenciones-para-el-trigo-la-cebada-y-la-soja/">Infobae</a> · <a href="https://www.infocampo.com.ar/precio-de-la-soja-hoy-19-julio-2026/">Infocampo (pizarra)</a> · <a href="https://www.cronista.com/economia-politica/la-soja-vuela-en-chicago-por-que-argentina-tiene-la-venta-mas-lenta-en-30-anos/">Cronista</a>.
+    </p>
+  </div>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="brand"><span class="pct" style="color:var(--teal)">%</span>Con Interés</div>
+    <div class="tagline">El lugar donde entendés la economía argentina. · Nota técnica con fines informativos. No constituye asesoramiento financiero ni recomendación de compra o venta.</div>
+  </div>
+</footer>
+
+<div class="tooltip" id="tt"></div>
+
+<script>
+(function(){
+  "use strict";
+  var NS="http://www.w3.org/2000/svg";
+  var tt=document.getElementById('tt');
+  function el(n,a){var e=document.createElementNS(NS,n);if(a)for(var k in a)e.setAttribute(k,a[k]);return e;}
+  function showTip(evt,html){tt.innerHTML=html;tt.style.opacity=1;moveTip(evt);}
+  function moveTip(evt){var x=evt.clientX+14,y=evt.clientY+14;
+    if(x+230>window.innerWidth)x=evt.clientX-230;tt.style.left=x+'px';tt.style.top=y+'px';}
+  function hideTip(){tt.style.opacity=0;}
+
+  // ---------- LINE CHART ----------
+  function lineChart(id,cfg){
+    var W=cfg.W||680,H=cfg.H||300,
+        mL=cfg.mL||44,mR=cfg.mR||14,mT=cfg.mT||18,mB=cfg.mB||42;
+    var iw=W-mL-mR, ih=H-mT-mB;
+    var labels=cfg.labels, n=labels.length;
+    var yMin=cfg.yMin,yMax=cfg.yMax;
+    var svg=el('svg',{viewBox:'0 0 '+W+' '+H,role:'img'});
+    function X(i){return mL + (n===1?iw/2:iw*i/(n-1));}
+    function Y(v){return mT + ih*(1-(v-yMin)/(yMax-yMin));}
+    // y grid + labels
+    var ticks=cfg.yTicks||5;
+    for(var t=0;t<=ticks;t++){
+      var val=yMin+(yMax-yMin)*t/ticks, y=Y(val);
+      svg.appendChild(el('line',{class:'gl',x1:mL,y1:y,x2:mL+iw,y2:y}));
+      var lb=el('text',{class:'axlab',x:mL-8,y:y+3.5,'text-anchor':'end'});
+      lb.textContent=cfg.yFmt?cfg.yFmt(val):val.toFixed(0);svg.appendChild(lb);
+    }
+    // x labels: if any empty strings present, render only non-empty (year ticks); else thin by step
+    var hasEmpty=labels.some(function(l){return l==='';});
+    var step=cfg.xStep||Math.ceil(n/ (cfg.xMax||10));
+    for(var i=0;i<n;i++){
+      if(hasEmpty){ if(labels[i]==='') continue; }
+      else { if(i%step!==0 && i!==n-1) continue; }
+      var anch=(i===0)?'start':(i===n-1?'end':'middle');
+      var xt=el('text',{class:'axlab',x:X(i),y:H-mB+18,'text-anchor':anch});
+      xt.textContent=labels[i];svg.appendChild(xt);
+    }
+    // series
+    cfg.series.forEach(function(s){
+      var d='';
+      s.vals.forEach(function(v,i){ if(v==null)return; d+=(d===''?'M':'L')+X(i).toFixed(1)+' '+Y(v).toFixed(1)+' ';});
+      var p=el('path',{d:d,fill:'none',stroke:s.color,'stroke-width':s.width||2.6,
+        'stroke-linejoin':'round','stroke-linecap':'round'});
+      if(s.dashed)p.setAttribute('stroke-dasharray','6 5');
+      svg.appendChild(p);
+    });
+    // dots + tooltips (only markers series or all)
+    cfg.series.forEach(function(s){
+      if(s.noDots)return;
+      s.vals.forEach(function(v,i){
+        if(v==null)return;
+        var big=s.markers&&s.markers.indexOf(i)>=0;
+        var c=el('circle',{class:'dot',cx:X(i),cy:Y(v),r:big?4.5:3,fill:big?s.color:'#fffdf8',
+          stroke:s.color,'stroke-width':2});
+        c.addEventListener('mouseenter',function(e){c.setAttribute('r',big?6:5);
+          showTip(e,'<b>'+labels[i]+'</b><br>'+s.name+': '+(cfg.tipFmt?cfg.tipFmt(v):v));});
+        c.addEventListener('mousemove',moveTip);
+        c.addEventListener('mouseleave',function(){c.setAttribute('r',big?4.5:3);hideTip();});
+        svg.appendChild(c);
+      });
+    });
+    // annotations
+    (cfg.annos||[]).forEach(function(a){
+      var x=X(a.i),y=Y(a.v);
+      var tx=el('text',{class:'anno',x:x+(a.dx||0),y:y+(a.dy||-12),'text-anchor':a.anchor||'middle',fill:a.color||'#1d211f'});
+      tx.textContent=a.t;svg.appendChild(tx);
+    });
+    // unit
+    if(cfg.unit){var u=el('text',{class:'axunit',x:mL-8,y:mT-6,'text-anchor':'end'});u.textContent=cfg.unit;svg.appendChild(u);}
+    document.getElementById(id).appendChild(svg);
+  }
+
+  // ---------- GROUPED BAR CHART ----------
+  function barChart(id,cfg){
+    var W=cfg.W||680,H=cfg.H||320, mL=44,mR=14,mT=18,mB=40;
+    var iw=W-mL-mR, ih=H-mT-mB;
+    var labels=cfg.labels, n=labels.length, series=cfg.series, ns=series.length;
+    var yMax=cfg.yMax;
+    var svg=el('svg',{viewBox:'0 0 '+W+' '+H,role:'img'});
+    function Y(v){return mT+ih*(1-v/yMax);}
+    var ticks=cfg.yTicks||4;
+    for(var t=0;t<=ticks;t++){var val=yMax*t/ticks,y=Y(val);
+      svg.appendChild(el('line',{class:'gl',x1:mL,y1:y,x2:mL+iw,y2:y}));
+      var lb=el('text',{class:'axlab',x:mL-8,y:y+3.5,'text-anchor':'end'});lb.textContent=val.toFixed(0);svg.appendChild(lb);}
+    var groupW=iw/n, pad=groupW*0.18, innerW=groupW-2*pad, barW=innerW/ns;
+    for(var i=0;i<n;i++){
+      var gx=mL+groupW*i+pad;
+      var xt=el('text',{class:'axlab',x:mL+groupW*i+groupW/2,y:H-mB+18,'text-anchor':'middle'});
+      xt.textContent=labels[i];svg.appendChild(xt);
+      series.forEach(function(s,si){
+        var v=s.vals[i]; if(v==null)return;
+        var bx=gx+barW*si, by=Y(v), bh=mT+ih-by;
+        var r=el('rect',{x:bx,y:by,width:barW-1.5,height:bh,fill:s.color,rx:1.5,class:'dot'});
+        r.addEventListener('mouseenter',function(e){r.setAttribute('opacity','.82');
+          showTip(e,'<b>'+labels[i]+'</b><br>'+s.name+': '+v+' Mt');});
+        r.addEventListener('mousemove',moveTip);
+        r.addEventListener('mouseleave',function(){r.setAttribute('opacity','1');hideTip();});
+        svg.appendChild(r);
+      });
+    }
+    if(cfg.unit){var u=el('text',{class:'axunit',x:mL-8,y:mT-6,'text-anchor':'end'});u.textContent=cfg.unit;svg.appendChild(u);}
+    document.getElementById(id).appendChild(svg);
+  }
+
+  // ===== DATA =====
+
+  // 1) PRICE 2021-2026 (nearby, US$/bu)
+  var priceLabels=['ene-21','','','','','','ene-22','','','','','','','feb-23','','','','','','feb-24','','','','','','','feb-25','','','','','','','','ene-26','','','','','','jul-26'];
+  var priceVals=[13.6,14.2,15.8,13.9,12.9,12.5,14.3,16.5,16.9,17.4,14.5,13.9,14.8,15.2,14.8,13.5,13.9,12.8,13.0,11.7,11.9,12.58,11.0,10.1,9.9,9.47,10.4,10.3,10.6,9.81,10.3,11.3,11.1,10.9,11.3,11.4,11.9,12.14,11.22,12.15];
+  lineChart('c-price',{
+    W:690,H:330,labels:priceLabels,series:[{name:'Soja CBOT',color:'#0f6b64',vals:priceVals,
+      markers:[9,25,31,39]}],
+    yMin:9,yMax:18,yTicks:3,unit:'US$/bu',
+    yFmt:function(v){return v.toFixed(0);},tipFmt:function(v){return 'US$'+v.toFixed(2)+'/bu';},
+    xStep:1,xMax:40,
+    annos:[
+      {i:9,v:17.4,t:'Pico ~US$17,6',dy:-10,color:'#b4472e'},
+      {i:25,v:9.47,t:'Piso US$9,47',dy:20,color:'#b4472e'},
+      {i:31,v:11.3,t:'Máx. 17 meses',dy:-12,color:'#2f7d5b'},
+      {i:39,v:12.15,t:'Hoy US$12,15',dy:-12,dx:-6,anchor:'end',color:'#0c4a45'}
+    ]
+  });
+  // custom thinned x for price (labels already sparse via empty strings)
+  (function(){var s=document.querySelector('#c-price svg');})();
+
+  // 2) PRODUCTION grouped bars
+  barChart('c-prod',{
+    W:690,H:330,labels:['21/22','22/23','23/24','24/25','25/26','26/27p'],
+    yMax:200,yTicks:4,unit:'Mt',
+    series:[
+      {name:'EE.UU.',color:'#2f8f88',vals:[121.5,116.2,113.3,118.8,116.0,121.8]},
+      {name:'Brasil',color:'#cf6a3f',vals:[129.5,162,153,172.5,180.0,186]},
+      {name:'Argentina',color:'#5f7183',vals:[43.3,21,48.6,49.9,50.0,null]}
+    ]
+  });
+
+  // 3) CHINA imports line
+  lineChart('c-china',{
+    W:690,H:290,labels:['20/21','21/22','22/23','23/24','24/25','25/26e','26/27e'],
+    series:[{name:'Importaciones China',color:'#0f6b64',vals:[99.7,90.3,104.5,112.0,109.0,106,108],
+      markers:[0,1,2,3,4,5,6],dashSeg:true}],
+    yMin:80,yMax:120,yTicks:4,unit:'Mt',
+    yFmt:function(v){return v.toFixed(0);},tipFmt:function(v){return v+' Mt';},
+    xStep:1,xMax:7,
+    annos:[{i:1,v:118,t:'Récord aduanas 2025: 111,8 Mt (año calendario)',dy:0,anchor:'start',color:'#8a6a2a'}]
+  });
+
+  // 4) FUTURES curve + USDA ref
+  lineChart('c-fut',{
+    W:690,H:290,mR:70,labels:['Ago-26','Sep-26','Nov-26','Ene-27','Mar-27','May-27','Jul-27','Nov-27'],
+    series:[
+      {name:'Estim. USDA 25/26',color:'#c07c1e',vals:[10.4,10.4,10.4,10.4,10.4,10.4,10.4,10.4],dashed:true,noDots:true,width:2},
+      {name:'Futuros CBOT',color:'#0f6b64',vals:[12.155,12.025,12.1275,12.2625,12.285,12.3325,12.375,11.775],
+        markers:[0,7]}
+    ],
+    yMin:10,yMax:12.8,yTicks:4,unit:'US$/bu',
+    yFmt:function(v){return v.toFixed(1);},tipFmt:function(v){return 'US$'+v.toFixed(2)+'/bu';},
+    xStep:1,xMax:8,
+    annos:[
+      {i:3,v:12.2625,t:'Contango leve',dy:-14,color:'#0c4a45'},
+      {i:7,v:11.775,t:'Nueva cosecha',dy:20,dx:-4,anchor:'end',color:'#5c6360'}
+    ]
+  });
+
+  // 5) SCENARIOS
+  lineChart('c-scen',{
+    W:690,H:300,mR:64,labels:['Jul-26','Ago','Sep','Oct','Nov','Dic','Ene-27'],
+    series:[
+      {name:'Alcista',color:'#2f7d5b',vals:[12.15,12.4,12.6,12.8,13.0,13.2,13.3],markers:[6]},
+      {name:'Base',color:'#0f6b64',vals:[12.15,12.1,12.15,12.2,12.2,12.25,12.25],markers:[6],width:3},
+      {name:'Bajista',color:'#b4472e',vals:[12.15,11.7,11.3,11.0,10.8,10.6,10.5],markers:[6]}
+    ],
+    yMin:10,yMax:13.6,yTicks:3,unit:'US$/bu',
+    yFmt:function(v){return v.toFixed(0);},tipFmt:function(v){return 'US$'+v.toFixed(2)+'/bu';},
+    xStep:1,xMax:7,
+    annos:[
+      {i:6,v:13.3,t:'US$13+',dy:-8,dx:4,anchor:'start',color:'#2f7d5b'},
+      {i:6,v:12.25,t:'~US$12,2',dy:-8,dx:4,anchor:'start',color:'#0c4a45'},
+      {i:6,v:10.5,t:'US$10,5',dy:16,dx:4,anchor:'start',color:'#b4472e'}
+    ]
+  });
+
+})();
+</script>
+</body>
+</html>

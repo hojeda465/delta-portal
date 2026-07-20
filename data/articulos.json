@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-20T12:09:24+00:00"
+    "actualizado": "2026-07-20T13:00:00-03:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -12,6 +12,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-20-soja-mercado-seis-meses",
+      "titulo": "Soja: qué está diciendo el mercado sobre los próximos seis meses",
+      "bajada": "La soja rebotó a la zona de US$12 por bushel en Chicago tras tocar mínimos de cuatro meses. Detrás del número: oferta sudamericana récord contra una demanda china que crece pero le compra poco a Estados Unidos. Leemos la curva de futuros y los fundamentos para ver qué precio pone hoy el propio mercado.",
+      "seccion": "MERCADOS",
+      "formato": "Análisis de mercado",
+      "numero": "US$12,15",
+      "numero_label": "soja CBOT por bushel (20-jul-2026)",
+      "fecha": "2026-07-20",
+      "hora": "13:00",
+      "archivo": "articulos/2026-07-20-soja-mercado-seis-meses.html",
+      "verificacion": "verificada",
+      "fuentes": 12,
+      "lectura": "~11 min"
+    },
     {
       "id": "2026-07-20-inflacion-mayorista-junio",
       "titulo": "La inflación mayorista bajó a 1,1% en junio y quedó debajo de la góndola: el número que se adelanta",

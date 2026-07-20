@@ -161,6 +161,13 @@
       "fecha": "2026-07-20",
       "estado": "publicada",
       "articulo_id": "2026-07-20-inflacion-mayorista-junio"
+    },
+    {
+      "tema": "soja / análisis de mercado a seis meses: precio CBOT en la zona de US$12/bushel y curva de futuros",
+      "angulo": "sección MERCADOS, ángulo de datos NUEVO respecto de las notas de agro ya cubiertas (exportaciones de granos por volumen; minería/litio): esta es una NOTA TÉCNICA de análisis del precio internacional de la soja, no de las exportaciones argentinas. Ejes: el ciclo 2021-2026 (pico ~US$17,6 jun-2022, pisos dic-2024/ago-2025, rebote nov-2025 por acuerdo EEUU-China, disponible ~US$12,15 al 20-jul-2026); oferta récord sudamericana (Brasil 180 Mt 2025/26, EEUU ~121,8 Mt 2026/27 proyección USDA); demanda china (récord aduanas 111,8 Mt año calendario 2025) anclada a Brasil por brecha arancelaria (13% vs 3%); tablero macro (DXY, Brent -38%, Fed 3,50-3,75%); curva de futuros CBOT en contango leve; traslado del precio de Chicago al FAS del productor argentino (retenciones 24% poroto, baja gradual desde ene-2027, FAS ~US$325/t); tres escenarios a 6 meses (bajista US$10,5-11 / base US$12-12,3 / alcista US$13+). Nota provista por el editor humano y publicada por pedido directo. Verificación de anclas por la redacción (fuentes primarias): precio soja en zona US$12 CONFIRMADO (nueva cosecha superó US$12, máximo de 3 años); precio promedio de temporada USDA 2025/26 US$10,40/bushel CONFIRMADO (WASDE julio 2026, exacto); producción EEUU 2026/27 4.475 M bushels ≈ 121,8 Mt CONFIRMADO (WASDE julio 2026); Brasil récord CONFIRMADO (FAS/USDA). Discrepancia menor marcada: importaciones China 2026/27 en la nota (~108 Mt, estimación) por debajo del WASDE julio 2026 (115 Mt); la propia nota flaggea divergencia entre fuentes. Formato: análisis con escenarios ilustrativos, disclaimers de 'no asesoramiento' y sección de validación metodológica. No es asesoramiento financiero.",
+      "fecha": "2026-07-20",
+      "estado": "publicada",
+      "articulo_id": "2026-07-20-soja-mercado-seis-meses"
     }
   ]
 }
