@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-20T13:00:00-03:00"
+    "actualizado": "2026-07-20T13:29:27+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -12,6 +12,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-20-salario-real-abril",
+      "titulo": "El salario le ganó a la inflación en abril, pero el trabajador registrado sigue perdiendo",
+      "bajada": "El índice de salarios subió 3,7% en abril y superó al 2,6% de inflación. Pero el promedio interanual solo le gana a los precios por el arrastre estadístico de los sueldos informales: el empleado registrado, privado y estatal, perdió poder de compra en el año.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "+3,7%",
+      "numero_label": "suba del salario en abril 2026 (superó al 2,6% de inflación)",
+      "fecha": "2026-07-20",
+      "hora": "13:30",
+      "archivo": "articulos/2026-07-20-salario-real-abril.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 12 min"
+    },
     {
       "id": "2026-07-20-soja-mercado-seis-meses",
       "titulo": "Soja: qué está diciendo el mercado sobre los próximos seis meses",
