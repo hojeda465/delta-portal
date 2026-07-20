@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-20T19:22:36+00:00",
-  "borradores": []
+  "actualizado": "2026-07-20T21:30:00+00:00",
+  "borradores": [
+    {
+      "id": "2026-07-20-mora-familias-record",
+      "titulo": "La mora de las familias llegó a 12,1%: el récord de deudas impagas que la desinflación todavía no frena",
+      "bajada": "En abril, de cada $100 que las familias le debían a los bancos, $12,10 estaban en atraso: el nivel más alto desde 2004 y más del triple que un año antes. Mientras la inflación se desacelera, la mora encadena año y medio de suba.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "12,1%",
+      "numero_label": "la mora del crédito a las familias en abril de 2026, récord desde 2004",
+      "fecha": "2026-07-20",
+      "hora": "21:30",
+      "archivo": "cola/2026-07-20-mora-familias-record.html",
+      "verificacion": "pendiente",
+      "fuentes": 6,
+      "lectura": "30 seg → 10 min"
+    }
+  ]
 }
