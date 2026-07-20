@@ -196,6 +196,13 @@
       "fecha": "2026-07-20",
       "estado": "publicada",
       "articulo_id": "2026-07-20-deuda-publica-dos-lecturas"
+    },
+    {
+      "tema": "carne vacuna / consumo per cápita en mínimo de ~2 décadas vs exportaciones récord (1er semestre 2026)",
+      "angulo": "el consumo interno cayó a ~47,5 kg/hab (menor en unas dos décadas, -11% i.a. en el semestre) mientras las exportaciones batieron récord (US$1.765 M en 5 meses, +46% en valor; EE.UU. +151% en volumen). La res partida en dos: el negocio exportador en dólares crece y la mesa local se achica por el precio (+58% i.a.), con el pollo igualando por primera vez a la vacuna (47 kg). Ancla (consumo per cápita ~47,5 kg) CONFIRMADA por CICCRA + IPCVA/BCR y coherente con la serie oficial del MAGyP; exportaciones confirmadas por CICCRA + Secretaría de Agricultura",
+      "fecha": "2026-07-20",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-20-carne-vacuna-consumo-minimo-record-exportacion"
     }
   ]
 }
