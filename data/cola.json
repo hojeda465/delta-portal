@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-20T18:15:15+00:00",
-  "borradores": [
-    {
-      "id": "2026-07-20-carne-vacuna-consumo-minimo-record-exportacion",
-      "titulo": "La carne se exporta como nunca y se come como hace veinte años",
-      "bajada": "El consumo de carne vacuna cayó a unos 47,5 kilos por habitante, el nivel más bajo en unas dos décadas, mientras las exportaciones marcaron récord: US$1.765 millones en cinco meses (+46%). El asado que sale del país es el que fue desapareciendo de la mesa argentina.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "47,5 kg",
-      "numero_label": "consumo de carne vacuna por habitante en 2026 (mínimo en ~2 décadas)",
-      "fecha": "2026-07-20",
-      "hora": "18:00",
-      "archivo": "articulos/2026-07-20-carne-vacuna-consumo-minimo-record-exportacion.html",
-      "verificacion": "verificada",
-      "fuentes": 6,
-      "lectura": "30 seg → 12 min"
-    }
-  ]
+  "borradores": []
 }
