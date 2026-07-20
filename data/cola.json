@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-20T16:30:00-03:00",
-  "borradores": []
+  "actualizado": "2026-07-20T17:23:36+00:00",
+  "borradores": [
+    {
+      "id": "2026-07-20-deuda-publica-dos-lecturas",
+      "titulo": "La deuda pública bajó por segundo mes seguido — y sigue a un paso de su récord",
+      "bajada": "En junio el stock cerró en US$474.192 millones, US$5.080 millones menos que en mayo, pero a un paso del récord histórico. El Gobierno lo lee como desendeudamiento; cuánto subió la deuda con Milei depende de desde qué día se cuente.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$474.192 M",
+      "numero_label": "Deuda bruta del Estado · junio 2026",
+      "fecha": "2026-07-20",
+      "hora": "18:30",
+      "archivo": "articulos/2026-07-20-deuda-publica-dos-lecturas.html",
+      "verificacion": "verificada",
+      "fuentes": 7,
+      "lectura": "30 seg → 12 min"
+    }
+  ]
 }
