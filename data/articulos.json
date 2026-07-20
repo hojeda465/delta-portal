@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-19T23:00:47+00:00"
+    "actualizado": "2026-07-20T12:09:24+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -12,6 +12,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-20-inflacion-mayorista-junio",
+      "titulo": "La inflación mayorista bajó a 1,1% en junio y quedó debajo de la góndola: el número que se adelanta",
+      "bajada": "Los precios que cobran fábricas, campo e importadores subieron 1,1% en junio, la menor suba en cuatro meses y casi un punto por debajo del 1,9% minorista. Es el índice que se mueve primero: lo que hoy pasa en la fábrica llega a la góndola uno o dos meses después.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "1,1%",
+      "numero_label": "inflación mayorista (IPIM) de junio 2026",
+      "fecha": "2026-07-20",
+      "hora": "09:00",
+      "archivo": "articulos/2026-07-20-inflacion-mayorista-junio.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-07-19-mineria-record-litio",
       "titulo": "La minería batió un récord de US$3.934 millones y el litio se transformó en su nueva estrella",
