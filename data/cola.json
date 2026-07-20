@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-19T20:00:00-03:00",
-  "borradores": []
+  "actualizado": "2026-07-20T09:00:00-03:00",
+  "borradores": [
+    {
+      "id": "2026-07-20-inflacion-mayorista-junio",
+      "titulo": "La inflación mayorista bajó a 1,1% en junio y quedó debajo de la góndola: el número que se adelanta",
+      "bajada": "Los precios que cobran fábricas, campo e importadores subieron 1,1% en junio, la menor suba en cuatro meses y casi un punto por debajo del 1,9% minorista. Es el índice que se mueve primero: lo que hoy pasa en la fábrica llega a la góndola uno o dos meses después.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "1,1%",
+      "numero_label": "inflación mayorista (IPIM) de junio 2026",
+      "fecha": "2026-07-20",
+      "hora": "09:00",
+      "archivo": "articulos/2026-07-20-inflacion-mayorista-junio.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 10 min"
+    }
+  ]
 }
