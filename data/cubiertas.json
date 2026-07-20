@@ -217,6 +217,13 @@
       "fecha": "2026-07-20",
       "estado": "publicada",
       "articulo_id": "2026-07-20-mora-familias-record"
+    },
+    {
+      "tema": "actividad de la construcción vs. venta de materiales / la crisis de los corralones y ferreterías en la provincia de Buenos Aires (jun 2026)",
+      "angulo": "Paradoja de indicadores: el ISAC del INDEC (actividad) creció +4,1% i.a. y +6,3% mensual en mayo, pero la VENTA de materiales cae: Índice Construya −1,99% mensual desest. (−0,6% i.a.) en junio, y despachos de cemento (AFCP) −1,4% i.a. en junio, tercer mes consecutivo en baja (−3% en el 1er semestre vs 2025). En el mostrador bonaerense, el rubro CAME 'ferretería, materiales eléctricos y de la construcción' cayó −2% i.a. en junio; FEBA (Camilo Cahale) y FELP (Marcelo Babenco) relativizan la mejora ('la crisis sigue igual'; revierte ~14 meses de baja pero 'no es óptima'). La divergencia se explica porque el ISAC capta obra en marcha/terminaciones (pinturas +23,6%, hormigón +10,1%, hierro +9,6%) mientras los básicos del corralón y la obra pública caen (pisos cerámicos −19,6%, asfalto −8,2%, ladrillos huecos −8,0%, cemento −1,3%). Empleo construcción registrado +1,2% i.a. (abril), señal de piso. Cifra ancla (la venta de materiales cayó en junio) CONFIRMADA por triple fuente independiente (Construya + AFCP + CAME); ISAC +4,1% CONFIRMADO (INDEC + Ámbito). DESCARTADAS por no verificar: la caída '11,6%' (La Política Online, sin acceso) y 'ventas en corralones −50%' y '−29,2% vs 2023' (artículos de 2024, stale). Ángulo NUEVO frente a 'industria vs construcción mayo 2026' y 'crédito hipotecario': acá el eje es la cadena comercial de materiales (corralones/ferreterías) en PBA, no la macro ni el crédito.",
+      "fecha": "2026-07-20",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-20-corralones-construccion-buenos-aires"
     }
   ]
 }

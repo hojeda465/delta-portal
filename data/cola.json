@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-20T21:30:00+00:00",
-  "borradores": []
+  "actualizado": "2026-07-20T23:03:57+00:00",
+  "borradores": [
+    {
+      "id": "2026-07-20-corralones-construccion-buenos-aires",
+      "titulo": "La construcción rebota en las estadísticas, pero no en el mostrador del corralón",
+      "bajada": "El índice oficial de la construcción (ISAC-INDEC) subió 4,1% interanual en mayo, pero la venta de materiales volvió a caer en junio (Índice Construya −1,99%), el cemento encadena tres meses en baja y las cámaras bonaerenses dicen que en corralones y ferreterías (−2% i.a.) la crisis sigue igual. Por qué el rebote estadístico no llega a la caja del que vende materiales en la provincia de Buenos Aires.",
+      "seccion": "ECONOMÍA PROVINCIAL",
+      "formato": "Anatomía de un dato",
+      "numero": "+4,1%",
+      "numero_label": "creció la construcción en mayo (ISAC-INDEC), pero la venta de materiales cae",
+      "fecha": "2026-07-20",
+      "hora": "20:30",
+      "archivo": "articulos/2026-07-20-corralones-construccion-buenos-aires.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 12 min"
+    }
+  ]
 }
