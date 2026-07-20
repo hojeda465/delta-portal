@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-20T14:17:13+00:00"
+    "actualizado": "2026-07-20T16:25:23+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -12,6 +12,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-20-pagos-qr-superan-100-millones",
+      "titulo": "El QR superó por primera vez los 100 millones de pagos por mes (mientras las tarjetas caen)",
+      "bajada": "En mayo, los pagos con transferencia por QR cruzaron por primera vez los 100 millones de operaciones en un mes: 102,5 millones, un 66% más que hace un año, según el BCRA. Es la foto de una Argentina que deja el efectivo. Pero en la misma planilla, las tarjetas de débito y crédito caen en términos reales.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "102,5 M",
+      "numero_label": "pagos con transferencia por QR en mayo 2026 (+66% i.a., primera vez sobre 100 M)",
+      "fecha": "2026-07-20",
+      "hora": "16:30",
+      "archivo": "articulos/2026-07-20-pagos-qr-superan-100-millones.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-07-20-ventas-pyme-cortan-caida",
       "titulo": "Las ventas pyme crecieron 0,9% en junio y cortaron 13 meses de caída: por qué todavía no es un cambio de tendencia",
