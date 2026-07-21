@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-21T14:08:25+00:00"
+    "actualizado": "2026-07-21T18:40:35+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -12,6 +12,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-21-credito-privado-rebota-empresas",
+      "titulo": "El crédito cortó cinco meses de caída: subió 1,7% en junio, pero lo empujaron las empresas",
+      "bajada": "El crédito en pesos al sector privado creció en junio por primera vez en seis meses. Detrás del rebote hay dos economías: las líneas comerciales subieron 4,5% real y las de consumo siguieron cayendo, sobre un sistema que presta apenas 13,6% del PBI.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "+1,7%",
+      "numero_label": "suba real mensual del crédito al sector privado en junio 2026 (primera en seis meses)",
+      "fecha": "2026-07-21",
+      "hora": "15:00",
+      "archivo": "articulos/2026-07-21-credito-privado-rebota-empresas.html",
+      "verificacion": "verificada",
+      "fuentes": 7,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-07-21-compras-courier-se-duplican",
       "titulo": "Las compras al exterior por courier se duplicaron: US$643 millones de Shein, Temu y Amazon en seis meses",
