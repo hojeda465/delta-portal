@@ -238,6 +238,13 @@
       "fecha": "2026-07-21",
       "estado": "publicada",
       "articulo_id": "2026-07-21-empleo-registrado-abril-anatomia"
+    },
+    {
+      "tema": "IA y el futuro del trabajo / ¿la IA reemplaza todo menos los oficios? mito vs. realidad con datos",
+      "angulo": "investigacion a fondo (regalo por Dia del Amigo para Jose, emprendedor de oficios): solo 3,3% del empleo mundial en maxima exposicion a la IA (OIT WP140); FMI ~40% afectados pero afectar!=reemplazar; BM LatAm 2-5% automatizacion total; estudio Min. Economia Argentina: gerentes 99% vs manuales 35% (invierte el miedo), 71% complementariedad; paradoja de Moravec; robotica fisica lejos (Atlas 89kg levanta 11kg); demanda de oficios crece (BLS electricistas +9%, HVAC +8% vs 3% promedio), 41% construccion se jubila 2031, IA data centers necesita 140.000 electricistas 2030; la IA transforma el oficio (takeoff 97% precision, cotizar 2-3x). Fuentes primarias OIT/FMI/BM/BLS/WEF/Min Economia AR. Publicada directamente por decision del dueño.",
+      "fecha": "2026-07-20",
+      "estado": "publicada",
+      "articulo_id": "2026-07-20-ia-no-reemplaza-oficios"
     }
   ]
 }

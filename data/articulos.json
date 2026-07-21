@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-21T01:57:36+00:00"
+    "actualizado": "2026-07-21T02:05:33+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -12,6 +12,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-20-ia-no-reemplaza-oficios",
+      "titulo": "Por qué la inteligencia artificial no viene por el plomero — y sí por el oficinista",
+      "bajada": "Se dice que la IA se va a llevar todos los trabajos menos los oficios. Los datos de la OIT, el FMI y el Banco Mundial matizan el pánico: el reemplazo total es una franja chica, los oficios son lo menos expuesto y la IA los transforma en vez de borrarlos.",
+      "seccion": "ECONOMÍA",
+      "formato": "El futuro del trabajo",
+      "numero": "3,3%",
+      "numero_label": "del empleo mundial en la máxima exposición a la IA (OIT)",
+      "fecha": "2026-07-20",
+      "hora": "20:00",
+      "archivo": "articulos/2026-07-20-ia-no-reemplaza-oficios.html",
+      "verificacion": "verificada",
+      "fuentes": 8,
+      "lectura": "30 seg → 12 min"
+    },
     {
       "id": "2026-07-21-empleo-registrado-abril-anatomia",
       "titulo": "Se perdieron 28.736 empleos registrados en abril, pero solo 4 de cada 10 eran asalariados privados",
