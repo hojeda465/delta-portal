@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-21T11:18:52+00:00",
-  "borradores": []
+  "actualizado": "2026-07-21T15:00:00+00:00",
+  "borradores": [
+    {
+      "id": "2026-07-21-compras-courier-se-duplican",
+      "titulo": "Las compras al exterior por courier se duplicaron: US$643 millones de Shein, Temu y Amazon en seis meses",
+      "bajada": "Mientras las importaciones totales del país cayeron 3,9% en el primer semestre, las compras puerta a puerta se dispararon 104% y ya casi igualan lo de todo 2025. Una franquicia sin impuestos de US$400 y un dólar barato explican el único canal de importación que crece a contramano.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$643 M",
+      "numero_label": "compras por courier en el 1er semestre 2026 (+104,2% i.a.)",
+      "fecha": "2026-07-21",
+      "hora": "15:00",
+      "archivo": "articulos/2026-07-21-compras-courier-se-duplican.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 10 min"
+    }
+  ]
 }
