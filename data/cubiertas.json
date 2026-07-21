@@ -273,6 +273,13 @@
       "fecha": "2026-07-21",
       "estado": "publicada",
       "articulo_id": "2026-07-21-cheques-rechazados-cadena-pagos"
+    },
+    {
+      "tema": "producción de gas natural / récord histórico de Neuquén (115,14 MMm³/día, mayo 2026) y la paradoja de importar GNL en invierno",
+      "angulo": "ángulo de datos NUEVO respecto de la nota de Vaca Muerta ya cubierta (que fue sobre PETRÓLEO/crudo y el superávit energético): esta nota es sobre el GAS NATURAL. Cifra ancla: Neuquén produjo 115,14 MMm³/d de gas en mayo 2026, máximo histórico absoluto, superando el récord previo de julio 2025 (114,51 MMm³/d) por +0,63; +13,8% mensual (vs abril 101,19) y +12,5% i.a. Datos de apoyo: producción NACIONAL 155,96 MMm³/d (+5,6% i.a.), Neuquén = 73,8% del gas del país; shale de Vaca Muerta 95,16 MMm³/d (+20% i.a., 82,6% del gas neuquino), no convencional ~92%; el convencional cayó -12% y el tight -17% (la transición). Milestone: OLADE ubicó a Argentina como 1° productor de gas de América Latina y el Caribe (21% de la región en enero 2026, apenas arriba de Trinidad 20% y Brasil 13%) — marcado como participación (no volumen absoluto) y ventaja de 1 punto. La postura de refutación / asterisco Con Interés: pese al récord, el país sigue importando GNL en invierno porque el problema es de ESTACIONALIDAD y TRANSPORTE, no de recurso (demanda residencial se triplica de 20 a 60 MMm³/d, picos 90; cuello de botella del trasvase sur-norte 15-18 MMm³/d). Factura de importación de GNL: 2022 = 41 barcos / US$2.885 M; 2025 = 27 barcos / US$698 M; 2026 = ~US$1.400 M (ESTIMACIÓN de Juan José Carbajales, ~doble de 2025, no por más volumen sino por el salto del precio internacional a ~US$20/MMBTU). Cifra ancla (115,14 MMm³/d) CONFIRMADA por doble organismo oficial (Secretaría de Energía de la Nación + Subsecretaría de Hidrocarburos de Neuquén) y múltiples medios independientes (Infobae 23/06, Diario Río Negro, EconoJournal), con récord previo verificable (114,51 jul-2025). Coherencia interna verificada (115,14/155,96=73,8%; 95,16/115,14=82,6%; 101,19→115,14=+13,8%; US$698M x2≈US$1.400M; OLADE 21+20+13+11+10+9+5+1=90). La factura 2026 y el liderazgo OLADE se marcan como estimación/atribuido. No es asesoramiento financiero.",
+      "fecha": "2026-07-21",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-21-record-gas-neuquen-gnl"
     }
   ]
 }
