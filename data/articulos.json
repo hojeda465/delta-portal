@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-21T23:08:49+00:00"
+    "actualizado": "2026-07-21T23:48:54+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -12,6 +12,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-21-rigi-pampa-4521-millones",
+      "titulo": "US$4.521 millones para Vaca Muerta: el proyecto que dejó al RIGI al borde de los US$46.000 millones",
+      "bajada": "El Gobierno oficializó en el Boletín Oficial la inversión de Pampa Energía en Rincón de Aranda: US$4.521 millones para llevar un bloque de Vaca Muerta de 27.000 a 45.000 barriles diarios. Es el proyecto número 20 del RIGI, un régimen que ya comprometió entre US$46.000 y US$57.000 millones según cómo se cuente.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$4.521 M",
+      "numero_label": "la inversión de Pampa Energía en Rincón de Aranda (Vaca Muerta), oficializada como el 20º proyecto del RIGI",
+      "fecha": "2026-07-21",
+      "hora": "22:00",
+      "archivo": "articulos/2026-07-21-rigi-pampa-4521-millones.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-07-21-record-gas-neuquen-gnl",
       "titulo": "Récord de gas en Neuquén: 115 millones de m³ por día, y por qué el país todavía importa barcos en invierno",
