@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-21T00:58:08+00:00"
+    "actualizado": "2026-07-21T01:57:36+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -12,6 +12,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-21-empleo-registrado-abril-anatomia",
+      "titulo": "Se perdieron 28.736 empleos registrados en abril, pero solo 4 de cada 10 eran asalariados privados",
+      "bajada": "Los titulares dijeron 12 mil, 28 mil y 30 mil empleos perdidos en un mismo mes. Los tres números salen del mismo informe oficial y los tres son ciertos: dependen de qué se cuente. La anatomía del dato del trabajo registrado de abril de 2026.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "28.736",
+      "numero_label": "empleos registrados perdidos en abril de 2026 (SIPA)",
+      "fecha": "2026-07-21",
+      "hora": "13:30",
+      "archivo": "articulos/2026-07-21-empleo-registrado-abril-anatomia.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-07-21-monotributo-como-cambio",
       "titulo": "El techo del monotributo trepó a $126 millones: cómo se transformó el régimen en poco más de dos años",
