@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-21T21:15:00+00:00",
-  "borradores": [
-    {
-      "id": "2026-07-21-record-gas-neuquen-gnl",
-      "titulo": "Récord de gas en Neuquén: 115 millones de m³ por día, y por qué el país todavía importa barcos en invierno",
-      "bajada": "En mayo, Neuquén produjo 115,14 millones de m³ de gas por día, su máximo histórico, y empujó al país al frente de la región según OLADE. Y sin embargo, el mismo invierno obliga a importar cargamentos de GNL: el problema argentino ya no es cuánto gas hay, sino cómo y cuándo llega.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "115",
-      "numero_label": "millones de m³ por día produjo Neuquén en mayo 2026 (récord histórico; el país llegó a 155,96 MMm³/d)",
-      "fecha": "2026-07-21",
-      "hora": "21:15",
-      "archivo": "cola/2026-07-21-record-gas-neuquen-gnl.html",
-      "verificacion": "verificada",
-      "fuentes": 5,
-      "lectura": "30 seg → 11 min"
-    }
-  ]
+  "borradores": []
 }
