@@ -231,6 +231,13 @@
       "fecha": "2026-07-21",
       "estado": "publicada",
       "articulo_id": "2026-07-21-monotributo-como-cambio"
+    },
+    {
+      "tema": "empleo registrado (SIPA) abril 2026 / se perdieron 28.736 puestos, solo 11.673 asalariados privados",
+      "angulo": "anatomía del dato: el total de 28.736 se descompone en 6 modalidades (privados -11.673, monotributistas -11.091, monotributo social -5.135, autónomos -4.107, público +2.816, casas particulares +409); la coherencia interna cierra (-28.780 ≈ -28.736) y la EIL (fuente independiente, -1,2% i.a. privado) corrobora. Eje en la sustitución de asalariados por monotributistas (interanual -128.600 vs +49.500). DISTINTO del tema ya cubierto 'mercado de trabajo / desocupación EPH 1er trim': aquí es registro administrativo mensual (SIPA), no la encuesta de hogares, y el foco es el NIVEL y la COMPOSICIÓN del empleo registrado, no la tasa de desocupación. Cifra ancla CONFIRMADA.",
+      "fecha": "2026-07-21",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-21-empleo-registrado-abril-anatomia"
     }
   ]
 }
