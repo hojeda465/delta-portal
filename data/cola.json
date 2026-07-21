@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-21T19:24:03+00:00",
-  "borradores": [
-    {
-      "id": "2026-07-21-cheques-rechazados-cadena-pagos",
-      "titulo": "Casi 100.000 cheques rebotaron en un mes: la otra cara de la calma económica",
-      "bajada": "En mayo se rechazaron 99.431 cheques por falta de fondos, según el BCRA. Es el segundo mes seguido de baja desde el récord de diciembre —cuando rebotaron casi 120.000—, pero todavía un 43,4% más que un año atrás: el estrés financiero de las empresas que los buenos números de la macro no muestran.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "99.431",
-      "numero_label": "cheques rechazados por falta de fondos en mayo 2026 (último dato BCRA; siguen 43,4% arriba de un año atrás)",
-      "fecha": "2026-07-21",
-      "hora": "16:30",
-      "archivo": "cola/2026-07-21-cheques-rechazados-cadena-pagos.html",
-      "verificacion": "verificada",
-      "fuentes": 6,
-      "lectura": "30 seg → 10 min"
-    }
-  ]
+  "borradores": []
 }
