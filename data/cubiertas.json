@@ -259,6 +259,13 @@
       "fecha": "2026-07-21",
       "estado": "publicada",
       "articulo_id": "2026-07-21-compras-courier-se-duplican"
+    },
+    {
+      "tema": "crédito al sector privado / rebote de junio 2026 (+1,7% real, primera suba en seis meses) traccionado por líneas comerciales",
+      "angulo": "el crédito cortó cinco meses de caída pero el impulso vino de las empresas, no de las familias; contexto de baja penetración (13,6% del PBI) y mora récord",
+      "fecha": "2026-07-21",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-21-credito-privado-rebota-empresas"
     }
   ]
 }
