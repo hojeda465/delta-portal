@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-21T11:18:52+00:00",
-  "borradores": [
-    {
-      "id": "2026-07-21-boom-motos-caen-autos",
-      "titulo": "Se patentaron más de 440.000 motos en seis meses: por qué las dos ruedas vuelan mientras los autos caen",
-      "bajada": "El patentamiento de motos saltó 43,5% en el primer semestre de 2026; el de autos 0km cayó 10%. Nueve de cada diez motos son de baja cilindrada y el 97% se fabrica en el país. La foto del vehículo que mejor retrata el poder de compra argentino.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "+43,5%",
-      "numero_label": "crecieron los patentamientos de motos en el 1er semestre 2026 (vs. −10% de los autos 0km)",
-      "fecha": "2026-07-21",
-      "hora": "11:18",
-      "archivo": "cola/2026-07-21-boom-motos-caen-autos.html",
-      "verificacion": "verificada",
-      "fuentes": 6,
-      "lectura": "30 seg → 10 min"
-    }
-  ]
+  "borradores": []
 }
