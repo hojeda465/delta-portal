@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-21T21:15:00+00:00",
-  "borradores": []
+  "actualizado": "2026-07-21T22:00:00+00:00",
+  "borradores": [
+    {
+      "id": "2026-07-21-rigi-pampa-4521-millones",
+      "titulo": "US$4.521 millones para Vaca Muerta: el proyecto que dejó al RIGI al borde de los US$46.000 millones",
+      "bajada": "El Gobierno oficializó en el Boletín Oficial la inversión de Pampa Energía en Rincón de Aranda: US$4.521 millones para llevar un bloque de Vaca Muerta de 27.000 a 45.000 barriles diarios. Es el proyecto número 20 del RIGI, un régimen que ya comprometió entre US$46.000 y US$57.000 millones según cómo se cuente.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$4.521 M",
+      "numero_label": "la inversión de Pampa Energía en Rincón de Aranda (Vaca Muerta), oficializada como el 20º proyecto del RIGI",
+      "fecha": "2026-07-21",
+      "hora": "22:00",
+      "archivo": "articulos/2026-07-21-rigi-pampa-4521-millones.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 10 min"
+    }
+  ]
 }
