@@ -117,17 +117,14 @@ def grupo_de(a):
     return "tu-plata" if any(k in texto for k in TU_PLATA_KW) else "el-pais"
 
 def card(a, con_kick=False):
+    """Tarjeta clásica de diario: título primero; el dato como acento debajo."""
     g = GRUPO_POR_ID[grupo_de(a)]
-    num = a.get("numero", "")
-    n = len(num)
-    fs = 40 if n <= 6 else (31 if n <= 9 else 23)
     kick = f'<div class="kick" style="color:{g["color"]}">{escape(g["label"])}</div>' if con_kick else ""
     return f"""
     <a class="card" data-sec="{escape(a['seccion'])}" href="{escape(a['archivo'])}" style="--sc:{g['color']}">
       {kick}
-      <div class="num-big" style="font-size:{fs}px">{escape(num)}</div>
-      <div class="num-lab">{escape(a.get('numero_label',''))}</div>
       <h3>{escape(a['titulo'])}</h3>
+      <div class="card-num"><b>{escape(a.get('numero',''))}</b> {escape(a.get('numero_label',''))}</div>
       <div class="meta">{chip_verif(a.get('verificacion',''))}<span class="dot"></span>{fecha_bonita(a['fecha'])}</div>
     </a>"""
 
@@ -362,12 +359,12 @@ HTML = f"""<!DOCTYPE html>
   .ed-rol{{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);font-weight:600}}
   .ed-nombre{{font-family:var(--serif);font-size:17px;font-weight:700;margin:2px 0}}
   .ed-bio{{font-size:13px;color:var(--muted);line-height:1.55}}
-  .card{{background:var(--card);border:1px solid var(--card-edge);border-top:3px solid var(--sc);border-radius:14px;padding:20px;display:flex;flex-direction:column;transition:.15s}}
+  .card{{background:var(--card);border:1px solid var(--card-edge);border-radius:14px;padding:20px;display:flex;flex-direction:column;transition:.15s}}
   .card:hover{{transform:translateY(-2px);border-color:var(--sc)}}
-  .card .num-big{{font-family:var(--mono);font-weight:600;line-height:1;letter-spacing:-.02em;color:var(--ink);margin:2px 0 8px}}
-  .card .num-lab{{font-size:12px;color:var(--muted);line-height:1.45;margin-bottom:12px;border-bottom:1px solid var(--grid);padding-bottom:12px}}
-  .card h3{{font-family:var(--serif);font-weight:600;font-size:18px;line-height:1.3;margin:0 0 12px;flex:1;color:var(--ink)}}
-  .grid-2 .card .num-big{{font-size:46px !important}}
+  .card h3{{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.28;margin:0 0 14px;flex:1;color:var(--ink)}}
+  .card-num{{font-family:var(--mono);font-size:12px;color:var(--muted);border-left:3px solid var(--sc);padding-left:10px;margin-bottom:14px;line-height:1.45}}
+  .card-num b{{color:var(--ink);font-size:16px}}
+  .grid-2 .card h3{{font-size:21px}}
   .sec-sub{{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.02em}}
 
   .lider{{display:grid;grid-template-columns:1fr 250px;gap:26px;background:var(--card);border:1px solid var(--card-edge);border-left:4px solid var(--sc);border-radius:14px;padding:24px 26px;margin-bottom:20px;align-items:center;transition:.15s}}
@@ -426,7 +423,7 @@ HTML = f"""<!DOCTYPE html>
 
 <header class="masthead" id="inicio">
   <div class="wrap">
-    <a class="brand" href="#inicio" aria-label="Volver al inicio de la portada"><span class="tri">%</span>{escape(portal['nombre'])}<span class="tag">{escape(portal['tagline'])}</span></a>
+    <a class="brand" href="#inicio" aria-label="Volver al inicio de la portada"><span class="tri">%</span>{escape(portal['nombre'])}<span class="tag">Diario de economía en datos</span></a>
     <div class="mh-right">
       <div>{FECHA_MASTHEAD}</div>
     </div>
