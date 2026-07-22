@@ -213,7 +213,7 @@ regenerar la portada, y luego commit + push.
 incluir, justo antes de `</body>`:
 
 ```html
-<!-- CI-WIDGETS --><script defer src="../assets/widgets.js"></script>
+<!-- CI-WIDGETS --><script defer src="../assets/ticker.js"></script>
 ```
 
 Eso agrega el **ticker de indicadores** (dólar, riesgo país, inflación — datos

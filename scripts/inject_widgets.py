@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-inject_widgets.py — Inserta los widgets compartidos (ticker de indicadores +
-newsletter, assets/widgets.js) en todas las páginas del sitio que no los tengan.
+inject_widgets.py — Inserta el ticker de indicadores (assets/ticker.js) en todas las páginas del sitio que no los tengan.
 
 Idempotente: usa marcadores CI-WIDGETS y no duplica si ya están.
 El agente Publicador debe correrlo (o copiar el include de la plantilla)
@@ -16,12 +15,12 @@ MARK = "<!-- CI-WIDGETS -->"
 
 def include_tag(depth):
     base = "../" * depth
-    return f'{MARK}<script defer src="{base}assets/widgets.js"></script>\n'
+    return f'{MARK}<script defer src="{base}assets/ticker.js"></script>\n'
 
 def inject(path, depth):
     with open(path, encoding="utf-8") as f:
         html = f.read()
-    if MARK in html or "assets/widgets.js" in html:
+    if MARK in html or "assets/ticker.js" in html:
         return False
     if "</body>" not in html:
         return False

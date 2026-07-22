@@ -30,7 +30,7 @@ python3 scripts/build_portada.py   # regenera index.html
 index.html              portada (generada)
 articulos/              notas publicadas
 cola/                   borradores esperando aprobación
-assets/                 estilos, componentes de gráficos y widgets.js
+assets/                 estilos, componentes de gráficos y ticker.js
 data/                   manifiestos JSON (fuente de verdad)
 agente/                 NEWSROOM.md + plantilla de nota
 scripts/                build_portada.py · inject_widgets.py
@@ -38,7 +38,7 @@ scripts/                build_portada.py · inject_widgets.py
 
 ## Widgets del sitio (ticker)
 
-`assets/widgets.js` agrega en todas las páginas:
+`assets/ticker.js` agrega en todas las páginas:
 
 - **Ticker de indicadores** — dólar oficial/blue/MEP (dolarapi.com), riesgo
   país e inflación mensual (argentinadatos.com). En vivo, con caché de 10 min.
@@ -50,7 +50,7 @@ La versión con formulario conectado a Kit quedó en el historial de git por si
 algún día se reactiva.
 
 Toda página nueva debe incluir antes de `</body>`:
-`<!-- CI-WIDGETS --><script defer src="../assets/widgets.js"></script>`
+`<!-- CI-WIDGETS --><script defer src="../assets/ticker.js"></script>`
 (o correr `python3 scripts/inject_widgets.py`, que es idempotente).
 
 ## Editor responsable
