@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-21T22:00:00+00:00",
-  "borradores": []
+  "actualizado": "2026-07-22T10:00:00+00:00",
+  "borradores": [
+    {
+      "id": "2026-07-22-despachos-cemento-tercer-mes-baja",
+      "titulo": "El cemento hila tres meses en baja: la construcción no consolida el rebote",
+      "bajada": "Los despachos de cemento cayeron 1,4% interanual en junio y el primer semestre cerró 3% abajo, según la AFCP. El rebote de marzo no tuvo continuidad y la actividad sigue casi un quinto por debajo de 2023.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "−1,4%",
+      "numero_label": "despachos de cemento en junio 2026 (variación interanual); tercer mes consecutivo en baja",
+      "fecha": "2026-07-22",
+      "hora": "10:00",
+      "archivo": "articulos/2026-07-22-despachos-cemento-tercer-mes-baja.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 9 min"
+    }
+  ]
 }
