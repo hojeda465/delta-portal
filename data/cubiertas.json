@@ -357,6 +357,13 @@
       "fecha": "2026-07-22",
       "estado": "publicada",
       "articulo_id": "2026-07-22-riesgo-pais-cerca-400"
+    },
+    {
+      "tema": "turismo internacional (ETI/INDEC) mayo 2026 / se da vuelta: receptivo +20,4% y emisivo −12,1%",
+      "angulo": "medición FÍSICA de personas (ETI), distinta de la cuenta 'viajes' del balance de pagos en dólares ya cubierta el 19/07. El giro de mayo 2026: entran 20,4% más turistas extranjeros y salen 12,1% menos argentinos; el déficit de turistas del mes baja de 437,4 a 282,0 mil. Cifra ancla INDEC (+20,4%) CONFIRMADA y corroborada por registro aerocomercial independiente (ANAC, récord ene-may). La paradoja: con dólar barato el motor no es el tipo de cambio sino la caída del ingreso real (emisivo) más el arrastre de la devaluación de 2023 y la demanda regional (receptivo)",
+      "fecha": "2026-07-22",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-22-turismo-receptivo-se-da-vuelta"
     }
   ]
 }
