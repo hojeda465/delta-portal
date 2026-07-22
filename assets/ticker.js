@@ -39,15 +39,17 @@
   /* ---------- estilos (autocontenidos) ---------- */
   var css = ""
     + ".ci-ticker{background:#16130F;border-bottom:1px solid #2E2A25;overflow:hidden}"
-    + ".ci-ticker .ci-tk-in{max-width:1080px;margin:0 auto;padding:8px 24px;display:flex;gap:22px;align-items:center;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}"
+    + ".ci-ticker .ci-tk-in{max-width:1080px;margin:0 auto;padding:8px 24px;display:flex;gap:14px;align-items:center;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}"
     + ".ci-ticker .ci-tk-in::-webkit-scrollbar{display:none}"
-    + ".ci-tk-item{display:flex;align-items:baseline;gap:7px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;white-space:nowrap;flex:0 0 auto;background:none;border:none;padding:2px 6px;cursor:pointer;border-radius:6px;transition:background .15s}"
-    + ".ci-tk-item:hover{background:#2E2A25}"
+    + ".ci-tk-item{display:flex;align-items:baseline;gap:7px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;white-space:nowrap;flex:0 0 auto;background:none;border:1px solid #3E3A34;padding:4px 11px;cursor:pointer;border-radius:999px;transition:.15s}"
+    + ".ci-tk-item:hover{background:#2E2A25;border-color:#4FC0A4}"
     + ".ci-tk-item .k{color:#A39D93;letter-spacing:.04em}"
     + ".ci-tk-item .v{color:#fff;font-weight:600}"
-    + ".ci-tk-item .caret{color:#6B6560;font-size:9px;transform:translateY(-1px)}"
-    + ".ci-tk-item.open{background:#2E2A25}.ci-tk-item.open .caret{color:#4FC0A4}"
-    + ".ci-tk-src{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6B6560;white-space:nowrap;flex:0 0 auto}"
+    + ".ci-tk-item .caret{color:#8A847C;font-size:9px;transform:translateY(-1px)}"
+    + ".ci-tk-item.open{background:#2E2A25;border-color:#4FC0A4}.ci-tk-item.open .caret{color:#4FC0A4}"
+    + ".ci-tk-btn{margin-left:auto;flex:0 0 auto;position:sticky;right:0;display:flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:12px;font-weight:600;letter-spacing:.03em;background:#C4701F;color:#fff;border:none;border-radius:999px;padding:6px 14px;cursor:pointer;transition:background .15s;white-space:nowrap;box-shadow:-14px 0 14px rgba(22,19,15,.85)}"
+    + ".ci-tk-btn:hover{background:#E8833A}"
+    + ".ci-tk-btn .caret{font-size:9px}"
     /* panel histórico */
     + ".ci-hist{background:#FAF8F4;border-bottom:2px solid #16130F;display:none}"
     + ".ci-hist.abierto{display:block}"
@@ -306,7 +308,7 @@
     panel.querySelector(".ci-h-sub").textContent = s.sub;
     panel.querySelector(".ci-h-last").textContent = "";
     var vEl = panel.querySelector(".ci-h-var"); vEl.textContent = ""; vEl.className = "ci-h-var";
-    panel.querySelector(".ci-h-fuente").textContent = "Fuente: argentinadatos.com · Elaboración propia de Con Interés";
+    panel.querySelector(".ci-h-fuente").textContent = "Fuente: argentinadatos.com · Elaboración propia de Con Interés · Tocá otro indicador de la barra para cambiar de serie";
     var chart = panel.querySelector(".ci-h-chart");
     chart.innerHTML = '<div class="ci-h-estado">Cargando la serie…</div>';
     panel.classList.add("abierto");
@@ -342,17 +344,26 @@
       if (!items || !items.length) { mount.remove(); return; }
       var wrap = document.createElement("div"); wrap.className = "ci-ticker";
       var inner = document.createElement("div"); inner.className = "ci-tk-in";
+      var botones = {};
       items.forEach(function (it) {
         var b = document.createElement("button");
         b.type = "button"; b.className = "ci-tk-item";
         b.setAttribute("aria-label", it.k + ": " + it.v + ". Ver historial.");
         b.innerHTML = '<span class="k">' + it.k + '</span><span class="v">' + it.v + '</span><span class="caret">&#9660;</span>';
         b.addEventListener("click", function () { abrir(it.key, b, mount); });
+        botones[it.key] = b;
         inner.appendChild(b);
       });
-      var src = document.createElement("span"); src.className = "ci-tk-src";
-      src.textContent = "clic en un indicador = su historial · dolarapi.com · argentinadatos.com";
-      inner.appendChild(src);
+      // botón explícito: abre el historial del primer indicador
+      var cta = document.createElement("button");
+      cta.type = "button"; cta.className = "ci-tk-btn";
+      cta.innerHTML = 'Ver hist&oacute;ricos <span class="caret">&#9660;</span>';
+      cta.setAttribute("aria-label", "Ver el historial de los indicadores");
+      cta.addEventListener("click", function () {
+        var k = items[0].key;
+        abrir(abiertoKey ? abiertoKey : k, botones[abiertoKey ? abiertoKey : k], mount);
+      });
+      inner.appendChild(cta);
       wrap.appendChild(inner);
       mount.innerHTML = "";
       mount.appendChild(wrap);
