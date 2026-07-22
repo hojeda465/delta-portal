@@ -107,6 +107,16 @@ Cada uno tiene un rol acotado: hace una cosa y la hace bien.
   unidad. Las cifras `ESTIMACIÓN` se escriben con su rango y la palabra "estimado".
 - **Salida:** el archivo HTML de la nota + su entrada de manifiesto (ver §4).
 
+### ⑤ bis · Editor de cierre — *el último filtro*
+- **Entrada:** el borrador HTML terminado + su entrada de manifiesto.
+- **Tarea:** correr los TRES chequeos de la auditoría sobre el borrador ya
+  armado, antes de que llegue a la cola:
+  1. Cada URL de fuente resuelve (HTTP 200) y respalda el dato que acompaña.
+  2. Cada superlativo tiene su valor previo con fuente en la ficha.
+  3. Copete ↔ gráfico ↔ cuerpo ↔ manifiesto cierran entre sí.
+- **Salida:** OK (pasa al Publicador) o DEVUELTA al Redactor con la lista de
+  arreglos. Una nota devuelta dos veces se FRENA y se reporta.
+
 ### ⑥ Publicador — *a la cola*
 - **Entrada:** la nota HTML y su metadata.
 - **Tarea:** **NO publica directo** (estamos en modo cola de revisión). Coloca la
@@ -182,6 +192,24 @@ El Verificador es lo que separa a Con Interés de un generador de texto. Reglas:
 - **Veredicto global.** Si la cifra ancla no llega a `CONFIRMADO`, la nota se
   **FRENA**: vuelve al Editor para elegir otra, o queda registrada como
   descartada. Es preferible una corrida sin nota nueva a una nota con un dato falso.
+
+Además, tres reglas obligatorias (surgidas de la auditoría del 22/07/2026):
+
+- **Resolución de fuentes.** Ninguna nota sale de la cola si alguna URL citada
+  no devuelve HTTP 200 y no coincide con el dato/título que respalda.
+  **PROHIBIDO construir URLs a partir del patrón de fecha** (ej.
+  `nid<DDMMAAAA>`): si no se tiene la URL real de la nota, se busca o se usa
+  la fuente primaria (INDEC/BCRA/Boletín Oficial). Herramienta:
+  `python3 scripts/verificar_enlaces.py`.
+- **Superlativo con historia.** Todo "récord / primer / máximo histórico / el
+  mayor desde…" exige registrar en la ficha de verificación el VALOR PREVIO
+  que se supera y su fuente. Sin eso, el superlativo se degrada ("el mayor en
+  X años" documentables) o se elimina. (Esta regla, sola, habría frenado el
+  error del "primer déficit primario": dic-2024 y dic-2025 ya habían sido
+  rojos.)
+- **Coherencia interna.** Antes de la cola: copete ↔ gráfico ↔ cuerpo ↔
+  entrada de manifiesto deben cerrar entre sí. Cualquier número que aparezca
+  en dos lugares debe coincidir exactamente.
 
 Cada nota publicada guarda su ficha de verificación (qué se confirmó, con qué
 fuentes) para que la sección "④ Cómo lo sabemos" sea real, no decorativa.

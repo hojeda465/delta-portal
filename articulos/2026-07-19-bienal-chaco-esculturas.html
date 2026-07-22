@@ -198,7 +198,7 @@
       <div class="cap">Fue la asistencia de la <b>Bienal 2024</b>, según los organizadores: un <b>récord histórico</b> para un evento cultural gratuito y al aire libre en una ciudad de unos 300.000 habitantes. Se hace en <b>Resistencia, Chaco</b>, y esta semana transcurre su edición número catorce.</div>
       <div class="sparkrow">
         <div class="sr"><span class="v">~80.000</span><span class="k">personas por día (7 días)</span></div>
-        <div class="sr"><span class="v up">+23%</span><span class="k">vs. la edición de 2018</span></div>
+        <div class="sr"><span class="v up">+33%</span><span class="k">vs. la edición de 2018</span></div>
         <div class="sr"><span class="v dn">630+</span><span class="k">esculturas quedan en la ciudad</span></div>
       </div>
     </div>
@@ -225,15 +225,15 @@
       <li><span class="yr">2026</span><span class="dotm"></span><span class="tx"><b>XIV edición.</b> Más de 500 escultores pasaron por el certamen desde 1988; la ciudad supera las 630 obras públicas.</span></li>
     </ul>
 
-    <p>Y creció, sobre todo, en público. La edición de 2018 había convocado unas 650.000 personas en ocho días; la de 2024 llegó a un estimado de <b>800.000 en siete</b>, con picos de 120.000 en el primer domingo. Un salto del 23% que confirma una tendencia: la Bienal dejó de ser un evento de nicho para volverse una cita de convocatoria masiva.</p>
+    <p>Y creció, sobre todo, en público. La edición de 2018 había convocado unas 600.000 personas en ocho días; la de 2024 llegó a un estimado de <b>800.000 en siete</b>, con picos de 120.000 en el primer domingo. Un salto del 33% que confirma una tendencia: la Bienal dejó de ser un evento de nicho para volverse una cita de convocatoria masiva.</p>
 
     <figure>
       <div class="fig-head">
         <div class="fig-kick">Asistencia por edición</div>
-        <h3>De 650.000 a 800.000 personas en seis años</h3>
+        <h3>De 600.000 a 800.000 personas en seis años</h3>
         <p class="fig-sub">Público total estimado por los organizadores, ediciones 2018 y 2024</p>
       </div>
-      <svg id="chartAsist" class="chart-svg" viewBox="0 0 680 260" role="img" aria-label="Gráfico de barras: la Bienal pasó de 650.000 asistentes en 2018 a 800.000 en 2024, un aumento del 23%."></svg>
+      <svg id="chartAsist" class="chart-svg" viewBox="0 0 680 260" role="img" aria-label="Gráfico de barras: la Bienal pasó de 600.000 asistentes en 2018 a 800.000 en 2024, un aumento del 33%."></svg>
       <figcaption><b>Fuente:</b> Fundación Urunday / organización de la Bienal del Chaco. <b>Nota:</b> cifras estimadas por los organizadores; la edición 2024 se realizó en 7 días y la de 2018, en 8.</figcaption>
     </figure>
 
@@ -271,7 +271,7 @@
     <div class="cocina">
       <h4>&#9651; La cocina del dato</h4>
       <p>Las cifras de historia, países y obras (1988 como año de origen, los 10 escultores, las 439 postulaciones de 70 países, las 630+ esculturas) provienen de la <b>organización de la Bienal y la Fundación Urunday</b>, contrastadas con la ficha de la enciclopedia y la cobertura de medios nacionales.</p>
-      <p>El número más delicado es el de <b>asistencia</b>. Los 800.000 de 2024 y los 650.000 de 2018 son <b>estimaciones de los organizadores</b>, no un conteo con molinetes: un evento gratuito y al aire libre no vende entradas, así que la cifra surge de aforos, cámaras y estimaciones de flujo. Por eso la tratamos como un <b>orden de magnitud</b>, no como un dato exacto, y lo decimos.</p>
+      <p>El número más delicado es el de <b>asistencia</b>. Los 800.000 de 2024 y los 600.000 de 2018 son <b>estimaciones de los organizadores</b>, no un conteo con molinetes: un evento gratuito y al aire libre no vende entradas, así que la cifra surge de aforos, cámaras y estimaciones de flujo. Por eso la tratamos como un <b>orden de magnitud</b>, no como un dato exacto, y lo decimos.</p>
       <p>Para ponerle rigor a ese punto, desde 2024 la <b>Universidad Nacional del Nordeste (UNNE)</b> realiza un estudio formal de impacto económico y social de la Bienal. Es la señal de que el propio evento busca medirse con método: cuando esos resultados estén publicados, esta nota se actualizará con ellos.</p>
       <div class="meta">
         <span><b>Fuentes</b> Fundación Urunday · UNNE · medios</span>
@@ -365,7 +365,7 @@ function hideTT(){ tt.style.opacity=0; }
 (function(){
   const svg=$("#chartAsist"), W=680,H=260, m={t:28,r:24,b:52,l:60};
   const iw=W-m.l-m.r, ih=H-m.t-m.b;
-  const data=[["2018",650000,C.faint,"8 días"],["2024",800000,C.teal,"7 días · récord"]];
+  const data=[["2018",600000,C.faint,"8 días"],["2024",800000,C.teal,"7 días · récord"]];
   const maxV=900000;
   const y=v=> m.t+ih-(v/maxV)*ih;
   for(let g=0; g<=800000; g+=200000){
@@ -390,10 +390,10 @@ function hideTT(){ tt.style.opacity=0; }
     r.addEventListener("mousemove",e=>{r.setAttribute("opacity",.85);showTT("<b>"+d[0]+"</b> · "+d[1].toLocaleString("de-DE")+" personas",e.clientX,e.clientY);});
     r.addEventListener("mouseleave",()=>{r.setAttribute("opacity",1);hideTT();});
   });
-  // flecha +23%
-  const yA=y(650000), yB=y(800000), ax=cx[1];
+  // flecha +33%
+  const yA=y(600000), yB=y(800000), ax=cx[1];
   const gt=mk("text",{x:ax,y:yB-34,"text-anchor":"middle","font-family":"IBM Plex Mono, monospace","font-size":15,"font-weight":600,fill:C.green});
-  gt.textContent="+23%"; svg.appendChild(gt);
+  gt.textContent="+33%"; svg.appendChild(gt);
 })();
 
 /* ---------- CHART 2: embudo de selección 439 -> 10 ---------- */
