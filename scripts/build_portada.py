@@ -345,7 +345,6 @@ HTML = f"""<!DOCTYPE html>
 <main class="wrap">
   {lead_html}
   {destacadas_html}
-  <div class="ci-news"></div>
   {secciones_html}
   {aprender_html}
   {cola_html}

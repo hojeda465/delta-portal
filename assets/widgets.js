@@ -1,30 +1,18 @@
 /* ============================================================
    Con Interés · widgets.js
-   Widgets compartidos de todo el sitio:
-     1. TICKER de indicadores (dólar oficial/blue/MEP, riesgo país,
-        inflación mensual) — datos de APIs públicas, se actualiza solo.
-     2. NEWSLETTER — captura de email conectada a Buttondown.
+   Widget compartido de todo el sitio:
+     TICKER de indicadores (dólar oficial/blue/MEP, riesgo país,
+     inflación mensual) — datos de APIs públicas, se actualiza solo.
    Se incluye con:  <script defer src="assets/widgets.js"></script>
    (o ../assets/widgets.js desde /articulos y /lecciones)
+
+   NOTA: el sitio NO tiene newsletter ni captura de emails por
+   decisión editorial (cero fricción para el lector: sin registro,
+   sin publicidad, sin pedir nada). Si algún día se reactiva, el
+   historial de git tiene la versión con formulario conectado a Kit.
    ============================================================ */
 (function () {
   "use strict";
-
-  /* ------------------------------------------------------------
-     CONFIGURACIÓN DEL NEWSLETTER
-     Proveedor recomendado: Kit (kit.com) — gratis hasta 10.000
-     suscriptores. Al crear un formulario en Kit, copiar acá:
-       - NEWSLETTER_FORM_ACTION: la URL "action" del formulario
-         (ej. "https://app.kit.com/forms/1234567/subscriptions")
-       - NEWSLETTER_EMAIL_FIELD: el nombre del campo de email del
-         proveedor ("email_address" en Kit; "email" en Buttondown).
-     Mientras FORM_ACTION esté vacío, el formulario funciona en
-     modo manual: abre un mail de suscripción al correo del sitio,
-     así ningún interesado se pierde y a nadie se le miente.
-     ------------------------------------------------------------ */
-  var NEWSLETTER_FORM_ACTION = "https://app.kit.com/forms/9711873/subscriptions"; // formulario de Kit
-  var NEWSLETTER_EMAIL_FIELD = "email_address";
-  var CONTACT_EMAIL = "oojeda465@gmail.com";
 
   var TICKER_CACHE_KEY = "ci_ticker_v1";
   var TICKER_TTL_MS = 10 * 60 * 1000; // 10 minutos
@@ -48,21 +36,7 @@
     + ".ci-tk-item .v{color:#fff;font-weight:600}"
     + ".ci-tk-item .var{font-size:11px;font-weight:600}"
     + ".ci-tk-item .var.up{color:#E8833A}.ci-tk-item .var.dn{color:#4FC0A4}"
-    + ".ci-tk-src{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6B6560;white-space:nowrap;flex:0 0 auto}"
-    + ".ci-news-box{background:#0A5C63;border-radius:16px;padding:30px 30px 26px;margin:36px 0;color:#fff}"
-    + ".ci-news-box .nb-kick{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#4FC0A4;font-weight:600;margin-bottom:8px}"
-    + ".ci-news-box h3{font-family:'Source Serif 4',Georgia,serif;font-size:26px;font-weight:700;margin:0 0 6px;line-height:1.2;color:#fff}"
-    + ".ci-news-box p{font-size:14px;color:#CDE4E1;margin:0 0 18px;max-width:52ch;line-height:1.55}"
-    + ".ci-news-form{display:flex;gap:10px;flex-wrap:wrap}"
-    + ".ci-news-form input[type=email]{flex:1 1 240px;min-width:0;font-family:'Inter',system-ui,sans-serif;font-size:15px;padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);color:#fff;outline:none}"
-    + ".ci-news-form input[type=email]::placeholder{color:#9DC4C0}"
-    + ".ci-news-form input[type=email]:focus{border-color:#4FC0A4;background:rgba(255,255,255,.16)}"
-    + ".ci-news-form button{font-family:'Inter',system-ui,sans-serif;font-size:15px;font-weight:600;padding:12px 22px;border-radius:10px;border:none;background:#C4701F;color:#fff;cursor:pointer;transition:.15s}"
-    + ".ci-news-form button:hover{background:#E8833A}"
-    + ".ci-news-fine{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9DC4C0;margin-top:12px}"
-    + ".ci-news-fine a{color:#CDE4E1}"
-    + ".ci-news-ok{font-size:15px;color:#fff;background:rgba(79,192,164,.18);border:1px solid #4FC0A4;border-radius:10px;padding:14px 16px;margin-top:4px}"
-    + "@media(max-width:600px){.ci-news-box{padding:24px 20px}.ci-news-box h3{font-size:22px}}";
+    + ".ci-tk-src{margin-left:auto;font-family:'IBM Plex Mono',monospace;font-size:10px;color:#6B6560;white-space:nowrap;flex:0 0 auto}";
 
   var style = document.createElement("style");
   style.textContent = css;
@@ -149,69 +123,7 @@
     });
   }
 
-  /* ============================================================
-     2 · NEWSLETTER (Buttondown)
-     Se renderiza en cada <div class="ci-news"></div>. Si la página
-     no tiene ninguno, se inserta uno solo antes del <footer>.
-     ============================================================ */
-  function newsletterHTML() {
-    var configured = !!NEWSLETTER_FORM_ACTION;
-    var formAttrs = configured
-      ? 'action="' + NEWSLETTER_FORM_ACTION + '" method="post" target="_blank"'
-      : "";
-    return ''
-      + '<div class="ci-news-box">'
-      + '<div class="nb-kick">% Newsletter · gratis</div>'
-      + "<h3>La economía del día, en tu mail</h3>"
-      + "<p>Los datos que importan, verificados y explicados sin jerga, directo de la redacción de Con Interés. Un mail por día, se lee en 3 minutos.</p>"
-      + '<form class="ci-news-form" ' + formAttrs + ">"
-      + '<input type="email" name="' + NEWSLETTER_EMAIL_FIELD + '" required placeholder="tu@email.com" aria-label="Tu email">'
-      + "<button type=\"submit\">Suscribirme</button>"
-      + "</form>"
-      + '<div class="ci-news-fine">Sin spam. Sal&iacute;s cuando quieras, con un clic. Al suscribirte aceptás la <a href="' + SITE_BASE + 'privacidad.html">Política de Privacidad</a>.</div>'
-      + "</div>";
-  }
-
-  function renderNewsletter() {
-    var mounts = document.querySelectorAll(".ci-news");
-    if (!mounts.length) {
-      var foot = document.querySelector("footer");
-      if (!foot) return;
-      var d = document.createElement("div");
-      d.className = "ci-news";
-      d.style.maxWidth = "720px";
-      d.style.margin = "0 auto";
-      d.style.padding = "0 22px";
-      foot.parentNode.insertBefore(d, foot);
-      mounts = [d];
-    }
-    Array.prototype.forEach.call(mounts, function (m) {
-      m.innerHTML = newsletterHTML();
-      var form = m.querySelector("form");
-      if (NEWSLETTER_FORM_ACTION) {
-        // Proveedor configurado: POST real; el proveedor confirma en su pestaña.
-        form.addEventListener("submit", function () {
-          setTimeout(function () {
-            form.outerHTML = '<div class="ci-news-ok">¡Listo! Revisá tu casilla para confirmar la suscripción. Gracias por leer Con Interés.</div>';
-          }, 300);
-        });
-      } else {
-        // Modo manual (proveedor aún no configurado): la suscripción se
-        // completa por email — honesto, gratis y no se pierde ningún lector.
-        form.addEventListener("submit", function (ev) {
-          ev.preventDefault();
-          var email = form.querySelector('input[type=email]').value;
-          var subject = encodeURIComponent("Suscripción al newsletter de Con Interés");
-          var body = encodeURIComponent(
-            "Hola, quiero suscribirme al newsletter de Con Interés.\n\nMi email: " + email + "\n\n(Enviando este mail confirmás tu suscripción. Podés darte de baja cuando quieras respondiendo \"baja\".)");
-          window.location.href = "mailto:" + CONTACT_EMAIL + "?subject=" + subject + "&body=" + body;
-          form.outerHTML = '<div class="ci-news-ok">Se abrió tu aplicación de correo con el pedido de suscripción ya escrito — solo tenés que enviarlo. Si no se abrió, escribinos a ' + CONTACT_EMAIL + ' con asunto “Suscripción”.</div>';
-        });
-      }
-    });
-  }
-
-  function init() { renderTicker(); renderNewsletter(); }
+  function init() { renderTicker(); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();

@@ -36,16 +36,18 @@ agente/                 NEWSROOM.md + plantilla de nota
 scripts/                build_portada.py · inject_widgets.py
 ```
 
-## Widgets del sitio (ticker + newsletter)
+## Widgets del sitio (ticker)
 
 `assets/widgets.js` agrega en todas las páginas:
 
 - **Ticker de indicadores** — dólar oficial/blue/MEP (dolarapi.com), riesgo
   país e inflación mensual (argentinadatos.com). En vivo, con caché de 10 min.
   Si las APIs no responden, el ticker se oculta solo.
-- **Newsletter** — captura de email conectada a **Kit**. Para activarla:
-  crear el formulario en Kit (kit.com, gratis hasta 10.000 suscriptores) y pegar su URL en
-  `NEWSLETTER_FORM_ACTION` al inicio de `assets/widgets.js`. Mientras esté vacía, el formulario funciona en modo manual (suscripción por email al contacto del sitio).
+
+**Sin newsletter, por decisión editorial**: la estrategia es cero fricción
+(sin publicidad, sin registro, sin pedir emails) hasta consolidar la audiencia.
+La versión con formulario conectado a Kit quedó en el historial de git por si
+algún día se reactiva.
 
 Toda página nueva debe incluir antes de `</body>`:
 `<!-- CI-WIDGETS --><script defer src="../assets/widgets.js"></script>`
