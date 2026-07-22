@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-22T20:06:25+00:00",
+    "actualizado": "2026-07-22T20:45:47+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-22-autos-usados-junio-mejor-mes",
+      "titulo": "Junio movió 155.492 autos usados, el mejor mes del año — pero el semestre cerró en baja",
+      "bajada": "El mercado del auto usado tuvo en junio su mejor volumen de 2026: 155.492 operaciones, 8,6% más que un año atrás. Aun así, el primer semestre quedó 2,9% por debajo de 2025. La paradoja: mientras el 0km se derrumbó cerca del 10%, el usado —un mercado tres veces más grande— apenas cedió.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "155.492",
+      "numero_label": "autos usados vendidos en junio (mejor mes de 2026)",
+      "fecha": "2026-07-22",
+      "hora": "17:30",
+      "archivo": "articulos/2026-07-22-autos-usados-junio-mejor-mes.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 9 min"
+    },
     {
       "id": "2026-07-22-turismo-receptivo-se-da-vuelta",
       "titulo": "El turismo se da vuelta: llegan 20% más extranjeros y viajan 12% menos argentinos",
