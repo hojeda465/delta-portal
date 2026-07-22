@@ -343,6 +343,13 @@
       "fecha": "2026-07-22",
       "estado": "publicada",
       "articulo_id": "2026-07-22-superavit-semestre-record-exportaciones"
+    },
+    {
+      "tema": "expectativas de mercado (REM/BCRA) junio 2026 / el consenso proyecta un dólar mayorista de $1.673 para dic-2026, inflación ~30% y PBI +3%",
+      "angulo": "qué proyectan 44 analistas para dólar, inflación y actividad, leído contra la tensión cambiaria de julio (dólar récord ~$1.500, riesgo país 419); expectativas, no mediciones",
+      "fecha": "2026-07-22",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-22-rem-bcra-dolar-proyeccion"
     }
   ]
 }

@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-22T16:00:00+00:00",
-  "borradores": []
+  "actualizado": "2026-07-22T16:30:00+00:00",
+  "borradores": [
+    {
+      "id": "2026-07-22-rem-bcra-dolar-proyeccion",
+      "titulo": "El mercado le pone número al dólar de fin de año: $1.673",
+      "bajada": "Con el dólar tocando esta semana su récord del año cerca de $1.500 y el riesgo país en 419 puntos, el último REM del Banco Central muestra qué esperan 44 bancos y consultoras para diciembre: un dólar mayorista de $1.673, inflación cerca del 30% en 2026 y la economía creciendo 3%. Son expectativas, no certezas.",
+      "seccion": "MERCADOS",
+      "formato": "Qué proyecta el mercado",
+      "numero": "$1.673",
+      "numero_label": "dólar mayorista proyectado para dic. 2026 (REM/BCRA)",
+      "fecha": "2026-07-22",
+      "hora": "16:30",
+      "archivo": "articulos/2026-07-22-rem-bcra-dolar-proyeccion.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 9 min"
+    }
+  ]
 }
