@@ -30,11 +30,33 @@ python3 scripts/build_portada.py   # regenera index.html
 index.html              portada (generada)
 articulos/              notas publicadas
 cola/                   borradores esperando aprobación
-assets/                 estilos y componentes de gráficos
+assets/                 estilos, componentes de gráficos y widgets.js
 data/                   manifiestos JSON (fuente de verdad)
 agente/                 NEWSROOM.md + plantilla de nota
-scripts/                build_portada.py
+scripts/                build_portada.py · inject_widgets.py
 ```
+
+## Widgets del sitio (ticker + newsletter)
+
+`assets/widgets.js` agrega en todas las páginas:
+
+- **Ticker de indicadores** — dólar oficial/blue/MEP (dolarapi.com), riesgo
+  país e inflación mensual (argentinadatos.com). En vivo, con caché de 10 min.
+  Si las APIs no responden, el ticker se oculta solo.
+- **Newsletter** — captura de email conectada a **Buttondown**. Para activarla:
+  crear la cuenta en buttondown.com y poner el usuario en la constante
+  `BUTTONDOWN_USER` al inicio de `assets/widgets.js` (una sola línea).
+
+Toda página nueva debe incluir antes de `</body>`:
+`<!-- CI-WIDGETS --><script defer src="../assets/widgets.js"></script>`
+(o correr `python3 scripts/inject_widgets.py`, que es idempotente).
+
+## Editor responsable
+
+La portada muestra un bloque "quién responde por esto". Se completa en
+`data/articulos.json` → `portal.editor` (`nombre`, `foto`, `bio`) y se
+regenera la portada. Mientras esté vacío, muestra el texto genérico de
+redacción con edición humana.
 
 ## Puesta en marcha (una sola vez)
 

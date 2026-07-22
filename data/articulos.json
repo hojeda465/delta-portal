@@ -3,7 +3,12 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-22T00:25:49+00:00"
+    "actualizado": "2026-07-22T00:25:49+00:00",
+    "editor": {
+      "nombre": "",
+      "foto": "",
+      "bio": ""
+    }
   },
   "secciones": [
     "ECONOMÍA",

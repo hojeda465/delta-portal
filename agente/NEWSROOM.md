@@ -173,6 +173,23 @@ publicar se mueve a `articulos` en `data/articulos.json`):
 Tras cualquier cambio de manifiesto: `python3 scripts/build_portada.py` para
 regenerar la portada, y luego commit + push.
 
+**Widgets compartidos (obligatorio en toda página nueva).** Cada nota debe
+incluir, justo antes de `</body>`:
+
+```html
+<!-- CI-WIDGETS --><script defer src="../assets/widgets.js"></script>
+```
+
+Eso agrega el **ticker de indicadores** (dólar, riesgo país, inflación — datos
+en vivo de APIs públicas) y el **bloque de newsletter**. Si una tanda de páginas
+quedó sin el include, correr `python3 scripts/inject_widgets.py` (idempotente).
+
+**Módulo "¿Cómo te afecta?" (obligatorio en capa ⑤).** La capa "Por qué importa"
+cierra siempre con el bloque `.afecta` (ver `plantilla.html`): 2–4 líneas que
+traducen el dato al bolsillo del lector — trabajo, precios, ahorro, crédito —
+con al menos dos perfiles distintos de lector cuando aplique ("si trabajás
+en…", "si estás pensando en…").
+
 ---
 
 ## 5. Flujo de publicación con cola de revisión

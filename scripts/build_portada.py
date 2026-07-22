@@ -100,10 +100,82 @@ def card(a):
     </a>"""
 
 # La nota PRINCIPAL es la marcada "destacada" (elección editorial); si no hay ninguna,
-# es la primera de la lista. El resto va a la grilla, sin repetir la principal.
+# es la primera de la lista. Después vienen 4 DESTACADAS (las más recientes) y el
+# resto se agrupa POR SECCIÓN — portada curada, no un muro de notas.
 lead = next((a for a in articulos if a.get("destacada")), None) or (articulos[0] if articulos else None)
 lead_html = card_lead(lead) if lead else '<p class="empty">Todavía no hay notas publicadas.</p>'
-grid_html = "\n".join(card(a) for a in articulos if a is not lead) or '<p class="empty small">La redacción publicará más notas en las próximas horas.</p>'
+
+resto = [a for a in articulos if a is not lead]
+destacadas = resto[:4]
+por_seccion = resto[4:]
+
+destacadas_html = ""
+if destacadas:
+    destacadas_html = (
+        '<div class="rail-head"><span class="rh-txt">Lo último</span><span class="rh-rule"></span></div>'
+        '<div class="grid grid-2">' + "\n".join(card(a) for a in destacadas) + "</div>"
+    )
+
+def slug_sec(s):
+    import unicodedata
+    t = unicodedata.normalize("NFD", s.lower())
+    t = "".join(c for c in t if unicodedata.category(c) != "Mn")
+    return "sec-" + "".join(c if c.isalnum() else "-" for c in t).strip("-")
+
+orden_secciones = list(art.get("secciones", []))
+for a in por_seccion:
+    if a["seccion"] not in orden_secciones:
+        orden_secciones.append(a["seccion"])
+
+secciones_html = ""
+for s in orden_secciones:
+    notas = [a for a in por_seccion if a["seccion"] == s]
+    if not notas:
+        continue
+    sc = SEC_COLOR.get(s, "#0E7C86")
+    secciones_html += f"""
+    <section class="sec-group" id="{slug_sec(s)}">
+      <div class="sec-head"><h2 style="color:{sc}">{escape(s)}</h2><span class="rh-rule"></span><span class="sec-count">{len(notas)} notas</span></div>
+      <div class="grid">{"".join(card(a) for a in notas)}</div>
+    </section>"""
+
+if not (destacadas_html or secciones_html):
+    secciones_html = '<p class="empty small">La redacción publicará más notas en las próximas horas.</p>'
+
+# ---- banda Modo Aprendizaje ---------------------------------------------
+aprender_html = """
+<section class="learn-band">
+  <div class="lb-body">
+    <div class="lb-kick">% Modo Aprendizaje · beta</div>
+    <h2>Aprendé economía con la economía real de hoy</h2>
+    <p>Rutas paso a paso, a tu ritmo: qué es la inflación, cómo cuidar tus ahorros, cuándo conviene el crédito, cómo dar el primer paso para invertir. Empezás sabiendo cero y terminás leyendo el diario de otra manera.</p>
+  </div>
+  <a class="lb-cta" href="aprender.html">Empezar una ruta &rarr;</a>
+</section>"""
+
+# ---- editor responsable --------------------------------------------------
+_ed = portal.get("editor") or {}
+if _ed.get("nombre"):
+    _foto = f'<img class="ed-foto" src="{escape(_ed.get("foto",""))}" alt="{escape(_ed["nombre"])}">' if _ed.get("foto") else f'<span class="ed-foto ed-ini">{escape(_ed["nombre"][:1])}</span>'
+    editor_html = f"""
+      <div class="editor">
+        {_foto}
+        <div>
+          <div class="ed-rol">Editor responsable</div>
+          <div class="ed-nombre">{escape(_ed['nombre'])}</div>
+          <div class="ed-bio">{escape(_ed.get('bio',''))} Aprueba cada nota antes de que se publique y responde por lo que acá se afirma.</div>
+        </div>
+      </div>"""
+else:
+    editor_html = """
+      <div class="editor">
+        <span class="ed-foto ed-ini">%</span>
+        <div>
+          <div class="ed-rol">Quién responde por esto</div>
+          <div class="ed-nombre">Redacción de agentes de IA, edición humana</div>
+          <div class="ed-bio">Ninguna nota se publica sola: una persona responsable revisa y aprueba cada publicación. <a href="como-trabajamos.html" style="color:var(--teal-deep)">Conocé el método &rarr;</a></div>
+        </div>
+      </div>"""
 
 # cola panel
 if borradores:
@@ -120,8 +192,8 @@ if borradores:
 else:
     cola_html = ""
 
-secciones_nav = '<button class="sec-chip active" data-filter="all" style="--sc:#16130F">Todas</button>' + "".join(
-    f'<button class="sec-chip" data-filter="{escape(s)}" style="--sc:{SEC_COLOR.get(s,"#0E7C86")}">{escape(s)}</button>' for s in art.get("secciones", []))
+secciones_nav = "".join(
+    f'<a class="sec-chip" href="#{slug_sec(s)}" style="--sc:{SEC_COLOR.get(s,"#0E7C86")}">{escape(s)}</a>' for s in art.get("secciones", []))
 
 HTML = f"""<!DOCTYPE html>
 <html lang="es">
@@ -147,6 +219,7 @@ HTML = f"""<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script defer src="assets/widgets.js"></script>
 <style>
   :root{{
     --paper:#FAF8F4;--ink:#16130F;--ink-soft:#3C3833;--teal:#0E7C86;--teal-deep:#0A5C63;
@@ -199,6 +272,29 @@ HTML = f"""<!DOCTYPE html>
   .lead:hover h2{{color:var(--teal-deep)}}
 
   .grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}}
+  .grid-2{{grid-template-columns:repeat(2,1fr)}}
+  .grid-2 .card h3{{font-size:23px}}
+  .rail-head,.sec-head{{display:flex;align-items:center;gap:14px;margin:34px 0 18px}}
+  .rail-head .rh-txt{{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted)}}
+  .rh-rule{{flex:1;height:1px;background:var(--rule)}}
+  .sec-head h2{{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0}}
+  .sec-count{{font-family:var(--mono);font-size:11px;color:var(--faint)}}
+  .sec-group{{scroll-margin-top:80px}}
+
+  .learn-band{{background:linear-gradient(120deg,#16130F,#0A5C63);border-radius:16px;padding:32px 34px;margin:40px 0 6px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}}
+  .learn-band .lb-kick{{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#E8833A;font-weight:600;margin-bottom:8px}}
+  .learn-band h2{{font-family:var(--serif);font-size:27px;font-weight:700;color:#fff;margin:0 0 8px;line-height:1.2}}
+  .learn-band p{{font-size:14px;color:#CDE4E1;margin:0;max-width:58ch;line-height:1.55}}
+  .learn-band .lb-body{{flex:1 1 380px}}
+  .lb-cta{{font-family:var(--sans);font-size:15px;font-weight:600;background:#fff;color:var(--ink);padding:13px 24px;border-radius:10px;white-space:nowrap;transition:.15s}}
+  .lb-cta:hover{{background:#F3D9A8}}
+
+  .editor{{display:flex;gap:16px;align-items:flex-start;margin-top:22px;padding-top:20px;border-top:1px dashed var(--rule);max-width:520px}}
+  .ed-foto{{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:0 0 auto}}
+  .ed-ini{{background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:24px;font-weight:700}}
+  .ed-rol{{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);font-weight:600}}
+  .ed-nombre{{font-family:var(--serif);font-size:17px;font-weight:700;margin:2px 0}}
+  .ed-bio{{font-size:13px;color:var(--muted);line-height:1.55}}
   .card{{background:var(--card);border:1px solid var(--card-edge);border-radius:14px;padding:20px;display:flex;flex-direction:column;transition:.15s}}
   .card:hover{{transform:translateY(-2px);border-color:var(--teal)}}
   .card h3{{font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.25;margin:0 0 14px;flex:1}}
@@ -248,9 +344,10 @@ HTML = f"""<!DOCTYPE html>
 
 <main class="wrap">
   {lead_html}
-  <div class="grid">
-    {grid_html}
-  </div>
+  {destacadas_html}
+  <div class="ci-news"></div>
+  {secciones_html}
+  {aprender_html}
   {cola_html}
 </main>
 
@@ -259,28 +356,11 @@ HTML = f"""<!DOCTYPE html>
     <div>
       <div class="f-brand"><span class="tri">%</span> {escape(portal['nombre'])}</div>
       <div class="f-desc">{escape(portal['descripcion'])}</div>
-      <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos — método, IA y ética →</a></div>
+      <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos — método, IA y ética →</a> · <a href="aprender.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">Modo Aprendizaje →</a></div>
+      {editor_html}
     </div>
   </div>
 </footer>
-
-<script>
-(function(){{
-  var chips=document.querySelectorAll('.sec-chip');
-  var lead=document.querySelector('.lead');
-  var cards=document.querySelectorAll('.card');
-  function match(el,f){{ return f==='all' || (el && el.getAttribute('data-sec')===f); }}
-  chips.forEach(function(c){{
-    c.addEventListener('click',function(){{
-      chips.forEach(function(x){{x.classList.remove('active');}});
-      c.classList.add('active');
-      var f=c.getAttribute('data-filter');
-      if(lead){{ lead.classList.toggle('is-hidden', !match(lead,f)); }}
-      cards.forEach(function(cd){{ cd.classList.toggle('is-hidden', !match(cd,f)); }});
-    }});
-  }});
-}})();
-</script>
 
 </body>
 </html>"""

@@ -22,6 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script defer src="assets/widgets.js"></script>
 <style>
   :root{
     --paper:#FAF8F4;--ink:#16130F;--ink-soft:#3C3833;--teal:#0E7C86;--teal-deep:#0A5C63;
@@ -74,6 +75,29 @@
   .lead:hover h2{color:var(--teal-deep)}
 
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .grid-2 .card h3{font-size:23px}
+  .rail-head,.sec-head{display:flex;align-items:center;gap:14px;margin:34px 0 18px}
+  .rail-head .rh-txt{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+  .rh-rule{flex:1;height:1px;background:var(--rule)}
+  .sec-head h2{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0}
+  .sec-count{font-family:var(--mono);font-size:11px;color:var(--faint)}
+  .sec-group{scroll-margin-top:80px}
+
+  .learn-band{background:linear-gradient(120deg,#16130F,#0A5C63);border-radius:16px;padding:32px 34px;margin:40px 0 6px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+  .learn-band .lb-kick{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#E8833A;font-weight:600;margin-bottom:8px}
+  .learn-band h2{font-family:var(--serif);font-size:27px;font-weight:700;color:#fff;margin:0 0 8px;line-height:1.2}
+  .learn-band p{font-size:14px;color:#CDE4E1;margin:0;max-width:58ch;line-height:1.55}
+  .learn-band .lb-body{flex:1 1 380px}
+  .lb-cta{font-family:var(--sans);font-size:15px;font-weight:600;background:#fff;color:var(--ink);padding:13px 24px;border-radius:10px;white-space:nowrap;transition:.15s}
+  .lb-cta:hover{background:#F3D9A8}
+
+  .editor{display:flex;gap:16px;align-items:flex-start;margin-top:22px;padding-top:20px;border-top:1px dashed var(--rule);max-width:520px}
+  .ed-foto{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:0 0 auto}
+  .ed-ini{background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:24px;font-weight:700}
+  .ed-rol{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);font-weight:600}
+  .ed-nombre{font-family:var(--serif);font-size:17px;font-weight:700;margin:2px 0}
+  .ed-bio{font-size:13px;color:var(--muted);line-height:1.55}
   .card{background:var(--card);border:1px solid var(--card-edge);border-radius:14px;padding:20px;display:flex;flex-direction:column;transition:.15s}
   .card:hover{transform:translateY(-2px);border-color:var(--teal)}
   .card h3{font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.25;margin:0 0 14px;flex:1}
@@ -119,7 +143,7 @@
   </div>
 </header>
 
-<nav class="secnav"><div class="wrap"><button class="sec-chip active" data-filter="all" style="--sc:#16130F">Todas</button><button class="sec-chip" data-filter="ECONOMÍA" style="--sc:#0E7C86">ECONOMÍA</button><button class="sec-chip" data-filter="ECONOMÍA PROVINCIAL" style="--sc:#C4701F">ECONOMÍA PROVINCIAL</button><button class="sec-chip" data-filter="MERCADOS" style="--sc:#0A5C63">MERCADOS</button><button class="sec-chip" data-filter="MUNDO" style="--sc:#7A5CC4">MUNDO</button><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
+<nav class="secnav"><div class="wrap"><a class="sec-chip" href="#sec-economia" style="--sc:#0E7C86">ECONOMÍA</a><a class="sec-chip" href="#sec-economia-provincial" style="--sc:#C4701F">ECONOMÍA PROVINCIAL</a><a class="sec-chip" href="#sec-mercados" style="--sc:#0A5C63">MERCADOS</a><a class="sec-chip" href="#sec-mundo" style="--sc:#7A5CC4">MUNDO</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
 
 <main class="wrap">
   
@@ -135,8 +159,7 @@
         <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>30 seg → 9 min<span class="dot"></span>22 jul 2026</div>
       </div>
     </a>
-  <div class="grid">
-    
+  <div class="rail-head"><span class="rh-txt">Lo último</span><span class="rh-rule"></span></div><div class="grid grid-2">
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-21-rigi-pampa-4521-millones.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>US$4.521 millones para Vaca Muerta: el proyecto que dejó al RIGI al borde de los US$46.000 millones</h3>
@@ -163,302 +186,286 @@
       <h3>El crédito cortó cinco meses de caída: subió 1,7% en junio, pero lo empujaron las empresas</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>+1,7%</b> suba real mensual del crédito al sector privado en junio 2026 (primera en seis meses)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>21 jul 2026</div>
-    </a>
-
+    </a></div>
+  <div class="ci-news"></div>
+  
+    <section class="sec-group" id="sec-economia">
+      <div class="sec-head"><h2 style="color:#0E7C86">ECONOMÍA</h2><span class="rh-rule"></span><span class="sec-count">31 notas</span></div>
+      <div class="grid">
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-21-compras-courier-se-duplican.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>Las compras al exterior por courier se duplicaron: US$643 millones de Shein, Temu y Amazon en seis meses</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>US$643 M</b> compras por courier en el 1er semestre 2026 (+104,2% i.a.)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>21 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-21-boom-motos-caen-autos.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>Se patentaron más de 440.000 motos en seis meses: por qué las dos ruedas vuelan mientras los autos caen</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>+43,5%</b> crecieron los patentamientos de motos en el 1er semestre 2026 (vs. −10% de los autos 0km)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>21 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-20-ia-no-reemplaza-oficios.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>Por qué la inteligencia artificial no viene por el plomero — y sí por el oficinista</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>3,3%</b> del empleo mundial en la máxima exposición a la IA (OIT)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>20 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-21-empleo-registrado-abril-anatomia.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>Se perdieron 28.736 empleos registrados en abril, pero solo 4 de cada 10 eran asalariados privados</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>28.736</b> empleos registrados perdidos en abril de 2026 (SIPA)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>21 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-21-monotributo-como-cambio.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>El techo del monotributo trepó a $126 millones: cómo se transformó el régimen en poco más de dos años</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>$126,6M</b> el nuevo tope de facturación anual del monotributo desde agosto de 2026</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>21 jul 2026</div>
     </a>
-
-    <a class="card" data-sec="ECONOMÍA PROVINCIAL" href="articulos/2026-07-20-corralones-construccion-buenos-aires.html">
-      <div class="kick" style="color:#C4701F">ECONOMÍA PROVINCIAL</div>
-      <h3>La construcción rebota en las estadísticas, pero no en el mostrador del corralón</h3>
-      <div class="card-num" style="--sc:#C4701F"><b>+4,1%</b> creció la construcción en mayo (ISAC-INDEC), pero la venta de materiales cae</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>20 jul 2026</div>
-    </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-20-mora-familias-record.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>La mora de las familias llegó a 12,1%: el récord de deudas impagas que la desinflación todavía no frena</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>12,1%</b> la mora del crédito a las familias en abril de 2026, récord desde 2004</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>20 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-20-bono-jubilados-congelado.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>El número que no se movió: el bono a los jubilados lleva más de dos años congelado en $70.000</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>$70.000</b> el bono a jubilados, sin cambios desde marzo de 2024</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>20 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-20-carne-vacuna-consumo-minimo-record-exportacion.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>La carne se exporta como nunca y se come como hace veinte años</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>47,5 kg</b> consumo de carne vacuna por habitante en 2026 (mínimo en ~2 décadas)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>20 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-20-deuda-publica-dos-lecturas.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>La deuda pública bajó por segundo mes seguido — y sigue a un paso de su récord</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>US$474.192 M</b> Deuda bruta del Estado · junio 2026</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>20 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-20-pagos-qr-superan-100-millones.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>El QR superó por primera vez los 100 millones de pagos por mes (mientras las tarjetas caen)</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>102,5 M</b> pagos con transferencia por QR en mayo 2026 (+66% i.a., primera vez sobre 100 M)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>20 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-20-ventas-pyme-cortan-caida.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>Las ventas pyme crecieron 0,9% en junio y cortaron 13 meses de caída: por qué todavía no es un cambio de tendencia</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>+0,9%</b> suba interanual de las ventas pyme en junio 2026 (primera en 13 meses)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>20 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-20-salario-real-abril.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>El salario le ganó a la inflación en abril, pero el trabajador registrado sigue perdiendo</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>+3,7%</b> suba del salario en abril 2026 (superó al 2,6% de inflación)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>20 jul 2026</div>
     </a>
-
-    <a class="card" data-sec="MERCADOS" href="articulos/2026-07-20-soja-mercado-seis-meses.html">
-      <div class="kick" style="color:#0A5C63">MERCADOS</div>
-      <h3>Soja: qué está diciendo el mercado sobre los próximos seis meses</h3>
-      <div class="card-num" style="--sc:#0A5C63"><b>US$12,15</b> soja CBOT por bushel (20-jul-2026)</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>20 jul 2026</div>
-    </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-20-inflacion-mayorista-junio.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>La inflación mayorista bajó a 1,1% en junio y quedó debajo de la góndola: el número que se adelanta</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>1,1%</b> inflación mayorista (IPIM) de junio 2026</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>20 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-mineria-record-litio.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>La minería batió un récord de US$3.934 millones y el litio se transformó en su nueva estrella</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>US$3.934 M</b> en exportaciones mineras en los primeros 5 meses de 2026: un récord histórico (+75,8% i.a.)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-superavit-comercial-record-mayo.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>US$3.504 millones: el mayor superávit comercial de la serie — y a dónde van esos dólares</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>US$3.504 M</b> superávit comercial de mayo 2026, el más alto de la serie del INDEC</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-produccion-autos-tercer-ano-baja.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>La fábrica se apaga: la producción de autos cayó 18,3% y va por su tercer año en baja</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>204.658</b> vehículos fabricados en el 1er semestre 2026, un 18,3% menos que en 2025 (ADEFA)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-carga-deuda-familias-salario.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>El 24,1% del salario formal ya se va en pagar deudas: el freno oculto al consumo</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>24,1%</b> de la masa salarial formal se destinó a pagar deudas en abril 2026 (BCRA)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-capacidad-instalada-industria-ociosa.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>La industria usó el 58,4% de su capacidad en mayo: cuatro de cada diez máquinas, paradas</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>58,4%</b> usó la industria de su capacidad instalada en mayo de 2026; el resto quedó ocioso (INDEC)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
-    <a class="card" data-sec="MERCADOS" href="articulos/2026-07-19-venture-capital-startups.html">
-      <div class="kick" style="color:#0A5C63">MERCADOS</div>
-      <h3>El venture capital vuelve: las startups argentinas ya captaron en 2026 más que en todo 2025</h3>
-      <div class="card-num" style="--sc:#0A5C63"><b>US$270 M</b> captó el venture capital en startups argentinas en 2025 (73 rondas); 2026 ya lo superó</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
-    </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-bienal-chaco-esculturas.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>800.000 personas y 630 esculturas: la Bienal del Chaco, el &quot;mundial&quot; del arte contado en números</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>800.000</b> personas en la última edición (2024), récord histórico</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
-    <a class="card" data-sec="ECONOMÍA PROVINCIAL" href="articulos/2026-07-19-economia-corrientes.html">
-      <div class="kick" style="color:#C4701F">ECONOMÍA PROVINCIAL</div>
-      <h3>La economía de Corrientes en números: el país del arroz, el bosque y los esteros</h3>
-      <div class="card-num" style="--sc:#C4701F"><b>47,5%</b> de la superficie arrocera del país: 1º productor</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
-    </a>
-
-    <a class="card" data-sec="ECONOMÍA PROVINCIAL" href="articulos/2026-07-19-economia-formosa.html">
-      <div class="kick" style="color:#C4701F">ECONOMÍA PROVINCIAL</div>
-      <h3>La economía de Formosa en números: la provincia que más depende del Estado nacional</h3>
-      <div class="card-num" style="--sc:#C4701F"><b>82%</b> de sus ingresos llegan de la Nación (coparticipación)</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
-    </a>
-
-    <a class="card" data-sec="ECONOMÍA PROVINCIAL" href="articulos/2026-07-19-economia-misiones.html">
-      <div class="kick" style="color:#C4701F">ECONOMÍA PROVINCIAL</div>
-      <h3>La economía de Misiones en números: yerba, té y la provincia que más industrializa del NEA</h3>
-      <div class="card-num" style="--sc:#C4701F"><b>85%</b> de la yerba mate del país se produce acá</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
-    </a>
-
-    <a class="card" data-sec="ECONOMÍA PROVINCIAL" href="articulos/2026-07-19-economia-chaco.html">
-      <div class="kick" style="color:#C4701F">ECONOMÍA PROVINCIAL</div>
-      <h3>La economía del Chaco en números: qué produce, cuánto exporta y de qué vive</h3>
-      <div class="card-num" style="--sc:#C4701F"><b>1,6%</b> del PBI argentino, con el 2,5% de la población</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
-    </a>
-
-    <a class="card" data-sec="MERCADOS" href="articulos/2026-07-19-boom-deuda-corporativa.html">
-      <div class="kick" style="color:#0A5C63">MERCADOS</div>
-      <h3>El boom de la deuda corporativa: las empresas y provincias captaron US$17.400 millones en dólares desde las elecciones</h3>
-      <div class="card-num" style="--sc:#0A5C63"><b>US$17.400 M</b> en deuda en dólares captaron empresas y provincias desde las elecciones de octubre</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
-    </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-desempleo-estable-empleo-precario.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>El desempleo casi no se movió (7,8%), pero el empleo se volvió más precario por dentro</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>7,8%</b> tasa de desocupación (1er trim. 2026): casi igual que un año atrás</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-industria-cae-construccion-rebota.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>La industria cayó 5,7% y la construcción subió 4,1%: el mismo día, dos datos de signo opuesto</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>-5,7%</b> cayó la producción industrial en mayo (interanual)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-credito-hipotecario-se-enfria.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>Se compra, pero sin banco: las hipotecas se derrumbaron en la Ciudad y ya explican solo 1 de cada 10 operaciones</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>−37%</b> cayó el crédito hipotecario en CABA en los primeros 5 meses de 2026 (i.a., escrituras con hipoteca)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-autos-electrificados-cuadruplican.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>El mercado de autos se achicó, pero los electrificados se cuadruplicaron</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>+313%</b> crecieron los patentamientos de híbridos y eléctricos (1er trim. 2026, i.a.)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-deficit-turismo-record.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>El turismo se llevó US$7.221 millones en 2025: el rojo récord de dólares que ahora se achica por la peor razón</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>US$7.221 M</b> déficit de la cuenta viajes en 2025 (récord en 30 años)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-primer-deficit-primario-era-milei.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>El primer déficit primario de la era Milei: junio cerró en rojo, aunque el semestre sigue con superávit</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>−$696.843 M</b> primer déficit primario de la era Milei (junio 2026)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-economia-conocimiento-record-exportaciones.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>La economía del conocimiento superó por primera vez los US$10.000 millones exportados</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>US$10.085 M</b> exportó la economía del conocimiento en 12 meses (récord)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-recaudacion-real-junio.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>La recaudación subió 23,7% en junio y aun así cayó: la inflación se comió el aumento</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>−7,4%</b> caída real de la recaudación tributaria (junio 2026)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-canasta-basica-linea-pobreza.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>Una familia necesitó $1.531.473 para no ser pobre en junio: la canasta le volvió a ganar a la inflación</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>$1.531.473</b> lo que necesitó una familia tipo para no ser pobre (junio 2026)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
-    <a class="card" data-sec="MERCADOS" href="articulos/2026-07-19-bcra-compra-record-dolares.html">
-      <div class="kick" style="color:#0A5C63">MERCADOS</div>
-      <h3>El Banco Central compró US$532 millones en un día: el récord de la era Milei, con un asterisco</h3>
-      <div class="card-num" style="--sc:#0A5C63"><b>US$532 M</b> mayor compra diaria de dólares del BCRA (14/07/2026)</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
-    </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-19-agro-record-toneladas-menos-dolares.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>Récord de granos, menos dólares: el campo embarcó más toneladas que nunca y cobró US$2.000 millones menos</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>60,7 M t</b> granos exportados en el 1er semestre 2026 (récord)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
     </a>
-
-    <a class="card" data-sec="MERCADOS" href="articulos/2026-07-18-depositos-dolares-record.html">
-      <div class="kick" style="color:#0A5C63">MERCADOS</div>
-      <h3>Los depósitos privados en dólares tocaron US$40.437 millones: el nivel más alto en 26 años</h3>
-      <div class="card-num" style="--sc:#0A5C63"><b>US$40.437 M</b> depósitos privados en dólares (13/07/2026)</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>18 jul 2026</div>
-    </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-18-vaca-muerta-superavit-energetico.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>Dos de cada tres barriles: cómo Vaca Muerta dio vuelta la balanza energética argentina</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>67%</b> del crudo argentino ya sale de Vaca Muerta</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>18 jul 2026</div>
     </a>
-
-    <a class="card" data-sec="MUNDO" href="articulos/2026-07-18-malvinas-sea-lion.html">
-      <div class="kick" style="color:#7A5CC4">MUNDO</div>
-      <h3>Sea Lion: cuánto petróleo hay en juego en Malvinas (y por qué podría dar vuelta la economía de las islas)</h3>
-      <div class="card-num" style="--sc:#7A5CC4"><b>US$2.100 M</b> inversión del proyecto Sea Lion</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>18 jul 2026</div>
-    </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-18-inflacion-argentina.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>
       <h3>La inflación bajó a 1,9%: por qué los números buenos todavía no se sienten en la calle</h3>
       <div class="card-num" style="--sc:#0E7C86"><b>1,9%</b> inflación de junio 2026</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>18 jul 2026</div>
+    </a></div>
+    </section>
+    <section class="sec-group" id="sec-economia-provincial">
+      <div class="sec-head"><h2 style="color:#C4701F">ECONOMÍA PROVINCIAL</h2><span class="rh-rule"></span><span class="sec-count">5 notas</span></div>
+      <div class="grid">
+    <a class="card" data-sec="ECONOMÍA PROVINCIAL" href="articulos/2026-07-20-corralones-construccion-buenos-aires.html">
+      <div class="kick" style="color:#C4701F">ECONOMÍA PROVINCIAL</div>
+      <h3>La construcción rebota en las estadísticas, pero no en el mostrador del corralón</h3>
+      <div class="card-num" style="--sc:#C4701F"><b>+4,1%</b> creció la construcción en mayo (ISAC-INDEC), pero la venta de materiales cae</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>20 jul 2026</div>
     </a>
+    <a class="card" data-sec="ECONOMÍA PROVINCIAL" href="articulos/2026-07-19-economia-corrientes.html">
+      <div class="kick" style="color:#C4701F">ECONOMÍA PROVINCIAL</div>
+      <h3>La economía de Corrientes en números: el país del arroz, el bosque y los esteros</h3>
+      <div class="card-num" style="--sc:#C4701F"><b>47,5%</b> de la superficie arrocera del país: 1º productor</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
+    </a>
+    <a class="card" data-sec="ECONOMÍA PROVINCIAL" href="articulos/2026-07-19-economia-formosa.html">
+      <div class="kick" style="color:#C4701F">ECONOMÍA PROVINCIAL</div>
+      <h3>La economía de Formosa en números: la provincia que más depende del Estado nacional</h3>
+      <div class="card-num" style="--sc:#C4701F"><b>82%</b> de sus ingresos llegan de la Nación (coparticipación)</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
+    </a>
+    <a class="card" data-sec="ECONOMÍA PROVINCIAL" href="articulos/2026-07-19-economia-misiones.html">
+      <div class="kick" style="color:#C4701F">ECONOMÍA PROVINCIAL</div>
+      <h3>La economía de Misiones en números: yerba, té y la provincia que más industrializa del NEA</h3>
+      <div class="card-num" style="--sc:#C4701F"><b>85%</b> de la yerba mate del país se produce acá</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
+    </a>
+    <a class="card" data-sec="ECONOMÍA PROVINCIAL" href="articulos/2026-07-19-economia-chaco.html">
+      <div class="kick" style="color:#C4701F">ECONOMÍA PROVINCIAL</div>
+      <h3>La economía del Chaco en números: qué produce, cuánto exporta y de qué vive</h3>
+      <div class="card-num" style="--sc:#C4701F"><b>1,6%</b> del PBI argentino, con el 2,5% de la población</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
+    </a></div>
+    </section>
+    <section class="sec-group" id="sec-mercados">
+      <div class="sec-head"><h2 style="color:#0A5C63">MERCADOS</h2><span class="rh-rule"></span><span class="sec-count">5 notas</span></div>
+      <div class="grid">
+    <a class="card" data-sec="MERCADOS" href="articulos/2026-07-20-soja-mercado-seis-meses.html">
+      <div class="kick" style="color:#0A5C63">MERCADOS</div>
+      <h3>Soja: qué está diciendo el mercado sobre los próximos seis meses</h3>
+      <div class="card-num" style="--sc:#0A5C63"><b>US$12,15</b> soja CBOT por bushel (20-jul-2026)</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>20 jul 2026</div>
+    </a>
+    <a class="card" data-sec="MERCADOS" href="articulos/2026-07-19-venture-capital-startups.html">
+      <div class="kick" style="color:#0A5C63">MERCADOS</div>
+      <h3>El venture capital vuelve: las startups argentinas ya captaron en 2026 más que en todo 2025</h3>
+      <div class="card-num" style="--sc:#0A5C63"><b>US$270 M</b> captó el venture capital en startups argentinas en 2025 (73 rondas); 2026 ya lo superó</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
+    </a>
+    <a class="card" data-sec="MERCADOS" href="articulos/2026-07-19-boom-deuda-corporativa.html">
+      <div class="kick" style="color:#0A5C63">MERCADOS</div>
+      <h3>El boom de la deuda corporativa: las empresas y provincias captaron US$17.400 millones en dólares desde las elecciones</h3>
+      <div class="card-num" style="--sc:#0A5C63"><b>US$17.400 M</b> en deuda en dólares captaron empresas y provincias desde las elecciones de octubre</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
+    </a>
+    <a class="card" data-sec="MERCADOS" href="articulos/2026-07-19-bcra-compra-record-dolares.html">
+      <div class="kick" style="color:#0A5C63">MERCADOS</div>
+      <h3>El Banco Central compró US$532 millones en un día: el récord de la era Milei, con un asterisco</h3>
+      <div class="card-num" style="--sc:#0A5C63"><b>US$532 M</b> mayor compra diaria de dólares del BCRA (14/07/2026)</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
+    </a>
+    <a class="card" data-sec="MERCADOS" href="articulos/2026-07-18-depositos-dolares-record.html">
+      <div class="kick" style="color:#0A5C63">MERCADOS</div>
+      <h3>Los depósitos privados en dólares tocaron US$40.437 millones: el nivel más alto en 26 años</h3>
+      <div class="card-num" style="--sc:#0A5C63"><b>US$40.437 M</b> depósitos privados en dólares (13/07/2026)</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>18 jul 2026</div>
+    </a></div>
+    </section>
+    <section class="sec-group" id="sec-mundo">
+      <div class="sec-head"><h2 style="color:#7A5CC4">MUNDO</h2><span class="rh-rule"></span><span class="sec-count">1 notas</span></div>
+      <div class="grid">
+    <a class="card" data-sec="MUNDO" href="articulos/2026-07-18-malvinas-sea-lion.html">
+      <div class="kick" style="color:#7A5CC4">MUNDO</div>
+      <h3>Sea Lion: cuánto petróleo hay en juego en Malvinas (y por qué podría dar vuelta la economía de las islas)</h3>
+      <div class="card-num" style="--sc:#7A5CC4"><b>US$2.100 M</b> inversión del proyecto Sea Lion</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>18 jul 2026</div>
+    </a></div>
+    </section>
+  
+<section class="learn-band">
+  <div class="lb-body">
+    <div class="lb-kick">% Modo Aprendizaje · beta</div>
+    <h2>Aprendé economía con la economía real de hoy</h2>
+    <p>Rutas paso a paso, a tu ritmo: qué es la inflación, cómo cuidar tus ahorros, cuándo conviene el crédito, cómo dar el primer paso para invertir. Empezás sabiendo cero y terminás leyendo el diario de otra manera.</p>
   </div>
+  <a class="lb-cta" href="aprender.html">Empezar una ruta &rarr;</a>
+</section>
   
 </main>
 
@@ -467,28 +474,19 @@
     <div>
       <div class="f-brand"><span class="tri">%</span> Con Interés</div>
       <div class="f-desc">Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.</div>
-      <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos — método, IA y ética →</a></div>
+      <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos — método, IA y ética →</a> · <a href="aprender.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">Modo Aprendizaje →</a></div>
+      
+      <div class="editor">
+        <span class="ed-foto ed-ini">%</span>
+        <div>
+          <div class="ed-rol">Quién responde por esto</div>
+          <div class="ed-nombre">Redacción de agentes de IA, edición humana</div>
+          <div class="ed-bio">Ninguna nota se publica sola: una persona responsable revisa y aprueba cada publicación. <a href="como-trabajamos.html" style="color:var(--teal-deep)">Conocé el método &rarr;</a></div>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
-
-<script>
-(function(){
-  var chips=document.querySelectorAll('.sec-chip');
-  var lead=document.querySelector('.lead');
-  var cards=document.querySelectorAll('.card');
-  function match(el,f){ return f==='all' || (el && el.getAttribute('data-sec')===f); }
-  chips.forEach(function(c){
-    c.addEventListener('click',function(){
-      chips.forEach(function(x){x.classList.remove('active');});
-      c.classList.add('active');
-      var f=c.getAttribute('data-filter');
-      if(lead){ lead.classList.toggle('is-hidden', !match(lead,f)); }
-      cards.forEach(function(cd){ cd.classList.toggle('is-hidden', !match(cd,f)); });
-    });
-  });
-})();
-</script>
 
 </body>
 </html>
