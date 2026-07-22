@@ -329,6 +329,13 @@
       "fecha": "2026-07-22",
       "estado": "en_cola",
       "articulo_id": "2026-07-22-moodys-sube-calificacion-b3"
+    },
+    {
+      "tema": "exportaciones de vino / primer semestre 2026: +14,2% en volumen pero solo +2,6% en dólares",
+      "angulo": "la brecha volumen-valor: se exportaron 102,6 M de litros (+14,2%) pero los dólares subieron apenas 2,6% (US$319,5 M) porque el precio promedio por litro cayó 10,2% (US$3,47->US$3,11), empujado por el granel barato (+52,7%) frente al fraccionado (+2,4%). Cifra ancla del INV (volumen) confirmada; el precio por litro es cálculo propio verificado por coherencia interna",
+      "fecha": "2026-07-22",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-22-vino-mas-litros-menos-dolares"
     }
   ]
 }
