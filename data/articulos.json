@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-22T20:45:47+00:00",
+    "actualizado": "2026-07-22T20:46:42+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-22-rem-bcra-dolar-proyeccion",
+      "titulo": "El mercado le pone número al dólar de fin de año: $1.673",
+      "bajada": "Con el dólar tocando esta semana su récord del año cerca de $1.500 y el riesgo país en 419 puntos, el último REM del Banco Central muestra qué esperan 44 bancos y consultoras para diciembre: un dólar mayorista de $1.673, inflación cerca del 30% en 2026 y la economía creciendo 3%. Son expectativas, no certezas.",
+      "seccion": "MERCADOS",
+      "formato": "Qué proyecta el mercado",
+      "numero": "$1.673",
+      "numero_label": "dólar mayorista proyectado para dic. 2026 (REM/BCRA)",
+      "fecha": "2026-07-22",
+      "hora": "16:30",
+      "archivo": "articulos/2026-07-22-rem-bcra-dolar-proyeccion.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 9 min"
+    },
     {
       "id": "2026-07-22-autos-usados-junio-mejor-mes",
       "titulo": "Junio movió 155.492 autos usados, el mejor mes del año — pero el semestre cerró en baja",
