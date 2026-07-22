@@ -20,6 +20,15 @@
   var TICKER_CACHE_KEY = "ci_ticker_v1";
   var TICKER_TTL_MS = 10 * 60 * 1000; // 10 minutos
 
+  // raíz del sitio, derivada de la URL de este script (funciona desde
+  // la portada, /articulos y /lecciones por igual)
+  var SITE_BASE = (function () {
+    try {
+      var s = document.querySelector('script[src*="widgets.js"]');
+      return s ? s.src.replace(/assets\/widgets\.js.*$/, "") : "";
+    } catch (e) { return ""; }
+  })();
+
   /* ---------- estilos (autocontenidos) ---------- */
   var css = ""
     + ".ci-ticker{background:#16130F;border-bottom:1px solid #2E2A25;overflow:hidden}"
@@ -42,6 +51,7 @@
     + ".ci-news-form button{font-family:'Inter',system-ui,sans-serif;font-size:15px;font-weight:600;padding:12px 22px;border-radius:10px;border:none;background:#C4701F;color:#fff;cursor:pointer;transition:.15s}"
     + ".ci-news-form button:hover{background:#E8833A}"
     + ".ci-news-fine{font-family:'IBM Plex Mono',monospace;font-size:11px;color:#9DC4C0;margin-top:12px}"
+    + ".ci-news-fine a{color:#CDE4E1}"
     + ".ci-news-ok{font-size:15px;color:#fff;background:rgba(79,192,164,.18);border:1px solid #4FC0A4;border-radius:10px;padding:14px 16px;margin-top:4px}"
     + "@media(max-width:600px){.ci-news-box{padding:24px 20px}.ci-news-box h3{font-size:22px}}";
 
@@ -145,7 +155,7 @@
       + '<input type="email" name="email" required placeholder="tu@email.com" aria-label="Tu email">'
       + "<button type=\"submit\">Suscribirme</button>"
       + "</form>"
-      + '<div class="ci-news-fine">Sin spam. Salís cuando quieras, con un clic.</div>'
+      + '<div class="ci-news-fine">Sin spam. Sal&iacute;s cuando quieras, con un clic. Al suscribirte aceptás la <a href="' + SITE_BASE + 'privacidad.html">Política de Privacidad</a>.</div>'
       + "</div>";
   }
 

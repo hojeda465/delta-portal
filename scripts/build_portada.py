@@ -357,6 +357,7 @@ HTML = f"""<!DOCTYPE html>
       <div class="f-brand"><span class="tri">%</span> {escape(portal['nombre'])}</div>
       <div class="f-desc">{escape(portal['descripcion'])}</div>
       <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos — método, IA y ética →</a> · <a href="aprender.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">Modo Aprendizaje →</a></div>
+      <div style="margin-top:8px;font-family:var(--mono);font-size:11px;color:var(--faint)"><a href="legal.html" style="color:var(--muted);text-decoration:none">Aviso legal y correcciones</a> · <a href="privacidad.html" style="color:var(--muted);text-decoration:none">Política de privacidad</a> · El contenido de este sitio es informativo y educativo; no constituye asesoramiento financiero.</div>
       {editor_html}
     </div>
   </div>
@@ -371,7 +372,7 @@ with open(out, "w", encoding="utf-8") as f:
 
 # ---- sitemap.xml (para SEO) --------------------------------------------
 urls = [f"  <url><loc>{SITE}/</loc><changefreq>hourly</changefreq><priority>1.0</priority></url>"]
-for pg in ("aprender.html", "como-trabajamos.html"):
+for pg in ("aprender.html", "como-trabajamos.html", "legal.html", "privacidad.html"):
     urls.append(f"  <url><loc>{SITE}/{pg}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>")
 for a in articulos:
     urls.append(

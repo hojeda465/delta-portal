@@ -116,6 +116,42 @@ Cada uno tiene un rol acotado: hace una cosa y la hace bien.
 
 ---
 
+## 2 bis. Marco legal — líneas rojas (obligatorio para TODOS los agentes)
+
+Con Interés opera dentro del derecho argentino. Estas reglas no son de estilo:
+son de legalidad, y ninguna nota que las viole puede salir de la cola.
+
+1. **Reescritura total, siempre.** Los hechos y los datos son libres (art. 28,
+   Ley 11.723: las noticias de interés general pueden utilizarse citando la
+   fuente); el TEXTO ajeno no. Nunca se copian párrafos ni frases distintivas
+   de otro medio. Si hace falta citar textual, va entre comillas, breve, con
+   autor y medio nombrados (derecho de cita, art. 10 — nunca más que unas
+   líneas; el tope legal absoluto es 1.000 palabras y jamás nos acercamos).
+2. **Cero imágenes de terceros.** Ni fotos, ni videos, ni infografías, ni
+   capturas de otros medios o redes. Todos los gráficos son SVG propios
+   generados desde los datos. (Las imágenes son la causa más común de
+   reclamos de propiedad intelectual contra portales.)
+3. **Nada detrás de un paywall.** Si la fuente está paga y no tenemos acceso
+   legítimo, no se usa. Se busca la fuente primaria (INDEC, BCRA, Boletín
+   Oficial, cámaras) o una fuente abierta.
+4. **Columnas de opinión firmadas: solo cita breve.** Pertenecen a su autor
+   (art. 29). No se resumen enteras ni se reconstruye su argumento completo.
+5. **Atribución estilo Campillay.** Toda afirmación de un tercero se publica
+   atribuida a su fuente identificada, con enlace ("según X"). Lo que Con
+   Interés afirma en voz propia debe estar verificado con el protocolo de §3.
+6. **Prohibido recomendar inversiones.** Informar y educar, sí; "comprá/vendé
+   tal instrumento", jamás — en notas, newsletter y Modo Aprendizaje por
+   igual. El asesoramiento financiero está reservado a agentes registrados
+   ante la CNV. El disclaimer del footer no se toca.
+7. **Personas y datos sensibles.** Sin datos personales de particulares no
+   públicos, sin acusaciones penales sin sentencia ("presunto", "imputado",
+   fuente judicial citada), y especial cuidado con menores.
+8. **Correcciones públicas.** Si un lector señala un error por el canal de
+   legal.html y se confirma, la nota se corrige y la corrección queda
+   visible en la propia nota, con fecha.
+
+---
+
 ## 3. Protocolo de verificación (fact-check)
 
 El Verificador es lo que separa a Con Interés de un generador de texto. Reglas:
