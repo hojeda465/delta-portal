@@ -3,21 +3,6 @@
   "actualizado": "2026-07-22T15:30:00+00:00",
   "borradores": [
     {
-      "id": "2026-07-22-moodys-sube-calificacion-b3",
-      "titulo": "Moody's subió la nota de Argentina a B3: qué cambia (y qué no) cuando las tres calificadoras se alinean",
-      "bajada": "El 21 de julio Moody's elevó la deuda argentina de Caa1 a B3 y ya son tres las grandes agencias que coinciden por primera vez en más de una década. Aun así, el país sigue seis escalones por debajo del grado de inversión.",
-      "seccion": "MERCADOS",
-      "formato": "Anatomía de un dato",
-      "numero": "B3",
-      "numero_label": "la nueva nota de Moody's (subió desde Caa1)",
-      "fecha": "2026-07-22",
-      "hora": "15:00",
-      "archivo": "articulos/2026-07-22-moodys-sube-calificacion-b3.html",
-      "verificacion": "verificada",
-      "fuentes": 7,
-      "lectura": "30 seg → 10 min"
-    },
-    {
       "id": "2026-07-22-vino-mas-litros-menos-dolares",
       "titulo": "Argentina exportó 14,2% más vino y casi los mismos dólares: la trampa del granel barato",
       "bajada": "En el primer semestre el país vendió 102,6 millones de litros de vino al exterior (+14,2%), pero los dólares subieron apenas 2,6%. El precio promedio por litro cayó 10,2% y el vino a granel explica casi todo el crecimiento.",
