@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-22T00:25:49+00:00",
+    "actualizado": "2026-07-22T03:53:42+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-22-pbi-crece-inversion-cae",
+      "titulo": "La economía creció 2,3%, pero la inversión se derrumbó 11,6%: quién empuja y quién frena",
+      "bajada": "El PBI del primer trimestre confirmó que Argentina volvió a crecer, pero el motor tiene dueños concretos: agro, minería y finanzas explican casi todo el avance, mientras la inversión cae a dos dígitos y la industria sigue en rojo. El EMAE de abril ya muestra el enfriamiento.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "2,3%",
+      "numero_label": "creció el PBI en el 1er trimestre de 2026 (interanual)",
+      "fecha": "2026-07-22",
+      "hora": "11:00",
+      "archivo": "articulos/2026-07-22-pbi-crece-inversion-cae.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-07-22-despachos-cemento-tercer-mes-baja",
       "titulo": "El cemento hila tres meses en baja: la construcción no consolida el rebote",
