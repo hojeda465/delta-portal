@@ -131,6 +131,34 @@ def card(a, con_kick=False):
       <div class="meta">{chip_verif(a.get('verificacion',''))}<span class="dot"></span>{fecha_bonita(a['fecha'])}</div>
     </a>"""
 
+def card_lider(a):
+    """La nota líder de cada grupo: formato HISTORIA — título grande,
+    bajada visible, el número como acento a la derecha."""
+    g = GRUPO_POR_ID[grupo_de(a)]
+    num = a.get("numero", "")
+    n = len(num)
+    fs = 42 if n <= 6 else (32 if n <= 9 else 24)
+    return f"""
+    <a class="lider" href="{escape(a['archivo'])}" style="--sc:{g['color']}">
+      <div class="l-body">
+        <div class="kick" style="color:{g['color']}">{escape(g['label'])} <span>/ {escape(a.get('formato',''))}</span></div>
+        <h3>{escape(a['titulo'])}</h3>
+        <p>{escape(a['bajada'])}</p>
+        <div class="meta">{chip_verif(a.get('verificacion',''))}<span class="dot"></span>{escape(a.get('lectura',''))}<span class="dot"></span>{fecha_bonita(a['fecha'])}</div>
+      </div>
+      <div class="l-num"><span class="ln" style="font-size:{fs}px">{escape(num)}</span><span class="ll">{escape(a.get('numero_label',''))}</span></div>
+    </a>"""
+
+def fila(a):
+    """Fila compacta de una línea: número + título + fecha."""
+    g = GRUPO_POR_ID[grupo_de(a)]
+    return f"""
+    <a class="row" href="{escape(a['archivo'])}">
+      <span class="r-num" style="color:{g['color']}">{escape(a.get('numero',''))}</span>
+      <span class="r-tit">{escape(a['titulo'])}</span>
+      <span class="r-fecha">{fecha_bonita(a['fecha'])}</span>
+    </a>"""
+
 # La nota PRINCIPAL es la marcada "destacada" (elección editorial); si no hay ninguna,
 # es la primera de la lista. Después vienen 4 DESTACADAS (las más recientes) y el
 # resto se agrupa POR SECCIÓN — portada curada, no un muro de notas.
@@ -153,10 +181,24 @@ for g in GRUPOS:
     notas = [a for a in por_seccion if grupo_de(a) == g["id"]]
     if not notas:
         continue
+    # RITMO editorial: 1 líder (historia) + hasta 3 en número + lista compacta;
+    # lo más viejo queda plegado en "ver más".
+    lider_g = notas[0]
+    en_numero = notas[1:4]
+    compactas = notas[4:8]
+    plegadas = notas[8:]
+    cuerpo = card_lider(lider_g)
+    if en_numero:
+        cuerpo += '<div class="grid">' + "".join(card(a) for a in en_numero) + "</div>"
+    if compactas:
+        cuerpo += '<div class="rows">' + "".join(fila(a) for a in compactas) + "</div>"
+    if plegadas:
+        cuerpo += (f'<details class="vermas"><summary>Ver las otras {len(plegadas)} notas de {escape(g["label"])} <span class="plus">+</span></summary>'
+                   + '<div class="rows">' + "".join(fila(a) for a in plegadas) + "</div></details>")
     secciones_html += f"""
     <section class="sec-group" id="sec-{g['id']}">
       <div class="sec-head"><h2 style="color:{g['color']}">{escape(g['label'])}</h2><span class="sec-sub">{escape(g['sub'])}</span><span class="rh-rule"></span><span class="sec-count">{len(notas)} notas</span></div>
-      <div class="grid">{"".join(card(a) for a in notas)}</div>
+      {cuerpo}
     </section>"""
 
 if not (destacadas_html or secciones_html):
@@ -324,9 +366,31 @@ HTML = f"""<!DOCTYPE html>
   .card:hover{{transform:translateY(-2px);border-color:var(--sc)}}
   .card .num-big{{font-family:var(--mono);font-weight:600;line-height:1;letter-spacing:-.02em;color:var(--ink);margin:2px 0 8px}}
   .card .num-lab{{font-size:12px;color:var(--muted);line-height:1.45;margin-bottom:12px;border-bottom:1px solid var(--grid);padding-bottom:12px}}
-  .card h3{{font-family:var(--serif);font-weight:600;font-size:17px;line-height:1.3;margin:0 0 12px;flex:1;color:var(--ink-soft)}}
+  .card h3{{font-family:var(--serif);font-weight:600;font-size:18px;line-height:1.3;margin:0 0 12px;flex:1;color:var(--ink)}}
   .grid-2 .card .num-big{{font-size:46px !important}}
   .sec-sub{{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.02em}}
+
+  .lider{{display:grid;grid-template-columns:1fr 250px;gap:26px;background:var(--card);border:1px solid var(--card-edge);border-left:4px solid var(--sc);border-radius:14px;padding:24px 26px;margin-bottom:20px;align-items:center;transition:.15s}}
+  .lider:hover{{border-color:var(--sc);transform:translateY(-2px)}}
+  .lider h3{{font-family:var(--serif);font-weight:700;font-size:25px;line-height:1.2;margin:0 0 10px;color:var(--ink)}}
+  .lider p{{font-size:14px;color:var(--ink-soft);margin:0 0 12px;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}}
+  .l-num{{border-left:1px solid var(--grid);padding-left:24px}}
+  .l-num .ln{{font-family:var(--mono);font-weight:600;line-height:1;letter-spacing:-.02em;color:var(--sc);display:block}}
+  .l-num .ll{{font-size:12px;color:var(--muted);line-height:1.4;display:block;margin-top:8px}}
+  .rows{{display:flex;flex-direction:column;margin-top:14px}}
+  .row{{display:flex;align-items:baseline;gap:14px;padding:10px 4px;border-top:1px dashed var(--rule);transition:.1s}}
+  .row:hover{{background:var(--card)}}
+  .r-num{{font-family:var(--mono);font-size:14px;font-weight:600;flex:0 0 110px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+  .r-tit{{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--ink-soft);flex:1;line-height:1.35}}
+  .row:hover .r-tit{{color:var(--teal-deep)}}
+  .r-fecha{{font-family:var(--mono);font-size:11px;color:var(--faint);white-space:nowrap}}
+  .vermas{{margin-top:6px}}
+  .vermas summary{{list-style:none;cursor:pointer;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted);padding:10px 4px;display:flex;align-items:center;gap:8px}}
+  .vermas summary::-webkit-details-marker{{display:none}}
+  .vermas summary:hover{{color:var(--teal-deep)}}
+  .vermas .plus{{color:var(--teal);font-size:16px;transition:.2s}}
+  .vermas[open] .plus{{transform:rotate(45deg)}}
+  @media(max-width:700px){{.lider{{grid-template-columns:1fr}}.l-num{{border-left:none;border-top:1px solid var(--grid);padding:14px 0 0}}.r-num{{flex-basis:84px;font-size:12px}}.r-fecha{{display:none}}}}
 
   .meta{{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;color:var(--muted);flex-wrap:wrap}}
   .meta .dot{{width:3px;height:3px;border-radius:50%;background:var(--faint)}}
