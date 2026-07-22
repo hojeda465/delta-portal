@@ -89,13 +89,45 @@ def card_lead(a):
       </div>
     </a>"""
 
-def card(a):
-    sc = SEC_COLOR.get(a["seccion"], "#0E7C86")
+# ---- agrupadores por PREGUNTA del lector (no por sección de redacción) ---
+# La sección editorial interna (manifiestos) no cambia; cambia cómo se MUESTRA.
+TU_PLATA_KW = [
+    "salario", "sueldo", "inflación", "precios", "canasta", "crédito", "hipotec",
+    "alquiler", "jubilad", "bono", "monotributo", "mora", "familias", "tarjeta",
+    "plazo fijo", "consumo", "carne", "courier", "compras", "qr", "bolsillo", "cuotas",
+]
+GRUPOS = [
+    {"id": "tu-plata", "label": "Tu plata", "sub": "sueldo · precios · ahorro · crédito", "color": "#0E7C86"},
+    {"id": "el-pais", "label": "El país", "sub": "actividad · empleo · cuentas públicas · energía", "color": "#C4701F"},
+    {"id": "los-mercados", "label": "Los mercados", "sub": "dólar · bonos · empresas · inversión", "color": "#0A5C63"},
+    {"id": "tu-provincia", "label": "Tu provincia", "sub": "las economías del interior, en números", "color": "#2E8B6F"},
+    {"id": "el-mundo", "label": "El mundo", "sub": "lo global que toca a la Argentina", "color": "#7A5CC4"},
+]
+GRUPO_POR_ID = {g["id"]: g for g in GRUPOS}
+
+def grupo_de(a):
+    s = a["seccion"]
+    if s == "MERCADOS":
+        return "los-mercados"
+    if s == "ECONOMÍA PROVINCIAL":
+        return "tu-provincia"
+    if s == "MUNDO":
+        return "el-mundo"
+    texto = (a["titulo"] + " " + a.get("bajada", "") + " " + a.get("numero_label", "")).lower()
+    return "tu-plata" if any(k in texto for k in TU_PLATA_KW) else "el-pais"
+
+def card(a, con_kick=False):
+    g = GRUPO_POR_ID[grupo_de(a)]
+    num = a.get("numero", "")
+    n = len(num)
+    fs = 40 if n <= 6 else (31 if n <= 9 else 23)
+    kick = f'<div class="kick" style="color:{g["color"]}">{escape(g["label"])}</div>' if con_kick else ""
     return f"""
-    <a class="card" data-sec="{escape(a['seccion'])}" href="{escape(a['archivo'])}">
-      <div class="kick" style="color:{sc}">{escape(a['seccion'])}</div>
+    <a class="card" data-sec="{escape(a['seccion'])}" href="{escape(a['archivo'])}" style="--sc:{g['color']}">
+      {kick}
+      <div class="num-big" style="font-size:{fs}px">{escape(num)}</div>
+      <div class="num-lab">{escape(a.get('numero_label',''))}</div>
       <h3>{escape(a['titulo'])}</h3>
-      <div class="card-num" style="--sc:{sc}"><b>{escape(a.get('numero',''))}</b> {escape(a.get('numero_label',''))}</div>
       <div class="meta">{chip_verif(a.get('verificacion',''))}<span class="dot"></span>{fecha_bonita(a['fecha'])}</div>
     </a>"""
 
@@ -113,29 +145,17 @@ destacadas_html = ""
 if destacadas:
     destacadas_html = (
         '<div class="rail-head"><span class="rh-txt">Lo último</span><span class="rh-rule"></span></div>'
-        '<div class="grid grid-2">' + "\n".join(card(a) for a in destacadas) + "</div>"
+        '<div class="grid grid-2">' + "\n".join(card(a, con_kick=True) for a in destacadas) + "</div>"
     )
 
-def slug_sec(s):
-    import unicodedata
-    t = unicodedata.normalize("NFD", s.lower())
-    t = "".join(c for c in t if unicodedata.category(c) != "Mn")
-    return "sec-" + "".join(c if c.isalnum() else "-" for c in t).strip("-")
-
-orden_secciones = list(art.get("secciones", []))
-for a in por_seccion:
-    if a["seccion"] not in orden_secciones:
-        orden_secciones.append(a["seccion"])
-
 secciones_html = ""
-for s in orden_secciones:
-    notas = [a for a in por_seccion if a["seccion"] == s]
+for g in GRUPOS:
+    notas = [a for a in por_seccion if grupo_de(a) == g["id"]]
     if not notas:
         continue
-    sc = SEC_COLOR.get(s, "#0E7C86")
     secciones_html += f"""
-    <section class="sec-group" id="{slug_sec(s)}">
-      <div class="sec-head"><h2 style="color:{sc}">{escape(s)}</h2><span class="rh-rule"></span><span class="sec-count">{len(notas)} notas</span></div>
+    <section class="sec-group" id="sec-{g['id']}">
+      <div class="sec-head"><h2 style="color:{g['color']}">{escape(g['label'])}</h2><span class="sec-sub">{escape(g['sub'])}</span><span class="rh-rule"></span><span class="sec-count">{len(notas)} notas</span></div>
       <div class="grid">{"".join(card(a) for a in notas)}</div>
     </section>"""
 
@@ -194,7 +214,7 @@ else:
     cola_html = ""
 
 secciones_nav = "".join(
-    f'<a class="sec-chip" href="#{slug_sec(s)}" style="--sc:{SEC_COLOR.get(s,"#0E7C86")}">{escape(s)}</a>' for s in art.get("secciones", []))
+    f'<a class="sec-chip" href="#sec-{g["id"]}" style="--sc:{g["color"]}">{escape(g["label"])}</a>' for g in GRUPOS)
 
 HTML = f"""<!DOCTYPE html>
 <html lang="es">
@@ -278,7 +298,7 @@ HTML = f"""<!DOCTYPE html>
 
   .grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}}
   .grid-2{{grid-template-columns:repeat(2,1fr)}}
-  .grid-2 .card h3{{font-size:23px}}
+  .grid-2 .card h3{{font-size:19px}}
   .rail-head,.sec-head{{display:flex;align-items:center;gap:14px;margin:34px 0 18px}}
   .rail-head .rh-txt{{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted)}}
   .rh-rule{{flex:1;height:1px;background:var(--rule)}}
@@ -300,11 +320,13 @@ HTML = f"""<!DOCTYPE html>
   .ed-rol{{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);font-weight:600}}
   .ed-nombre{{font-family:var(--serif);font-size:17px;font-weight:700;margin:2px 0}}
   .ed-bio{{font-size:13px;color:var(--muted);line-height:1.55}}
-  .card{{background:var(--card);border:1px solid var(--card-edge);border-radius:14px;padding:20px;display:flex;flex-direction:column;transition:.15s}}
-  .card:hover{{transform:translateY(-2px);border-color:var(--teal)}}
-  .card h3{{font-family:var(--serif);font-weight:600;font-size:20px;line-height:1.25;margin:0 0 14px;flex:1}}
-  .card-num{{font-family:var(--mono);font-size:12px;color:var(--muted);border-left:3px solid var(--sc);padding-left:10px;margin-bottom:14px}}
-  .card-num b{{color:var(--ink);font-size:15px}}
+  .card{{background:var(--card);border:1px solid var(--card-edge);border-top:3px solid var(--sc);border-radius:14px;padding:20px;display:flex;flex-direction:column;transition:.15s}}
+  .card:hover{{transform:translateY(-2px);border-color:var(--sc)}}
+  .card .num-big{{font-family:var(--mono);font-weight:600;line-height:1;letter-spacing:-.02em;color:var(--ink);margin:2px 0 8px}}
+  .card .num-lab{{font-size:12px;color:var(--muted);line-height:1.45;margin-bottom:12px;border-bottom:1px solid var(--grid);padding-bottom:12px}}
+  .card h3{{font-family:var(--serif);font-weight:600;font-size:17px;line-height:1.3;margin:0 0 12px;flex:1;color:var(--ink-soft)}}
+  .grid-2 .card .num-big{{font-size:46px !important}}
+  .sec-sub{{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.02em}}
 
   .meta{{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;color:var(--muted);flex-wrap:wrap}}
   .meta .dot{{width:3px;height:3px;border-radius:50%;background:var(--faint)}}
