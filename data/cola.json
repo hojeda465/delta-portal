@@ -1,6 +1,6 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-22T13:00:00+00:00",
+  "actualizado": "2026-07-22T14:00:00+00:00",
   "borradores": [
     {
       "id": "2026-07-22-produccion-leche-record-decada",
@@ -13,6 +13,21 @@
       "fecha": "2026-07-22",
       "hora": "13:00",
       "archivo": "articulos/2026-07-22-produccion-leche-record-decada.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 8 min"
+    },
+    {
+      "id": "2026-07-22-consumo-supermercados-en-rojo",
+      "titulo": "Las ventas en supermercados cayeron 3,7% en abril: el consumo masivo sigue en rojo mientras la economía crece",
+      "bajada": "Fue la cuarta baja real al hilo en 2026 y dejó el acumulado del año en −3,3%, según el INDEC. En el resto del canal formal la foto es peor: los autoservicios mayoristas caen 5% y los shoppings, 5,9%. Es la otra cara de una economía que arrancó el año creciendo 2,3%: el PBI sube, pero el changuito se achica.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "−3,7%",
+      "numero_label": "cayeron en términos reales las ventas en supermercados en abril de 2026 (INDEC), cuarto mes seguido en baja",
+      "fecha": "2026-07-22",
+      "hora": "14:00",
+      "archivo": "articulos/2026-07-22-consumo-supermercados-en-rojo.html",
       "verificacion": "verificada",
       "fuentes": 6,
       "lectura": "30 seg → 8 min"

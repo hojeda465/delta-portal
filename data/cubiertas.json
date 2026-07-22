@@ -315,6 +315,13 @@
       "fecha": "2026-07-22",
       "estado": "en_cola",
       "articulo_id": "2026-07-22-produccion-leche-record-decada"
+    },
+    {
+      "tema": "consumo masivo / Encuesta de supermercados INDEC abril 2026 (ventas reales −3,7%, mayoristas −5%, shoppings −5,9%)",
+      "angulo": "ángulo de datos NUEVO: el canal formal (INDEC: super/mayoristas/shoppings) sigue en rojo mientras el PBI crece 2,3%; distinto universo que las ventas pyme de CAME (que rebotan)",
+      "fecha": "2026-07-22",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-22-consumo-supermercados-en-rojo"
     }
   ]
 }
