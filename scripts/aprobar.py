@@ -9,7 +9,7 @@ cintillo de borrador y regenera la portada.
 Uso:  python3 scripts/aprobar.py <id-del-borrador>
 Ej.:  python3 scripts/aprobar.py 2026-07-18-malvinas-sea-lion
 """
-import json, os, sys, subprocess, datetime
+import json, os, sys, subprocess, datetime, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
@@ -36,6 +36,8 @@ def main(draft_id):
     html = "\n".join(l for l in html.split("\n")
                      if 'class="draft-ribbon"' not in l
                      and 'name="robots" content="noindex"' not in l)
+    # quitar el cintillo de borrador del cuerpo (.borrador); la regla CSS queda, es inocua
+    html = re.sub(r'\n?<div class="borrador">.*?</div>\s*</div>\s*\n', "\n", html, flags=re.S)
     html = html.replace(
         "Borrador generado por la redacción de agentes y pendiente de aprobación. ",
         "")

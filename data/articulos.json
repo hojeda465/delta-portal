@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-22T16:05:51+00:00",
+    "actualizado": "2026-07-22T18:31:42+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-22-riesgo-pais-cerca-400",
+      "titulo": "El riesgo país cae hacia los 400 puntos: la puerta de vuelta a los mercados de deuda",
+      "bajada": "El riesgo país argentino ronda los 410 puntos, su nivel más bajo desde 2018 y cerca de un tercio de lo que marcaba a comienzos de 2024. Es el número que la city mira para saber si la Argentina puede volver a tomar deuda en el mercado internacional tras ocho años sin hacerlo. Qué mide, por qué cae y qué falta para cruzar el umbral.",
+      "seccion": "MERCADOS",
+      "formato": "Anatomía de un dato",
+      "numero": "410 pb",
+      "numero_label": "riesgo país al 22/07/2026 (mínimo desde 2018)",
+      "fecha": "2026-07-22",
+      "hora": "18:45",
+      "archivo": "articulos/2026-07-22-riesgo-pais-cerca-400.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-07-22-superavit-semestre-record-exportaciones",
       "titulo": "El superávit del semestre fue de US$13.923 millones: el mayor en años, pero por el motivo opuesto al de 2024",
