@@ -43,9 +43,9 @@ scripts/                build_portada.py · inject_widgets.py
 - **Ticker de indicadores** — dólar oficial/blue/MEP (dolarapi.com), riesgo
   país e inflación mensual (argentinadatos.com). En vivo, con caché de 10 min.
   Si las APIs no responden, el ticker se oculta solo.
-- **Newsletter** — captura de email conectada a **Buttondown**. Para activarla:
-  crear la cuenta en buttondown.com y poner el usuario en la constante
-  `BUTTONDOWN_USER` al inicio de `assets/widgets.js` (una sola línea).
+- **Newsletter** — captura de email conectada a **Kit**. Para activarla:
+  crear el formulario en Kit (kit.com, gratis hasta 10.000 suscriptores) y pegar su URL en
+  `NEWSLETTER_FORM_ACTION` al inicio de `assets/widgets.js`. Mientras esté vacía, el formulario funciona en modo manual (suscripción por email al contacto del sitio).
 
 Toda página nueva debe incluir antes de `</body>`:
 `<!-- CI-WIDGETS --><script defer src="../assets/widgets.js"></script>`

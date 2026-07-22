@@ -11,11 +11,20 @@
   "use strict";
 
   /* ------------------------------------------------------------
-     CONFIGURACIÓN
-     Cuando crees la cuenta en https://buttondown.com, poné acá el
-     nombre de usuario elegido. Es lo ÚNICO que hay que tocar.
+     CONFIGURACIÓN DEL NEWSLETTER
+     Proveedor recomendado: Kit (kit.com) — gratis hasta 10.000
+     suscriptores. Al crear un formulario en Kit, copiar acá:
+       - NEWSLETTER_FORM_ACTION: la URL "action" del formulario
+         (ej. "https://app.kit.com/forms/1234567/subscriptions")
+       - NEWSLETTER_EMAIL_FIELD: el nombre del campo de email del
+         proveedor ("email_address" en Kit; "email" en Buttondown).
+     Mientras FORM_ACTION esté vacío, el formulario funciona en
+     modo manual: abre un mail de suscripción al correo del sitio,
+     así ningún interesado se pierde y a nadie se le miente.
      ------------------------------------------------------------ */
-  var BUTTONDOWN_USER = "coninteres"; // ← usuario de Buttondown
+  var NEWSLETTER_FORM_ACTION = ""; // ← URL del formulario (Kit)
+  var NEWSLETTER_EMAIL_FIELD = "email_address";
+  var CONTACT_EMAIL = "oojeda465@gmail.com";
 
   var TICKER_CACHE_KEY = "ci_ticker_v1";
   var TICKER_TTL_MS = 10 * 60 * 1000; // 10 minutos
@@ -146,13 +155,17 @@
      no tiene ninguno, se inserta uno solo antes del <footer>.
      ============================================================ */
   function newsletterHTML() {
+    var configured = !!NEWSLETTER_FORM_ACTION;
+    var formAttrs = configured
+      ? 'action="' + NEWSLETTER_FORM_ACTION + '" method="post" target="_blank"'
+      : "";
     return ''
       + '<div class="ci-news-box">'
       + '<div class="nb-kick">% Newsletter · gratis</div>'
       + "<h3>La economía del día, en tu mail</h3>"
       + "<p>Los datos que importan, verificados y explicados sin jerga, directo de la redacción de Con Interés. Un mail por día, se lee en 3 minutos.</p>"
-      + '<form class="ci-news-form" action="https://buttondown.com/api/emails/embed-subscribe/' + BUTTONDOWN_USER + '" method="post" target="_blank">'
-      + '<input type="email" name="email" required placeholder="tu@email.com" aria-label="Tu email">'
+      + '<form class="ci-news-form" ' + formAttrs + ">"
+      + '<input type="email" name="' + NEWSLETTER_EMAIL_FIELD + '" required placeholder="tu@email.com" aria-label="Tu email">'
       + "<button type=\"submit\">Suscribirme</button>"
       + "</form>"
       + '<div class="ci-news-fine">Sin spam. Sal&iacute;s cuando quieras, con un clic. Al suscribirte aceptás la <a href="' + SITE_BASE + 'privacidad.html">Política de Privacidad</a>.</div>'
@@ -175,12 +188,26 @@
     Array.prototype.forEach.call(mounts, function (m) {
       m.innerHTML = newsletterHTML();
       var form = m.querySelector("form");
-      form.addEventListener("submit", function () {
-        var box = m.querySelector(".ci-news-box");
-        setTimeout(function () {
-          form.outerHTML = '<div class="ci-news-ok">¡Listo! Revisá tu casilla para confirmar la suscripción. Gracias por leer Con Interés.</div>';
-        }, 300);
-      });
+      if (NEWSLETTER_FORM_ACTION) {
+        // Proveedor configurado: POST real; el proveedor confirma en su pestaña.
+        form.addEventListener("submit", function () {
+          setTimeout(function () {
+            form.outerHTML = '<div class="ci-news-ok">¡Listo! Revisá tu casilla para confirmar la suscripción. Gracias por leer Con Interés.</div>';
+          }, 300);
+        });
+      } else {
+        // Modo manual (proveedor aún no configurado): la suscripción se
+        // completa por email — honesto, gratis y no se pierde ningún lector.
+        form.addEventListener("submit", function (ev) {
+          ev.preventDefault();
+          var email = form.querySelector('input[type=email]').value;
+          var subject = encodeURIComponent("Suscripción al newsletter de Con Interés");
+          var body = encodeURIComponent(
+            "Hola, quiero suscribirme al newsletter de Con Interés.\n\nMi email: " + email + "\n\n(Enviando este mail confirmás tu suscripción. Podés darte de baja cuando quieras respondiendo \"baja\".)");
+          window.location.href = "mailto:" + CONTACT_EMAIL + "?subject=" + subject + "&body=" + body;
+          form.outerHTML = '<div class="ci-news-ok">Se abrió tu aplicación de correo con el pedido de suscripción ya escrito — solo tenés que enviarlo. Si no se abrió, escribinos a ' + CONTACT_EMAIL + ' con asunto “Suscripción”.</div>';
+        });
+      }
     });
   }
 
