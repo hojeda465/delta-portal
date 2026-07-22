@@ -181,13 +181,14 @@ else:
 if borradores:
     filas = "\n".join(
         f"""<li><span class="q-sec">{escape(b.get('seccion',''))}</span>
-        <span class="q-tit">{escape(b['titulo'])}</span>
+        <span class="q-tit"><a href="cola/{escape(b['id'])}.html" style="color:inherit;text-decoration:none">{escape(b['titulo'])}</a></span>
+        <a class="q-leer" href="cola/{escape(b['id'])}.html">Leer borrador &rarr;</a>
         <span class="q-badge">En revisión</span></li>""" for b in borradores)
     cola_html = f"""
     <section class="cola">
       <div class="cola-head"><span class="pulse"></span> Cola de revisión · {len(borradores)} borrador(es) esperando tu OK</div>
       <ul class="q-list">{filas}</ul>
-      <p class="cola-foot">Los agentes ya investigaron y verificaron estas notas. Se publican recién cuando las aprobás.</p>
+      <p class="cola-foot">Los agentes ya investigaron y verificaron estas notas. Podés leer cada borrador completo desde acá; se publican recién cuando las aprobás.</p>
     </section>"""
 else:
     cola_html = ""
@@ -314,6 +315,8 @@ HTML = f"""<!DOCTYPE html>
   .q-sec{{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--amber);font-weight:600;flex:0 0 auto}}
   .q-tit{{flex:1;color:var(--ink-soft)}}
   .q-badge{{font-family:var(--mono);font-size:10px;background:var(--amber);color:#fff;padding:3px 9px;border-radius:999px;font-weight:600}}
+  .q-leer{{font-family:var(--mono);font-size:11px;color:var(--teal-deep);font-weight:600;white-space:nowrap;border-bottom:1px solid var(--grid)}}
+  .q-leer:hover{{color:var(--teal)}}
   .cola-foot{{font-size:12px;color:var(--muted);margin:12px 0 0}}
 
   footer{{border-top:2px solid var(--ink);margin-top:44px;padding:26px 0 60px}}

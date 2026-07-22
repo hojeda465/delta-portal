@@ -33,7 +33,9 @@ def main(draft_id):
 
     # 1) mover HTML y limpiar marcas de borrador
     html = open(src, encoding="utf-8").read()
-    html = "\n".join(l for l in html.split("\n") if 'class="draft-ribbon"' not in l)
+    html = "\n".join(l for l in html.split("\n")
+                     if 'class="draft-ribbon"' not in l
+                     and 'name="robots" content="noindex"' not in l)
     html = html.replace(
         "Borrador generado por la redacción de agentes y pendiente de aprobación. ",
         "")

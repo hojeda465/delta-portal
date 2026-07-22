@@ -111,8 +111,17 @@ Cada uno tiene un rol acotado: hace una cosa y la hace bien.
 - **Entrada:** la nota HTML y su metadata.
 - **Tarea:** **NO publica directo** (estamos en modo cola de revisión). Coloca la
   nota en `cola/`, la agrega a `data/cola.json`, registra el tema en
-  `data/cubiertas.json` como `en_cola`, hace commit y push, y avisa al humano.
-- **Salida:** un borrador en la cola + notificación "hay una nota para revisar".
+  `data/cubiertas.json` como `en_cola`, regenera la portada
+  (`python3 scripts/build_portada.py` — la cola aparece en la portada con
+  enlace "Leer borrador"), hace commit y push, y avisa al humano.
+- **El borrador debe poder LEERSE antes de aprobarse.** Tras el push, el
+  borrador queda accesible en `https://coninteres.com/cola/<id>.html`. El
+  aviso al humano incluye SIEMPRE: el título, esa URL directa para leerlo, y
+  la instrucción de aprobación ("aprobá la nota `<id>`"). El borrador lleva
+  en su `<head>` la línea `<meta name="robots" content="noindex">` (para que
+  los buscadores no indexen material no aprobado); `aprobar.py` la quita al
+  publicar.
+- **Salida:** un borrador en la cola + notificación con el link para leerlo.
 
 ---
 
