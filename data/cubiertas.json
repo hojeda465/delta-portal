@@ -301,6 +301,13 @@
       "fecha": "2026-07-22",
       "estado": "publicada",
       "articulo_id": "2026-07-22-pbi-crece-inversion-cae"
+    },
+    {
+      "tema": "producción nacional de petróleo crudo / récord histórico: por primera vez supera los 900.000 barriles/día (mayo 2026, 903.700 bbl/d)",
+      "angulo": "ángulo de datos NUEVO respecto de las notas de energía ya cubiertas (Vaca Muerta / superávit energético del 1er semestre, que fue sobre el BALANCE COMERCIAL energético en dólares; y récord de GAS de Neuquén, que fue sobre GAS NATURAL): esta nota es sobre la PRODUCCIÓN FÍSICA de PETRÓLEO CRUDO a nivel nacional (barriles/día). Cifra ancla: 903.700 bbl/d en mayo 2026, primer registro por encima de los 900.000 en la historia, +19,6% i.a. Contexto: superó el pico convencional de 1998 (~847.000 bbl/d), techo que había resistido 27 años y recién se rompió en oct-2025 (859.500 bbl/d); serie ascendente reciente (oct-25 859.500 → ene-26 872.966 → abr-26 ~878.000 → may-26 903.700); +76% en 5 años. Motor: shale/no convencional de Vaca Muerta = 69% del total (dato oficial); ~623.000 bbl/d equivalentes marcado como CÁLCULO. El convencional (~31%, ~280.000 bbl/d) estancado/en baja. Datos de apoyo (dólares): exportaciones del complejo combustibles y energía may-2026 US$1.745 M (+167% i.a.) y ene-may US$6.182 M (+44,7%) — INDEC, coincide con la nota ya verificada de superávit comercial de mayo. Cifra ancla (903.700 / +19,6% / 69% shale) CONFIRMADA por doble fuente independiente: dato oficial de la Secretaría de Energía (DDJJ de operadoras) + confirmación on-the-record del Gobierno nacional, reproducido de forma coincidente por La Nación, Ámbito, Forbes, Diario Río Negro/EnergíaOn e iProfesional. Coherencia interna verificada (903.700 > 859.500 oct-25 > 847.000 pico 1998; 903.700/1,76≈513.000 hace 5 años, consistente con el piso ~500.000). Asterisco Con Interés / postura de refutación: (1) más producción NO implica nafta más barata (el precio del surtidor sigue paridad internacional + impuestos, no la producción local); (2) el crecimiento está concentrado en una sola cuenca (Neuquén) y una sola tecnología (shale), con dependencia del precio global del crudo y de la capacidad de evacuación (oleoductos). Dato de junio 2026 aún no difundido al cierre. No es asesoramiento financiero.",
+      "fecha": "2026-07-22",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-22-record-petroleo-900-mil-barriles"
     }
   ]
 }
