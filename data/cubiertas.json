@@ -371,6 +371,13 @@
       "fecha": "2026-07-22",
       "estado": "publicada",
       "articulo_id": "2026-07-22-autos-usados-junio-mejor-mes"
+    },
+    {
+      "tema": "distribución del ingreso / desigualdad 1er trimestre 2026 (Gini 0,442; el decil más rico concentró 33,5% del ingreso)",
+      "angulo": "el 10% de mayores ingresos se llevó el 33,5% del ingreso total y el 10% más pobre el 1,8% (brecha de participación 18,6x); el Gini subió de 0,435 a 0,442 respecto de un año atrás (ingreso per cápita familiar, EPH). Cifra ancla (participación del decil 10) CONFIRMADA por INDEC + Infobae + Perfil; la distribución por decil suma 99,9% (coherencia interna verificada)",
+      "fecha": "2026-07-22",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-22-distribucion-ingreso-desigualdad"
     }
   ]
 }

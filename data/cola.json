@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-22T20:30:00+00:00",
-  "borradores": []
+  "actualizado": "2026-07-22T21:19:49+00:00",
+  "borradores": [
+    {
+      "id": "2026-07-22-distribucion-ingreso-desigualdad",
+      "titulo": "El 10% más rico se quedó con un tercio del ingreso: la desigualdad volvió a subir",
+      "bajada": "En el primer trimestre de 2026, el décimo de mayores ingresos concentró el 33,5% de todo lo que se repartió en la Argentina; el décimo más pobre, apenas el 1,8%. El coeficiente de Gini subió a 0,442, más que un año atrás.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "33,5%",
+      "numero_label": "del ingreso total se lo llevó el 10% más rico",
+      "fecha": "2026-07-22",
+      "hora": "21:19",
+      "archivo": "cola/2026-07-22-distribucion-ingreso-desigualdad.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 10 min"
+    }
+  ]
 }
