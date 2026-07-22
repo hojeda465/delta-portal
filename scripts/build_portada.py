@@ -247,7 +247,7 @@ HTML = f"""<!DOCTYPE html>
   .concept .item{{color:#CFC9BF}} .concept .item b{{color:#fff;font-weight:600}}
   .concept .sep{{color:#3E3A34}}
 
-  .secnav{{border-bottom:1px solid var(--rule)}}
+  .secnav{{border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--paper);z-index:60;box-shadow:0 1px 0 rgba(22,19,15,.04)}}
   .secnav .wrap{{display:flex;gap:8px;padding:12px 24px;flex-wrap:wrap}}
   .sec-chip{{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--sc);background:var(--paper);border:1px solid var(--card-edge);padding:6px 13px;border-radius:999px;font-weight:600;cursor:pointer;transition:.15s}}
   .sec-chip:hover{{border-color:var(--sc)}}
@@ -280,7 +280,7 @@ HTML = f"""<!DOCTYPE html>
   .rh-rule{{flex:1;height:1px;background:var(--rule)}}
   .sec-head h2{{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0}}
   .sec-count{{font-family:var(--mono);font-size:11px;color:var(--faint)}}
-  .sec-group{{scroll-margin-top:80px}}
+  .sec-group{{scroll-margin-top:110px}}
 
   .learn-band{{background:linear-gradient(120deg,#16130F,#0A5C63);border-radius:16px;padding:32px 34px;margin:40px 0 6px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}}
   .learn-band .lb-kick{{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#E8833A;font-weight:600;margin-bottom:8px}}
@@ -364,6 +364,23 @@ HTML = f"""<!DOCTYPE html>
     </div>
   </div>
 </footer>
+
+<script>
+(function(){{
+  // resalta en la barra fija la sección visible mientras se scrollea
+  var chips=[].slice.call(document.querySelectorAll('.sec-chip[href^="#"]'));
+  var grupos=chips.map(function(c){{ return document.getElementById(c.getAttribute('href').slice(1)); }});
+  function marcar(){{
+    var actual=-1;
+    for(var i=0;i<grupos.length;i++){{
+      if(grupos[i] && grupos[i].getBoundingClientRect().top<140) actual=i;
+    }}
+    chips.forEach(function(c,i){{ c.classList.toggle('active', i===actual); }});
+  }}
+  window.addEventListener('scroll', marcar, {{passive:true}});
+  marcar();
+}})();
+</script>
 
 </body>
 </html>"""
