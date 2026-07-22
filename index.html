@@ -58,7 +58,10 @@
   .lead.is-hidden,.card.is-hidden{display:none}
 
   main{padding:30px 0 20px}
-  .learn-link{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;display:flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600}
+  .nav-extra{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;white-space:nowrap;font-weight:600;padding:6px 4px}
+  .nav-extra:first-of-type{margin-left:auto}
+  .nav-extra:hover{color:var(--teal)}
+  .learn-link{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;display:flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600}
   .learn-link b{background:var(--amber);color:#fff;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:999px;font-weight:600}
   .learn-link:hover{color:var(--teal)}
   @media(max-width:560px){.learn-link{margin-left:0;width:100%;padding-top:6px}}
@@ -146,7 +149,7 @@
   </div>
 </header>
 
-<nav class="secnav"><div class="wrap"><a class="sec-chip" href="#sec-economia" style="--sc:#0E7C86">ECONOMÍA</a><a class="sec-chip" href="#sec-economia-provincial" style="--sc:#C4701F">ECONOMÍA PROVINCIAL</a><a class="sec-chip" href="#sec-mercados" style="--sc:#0A5C63">MERCADOS</a><a class="sec-chip" href="#sec-mundo" style="--sc:#7A5CC4">MUNDO</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
+<nav class="secnav"><div class="wrap"><a class="sec-chip" href="#sec-economia" style="--sc:#0E7C86">ECONOMÍA</a><a class="sec-chip" href="#sec-economia-provincial" style="--sc:#C4701F">ECONOMÍA PROVINCIAL</a><a class="sec-chip" href="#sec-mercados" style="--sc:#0A5C63">MERCADOS</a><a class="sec-chip" href="#sec-mundo" style="--sc:#7A5CC4">MUNDO</a><a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
 
 <main class="wrap">
   
@@ -162,6 +165,7 @@
         <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>30 seg → 9 min<span class="dot"></span>22 jul 2026</div>
       </div>
     </a>
+  <div id="ci-semaforo"></div>
   <div class="rail-head"><span class="rh-txt">Lo último</span><span class="rh-rule"></span></div><div class="grid grid-2">
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-21-rigi-pampa-4521-millones.html">
       <div class="kick" style="color:#0E7C86">ECONOMÍA</div>

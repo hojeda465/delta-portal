@@ -1,0 +1,183 @@
+#!/usr/bin/env python3
+"""
+build_fichas.py — Genera las fichas de indicador (/indicador/*.html).
+Cada ficha: historial completo con eventos anotados, rangos, CSV y
+notas relacionadas (todo lo dinámico lo resuelve assets/ficha.js).
+
+Uso:  python3 scripts/build_fichas.py
+"""
+import os
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+OUT = os.path.join(ROOT, "indicador")
+os.makedirs(OUT, exist_ok=True)
+SITE = "https://coninteres.com"
+
+FICHAS = {
+    "dolar-oficial": {
+        "titulo": "Dólar oficial",
+        "sub": "El tipo de cambio del Banco Nación (venta), en pesos por dólar.",
+        "desc": "Es el precio de referencia del comercio exterior y de la mayoría de los contratos. Su brecha con los dólares financieros y el blue es uno de los termómetros clásicos de la economía argentina.",
+    },
+    "dolar-blue": {
+        "titulo": "Dólar blue",
+        "sub": "La cotización del mercado informal (venta), en pesos por dólar.",
+        "desc": "Es el dólar de la calle: el que surge de la compraventa fuera del sistema financiero. No es un mercado regulado ni su cifra es oficial, pero funciona como termómetro de la demanda de cobertura de la gente.",
+    },
+    "dolar-mep": {
+        "titulo": "Dólar MEP",
+        "sub": "El dólar 'bolsa' (venta): se compra legalmente comprando y vendiendo bonos.",
+        "desc": "Es la vía legal más usada por ahorristas para dolarizarse: se compra un bono en pesos y se vende en dólares. Su precio surge del mercado y suele moverse entre el oficial y el blue.",
+    },
+    "riesgo-pais": {
+        "titulo": "Riesgo país",
+        "sub": "El índice EMBI+ de Argentina, en puntos básicos.",
+        "desc": "Mide cuánto más caro le sale al Estado argentino endeudarse respecto de Estados Unidos. Cada 100 puntos básicos equivalen a un punto porcentual de sobretasa: es el termómetro de la confianza de los mercados.",
+    },
+    "inflacion": {
+        "titulo": "Inflación mensual",
+        "sub": "La variación mensual del IPC que publica el INDEC, en porcentaje.",
+        "desc": "Es la medida oficial de cuánto subieron los precios al consumidor cada mes. La serie muestra el proceso completo: aceleración, pico y desinflación — el número que más impacta en el bolsillo.",
+    },
+}
+
+PLANTILLA = """<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{titulo}: historial completo, hoy y evolución — Con Interés</title>
+<meta name="description" content="{titulo} hoy y su serie histórica completa: gráfico interactivo, mínimos y máximos, eventos explicados y descarga de datos. Gratis, sin registro.">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="canonical" href="{site}/indicador/{key}.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{{
+    --paper:#FAF8F4;--ink:#16130F;--ink-soft:#3C3833;--teal:#0E7C86;--teal-deep:#0A5C63;
+    --amber:#C4701F;--red:#C0392B;--green:#2E8B6F;--muted:#6B6560;--faint:#8A847C;
+    --rule:#DCD6CC;--grid:#E7E1D7;--card:#FFFFFF;--card-edge:#EAE4DA;
+    --serif:"Source Serif 4",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace;
+  }}
+  *{{box-sizing:border-box}}
+  body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}}
+  .wrap{{max-width:960px;margin:0 auto;padding:0 22px}}
+  a{{color:var(--teal-deep)}}
+  .masthead{{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:50}}
+  .masthead .wrap{{display:flex;align-items:center;justify-content:space-between;height:56px}}
+  .brand{{font-family:var(--serif);font-weight:700;font-size:26px;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}}
+  .brand .tri{{color:var(--teal)}}
+  .brand .tag{{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:8px;font-weight:500}}
+  .mh-back{{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none}}
+  .hero{{padding:34px 0 4px}}
+  .kicker{{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-deep);font-weight:600;margin-bottom:10px}}
+  h1{{font-family:var(--serif);font-weight:700;font-size:40px;line-height:1.1;margin:0 0 8px;display:flex;align-items:baseline;gap:16px;flex-wrap:wrap}}
+  #f-hoy{{font-family:var(--mono);font-size:30px;color:var(--teal-deep)}}
+  .f-var{{font-family:var(--mono);font-size:13px;font-weight:600}}
+  .f-var.up{{color:var(--red)}}.f-var.dn{{color:var(--green)}}
+  .hero .sub{{font-size:16px;color:var(--ink-soft);margin:2px 0 6px;max-width:70ch}}
+  .hero .desc{{font-size:14px;color:var(--muted);margin:0 0 18px;max-width:74ch}}
+  .f-rangos{{display:flex;gap:8px;margin:6px 0 14px;flex-wrap:wrap}}
+  .f-rango{{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.05em;background:#fff;border:1px solid var(--card-edge);color:var(--muted);border-radius:999px;padding:6px 14px;cursor:pointer;transition:.15s}}
+  .f-rango:hover{{border-color:var(--teal)}}
+  .f-rango.activo{{background:var(--ink);color:#fff;border-color:var(--ink)}}
+  .f-card{{background:var(--card);border:1px solid var(--card-edge);border-radius:14px;padding:18px 16px 10px}}
+  .f-card svg{{width:100%;height:auto;display:block;overflow:visible}}
+  .f-estado{{font-family:var(--mono);font-size:13px;color:var(--muted);padding:50px 0;text-align:center}}
+  .f-statrow{{display:flex;gap:22px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--muted);margin:12px 2px 0}}
+  .f-statrow b{{color:var(--ink)}}
+  .f-acciones{{display:flex;gap:12px;align-items:center;margin:14px 0 6px;flex-wrap:wrap}}
+  #f-csv{{font-family:var(--mono);font-size:12px;font-weight:600;background:none;border:1px solid var(--rule);color:var(--teal-deep);border-radius:999px;padding:7px 16px;cursor:pointer;transition:.15s}}
+  #f-csv:hover{{border-color:var(--teal)}}
+  .f-fuente{{font-family:var(--mono);font-size:11px;color:var(--faint)}}
+  #f-eventos{{display:flex;flex-direction:column;gap:8px;margin:16px 0}}
+  .f-ev{{display:flex;gap:10px;align-items:baseline;font-size:14px;color:var(--ink-soft);text-decoration:none;background:#F3EFE7;border:1px solid var(--card-edge);border-radius:10px;padding:10px 14px}}
+  .f-ev:hover{{border-color:var(--amber)}}
+  .f-ev .n{{font-family:var(--mono);font-size:11px;font-weight:600;background:var(--amber);color:#fff;border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;transform:translateY(3px)}}
+  .f-sec{{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:34px 0 14px;display:flex;align-items:center;gap:14px}}
+  .f-sec:after{{content:"";flex:1;height:1px;background:var(--rule)}}
+  #f-notas{{display:grid;grid-template-columns:1fr 1fr;gap:14px}}
+  .f-nota{{background:var(--card);border:1px solid var(--card-edge);border-radius:12px;padding:16px;text-decoration:none;transition:.15s;display:block}}
+  .f-nota:hover{{border-color:var(--teal);transform:translateY(-2px)}}
+  .fn-num{{display:block;font-family:var(--mono);font-size:15px;font-weight:600;color:var(--teal-deep);margin-bottom:6px}}
+  .fn-tit{{font-family:var(--serif);font-size:16px;font-weight:600;color:var(--ink);line-height:1.3}}
+  .f-tt{{position:fixed;pointer-events:none;background:#16130F;color:#fff;font-family:var(--mono);font-size:12px;padding:6px 10px;border-radius:7px;opacity:0;transition:opacity .1s;z-index:200;white-space:nowrap;max-width:420px;white-space:normal;line-height:1.5}}
+  .f-tt b{{color:#4FC0A4}}
+  .otras{{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 0}}
+  .otras a{{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--card-edge);border-radius:999px;padding:5px 12px;text-decoration:none}}
+  .otras a:hover{{border-color:var(--teal);color:var(--teal-deep)}}
+  footer{{border-top:2px solid var(--ink);margin-top:46px;padding:24px 0 60px}}
+  footer .wrap{{font-family:var(--mono);font-size:12px;color:var(--muted)}}
+  footer a{{text-decoration:none}}
+  @media(max-width:640px){{h1{{font-size:30px}}#f-hoy{{font-size:24px}}#f-notas{{grid-template-columns:1fr}}}}
+</style>
+</head>
+<body data-key="{key}">
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="tri">%</span>Con Interés<span class="tag">La economía, con interés</span></a>
+    <a href="../index.html" class="mh-back">← Portada</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="kicker">% Ficha de indicador</div>
+    <h1>{titulo} <span id="f-hoy"></span> <span id="f-variacion" class="f-var"></span></h1>
+    <p class="sub">{sub}</p>
+    <p class="desc">{desc}</p>
+    <div class="otras">{otras}</div>
+  </div>
+
+  <div class="f-rangos">
+    <button type="button" class="f-rango" data-m="6">6 meses</button>
+    <button type="button" class="f-rango activo" data-m="12">12 meses</button>
+    <button type="button" class="f-rango" data-m="24">24 meses</button>
+    <button type="button" class="f-rango" data-m="60">5 años</button>
+    <button type="button" class="f-rango" data-m="todo">Todo</button>
+  </div>
+
+  <div class="f-card">
+    <div id="f-chart"></div>
+    <div class="f-statrow"><span id="f-min"></span><span id="f-max"></span></div>
+  </div>
+
+  <div class="f-acciones">
+    <button type="button" id="f-csv">↓ Descargar datos (CSV)</button>
+    <span class="f-fuente">Fuente: argentinadatos.com · Elaboración propia de Con Interés · Datos libres: citá "Con Interés — coninteres.com"</span>
+  </div>
+
+  <div id="f-eventos"></div>
+
+  <div>
+    <div class="f-sec">Con Interés escribió sobre esto</div>
+    <div id="f-notas"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="../index.html">Portada</a> · <a href="../hoy.html">El cierre</a> · <a href="../herramientas.html">Herramientas</a> · <a href="../aprender.html">Modo Aprendizaje</a> · <a href="../legal.html">Aviso legal</a>
+  </div>
+</footer>
+
+<script defer src="../assets/ficha.js?v=1"></script>
+<!-- CI-WIDGETS --><script defer src="../assets/ticker.js?v=5"></script>
+</body>
+</html>
+"""
+
+def main():
+    claves = list(FICHAS.keys())
+    for key, f in FICHAS.items():
+        otras = " ".join(
+            f'<a href="{k}.html">{FICHAS[k]["titulo"]}</a>' for k in claves if k != key)
+        html = PLANTILLA.format(key=key, site=SITE, otras=otras, **f)
+        with open(os.path.join(OUT, f"{key}.html"), "w", encoding="utf-8") as fh:
+            fh.write(html)
+    print(f"OK -> {len(FICHAS)} fichas en indicador/")
+
+if __name__ == "__main__":
+    main()

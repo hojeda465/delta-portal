@@ -15,12 +15,12 @@ MARK = "<!-- CI-WIDGETS -->"
 
 def include_tag(depth):
     base = "../" * depth
-    return f'{MARK}<script defer src="{base}assets/ticker.js?v=4"></script>\n'
+    return f'{MARK}<script defer src="{base}assets/ticker.js?v=5"></script>\n'
 
 def inject(path, depth):
     with open(path, encoding="utf-8") as f:
         html = f.read()
-    if MARK in html or "assets/ticker.js?v=4" in html:
+    if MARK in html or "assets/ticker.js?v=5" in html:
         return False
     if "</body>" not in html:
         return False

@@ -233,7 +233,27 @@ quedó sin el include, correr `python3 scripts/inject_widgets.py` (idempotente).
 cierra siempre con el bloque `.afecta` (ver `plantilla.html`): 2–4 líneas que
 traducen el dato al bolsillo del lector — trabajo, precios, ahorro, crédito —
 con al menos dos perfiles distintos de lector cuando aplique ("si trabajás
-en…", "si estás pensando en…").
+en…", "si estás pensando en…"). Cada párrafo de perfil puede llevar
+`data-perfil="inquilino|monotributista|pyme|jubilado|ahorrista|trabajador"`
+para la personalización local futura (se guarda solo en el navegador del
+lector; el sitio no recolecta nada).
+
+**Módulo "Otras miradas" (opcional, recomendado en notas con interpretación
+disputada).** Después de "Por qué importa", un bloque breve con 2–3 lecturas
+distintas del mismo dato, SIEMPRE atribuidas y enlazadas ("para la consultora
+X…, para el economista Y…"). Solo citas on-the-record. Con Interés no dice
+qué pensar: muestra el abanico. Nunca inventar posiciones ni citar de oídas.
+
+**Fichas de indicador y eventos (`data/eventos.json`).** Si la nota explica un
+movimiento del dólar, el riesgo país o la inflación, el Publicador agrega una
+entrada en `data/eventos.json` bajo el indicador correspondiente
+(`{fecha del hecho, titulo, nota}`) — así el gráfico histórico de la ficha
+queda anotado con la cobertura propia. Las fichas se regeneran con
+`python3 scripts/build_fichas.py` (solo si cambió su plantilla; los datos son
+en vivo).
+
+**"El cierre" (`hoy.html`).** Se regenera solo con `build_portada.py`: toma las
+5 notas más recientes del manifiesto. No editar a mano.
 
 ---
 

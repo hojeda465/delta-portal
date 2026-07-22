@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Herramientas del bolsillo — Con Interés</title>
+<meta name="description" content="Calculadoras gratis y sin registro: ¿tu sueldo le ganó a la inflación?, ¿cuánto vale hoy la plata de antes?, ¿qué rindió más, el dólar o los precios? Con datos oficiales.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="canonical" href="https://coninteres.com/herramientas.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF8F4;--ink:#16130F;--ink-soft:#3C3833;--teal:#0E7C86;--teal-deep:#0A5C63;
+    --amber:#C4701F;--red:#C0392B;--green:#2E8B6F;--muted:#6B6560;--faint:#8A847C;
+    --rule:#DCD6CC;--grid:#E7E1D7;--card:#FFFFFF;--card-edge:#EAE4DA;
+    --serif:"Source Serif 4",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px}
+  a{color:var(--teal-deep)}
+  .masthead{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:50}
+  .masthead .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:960px}
+  .brand{font-family:var(--serif);font-weight:700;font-size:26px;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
+  .brand .tri{color:var(--teal)}
+  .brand .tag{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:8px;font-weight:500}
+  .mh-back{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none}
+  .hero{padding:38px 0 6px}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-deep);font-weight:600;margin-bottom:12px}
+  h1{font-family:var(--serif);font-weight:700;font-size:38px;line-height:1.12;margin:0 0 12px}
+  .hero p{font-size:17px;color:var(--ink-soft);max-width:64ch;margin:0 0 8px}
+  .fine{font-family:var(--mono);font-size:11px;color:var(--faint)}
+
+  .tool{background:var(--card);border:1px solid var(--card-edge);border-radius:16px;padding:26px 26px 22px;margin:26px 0}
+  .tool .t-kick{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);font-weight:600;margin-bottom:6px}
+  .tool h2{font-family:var(--serif);font-size:24px;font-weight:700;margin:0 0 6px}
+  .tool .t-sub{font-size:14px;color:var(--muted);margin:0 0 18px}
+  .campos{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end}
+  .campo{display:flex;flex-direction:column;gap:6px}
+  .campo label{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted);font-weight:600}
+  .campo input,.campo select{font-family:var(--mono);font-size:15px;padding:10px 12px;border:1px solid var(--rule);border-radius:10px;background:var(--paper);color:var(--ink);min-width:150px;outline:none}
+  .campo input:focus,.campo select:focus{border-color:var(--teal)}
+  .tool button.calc{font-family:var(--sans);font-size:15px;font-weight:600;background:var(--ink);color:#fff;border:none;border-radius:10px;padding:11px 22px;cursor:pointer;transition:.15s}
+  .tool button.calc:hover{background:var(--teal-deep)}
+  .resultado{margin-top:20px;display:none}
+  .resultado.on{display:block}
+  .veredicto{border-radius:12px;padding:18px 20px;font-family:var(--serif);font-size:21px;font-weight:700;line-height:1.35}
+  .veredicto.bueno{background:#E7F4EE;color:#1E6B4F;border:1px solid #BFE3D2}
+  .veredicto.malo{background:#FBEAE6;color:#96291C;border:1px solid #F0C9C0}
+  .veredicto.neutro{background:#F3EFE7;color:var(--ink);border:1px solid var(--card-edge)}
+  .detalle{font-size:14px;color:var(--ink-soft);margin-top:12px;line-height:1.65}
+  .detalle b{font-family:var(--mono)}
+  .err{color:var(--red);font-family:var(--mono);font-size:13px;margin-top:12px}
+  footer{border-top:2px solid var(--ink);margin-top:46px;padding:24px 0 60px}
+  footer .wrap{font-family:var(--mono);font-size:12px;color:var(--muted)}
+  footer a{text-decoration:none}
+  .disclaimer{background:#F3EFE7;border-left:3px solid var(--amber);border-radius:10px;padding:14px 18px;font-size:13px;color:var(--muted);margin:30px 0 0}
+  @media(max-width:600px){h1{font-size:30px}.tool{padding:20px 16px}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="tri">%</span>Con Interés<span class="tag">La economía, con interés</span></a>
+    <a href="index.html" class="mh-back">← Portada</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="kicker">% Herramientas · gratis · sin registro</div>
+    <h1>Tu bolsillo, en números</h1>
+    <p>Tres calculadoras con datos oficiales (INDEC y mercado cambiario). Todo se calcula en tu navegador: no guardamos nada, no pedimos nada.</p>
+    <p class="fine">Datos: argentinadatos.com (IPC INDEC · cotizaciones históricas). Se actualizan solos.</p>
+  </div>
+
+  <!-- 1 · SUELDO VS INFLACIÓN -->
+  <section class="tool" id="t-sueldo">
+    <div class="t-kick">1 · Sueldo</div>
+    <h2>¿Tu sueldo le ganó a la inflación?</h2>
+    <p class="t-sub">Compará cuánto cobrabas antes con cuánto cobrás hoy, descontando la inflación acumulada entre las dos fechas.</p>
+    <div class="campos">
+      <div class="campo"><label>Cobrabas (por mes)</label><input type="number" id="s-antes" placeholder="800000" min="1"></div>
+      <div class="campo"><label>En el mes</label><select id="s-mes"></select></div>
+      <div class="campo"><label>Cobrás hoy</label><input type="number" id="s-hoy" placeholder="1300000" min="1"></div>
+      <button class="calc" id="s-btn">Calcular</button>
+    </div>
+    <div class="resultado" id="s-res"></div>
+  </section>
+
+  <!-- 2 · DEFLACTOR -->
+  <section class="tool" id="t-deflactor">
+    <div class="t-kick">2 · El valor de la plata</div>
+    <h2>¿Cuánto vale hoy la plata de antes?</h2>
+    <p class="t-sub">Un monto de otra época, traducido a pesos de hoy según la inflación oficial acumulada.</p>
+    <div class="campos">
+      <div class="campo"><label>Monto</label><input type="number" id="d-monto" placeholder="100000" min="1"></div>
+      <div class="campo"><label>De</label><select id="d-mes"></select></div>
+      <button class="calc" id="d-btn">Calcular</button>
+    </div>
+    <div class="resultado" id="d-res"></div>
+  </section>
+
+  <!-- 3 · DÓLAR VS PRECIOS -->
+  <section class="tool" id="t-dolar">
+    <div class="t-kick">3 · Ahorro</div>
+    <h2>¿Qué corrió más rápido: el dólar o los precios?</h2>
+    <p class="t-sub">Si en tal mes comprabas dólar blue u oficial, ¿le ganaste a la inflación hasta hoy? Mirada al pasado con datos reales — no es una recomendación a futuro.</p>
+    <div class="campos">
+      <div class="campo"><label>Desde</label><select id="x-mes"></select></div>
+      <button class="calc" id="x-btn">Calcular</button>
+    </div>
+    <div class="resultado" id="x-res"></div>
+  </section>
+
+  <div class="disclaimer">Estas herramientas usan datos históricos oficiales y de mercado con fines informativos y educativos. No constituyen asesoramiento financiero ni una recomendación de inversión: lo que pasó no predice lo que va a pasar. <a href="legal.html">Más en el aviso legal</a>.</div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">Portada</a> · <a href="hoy.html">El cierre</a> · <a href="aprender.html">Modo Aprendizaje</a> · <a href="legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var MES=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+  var fmt=function(n,dec){return Number(n).toLocaleString("es-AR",{maximumFractionDigits:dec==null?0:dec,minimumFractionDigits:0});};
+  var pct=function(n){return (n>=0?"+":"−")+Math.abs(n).toFixed(1).replace(".",",")+"%";};
+
+  var IPC=null, BLUE=null, OFICIAL=null;
+  function getJSON(u){return fetch(u).then(function(r){return r.json();});}
+
+  function cargar(){
+    return Promise.all([
+      getJSON("https://api.argentinadatos.com/v1/finanzas/indices/inflacion"),
+      getJSON("https://api.argentinadatos.com/v1/cotizaciones/dolares/blue"),
+      getJSON("https://api.argentinadatos.com/v1/cotizaciones/dolares/oficial")
+    ]).then(function(r){
+      IPC=r[0]; BLUE=r[1]; OFICIAL=r[2];
+      poblarMeses();
+    });
+  }
+
+  // factor de inflación acumulada entre el mes elegido (inclusive el mes SIGUIENTE
+  // al elegido, porque el sueldo de ese mes ya tenía los precios de ese mes) y hoy
+  function factorInflacion(desdeYM){
+    var f=1;
+    for(var i=0;i<IPC.length;i++){
+      var ym=IPC[i].fecha.slice(0,7);
+      if(ym>desdeYM) f*=(1+IPC[i].valor/100);
+    }
+    return f;
+  }
+  function ultimoIPC(){ return IPC[IPC.length-1]; }
+
+  function poblarMeses(){
+    // meses disponibles: desde el primero de la serie IPC hasta el último
+    var sels=[document.getElementById("s-mes"),document.getElementById("d-mes"),document.getElementById("x-mes")];
+    var opts=[];
+    for(var i=IPC.length-1;i>=0;i--){
+      var ym=IPC[i].fecha.slice(0,7), y=ym.slice(0,4), m=+ym.slice(5,7);
+      opts.push('<option value="'+ym+'">'+MES[m-1]+" "+y+"</option>");
+    }
+    var html=opts.join("");
+    sels.forEach(function(s){ s.innerHTML=html; });
+    // defaults: 12 meses atrás
+    if(IPC.length>12){
+      var def=IPC[IPC.length-13].fecha.slice(0,7);
+      sels.forEach(function(s){ s.value=def; });
+    }
+  }
+
+  function dolarEn(serie, ym){
+    // último valor de venta del mes ym (o el más cercano anterior)
+    var mejor=null;
+    for(var i=0;i<serie.length;i++){
+      var f=serie[i].fecha;
+      if(f.slice(0,7)<=ym) { if(!mejor||f>mejor.fecha) mejor=serie[i]; }
+    }
+    return mejor?+mejor.venta:null;
+  }
+  function dolarHoy(serie){ return +serie[serie.length-1].venta; }
+
+  function show(id, html){ var e=document.getElementById(id); e.innerHTML=html; e.classList.add("on"); }
+
+  // --- 1 · sueldo ---
+  document.getElementById("s-btn").addEventListener("click",function(){
+    var antes=+document.getElementById("s-antes").value, hoy=+document.getElementById("s-hoy").value;
+    var ym=document.getElementById("s-mes").value;
+    if(!antes||!hoy){ show("s-res",'<div class="err">Completá los dos sueldos.</div>'); return; }
+    var f=factorInflacion(ym);
+    var equivalente=antes*f;
+    var real=(hoy/equivalente-1)*100;
+    var u=ultimoIPC();
+    var clase=real>=1?"bueno":(real<=-1?"malo":"neutro");
+    var frase=real>=1?"Tu sueldo le GANÓ a la inflación":(real<=-1?"Tu sueldo PERDIÓ contra la inflación":"Tu sueldo quedó prácticamente empatado con la inflación");
+    show("s-res",
+      '<div class="veredicto '+clase+'">'+frase+': '+pct(real)+' en términos reales.</div>'
+      +'<div class="detalle">Para comprar lo mismo que con <b>$'+fmt(antes)+'</b> en '+etiqueta(ym)+', hoy necesitarías <b>$'+fmt(equivalente)+'</b> (inflación acumulada del período: <b>'+pct((f-1)*100)+'</b>). Cobrás <b>$'+fmt(hoy)+'</b>: tu poder de compra es <b>'+pct(real)+'</b>. Último dato de IPC: '+etiqueta(u.fecha.slice(0,7))+'. Fuente: INDEC vía argentinadatos.com.</div>');
+  });
+
+  // --- 2 · deflactor ---
+  document.getElementById("d-btn").addEventListener("click",function(){
+    var monto=+document.getElementById("d-monto").value;
+    var ym=document.getElementById("d-mes").value;
+    if(!monto){ show("d-res",'<div class="err">Poné un monto.</div>'); return; }
+    var f=factorInflacion(ym);
+    show("d-res",
+      '<div class="veredicto neutro">$'+fmt(monto)+' de '+etiqueta(ym)+' equivalen a <u>$'+fmt(monto*f)+'</u> de hoy.</div>'
+      +'<div class="detalle">La inflación acumulada desde '+etiqueta(ym)+' es <b>'+pct((f-1)*100)+'</b>. Dicho al revés: $'+fmt(monto)+' de hoy compran lo que compraban <b>$'+fmt(monto/f)+'</b> en '+etiqueta(ym)+'. Fuente: IPC INDEC vía argentinadatos.com.</div>');
+  });
+
+  // --- 3 · dólar vs precios ---
+  document.getElementById("x-btn").addEventListener("click",function(){
+    var ym=document.getElementById("x-mes").value;
+    var f=factorInflacion(ym);
+    var b0=dolarEn(BLUE,ym), b1=dolarHoy(BLUE);
+    var o0=dolarEn(OFICIAL,ym), o1=dolarHoy(OFICIAL);
+    if(!b0||!o0){ show("x-res",'<div class="err">No hay cotización para ese mes.</div>'); return; }
+    var subaB=(b1/b0-1)*100, subaO=(o1/o0-1)*100, inf=(f-1)*100;
+    var realB=((1+subaB/100)/f-1)*100, realO=((1+subaO/100)/f-1)*100;
+    var ganador = realB>=0 ? "El dólar blue le ganó a los precios" : "Los precios corrieron más rápido que el dólar blue";
+    var clase = realB>=0 ? "bueno" : "malo";
+    show("x-res",
+      '<div class="veredicto '+clase+'">'+ganador+' desde '+etiqueta(ym)+': '+pct(realB)+' en términos reales.</div>'
+      +'<div class="detalle">Desde '+etiqueta(ym)+': el <b>blue</b> pasó de $'+fmt(b0)+' a $'+fmt(b1)+' (<b>'+pct(subaB)+'</b>); el <b>oficial</b> de $'+fmt(o0)+' a $'+fmt(o1)+' (<b>'+pct(subaO)+'</b>); la <b>inflación acumulada</b> fue <b>'+pct(inf)+'</b>. En términos reales: blue <b>'+pct(realB)+'</b> · oficial <b>'+pct(realO)+'</b>. Es una foto del pasado, no una recomendación. Fuentes: INDEC y cotizaciones históricas vía argentinadatos.com.</div>');
+  });
+
+  function etiqueta(ym){ return MES[+ym.slice(5,7)-1]+" "+ym.slice(0,4); }
+
+  cargar().catch(function(){
+    ["s-res","d-res","x-res"].forEach(function(id){
+      show(id,'<div class="err">No se pudieron cargar los datos en este momento. Probá de nuevo en unos minutos.</div>');
+    });
+  });
+})();
+</script>
+<!-- CI-WIDGETS --><script defer src="assets/ticker.js?v=5"></script>
+</body>
+</html>

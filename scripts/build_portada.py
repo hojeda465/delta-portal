@@ -256,7 +256,10 @@ HTML = f"""<!DOCTYPE html>
   .lead.is-hidden,.card.is-hidden{{display:none}}
 
   main{{padding:30px 0 20px}}
-  .learn-link{{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;display:flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600}}
+  .nav-extra{{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;white-space:nowrap;font-weight:600;padding:6px 4px}}
+  .nav-extra:first-of-type{{margin-left:auto}}
+  .nav-extra:hover{{color:var(--teal)}}
+  .learn-link{{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;display:flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600}}
   .learn-link b{{background:var(--amber);color:#fff;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:999px;font-weight:600}}
   .learn-link:hover{{color:var(--teal)}}
   @media(max-width:560px){{.learn-link{{margin-left:0;width:100%;padding-top:6px}}}}
@@ -344,10 +347,11 @@ HTML = f"""<!DOCTYPE html>
   </div>
 </header>
 
-<nav class="secnav"><div class="wrap">{secciones_nav}<a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
+<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
 
 <main class="wrap">
   {lead_html}
+  <div id="ci-semaforo"></div>
   {destacadas_html}
   {secciones_html}
   {aprender_html}
@@ -412,10 +416,139 @@ out = os.path.join(ROOT, "index.html")
 with open(out, "w", encoding="utf-8") as f:
     f.write(HTML)
 
+# ---- hoy.html — "El cierre": los 5 datos del día, finito ----------------
+_top5 = articulos[:5]
+_cards_hoy = ""
+for _i, _a in enumerate(_top5):
+    _sc = SEC_COLOR.get(_a["seccion"], "#0E7C86")
+    _cards_hoy += f"""
+    <article class="c-card" data-paso="{_i+1}">
+      <div class="c-head"><span class="c-n">{_i+1}</span><span class="c-sec" style="color:{_sc}">{escape(_a['seccion'])}</span><span class="c-check">&#10003;</span></div>
+      <div class="c-num">{escape(_a.get('numero',''))} <span>{escape(_a.get('numero_label',''))}</span></div>
+      <h2>{escape(_a['titulo'])}</h2>
+      <p>{escape(_a['bajada'])}</p>
+      <a class="c-link" href="{escape(_a['archivo'])}">Leer la nota completa &rarr;</a>
+    </article>"""
+
+HOY = f"""<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El cierre — los 5 datos de hoy — {escape(portal['nombre'])}</title>
+<meta name="description" content="La edición finita de Con Interés: los 5 datos verificados del día, 30 segundos cada uno. Terminás y estás al día. Sin publicidad, sin registro.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="canonical" href="{SITE}/hoy.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{{
+    --paper:#FAF8F4;--ink:#16130F;--ink-soft:#3C3833;--teal:#0E7C86;--teal-deep:#0A5C63;
+    --amber:#C4701F;--green:#2E8B6F;--muted:#6B6560;--faint:#8A847C;
+    --rule:#DCD6CC;--card:#FFFFFF;--card-edge:#EAE4DA;
+    --serif:"Source Serif 4",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace;
+  }}
+  *{{box-sizing:border-box}}
+  body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}}
+  .wrap{{max-width:680px;margin:0 auto;padding:0 22px}}
+  a{{color:var(--teal-deep)}}
+  .masthead{{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:50}}
+  .masthead .wrap{{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:960px}}
+  .brand{{font-family:var(--serif);font-weight:700;font-size:26px;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}}
+  .brand .tri{{color:var(--teal)}}
+  .brand .tag{{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:8px;font-weight:500}}
+  .mh-back{{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none}}
+  .barra{{position:sticky;top:56px;z-index:45;height:5px;background:var(--rule)}}
+  .barra i{{display:block;height:100%;width:0;background:var(--teal);transition:width .2s}}
+  .hero{{padding:36px 0 8px;text-align:center}}
+  .kicker{{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-deep);font-weight:600;margin-bottom:10px}}
+  h1{{font-family:var(--serif);font-weight:700;font-size:40px;line-height:1.1;margin:0 0 10px}}
+  .hero p{{font-size:16px;color:var(--muted);margin:0}}
+  .c-card{{background:var(--card);border:1px solid var(--card-edge);border-radius:16px;padding:26px;margin:22px 0}}
+  .c-head{{display:flex;align-items:center;gap:12px;margin-bottom:14px}}
+  .c-n{{font-family:var(--mono);font-weight:600;font-size:14px;background:var(--ink);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center}}
+  .c-sec{{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}}
+  .c-check{{margin-left:auto;color:var(--rule);font-size:20px;font-weight:700;transition:color .3s}}
+  .c-card.visto .c-check{{color:var(--green)}}
+  .c-num{{font-family:var(--mono);font-size:26px;font-weight:600;color:var(--teal-deep);margin-bottom:10px;line-height:1.3}}
+  .c-num span{{font-family:var(--sans);font-size:13px;color:var(--muted);font-weight:400}}
+  .c-card h2{{font-family:var(--serif);font-size:23px;font-weight:700;line-height:1.2;margin:0 0 10px}}
+  .c-card p{{font-size:15px;color:var(--ink-soft);margin:0 0 14px}}
+  .c-link{{font-family:var(--mono);font-size:12px;font-weight:600;text-decoration:none}}
+  .fin{{background:linear-gradient(120deg,#16130F,#0A5C63);border-radius:16px;color:#fff;text-align:center;padding:40px 28px;margin:30px 0}}
+  .fin .sello{{font-size:44px;line-height:1}}
+  .fin h2{{font-family:var(--serif);font-size:28px;font-weight:700;margin:12px 0 8px;color:#fff}}
+  .fin p{{font-size:14px;color:#CDE4E1;margin:0 0 18px}}
+  .fin a{{display:inline-block;font-family:var(--sans);font-size:14px;font-weight:600;background:#fff;color:var(--ink);padding:11px 22px;border-radius:10px;text-decoration:none}}
+  .fin a:hover{{background:#F3D9A8}}
+  footer{{border-top:2px solid var(--ink);margin-top:40px;padding:24px 0 60px}}
+  footer .wrap{{font-family:var(--mono);font-size:12px;color:var(--muted)}}
+  footer a{{text-decoration:none}}
+  @media(max-width:600px){{h1{{font-size:31px}}.c-card{{padding:20px 18px}}}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="tri">%</span>{escape(portal['nombre'])}<span class="tag">{escape(portal['tagline'])}</span></a>
+    <a href="index.html" class="mh-back">← Portada</a>
+  </div>
+</header>
+<div class="barra"><i id="prog"></i></div>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="kicker">&#10003; El cierre · {FECHA_MASTHEAD}</div>
+    <h1>Los 5 datos de hoy</h1>
+    <p>30 segundos cada uno. Cuando terminás, estás al día. Eso es todo — sin scroll infinito.</p>
+  </div>
+  {_cards_hoy}
+  <div class="fin" id="fin">
+    <div class="sello">&#10003;</div>
+    <h2>Estás al día.</h2>
+    <p>Eso era todo lo importante de hoy, verificado. Volvé mañana — o seguí explorando si te quedaste con ganas.</p>
+    <a href="index.html">Ir a la portada completa &rarr;</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">Portada</a> · <a href="herramientas.html">Herramientas</a> · <a href="aprender.html">Modo Aprendizaje</a> · <a href="legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a>
+  </div>
+</footer>
+
+<script>
+(function(){{
+  var cards=[].slice.call(document.querySelectorAll('.c-card'));
+  var prog=document.getElementById('prog');
+  function tick(){{
+    var vistos=0;
+    cards.forEach(function(c){{
+      var r=c.getBoundingClientRect();
+      if(r.top < window.innerHeight*0.6) c.classList.add('visto');
+      if(c.classList.contains('visto')) vistos++;
+    }});
+    prog.style.width=(vistos/cards.length*100)+'%';
+  }}
+  window.addEventListener('scroll',tick,{{passive:true}});
+  tick();
+}})();
+</script>
+<!-- CI-WIDGETS --><script defer src="assets/ticker.js?v=5"></script>
+</body>
+</html>"""
+with open(os.path.join(ROOT, "hoy.html"), "w", encoding="utf-8") as f:
+    f.write(HOY)
+
 # ---- sitemap.xml (para SEO) --------------------------------------------
 urls = [f"  <url><loc>{SITE}/</loc><changefreq>hourly</changefreq><priority>1.0</priority></url>"]
-for pg in ("aprender.html", "como-trabajamos.html", "legal.html", "privacidad.html"):
+urls.append(f"  <url><loc>{SITE}/hoy.html</loc><changefreq>hourly</changefreq><priority>0.9</priority></url>")
+for pg in ("aprender.html", "como-trabajamos.html", "legal.html", "privacidad.html", "herramientas.html"):
     urls.append(f"  <url><loc>{SITE}/{pg}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>")
+for ind in ("dolar-oficial", "dolar-blue", "dolar-mep", "riesgo-pais", "inflacion"):
+    urls.append(f"  <url><loc>{SITE}/indicador/{ind}.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>")
 for a in articulos:
     urls.append(
         f"  <url><loc>{SITE}/{escape(a['archivo'])}</loc>"

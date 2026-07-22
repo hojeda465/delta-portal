@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://coninteres.com/</loc><changefreq>hourly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://coninteres.com/hoy.html</loc><changefreq>hourly</changefreq><priority>0.9</priority></url>
   <url><loc>https://coninteres.com/aprender.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://coninteres.com/como-trabajamos.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://coninteres.com/legal.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://coninteres.com/privacidad.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://coninteres.com/herramientas.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://coninteres.com/indicador/dolar-oficial.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coninteres.com/indicador/dolar-blue.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coninteres.com/indicador/dolar-mep.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coninteres.com/indicador/riesgo-pais.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
+  <url><loc>https://coninteres.com/indicador/inflacion.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>
   <url><loc>https://coninteres.com/articulos/2026-07-22-despachos-cemento-tercer-mes-baja.html</loc><lastmod>2026-07-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://coninteres.com/articulos/2026-07-21-rigi-pampa-4521-millones.html</loc><lastmod>2026-07-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://coninteres.com/articulos/2026-07-21-record-gas-neuquen-gnl.html</loc><lastmod>2026-07-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

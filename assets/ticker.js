@@ -35,6 +35,16 @@
                  sub: "variación mensual del IPC (INDEC), en %" }
   };
   var MES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"];
+  var FICHA = { oficial: "dolar-oficial", blue: "dolar-blue", mep: "dolar-mep", riesgo: "riesgo-pais", inflacion: "inflacion" };
+
+  // raíz del sitio, derivada de la URL de este script (portada, /articulos,
+  // /lecciones e /indicador por igual)
+  var SITE_BASE = (function () {
+    try {
+      var s = document.querySelector('script[src*="ticker.js"]');
+      return s ? s.src.replace(/assets\/ticker\.js.*$/, "") : "";
+    } catch (e) { return ""; }
+  })();
 
   /* ---------- estilos (autocontenidos) ---------- */
   var css = ""
@@ -72,6 +82,19 @@
     + ".ci-h-estado{font-family:'IBM Plex Mono',monospace;font-size:12px;color:#6B6560;padding:30px 0;text-align:center}"
     + ".ci-h-tt{position:fixed;pointer-events:none;background:#16130F;color:#fff;font-family:'IBM Plex Mono',monospace;font-size:12px;padding:6px 10px;border-radius:7px;opacity:0;transition:opacity .1s;z-index:200;white-space:nowrap;line-height:1.5}"
     + ".ci-h-tt b{color:#4FC0A4}"
+    + ".ci-h-ficha{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:#0A5C63;text-decoration:none;border:1px solid #DCD6CC;border-radius:999px;padding:4px 12px}"
+    + ".ci-h-ficha:hover{border-color:#0E7C86}"
+    /* semáforo económico (portada) */
+    + "#ci-semaforo{margin:0 0 6px}"
+    + ".ci-sem{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:0 0 26px}"
+    + ".ci-sem-t{background:#fff;border:1px solid #EAE4DA;border-radius:12px;padding:12px 14px;text-decoration:none;display:block;transition:.15s}"
+    + ".ci-sem-t:hover{border-color:#0E7C86;transform:translateY(-2px)}"
+    + ".ci-sem-t .k{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:#6B6560;font-weight:600;display:block;margin-bottom:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}"
+    + ".ci-sem-t .v{font-family:'IBM Plex Mono',monospace;font-size:19px;font-weight:600;color:#16130F}"
+    + ".ci-sem-t .d{font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;display:block;margin-top:3px}"
+    + ".ci-sem-t .d.up{color:#C0392B}.ci-sem-t .d.dn{color:#2E8B6F}.ci-sem-t .d.eq{color:#8A847C}"
+    + ".ci-sem-cap{font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8A847C;margin:-18px 0 26px}"
+    + "@media(max-width:820px){.ci-sem{grid-template-columns:repeat(2,1fr)}}"
     + "@media(max-width:600px){.ci-hist .ci-h-in{padding:14px 16px 16px}.ci-h-tit{font-size:17px}}";
 
   var style = document.createElement("style");
@@ -265,7 +288,7 @@
     panel = document.createElement("div");
     panel.className = "ci-hist";
     panel.innerHTML = '<div class="ci-h-in">'
-      + '<div class="ci-h-top"><span class="ci-h-tit"></span><span class="ci-h-last"></span><span class="ci-h-var"></span><button class="ci-h-cerrar" type="button">Cerrar ✕</button></div>'
+      + '<div class="ci-h-top"><span class="ci-h-tit"></span><span class="ci-h-last"></span><span class="ci-h-var"></span><a class="ci-h-ficha" href="#">Ficha completa &rarr;</a><button class="ci-h-cerrar" type="button">Cerrar ✕</button></div>'
       + '<p class="ci-h-sub"></p>'
       + '<div class="ci-h-rangos">'
       + [6, 12, 18, 24].map(function (m) { return '<button type="button" class="ci-h-rango' + (m === 12 ? " activo" : "") + '" data-m="' + m + '">' + m + ' meses</button>'; }).join("")
@@ -304,6 +327,7 @@
     abiertoKey = key;
     btn.classList.add("open");
     var s = SERIES[key];
+    panel.querySelector(".ci-h-ficha").href = SITE_BASE + "indicador/" + FICHA[key] + ".html";
     panel.querySelector(".ci-h-tit").textContent = s.label + " — historial";
     panel.querySelector(".ci-h-sub").textContent = s.sub;
     panel.querySelector(".ci-h-last").textContent = "";
@@ -381,7 +405,53 @@
     });
   }
 
-  function init() { renderTicker(); }
+  /* ============================================================
+     SEMÁFORO ECONÓMICO (solo si la página tiene #ci-semaforo)
+     La foto del país en 10 segundos: valor de hoy + variación
+     de 30 días (para inflación: vs. el mes anterior, en puntos).
+     ============================================================ */
+  function renderSemaforo() {
+    var mount = document.getElementById("ci-semaforo");
+    if (!mount) return;
+    var DEFS = [
+      { key: "oficial", label: "Dólar oficial" },
+      { key: "blue", label: "Dólar blue" },
+      { key: "mep", label: "Dólar MEP" },
+      { key: "riesgo", label: "Riesgo país" },
+      { key: "inflacion", label: "Inflación" }
+    ];
+    Promise.all(DEFS.map(function (d) {
+      return histData(d.key).then(function (pts) { return { def: d, pts: pts }; }).catch(function () { return null; });
+    })).then(function (rs) {
+      rs = rs.filter(Boolean).filter(function (r) { return r.pts && r.pts.length > 1; });
+      if (!rs.length) return;
+      var h = '<div class="ci-sem">';
+      rs.forEach(function (r) {
+        var pts = r.pts, ult = pts[pts.length - 1], delta, sufijo;
+        if (r.def.key === "inflacion") {
+          var prev = pts[pts.length - 2];
+          delta = ult.v - prev.v; sufijo = " pp vs mes anterior";
+        } else {
+          var corte = new Date(); corte.setDate(corte.getDate() - 30);
+          var lim = corte.toISOString().slice(0, 10), base = pts[0];
+          for (var i = 0; i < pts.length; i++) { if (pts[i].f <= lim) base = pts[i]; }
+          delta = (ult.v / base.v - 1) * 100; sufijo = "% en 30 días";
+        }
+        var cls = Math.abs(delta) < 0.05 ? "eq" : (delta > 0 ? "up" : "dn");
+        var flecha = cls === "eq" ? "→" : (delta > 0 ? "▲" : "▼");
+        h += '<a class="ci-sem-t" href="' + SITE_BASE + "indicador/" + FICHA[r.def.key] + '.html">'
+          + '<span class="k">' + r.def.label + '</span>'
+          + '<span class="v">' + fmtV(r.def.key, ult.v) + "</span>"
+          + '<span class="d ' + cls + '">' + flecha + " " + Math.abs(delta).toFixed(1).replace(".", ",") + sufijo + "</span>"
+          + "</a>";
+      });
+      h += "</div>"
+        + '<p class="ci-sem-cap">Semáforo económico · rojo = subió, verde = bajó · tocá un indicador para ver su ficha completa</p>';
+      mount.innerHTML = h;
+    });
+  }
+
+  function init() { renderTicker(); setTimeout(renderSemaforo, 400); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
 })();
