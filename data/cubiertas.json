@@ -385,6 +385,13 @@
       "fecha": "2026-07-22",
       "estado": "en_cola",
       "articulo_id": "2026-07-22-emae-actividad-mayo-freno"
+    },
+    {
+      "tema": "swap de monedas con China / repago del tramo activado y renovación del acuerdo (US$19.000 M, vence 6/08/2026)",
+      "angulo": "ángulo de datos NUEVO respecto de las notas previas de reservas/BCRA (que fueron sobre el FLUJO de compras diarias del BCRA y sobre los depósitos en dólares): esta nota es sobre la DEUDA en yuanes con China y su ANATOMÍA. El tramo ACTIVADO del swap (lo que la Argentina realmente usaba y debía) cayó de un pico de ~US$5.000 M a ~US$679 M (4.600 M de yuanes) al 14/01/2026, tras devolverle al Banco Popular de China ~US$4.300 M (casi el 90%). Serie del balance del BCRA: 21.000 M yuanes (US$3.097 M, dic-24) -> 7.000 M yuanes (US$1.032 M, dic-25) -> 4.600 M yuanes (US$679 M, ene-26). Pese al repago, el Gobierno (Bausili viajó a China) renueva el CONTRATO MARCO completo (130.000 M yuanes ~= US$19.000 M) que vence el 6/08/2026: el swap deja de ser deuda en uso y vuelve a ser seguro contingente. Dos lecturas: (A/oficial) reservas más 'propias' y menos prestadas, menor dependencia del yuan; (B/matiz) la red de US$19.000 M se mantiene intacta y los dólares para pagar salieron en parte de otra deuda (se cambió de acreedor). Cifra ancla (US$679 M / caída del tramo activado) CONFIRMADA por FUENTE PRIMARIA (BCRA, Estados Contables del Ejercicio 2025) + reproducida por Infobae, El Cronista (US$675 M, redondeo yuan/USD) y Ámbito; total del acuerdo y vencimiento CONFIRMADOS (BCRA + El Cronista + Ámbito); viaje y renovación CONFIRMADOS por múltiples medios (La Gaceta, Diario Panorama, El Cronista, La Nación). Coherencia interna verificada (yuan/USD ~6,78 constante en toda la serie; 5.000->679 = 86% repagado). Contexto de apoyo: reservas brutas US$49.536 M al 7/07/2026 (máximo en casi 7 años). Nota: US$679 M es el último dato oficial (balance ene-2026); se aclara en la nota que pudo variar. Se descartó por sobre-cobertura el ángulo de reservas brutas/netas como nota propia.",
+      "fecha": "2026-07-22",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-22-swap-china-repago-renovacion"
     }
   ]
 }
