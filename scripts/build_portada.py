@@ -308,6 +308,12 @@ HTML = f"""<!DOCTYPE html>
   .concept .sep{{color:#3E3A34}}
 
   .secnav{{border-bottom:1px solid var(--rule);position:sticky;top:96px;background:var(--paper);z-index:60;box-shadow:0 1px 0 rgba(22,19,15,.04)}}
+  .lema{{border-bottom:1px solid var(--rule);background:var(--paper)}}
+  .lema .wrap{{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;padding:16px 24px 15px}}
+  .lema .l1{{font-family:var(--serif);font-size:22px;font-weight:700;font-style:italic;color:var(--ink);letter-spacing:-.01em}}
+  .lema .l1 .fin{{color:var(--teal)}}
+  .lema .l2{{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em}}
+  @media(max-width:600px){{.lema .l1{{font-size:18px}}.lema .wrap{{gap:6px;padding:12px 24px}}}}
   .secnav .wrap{{display:flex;gap:8px;padding:12px 24px;flex-wrap:wrap}}
   .sec-chip{{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--sc);background:var(--paper);border:1px solid var(--card-edge);padding:6px 13px;border-radius:999px;font-weight:600;cursor:pointer;transition:.15s}}
   .sec-chip:hover{{border-color:var(--sc)}}
@@ -431,6 +437,8 @@ HTML = f"""<!DOCTYPE html>
 </header>
 
 <nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
+
+<div class="lema"><div class="wrap"><span class="l1">Entender no debería costarte nada<span class="fin">.</span></span><span class="l2">Datos verificados, explicados sin jerga, sin pedirte nada a cambio.</span></div></div>
 
 <main class="wrap">
   {lead_html}
