@@ -34,11 +34,29 @@
     "letes": "Letras del Tesoro: deuda de corto plazo que emite el Estado para financiarse."
   };
 
+  // término -> lección del Modo Aprendizaje (el puente noticia→educación)
+  var LECCION = {
+    "ipc": "../lecciones/inflacion.html",
+    "ipim": "../lecciones/inflacion.html",
+    "interanual": "../lecciones/inflacion.html",
+    "riesgo país": "../lecciones/riesgo-pais.html",
+    "embi": "../lecciones/riesgo-pais.html",
+    "uva": "../lecciones/uva-credito-conviene.html",
+    "plazo fijo": "../lecciones/tasa-real.html",
+    "dólar blue": "../lecciones/pesos-o-dolares.html",
+    "dólar mep": "../lecciones/pesos-o-dolares.html",
+    "ccl": "../lecciones/pesos-o-dolares.html",
+    "brecha cambiaria": "../lecciones/pesos-o-dolares.html",
+    "carry trade": "../lecciones/invertir-primer-paso.html"
+  };
+
   var css = ""
     + ".gl-t{border-bottom:1px dotted #0E7C86;cursor:help;position:relative}"
     + ".gl-pop{position:absolute;z-index:120;background:#16130F;color:#EDE9E3;font-family:'Inter',system-ui,sans-serif;font-size:13px;line-height:1.55;padding:12px 14px;border-radius:10px;max-width:320px;box-shadow:0 8px 30px rgba(22,19,15,.35)}"
     + ".gl-pop .gl-k{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#4FC0A4;font-weight:600;display:block;margin-bottom:5px}"
     + ".gl-pop .gl-x{position:absolute;top:6px;right:10px;color:#8A847C;cursor:pointer;font-size:14px}"
+    + ".gl-pop .gl-lec{display:block;margin-top:10px;padding-top:10px;border-top:1px solid #3E3A34;font-family:'IBM Plex Mono',monospace;font-size:11px;font-weight:600;color:#4FC0A4;text-decoration:none}"
+    + ".gl-pop .gl-lec:hover{color:#7FD9C2}"
     + ".ci-audio{display:inline-flex;align-items:center;gap:7px;font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;color:#0A5C63;background:none;border:1px solid #DCD6CC;border-radius:999px;padding:5px 13px;cursor:pointer;transition:.15s}"
     + ".ci-audio:hover{border-color:#0E7C86}"
     + ".ci-audio.on{background:#0E7C86;color:#fff;border-color:#0E7C86}";
@@ -82,7 +100,9 @@
       var term = t.getAttribute("data-term");
       var pop = document.createElement("div");
       pop.className = "gl-pop";
-      pop.innerHTML = '<span class="gl-x">✕</span><span class="gl-k">' + term + "</span>" + GLOSARIO[term.toLowerCase()] ;
+      var lec = LECCION[term.toLowerCase()];
+      pop.innerHTML = '<span class="gl-x">✕</span><span class="gl-k">' + term + "</span>" + GLOSARIO[term.toLowerCase()]
+        + (lec ? '<a class="gl-lec" href="' + lec + '">¿Querés entenderlo de verdad? → Lección en minutos, gratis</a>' : "");
       document.body.appendChild(pop);
       var r = t.getBoundingClientRect();
       var x = Math.min(r.left, window.innerWidth - 340);

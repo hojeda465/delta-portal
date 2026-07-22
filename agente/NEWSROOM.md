@@ -255,6 +255,27 @@ en vivo).
 **"El cierre" (`hoy.html`).** Se regenera solo con `build_portada.py`: toma las
 5 notas más recientes del manifiesto. No editar a mano.
 
+**La pregunta del día (`data/pregunta.json`) — OBLIGATORIO, una vez por día.**
+En la PRIMERA corrida de cada día (la de las 8:00), después de dejar el
+borrador en la cola, el Publicador actualiza `data/pregunta.json` con una
+pregunta derivada de la nota más importante publicada el día anterior:
+- `pregunta`: concreta y con el dato adentro; que un no economista pueda
+  razonarla (no adivinarla).
+- `opciones`: 3; una correcta y dos distractores PLAUSIBLES (errores que la
+  gente comete de verdad, nunca opciones absurdas).
+- `explicacion`: 3–5 líneas que enseñan el concepto, no solo la respuesta.
+- `nota`: la ruta de la nota origen; `leccion`: la lección del Modo
+  Aprendizaje relacionada si existe (o "").
+La pregunta es EDUCATIVA, no de trivia: el que la falla también aprende.
+
+**Serie semanal "Economía desde cero" (lecciones).** Una vez por semana (la
+corrida del lunes a las 8:00), la redacción produce UNA lección nueva para
+`lecciones/`, con el estilo de las existentes, anclada en la noticia más
+importante de la semana anterior ("qué es X, y por qué esta semana importó").
+Se agrega a la ruta correspondiente en `aprender.html` y al mapa de
+`assets/leccion-hoy.js` (palabras clave). Mismo estándar de verificación que
+las notas.
+
 ---
 
 ## 5. Flujo de publicación con cola de revisión

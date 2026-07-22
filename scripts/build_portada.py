@@ -445,7 +445,7 @@ HTML = f"""<!DOCTYPE html>
   </div>
 </header>
 
-<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
+<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="pregunta.html">? La pregunta</a><a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
 
 <div class="lema"><div class="wrap"><span class="l1">Entender no debería costarte nada<span class="fin">.</span></span><span class="l2">Datos verificados, explicados sin jerga, sin pedirte nada a cambio.</span></div></div>
 
@@ -645,7 +645,7 @@ with open(os.path.join(ROOT, "hoy.html"), "w", encoding="utf-8") as f:
 # ---- sitemap.xml (para SEO) --------------------------------------------
 urls = [f"  <url><loc>{SITE}/</loc><changefreq>hourly</changefreq><priority>1.0</priority></url>"]
 urls.append(f"  <url><loc>{SITE}/hoy.html</loc><changefreq>hourly</changefreq><priority>0.9</priority></url>")
-for pg in ("aprender.html", "como-trabajamos.html", "legal.html", "privacidad.html", "herramientas.html"):
+for pg in ("aprender.html", "como-trabajamos.html", "legal.html", "privacidad.html", "herramientas.html", "pregunta.html"):
     urls.append(f"  <url><loc>{SITE}/{pg}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>")
 for ind in ("dolar-oficial", "dolar-blue", "dolar-mep", "riesgo-pais", "inflacion"):
     urls.append(f"  <url><loc>{SITE}/indicador/{ind}.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>")

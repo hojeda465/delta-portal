@@ -1,0 +1,14 @@
+{
+  "descripcion": "La pregunta del día: la redacción la renueva una vez por día, derivada de la nota principal. Ver NEWSROOM.md.",
+  "fecha": "2026-07-22",
+  "pregunta": "El PBI argentino creció 2,3% interanual en el primer trimestre, pero la inversión se derrumbó 11,6%. ¿Por qué esa combinación preocupa a los economistas?",
+  "opciones": [
+    "Porque sin inversión, el crecimiento de hoy no genera la capacidad de producir (y de crear empleo) de mañana",
+    "Porque la caída de la inversión hace subir automáticamente la inflación del mes siguiente",
+    "Porque el PBI solo puede crecer si la inversión crece al mismo tiempo, así que el dato debe estar mal medido"
+  ],
+  "correcta": 0,
+  "explicacion": "La inversión (máquinas, obras, equipos) es la que amplía la capacidad de producir en el futuro. Una economía puede crecer un tiempo usando la capacidad que ya tiene —como ahora, empujada por agro, minería y finanzas—, pero si la inversión cae 11,6%, ese motor se apaga: el crecimiento de hoy no se convierte en producción ni empleo de mañana. No hay relación automática con la inflación, y ambos datos pueden convivir sin error de medición.",
+  "nota": "articulos/2026-07-22-pbi-crece-inversion-cae.html",
+  "leccion": ""
+}

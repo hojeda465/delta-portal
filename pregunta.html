@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La pregunta del día — Con Interés</title>
+<meta name="description" content="Una pregunta por día sobre la economía real de hoy. Respondés, entendés por qué, y sumás racha. Gratis, sin registro.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="canonical" href="https://coninteres.com/pregunta.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF8F4;--ink:#16130F;--ink-soft:#3C3833;--teal:#0E7C86;--teal-deep:#0A5C63;
+    --amber:#C4701F;--red:#C0392B;--green:#2E8B6F;--muted:#6B6560;--faint:#8A847C;
+    --rule:#DCD6CC;--grid:#E7E1D7;--card:#FFFFFF;--card-edge:#EAE4DA;
+    --serif:"Source Serif 4",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace;
+  }
+  *{box-sizing:border-box}
+  ::selection{background:var(--teal);color:#fff}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:640px;margin:0 auto;padding:0 22px}
+  a{color:var(--teal-deep)}
+  .masthead{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:50}
+  .masthead .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:960px}
+  .brand{font-family:var(--serif);font-weight:700;font-size:26px;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink);letter-spacing:-.02em}
+  .brand .tri{color:var(--teal)}
+  .brand .tag{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:8px;font-weight:500}
+  .mh-back{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none}
+  .hero{padding:36px 0 8px;text-align:center}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-deep);font-weight:600;margin-bottom:10px}
+  .racha-top{font-family:var(--mono);font-size:12px;color:var(--muted);margin-top:6px}
+  .racha-top b{color:var(--amber)}
+  .q-card{background:var(--card);border:1px solid var(--card-edge);border-radius:18px;padding:30px 28px;margin:22px 0}
+  .q-fecha{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(22px,3.4vw,28px);line-height:1.25;letter-spacing:-.015em;margin:0 0 22px;text-wrap:balance}
+  .ops{display:flex;flex-direction:column;gap:12px}
+  .op{font-family:var(--sans);font-size:15px;line-height:1.5;text-align:left;background:var(--paper);border:1.5px solid var(--rule);border-radius:12px;padding:14px 16px;cursor:pointer;transition:.15s;color:var(--ink-soft)}
+  .op:hover{border-color:var(--teal)}
+  .op.ok{background:#E7F4EE;border-color:var(--green);color:#1E6B4F;font-weight:600}
+  .op.mal{background:#FBEAE6;border-color:var(--red);color:#96291C}
+  .op:disabled{cursor:default}
+  .resultado{display:none;margin-top:20px}
+  .resultado.on{display:block}
+  .veredicto{font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:10px}
+  .veredicto.ok{color:var(--green)} .veredicto.mal{color:var(--red)}
+  .expl{background:#F3EFE7;border-left:3px solid var(--teal);border-radius:10px;padding:16px 18px;font-size:15px;color:var(--ink-soft);line-height:1.6}
+  .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+  .links a{font-family:var(--mono);font-size:12px;font-weight:600;text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:8px 16px}
+  .links a:hover{border-color:var(--teal)}
+  .racha-box{display:flex;align-items:center;gap:18px;background:linear-gradient(120deg,#16130F,#0A5C63);border-radius:14px;color:#fff;padding:18px 22px;margin-top:18px}
+  .racha-box .n{font-family:var(--mono);font-size:34px;font-weight:600;color:#F3D9A8}
+  .racha-box .t{font-size:13px;color:#CDE4E1;line-height:1.4}
+  .compartir{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+  .compartir button{font-family:var(--sans);font-size:14px;font-weight:600;border:none;border-radius:10px;padding:11px 18px;cursor:pointer;transition:.15s}
+  .b-wsp{background:#2E8B6F;color:#fff}.b-wsp:hover{background:#1E6B4F}
+  .b-cp{background:var(--paper);border:1px solid var(--rule) !important;color:var(--ink-soft)}
+  .aviso{font-family:var(--mono);font-size:11px;color:var(--faint);text-align:center;margin-top:16px}
+  footer{border-top:2px solid var(--ink);margin-top:44px;padding:24px 0 60px}
+  footer .wrap{font-family:var(--mono);font-size:12px;color:var(--muted)}
+  footer a{text-decoration:none}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="tri">%</span>Con Interés<span class="tag">La pregunta del día</span></a>
+    <a href="index.html" class="mh-back">← Portada</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="kicker">? · Una por día · gratis · sin registro</div>
+    <div class="racha-top" id="rachaTop"></div>
+  </div>
+
+  <div class="q-card" id="qCard">
+    <div class="q-fecha" id="qFecha"></div>
+    <h1 id="qTexto">Cargando la pregunta de hoy…</h1>
+    <div class="ops" id="qOps"></div>
+    <div class="resultado" id="qRes">
+      <div class="veredicto" id="qVer"></div>
+      <div class="expl" id="qExpl"></div>
+      <div class="links" id="qLinks"></div>
+      <div class="racha-box"><span class="n" id="rachaN">0</span><span class="t"><b id="rachaTxt">días de racha.</b><br>Mañana hay una pregunta nueva, siempre sacada de la noticia del día.</span></div>
+      <div class="compartir">
+        <button class="b-wsp" id="bWsp">Compartir por WhatsApp</button>
+        <button class="b-cp" id="bCp">Copiar resultado</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="aviso">Tu racha vive solo en tu navegador. No guardamos nada de vos — como todo en Con Interés.</p>
+</div>
+
+<footer>
+  <div class="wrap">
+    <a href="index.html">Portada</a> · <a href="hoy.html">El cierre</a> · <a href="aprender.html">Modo Aprendizaje</a> · <a href="herramientas.html">Herramientas</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var K="ci_pregunta";
+  var MES=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+  function est(){ try{return JSON.parse(localStorage.getItem(K)||"{}");}catch(e){return {};} }
+  function guardar(s){ try{localStorage.setItem(K,JSON.stringify(s));}catch(e){} }
+  function diaAnterior(iso){ var d=new Date(iso+"T12:00:00"); d.setDate(d.getDate()-1); return d.toISOString().slice(0,10); }
+
+  fetch("data/pregunta.json").then(function(r){return r.json();}).then(function(P){
+    var f=P.fecha.split("-");
+    document.getElementById("qFecha").textContent = "Pregunta del "+(+f[2])+" de "+MES[+f[1]-1]+" de "+f[0];
+    document.getElementById("qTexto").textContent = P.pregunta;
+    var s=est();
+    pintarRachaTop(s);
+    var ops=document.getElementById("qOps");
+    P.opciones.forEach(function(o,i){
+      var b=document.createElement("button");
+      b.className="op"; b.type="button"; b.textContent=o;
+      b.addEventListener("click",function(){ responder(P,i,b); });
+      ops.appendChild(b);
+    });
+    // ¿ya respondió la de hoy?
+    if(s.ultimaFecha===P.fecha && s.ultimaEleccion!=null){
+      mostrar(P, s.ultimaEleccion, true);
+    }
+  }).catch(function(){
+    document.getElementById("qTexto").textContent="No se pudo cargar la pregunta. Probá de nuevo en unos minutos.";
+  });
+
+  function responder(P,i,btn){
+    var s=est();
+    if(s.ultimaFecha===P.fecha) return; // ya jugó hoy
+    var acierto = (i===P.correcta);
+    if(s.rachaFecha===diaAnterior(P.fecha)) s.racha=(s.racha||0)+1;
+    else s.racha=1;
+    s.rachaFecha=P.fecha; s.ultimaFecha=P.fecha; s.ultimaEleccion=i;
+    s.jugadas=(s.jugadas||0)+1; s.aciertos=(s.aciertos||0)+(acierto?1:0);
+    guardar(s);
+    mostrar(P,i,false);
+  }
+
+  function mostrar(P,eleccion){
+    var s=est();
+    var acierto=(eleccion===P.correcta);
+    var botones=document.querySelectorAll(".op");
+    botones.forEach(function(b,j){
+      b.disabled=true;
+      if(j===P.correcta) b.classList.add("ok");
+      else if(j===eleccion) b.classList.add("mal");
+    });
+    var res=document.getElementById("qRes");
+    res.classList.add("on");
+    document.getElementById("qVer").textContent = acierto ? "✓ Correcto." : "✕ No era esa — pero ahora lo sabés.";
+    document.getElementById("qVer").className = "veredicto "+(acierto?"ok":"mal");
+    document.getElementById("qExpl").textContent = P.explicacion;
+    var links=document.getElementById("qLinks");
+    links.innerHTML="";
+    if(P.nota) links.innerHTML += '<a href="'+P.nota+'">Leer la nota completa →</a>';
+    if(P.leccion) links.innerHTML += '<a href="'+P.leccion+'">La lección detrás →</a>';
+    links.innerHTML += '<a href="aprender.html">% Modo Aprendizaje →</a>';
+    document.getElementById("rachaN").textContent = s.racha||1;
+    document.getElementById("rachaTxt").textContent = ((s.racha||1)===1 ? "día de racha." : "días de racha.");
+    pintarRachaTop(s);
+    var texto = (acierto?"🟩":"🟥")+" La Pregunta del Día de Con Interés · racha: "+(s.racha||1)+(s.racha===1?" día":" días")+" · Jugala vos: https://coninteres.com/pregunta.html";
+    document.getElementById("bWsp").onclick=function(){ window.open("https://wa.me/?text="+encodeURIComponent(texto),"_blank"); };
+    document.getElementById("bCp").onclick=function(){
+      (navigator.clipboard?navigator.clipboard.writeText(texto):Promise.reject()).then(function(){
+        document.getElementById("bCp").textContent="¡Copiado!";
+      }).catch(function(){});
+    };
+  }
+
+  function pintarRachaTop(s){
+    var el=document.getElementById("rachaTop");
+    if(s.racha>0) el.innerHTML="Racha: <b>"+s.racha+(s.racha===1?" día":" días")+"</b> · Aciertos: "+(s.aciertos||0)+"/"+(s.jugadas||0);
+  }
+})();
+</script>
+<!-- CI-WIDGETS --><script defer src="assets/ticker.js?v=5"></script>
+</body>
+</html>
