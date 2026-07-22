@@ -22,7 +22,7 @@
      modo manual: abre un mail de suscripción al correo del sitio,
      así ningún interesado se pierde y a nadie se le miente.
      ------------------------------------------------------------ */
-  var NEWSLETTER_FORM_ACTION = ""; // ← URL del formulario (Kit)
+  var NEWSLETTER_FORM_ACTION = "https://app.kit.com/forms/9711873/subscriptions"; // formulario de Kit
   var NEWSLETTER_EMAIL_FIELD = "email_address";
   var CONTACT_EMAIL = "oojeda465@gmail.com";
 
