@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-21T23:48:54+00:00"
+    "actualizado": "2026-07-22T00:25:49+00:00"
   },
   "secciones": [
     "ECONOMÍA",
@@ -12,6 +12,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-22-despachos-cemento-tercer-mes-baja",
+      "titulo": "El cemento hila tres meses en baja: la construcción no consolida el rebote",
+      "bajada": "Los despachos de cemento cayeron 1,4% interanual en junio y el primer semestre cerró 3% abajo, según la AFCP. El rebote de marzo no tuvo continuidad y la actividad sigue casi un quinto por debajo de 2023.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "−1,4%",
+      "numero_label": "despachos de cemento en junio 2026 (variación interanual); tercer mes consecutivo en baja",
+      "fecha": "2026-07-22",
+      "hora": "10:00",
+      "archivo": "articulos/2026-07-22-despachos-cemento-tercer-mes-baja.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 9 min"
+    },
     {
       "id": "2026-07-21-rigi-pampa-4521-millones",
       "titulo": "US$4.521 millones para Vaca Muerta: el proyecto que dejó al RIGI al borde de los US$46.000 millones",
