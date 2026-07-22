@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<script defer src="assets/ticker.js?v=3"></script>
+<script defer src="assets/ticker.js?v=4"></script>
 <style>
   :root{
     --paper:#FAF8F4;--ink:#16130F;--ink-soft:#3C3833;--teal:#0E7C86;--teal-deep:#0A5C63;
@@ -35,9 +35,10 @@
   .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
   a{text-decoration:none;color:inherit}
 
-  .masthead{border-bottom:2px solid var(--ink)}
-  .masthead .wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 24px}
-  .brand{font-family:var(--serif);font-weight:700;font-size:34px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+  .masthead{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:70}
+  .masthead .wrap{display:flex;align-items:center;justify-content:space-between;padding:10px 24px}
+  .brand{font-family:var(--serif);font-weight:700;font-size:30px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px;color:var(--ink);cursor:pointer}
+  .brand:hover .tri{color:var(--teal-deep)}
   .brand .tri{color:var(--teal);font-size:28px;transform:translateY(-2px)}
   .brand .tag{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:10px;font-weight:500}
   .mh-right{text-align:right;font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6}
@@ -49,7 +50,7 @@
   .concept .item{color:#CFC9BF} .concept .item b{color:#fff;font-weight:600}
   .concept .sep{color:#3E3A34}
 
-  .secnav{border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--paper);z-index:60;box-shadow:0 1px 0 rgba(22,19,15,.04)}
+  .secnav{border-bottom:1px solid var(--rule);position:sticky;top:96px;background:var(--paper);z-index:60;box-shadow:0 1px 0 rgba(22,19,15,.04)}
   .secnav .wrap{display:flex;gap:8px;padding:12px 24px;flex-wrap:wrap}
   .sec-chip{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--sc);background:var(--paper);border:1px solid var(--card-edge);padding:6px 13px;border-radius:999px;font-weight:600;cursor:pointer;transition:.15s}
   .sec-chip:hover{border-color:var(--sc)}
@@ -82,7 +83,7 @@
   .rh-rule{flex:1;height:1px;background:var(--rule)}
   .sec-head h2{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0}
   .sec-count{font-family:var(--mono);font-size:11px;color:var(--faint)}
-  .sec-group{scroll-margin-top:110px}
+  .sec-group{scroll-margin-top:calc(var(--stack,150px) + 8px)}
 
   .learn-band{background:linear-gradient(120deg,#16130F,#0A5C63);border-radius:16px;padding:32px 34px;margin:40px 0 6px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
   .learn-band .lb-kick{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#E8833A;font-weight:600;margin-bottom:8px}
@@ -136,9 +137,9 @@
 </head>
 <body>
 
-<header class="masthead">
+<header class="masthead" id="inicio">
   <div class="wrap">
-    <div class="brand"><span class="tri">%</span>Con Interés<span class="tag">La economía, con interés</span></div>
+    <a class="brand" href="#inicio" aria-label="Volver al inicio de la portada"><span class="tri">%</span>Con Interés<span class="tag">La economía, con interés</span></a>
     <div class="mh-right">
       <div>MIÉ 22 · JUL · 2026</div>
     </div>
@@ -492,6 +493,28 @@
 
 <script>
 (function(){
+  // apila masthead + ticker + secciones como encabezado fijo, midiendo alturas reales
+  var mast=document.querySelector('.masthead'), sn=document.querySelector('.secnav');
+  function apilar(){
+    var tk=document.getElementById('ci-ticker');
+    var h1=mast?mast.offsetHeight:0;
+    var h2=tk?tk.offsetHeight:0;
+    if(tk){ tk.style.position='sticky'; tk.style.top=h1+'px'; tk.style.zIndex=65; }
+    if(sn) sn.style.top=(h1+h2)+'px';
+    document.documentElement.style.setProperty('--stack',(h1+h2+(sn?sn.offsetHeight:0))+'px');
+  }
+  apilar();
+  window.addEventListener('resize', apilar);
+  // el ticker se renderiza async: reintentar unos segundos hasta que aparezca
+  var t=0, iv=setInterval(function(){ apilar(); if(++t>10) clearInterval(iv); }, 500);
+
+  // clic en la marca = volver al inicio de la portada
+  var brand=document.querySelector('.brand');
+  if(brand) brand.addEventListener('click', function(e){
+    e.preventDefault();
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
   // resalta en la barra fija la sección visible mientras se scrollea
   var chips=[].slice.call(document.querySelectorAll('.sec-chip[href^="#"]'));
   var grupos=chips.map(function(c){ return document.getElementById(c.getAttribute('href').slice(1)); });

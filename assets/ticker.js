@@ -312,6 +312,17 @@
     var chart = panel.querySelector(".ci-h-chart");
     chart.innerHTML = '<div class="ci-h-estado">Cargando la serie…</div>';
     panel.classList.add("abierto");
+    // si el lector está scrolleado, llevarlo hasta el panel (queda bajo el
+    // encabezado fijo: masthead + ticker)
+    setTimeout(function () {
+      var mh = document.querySelector(".masthead");
+      var tk = document.getElementById("ci-ticker");
+      var off = ((mh && getComputedStyle(mh).position === "sticky") ? mh.offsetHeight : 0) + (tk ? tk.offsetHeight : 0);
+      var r = panel.getBoundingClientRect();
+      if (r.top < off - 4 || r.top > window.innerHeight * 0.6) {
+        window.scrollTo({ top: r.top + window.pageYOffset - off, behavior: "smooth" });
+      }
+    }, 60);
     histData(key).then(function (pts) {
       if (abiertoKey !== key) return;
       var rangos = panel.querySelectorAll(".ci-h-rango");
