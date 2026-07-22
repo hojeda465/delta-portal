@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-22T12:26:10+00:00",
+    "actualizado": "2026-07-22T12:48:17+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-22-produccion-leche-record-decada",
+      "titulo": "Récord de leche: la Argentina produjo 11.617 millones de litros en 2025, el mayor volumen en una década",
+      "bajada": "Fue un 9,7% más que en 2024 y el segundo mejor año de la historia, detrás del pico de 2015. En 2026 la producción sigue subiendo (+6% en cinco meses) y las exportaciones tocan su mejor nivel desde 2012. La letra chica: mientras el tambo ordeña más que nunca, el precio real que cobra el productor está en su piso de la década.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "11.617",
+      "numero_label": "millones de litros de leche produjo la Argentina en 2025, el mayor volumen en una década (+9,7%)",
+      "fecha": "2026-07-22",
+      "hora": "13:00",
+      "archivo": "articulos/2026-07-22-produccion-leche-record-decada.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 8 min"
+    },
     {
       "id": "2026-07-22-consumo-supermercados-en-rojo",
       "titulo": "Las ventas en supermercados cayeron 3,7% en abril: el consumo masivo sigue en rojo mientras la economía crece",
