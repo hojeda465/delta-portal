@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-22T15:25:55+00:00",
+    "actualizado": "2026-07-22T16:05:51+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-22-superavit-semestre-record-exportaciones",
+      "titulo": "El superávit del semestre fue de US$13.923 millones: el mayor en años, pero por el motivo opuesto al de 2024",
+      "bajada": "Entre enero y junio Argentina acumuló un superávit comercial de US$13.923 millones, cinco veces el de 2025. A diferencia del récord de 2024 —hecho de importaciones que se derrumbaban en plena recesión— este se apoya en exportaciones que crecieron 24,4%. Pero las compras de bienes de capital siguen cayendo.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$13.923 M",
+      "numero_label": "superávit comercial del 1er semestre 2026",
+      "fecha": "2026-07-22",
+      "hora": "16:00",
+      "archivo": "articulos/2026-07-22-superavit-semestre-record-exportaciones.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-07-22-vino-mas-litros-menos-dolares",
       "titulo": "Argentina exportó 14,2% más vino y casi los mismos dólares: la trampa del granel barato",
