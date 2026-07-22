@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-22T18:31:42+00:00",
+    "actualizado": "2026-07-22T20:06:25+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-22-turismo-receptivo-se-da-vuelta",
+      "titulo": "El turismo se da vuelta: llegan 20% más extranjeros y viajan 12% menos argentinos",
+      "bajada": "En mayo llegaron 20,4% más turistas extranjeros y salieron 12,1% menos argentinos, según el INDEC. El déficit turístico se achica. La paradoja: el dólar barato debería invitar a los argentinos a viajar y espantar a los de afuera; pasó lo contrario, y el motivo no es el tipo de cambio, es el bolsillo.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "+20,4%",
+      "numero_label": "más turistas extranjeros que un año atrás (INDEC, mayo 2026)",
+      "fecha": "2026-07-22",
+      "hora": "16:23",
+      "archivo": "articulos/2026-07-22-turismo-receptivo-se-da-vuelta.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-07-22-riesgo-pais-cerca-400",
       "titulo": "El riesgo país cae hacia los 400 puntos: la puerta de vuelta a los mercados de deuda",
