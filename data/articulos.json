@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-23T22:48:56+00:00",
+    "actualizado": "2026-07-23T23:29:44+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-23-prepagas-cobertura-salud",
+      "titulo": "Las prepagas subieron 417% en dos años y 742.000 personas se quedaron sin cobertura privada",
+      "bajada": "Mientras la cuota de la medicina prepaga corría muy por encima de la inflación, la porción de la población con obra social o prepaga cayó de 67,5% a 65,4%. En dos años, 742.000 personas más quedaron dependiendo solo del sistema público.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "742.000",
+      "numero_label": "personas menos con cobertura de salud privada u obra social (2S 2023 → 2S 2025, INDEC)",
+      "fecha": "2026-07-23",
+      "hora": "23:40",
+      "archivo": "articulos/2026-07-23-prepagas-cobertura-salud.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-07-23-combustibles-mayo-freno-caida",
       "titulo": "La venta de combustibles casi dejó de caer: −0,2% en mayo, la baja más chica del año",
