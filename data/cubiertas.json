@@ -476,6 +476,13 @@
       "fecha": "2026-07-23",
       "estado": "publicada",
       "articulo_id": "2026-07-23-fci-record-money-market"
+    },
+    {
+      "tema": "medicina prepaga / cobertura de salud: cuotas +417% en dos años y 742.000 personas menos con cobertura privada u obra social",
+      "angulo": "la cuota de prepaga corrió muy por encima de la inflación (+417% vs +293% dic-2023 a may-2026, IAG s/ INDEC) y la cobertura privada/social cayó de 67,5% a 65,4% de la población urbana (INDEC-EPH): 742.000 personas más dependen solo del sistema público. Cifra ancla (cobertura y traslado a población) CONFIRMADA por doble fuente INDEC (informe 1S2025 directo + procesamiento IAG de la serie 2S2023-2S2025) con coherencia de serie; el +417% de las cuotas se marca como estimación del IAG",
+      "fecha": "2026-07-23",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-23-prepagas-cobertura-salud"
     }
   ]
 }
