@@ -469,6 +469,13 @@
       "fecha": "2026-07-23",
       "estado": "en_cola",
       "articulo_id": "2026-07-23-brecha-cambiaria-dolar-blue"
+    },
+    {
+      "tema": "industria de fondos comunes de inversión (FCI) / patrimonio récord US$67.500 M (>$100 billones, jun 2026) y el money market que dejó de ganarle a la inflación",
+      "angulo": "la industria de FCI batió récord de patrimonio (US$51.400 M fin-2025 -> US$67.500 M jun-2026, +31% en dólares; >$100 billones) pero, adentro, el money market en pesos —motor de las billeteras virtuales— perdió participación (56% en 2024 -> 52% fin-2025 -> ~50% mediados 2026) porque rinde ~1,5% mensual, por debajo de la inflación de junio (1,9% INDEC); los pesos migran a renta fija corta (T+1) y fondos CER. Ángulo NUEVO respecto de pagos con QR y demás notas fintech: es la industria de FCI y el ahorro de liquidez, no los medios de pago. Cifra ancla (patrimonio récord) CONFIRMADA por triple lectura independiente sobre datos CAFCI (La Nación/PPI $97 bill 20/05; El Cronista $100 bill 29/05; PPI/Infobae $102 bill/US$67.500 M 19/06); pérdida de participación del money market CONFIRMADA por doble consultora (PPI serie 56/52/50% + Mills Capital); rendimientos marcados como aproximados (varían a diario). El 'pico ~80%' se atribuye a Mills Capital y NO se usa como ancla.",
+      "fecha": "2026-07-23",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-23-fci-record-money-market"
     }
   ]
 }
