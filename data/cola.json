@@ -1,7 +1,22 @@
 {
  "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
- "actualizado": "2026-07-23T20:20:00+00:00",
+ "actualizado": "2026-07-23T21:05:00+00:00",
  "borradores": [
+  {
+   "id": "2026-07-23-brecha-cambiaria-dolar-blue",
+   "titulo": "El dólar blue tocó un récord de $1.555 y aun así casi no se movió en el año: la historia del paralelo que se quedó quieto",
+   "bajada": "El blue marcó un récord nominal de $1.555 el 22 de julio, el precio más alto de su historia. Pero en lo que va de 2026 subió apenas 1,6%, mientras la inflación acumuló cerca del 17%: en términos reales es de los más baratos en años. Y la brecha con el dólar oficial, que llegó al 170% en 2022 y al 188% en 2023, hoy ronda el 3%. El mismo número dice récord y dice atraso.",
+   "seccion": "MERCADOS",
+   "formato": "Anatomía de un dato",
+   "numero": "+1,6%",
+   "numero_label": "subió el dólar blue en lo que va de 2026 —hasta su récord nominal de $1.555— mientras la inflación acumuló ~17% (relevamientos de mercado; INDEC)",
+   "fecha": "2026-07-23",
+   "hora": "21:00",
+   "archivo": "articulos/2026-07-23-brecha-cambiaria-dolar-blue.html",
+   "verificacion": "verificada",
+   "fuentes": 6,
+   "lectura": "30 seg → 12 min"
+  },
   {
    "id": "2026-07-23-produccion-acero-junio",
    "titulo": "320.100 toneladas de acero: por qué el mismo dato dice “cae” y “crece” a la vez",

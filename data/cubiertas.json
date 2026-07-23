@@ -462,6 +462,13 @@
       "fecha": "2026-07-23",
       "estado": "en_cola",
       "articulo_id": "2026-07-23-produccion-acero-junio"
+    },
+    {
+      "tema": "dólar blue / récord nominal ($1.555, 22/07/2026) pero atraso real y brecha casi extinguida",
+      "angulo": "el blue marcó su máximo nominal histórico pero subió solo 1,6% en 2026 contra ~17% de inflación (INDEC 16,8% en el 1er semestre): en términos reales es de los más baratos en años. La brecha con el oficial pasó de 170% (jul-2022) y 188,5% (oct-2023) a ~3% hoy. Distinto del ángulo ITCRM/súper peso ya publicado: aquí el eje es el mercado PARALELO y la brecha, no el tipo de cambio real oficial. Cifra ancla (blue $1.555 y +1,6% YTD) confirmada por triple relevamiento independiente (Ámbito, Infobae, iProfesional); valores ajustados por inflación marcados como estimación",
+      "fecha": "2026-07-23",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-23-brecha-cambiaria-dolar-blue"
     }
   ]
 }
