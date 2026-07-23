@@ -317,7 +317,6 @@ las notas.
      └─ veredicto APTA
             → Redactor → Publicador
                  → escribe cola/<id>.html
-                 → escribe kits/<id>.md   (kit social: hilo de X + posteo de Telegram, ver §9)
                  → agrega a data/cola.json
                  → registra en data/cubiertas.json (estado: en_cola)
                  → build_portada.py  (la cola aparece en la portada)
@@ -401,7 +400,12 @@ interpretar la actualidad. El propósito es hacer cultura económica.
 
 ---
 
-## 9. Producción del kit social (para X y Telegram)
+## 9. Producción del kit social (para X y Telegram) — ⏸️ SUSPENDIDO
+
+> **SUSPENDIDO por decisión del editor (22/07/2026):** por ahora la redacción
+> produce SOLO la nota. NO generar `kits/<id>.md` en las corridas. Esta
+> sección queda como especificación para cuando se reactive la distribución
+> en redes.
 
 Cada nota que llega a la cola sale con su **kit social** listo para pegar, siguiendo
 `negocio/playbook.md`. Regla de oro operativa: **ningún agente auto-publica en redes**
