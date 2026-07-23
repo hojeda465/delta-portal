@@ -441,6 +441,13 @@
       "fecha": "2026-07-23",
       "estado": "en_cola",
       "articulo_id": "2026-07-23-metalurgia-capacidad-instalada"
+    },
+    {
+      "tema": "tipo de cambio real multilateral (ITCRM) / “súper peso” y debate del dólar barato-atraso cambiario 2026",
+      "angulo": "ángulo de datos NUEVO respecto de las notas cambiarias previas (REM/proyecciones del dólar nominal y riesgo país): eje en el tipo de cambio real (ITCRM del BCRA 84,6 en abr-2026, mín. desde 2017; ~35% debajo del promedio histórico 129,3), la apreciación real de 2026 (~11%, Quantum) y las dos lecturas (competitividad estructural vs. atraso ~16%)",
+      "fecha": "2026-07-23",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-23-super-peso-tipo-cambio-real"
     }
   ]
 }
