@@ -392,6 +392,13 @@
       "fecha": "2026-07-22",
       "estado": "en_cola",
       "articulo_id": "2026-07-22-swap-china-repago-renovacion"
+    },
+    {
+      "tema": "liquidación de divisas del agro / 1er semestre 2026 (US$13.378 M, -13% i.a.)",
+      "angulo": "el complejo agroexportador liquidó US$13.378 M en ene-jun 2026 (junio US$3.007 M), 13% menos que en 2025 (~US$2.000 M menos) pese a exportar MÁS volumen: la paradoja 'más toneladas, menos dólares' por la caída de precios internacionales, menor peso de la soja y el vencimiento del recorte temporal de retenciones de 2025 que había adelantado ventas. Cifra ancla de CIARA-CEC (fuente primaria) confirmada por coberturas coincidentes de La Nación, Infobae, BAE, MDZ e Infocampo; el valor de junio 2025 (US$3.667 M) se reconstruye de la baja interanual del 18%",
+      "fecha": "2026-07-23",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-23-agro-liquidacion-dolares-semestre"
     }
   ]
 }
