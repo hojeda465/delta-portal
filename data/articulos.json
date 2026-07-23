@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-23T19:18:22+00:00",
+    "actualizado": "2026-07-23T19:18:44+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-23-confianza-consumidor-dos-argentinas",
+      "titulo": "La confianza del consumidor cayó 4,8% en julio y frenó el repunte: entre los hogares de menores ingresos se desplomó 11,5%",
+      "bajada": "El índice de la Universidad Torcuato Di Tella bajó a 40,67 puntos en julio, cortó dos meses de suba y quedó 12,3% por debajo de un año atrás. Pero el promedio esconde dos países: la confianza de los hogares de bajos ingresos cayó 11,5% en el mes (y 20,4% interanual), mientras la de los de altos ingresos apenas cedió 1,5%. El ánimo para consumir se enfrió justo donde el bolsillo está más ajustado.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "−4,8%",
+      "numero_label": "cayó la confianza del consumidor en julio 2026 (UTDT) — a 40,67 puntos, cortando dos meses de suba",
+      "fecha": "2026-07-23",
+      "hora": "16:30",
+      "archivo": "articulos/2026-07-23-confianza-consumidor-dos-argentinas.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 11 min"
+    },
     {
       "id": "2026-07-23-metalurgia-capacidad-instalada",
       "titulo": "La metalurgia trabaja con 6 de cada 10 máquinas paradas: usó el 40,8% de su capacidad en junio",
