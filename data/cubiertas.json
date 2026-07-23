@@ -434,6 +434,13 @@
       "fecha": "2026-07-23",
       "estado": "en_cola",
       "articulo_id": "2026-07-23-confianza-consumidor-dos-argentinas"
+    },
+    {
+      "tema": "industria metalúrgica / uso de capacidad instalada en 40,8% (junio 2026, ADIMRA) — 6 de cada 10 máquinas paradas",
+      "angulo": "la metalurgia trabajó al 40,8% de su capacidad en junio (ADIMRA), casi 6 de cada 10 máquinas paradas, con actividad -4,6% i.a. y -5,7% acumulado en el semestre y empleo -2,3% i.a. Ángulo de datos NUEVO respecto de la nota macro de industria vs construcción (que fue el IPI general del INDEC): acá el eje es la CAPACIDAD OCIOSA del sector metalúrgico y el contraste INTERNO del metal — las industrias metálicas básicas (acero/aluminio) al 75,4% vs la metalmecánica al 38,7%, el rubro que menos capacidad usa de toda la industria. Cifra ancla CONFIRMADA por doble medición independiente: relevamiento propio de ADIMRA (40,8% jun) + INDEC (capacidad metalmecánica 38,7% may, el menor de 13 sectores) y coherente con el IPI manufacturero (todos los eslabones del metal en baja: maquinaria y equipo -23,4%, vehículos -15,9%, otro transporte -9,9%, metálicas básicas -4,0%). Rubros ADIMRA jun i.a.: fundición -9,4%, otros prod. de metal -9,0%, carrocerías -6,7%, bienes de capital -5,9%, autopartes -2,8%, único en alza maquinaria agrícola +3,6%. Cadena de demanda: consumo final -9,8%, construcción -7,1%, automotriz -6,3%. Postura de refutación incluida: caída mensual chica (-0,3%) y 60% de las empresas no espera empeorar el próximo trimestre → estabilización en el fondo, no rebote. Se DESCARTÓ por atribución incierta una cifra de '30.000 empleos perdidos' (declaración de distinta autoría/fecha); se usó el dato duro del índice de empleo -2,3% i.a.",
+      "fecha": "2026-07-23",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-23-metalurgia-capacidad-instalada"
     }
   ]
 }

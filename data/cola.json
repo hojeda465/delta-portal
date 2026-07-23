@@ -1,6 +1,6 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-23T16:30:00+00:00",
+  "actualizado": "2026-07-23T17:30:00+00:00",
   "borradores": [
     {
       "id": "2026-07-23-combustibles-mayo-freno-caida",
@@ -43,6 +43,21 @@
       "fecha": "2026-07-23",
       "hora": "16:30",
       "archivo": "articulos/2026-07-23-confianza-consumidor-dos-argentinas.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 11 min"
+    },
+    {
+      "id": "2026-07-23-metalurgia-capacidad-instalada",
+      "titulo": "La metalurgia trabaja con 6 de cada 10 máquinas paradas: usó el 40,8% de su capacidad en junio",
+      "bajada": "La actividad del sector cayó 4,6% interanual en junio y acumula una baja del 5,7% en el primer semestre, según ADIMRA. El uso de la capacidad instalada quedó en 40,8%, un nivel que la cámara compara con la pandemia. El dato oficial del INDEC apunta en la misma dirección: la metalmecánica es el rubro que menos capacidad usa de toda la industria (38,7%), casi 20 puntos debajo del promedio. Y adentro del metal conviven dos mundos: el acero corre al 75%, la metalmecánica no llega al 40%.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "40,8%",
+      "numero_label": "usó la industria metalúrgica de su capacidad instalada en junio 2026 (ADIMRA) — 6 de cada 10 máquinas paradas",
+      "fecha": "2026-07-23",
+      "hora": "17:30",
+      "archivo": "articulos/2026-07-23-metalurgia-capacidad-instalada.html",
       "verificacion": "verificada",
       "fuentes": 5,
       "lectura": "30 seg → 11 min"
