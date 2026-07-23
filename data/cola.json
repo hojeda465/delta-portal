@@ -1,6 +1,6 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-23T15:30:00+00:00",
+  "actualizado": "2026-07-23T16:30:00+00:00",
   "borradores": [
     {
       "id": "2026-07-23-combustibles-mayo-freno-caida",
@@ -31,6 +31,21 @@
       "verificacion": "verificada",
       "fuentes": 4,
       "lectura": "30 seg → 12 min"
+    },
+    {
+      "id": "2026-07-23-confianza-consumidor-dos-argentinas",
+      "titulo": "La confianza del consumidor cayó 4,8% en julio y frenó el repunte: entre los hogares de menores ingresos se desplomó 11,5%",
+      "bajada": "El índice de la Universidad Torcuato Di Tella bajó a 40,67 puntos en julio, cortó dos meses de suba y quedó 12,3% por debajo de un año atrás. Pero el promedio esconde dos países: la confianza de los hogares de bajos ingresos cayó 11,5% en el mes (y 20,4% interanual), mientras la de los de altos ingresos apenas cedió 1,5%. El ánimo para consumir se enfrió justo donde el bolsillo está más ajustado.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "−4,8%",
+      "numero_label": "cayó la confianza del consumidor en julio 2026 (UTDT) — a 40,67 puntos, cortando dos meses de suba",
+      "fecha": "2026-07-23",
+      "hora": "16:30",
+      "archivo": "articulos/2026-07-23-confianza-consumidor-dos-argentinas.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 11 min"
     }
   ]
 }
