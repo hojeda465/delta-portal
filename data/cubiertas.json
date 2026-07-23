@@ -448,6 +448,13 @@
       "fecha": "2026-07-23",
       "estado": "publicada",
       "articulo_id": "2026-07-23-super-peso-tipo-cambio-real"
+    },
+    {
+      "tema": "Globant / desplome de la acción del unicornio argentino (-91% desde el pico de nov-2021)",
+      "angulo": "la mayor tecnológica argentina (sponsor del Mundial 2026) cotiza en mínimos desde 2017: de US$354,44 a ~US$30. La causa de fondo es la desaceleración de ingresos (de +59% en 2021 a -0,7% en el 1er trim. 2026) y el temor a que la IA erosione el negocio de tercerizar software. Cifra ancla (caída del precio) confirmada por doble fuente de mercado independiente; datos de ingresos y guidance de la propia empresa (SEC/IR)",
+      "fecha": "2026-07-23",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-23-globant-accion-desplome-90"
     }
   ]
 }
