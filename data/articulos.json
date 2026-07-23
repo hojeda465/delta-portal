@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-23T19:18:44+00:00",
+    "actualizado": "2026-07-23T22:41:18+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-23-produccion-acero-junio",
+      "titulo": "320.100 toneladas de acero: por qué el mismo dato dice “cae” y “crece” a la vez",
+      "bajada": "En junio se produjeron 320.100 toneladas de acero crudo en la Argentina: 8,6% menos que en mayo pero 16,5% más que un año atrás, según la Cámara Argentina del Acero. Las dos cifras son ciertas: la industria se levantó del piso de 2024 (cuando cayó 26%) pero la mejora se frenó en el mes y sigue casi un tercio por debajo de un junio de actividad plena. Detrás del número: turnos suspendidos, importaciones que aprietan y una demanda partida entre la energía que tira y la construcción que no arranca.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "320.100 t",
+      "numero_label": "toneladas de acero crudo producidas en junio 2026 (−8,6% mensual, +16,5% interanual, Cámara Argentina del Acero)",
+      "fecha": "2026-07-23",
+      "hora": "18:00",
+      "archivo": "articulos/2026-07-23-produccion-acero-junio.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 12 min"
+    },
     {
       "id": "2026-07-23-confianza-consumidor-dos-argentinas",
       "titulo": "La confianza del consumidor cayó 4,8% en julio y frenó el repunte: entre los hogares de menores ingresos se desplomó 11,5%",
