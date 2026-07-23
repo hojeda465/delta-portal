@@ -3,21 +3,6 @@
   "actualizado": "2026-07-23T22:00:00+00:00",
   "borradores": [
     {
-      "id": "2026-07-23-brecha-cambiaria-dolar-blue",
-      "titulo": "El dólar blue tocó un récord de $1.555 y aun así casi no se movió en el año: la historia del paralelo que se quedó quieto",
-      "bajada": "El blue marcó un récord nominal de $1.555 el 22 de julio, el precio más alto de su historia. Pero en lo que va de 2026 subió apenas 1,6%, mientras la inflación acumuló cerca del 17%: en términos reales es de los más baratos en años. Y la brecha con el dólar oficial, que llegó al 170% en 2022 y al 188% en 2023, hoy ronda el 3%. El mismo número dice récord y dice atraso.",
-      "seccion": "MERCADOS",
-      "formato": "Anatomía de un dato",
-      "numero": "+1,6%",
-      "numero_label": "subió el dólar blue en lo que va de 2026 —hasta su récord nominal de $1.555— mientras la inflación acumuló ~17% (relevamientos de mercado; INDEC)",
-      "fecha": "2026-07-23",
-      "hora": "21:00",
-      "archivo": "articulos/2026-07-23-brecha-cambiaria-dolar-blue.html",
-      "verificacion": "verificada",
-      "fuentes": 6,
-      "lectura": "30 seg → 12 min"
-    },
-    {
       "id": "2026-07-23-globant-accion-desplome-90",
       "titulo": "Globant, el unicornio argentino: la acción se desplomó 91% desde su pico y volvió a valores de 2017",
       "bajada": "La acción de Globant, la mayor tecnológica nacida en la Argentina, valía US$354,44 en noviembre de 2021 y el 23 de julio de 2026 rondaba los US$30: una caída del 91%. Detrás del número, un motor que se apagó: el crecimiento de sus ingresos pasó de +59% en 2021 a -0,7% en el primer trimestre de 2026. Rentable y estancada al mismo tiempo, con la sombra de la IA sobre el negocio de exportar talento.",

@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-23T22:43:32+00:00",
+    "actualizado": "2026-07-23T22:44:05+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-23-brecha-cambiaria-dolar-blue",
+      "titulo": "El dólar blue tocó un récord de $1.555 y aun así casi no se movió en el año: la historia del paralelo que se quedó quieto",
+      "bajada": "El blue marcó un récord nominal de $1.555 el 22 de julio, el precio más alto de su historia. Pero en lo que va de 2026 subió apenas 1,6%, mientras la inflación acumuló cerca del 17%: en términos reales es de los más baratos en años. Y la brecha con el dólar oficial, que llegó al 170% en 2022 y al 188% en 2023, hoy ronda el 3%. El mismo número dice récord y dice atraso.",
+      "seccion": "MERCADOS",
+      "formato": "Anatomía de un dato",
+      "numero": "+1,6%",
+      "numero_label": "subió el dólar blue en lo que va de 2026 —hasta su récord nominal de $1.555— mientras la inflación acumuló ~17% (relevamientos de mercado; INDEC)",
+      "fecha": "2026-07-23",
+      "hora": "21:00",
+      "archivo": "articulos/2026-07-23-brecha-cambiaria-dolar-blue.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 12 min"
+    },
     {
       "id": "2026-07-23-fci-record-money-market",
       "titulo": "Los fondos comunes tocaron un récord de US$67.500 millones — pero el money market dejó de ganarle a la inflación",
