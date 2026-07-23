@@ -1,425 +1,425 @@
 {
- "descripcion": "Memoria de temas ya cubiertos o en cola. El agente Editor la consulta para no repetir noticias. Cada entrada: tema, ángulo, fecha y estado.",
- "temas": [
-  {
-   "tema": "inflación junio 2026 / desinflación con recesión",
-   "angulo": "los números macro mejoran pero el consumo y el empleo caen",
-   "fecha": "2026-07-18",
-   "estado": "publicada",
-   "articulo_id": "2026-07-18-inflacion-argentina"
-  },
-  {
-   "tema": "petróleo en Malvinas / proyecto Sea Lion",
-   "angulo": "reservas, inversión y efecto sobre el PBI de las islas",
-   "fecha": "2026-07-18",
-   "estado": "publicada",
-   "articulo_id": "2026-07-18-malvinas-sea-lion"
-  },
-  {
-   "tema": "Vaca Muerta / superávit energético récord del primer semestre 2026",
-   "angulo": "la producción de crudo de Neuquén (67% del total, 2 de cada 3 barriles) dio vuelta la balanza comercial energética: del déficit de 2022 al mayor superávit de la historia. Cifra ancla oficial (participación en la producción) confirmada; el superávit del semestre se marca como estimación de la BCR",
-   "fecha": "2026-07-18",
-   "estado": "publicada",
-   "articulo_id": "2026-07-18-vaca-muerta-superavit-energetico"
-  },
-  {
-   "tema": "depósitos privados en dólares / récord de US$40.437 M (máximo en 26 años)",
-   "angulo": "el stock de dólares privados en los bancos tocó su mayor nivel desde el año 2000 (+US$3.451 M en 2026), muy por encima del pico previo a la corrida de 2019 (US$32.500 M); pero ~US$16.000 M no se vuelca al crédito. Cifra ancla oficial del BCRA (US$40.437 M al 13/07/2026) confirmada por triple fuente; el margen sin prestar se marca como aproximado",
-   "fecha": "2026-07-18",
-   "estado": "publicada",
-   "articulo_id": "2026-07-18-depositos-dolares-record"
-  },
-  {
-   "tema": "exportaciones de granos / récord de volumen del 1er semestre 2026 (60,7 M t)",
-   "angulo": "la paradoja del campo: embarcó el mayor volumen de granos de la historia para un primer semestre (60,7 millones de toneladas, BCR) y el maíz superó a la soja por primera vez en 26 años, pero la agroexportación liquidó 13% menos dólares (US$13.378 M, CIARA-CEC) que en 2025. La caída no fue por precios sino por efecto base: en 2025 una rebaja temporal de retenciones hasta el 30/6 adelantó liquidaciones. Volumen récord CONFIRMADO (BCR + dato oficial de la Secretaría de Agricultura); caída de divisas CONFIRMADA (CIARA-CEC oficial + BCR + medios)",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-agro-record-toneladas-menos-dolares"
-  },
-  {
-   "tema": "BCRA / compra récord de dólares y reservas 2026",
-   "angulo": "el BCRA compró US$532 M en una sola rueda (14/07/2026), la mayor compra diaria de la era Milei y —según varias mesas— la más alta desde diciembre de 2022; encadenó 126 ruedas consecutivas con saldo comprador y superó los US$12.000 M acumulados en 2026, por encima de la meta anual de reservas del FMI (US$8.000 M), cumplida por primera vez en la gestión. El asterisco Delta: las reservas netas siguen en torno a cero o levemente negativas (estimación privada) y buena parte de los dólares provienen de colocaciones de deuda corporativa (ONs >US$10.000 M en 2026), no del superávit comercial; el récord del 14/07 fue vinculado por el mercado a una liquidación de deuda, no al agro. Cifra ancla (US$532 M, 14/07) CONFIRMADA por múltiples fuentes independientes (Infobae, La Nación, Perfil, canal26, Ámbito); reservas netas marcadas como estimación",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-bcra-compra-record-dolares"
-  },
-  {
-   "tema": "canasta básica / línea de pobreza junio 2026 (familia tipo $1.531.473)",
-   "angulo": "una familia tipo (4 integrantes, 3,09 adultos equivalentes) necesitó $1.531.473 para no ser pobre y $689.853 para no ser indigente en junio; la CBT subió 2,2% mensual y 35,7% interanual, por encima de la inflación (IPC +1,9% mensual, +33,5% interanual), y la CBA 1,3% mensual / 36,3% interanual. Ángulo de datos NUEVO respecto de la nota de inflación: no es el IPC sino la línea de pobreza y la brecha contra los ingresos mínimos (salario mínimo $372.400 y jubilación mínima con bono $481.989: hacen falta +4 salarios o +3 jubilaciones para llegar a la canasta familiar). Cifra ancla CONFIRMADA por cuádruple fuente (INDEC informe + Infobae + canal26/minutouno + iProfesional); coherencia interna verificada (CBT/CBA=2,22; CBT interanual > IPC interanual)",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-canasta-basica-linea-pobreza"
-  },
-  {
-   "tema": "economía del conocimiento / exportaciones de servicios (SBC) superan por primera vez los US$10.000 M",
-   "angulo": "el tercer complejo exportador del país ya no es ni el campo ni el petróleo: los servicios basados en el conocimiento (software, servicios profesionales, ingeniería, I+D) exportaron US$10.085 M en los 12 meses a marzo 2026 (+11,7% i.a., Argencon), sostenidos por 285.000 empleos formales. Ángulo de datos: son dólares que no dependen del clima ni de los commodities, con superávit comercial y empleo calificado creciente (contra la tendencia del mercado laboral en un año de ajuste). El asterisco Con Interés: la cifra ancla está CONFIRMADA por doble metodología independiente (Argencon/BCRA cambiario US$10.085 M y balanza de pagos INDEC/Cancillería US$10.091 M, definición amplia), pero la definición oficial ESTRICTA da US$9.563 M en 2025, todavía por debajo de los 10.000 — se aclara en la nota. Composición y superávit verificados con datos oficiales (INDEC/Cancillería); la meta de US$30.000 M se marca como estimación",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-economia-conocimiento-record-exportaciones"
-  },
-  {
-   "tema": "recaudación tributaria junio 2026 / cayó 7,4% real pese a subir 23,7% nominal",
-   "angulo": "ARCA recaudó $20,02 billones en junio (+23,7% nominal) pero, deflactado por el IPC (33,5% i.a.), cayó 7,4% real (IARAF), tras cortar en mayo (+1,7% real) una racha de nueve meses en baja. Ángulo de datos NUEVO respecto de las notas de inflación y agro: es el lado FISCAL. Retenciones -45,9% real (contracara de la baja de alícuotas que la nota del agro explicó desde las divisas), IVA neto -4% real (termómetro del consumo), Ganancias ~-16,6% real por prórroga que corrió ingresos a julio, combustibles +27,6% real. Dato clave del Verificador: el IARAF calculó que aun EXCLUYENDO comercio exterior la recaudación cayó 4,3% real, señal de que la debilidad es amplia y no solo por la baja deliberada de retenciones. Postura de refutación incluida: el Gobierno atribuye la baja a cambios impositivos (retenciones) y calendario (prórroga de Ganancias→julio); el -4,3% ex-comercio exterior matiza ese argumento. Cifra ancla ($20 bill nominal, +23,7%) CONFIRMADA por dato oficial de ARCA + Perfil/IARAF + Infobae + La Nación; la variación real -7,4% es un cálculo de IARAF (deflactor-dependiente, rango -7,1% a -8%), marcado como tal. Coherencia interna verificada (23,7/133,5→-7,4%).",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-recaudacion-real-junio"
-  },
-  {
-   "tema": "resultado fiscal junio 2026 / primer déficit primario de la era Milei",
-   "angulo": "junio de 2026 dejó el PRIMER déficit primario ($696.843 M) y financiero ($1.024.891 M, ~$1,02 billones) de toda la gestión de Milei, tras encadenar superávits primarios mensuales ininterrumpidos desde enero de 2024. Ángulo de datos NUEVO respecto de la nota de recaudación (que fue el lado de los INGRESOS de ARCA): esta es la nota del RESULTADO fiscal (ingresos menos gasto), primario vs financiero y el gasto por partida. Contexto: junio 2025 había sido superávit primario de +$790.533 M (giro de casi $1,5 bill en un año); el semestre igual cerró con superávit primario de $7,3 bill (0,6% del PBI) y financiero de $1,4 bill (0,1%), menos de la mitad de la meta anual (1,5% Presupuesto / 1,4% FMI). Drivers: aguinaldo + postergación de Ganancias a julio + intereses. La motosierra del semestre: obra pública -44,1% real, transferencias a provincias -61,8%, subsidios al transporte -24%, pero subsidios a la energía +73,7%. Cifra ancla (déficit primario de junio) CONFIRMADA por 6 fuentes independientes (Infobae, iProfesional, El Cronista, Los Andes, Perfil/Burgueño, Bloomberg Línea) sobre dato oficial de la Secretaría de Hacienda; coherencia interna verificada (696.843+328.049=1.024.892). La comparación con la metodología FMI ($6,3 bill vs objetivo ~$6,9 bill, faltante ~$560.000 M) proviene de estimaciones privadas (Max Capital, Grupo SBS) y se marca como ESTIMACIÓN.",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-primer-deficit-primario-era-milei"
-  },
-  {
-   "tema": "déficit turístico / cuenta viajes de la balanza de pagos (récord 2025 y moderación 2026)",
-   "angulo": "la cuenta 'viajes' de la balanza de pagos (INDEC) dejó en 2025 el mayor déficit en 30 años: US$7.221 M (egresos US$12.072 M vs ingresos US$4.852 M), por encima del récord previo de 2017 (US$6.008 M). Ángulo de datos NUEVO respecto de las notas de superávit comercial, agro y energía: acá el eje es la SALIDA de dólares por turismo emisivo, el reverso de la acumulación del BCRA. El giro 2026: el rojo se achica (1er trim. US$3.184 M, US$280 M menos que 2025) pero por la recesión, no por mayor competitividad — en mayo el emisivo cayó 12,1% i.a. y el receptivo creció 20,4%. Verificación por TRIPLE método independiente: balanza de pagos (US$7.221 M, cifra ancla, INDEC), ETI head counts (saldo turistas 2025 -6,6 M / ene-may 2026 -3,31 M, INDEC), y balance cambiario del BCRA (~US$4.054 M 2025 / US$2.560 M 1er trim 2026, institución distinta). Se aclara que la cifra de balanza de pagos NO equivale a la presión efectiva sobre reservas (más chica en el balance cambiario). Coherencia interna verificada (12.072-4.852=7.220≈7.221; 6.008+1.213=7.221; 4.825-1.641=3.184; 5,88-2,57=3,31 M).",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-deficit-turismo-record"
-  },
-  {
-   "tema": "autos híbridos y eléctricos / patentamientos se cuadruplican en el 1er trimestre 2026",
-   "angulo": "mercado a dos velocidades: mientras el 0km total cayó 9,9% en el semestre (294.181 unidades, junio -12,8%), los electrificados saltaron 313,2% interanual en el 1er trimestre (19.867 unidades vs 4.808 en 2025) — casi tres cuartas partes de todo 2025 en un solo trimestre. Ángulo de datos NUEVO respecto de las notas macro (es industria/comercio exterior, no fiscal ni precios): el driver no es ambiental sino de política económica (cupo de importación con arancel 0% para electrificados de hasta US$16.000 FOB, Decreto/cupo 49-2025) y de origen (importaciones extrazona +6.000%, China). Matiz clave: 8 de cada 10 son híbridos (HEV 60%, PHEV 18%, MHEV 14%), solo 8% eléctricos puros (BEV); 7 de cada 10 0km vendidos son importados. Cifra ancla (+313,2% / 19.867 unidades) CONFIRMADA por ACARA/SIOMAA reproducida por múltiples outlets independientes (Ámbito, El Economista, Motores a Pleno) y con coherencia interna EXACTA (4.808 + incrementos por tecnología 8.090+3.424+2.072+1.473 = 19.867); trayectoria histórica 14.173 (2024) → 26.632 (2025, +87,9%, 4,6% del mercado) confirmada (economis/ACARA); cupo 0% arancel confirmado por fuente oficial (argentina.gob.ar). Se DESCARTÓ por refutación una cifra contradictoria de récord (5.647 unidades, +43,4% semestral) que no cerraba con el dato oficial. Participación proyectada 2026 marcada como en ascenso (sin cierre de semestre electrificado).",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-autos-electrificados-cuadruplican"
-  },
-  {
-   "tema": "crédito hipotecario / se derrumba en CABA mientras la compraventa aguanta (escrituras mayo 2026)",
-   "angulo": "mercado inmobiliario a dos velocidades: en mayo se firmaron 5.435 escrituras de compraventa en la Ciudad de Buenos Aires (-3,1% i.a., prácticamente plano; acumulado ene-may 23.487, -1,2%) y el monto operado subió 8,5% nominal, pero las escrituras CON hipoteca cayeron 54,8% i.a. (587 vs 1.297 en mayo 2025) y acumulan -37,2% en el año (3.387 vs 5.394). La participación de las hipotecas en las compras pasó de ~23% a 10,8% (1 de cada 5 → 1 de cada 10). Ángulo de datos NUEVO respecto de todas las notas previas (es real estate/financiamiento, no macro/fiscal): el mercado no se cae, cambia de combustible — se compra con ahorros, no con crédito. Cifra ancla CONFIRMADA por DOBLE metodología independiente: escrituras notariales (Colegio de Escribanos CABA, informe oficial 23/06/2026) y desembolsos de préstamos hipotecarios del BCRA (análisis Fundación Tejido Urbano vía LN/Ámbito: junio US$150M, -50% i.a.). Coherencia interna verificada (587/1.297=45,2%→-54,8%; 587/5.435=10,8%; 3.387/5.394=62,8%→-37,2%). Postura de refutación incluida: junio (US$150M) fue el mejor mes desde marzo (rebote mensual) y varios bancos bajaron tasas, PERO interanualmente sigue -50%; el rebote insinúa un piso, no una reactivación. Serie de desembolsos BCRA (feb 151, mar 193, abr 122, may 116, jun 150 US$M) marcada como ESTIMACIÓN.",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-credito-hipotecario-se-enfria"
-  },
-  {
-   "tema": "producción industrial vs construcción / economía partida en mayo 2026",
-   "angulo": "el mismo informe del INDEC (08/07/2026) mostró dos datos de signo opuesto en mayo: la industria manufacturera cayó 5,7% interanual (14 de 16 divisiones en rojo; acumulado ene-may -3,1%) mientras la construcción subió 4,1% interanual (+6,3% mensual desest.; acumulado +2,5%). Ángulo de datos NUEVO respecto de las notas macro/fiscal/externas previas: es la economía REAL productora de bienes y empleo, con foco en el contraste sectorial. Cifra ancla (industria -5,7% i.a.) CONFIRMADA por doble fuente independiente: INDEC oficial + índice propio de la UIA (~-5% i.a., metodología basada en consumo eléctrico y consultas a cámaras). Las bajas se concentran en ramas mano-de-obra-intensivas: textil -26,2%, maquinaria y equipo -23,4%, automotriz -15,9%, indumentaria/calzado -14,7%; los únicos dos rubros en alza (refinación de petróleo +19,4%, tabaco +14,6%) no dependen del consumo interno. Construcción +4,1% CONFIRMADA (INDEC/ISAC + Ámbito + Perfil), con empleo registrado +1,2% i.a. (abril). Postura de refutación y dato marcado en DISPUTA: el repunte mensual de la industria que festejó el Gobierno (INDEC +0,4% desest.) es contradicho por la UIA (-0,8% mensual); se reporta como dato en disputa, no como recuperación confirmada. El rebote de la construcción se marca como en parte estadístico/serrucho (insumos privados cayeron en junio). Coherencia interna verificada (14/16 ramas en baja consistente con -5,7% agregado; acumulado -3,1% con mayo peor que el promedio).",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-industria-cae-construccion-rebota"
-  },
-  {
-   "tema": "mercado de trabajo / desocupación estable pero deterioro de la calidad del empleo (1er trim. 2026)",
-   "angulo": "la tasa de desocupación fue 7,8% en el 1er trim. 2026, casi idéntica al 7,9% de un año atrás (cambio 'sin significación estadística' según el INDEC). Ángulo de datos NUEVO respecto de la nota de industria/construcción (que fue producción de bienes): esta es la nota del MERCADO LABORAL vía EPH, con eje en la CALIDAD del empleo. Los dos únicos indicadores que el INDEC marca como cambios estadísticamente significativos empeoraron: informalidad de 42,0% a 44,2% (+2,2 pp) y subocupación de 10,0% a 11,1% (+1,1 pp). La tasa queda quieta porque la EPH cuenta como ocupado a quien trabaja una hora o maneja para una app, aunque pierda un empleo registrado. Contexto CEPA (atribuido, sobre datos oficiales): entre 4T2023 y 1T2026 se perdieron 216.321 puestos registrados privados (-3,4%) y crecieron monotributistas (+165.542); el empleo no registrado creció ~600.000 en ventana algo distinta (1T2024-1T2026). Cifra ancla (7,8%) CONFIRMADA por INDEC oficial + Chequeado + El Cronista + CEPA + Infobae; coherencia interna verificada (EAP aglomerados 14,61M x 7,8% ≈ 1,14M desocupados medidos; proyección nacional ~1,72M). Serie de mismo trimestre confirmada: 7,7% (1T24), 7,9% (1T25), 7,8% (1T26). Marcado como ESTIMACIÓN/ENCUESTA: expectativa IAE Business School (~mitad de pymes evaluaba reducir plantilla) y presión ampliada del mercado laboral 30,7% (CEPA). Se evitaron valores trimestrales históricos en disputa (Q3 en discrepancia 6,3% vs 6,6%): no se graficaron.",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-desempleo-estable-empleo-precario"
-  },
-  {
-   "tema": "boom de deuda corporativa en dólares / obligaciones negociables récord 2026 (US$17.400 M desde las elecciones)",
-   "angulo": "primer tema de la sección MERCADOS (todas las notas previas eran ECONOMÍA). Empresas y provincias captaron US$17.400 M en deuda en dólares desde las elecciones de oct-2025 (corporativas US$13.730 M —externas/CCL US$9.460 M + local/MEP US$4.270 M— y provincias US$3.650 M, ~250 operaciones), según relevamiento de Romano Group (Salvador Vitelli) vía La Nación 07/07/2026. Ángulo de datos NUEVO respecto de la nota de compra récord del BCRA (que fue el lado del comprador de reservas): esta es la nota de la FUENTE de esos dólares —la deuda privada— y de su mecánica (las empresas liquidan los dólares de las ON en el mercado de cambios, generando la oferta que el BCRA absorbe; Werning, vice BCRA). Fenómeno CONFIRMADO por múltiples fuentes independientes: 2025 fue el mayor año de deuda corporativa en dólares en una década (>US$20.000 M, Infobae + La Nación 03/02/2026); el 1er cuatrimestre 2026 fue el mejor en 11 años (desde 2015) con US$6.200 M en emisiones primarias, US$5.586 M en 100 ON corporativas, ~90% en dólares (PwC Argentina, reproducido por La Nación 03/06 + El Cronista + iProUP). Concentración energética (Vaca Muerta) ~US$5.550 M de las corporativas 2026 y 47% de mayo (Invecq/Analytica vía Infobae). El total exacto US$17.400 M se cita con su fuente nombrada (recuento de mercado, no dato oficial único): distintos compiladores dan totales distintos según ventana y universo (Invecq/Analytica contaban US$9.900 M corporativas desde 25/10 al 24/06; US$6.800 M ya liquidados, US$3.200 M pendientes). Postura de refutación incluida: es DEUDA (no exportación), hay que devolverla en dólares; parte es refinanciación (roll-over), no inversión nueva; depende de que la ventana de riesgo país bajo/tasas bajas siga abierta (riesgo de refinanciación 2027-2028). Coherencia interna verificada (9.460+4.270+3.650=17.380≈17.400; 6.800+3.200=10.000≈9.900 emitido). Disclaimer: no es asesoramiento financiero.",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-boom-deuda-corporativa"
-  },
-  {
-   "tema": "venture capital / capital emprendedor en startups argentinas (US$270 M en 2025, reactivación en 2026)",
-   "angulo": "segunda nota de MERCADOS, pero ángulo de datos NUEVO respecto de la deuda corporativa (que fue DEUDA en dólares de grandes empresas): esta es la nota del EQUITY de riesgo hacia startups —el venture capital—. En 2025 las startups argentinas captaron US$270 M en 73 rondas de inversión (informe 'Panorama del Capital Emprendedor Argentino 2026' de ARCAP + EY, difundido ~03/06/2026): fue el MENOR monto en dólares desde 2022 (2024 había sido ~US$412 M, -35%) pero el MAYOR número de operaciones del período (matiz clave monto-vs-operaciones). En los primeros meses de 2026 el flujo ya superó ese total: recuento parcial/móvil que según fuente y ventana va de US$400 M (La Nación 03/06) a US$427 M (Forbes/ecosistema, 5 meses) a ~US$540 M (El Cronista, abril). Diferente también de la nota de economía del conocimiento (que fue INGRESOS por exportación de servicios SBC, no inversión recibida). Cifra ancla (US$270 M / 73 rondas) CONFIRMADA: informe primario ARCAP+EY reproducido por múltiples outlets independientes (El Observador, La Nación, El Cronista, Forbes, Ámbito, Perfil, ecosistemastartup, agrositio). Coherencia interna verificada: 75,7% del capital en 9 rondas; 87,7% de operaciones <US$5 M; >50% pre-seed; 47,2% de startups financiadas fuera del AMBA (9 provincias: Santa Fe, Córdoba, Tucumán); 22,7% con fundadora mujer (vs 15,2% en 2024). Contexto regional CONFIRMADO: LatAm US$4.126 M en 2025 (+13,8%, Cuántico VP), Argentina ~7% del total. Postura de refutación incluida: el salto 2026 está concentrado en fintech (~80% del capital) y en 2-3 mega-rondas (Ualá, Pomelo, Humand, Tapi); sin ellas el 'boom' se parece a un año normal. El total 2026 se marca como ESTIMACIÓN/parcial (rango US$400-540 M) por ser recuento móvil de rondas anunciadas. No es asesoramiento financiero.",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-venture-capital-startups"
-  },
-  {
-   "tema": "utilización de la capacidad instalada industrial / mayo 2026 (58,4%, con fuerte heterogeneidad sectorial)",
-   "angulo": "ángulo de datos NUEVO respecto de la nota de producción industrial (IPI/ISAC, que midió la variación interanual del volumen): esta nota es sobre el NIVEL de uso de la capacidad instalada —cuánto del parque fabril quedó ocioso— y sobre la brecha sectorial. En mayo la industria usó 58,4% de su capacidad (INDEC, publicado 16/07/2026), -0,5 pp vs mayo 2025 (58,9%) y -1,5 pp vs abril (59,9%): la comparación interanual, que en marzo-abril había sido positiva, volvió a rojo. 5 de 12 bloques por debajo del 50%. Techo: refinación de petróleo 88,7% (vs 73,3% may-25; gasoil +23,8%, nafta +18,3%, tracción de Vaca Muerta). Piso: metalmecánica 38,7% (vs 46,0% may-25; maquinaria agrícola -29,6%, electrodomésticos -34,1%), automotriz 45,5% (vs 56,8%), textiles 42,2%. Cifra ancla (58,4%) CONFIRMADA por INDEC (informe de prensa oficial, fuente primaria) + coherencia interna de la serie 2026 (53,6→54,6→59,8→59,9→58,4) + corroboración independiente por otra metodología: ADIMRA midió la metalúrgica en 39,8% (≈ INDEC metalmecánica 38,7%), su 3er registro más bajo tras abr-2020 (32,7%) y may-2020 (39,1%). Contexto histórico: mínimo general ~42% en abr-2020. Se distingue explícitamente de la nota IPI/ISAC (crecimiento) por medir el nivel de utilización/capacidad ociosa, no la variación de la producción.",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-capacidad-instalada-industria-ociosa"
-  },
-  {
-   "tema": "carga de deuda de las familias / servicios de deuda 24,1% de la masa salarial formal (abril 2026, récord de la serie)",
-   "angulo": "ángulo de datos NUEVO respecto de la nota de inflación (que mencionó la mora como un síntoma más, '2 millones más en mora') y de la nota de crédito hipotecario (que fue sobre originación de hipotecas): esta nota es sobre la CARGA DE DEUDA de las familias —cuánto del ingreso se va en pagar cuotas— con eje en el Informe de Estabilidad Financiera del BCRA. Cifra ancla: en abril las familias destinaron el 24,1% de la masa salarial formal (16,9% de la ampliada, 4,6% del PBI) al pago de capital e intereses, el nivel más alto de la serie del BCRA, por encima del promedio de la década (~15,1%) y del pico previo de 2018 (~20%). La carga casi se duplicó en año y medio (13% a fines de 2024 → 24,1%). Datos de apoyo: morosidad de las familias 12,1% oficial en abril (CONFIRMADO) y ~12,7% preliminar en mayo (1816 sobre Central de Deudores, marcado ESTIMACIÓN, 19° mes en alza, x5 desde 2,5% en oct-2024); morosidad por segmento mayo (empresas 3,5%, sector privado total 7,7%, no bancario/fintech ~28,7%, preliminar); refinanciaciones de préstamos del 1,6% del stock (oct-2025) al 3,2% (abril-2026), se duplicaron en 6 meses, máximo desde 2010 (IEF, CONFIRMADO). Postura de refutación incluida: el vice del BCRA (Werning) sostiene públicamente que la mora bancaria 'ya tocó su pico en el 2° trimestre' y ve el deterioro como transitorio (crédito que renace desde una base baja); el contraargumento es que el nivel ya superó el pico de 2018, cuando el crédito era mayor. Cifra ancla (24,1%) CONFIRMADA: reproducida de forma coincidente por Infobae/Equilibra (17/07), Río Negro (17/07), Conclusión (10/07) y Canal C (10/07) sobre el mismo IEF del BCRA, con continuidad de la serie oficial (IEF 2023 ~10,9%, IEF dic-2024 13% / promedio 15,1% / pico 2018 ~20%, leídos directo del IEF). Coherencia interna verificada (24,1% masa formal > 16,9% ampliada > 4,6% PBI; refinanciación 1,6%→3,2%=x2; mora 2,5%→12,7%≈x5). No es asesoramiento financiero.",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-carga-deuda-familias-salario"
-  },
-  {
-   "tema": "producción automotriz / caída de la fabricación de vehículos en el 1er semestre 2026 (204.658 unidades, -18,3% i.a.)",
-   "angulo": "ángulo de datos NUEVO respecto de la nota de industria/construcción (IPI/ISAC general del INDEC, que citó automotriz -15,9% como una línea) y de la nota de autos electrificados (que fue sobre PATENTAMIENTOS de electrificados vía ACARA): esta nota es sobre la MANUFACTURA automotriz medida por ADEFA —producción, exportaciones y ventas mayoristas a concesionarios— y la paradoja de un mercado 0km que repunta abastecido por importados mientras la fábrica local se apaga. Cifra ancla: producción 204.658 unidades en el 1er semestre 2026, -18,3% i.a. (vs 250.478 en H1 2025), camino a un TERCER año consecutivo de caída (2024 -17,1% a 506.571; 2025 -3,1% a 490.876; récord histórico 828.771 en 2011). Datos de apoyo: exportaciones 126.893 unidades (-2,1%), Brasil 82.486 = 65% del total; ventas a concesionarios 228.129 (-23,7%), junio 44.096 (-26,3% i.a., +22,6% mensual); participación de autos/utilitarios NACIONALES en las ventas a concesionarios = 29,9% (acum. 5 meses) → ~7 de cada 10 vendidos son importados. Cifra ancla CONFIRMADA por doble metodología independiente: ADEFA (cámara de terminales, fuente primaria que releva unidades) + INDEC (IPI manufacturero, división vehículos automotores -15,9% i.a. en mayo, y autopartes -10,8%), reproducida coincidentemente por Infobae, La Nación, El Cronista, Rosario3, Los Andes. Coherencia interna verificada (204.658/250.478=0,817→-18,3%; 126.893/129.654=0,979→-2,1%; 82.486/126.893=0,650→65%; 228.129/299.001=0,763→-23,7%; 490.876/506.571=0,969→-3,1%; 506.571/610.715=0,830→-17,1%). Postura de refutación incluida: lectura pro-consumidor (mercado más abierto = más modelos/mejores precios; junio repuntó +22,6% mensual) vs. lectura industrial (cada auto importado es empleo/valor agregado que no se genera acá; ADEFA pide baja de impuestos). La producción anual 2026 (~409.000, anualización del semestre) se marca como ESTIMACIÓN/proyección, no dato cerrado. El 'tercer año consecutivo' se marca como TENDENCIA (2026 no cerró). No es asesoramiento financiero.",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-produccion-autos-tercer-ano-baja"
-  },
-  {
-   "tema": "superávit comercial récord / saldo de la balanza comercial de bienes mayo 2026 (US$3.504 M, el más alto de la serie del INDEC) y la paradoja del dólar que no baja",
-   "angulo": "ángulo de datos NUEVO respecto de las notas ya cubiertas de comercio/dólar: NO es la nota de exportaciones de GRANOS por volumen (60,7 M t), NI la de BCRA compra récord de reservas, NI la de Vaca Muerta/superávit ENERGÉTICO. Esta nota es sobre el SALDO COMERCIAL TOTAL DE BIENES (superávit comercial) medido por el ICA del INDEC, con eje en el récord mensual y la paradoja de por qué el dólar no baja pese al ingreso de divisas. Cifra ancla: superávit comercial de MAYO 2026 = US$3.504 M, el más alto de la serie del INDEC (exportaciones US$9.537 M +34,4% i.a., récord histórico mensual; importaciones US$6.033 M -7,0% i.a.). Ancla CONFIRMADA por doble fuente independiente con metodologías distintas: INDEC (ICA, base aduana/devengado) US$3.504 M + BCRA (Balance Cambiario, base caja) ingreso neto de bienes US$4.322 M ('máximo histórico'). Coherencia interna verificada: 9.537-6.033=3.504; rubros suman el total (PP 2.441 +22,5%; MOA 2.992 +20,5%; MOI 2.360 +20,1%; Combustibles y energía 1.745 +167,1% → suma ≈9.538); descomposición del +34,4% = cantidades +18,1% × precios +13,9% (1,181×1,139≈1,345). Acumulado ene-may: expo US$40.359 M (+24,3%), impo US$28.575 M (-6,6%), saldo US$11.783 M (40.359-28.575=11.784). Datos de apoyo (BCRA balance cambiario mayo, mismo mes, base caja): BCRA compró US$2.601 M para reservas, Tesoro US$150 M, atesoramiento privado bruto US$2.260 M (1,4 M de personas compraron billetes) → explica por qué el excedente comercial no hace caer el dólar. Estimaciones marcadas como tales: superávit comercial anual 2026 ~US$23.000 M (consultoras); liquidación agro+energía+minería 2026 ~US$57.168 M (BCR/Bolsa de Comercio de Rosario) cerca del récord 2022 de US$57.622 M (agro 34.897, energía 14.400, minería 9.000). Racha de superávit ininterrumpido desde fines de 2023: marcada como tendencia ('más de dos años'), no como conteo exacto de meses. Postura de refutación incluida: lectura pro (más reservas, calma cambiaria, desinflación) vs. matiz (parte del superávit viene de importar MENOS por actividad interna débil; dependencia de precios internacionales y clima). No es asesoramiento financiero.",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-superavit-comercial-record-mayo"
-  },
-  {
-   "tema": "exportaciones mineras / récord histórico ene-may 2026 (US$3.934 M, +75,8%) y el despegue del litio",
-   "angulo": "sector minería (hasta ahora sin cubrir): el récord de exportaciones y la clave volumen vs. precio del litio (+155,8% en dólares pero +59,3% en volumen; el resto lo puso el precio internacional). Ángulo de datos NUEVO respecto de las notas de agro (más toneladas, menos dólares) y energía (Vaca Muerta).",
-   "fecha": "2026-07-19",
-   "estado": "publicada",
-   "articulo_id": "2026-07-19-mineria-record-litio"
-  },
-  {
-   "tema": "inflación mayorista junio 2026 / IPIM 1,1%, la menor suba en cuatro meses y debajo del minorista",
-   "angulo": "ángulo de datos NUEVO respecto de la nota de inflación minorista (IPC, ya publicada): esta es la nota del ÍNDICE MAYORISTA (IPIM del INDEC), el precio 'aguas arriba' que cobran fábricas, campo e importadores y que se adelanta 1-2 meses a la góndola. Cifra ancla: IPIM junio 2026 = 1,1% mensual, la menor suba en cuatro meses (previo mínimo febrero) y casi un punto por debajo del IPC minorista (1,9%); segundo mes de desaceleración (mayo 2,5% → junio 1,1%, -1,4 pp); interanual 33,7% (levemente por encima del IPC 33,5%), acumulado ene-jun 15,6%. Composición verificada: por origen nacionales +1,0% vs importados +2,3% (huella del dólar); por tipo energía eléctrica +6,6% (tarifas), manufacturados +1,6%, primarios -1,2%, alimentos y bebidas -0,3%; contribuciones químicos +0,26 pp, agropecuarios +0,23 pp, petróleo crudo y gas -0,56 pp. IPIB e IPP también 1,1%. Cifra ancla CONFIRMADA: dato oficial INDEC (serie desde dic 2015) reproducido de forma coincidente por múltiples fuentes independientes (Infobae, Los Andes, MendoVoz, Canal 26, Perfil, mdzol, El Litoral, El Diario de la Región, Conclusión) + confirmación on-the-record del ministro Caputo ('menor variación para un mes de junio de toda la serie del IPIM'). Coherencia interna verificada (mayo 2,5% - 1,4 pp = 1,1%; interanual mayorista 33,7% coherente con IPC 33,5% ya verificado; por origen nacionales+importados ponderan ~1,1%). Proyección de julio (FMyA 1,8% / Analytica 1,9%) marcada como ESTIMACIÓN. Postura de refutación incluida: la desaceleración es real pero el subíndice de importados (+2,3%) avisa que un salto cambiario revertiría el alivio; tarifas (+6,6%) son el otro frente. No es asesoramiento financiero.",
-   "fecha": "2026-07-20",
-   "estado": "publicada",
-   "articulo_id": "2026-07-20-inflacion-mayorista-junio"
-  },
-  {
-   "tema": "soja / análisis de mercado a seis meses: precio CBOT en la zona de US$12/bushel y curva de futuros",
-   "angulo": "sección MERCADOS, ángulo de datos NUEVO respecto de las notas de agro ya cubiertas (exportaciones de granos por volumen; minería/litio): esta es una NOTA TÉCNICA de análisis del precio internacional de la soja, no de las exportaciones argentinas. Ejes: el ciclo 2021-2026 (pico ~US$17,6 jun-2022, pisos dic-2024/ago-2025, rebote nov-2025 por acuerdo EEUU-China, disponible ~US$12,15 al 20-jul-2026); oferta récord sudamericana (Brasil 180 Mt 2025/26, EEUU ~121,8 Mt 2026/27 proyección USDA); demanda china (récord aduanas 111,8 Mt año calendario 2025) anclada a Brasil por brecha arancelaria (13% vs 3%); tablero macro (DXY, Brent -38%, Fed 3,50-3,75%); curva de futuros CBOT en contango leve; traslado del precio de Chicago al FAS del productor argentino (retenciones 24% poroto, baja gradual desde ene-2027, FAS ~US$325/t); tres escenarios a 6 meses (bajista US$10,5-11 / base US$12-12,3 / alcista US$13+). Nota provista por el editor humano y publicada por pedido directo. Verificación de anclas por la redacción (fuentes primarias): precio soja en zona US$12 CONFIRMADO (nueva cosecha superó US$12, máximo de 3 años); precio promedio de temporada USDA 2025/26 US$10,40/bushel CONFIRMADO (WASDE julio 2026, exacto); producción EEUU 2026/27 4.475 M bushels ≈ 121,8 Mt CONFIRMADO (WASDE julio 2026); Brasil récord CONFIRMADO (FAS/USDA). Discrepancia menor marcada: importaciones China 2026/27 en la nota (~108 Mt, estimación) por debajo del WASDE julio 2026 (115 Mt); la propia nota flaggea divergencia entre fuentes. Formato: análisis con escenarios ilustrativos, disclaimers de 'no asesoramiento' y sección de validación metodológica. No es asesoramiento financiero.",
-   "fecha": "2026-07-20",
-   "estado": "publicada",
-   "articulo_id": "2026-07-20-soja-mercado-seis-meses"
-  },
-  {
-   "tema": "índice de salarios abril 2026 / salario real y la trampa del promedio",
-   "angulo": "el índice general de salarios subió 3,7% en abril y le ganó a la inflación (2,6%), y en el interanual el total (+36,9%) supera al IPC (+32,4%); pero el promedio solo gana por el arrastre estadístico del segmento no registrado (+69,6% i.a., medido con rezago). El trabajador registrado privado (+29,3% i.a.) y el público (+29,6% i.a.) perdieron contra la inflación (salario real -2,3% y -2,1% respectivamente). Cifra ancla oficial del INDEC CONFIRMADA (Índice de salarios abril 2026) y corroborada de forma independiente por el RIPTE (+3,5% mensual); los valores de salario real son cálculo propio sobre series nominales del INDEC",
-   "fecha": "2026-07-20",
-   "estado": "publicada",
-   "articulo_id": "2026-07-20-salario-real-abril"
-  },
-  {
-   "tema": "ventas minoristas pyme junio 2026 / cortan 13 meses de caída (CAME, +0,9% interanual)",
-   "angulo": "el índice de ventas minoristas pyme de CAME creció 0,9% interanual en junio 2026, la primera suba tras 13 meses consecutivos de caída, pero con letra chica: intermensual desestacionalizado -1,3% y acumulado del semestre -2,5%; el repunte se atribuye a factores de una sola vez (aguinaldo/SAC + inicio del Mundial 2026). Cifra ancla CONFIRMADA como medición de CAME (informe primario + reproducida de forma consistente por Infobae, Perfil y Primera Edición); cotejada de forma independiente con la estadística oficial del INDEC (Encuesta de Supermercados abril 2026, -3,7% i.a. a precios constantes), que aún no confirma la mejora. Rubros por interanual verificados (Perfumería +9,5%, Farmacia +5,4%, Alimentos +2,9%, Textil +1,9%, Calzado -1%, Ferretería -2%, Bazar/muebles -3,1%). Ángulo de CONSUMO/comercio pyme, no cubierto antes en el portal.",
-   "fecha": "2026-07-20",
-   "estado": "publicada",
-   "articulo_id": "2026-07-20-ventas-pyme-cortan-caida"
-  },
-  {
-   "tema": "pagos con QR / superan por primera vez los 100 millones de operaciones mensuales (BCRA, mayo 2026)",
-   "angulo": "los pagos con transferencia por QR (PCT) llegaron a 102,5 millones de operaciones en mayo 2026, primera vez sobre 100 M, +66,1% i.a. y por $2,4 billones, segun el Informe de Pagos Minoristas del BCRA. Cifra ancla CONFIRMADA: fuente primaria oficial (BCRA) + coherencia de la propia serie mensual cruzada de informes independientes del BCRA (ene 92,1M, feb 88,9M, mar 99,6M, abr 99,6M, may 102,5M), con la cuenta interanual cerrando (102,5/1,661=61,7M en may-2025) y abril a un paso de los 100M confirmando que mayo es el primer cruce. Angulo tecnologia/finanzas-medios de pago: la divergencia estructural entre el QR que crece (+66%) y las tarjetas de debito (-7% cantidad, -13,9% real) y credito (-6%, -13,3% real) que caen; lectura doble (digitalizacion/adios al efectivo vs. sustitucion y consumo debil). Ticket promedio en baja ($23.414). No cubierto antes en el portal.",
-   "fecha": "2026-07-20",
-   "estado": "publicada",
-   "articulo_id": "2026-07-20-pagos-qr-superan-100-millones"
-  },
-  {
-   "tema": "deuda pública / bajó por 2º mes en junio 2026 (US$474.192 M) pero sigue a un paso del récord de marzo (US$483.830 M)",
-   "angulo": "el stock de deuda bruta de la Administración Central cerró junio 2026 en US$474.192 M, -US$5.080 M vs mayo (2º baja consecutiva), a solo US$9.638 M del récord histórico de US$483.830 M de marzo. Cifra ancla CONFIRMADA: fuente primaria oficial (Secretaría de Finanzas, informe mensual publicado 15/07/2026) + coherencia de la serie oficial anual verificada por fuentes independientes (La Nación: dic-2023 US$370.674 M / nov-2023 US$425.556 M / dic-2024 US$466.921 M / dic-2025 US$455.067 M; OPC como organismo técnico independiente; iProfesional y Paco Urondo para el récord de marzo). Angulo economía/finanzas-deuda soberana con las DOS LECTURAS: la misma deuda 'subió US$103.518 M (desde dic-2023)', 'subió US$48.636 M (desde nov-2023)' o 'bajó US$21.536 M (consolidada neta, medida oficial)' segun base y perimetro; la baja de junio es sobre todo contable (apreciacion del peso); el alza se explica por capitalizacion de intereses (US$89.767 M) y ajuste CER (US$81.636 M), no por deuda nueva; pesificacion (23%->46% en pesos) y acortamiento (Letras 3%->14%). Se DESCARTO por incoherente el dato de composicion 65,7% en pesos de una fuente (dos fuentes independientes confirman 46%). No cubierto antes: la nota previa 'boom de deuda corporativa' es deuda privada (ONs), distinta de la deuda publica soberana.",
-   "fecha": "2026-07-20",
-   "estado": "publicada",
-   "articulo_id": "2026-07-20-deuda-publica-dos-lecturas"
-  },
-  {
-   "tema": "carne vacuna / consumo per cápita en mínimo de ~2 décadas vs exportaciones récord (1er semestre 2026)",
-   "angulo": "el consumo interno cayó a ~47,5 kg/hab (menor en unas dos décadas, -11% i.a. en el semestre) mientras las exportaciones batieron récord (US$1.765 M en 5 meses, +46% en valor; EE.UU. +151% en volumen). La res partida en dos: el negocio exportador en dólares crece y la mesa local se achica por el precio (+58% i.a.), con el pollo igualando por primera vez a la vacuna (47 kg). Ancla (consumo per cápita ~47,5 kg) CONFIRMADA por CICCRA + IPCVA/BCR y coherente con la serie oficial del MAGyP; exportaciones confirmadas por CICCRA + Secretaría de Agricultura",
-   "fecha": "2026-07-20",
-   "estado": "publicada",
-   "articulo_id": "2026-07-20-carne-vacuna-consumo-minimo-record-exportacion"
-  },
-  {
-   "tema": "jubilaciones / el bono de $70.000 congelado desde marzo de 2024 y la brecha de poder de compra dentro del sistema",
-   "angulo": "La movilidad mensual atada al IPC protegió a los haberes: las jubilaciones POR ENCIMA de la mínima ganaron ~10,4% de poder de compra real desde nov. 2023, pero la MÍNIMA con bono perdió ~9,2% (est. Chequeado), porque el bono extraordinario de $70.000 —uno de cada siete pesos de la mínima— está congelado desde marzo de 2024 y no se indexa. Cifra ancla (bono $70.000 congelado) CONFIRMADA por múltiples fuentes independientes (ANSES oficial + Chequeado + iProfesional + Ámbito + BAE + Infobae). Montos oficiales de julio CONFIRMADOS por triple fuente (Ámbito/Economis/econoblog: mínima $411.989, con bono $481.989, máxima ~$2,77 M; movilidad 2,15%). Ángulo de datos NUEVO respecto de la nota macro de inflación/ajuste: acá el eje es el sistema previsional y el diseño del bono, no el empleo ni el salario. Marcadas como ESTIMACIÓN: poder de compra (−9,2%/+10,4% desde nov 2023; −5,1% i.a., Chequeado), el bono contrafáctico ($157.341, Chequeado) y la canasta del adulto mayor ($1.622.654, Defensoría de la Tercera Edad CABA). Contexto (64,4% cobra la mínima o menos; 5,7 M jubilados; 64,1% por moratoria) es dato oficial de jun. 2023 (Chequeado), etiquetado con su fecha.",
-   "fecha": "2026-07-20",
-   "estado": "publicada",
-   "articulo_id": "2026-07-20-bono-jubilados-congelado"
-  },
-  {
-   "tema": "morosidad / mora del crédito a las familias en récord (12,1% en abril 2026, máximo desde 2004)",
-   "angulo": "la irregularidad del crédito a los hogares trepó a 12,1% en abril 2026 (BCRA, Informe sobre Bancos), el nivel más alto desde 2004 y más del triple que un año atrás (3,7%); encadena ~18 meses de suba. La mora se concentra en consumo (personales 14,9%, tarjetas 12,5%) frente a hipotecarios (~1,5%) y empresas (3,3%). Anclaje oficial CONFIRMADO (BCRA, doble fuente independiente); el 12,7% de mayo se marca como ESTIMACIÓN (consultora 1816). Distinto de la nota de 'carga de deuda de las familias' (servicios de deuda/masa salarial): esta mide incumplimiento, no flujo.",
-   "fecha": "2026-07-20",
-   "estado": "publicada",
-   "articulo_id": "2026-07-20-mora-familias-record"
-  },
-  {
-   "tema": "actividad de la construcción vs. venta de materiales / la crisis de los corralones y ferreterías en la provincia de Buenos Aires (jun 2026)",
-   "angulo": "Paradoja de indicadores: el ISAC del INDEC (actividad) creció +4,1% i.a. y +6,3% mensual en mayo, pero la VENTA de materiales cae: Índice Construya −1,99% mensual desest. (−0,6% i.a.) en junio, y despachos de cemento (AFCP) −1,4% i.a. en junio, tercer mes consecutivo en baja (−3% en el 1er semestre vs 2025). En el mostrador bonaerense, el rubro CAME 'ferretería, materiales eléctricos y de la construcción' cayó −2% i.a. en junio; FEBA (Camilo Cahale) y FELP (Marcelo Babenco) relativizan la mejora ('la crisis sigue igual'; revierte ~14 meses de baja pero 'no es óptima'). La divergencia se explica porque el ISAC capta obra en marcha/terminaciones (pinturas +23,6%, hormigón +10,1%, hierro +9,6%) mientras los básicos del corralón y la obra pública caen (pisos cerámicos −19,6%, asfalto −8,2%, ladrillos huecos −8,0%, cemento −1,3%). Empleo construcción registrado +1,2% i.a. (abril), señal de piso. Cifra ancla (la venta de materiales cayó en junio) CONFIRMADA por triple fuente independiente (Construya + AFCP + CAME); ISAC +4,1% CONFIRMADO (INDEC + Ámbito). DESCARTADAS por no verificar: la caída '11,6%' (La Política Online, sin acceso) y 'ventas en corralones −50%' y '−29,2% vs 2023' (artículos de 2024, stale). Ángulo NUEVO frente a 'industria vs construcción mayo 2026' y 'crédito hipotecario': acá el eje es la cadena comercial de materiales (corralones/ferreterías) en PBA, no la macro ni el crédito.",
-   "fecha": "2026-07-20",
-   "estado": "publicada",
-   "articulo_id": "2026-07-20-corralones-construccion-buenos-aires"
-  },
-  {
-   "tema": "monotributo / evolución del régimen y del tope de facturación (2023-2026): la reforma de la Ley 27.743 y el paso de AFIP a ARCA",
-   "angulo": "el tope de facturación anual del monotributo pasó de $16,9 M (comercio, ene 2024) a $126,6 M (categoría K, tabla de ARCA desde agosto 2026, +16,8% por IPC 1er sem.); la reforma fiscal 2024 (Ley 27.743) unificó las escalas de comercio y servicios y llevó el tope de servicios de $11,9 M (cat. H) a $68 M (cat. K), +470%, retroactivo a ene 2024. Serie de topes CONFIRMADA (tablas oficiales ARCA + La Nación); tope ancla agosto 2026 CONFIRMADO por doble fuente independiente (La Nación + Perfil citando la tabla de ARCA); vigente hasta julio: $108,4 M (ARCA). Contexto: AFIP disuelta y ARCA creada por Decreto 953/2024 (BO 25/10/2024). El total de ~4 millones de monotributistas y el valor 'solo inflación' ($57 M) se marcan como estimaciones. Recategorización semestral en curso (cierre 5/08/2026).",
-   "fecha": "2026-07-21",
-   "estado": "publicada",
-   "articulo_id": "2026-07-21-monotributo-como-cambio"
-  },
-  {
-   "tema": "empleo registrado (SIPA) abril 2026 / se perdieron 28.736 puestos, solo 11.673 asalariados privados",
-   "angulo": "anatomía del dato: el total de 28.736 se descompone en 6 modalidades (privados -11.673, monotributistas -11.091, monotributo social -5.135, autónomos -4.107, público +2.816, casas particulares +409); la coherencia interna cierra (-28.780 ≈ -28.736) y la EIL (fuente independiente, -1,2% i.a. privado) corrobora. Eje en la sustitución de asalariados por monotributistas (interanual -128.600 vs +49.500). DISTINTO del tema ya cubierto 'mercado de trabajo / desocupación EPH 1er trim': aquí es registro administrativo mensual (SIPA), no la encuesta de hogares, y el foco es el NIVEL y la COMPOSICIÓN del empleo registrado, no la tasa de desocupación. Cifra ancla CONFIRMADA.",
-   "fecha": "2026-07-21",
-   "estado": "publicada",
-   "articulo_id": "2026-07-21-empleo-registrado-abril-anatomia"
-  },
-  {
-   "tema": "IA y el futuro del trabajo / ¿la IA reemplaza todo menos los oficios? mito vs. realidad con datos",
-   "angulo": "investigacion a fondo (regalo por Dia del Amigo para Jose, emprendedor de oficios): solo 3,3% del empleo mundial en maxima exposicion a la IA (OIT WP140); FMI ~40% afectados pero afectar!=reemplazar; BM LatAm 2-5% automatizacion total; estudio Min. Economia Argentina: gerentes 99% vs manuales 35% (invierte el miedo), 71% complementariedad; paradoja de Moravec; robotica fisica lejos (Atlas 89kg levanta 11kg); demanda de oficios crece (BLS electricistas +9%, HVAC +8% vs 3% promedio), 41% construccion se jubila 2031, IA data centers necesita 140.000 electricistas 2030; la IA transforma el oficio (takeoff 97% precision, cotizar 2-3x). Fuentes primarias OIT/FMI/BM/BLS/WEF/Min Economia AR. Publicada directamente por decision del dueño.",
-   "fecha": "2026-07-20",
-   "estado": "publicada",
-   "articulo_id": "2026-07-20-ia-no-reemplaza-oficios"
-  },
-  {
-   "tema": "boom de patentamiento de motos / 1er semestre 2026 (+43,5%, más de 440.000 unidades) vs. caída de autos 0km (−10%)",
-   "angulo": "el mercado de vehículos se parte en dos: las motos (92,6% de baja cilindrada, 97% nacionales) vuelan mientras los autos 0km caen. La moto como termómetro del poder de compra: movilidad de bajo costo, fuerte en el norte, moto económica ~$2,3M vs auto más barato ~$26,5M. Cifra ancla (+43,5% i.a.) CONFIRMADA por CAFAM, El Economista, Perfil y datos DNRPA; se dan las dos lecturas (downgrade del bolsillo vs. rebote del crédito y base baja de 2024)",
-   "fecha": "2026-07-21",
-   "estado": "publicada",
-   "articulo_id": "2026-07-21-boom-motos-caen-autos"
-  },
-  {
-   "tema": "compras al exterior por courier / puerta a puerta se duplicaron en el 1er semestre 2026 (US$643 M, +104,2% i.a.)",
-   "angulo": "el canal courier (Shein, Temu, Amazon) se disparó 104% a contramano de las importaciones totales del país (-3,9%). Motores: franquicia de US$400 sin derechos + régimen ampliado (5 envíos/año, US$3.000 c/u) desde fines de 2024, y peso apreciado. Cifra ancla (se duplicó, +104,2%) CONFIRMADA por triple fuente: INDEC (ICA, 'resto' +69,9% junio), y las consultoras Analytica (US$643 M) y Abeceb (2025 US$894 M, +274%); coherencia interna US$518 M ene-may + US$125 M jun = US$643 M. El monto exacto en dólares se marca como estimación de consultora. Las dos lecturas: poder de compra recuperado vs. golpe al comercio e industria local",
-   "fecha": "2026-07-21",
-   "estado": "publicada",
-   "articulo_id": "2026-07-21-compras-courier-se-duplican"
-  },
-  {
-   "tema": "crédito al sector privado / rebote de junio 2026 (+1,7% real, primera suba en seis meses) traccionado por líneas comerciales",
-   "angulo": "el crédito cortó cinco meses de caída pero el impulso vino de las empresas, no de las familias; contexto de baja penetración (13,6% del PBI) y mora récord",
-   "fecha": "2026-07-21",
-   "estado": "publicada",
-   "articulo_id": "2026-07-21-credito-privado-rebota-empresas"
-  },
-  {
-   "tema": "cheques rechazados por falta de fondos / la cadena de pagos bajo estrés (mayo 2026)",
-   "angulo": "en mayo se rechazaron 99.431 cheques por falta de fondos (BCRA), 2º mes seguido de baja desde el récord de dic-2025 (119.285) pero aún +43,4% i.a.; el estrés financiero de las empresas/pymes que la macro (inflación en baja, dólar planchado) no muestra. Cifra ancla oficial del BCRA (Informe de Pagos Minoristas) confirmada; fenómeno corroborado por fuente independiente (Fidelitas). Distinto de la morosidad de familias ya cubierta: acá es el crédito comercial entre empresas.",
-   "fecha": "2026-07-21",
-   "estado": "publicada",
-   "articulo_id": "2026-07-21-cheques-rechazados-cadena-pagos"
-  },
-  {
-   "tema": "producción de gas natural / récord histórico de Neuquén (115,14 MMm³/día, mayo 2026) y la paradoja de importar GNL en invierno",
-   "angulo": "ángulo de datos NUEVO respecto de la nota de Vaca Muerta ya cubierta (que fue sobre PETRÓLEO/crudo y el superávit energético): esta nota es sobre el GAS NATURAL. Cifra ancla: Neuquén produjo 115,14 MMm³/d de gas en mayo 2026, máximo histórico absoluto, superando el récord previo de julio 2025 (114,51 MMm³/d) por +0,63; +13,8% mensual (vs abril 101,19) y +12,5% i.a. Datos de apoyo: producción NACIONAL 155,96 MMm³/d (+5,6% i.a.), Neuquén = 73,8% del gas del país; shale de Vaca Muerta 95,16 MMm³/d (+20% i.a., 82,6% del gas neuquino), no convencional ~92%; el convencional cayó -12% y el tight -17% (la transición). Milestone: OLADE ubicó a Argentina como 1° productor de gas de América Latina y el Caribe (21% de la región en enero 2026, apenas arriba de Trinidad 20% y Brasil 13%) — marcado como participación (no volumen absoluto) y ventaja de 1 punto. La postura de refutación / asterisco Con Interés: pese al récord, el país sigue importando GNL en invierno porque el problema es de ESTACIONALIDAD y TRANSPORTE, no de recurso (demanda residencial se triplica de 20 a 60 MMm³/d, picos 90; cuello de botella del trasvase sur-norte 15-18 MMm³/d). Factura de importación de GNL: 2022 = 41 barcos / US$2.885 M; 2025 = 27 barcos / US$698 M; 2026 = ~US$1.400 M (ESTIMACIÓN de Juan José Carbajales, ~doble de 2025, no por más volumen sino por el salto del precio internacional a ~US$20/MMBTU). Cifra ancla (115,14 MMm³/d) CONFIRMADA por doble organismo oficial (Secretaría de Energía de la Nación + Subsecretaría de Hidrocarburos de Neuquén) y múltiples medios independientes (Infobae 23/06, Diario Río Negro, EconoJournal), con récord previo verificable (114,51 jul-2025). Coherencia interna verificada (115,14/155,96=73,8%; 95,16/115,14=82,6%; 101,19→115,14=+13,8%; US$698M x2≈US$1.400M; OLADE 21+20+13+11+10+9+5+1=90). La factura 2026 y el liderazgo OLADE se marcan como estimación/atribuido. No es asesoramiento financiero.",
-   "fecha": "2026-07-21",
-   "estado": "publicada",
-   "articulo_id": "2026-07-21-record-gas-neuquen-gnl"
-  },
-  {
-   "tema": "RIGI / Pampa Energía invierte US$4.521 millones en Rincón de Aranda (Vaca Muerta), 20º proyecto aprobado",
-   "angulo": "anatomía del dato oficial del Boletín Oficial (Res. 1025/2026): la cifra ancla US$4.521 M es un plan de inversión confirmado por doble fuente; el acumulado del RIGI se presenta como rango (US$46.000–57.000 M) y las cifras de producción/exportación/empleo como estimaciones de la empresa. Ángulo de régimen de inversión (no de producción energética), distinto de las notas previas de Vaca Muerta.",
-   "fecha": "2026-07-21",
-   "estado": "publicada",
-   "articulo_id": "2026-07-21-rigi-pampa-4521-millones"
-  },
-  {
-   "tema": "despachos de cemento junio 2026 / tercer mes consecutivo en baja (AFCP)",
-   "angulo": "el termómetro más fino de la construcción cayó 1,4% i.a. en junio (803.147 t) y el 1er semestre cerró -3%; el rebote de marzo (+11%) no tuvo continuidad (abril -13,2%, la mayor caída en 17 meses). El nivel de 2025 (10,09 M t) sigue 19,6% por debajo de 2023, con la obra pública casi frenada. Cifra ancla oficial de la AFCP CONFIRMADA; totales 2023/2024 reconstruidos de las variaciones oficiales",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-despachos-cemento-tercer-mes-baja"
-  },
-  {
-   "tema": "PBI 1er trimestre 2026 / la economía creció 2,3% pero con dos velocidades",
-   "angulo": "el PBI subió 2,3% i.a. (+0,7% desest.) pero la inversión (FBCF) cayó 11,6% i.a. y la industria (-1,7%) y el comercio (-0,3%) siguen en rojo; agro (+18,1%), minería (+12,3%) y finanzas (+7,5%) explicaron 1,84 de los 2,3 pts. Eje en la composición sectorial y de demanda del PBI trimestral (no cubierto antes) más el freno del EMAE de abril (+1,6% i.a., -1,5% mensual). Distinto de 'industria vs construcción mayo' (EMAE sectorial): acá el ancla es el PBI de cuentas nacionales y su descomposición inversión/consumo. Ancla PBI +2,3% CONFIRMADA (INDEC + Chequeado; coherente con EMAE y consultoras privadas).",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-pbi-crece-inversion-cae"
-  },
-  {
-   "tema": "producción nacional de petróleo crudo / récord histórico: por primera vez supera los 900.000 barriles/día (mayo 2026, 903.700 bbl/d)",
-   "angulo": "ángulo de datos NUEVO respecto de las notas de energía ya cubiertas (Vaca Muerta / superávit energético del 1er semestre, que fue sobre el BALANCE COMERCIAL energético en dólares; y récord de GAS de Neuquén, que fue sobre GAS NATURAL): esta nota es sobre la PRODUCCIÓN FÍSICA de PETRÓLEO CRUDO a nivel nacional (barriles/día). Cifra ancla: 903.700 bbl/d en mayo 2026, primer registro por encima de los 900.000 en la historia, +19,6% i.a. Contexto: superó el pico convencional de 1998 (~847.000 bbl/d), techo que había resistido 27 años y recién se rompió en oct-2025 (859.500 bbl/d); serie ascendente reciente (oct-25 859.500 → ene-26 872.966 → abr-26 ~878.000 → may-26 903.700); +76% en 5 años. Motor: shale/no convencional de Vaca Muerta = 69% del total (dato oficial); ~623.000 bbl/d equivalentes marcado como CÁLCULO. El convencional (~31%, ~280.000 bbl/d) estancado/en baja. Datos de apoyo (dólares): exportaciones del complejo combustibles y energía may-2026 US$1.745 M (+167% i.a.) y ene-may US$6.182 M (+44,7%) — INDEC, coincide con la nota ya verificada de superávit comercial de mayo. Cifra ancla (903.700 / +19,6% / 69% shale) CONFIRMADA por doble fuente independiente: dato oficial de la Secretaría de Energía (DDJJ de operadoras) + confirmación on-the-record del Gobierno nacional, reproducido de forma coincidente por La Nación, Ámbito, Forbes, Diario Río Negro/EnergíaOn e iProfesional. Coherencia interna verificada (903.700 > 859.500 oct-25 > 847.000 pico 1998; 903.700/1,76≈513.000 hace 5 años, consistente con el piso ~500.000). Asterisco Con Interés / postura de refutación: (1) más producción NO implica nafta más barata (el precio del surtidor sigue paridad internacional + impuestos, no la producción local); (2) el crecimiento está concentrado en una sola cuenca (Neuquén) y una sola tecnología (shale), con dependencia del precio global del crudo y de la capacidad de evacuación (oleoductos). Dato de junio 2026 aún no difundido al cierre. No es asesoramiento financiero.",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-record-petroleo-900-mil-barriles"
-  },
-  {
-   "tema": "producción nacional de leche / récord de la década: 11.617 millones de litros en 2025 (+9,7%, 2º mejor año histórico) y continúa subiendo en 2026",
-   "angulo": "ángulo de datos NUEVO respecto de las notas de agro/lácteos ya cubiertas (carne vacuna consumo vs exportación; granos récord de volumen): esta nota es sobre la PRODUCCIÓN NACIONAL DE LECHE cruda (millones de litros) y la paradoja producción récord vs. precio real al productor en mínimos. Cifra ancla: 11.617,6 M de litros en 2025, +9,7% i.a., el mayor volumen en 10 años y 2º mejor de la historia (detrás de 2015). Contexto 2026: producción ene-may +6% i.a.; 1er cuatrimestre ~3.500 M de litros (máximo de la década para ese período); productividad 3.287 L/tambo/día (+27% vs promedio 5 años, BCR). Exportaciones ene-abr 2026: ~130.000 t por US$455 M, mayor valor para ese período desde 2012, +22,3% i.a. en volumen ene-may; Brasil principal destino (~+40% i.a.); leche en polvo como motor. Reparto del crecimiento de la oferta ene-may: ~65% exportación / 35% mercado interno; consumo interno +4%; per cápita proyectado 2026 188 L/hab (185,3 en 2025) marcado como ESTIMACIÓN. Tensión / postura de refutación: el precio al productor ajustado por inflación (SIGLeA) está en su nivel más bajo en 10 años (mayo 2026); caída real ~18,7% i.a. en enero 2026. Concentración: 8.813 tambos, 83% en Santa Fe/Córdoba/Buenos Aires; tambos >10.000 L/día pasaron de 5% (2010) a ~30% de la producción. Cifra ancla (11.617 M / +9,7% / mayor en una década) CONFIRMADA por doble fuente independiente: anuncio oficial de la Secretaría de Agricultura-Dirección Nacional de Lechería (Argentina.gob.ar, 'mayor nivel en 10 años' / 'segundo mejor rendimiento histórico') + OCLA (serie propia), corroborado por Infobae/Revista Chacra, La Gaceta, Bichos de Campo y Perfil; magnitud consistente con estimaciones internacionales independientes (USDA ~+4% 2026). Estimación 2026 (11.975,5 M, +3,08%) marcada como ESTIMACIÓN; valor 2024 (~10.592 M) reconstruido del +9,7% oficial (CÁLCULO). No es asesoramiento financiero.",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-produccion-leche-record-decada"
-  },
-  {
-   "tema": "consumo masivo / Encuesta de supermercados INDEC abril 2026 (ventas reales −3,7%, mayoristas −5%, shoppings −5,9%)",
-   "angulo": "ángulo de datos NUEVO: el canal formal (INDEC: super/mayoristas/shoppings) sigue en rojo mientras el PBI crece 2,3%; distinto universo que las ventas pyme de CAME (que rebotan)",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-consumo-supermercados-en-rojo"
-  },
-  {
-   "tema": "Moody's sube la calificación soberana de Argentina a B3 (desde Caa1, julio 2026)",
-   "angulo": "upgrade de Moody's Caa1→B3 con perspectiva positiva; las tres grandes calificadoras (Moody's B3, S&P y Fitch B-) alineadas por primera vez en más de una década; sigue 6 escalones bajo el grado de inversión; riesgo país en torno a 418 pb (mín. 8 años, arrancó 2026 en 571, -29%). Cifra ancla (calificación B3, 21/07/2026) CONFIRMADA por múltiples fuentes independientes",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-moodys-sube-calificacion-b3"
-  },
-  {
-   "tema": "exportaciones de vino / primer semestre 2026: +14,2% en volumen pero solo +2,6% en dólares",
-   "angulo": "la brecha volumen-valor: se exportaron 102,6 M de litros (+14,2%) pero los dólares subieron apenas 2,6% (US$319,5 M) porque el precio promedio por litro cayó 10,2% (US$3,47->US$3,11), empujado por el granel barato (+52,7%) frente al fraccionado (+2,4%). Cifra ancla del INV (volumen) confirmada; el precio por litro es cálculo propio verificado por coherencia interna",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-vino-mas-litros-menos-dolares"
-  },
-  {
-   "tema": "intercambio comercial (ICA) junio 2026 / superávit del 1er semestre US$13.923 M (5x 2025)",
-   "angulo": "superávit récord del semestre pero de naturaleza inversa a 2024: crece por exportaciones (+24,4%) y no por caída de importaciones; alerta por bienes de capital (-8%)",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-superavit-semestre-record-exportaciones"
-  },
-  {
-   "tema": "expectativas de mercado (REM/BCRA) junio 2026 / el consenso proyecta un dólar mayorista de $1.673 para dic-2026, inflación ~30% y PBI +3%",
-   "angulo": "qué proyectan 44 analistas para dólar, inflación y actividad, leído contra la tensión cambiaria de julio (dólar récord ~$1.500, riesgo país 419); expectativas, no mediciones",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-rem-bcra-dolar-proyeccion"
-  },
-  {
-   "tema": "riesgo país / EMBI+ cerca de 400 puntos (mínimo desde 2018) y la vuelta al mercado internacional de deuda",
-   "angulo": "el riesgo país argentino (EMBI+ de JP Morgan) ronda los 410 pb al 22/07/2026, mínimo desde 2018, tras tocar 402 el 10/07 y acumular una baja cercana al 29% en 2026 (desde 571 el 2/01). Ángulo de datos NUEVO respecto de las notas de Moody's (calificación), BCRA (compras), deuda corporativa y deuda pública: acá el eje es el PRECIO del crédito soberano y el umbral (~400/300 pb) que la city mira para que la Argentina vuelva a emitir deuda en el mercado internacional tras 8 años (última colocación voluntaria: enero 2018, US$9.000 M a 4,6-6,95%). Cifra ancla CONFIRMADA por múltiples fuentes independientes que reproducen el EMBI+ de JP Morgan (La Nación 22/07: ~410; Perfil 10/07: 402-403 y -29%; Infobae 21/07). Superlativo 'mínimo desde 2018' documentado con el piso de Macri (342 pb, oct-2017) y la trayectoria; contexto histórico: mínimo NK 184 pb (ene-2007), pico 2002 >7.000. Costo de emitir hoy ~8,7% marcado como ESTIMACIÓN (riesgo país + Treasury); comparado con Banco Mundial 6,3% y BID 7,75%. Opiniones de analistas (Buteler, Marull, Caamaño, Machado, Ritondale) atribuidas y enlazadas.",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-riesgo-pais-cerca-400"
-  },
-  {
-   "tema": "turismo internacional (ETI/INDEC) mayo 2026 / se da vuelta: receptivo +20,4% y emisivo −12,1%",
-   "angulo": "medición FÍSICA de personas (ETI), distinta de la cuenta 'viajes' del balance de pagos en dólares ya cubierta el 19/07. El giro de mayo 2026: entran 20,4% más turistas extranjeros y salen 12,1% menos argentinos; el déficit de turistas del mes baja de 437,4 a 282,0 mil. Cifra ancla INDEC (+20,4%) CONFIRMADA y corroborada por registro aerocomercial independiente (ANAC, récord ene-may). La paradoja: con dólar barato el motor no es el tipo de cambio sino la caída del ingreso real (emisivo) más el arrastre de la devaluación de 2023 y la demanda regional (receptivo)",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-turismo-receptivo-se-da-vuelta"
-  },
-  {
-   "tema": "autos usados / mejor mes de 2026 en junio (155.492 transferencias) pero semestre en baja",
-   "angulo": "el mercado del auto usado tuvo en junio su mejor volumen del año (155.492 unidades, +8,6% i.a., +7,9% mensual, CCA sobre registros DNRPA), pero el 1er semestre cerró en 891.628 unidades, -2,9% vs 2025 (918.404). Ángulo de datos NUEVO respecto de las notas de 0km (producción/patentamientos) y motos: el usado es el mercado automotor grande (~3x el 0km: 891.628 vs 294.181 patentamientos) y termómetro del consumo durable de clase media. La paradoja verificada: el usado cayó solo 2,9% en el semestre mientras el 0km se hundió cerca del 10% — cuando el ingreso aprieta, el comprador baja de gama. Cifra ancla (155.492, junio 2026) CONFIRMADA por fuente sectorial primaria (CCA sobre transferencias DNRPA) + doble reproducción independiente (El Economista, Infobae, Tiempo Argentino) + medición paralela de ACARA (155.753, prácticamente idéntica); coherencia interna verificada (155.492/143.191=+8,59%; 155.492/144.050=+7,94%; 891.628/918.404=-2,92%; 891.628/294.181=3,03). Superlativo 'mejor mes del año' atribuido a la CCA y limitado a 2026 (NO récord histórico). Caída del semestre atribuida a consumo privado en baja (~-2,2% i.a. mayo, Univ. de Palermo/ACARA) y competencia de precios del 0km; recuperación condicionada por la CCA a tasas, dólar estable y salario real (marcado como opinión atribuida).",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-autos-usados-junio-mejor-mes"
-  },
-  {
-   "tema": "distribución del ingreso / desigualdad 1er trimestre 2026 (Gini 0,442; el decil más rico concentró 33,5% del ingreso)",
-   "angulo": "el 10% de mayores ingresos se llevó el 33,5% del ingreso total y el 10% más pobre el 1,8% (brecha de participación 18,6x); el Gini subió de 0,435 a 0,442 respecto de un año atrás (ingreso per cápita familiar, EPH). Cifra ancla (participación del decil 10) CONFIRMADA por INDEC + Infobae + Perfil; la distribución por decil suma 99,9% (coherencia interna verificada)",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-distribucion-ingreso-desigualdad"
-  },
-  {
-   "tema": "EMAE / actividad económica mayo 2026: segunda caída mensual consecutiva (−0,5% desest.) e interanual casi plano (+0,2%)",
-   "angulo": "el indicador mensual adelantado del PBI cayó por segundo mes seguido en la serie desestacionalizada (rebote de marzo +3,1% seguido de −1,5% en abril y −0,5% en mayo); el interanual se desaceleró de +2,3% (1er trim.) a +0,2% en mayo, con el acumulado del año en +1,7% y la tendencia-ciclo todavía positiva (+0,2%). Divergencia sectorial: minería +15,7%, energía +8%, agro +4,6% vs industria −5,6%, comercio −4,3%, pesca −29,3%. Cifra ancla confirmada por doble fuente (La Nación y MDZ citando INDEC) + INDEC como primaria",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-emae-actividad-mayo-freno"
-  },
-  {
-   "tema": "swap de monedas con China / repago del tramo activado y renovación del acuerdo (US$19.000 M, vence 6/08/2026)",
-   "angulo": "ángulo de datos NUEVO respecto de las notas previas de reservas/BCRA (que fueron sobre el FLUJO de compras diarias del BCRA y sobre los depósitos en dólares): esta nota es sobre la DEUDA en yuanes con China y su ANATOMÍA. El tramo ACTIVADO del swap (lo que la Argentina realmente usaba y debía) cayó de un pico de ~US$5.000 M a ~US$679 M (4.600 M de yuanes) al 14/01/2026, tras devolverle al Banco Popular de China ~US$4.300 M (casi el 90%). Serie del balance del BCRA: 21.000 M yuanes (US$3.097 M, dic-24) -> 7.000 M yuanes (US$1.032 M, dic-25) -> 4.600 M yuanes (US$679 M, ene-26). Pese al repago, el Gobierno (Bausili viajó a China) renueva el CONTRATO MARCO completo (130.000 M yuanes ~= US$19.000 M) que vence el 6/08/2026: el swap deja de ser deuda en uso y vuelve a ser seguro contingente. Dos lecturas: (A/oficial) reservas más 'propias' y menos prestadas, menor dependencia del yuan; (B/matiz) la red de US$19.000 M se mantiene intacta y los dólares para pagar salieron en parte de otra deuda (se cambió de acreedor). Cifra ancla (US$679 M / caída del tramo activado) CONFIRMADA por FUENTE PRIMARIA (BCRA, Estados Contables del Ejercicio 2025) + reproducida por Infobae, El Cronista (US$675 M, redondeo yuan/USD) y Ámbito; total del acuerdo y vencimiento CONFIRMADOS (BCRA + El Cronista + Ámbito); viaje y renovación CONFIRMADOS por múltiples medios (La Gaceta, Diario Panorama, El Cronista, La Nación). Coherencia interna verificada (yuan/USD ~6,78 constante en toda la serie; 5.000->679 = 86% repagado). Contexto de apoyo: reservas brutas US$49.536 M al 7/07/2026 (máximo en casi 7 años). Nota: US$679 M es el último dato oficial (balance ene-2026); se aclara en la nota que pudo variar. Se descartó por sobre-cobertura el ángulo de reservas brutas/netas como nota propia.",
-   "fecha": "2026-07-22",
-   "estado": "publicada",
-   "articulo_id": "2026-07-22-swap-china-repago-renovacion"
-  },
-  {
-   "tema": "liquidación de divisas del agro / 1er semestre 2026 (US$13.378 M, -13% i.a.)",
-   "angulo": "el complejo agroexportador liquidó US$13.378 M en ene-jun 2026 (junio US$3.007 M), 13% menos que en 2025 (~US$2.000 M menos) pese a exportar MÁS volumen: la paradoja 'más toneladas, menos dólares' por la caída de precios internacionales, menor peso de la soja y el vencimiento del recorte temporal de retenciones de 2025 que había adelantado ventas. Cifra ancla de CIARA-CEC (fuente primaria) confirmada por coberturas coincidentes de La Nación, Infobae, BAE, MDZ e Infocampo; el valor de junio 2025 (US$3.667 M) se reconstruye de la baja interanual del 18%",
-   "fecha": "2026-07-23",
-   "estado": "publicada",
-   "articulo_id": "2026-07-23-agro-liquidacion-dolares-semestre"
-  },
-  {
-   "tema": "electrodomésticos / efecto Mundial 2026: los televisores crecen +27% mientras el mercado cae",
-   "angulo": "ángulo de datos NUEVO respecto de las notas de consumo previas (supermercados abril 'en rojo', autos, motos): esta es la góndola de electrodomésticos y electrónica de consumo, con eje en el CONTRASTE del efecto Mundial. Cifra ancla: los televisores crecieron +27% en unidades (ene-may 2026 vs 2025, NielsenIQ, presentado en Electronics Home 2026), la ÚNICA categoría del rubro que crece a dos dígitos, mientras el mercado TOTAL cayó 3% en unidades y el INDEC midió −12,4% i.a. en el 1er trimestre (precios corrientes; caída real aún mayor con inflación del trimestre ~9,4%). Imagen espejo: smartphones −27%, climatización −25%, telecom −25%; línea blanca +7%, pequeños +7%, informática +1%. La demanda se corrió a pantallas grandes (55″+ pasaron de 30% a 60% del volumen en Frávega) y al canal online (58% de unidades, 61% en el Hot Sale de mayo). Refutación incluida: NO es reactivación del consumo sino un gasto puntual, estacional y financiado (≈60% con tarjeta, tasas 400-500% anual, mora 35-40% en carteras, CAME), que suele revertir tras el Mundial. Verificación: el +27% es medición privada de NielsenIQ, atribuida como tal, corroborada DIRECCIONALMENTE por triple fuente independiente (INDEC 1er trim: televisores la excepción con audio −41,9% y celulares −31,3% desplomados; cadenas Frávega/Cetrogar/Megatone +50-70% vía La Nación; Cámara de Electrodomésticos de Córdoba +50%). SE DESCARTÓ por refutación (Chequeado) el viral '+624% de televisores en Mercado Libre': ese dato correspondía a PROYECTORES, no a televisores. Coherencia interna: NielsenIQ ene-may +27% vs INDEC 1er trim (ene-mar) televisores casi planos es consistente porque el pico se concentró desde mayo (Hot Sale + previa del Mundial jun-jul).",
-   "fecha": "2026-07-23",
-   "estado": "publicada",
-   "articulo_id": "2026-07-23-mundial-tv-boom-electrodomesticos"
-  },
-  {
-   "tema": "venta de combustibles / la caída se frenó en mayo 2026 (−0,2% interanual, 1.419.422 m³)",
-   "angulo": "el consumo de naftas y gasoil dejó de caer (la menor baja interanual de 2026 tras 4 meses en rojo), pero el promedio esconde una grieta por producto: el gasoil premium creció +6,0% mientras la nafta súper cayó −3,0%; el combustible del trabajo se movió, el del auto particular no. Ancla oficial (Secretaría de Energía, procesada por Politikon Chaco) confirmada por triple cobertura y serie coherente (mar −1,8%, abr −2,4%, may −0,2%)",
-   "fecha": "2026-07-23",
-   "estado": "en_cola",
-   "articulo_id": "2026-07-23-combustibles-mayo-freno-caida"
-  },
-  {
-   "tema": "consumo de carne de cerdo / récord histórico por habitante (19,59 kg, 12 meses a mayo 2026) y la sustitución silenciosa de la carne vacuna",
-   "angulo": "ángulo de datos NUEVO respecto de la nota de carne vacuna (consumo en mínimo de 2 décadas): acá el eje es el CERDO como la carne que más crece. Cifra ancla: consumo aparente 19,59 kg/hab en el móvil a mayo 2026 (SAGyP), récord histórico, más que el doble de los 8,6 kg de 2012. CONFIRMADO por tres fuentes independientes que citan el dato oficial SAGyP: Bolsa de Comercio de Rosario (19,59 kg, mayo), Federación Porcina Argentina (19,44 kg, marzo, +8,9% i.a.) y CICCRA/Ámbito (+19,5 kg, récord). Récord previo documentado: 18,9 kg (2025). Apoyo: producción ene-may 354.588 t (+11,7% i.a., récord para el período), 16 años consecutivos de suba, faena ~3,7 M cabezas. Contexto de sustitución: vacuna 47,5 kg (piso en 2 décadas, CICCRA; pico 2008: 69,4 kg), pollo ~47 kg (disputa el 1er puesto); serie SAGyP 2025 coherente (vacuna 47,3 / pollo 47,7 / cerdo 18,9; total 116,5 kg). Motor: precio (cortes vacunos +50% i.a.; el cerdo, más eficiente de producir, más barato). Serie de consumo graficada: 2012 8,6 → 2021 15,86 → 2024 17 → 2025 18,9 → 2026 19,59.",
-   "fecha": "2026-07-23",
-   "estado": "en_cola",
-   "articulo_id": "2026-07-23-cerdo-consumo-record"
-  }
- ]
+  "descripcion": "Memoria de temas ya cubiertos o en cola. El agente Editor la consulta para no repetir noticias. Cada entrada: tema, ángulo, fecha y estado.",
+  "temas": [
+    {
+      "tema": "inflación junio 2026 / desinflación con recesión",
+      "angulo": "los números macro mejoran pero el consumo y el empleo caen",
+      "fecha": "2026-07-18",
+      "estado": "publicada",
+      "articulo_id": "2026-07-18-inflacion-argentina"
+    },
+    {
+      "tema": "petróleo en Malvinas / proyecto Sea Lion",
+      "angulo": "reservas, inversión y efecto sobre el PBI de las islas",
+      "fecha": "2026-07-18",
+      "estado": "publicada",
+      "articulo_id": "2026-07-18-malvinas-sea-lion"
+    },
+    {
+      "tema": "Vaca Muerta / superávit energético récord del primer semestre 2026",
+      "angulo": "la producción de crudo de Neuquén (67% del total, 2 de cada 3 barriles) dio vuelta la balanza comercial energética: del déficit de 2022 al mayor superávit de la historia. Cifra ancla oficial (participación en la producción) confirmada; el superávit del semestre se marca como estimación de la BCR",
+      "fecha": "2026-07-18",
+      "estado": "publicada",
+      "articulo_id": "2026-07-18-vaca-muerta-superavit-energetico"
+    },
+    {
+      "tema": "depósitos privados en dólares / récord de US$40.437 M (máximo en 26 años)",
+      "angulo": "el stock de dólares privados en los bancos tocó su mayor nivel desde el año 2000 (+US$3.451 M en 2026), muy por encima del pico previo a la corrida de 2019 (US$32.500 M); pero ~US$16.000 M no se vuelca al crédito. Cifra ancla oficial del BCRA (US$40.437 M al 13/07/2026) confirmada por triple fuente; el margen sin prestar se marca como aproximado",
+      "fecha": "2026-07-18",
+      "estado": "publicada",
+      "articulo_id": "2026-07-18-depositos-dolares-record"
+    },
+    {
+      "tema": "exportaciones de granos / récord de volumen del 1er semestre 2026 (60,7 M t)",
+      "angulo": "la paradoja del campo: embarcó el mayor volumen de granos de la historia para un primer semestre (60,7 millones de toneladas, BCR) y el maíz superó a la soja por primera vez en 26 años, pero la agroexportación liquidó 13% menos dólares (US$13.378 M, CIARA-CEC) que en 2025. La caída no fue por precios sino por efecto base: en 2025 una rebaja temporal de retenciones hasta el 30/6 adelantó liquidaciones. Volumen récord CONFIRMADO (BCR + dato oficial de la Secretaría de Agricultura); caída de divisas CONFIRMADA (CIARA-CEC oficial + BCR + medios)",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-agro-record-toneladas-menos-dolares"
+    },
+    {
+      "tema": "BCRA / compra récord de dólares y reservas 2026",
+      "angulo": "el BCRA compró US$532 M en una sola rueda (14/07/2026), la mayor compra diaria de la era Milei y —según varias mesas— la más alta desde diciembre de 2022; encadenó 126 ruedas consecutivas con saldo comprador y superó los US$12.000 M acumulados en 2026, por encima de la meta anual de reservas del FMI (US$8.000 M), cumplida por primera vez en la gestión. El asterisco Delta: las reservas netas siguen en torno a cero o levemente negativas (estimación privada) y buena parte de los dólares provienen de colocaciones de deuda corporativa (ONs >US$10.000 M en 2026), no del superávit comercial; el récord del 14/07 fue vinculado por el mercado a una liquidación de deuda, no al agro. Cifra ancla (US$532 M, 14/07) CONFIRMADA por múltiples fuentes independientes (Infobae, La Nación, Perfil, canal26, Ámbito); reservas netas marcadas como estimación",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-bcra-compra-record-dolares"
+    },
+    {
+      "tema": "canasta básica / línea de pobreza junio 2026 (familia tipo $1.531.473)",
+      "angulo": "una familia tipo (4 integrantes, 3,09 adultos equivalentes) necesitó $1.531.473 para no ser pobre y $689.853 para no ser indigente en junio; la CBT subió 2,2% mensual y 35,7% interanual, por encima de la inflación (IPC +1,9% mensual, +33,5% interanual), y la CBA 1,3% mensual / 36,3% interanual. Ángulo de datos NUEVO respecto de la nota de inflación: no es el IPC sino la línea de pobreza y la brecha contra los ingresos mínimos (salario mínimo $372.400 y jubilación mínima con bono $481.989: hacen falta +4 salarios o +3 jubilaciones para llegar a la canasta familiar). Cifra ancla CONFIRMADA por cuádruple fuente (INDEC informe + Infobae + canal26/minutouno + iProfesional); coherencia interna verificada (CBT/CBA=2,22; CBT interanual > IPC interanual)",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-canasta-basica-linea-pobreza"
+    },
+    {
+      "tema": "economía del conocimiento / exportaciones de servicios (SBC) superan por primera vez los US$10.000 M",
+      "angulo": "el tercer complejo exportador del país ya no es ni el campo ni el petróleo: los servicios basados en el conocimiento (software, servicios profesionales, ingeniería, I+D) exportaron US$10.085 M en los 12 meses a marzo 2026 (+11,7% i.a., Argencon), sostenidos por 285.000 empleos formales. Ángulo de datos: son dólares que no dependen del clima ni de los commodities, con superávit comercial y empleo calificado creciente (contra la tendencia del mercado laboral en un año de ajuste). El asterisco Con Interés: la cifra ancla está CONFIRMADA por doble metodología independiente (Argencon/BCRA cambiario US$10.085 M y balanza de pagos INDEC/Cancillería US$10.091 M, definición amplia), pero la definición oficial ESTRICTA da US$9.563 M en 2025, todavía por debajo de los 10.000 — se aclara en la nota. Composición y superávit verificados con datos oficiales (INDEC/Cancillería); la meta de US$30.000 M se marca como estimación",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-economia-conocimiento-record-exportaciones"
+    },
+    {
+      "tema": "recaudación tributaria junio 2026 / cayó 7,4% real pese a subir 23,7% nominal",
+      "angulo": "ARCA recaudó $20,02 billones en junio (+23,7% nominal) pero, deflactado por el IPC (33,5% i.a.), cayó 7,4% real (IARAF), tras cortar en mayo (+1,7% real) una racha de nueve meses en baja. Ángulo de datos NUEVO respecto de las notas de inflación y agro: es el lado FISCAL. Retenciones -45,9% real (contracara de la baja de alícuotas que la nota del agro explicó desde las divisas), IVA neto -4% real (termómetro del consumo), Ganancias ~-16,6% real por prórroga que corrió ingresos a julio, combustibles +27,6% real. Dato clave del Verificador: el IARAF calculó que aun EXCLUYENDO comercio exterior la recaudación cayó 4,3% real, señal de que la debilidad es amplia y no solo por la baja deliberada de retenciones. Postura de refutación incluida: el Gobierno atribuye la baja a cambios impositivos (retenciones) y calendario (prórroga de Ganancias→julio); el -4,3% ex-comercio exterior matiza ese argumento. Cifra ancla ($20 bill nominal, +23,7%) CONFIRMADA por dato oficial de ARCA + Perfil/IARAF + Infobae + La Nación; la variación real -7,4% es un cálculo de IARAF (deflactor-dependiente, rango -7,1% a -8%), marcado como tal. Coherencia interna verificada (23,7/133,5→-7,4%).",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-recaudacion-real-junio"
+    },
+    {
+      "tema": "resultado fiscal junio 2026 / primer déficit primario de la era Milei",
+      "angulo": "junio de 2026 dejó el PRIMER déficit primario ($696.843 M) y financiero ($1.024.891 M, ~$1,02 billones) de toda la gestión de Milei, tras encadenar superávits primarios mensuales ininterrumpidos desde enero de 2024. Ángulo de datos NUEVO respecto de la nota de recaudación (que fue el lado de los INGRESOS de ARCA): esta es la nota del RESULTADO fiscal (ingresos menos gasto), primario vs financiero y el gasto por partida. Contexto: junio 2025 había sido superávit primario de +$790.533 M (giro de casi $1,5 bill en un año); el semestre igual cerró con superávit primario de $7,3 bill (0,6% del PBI) y financiero de $1,4 bill (0,1%), menos de la mitad de la meta anual (1,5% Presupuesto / 1,4% FMI). Drivers: aguinaldo + postergación de Ganancias a julio + intereses. La motosierra del semestre: obra pública -44,1% real, transferencias a provincias -61,8%, subsidios al transporte -24%, pero subsidios a la energía +73,7%. Cifra ancla (déficit primario de junio) CONFIRMADA por 6 fuentes independientes (Infobae, iProfesional, El Cronista, Los Andes, Perfil/Burgueño, Bloomberg Línea) sobre dato oficial de la Secretaría de Hacienda; coherencia interna verificada (696.843+328.049=1.024.892). La comparación con la metodología FMI ($6,3 bill vs objetivo ~$6,9 bill, faltante ~$560.000 M) proviene de estimaciones privadas (Max Capital, Grupo SBS) y se marca como ESTIMACIÓN.",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-primer-deficit-primario-era-milei"
+    },
+    {
+      "tema": "déficit turístico / cuenta viajes de la balanza de pagos (récord 2025 y moderación 2026)",
+      "angulo": "la cuenta 'viajes' de la balanza de pagos (INDEC) dejó en 2025 el mayor déficit en 30 años: US$7.221 M (egresos US$12.072 M vs ingresos US$4.852 M), por encima del récord previo de 2017 (US$6.008 M). Ángulo de datos NUEVO respecto de las notas de superávit comercial, agro y energía: acá el eje es la SALIDA de dólares por turismo emisivo, el reverso de la acumulación del BCRA. El giro 2026: el rojo se achica (1er trim. US$3.184 M, US$280 M menos que 2025) pero por la recesión, no por mayor competitividad — en mayo el emisivo cayó 12,1% i.a. y el receptivo creció 20,4%. Verificación por TRIPLE método independiente: balanza de pagos (US$7.221 M, cifra ancla, INDEC), ETI head counts (saldo turistas 2025 -6,6 M / ene-may 2026 -3,31 M, INDEC), y balance cambiario del BCRA (~US$4.054 M 2025 / US$2.560 M 1er trim 2026, institución distinta). Se aclara que la cifra de balanza de pagos NO equivale a la presión efectiva sobre reservas (más chica en el balance cambiario). Coherencia interna verificada (12.072-4.852=7.220≈7.221; 6.008+1.213=7.221; 4.825-1.641=3.184; 5,88-2,57=3,31 M).",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-deficit-turismo-record"
+    },
+    {
+      "tema": "autos híbridos y eléctricos / patentamientos se cuadruplican en el 1er trimestre 2026",
+      "angulo": "mercado a dos velocidades: mientras el 0km total cayó 9,9% en el semestre (294.181 unidades, junio -12,8%), los electrificados saltaron 313,2% interanual en el 1er trimestre (19.867 unidades vs 4.808 en 2025) — casi tres cuartas partes de todo 2025 en un solo trimestre. Ángulo de datos NUEVO respecto de las notas macro (es industria/comercio exterior, no fiscal ni precios): el driver no es ambiental sino de política económica (cupo de importación con arancel 0% para electrificados de hasta US$16.000 FOB, Decreto/cupo 49-2025) y de origen (importaciones extrazona +6.000%, China). Matiz clave: 8 de cada 10 son híbridos (HEV 60%, PHEV 18%, MHEV 14%), solo 8% eléctricos puros (BEV); 7 de cada 10 0km vendidos son importados. Cifra ancla (+313,2% / 19.867 unidades) CONFIRMADA por ACARA/SIOMAA reproducida por múltiples outlets independientes (Ámbito, El Economista, Motores a Pleno) y con coherencia interna EXACTA (4.808 + incrementos por tecnología 8.090+3.424+2.072+1.473 = 19.867); trayectoria histórica 14.173 (2024) → 26.632 (2025, +87,9%, 4,6% del mercado) confirmada (economis/ACARA); cupo 0% arancel confirmado por fuente oficial (argentina.gob.ar). Se DESCARTÓ por refutación una cifra contradictoria de récord (5.647 unidades, +43,4% semestral) que no cerraba con el dato oficial. Participación proyectada 2026 marcada como en ascenso (sin cierre de semestre electrificado).",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-autos-electrificados-cuadruplican"
+    },
+    {
+      "tema": "crédito hipotecario / se derrumba en CABA mientras la compraventa aguanta (escrituras mayo 2026)",
+      "angulo": "mercado inmobiliario a dos velocidades: en mayo se firmaron 5.435 escrituras de compraventa en la Ciudad de Buenos Aires (-3,1% i.a., prácticamente plano; acumulado ene-may 23.487, -1,2%) y el monto operado subió 8,5% nominal, pero las escrituras CON hipoteca cayeron 54,8% i.a. (587 vs 1.297 en mayo 2025) y acumulan -37,2% en el año (3.387 vs 5.394). La participación de las hipotecas en las compras pasó de ~23% a 10,8% (1 de cada 5 → 1 de cada 10). Ángulo de datos NUEVO respecto de todas las notas previas (es real estate/financiamiento, no macro/fiscal): el mercado no se cae, cambia de combustible — se compra con ahorros, no con crédito. Cifra ancla CONFIRMADA por DOBLE metodología independiente: escrituras notariales (Colegio de Escribanos CABA, informe oficial 23/06/2026) y desembolsos de préstamos hipotecarios del BCRA (análisis Fundación Tejido Urbano vía LN/Ámbito: junio US$150M, -50% i.a.). Coherencia interna verificada (587/1.297=45,2%→-54,8%; 587/5.435=10,8%; 3.387/5.394=62,8%→-37,2%). Postura de refutación incluida: junio (US$150M) fue el mejor mes desde marzo (rebote mensual) y varios bancos bajaron tasas, PERO interanualmente sigue -50%; el rebote insinúa un piso, no una reactivación. Serie de desembolsos BCRA (feb 151, mar 193, abr 122, may 116, jun 150 US$M) marcada como ESTIMACIÓN.",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-credito-hipotecario-se-enfria"
+    },
+    {
+      "tema": "producción industrial vs construcción / economía partida en mayo 2026",
+      "angulo": "el mismo informe del INDEC (08/07/2026) mostró dos datos de signo opuesto en mayo: la industria manufacturera cayó 5,7% interanual (14 de 16 divisiones en rojo; acumulado ene-may -3,1%) mientras la construcción subió 4,1% interanual (+6,3% mensual desest.; acumulado +2,5%). Ángulo de datos NUEVO respecto de las notas macro/fiscal/externas previas: es la economía REAL productora de bienes y empleo, con foco en el contraste sectorial. Cifra ancla (industria -5,7% i.a.) CONFIRMADA por doble fuente independiente: INDEC oficial + índice propio de la UIA (~-5% i.a., metodología basada en consumo eléctrico y consultas a cámaras). Las bajas se concentran en ramas mano-de-obra-intensivas: textil -26,2%, maquinaria y equipo -23,4%, automotriz -15,9%, indumentaria/calzado -14,7%; los únicos dos rubros en alza (refinación de petróleo +19,4%, tabaco +14,6%) no dependen del consumo interno. Construcción +4,1% CONFIRMADA (INDEC/ISAC + Ámbito + Perfil), con empleo registrado +1,2% i.a. (abril). Postura de refutación y dato marcado en DISPUTA: el repunte mensual de la industria que festejó el Gobierno (INDEC +0,4% desest.) es contradicho por la UIA (-0,8% mensual); se reporta como dato en disputa, no como recuperación confirmada. El rebote de la construcción se marca como en parte estadístico/serrucho (insumos privados cayeron en junio). Coherencia interna verificada (14/16 ramas en baja consistente con -5,7% agregado; acumulado -3,1% con mayo peor que el promedio).",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-industria-cae-construccion-rebota"
+    },
+    {
+      "tema": "mercado de trabajo / desocupación estable pero deterioro de la calidad del empleo (1er trim. 2026)",
+      "angulo": "la tasa de desocupación fue 7,8% en el 1er trim. 2026, casi idéntica al 7,9% de un año atrás (cambio 'sin significación estadística' según el INDEC). Ángulo de datos NUEVO respecto de la nota de industria/construcción (que fue producción de bienes): esta es la nota del MERCADO LABORAL vía EPH, con eje en la CALIDAD del empleo. Los dos únicos indicadores que el INDEC marca como cambios estadísticamente significativos empeoraron: informalidad de 42,0% a 44,2% (+2,2 pp) y subocupación de 10,0% a 11,1% (+1,1 pp). La tasa queda quieta porque la EPH cuenta como ocupado a quien trabaja una hora o maneja para una app, aunque pierda un empleo registrado. Contexto CEPA (atribuido, sobre datos oficiales): entre 4T2023 y 1T2026 se perdieron 216.321 puestos registrados privados (-3,4%) y crecieron monotributistas (+165.542); el empleo no registrado creció ~600.000 en ventana algo distinta (1T2024-1T2026). Cifra ancla (7,8%) CONFIRMADA por INDEC oficial + Chequeado + El Cronista + CEPA + Infobae; coherencia interna verificada (EAP aglomerados 14,61M x 7,8% ≈ 1,14M desocupados medidos; proyección nacional ~1,72M). Serie de mismo trimestre confirmada: 7,7% (1T24), 7,9% (1T25), 7,8% (1T26). Marcado como ESTIMACIÓN/ENCUESTA: expectativa IAE Business School (~mitad de pymes evaluaba reducir plantilla) y presión ampliada del mercado laboral 30,7% (CEPA). Se evitaron valores trimestrales históricos en disputa (Q3 en discrepancia 6,3% vs 6,6%): no se graficaron.",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-desempleo-estable-empleo-precario"
+    },
+    {
+      "tema": "boom de deuda corporativa en dólares / obligaciones negociables récord 2026 (US$17.400 M desde las elecciones)",
+      "angulo": "primer tema de la sección MERCADOS (todas las notas previas eran ECONOMÍA). Empresas y provincias captaron US$17.400 M en deuda en dólares desde las elecciones de oct-2025 (corporativas US$13.730 M —externas/CCL US$9.460 M + local/MEP US$4.270 M— y provincias US$3.650 M, ~250 operaciones), según relevamiento de Romano Group (Salvador Vitelli) vía La Nación 07/07/2026. Ángulo de datos NUEVO respecto de la nota de compra récord del BCRA (que fue el lado del comprador de reservas): esta es la nota de la FUENTE de esos dólares —la deuda privada— y de su mecánica (las empresas liquidan los dólares de las ON en el mercado de cambios, generando la oferta que el BCRA absorbe; Werning, vice BCRA). Fenómeno CONFIRMADO por múltiples fuentes independientes: 2025 fue el mayor año de deuda corporativa en dólares en una década (>US$20.000 M, Infobae + La Nación 03/02/2026); el 1er cuatrimestre 2026 fue el mejor en 11 años (desde 2015) con US$6.200 M en emisiones primarias, US$5.586 M en 100 ON corporativas, ~90% en dólares (PwC Argentina, reproducido por La Nación 03/06 + El Cronista + iProUP). Concentración energética (Vaca Muerta) ~US$5.550 M de las corporativas 2026 y 47% de mayo (Invecq/Analytica vía Infobae). El total exacto US$17.400 M se cita con su fuente nombrada (recuento de mercado, no dato oficial único): distintos compiladores dan totales distintos según ventana y universo (Invecq/Analytica contaban US$9.900 M corporativas desde 25/10 al 24/06; US$6.800 M ya liquidados, US$3.200 M pendientes). Postura de refutación incluida: es DEUDA (no exportación), hay que devolverla en dólares; parte es refinanciación (roll-over), no inversión nueva; depende de que la ventana de riesgo país bajo/tasas bajas siga abierta (riesgo de refinanciación 2027-2028). Coherencia interna verificada (9.460+4.270+3.650=17.380≈17.400; 6.800+3.200=10.000≈9.900 emitido). Disclaimer: no es asesoramiento financiero.",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-boom-deuda-corporativa"
+    },
+    {
+      "tema": "venture capital / capital emprendedor en startups argentinas (US$270 M en 2025, reactivación en 2026)",
+      "angulo": "segunda nota de MERCADOS, pero ángulo de datos NUEVO respecto de la deuda corporativa (que fue DEUDA en dólares de grandes empresas): esta es la nota del EQUITY de riesgo hacia startups —el venture capital—. En 2025 las startups argentinas captaron US$270 M en 73 rondas de inversión (informe 'Panorama del Capital Emprendedor Argentino 2026' de ARCAP + EY, difundido ~03/06/2026): fue el MENOR monto en dólares desde 2022 (2024 había sido ~US$412 M, -35%) pero el MAYOR número de operaciones del período (matiz clave monto-vs-operaciones). En los primeros meses de 2026 el flujo ya superó ese total: recuento parcial/móvil que según fuente y ventana va de US$400 M (La Nación 03/06) a US$427 M (Forbes/ecosistema, 5 meses) a ~US$540 M (El Cronista, abril). Diferente también de la nota de economía del conocimiento (que fue INGRESOS por exportación de servicios SBC, no inversión recibida). Cifra ancla (US$270 M / 73 rondas) CONFIRMADA: informe primario ARCAP+EY reproducido por múltiples outlets independientes (El Observador, La Nación, El Cronista, Forbes, Ámbito, Perfil, ecosistemastartup, agrositio). Coherencia interna verificada: 75,7% del capital en 9 rondas; 87,7% de operaciones <US$5 M; >50% pre-seed; 47,2% de startups financiadas fuera del AMBA (9 provincias: Santa Fe, Córdoba, Tucumán); 22,7% con fundadora mujer (vs 15,2% en 2024). Contexto regional CONFIRMADO: LatAm US$4.126 M en 2025 (+13,8%, Cuántico VP), Argentina ~7% del total. Postura de refutación incluida: el salto 2026 está concentrado en fintech (~80% del capital) y en 2-3 mega-rondas (Ualá, Pomelo, Humand, Tapi); sin ellas el 'boom' se parece a un año normal. El total 2026 se marca como ESTIMACIÓN/parcial (rango US$400-540 M) por ser recuento móvil de rondas anunciadas. No es asesoramiento financiero.",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-venture-capital-startups"
+    },
+    {
+      "tema": "utilización de la capacidad instalada industrial / mayo 2026 (58,4%, con fuerte heterogeneidad sectorial)",
+      "angulo": "ángulo de datos NUEVO respecto de la nota de producción industrial (IPI/ISAC, que midió la variación interanual del volumen): esta nota es sobre el NIVEL de uso de la capacidad instalada —cuánto del parque fabril quedó ocioso— y sobre la brecha sectorial. En mayo la industria usó 58,4% de su capacidad (INDEC, publicado 16/07/2026), -0,5 pp vs mayo 2025 (58,9%) y -1,5 pp vs abril (59,9%): la comparación interanual, que en marzo-abril había sido positiva, volvió a rojo. 5 de 12 bloques por debajo del 50%. Techo: refinación de petróleo 88,7% (vs 73,3% may-25; gasoil +23,8%, nafta +18,3%, tracción de Vaca Muerta). Piso: metalmecánica 38,7% (vs 46,0% may-25; maquinaria agrícola -29,6%, electrodomésticos -34,1%), automotriz 45,5% (vs 56,8%), textiles 42,2%. Cifra ancla (58,4%) CONFIRMADA por INDEC (informe de prensa oficial, fuente primaria) + coherencia interna de la serie 2026 (53,6→54,6→59,8→59,9→58,4) + corroboración independiente por otra metodología: ADIMRA midió la metalúrgica en 39,8% (≈ INDEC metalmecánica 38,7%), su 3er registro más bajo tras abr-2020 (32,7%) y may-2020 (39,1%). Contexto histórico: mínimo general ~42% en abr-2020. Se distingue explícitamente de la nota IPI/ISAC (crecimiento) por medir el nivel de utilización/capacidad ociosa, no la variación de la producción.",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-capacidad-instalada-industria-ociosa"
+    },
+    {
+      "tema": "carga de deuda de las familias / servicios de deuda 24,1% de la masa salarial formal (abril 2026, récord de la serie)",
+      "angulo": "ángulo de datos NUEVO respecto de la nota de inflación (que mencionó la mora como un síntoma más, '2 millones más en mora') y de la nota de crédito hipotecario (que fue sobre originación de hipotecas): esta nota es sobre la CARGA DE DEUDA de las familias —cuánto del ingreso se va en pagar cuotas— con eje en el Informe de Estabilidad Financiera del BCRA. Cifra ancla: en abril las familias destinaron el 24,1% de la masa salarial formal (16,9% de la ampliada, 4,6% del PBI) al pago de capital e intereses, el nivel más alto de la serie del BCRA, por encima del promedio de la década (~15,1%) y del pico previo de 2018 (~20%). La carga casi se duplicó en año y medio (13% a fines de 2024 → 24,1%). Datos de apoyo: morosidad de las familias 12,1% oficial en abril (CONFIRMADO) y ~12,7% preliminar en mayo (1816 sobre Central de Deudores, marcado ESTIMACIÓN, 19° mes en alza, x5 desde 2,5% en oct-2024); morosidad por segmento mayo (empresas 3,5%, sector privado total 7,7%, no bancario/fintech ~28,7%, preliminar); refinanciaciones de préstamos del 1,6% del stock (oct-2025) al 3,2% (abril-2026), se duplicaron en 6 meses, máximo desde 2010 (IEF, CONFIRMADO). Postura de refutación incluida: el vice del BCRA (Werning) sostiene públicamente que la mora bancaria 'ya tocó su pico en el 2° trimestre' y ve el deterioro como transitorio (crédito que renace desde una base baja); el contraargumento es que el nivel ya superó el pico de 2018, cuando el crédito era mayor. Cifra ancla (24,1%) CONFIRMADA: reproducida de forma coincidente por Infobae/Equilibra (17/07), Río Negro (17/07), Conclusión (10/07) y Canal C (10/07) sobre el mismo IEF del BCRA, con continuidad de la serie oficial (IEF 2023 ~10,9%, IEF dic-2024 13% / promedio 15,1% / pico 2018 ~20%, leídos directo del IEF). Coherencia interna verificada (24,1% masa formal > 16,9% ampliada > 4,6% PBI; refinanciación 1,6%→3,2%=x2; mora 2,5%→12,7%≈x5). No es asesoramiento financiero.",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-carga-deuda-familias-salario"
+    },
+    {
+      "tema": "producción automotriz / caída de la fabricación de vehículos en el 1er semestre 2026 (204.658 unidades, -18,3% i.a.)",
+      "angulo": "ángulo de datos NUEVO respecto de la nota de industria/construcción (IPI/ISAC general del INDEC, que citó automotriz -15,9% como una línea) y de la nota de autos electrificados (que fue sobre PATENTAMIENTOS de electrificados vía ACARA): esta nota es sobre la MANUFACTURA automotriz medida por ADEFA —producción, exportaciones y ventas mayoristas a concesionarios— y la paradoja de un mercado 0km que repunta abastecido por importados mientras la fábrica local se apaga. Cifra ancla: producción 204.658 unidades en el 1er semestre 2026, -18,3% i.a. (vs 250.478 en H1 2025), camino a un TERCER año consecutivo de caída (2024 -17,1% a 506.571; 2025 -3,1% a 490.876; récord histórico 828.771 en 2011). Datos de apoyo: exportaciones 126.893 unidades (-2,1%), Brasil 82.486 = 65% del total; ventas a concesionarios 228.129 (-23,7%), junio 44.096 (-26,3% i.a., +22,6% mensual); participación de autos/utilitarios NACIONALES en las ventas a concesionarios = 29,9% (acum. 5 meses) → ~7 de cada 10 vendidos son importados. Cifra ancla CONFIRMADA por doble metodología independiente: ADEFA (cámara de terminales, fuente primaria que releva unidades) + INDEC (IPI manufacturero, división vehículos automotores -15,9% i.a. en mayo, y autopartes -10,8%), reproducida coincidentemente por Infobae, La Nación, El Cronista, Rosario3, Los Andes. Coherencia interna verificada (204.658/250.478=0,817→-18,3%; 126.893/129.654=0,979→-2,1%; 82.486/126.893=0,650→65%; 228.129/299.001=0,763→-23,7%; 490.876/506.571=0,969→-3,1%; 506.571/610.715=0,830→-17,1%). Postura de refutación incluida: lectura pro-consumidor (mercado más abierto = más modelos/mejores precios; junio repuntó +22,6% mensual) vs. lectura industrial (cada auto importado es empleo/valor agregado que no se genera acá; ADEFA pide baja de impuestos). La producción anual 2026 (~409.000, anualización del semestre) se marca como ESTIMACIÓN/proyección, no dato cerrado. El 'tercer año consecutivo' se marca como TENDENCIA (2026 no cerró). No es asesoramiento financiero.",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-produccion-autos-tercer-ano-baja"
+    },
+    {
+      "tema": "superávit comercial récord / saldo de la balanza comercial de bienes mayo 2026 (US$3.504 M, el más alto de la serie del INDEC) y la paradoja del dólar que no baja",
+      "angulo": "ángulo de datos NUEVO respecto de las notas ya cubiertas de comercio/dólar: NO es la nota de exportaciones de GRANOS por volumen (60,7 M t), NI la de BCRA compra récord de reservas, NI la de Vaca Muerta/superávit ENERGÉTICO. Esta nota es sobre el SALDO COMERCIAL TOTAL DE BIENES (superávit comercial) medido por el ICA del INDEC, con eje en el récord mensual y la paradoja de por qué el dólar no baja pese al ingreso de divisas. Cifra ancla: superávit comercial de MAYO 2026 = US$3.504 M, el más alto de la serie del INDEC (exportaciones US$9.537 M +34,4% i.a., récord histórico mensual; importaciones US$6.033 M -7,0% i.a.). Ancla CONFIRMADA por doble fuente independiente con metodologías distintas: INDEC (ICA, base aduana/devengado) US$3.504 M + BCRA (Balance Cambiario, base caja) ingreso neto de bienes US$4.322 M ('máximo histórico'). Coherencia interna verificada: 9.537-6.033=3.504; rubros suman el total (PP 2.441 +22,5%; MOA 2.992 +20,5%; MOI 2.360 +20,1%; Combustibles y energía 1.745 +167,1% → suma ≈9.538); descomposición del +34,4% = cantidades +18,1% × precios +13,9% (1,181×1,139≈1,345). Acumulado ene-may: expo US$40.359 M (+24,3%), impo US$28.575 M (-6,6%), saldo US$11.783 M (40.359-28.575=11.784). Datos de apoyo (BCRA balance cambiario mayo, mismo mes, base caja): BCRA compró US$2.601 M para reservas, Tesoro US$150 M, atesoramiento privado bruto US$2.260 M (1,4 M de personas compraron billetes) → explica por qué el excedente comercial no hace caer el dólar. Estimaciones marcadas como tales: superávit comercial anual 2026 ~US$23.000 M (consultoras); liquidación agro+energía+minería 2026 ~US$57.168 M (BCR/Bolsa de Comercio de Rosario) cerca del récord 2022 de US$57.622 M (agro 34.897, energía 14.400, minería 9.000). Racha de superávit ininterrumpido desde fines de 2023: marcada como tendencia ('más de dos años'), no como conteo exacto de meses. Postura de refutación incluida: lectura pro (más reservas, calma cambiaria, desinflación) vs. matiz (parte del superávit viene de importar MENOS por actividad interna débil; dependencia de precios internacionales y clima). No es asesoramiento financiero.",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-superavit-comercial-record-mayo"
+    },
+    {
+      "tema": "exportaciones mineras / récord histórico ene-may 2026 (US$3.934 M, +75,8%) y el despegue del litio",
+      "angulo": "sector minería (hasta ahora sin cubrir): el récord de exportaciones y la clave volumen vs. precio del litio (+155,8% en dólares pero +59,3% en volumen; el resto lo puso el precio internacional). Ángulo de datos NUEVO respecto de las notas de agro (más toneladas, menos dólares) y energía (Vaca Muerta).",
+      "fecha": "2026-07-19",
+      "estado": "publicada",
+      "articulo_id": "2026-07-19-mineria-record-litio"
+    },
+    {
+      "tema": "inflación mayorista junio 2026 / IPIM 1,1%, la menor suba en cuatro meses y debajo del minorista",
+      "angulo": "ángulo de datos NUEVO respecto de la nota de inflación minorista (IPC, ya publicada): esta es la nota del ÍNDICE MAYORISTA (IPIM del INDEC), el precio 'aguas arriba' que cobran fábricas, campo e importadores y que se adelanta 1-2 meses a la góndola. Cifra ancla: IPIM junio 2026 = 1,1% mensual, la menor suba en cuatro meses (previo mínimo febrero) y casi un punto por debajo del IPC minorista (1,9%); segundo mes de desaceleración (mayo 2,5% → junio 1,1%, -1,4 pp); interanual 33,7% (levemente por encima del IPC 33,5%), acumulado ene-jun 15,6%. Composición verificada: por origen nacionales +1,0% vs importados +2,3% (huella del dólar); por tipo energía eléctrica +6,6% (tarifas), manufacturados +1,6%, primarios -1,2%, alimentos y bebidas -0,3%; contribuciones químicos +0,26 pp, agropecuarios +0,23 pp, petróleo crudo y gas -0,56 pp. IPIB e IPP también 1,1%. Cifra ancla CONFIRMADA: dato oficial INDEC (serie desde dic 2015) reproducido de forma coincidente por múltiples fuentes independientes (Infobae, Los Andes, MendoVoz, Canal 26, Perfil, mdzol, El Litoral, El Diario de la Región, Conclusión) + confirmación on-the-record del ministro Caputo ('menor variación para un mes de junio de toda la serie del IPIM'). Coherencia interna verificada (mayo 2,5% - 1,4 pp = 1,1%; interanual mayorista 33,7% coherente con IPC 33,5% ya verificado; por origen nacionales+importados ponderan ~1,1%). Proyección de julio (FMyA 1,8% / Analytica 1,9%) marcada como ESTIMACIÓN. Postura de refutación incluida: la desaceleración es real pero el subíndice de importados (+2,3%) avisa que un salto cambiario revertiría el alivio; tarifas (+6,6%) son el otro frente. No es asesoramiento financiero.",
+      "fecha": "2026-07-20",
+      "estado": "publicada",
+      "articulo_id": "2026-07-20-inflacion-mayorista-junio"
+    },
+    {
+      "tema": "soja / análisis de mercado a seis meses: precio CBOT en la zona de US$12/bushel y curva de futuros",
+      "angulo": "sección MERCADOS, ángulo de datos NUEVO respecto de las notas de agro ya cubiertas (exportaciones de granos por volumen; minería/litio): esta es una NOTA TÉCNICA de análisis del precio internacional de la soja, no de las exportaciones argentinas. Ejes: el ciclo 2021-2026 (pico ~US$17,6 jun-2022, pisos dic-2024/ago-2025, rebote nov-2025 por acuerdo EEUU-China, disponible ~US$12,15 al 20-jul-2026); oferta récord sudamericana (Brasil 180 Mt 2025/26, EEUU ~121,8 Mt 2026/27 proyección USDA); demanda china (récord aduanas 111,8 Mt año calendario 2025) anclada a Brasil por brecha arancelaria (13% vs 3%); tablero macro (DXY, Brent -38%, Fed 3,50-3,75%); curva de futuros CBOT en contango leve; traslado del precio de Chicago al FAS del productor argentino (retenciones 24% poroto, baja gradual desde ene-2027, FAS ~US$325/t); tres escenarios a 6 meses (bajista US$10,5-11 / base US$12-12,3 / alcista US$13+). Nota provista por el editor humano y publicada por pedido directo. Verificación de anclas por la redacción (fuentes primarias): precio soja en zona US$12 CONFIRMADO (nueva cosecha superó US$12, máximo de 3 años); precio promedio de temporada USDA 2025/26 US$10,40/bushel CONFIRMADO (WASDE julio 2026, exacto); producción EEUU 2026/27 4.475 M bushels ≈ 121,8 Mt CONFIRMADO (WASDE julio 2026); Brasil récord CONFIRMADO (FAS/USDA). Discrepancia menor marcada: importaciones China 2026/27 en la nota (~108 Mt, estimación) por debajo del WASDE julio 2026 (115 Mt); la propia nota flaggea divergencia entre fuentes. Formato: análisis con escenarios ilustrativos, disclaimers de 'no asesoramiento' y sección de validación metodológica. No es asesoramiento financiero.",
+      "fecha": "2026-07-20",
+      "estado": "publicada",
+      "articulo_id": "2026-07-20-soja-mercado-seis-meses"
+    },
+    {
+      "tema": "índice de salarios abril 2026 / salario real y la trampa del promedio",
+      "angulo": "el índice general de salarios subió 3,7% en abril y le ganó a la inflación (2,6%), y en el interanual el total (+36,9%) supera al IPC (+32,4%); pero el promedio solo gana por el arrastre estadístico del segmento no registrado (+69,6% i.a., medido con rezago). El trabajador registrado privado (+29,3% i.a.) y el público (+29,6% i.a.) perdieron contra la inflación (salario real -2,3% y -2,1% respectivamente). Cifra ancla oficial del INDEC CONFIRMADA (Índice de salarios abril 2026) y corroborada de forma independiente por el RIPTE (+3,5% mensual); los valores de salario real son cálculo propio sobre series nominales del INDEC",
+      "fecha": "2026-07-20",
+      "estado": "publicada",
+      "articulo_id": "2026-07-20-salario-real-abril"
+    },
+    {
+      "tema": "ventas minoristas pyme junio 2026 / cortan 13 meses de caída (CAME, +0,9% interanual)",
+      "angulo": "el índice de ventas minoristas pyme de CAME creció 0,9% interanual en junio 2026, la primera suba tras 13 meses consecutivos de caída, pero con letra chica: intermensual desestacionalizado -1,3% y acumulado del semestre -2,5%; el repunte se atribuye a factores de una sola vez (aguinaldo/SAC + inicio del Mundial 2026). Cifra ancla CONFIRMADA como medición de CAME (informe primario + reproducida de forma consistente por Infobae, Perfil y Primera Edición); cotejada de forma independiente con la estadística oficial del INDEC (Encuesta de Supermercados abril 2026, -3,7% i.a. a precios constantes), que aún no confirma la mejora. Rubros por interanual verificados (Perfumería +9,5%, Farmacia +5,4%, Alimentos +2,9%, Textil +1,9%, Calzado -1%, Ferretería -2%, Bazar/muebles -3,1%). Ángulo de CONSUMO/comercio pyme, no cubierto antes en el portal.",
+      "fecha": "2026-07-20",
+      "estado": "publicada",
+      "articulo_id": "2026-07-20-ventas-pyme-cortan-caida"
+    },
+    {
+      "tema": "pagos con QR / superan por primera vez los 100 millones de operaciones mensuales (BCRA, mayo 2026)",
+      "angulo": "los pagos con transferencia por QR (PCT) llegaron a 102,5 millones de operaciones en mayo 2026, primera vez sobre 100 M, +66,1% i.a. y por $2,4 billones, segun el Informe de Pagos Minoristas del BCRA. Cifra ancla CONFIRMADA: fuente primaria oficial (BCRA) + coherencia de la propia serie mensual cruzada de informes independientes del BCRA (ene 92,1M, feb 88,9M, mar 99,6M, abr 99,6M, may 102,5M), con la cuenta interanual cerrando (102,5/1,661=61,7M en may-2025) y abril a un paso de los 100M confirmando que mayo es el primer cruce. Angulo tecnologia/finanzas-medios de pago: la divergencia estructural entre el QR que crece (+66%) y las tarjetas de debito (-7% cantidad, -13,9% real) y credito (-6%, -13,3% real) que caen; lectura doble (digitalizacion/adios al efectivo vs. sustitucion y consumo debil). Ticket promedio en baja ($23.414). No cubierto antes en el portal.",
+      "fecha": "2026-07-20",
+      "estado": "publicada",
+      "articulo_id": "2026-07-20-pagos-qr-superan-100-millones"
+    },
+    {
+      "tema": "deuda pública / bajó por 2º mes en junio 2026 (US$474.192 M) pero sigue a un paso del récord de marzo (US$483.830 M)",
+      "angulo": "el stock de deuda bruta de la Administración Central cerró junio 2026 en US$474.192 M, -US$5.080 M vs mayo (2º baja consecutiva), a solo US$9.638 M del récord histórico de US$483.830 M de marzo. Cifra ancla CONFIRMADA: fuente primaria oficial (Secretaría de Finanzas, informe mensual publicado 15/07/2026) + coherencia de la serie oficial anual verificada por fuentes independientes (La Nación: dic-2023 US$370.674 M / nov-2023 US$425.556 M / dic-2024 US$466.921 M / dic-2025 US$455.067 M; OPC como organismo técnico independiente; iProfesional y Paco Urondo para el récord de marzo). Angulo economía/finanzas-deuda soberana con las DOS LECTURAS: la misma deuda 'subió US$103.518 M (desde dic-2023)', 'subió US$48.636 M (desde nov-2023)' o 'bajó US$21.536 M (consolidada neta, medida oficial)' segun base y perimetro; la baja de junio es sobre todo contable (apreciacion del peso); el alza se explica por capitalizacion de intereses (US$89.767 M) y ajuste CER (US$81.636 M), no por deuda nueva; pesificacion (23%->46% en pesos) y acortamiento (Letras 3%->14%). Se DESCARTO por incoherente el dato de composicion 65,7% en pesos de una fuente (dos fuentes independientes confirman 46%). No cubierto antes: la nota previa 'boom de deuda corporativa' es deuda privada (ONs), distinta de la deuda publica soberana.",
+      "fecha": "2026-07-20",
+      "estado": "publicada",
+      "articulo_id": "2026-07-20-deuda-publica-dos-lecturas"
+    },
+    {
+      "tema": "carne vacuna / consumo per cápita en mínimo de ~2 décadas vs exportaciones récord (1er semestre 2026)",
+      "angulo": "el consumo interno cayó a ~47,5 kg/hab (menor en unas dos décadas, -11% i.a. en el semestre) mientras las exportaciones batieron récord (US$1.765 M en 5 meses, +46% en valor; EE.UU. +151% en volumen). La res partida en dos: el negocio exportador en dólares crece y la mesa local se achica por el precio (+58% i.a.), con el pollo igualando por primera vez a la vacuna (47 kg). Ancla (consumo per cápita ~47,5 kg) CONFIRMADA por CICCRA + IPCVA/BCR y coherente con la serie oficial del MAGyP; exportaciones confirmadas por CICCRA + Secretaría de Agricultura",
+      "fecha": "2026-07-20",
+      "estado": "publicada",
+      "articulo_id": "2026-07-20-carne-vacuna-consumo-minimo-record-exportacion"
+    },
+    {
+      "tema": "jubilaciones / el bono de $70.000 congelado desde marzo de 2024 y la brecha de poder de compra dentro del sistema",
+      "angulo": "La movilidad mensual atada al IPC protegió a los haberes: las jubilaciones POR ENCIMA de la mínima ganaron ~10,4% de poder de compra real desde nov. 2023, pero la MÍNIMA con bono perdió ~9,2% (est. Chequeado), porque el bono extraordinario de $70.000 —uno de cada siete pesos de la mínima— está congelado desde marzo de 2024 y no se indexa. Cifra ancla (bono $70.000 congelado) CONFIRMADA por múltiples fuentes independientes (ANSES oficial + Chequeado + iProfesional + Ámbito + BAE + Infobae). Montos oficiales de julio CONFIRMADOS por triple fuente (Ámbito/Economis/econoblog: mínima $411.989, con bono $481.989, máxima ~$2,77 M; movilidad 2,15%). Ángulo de datos NUEVO respecto de la nota macro de inflación/ajuste: acá el eje es el sistema previsional y el diseño del bono, no el empleo ni el salario. Marcadas como ESTIMACIÓN: poder de compra (−9,2%/+10,4% desde nov 2023; −5,1% i.a., Chequeado), el bono contrafáctico ($157.341, Chequeado) y la canasta del adulto mayor ($1.622.654, Defensoría de la Tercera Edad CABA). Contexto (64,4% cobra la mínima o menos; 5,7 M jubilados; 64,1% por moratoria) es dato oficial de jun. 2023 (Chequeado), etiquetado con su fecha.",
+      "fecha": "2026-07-20",
+      "estado": "publicada",
+      "articulo_id": "2026-07-20-bono-jubilados-congelado"
+    },
+    {
+      "tema": "morosidad / mora del crédito a las familias en récord (12,1% en abril 2026, máximo desde 2004)",
+      "angulo": "la irregularidad del crédito a los hogares trepó a 12,1% en abril 2026 (BCRA, Informe sobre Bancos), el nivel más alto desde 2004 y más del triple que un año atrás (3,7%); encadena ~18 meses de suba. La mora se concentra en consumo (personales 14,9%, tarjetas 12,5%) frente a hipotecarios (~1,5%) y empresas (3,3%). Anclaje oficial CONFIRMADO (BCRA, doble fuente independiente); el 12,7% de mayo se marca como ESTIMACIÓN (consultora 1816). Distinto de la nota de 'carga de deuda de las familias' (servicios de deuda/masa salarial): esta mide incumplimiento, no flujo.",
+      "fecha": "2026-07-20",
+      "estado": "publicada",
+      "articulo_id": "2026-07-20-mora-familias-record"
+    },
+    {
+      "tema": "actividad de la construcción vs. venta de materiales / la crisis de los corralones y ferreterías en la provincia de Buenos Aires (jun 2026)",
+      "angulo": "Paradoja de indicadores: el ISAC del INDEC (actividad) creció +4,1% i.a. y +6,3% mensual en mayo, pero la VENTA de materiales cae: Índice Construya −1,99% mensual desest. (−0,6% i.a.) en junio, y despachos de cemento (AFCP) −1,4% i.a. en junio, tercer mes consecutivo en baja (−3% en el 1er semestre vs 2025). En el mostrador bonaerense, el rubro CAME 'ferretería, materiales eléctricos y de la construcción' cayó −2% i.a. en junio; FEBA (Camilo Cahale) y FELP (Marcelo Babenco) relativizan la mejora ('la crisis sigue igual'; revierte ~14 meses de baja pero 'no es óptima'). La divergencia se explica porque el ISAC capta obra en marcha/terminaciones (pinturas +23,6%, hormigón +10,1%, hierro +9,6%) mientras los básicos del corralón y la obra pública caen (pisos cerámicos −19,6%, asfalto −8,2%, ladrillos huecos −8,0%, cemento −1,3%). Empleo construcción registrado +1,2% i.a. (abril), señal de piso. Cifra ancla (la venta de materiales cayó en junio) CONFIRMADA por triple fuente independiente (Construya + AFCP + CAME); ISAC +4,1% CONFIRMADO (INDEC + Ámbito). DESCARTADAS por no verificar: la caída '11,6%' (La Política Online, sin acceso) y 'ventas en corralones −50%' y '−29,2% vs 2023' (artículos de 2024, stale). Ángulo NUEVO frente a 'industria vs construcción mayo 2026' y 'crédito hipotecario': acá el eje es la cadena comercial de materiales (corralones/ferreterías) en PBA, no la macro ni el crédito.",
+      "fecha": "2026-07-20",
+      "estado": "publicada",
+      "articulo_id": "2026-07-20-corralones-construccion-buenos-aires"
+    },
+    {
+      "tema": "monotributo / evolución del régimen y del tope de facturación (2023-2026): la reforma de la Ley 27.743 y el paso de AFIP a ARCA",
+      "angulo": "el tope de facturación anual del monotributo pasó de $16,9 M (comercio, ene 2024) a $126,6 M (categoría K, tabla de ARCA desde agosto 2026, +16,8% por IPC 1er sem.); la reforma fiscal 2024 (Ley 27.743) unificó las escalas de comercio y servicios y llevó el tope de servicios de $11,9 M (cat. H) a $68 M (cat. K), +470%, retroactivo a ene 2024. Serie de topes CONFIRMADA (tablas oficiales ARCA + La Nación); tope ancla agosto 2026 CONFIRMADO por doble fuente independiente (La Nación + Perfil citando la tabla de ARCA); vigente hasta julio: $108,4 M (ARCA). Contexto: AFIP disuelta y ARCA creada por Decreto 953/2024 (BO 25/10/2024). El total de ~4 millones de monotributistas y el valor 'solo inflación' ($57 M) se marcan como estimaciones. Recategorización semestral en curso (cierre 5/08/2026).",
+      "fecha": "2026-07-21",
+      "estado": "publicada",
+      "articulo_id": "2026-07-21-monotributo-como-cambio"
+    },
+    {
+      "tema": "empleo registrado (SIPA) abril 2026 / se perdieron 28.736 puestos, solo 11.673 asalariados privados",
+      "angulo": "anatomía del dato: el total de 28.736 se descompone en 6 modalidades (privados -11.673, monotributistas -11.091, monotributo social -5.135, autónomos -4.107, público +2.816, casas particulares +409); la coherencia interna cierra (-28.780 ≈ -28.736) y la EIL (fuente independiente, -1,2% i.a. privado) corrobora. Eje en la sustitución de asalariados por monotributistas (interanual -128.600 vs +49.500). DISTINTO del tema ya cubierto 'mercado de trabajo / desocupación EPH 1er trim': aquí es registro administrativo mensual (SIPA), no la encuesta de hogares, y el foco es el NIVEL y la COMPOSICIÓN del empleo registrado, no la tasa de desocupación. Cifra ancla CONFIRMADA.",
+      "fecha": "2026-07-21",
+      "estado": "publicada",
+      "articulo_id": "2026-07-21-empleo-registrado-abril-anatomia"
+    },
+    {
+      "tema": "IA y el futuro del trabajo / ¿la IA reemplaza todo menos los oficios? mito vs. realidad con datos",
+      "angulo": "investigacion a fondo (regalo por Dia del Amigo para Jose, emprendedor de oficios): solo 3,3% del empleo mundial en maxima exposicion a la IA (OIT WP140); FMI ~40% afectados pero afectar!=reemplazar; BM LatAm 2-5% automatizacion total; estudio Min. Economia Argentina: gerentes 99% vs manuales 35% (invierte el miedo), 71% complementariedad; paradoja de Moravec; robotica fisica lejos (Atlas 89kg levanta 11kg); demanda de oficios crece (BLS electricistas +9%, HVAC +8% vs 3% promedio), 41% construccion se jubila 2031, IA data centers necesita 140.000 electricistas 2030; la IA transforma el oficio (takeoff 97% precision, cotizar 2-3x). Fuentes primarias OIT/FMI/BM/BLS/WEF/Min Economia AR. Publicada directamente por decision del dueño.",
+      "fecha": "2026-07-20",
+      "estado": "publicada",
+      "articulo_id": "2026-07-20-ia-no-reemplaza-oficios"
+    },
+    {
+      "tema": "boom de patentamiento de motos / 1er semestre 2026 (+43,5%, más de 440.000 unidades) vs. caída de autos 0km (−10%)",
+      "angulo": "el mercado de vehículos se parte en dos: las motos (92,6% de baja cilindrada, 97% nacionales) vuelan mientras los autos 0km caen. La moto como termómetro del poder de compra: movilidad de bajo costo, fuerte en el norte, moto económica ~$2,3M vs auto más barato ~$26,5M. Cifra ancla (+43,5% i.a.) CONFIRMADA por CAFAM, El Economista, Perfil y datos DNRPA; se dan las dos lecturas (downgrade del bolsillo vs. rebote del crédito y base baja de 2024)",
+      "fecha": "2026-07-21",
+      "estado": "publicada",
+      "articulo_id": "2026-07-21-boom-motos-caen-autos"
+    },
+    {
+      "tema": "compras al exterior por courier / puerta a puerta se duplicaron en el 1er semestre 2026 (US$643 M, +104,2% i.a.)",
+      "angulo": "el canal courier (Shein, Temu, Amazon) se disparó 104% a contramano de las importaciones totales del país (-3,9%). Motores: franquicia de US$400 sin derechos + régimen ampliado (5 envíos/año, US$3.000 c/u) desde fines de 2024, y peso apreciado. Cifra ancla (se duplicó, +104,2%) CONFIRMADA por triple fuente: INDEC (ICA, 'resto' +69,9% junio), y las consultoras Analytica (US$643 M) y Abeceb (2025 US$894 M, +274%); coherencia interna US$518 M ene-may + US$125 M jun = US$643 M. El monto exacto en dólares se marca como estimación de consultora. Las dos lecturas: poder de compra recuperado vs. golpe al comercio e industria local",
+      "fecha": "2026-07-21",
+      "estado": "publicada",
+      "articulo_id": "2026-07-21-compras-courier-se-duplican"
+    },
+    {
+      "tema": "crédito al sector privado / rebote de junio 2026 (+1,7% real, primera suba en seis meses) traccionado por líneas comerciales",
+      "angulo": "el crédito cortó cinco meses de caída pero el impulso vino de las empresas, no de las familias; contexto de baja penetración (13,6% del PBI) y mora récord",
+      "fecha": "2026-07-21",
+      "estado": "publicada",
+      "articulo_id": "2026-07-21-credito-privado-rebota-empresas"
+    },
+    {
+      "tema": "cheques rechazados por falta de fondos / la cadena de pagos bajo estrés (mayo 2026)",
+      "angulo": "en mayo se rechazaron 99.431 cheques por falta de fondos (BCRA), 2º mes seguido de baja desde el récord de dic-2025 (119.285) pero aún +43,4% i.a.; el estrés financiero de las empresas/pymes que la macro (inflación en baja, dólar planchado) no muestra. Cifra ancla oficial del BCRA (Informe de Pagos Minoristas) confirmada; fenómeno corroborado por fuente independiente (Fidelitas). Distinto de la morosidad de familias ya cubierta: acá es el crédito comercial entre empresas.",
+      "fecha": "2026-07-21",
+      "estado": "publicada",
+      "articulo_id": "2026-07-21-cheques-rechazados-cadena-pagos"
+    },
+    {
+      "tema": "producción de gas natural / récord histórico de Neuquén (115,14 MMm³/día, mayo 2026) y la paradoja de importar GNL en invierno",
+      "angulo": "ángulo de datos NUEVO respecto de la nota de Vaca Muerta ya cubierta (que fue sobre PETRÓLEO/crudo y el superávit energético): esta nota es sobre el GAS NATURAL. Cifra ancla: Neuquén produjo 115,14 MMm³/d de gas en mayo 2026, máximo histórico absoluto, superando el récord previo de julio 2025 (114,51 MMm³/d) por +0,63; +13,8% mensual (vs abril 101,19) y +12,5% i.a. Datos de apoyo: producción NACIONAL 155,96 MMm³/d (+5,6% i.a.), Neuquén = 73,8% del gas del país; shale de Vaca Muerta 95,16 MMm³/d (+20% i.a., 82,6% del gas neuquino), no convencional ~92%; el convencional cayó -12% y el tight -17% (la transición). Milestone: OLADE ubicó a Argentina como 1° productor de gas de América Latina y el Caribe (21% de la región en enero 2026, apenas arriba de Trinidad 20% y Brasil 13%) — marcado como participación (no volumen absoluto) y ventaja de 1 punto. La postura de refutación / asterisco Con Interés: pese al récord, el país sigue importando GNL en invierno porque el problema es de ESTACIONALIDAD y TRANSPORTE, no de recurso (demanda residencial se triplica de 20 a 60 MMm³/d, picos 90; cuello de botella del trasvase sur-norte 15-18 MMm³/d). Factura de importación de GNL: 2022 = 41 barcos / US$2.885 M; 2025 = 27 barcos / US$698 M; 2026 = ~US$1.400 M (ESTIMACIÓN de Juan José Carbajales, ~doble de 2025, no por más volumen sino por el salto del precio internacional a ~US$20/MMBTU). Cifra ancla (115,14 MMm³/d) CONFIRMADA por doble organismo oficial (Secretaría de Energía de la Nación + Subsecretaría de Hidrocarburos de Neuquén) y múltiples medios independientes (Infobae 23/06, Diario Río Negro, EconoJournal), con récord previo verificable (114,51 jul-2025). Coherencia interna verificada (115,14/155,96=73,8%; 95,16/115,14=82,6%; 101,19→115,14=+13,8%; US$698M x2≈US$1.400M; OLADE 21+20+13+11+10+9+5+1=90). La factura 2026 y el liderazgo OLADE se marcan como estimación/atribuido. No es asesoramiento financiero.",
+      "fecha": "2026-07-21",
+      "estado": "publicada",
+      "articulo_id": "2026-07-21-record-gas-neuquen-gnl"
+    },
+    {
+      "tema": "RIGI / Pampa Energía invierte US$4.521 millones en Rincón de Aranda (Vaca Muerta), 20º proyecto aprobado",
+      "angulo": "anatomía del dato oficial del Boletín Oficial (Res. 1025/2026): la cifra ancla US$4.521 M es un plan de inversión confirmado por doble fuente; el acumulado del RIGI se presenta como rango (US$46.000–57.000 M) y las cifras de producción/exportación/empleo como estimaciones de la empresa. Ángulo de régimen de inversión (no de producción energética), distinto de las notas previas de Vaca Muerta.",
+      "fecha": "2026-07-21",
+      "estado": "publicada",
+      "articulo_id": "2026-07-21-rigi-pampa-4521-millones"
+    },
+    {
+      "tema": "despachos de cemento junio 2026 / tercer mes consecutivo en baja (AFCP)",
+      "angulo": "el termómetro más fino de la construcción cayó 1,4% i.a. en junio (803.147 t) y el 1er semestre cerró -3%; el rebote de marzo (+11%) no tuvo continuidad (abril -13,2%, la mayor caída en 17 meses). El nivel de 2025 (10,09 M t) sigue 19,6% por debajo de 2023, con la obra pública casi frenada. Cifra ancla oficial de la AFCP CONFIRMADA; totales 2023/2024 reconstruidos de las variaciones oficiales",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-despachos-cemento-tercer-mes-baja"
+    },
+    {
+      "tema": "PBI 1er trimestre 2026 / la economía creció 2,3% pero con dos velocidades",
+      "angulo": "el PBI subió 2,3% i.a. (+0,7% desest.) pero la inversión (FBCF) cayó 11,6% i.a. y la industria (-1,7%) y el comercio (-0,3%) siguen en rojo; agro (+18,1%), minería (+12,3%) y finanzas (+7,5%) explicaron 1,84 de los 2,3 pts. Eje en la composición sectorial y de demanda del PBI trimestral (no cubierto antes) más el freno del EMAE de abril (+1,6% i.a., -1,5% mensual). Distinto de 'industria vs construcción mayo' (EMAE sectorial): acá el ancla es el PBI de cuentas nacionales y su descomposición inversión/consumo. Ancla PBI +2,3% CONFIRMADA (INDEC + Chequeado; coherente con EMAE y consultoras privadas).",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-pbi-crece-inversion-cae"
+    },
+    {
+      "tema": "producción nacional de petróleo crudo / récord histórico: por primera vez supera los 900.000 barriles/día (mayo 2026, 903.700 bbl/d)",
+      "angulo": "ángulo de datos NUEVO respecto de las notas de energía ya cubiertas (Vaca Muerta / superávit energético del 1er semestre, que fue sobre el BALANCE COMERCIAL energético en dólares; y récord de GAS de Neuquén, que fue sobre GAS NATURAL): esta nota es sobre la PRODUCCIÓN FÍSICA de PETRÓLEO CRUDO a nivel nacional (barriles/día). Cifra ancla: 903.700 bbl/d en mayo 2026, primer registro por encima de los 900.000 en la historia, +19,6% i.a. Contexto: superó el pico convencional de 1998 (~847.000 bbl/d), techo que había resistido 27 años y recién se rompió en oct-2025 (859.500 bbl/d); serie ascendente reciente (oct-25 859.500 → ene-26 872.966 → abr-26 ~878.000 → may-26 903.700); +76% en 5 años. Motor: shale/no convencional de Vaca Muerta = 69% del total (dato oficial); ~623.000 bbl/d equivalentes marcado como CÁLCULO. El convencional (~31%, ~280.000 bbl/d) estancado/en baja. Datos de apoyo (dólares): exportaciones del complejo combustibles y energía may-2026 US$1.745 M (+167% i.a.) y ene-may US$6.182 M (+44,7%) — INDEC, coincide con la nota ya verificada de superávit comercial de mayo. Cifra ancla (903.700 / +19,6% / 69% shale) CONFIRMADA por doble fuente independiente: dato oficial de la Secretaría de Energía (DDJJ de operadoras) + confirmación on-the-record del Gobierno nacional, reproducido de forma coincidente por La Nación, Ámbito, Forbes, Diario Río Negro/EnergíaOn e iProfesional. Coherencia interna verificada (903.700 > 859.500 oct-25 > 847.000 pico 1998; 903.700/1,76≈513.000 hace 5 años, consistente con el piso ~500.000). Asterisco Con Interés / postura de refutación: (1) más producción NO implica nafta más barata (el precio del surtidor sigue paridad internacional + impuestos, no la producción local); (2) el crecimiento está concentrado en una sola cuenca (Neuquén) y una sola tecnología (shale), con dependencia del precio global del crudo y de la capacidad de evacuación (oleoductos). Dato de junio 2026 aún no difundido al cierre. No es asesoramiento financiero.",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-record-petroleo-900-mil-barriles"
+    },
+    {
+      "tema": "producción nacional de leche / récord de la década: 11.617 millones de litros en 2025 (+9,7%, 2º mejor año histórico) y continúa subiendo en 2026",
+      "angulo": "ángulo de datos NUEVO respecto de las notas de agro/lácteos ya cubiertas (carne vacuna consumo vs exportación; granos récord de volumen): esta nota es sobre la PRODUCCIÓN NACIONAL DE LECHE cruda (millones de litros) y la paradoja producción récord vs. precio real al productor en mínimos. Cifra ancla: 11.617,6 M de litros en 2025, +9,7% i.a., el mayor volumen en 10 años y 2º mejor de la historia (detrás de 2015). Contexto 2026: producción ene-may +6% i.a.; 1er cuatrimestre ~3.500 M de litros (máximo de la década para ese período); productividad 3.287 L/tambo/día (+27% vs promedio 5 años, BCR). Exportaciones ene-abr 2026: ~130.000 t por US$455 M, mayor valor para ese período desde 2012, +22,3% i.a. en volumen ene-may; Brasil principal destino (~+40% i.a.); leche en polvo como motor. Reparto del crecimiento de la oferta ene-may: ~65% exportación / 35% mercado interno; consumo interno +4%; per cápita proyectado 2026 188 L/hab (185,3 en 2025) marcado como ESTIMACIÓN. Tensión / postura de refutación: el precio al productor ajustado por inflación (SIGLeA) está en su nivel más bajo en 10 años (mayo 2026); caída real ~18,7% i.a. en enero 2026. Concentración: 8.813 tambos, 83% en Santa Fe/Córdoba/Buenos Aires; tambos >10.000 L/día pasaron de 5% (2010) a ~30% de la producción. Cifra ancla (11.617 M / +9,7% / mayor en una década) CONFIRMADA por doble fuente independiente: anuncio oficial de la Secretaría de Agricultura-Dirección Nacional de Lechería (Argentina.gob.ar, 'mayor nivel en 10 años' / 'segundo mejor rendimiento histórico') + OCLA (serie propia), corroborado por Infobae/Revista Chacra, La Gaceta, Bichos de Campo y Perfil; magnitud consistente con estimaciones internacionales independientes (USDA ~+4% 2026). Estimación 2026 (11.975,5 M, +3,08%) marcada como ESTIMACIÓN; valor 2024 (~10.592 M) reconstruido del +9,7% oficial (CÁLCULO). No es asesoramiento financiero.",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-produccion-leche-record-decada"
+    },
+    {
+      "tema": "consumo masivo / Encuesta de supermercados INDEC abril 2026 (ventas reales −3,7%, mayoristas −5%, shoppings −5,9%)",
+      "angulo": "ángulo de datos NUEVO: el canal formal (INDEC: super/mayoristas/shoppings) sigue en rojo mientras el PBI crece 2,3%; distinto universo que las ventas pyme de CAME (que rebotan)",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-consumo-supermercados-en-rojo"
+    },
+    {
+      "tema": "Moody's sube la calificación soberana de Argentina a B3 (desde Caa1, julio 2026)",
+      "angulo": "upgrade de Moody's Caa1→B3 con perspectiva positiva; las tres grandes calificadoras (Moody's B3, S&P y Fitch B-) alineadas por primera vez en más de una década; sigue 6 escalones bajo el grado de inversión; riesgo país en torno a 418 pb (mín. 8 años, arrancó 2026 en 571, -29%). Cifra ancla (calificación B3, 21/07/2026) CONFIRMADA por múltiples fuentes independientes",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-moodys-sube-calificacion-b3"
+    },
+    {
+      "tema": "exportaciones de vino / primer semestre 2026: +14,2% en volumen pero solo +2,6% en dólares",
+      "angulo": "la brecha volumen-valor: se exportaron 102,6 M de litros (+14,2%) pero los dólares subieron apenas 2,6% (US$319,5 M) porque el precio promedio por litro cayó 10,2% (US$3,47->US$3,11), empujado por el granel barato (+52,7%) frente al fraccionado (+2,4%). Cifra ancla del INV (volumen) confirmada; el precio por litro es cálculo propio verificado por coherencia interna",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-vino-mas-litros-menos-dolares"
+    },
+    {
+      "tema": "intercambio comercial (ICA) junio 2026 / superávit del 1er semestre US$13.923 M (5x 2025)",
+      "angulo": "superávit récord del semestre pero de naturaleza inversa a 2024: crece por exportaciones (+24,4%) y no por caída de importaciones; alerta por bienes de capital (-8%)",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-superavit-semestre-record-exportaciones"
+    },
+    {
+      "tema": "expectativas de mercado (REM/BCRA) junio 2026 / el consenso proyecta un dólar mayorista de $1.673 para dic-2026, inflación ~30% y PBI +3%",
+      "angulo": "qué proyectan 44 analistas para dólar, inflación y actividad, leído contra la tensión cambiaria de julio (dólar récord ~$1.500, riesgo país 419); expectativas, no mediciones",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-rem-bcra-dolar-proyeccion"
+    },
+    {
+      "tema": "riesgo país / EMBI+ cerca de 400 puntos (mínimo desde 2018) y la vuelta al mercado internacional de deuda",
+      "angulo": "el riesgo país argentino (EMBI+ de JP Morgan) ronda los 410 pb al 22/07/2026, mínimo desde 2018, tras tocar 402 el 10/07 y acumular una baja cercana al 29% en 2026 (desde 571 el 2/01). Ángulo de datos NUEVO respecto de las notas de Moody's (calificación), BCRA (compras), deuda corporativa y deuda pública: acá el eje es el PRECIO del crédito soberano y el umbral (~400/300 pb) que la city mira para que la Argentina vuelva a emitir deuda en el mercado internacional tras 8 años (última colocación voluntaria: enero 2018, US$9.000 M a 4,6-6,95%). Cifra ancla CONFIRMADA por múltiples fuentes independientes que reproducen el EMBI+ de JP Morgan (La Nación 22/07: ~410; Perfil 10/07: 402-403 y -29%; Infobae 21/07). Superlativo 'mínimo desde 2018' documentado con el piso de Macri (342 pb, oct-2017) y la trayectoria; contexto histórico: mínimo NK 184 pb (ene-2007), pico 2002 >7.000. Costo de emitir hoy ~8,7% marcado como ESTIMACIÓN (riesgo país + Treasury); comparado con Banco Mundial 6,3% y BID 7,75%. Opiniones de analistas (Buteler, Marull, Caamaño, Machado, Ritondale) atribuidas y enlazadas.",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-riesgo-pais-cerca-400"
+    },
+    {
+      "tema": "turismo internacional (ETI/INDEC) mayo 2026 / se da vuelta: receptivo +20,4% y emisivo −12,1%",
+      "angulo": "medición FÍSICA de personas (ETI), distinta de la cuenta 'viajes' del balance de pagos en dólares ya cubierta el 19/07. El giro de mayo 2026: entran 20,4% más turistas extranjeros y salen 12,1% menos argentinos; el déficit de turistas del mes baja de 437,4 a 282,0 mil. Cifra ancla INDEC (+20,4%) CONFIRMADA y corroborada por registro aerocomercial independiente (ANAC, récord ene-may). La paradoja: con dólar barato el motor no es el tipo de cambio sino la caída del ingreso real (emisivo) más el arrastre de la devaluación de 2023 y la demanda regional (receptivo)",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-turismo-receptivo-se-da-vuelta"
+    },
+    {
+      "tema": "autos usados / mejor mes de 2026 en junio (155.492 transferencias) pero semestre en baja",
+      "angulo": "el mercado del auto usado tuvo en junio su mejor volumen del año (155.492 unidades, +8,6% i.a., +7,9% mensual, CCA sobre registros DNRPA), pero el 1er semestre cerró en 891.628 unidades, -2,9% vs 2025 (918.404). Ángulo de datos NUEVO respecto de las notas de 0km (producción/patentamientos) y motos: el usado es el mercado automotor grande (~3x el 0km: 891.628 vs 294.181 patentamientos) y termómetro del consumo durable de clase media. La paradoja verificada: el usado cayó solo 2,9% en el semestre mientras el 0km se hundió cerca del 10% — cuando el ingreso aprieta, el comprador baja de gama. Cifra ancla (155.492, junio 2026) CONFIRMADA por fuente sectorial primaria (CCA sobre transferencias DNRPA) + doble reproducción independiente (El Economista, Infobae, Tiempo Argentino) + medición paralela de ACARA (155.753, prácticamente idéntica); coherencia interna verificada (155.492/143.191=+8,59%; 155.492/144.050=+7,94%; 891.628/918.404=-2,92%; 891.628/294.181=3,03). Superlativo 'mejor mes del año' atribuido a la CCA y limitado a 2026 (NO récord histórico). Caída del semestre atribuida a consumo privado en baja (~-2,2% i.a. mayo, Univ. de Palermo/ACARA) y competencia de precios del 0km; recuperación condicionada por la CCA a tasas, dólar estable y salario real (marcado como opinión atribuida).",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-autos-usados-junio-mejor-mes"
+    },
+    {
+      "tema": "distribución del ingreso / desigualdad 1er trimestre 2026 (Gini 0,442; el decil más rico concentró 33,5% del ingreso)",
+      "angulo": "el 10% de mayores ingresos se llevó el 33,5% del ingreso total y el 10% más pobre el 1,8% (brecha de participación 18,6x); el Gini subió de 0,435 a 0,442 respecto de un año atrás (ingreso per cápita familiar, EPH). Cifra ancla (participación del decil 10) CONFIRMADA por INDEC + Infobae + Perfil; la distribución por decil suma 99,9% (coherencia interna verificada)",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-distribucion-ingreso-desigualdad"
+    },
+    {
+      "tema": "EMAE / actividad económica mayo 2026: segunda caída mensual consecutiva (−0,5% desest.) e interanual casi plano (+0,2%)",
+      "angulo": "el indicador mensual adelantado del PBI cayó por segundo mes seguido en la serie desestacionalizada (rebote de marzo +3,1% seguido de −1,5% en abril y −0,5% en mayo); el interanual se desaceleró de +2,3% (1er trim.) a +0,2% en mayo, con el acumulado del año en +1,7% y la tendencia-ciclo todavía positiva (+0,2%). Divergencia sectorial: minería +15,7%, energía +8%, agro +4,6% vs industria −5,6%, comercio −4,3%, pesca −29,3%. Cifra ancla confirmada por doble fuente (La Nación y MDZ citando INDEC) + INDEC como primaria",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-emae-actividad-mayo-freno"
+    },
+    {
+      "tema": "swap de monedas con China / repago del tramo activado y renovación del acuerdo (US$19.000 M, vence 6/08/2026)",
+      "angulo": "ángulo de datos NUEVO respecto de las notas previas de reservas/BCRA (que fueron sobre el FLUJO de compras diarias del BCRA y sobre los depósitos en dólares): esta nota es sobre la DEUDA en yuanes con China y su ANATOMÍA. El tramo ACTIVADO del swap (lo que la Argentina realmente usaba y debía) cayó de un pico de ~US$5.000 M a ~US$679 M (4.600 M de yuanes) al 14/01/2026, tras devolverle al Banco Popular de China ~US$4.300 M (casi el 90%). Serie del balance del BCRA: 21.000 M yuanes (US$3.097 M, dic-24) -> 7.000 M yuanes (US$1.032 M, dic-25) -> 4.600 M yuanes (US$679 M, ene-26). Pese al repago, el Gobierno (Bausili viajó a China) renueva el CONTRATO MARCO completo (130.000 M yuanes ~= US$19.000 M) que vence el 6/08/2026: el swap deja de ser deuda en uso y vuelve a ser seguro contingente. Dos lecturas: (A/oficial) reservas más 'propias' y menos prestadas, menor dependencia del yuan; (B/matiz) la red de US$19.000 M se mantiene intacta y los dólares para pagar salieron en parte de otra deuda (se cambió de acreedor). Cifra ancla (US$679 M / caída del tramo activado) CONFIRMADA por FUENTE PRIMARIA (BCRA, Estados Contables del Ejercicio 2025) + reproducida por Infobae, El Cronista (US$675 M, redondeo yuan/USD) y Ámbito; total del acuerdo y vencimiento CONFIRMADOS (BCRA + El Cronista + Ámbito); viaje y renovación CONFIRMADOS por múltiples medios (La Gaceta, Diario Panorama, El Cronista, La Nación). Coherencia interna verificada (yuan/USD ~6,78 constante en toda la serie; 5.000->679 = 86% repagado). Contexto de apoyo: reservas brutas US$49.536 M al 7/07/2026 (máximo en casi 7 años). Nota: US$679 M es el último dato oficial (balance ene-2026); se aclara en la nota que pudo variar. Se descartó por sobre-cobertura el ángulo de reservas brutas/netas como nota propia.",
+      "fecha": "2026-07-22",
+      "estado": "publicada",
+      "articulo_id": "2026-07-22-swap-china-repago-renovacion"
+    },
+    {
+      "tema": "liquidación de divisas del agro / 1er semestre 2026 (US$13.378 M, -13% i.a.)",
+      "angulo": "el complejo agroexportador liquidó US$13.378 M en ene-jun 2026 (junio US$3.007 M), 13% menos que en 2025 (~US$2.000 M menos) pese a exportar MÁS volumen: la paradoja 'más toneladas, menos dólares' por la caída de precios internacionales, menor peso de la soja y el vencimiento del recorte temporal de retenciones de 2025 que había adelantado ventas. Cifra ancla de CIARA-CEC (fuente primaria) confirmada por coberturas coincidentes de La Nación, Infobae, BAE, MDZ e Infocampo; el valor de junio 2025 (US$3.667 M) se reconstruye de la baja interanual del 18%",
+      "fecha": "2026-07-23",
+      "estado": "publicada",
+      "articulo_id": "2026-07-23-agro-liquidacion-dolares-semestre"
+    },
+    {
+      "tema": "electrodomésticos / efecto Mundial 2026: los televisores crecen +27% mientras el mercado cae",
+      "angulo": "ángulo de datos NUEVO respecto de las notas de consumo previas (supermercados abril 'en rojo', autos, motos): esta es la góndola de electrodomésticos y electrónica de consumo, con eje en el CONTRASTE del efecto Mundial. Cifra ancla: los televisores crecieron +27% en unidades (ene-may 2026 vs 2025, NielsenIQ, presentado en Electronics Home 2026), la ÚNICA categoría del rubro que crece a dos dígitos, mientras el mercado TOTAL cayó 3% en unidades y el INDEC midió −12,4% i.a. en el 1er trimestre (precios corrientes; caída real aún mayor con inflación del trimestre ~9,4%). Imagen espejo: smartphones −27%, climatización −25%, telecom −25%; línea blanca +7%, pequeños +7%, informática +1%. La demanda se corrió a pantallas grandes (55″+ pasaron de 30% a 60% del volumen en Frávega) y al canal online (58% de unidades, 61% en el Hot Sale de mayo). Refutación incluida: NO es reactivación del consumo sino un gasto puntual, estacional y financiado (≈60% con tarjeta, tasas 400-500% anual, mora 35-40% en carteras, CAME), que suele revertir tras el Mundial. Verificación: el +27% es medición privada de NielsenIQ, atribuida como tal, corroborada DIRECCIONALMENTE por triple fuente independiente (INDEC 1er trim: televisores la excepción con audio −41,9% y celulares −31,3% desplomados; cadenas Frávega/Cetrogar/Megatone +50-70% vía La Nación; Cámara de Electrodomésticos de Córdoba +50%). SE DESCARTÓ por refutación (Chequeado) el viral '+624% de televisores en Mercado Libre': ese dato correspondía a PROYECTORES, no a televisores. Coherencia interna: NielsenIQ ene-may +27% vs INDEC 1er trim (ene-mar) televisores casi planos es consistente porque el pico se concentró desde mayo (Hot Sale + previa del Mundial jun-jul).",
+      "fecha": "2026-07-23",
+      "estado": "publicada",
+      "articulo_id": "2026-07-23-mundial-tv-boom-electrodomesticos"
+    },
+    {
+      "tema": "venta de combustibles / la caída se frenó en mayo 2026 (−0,2% interanual, 1.419.422 m³)",
+      "angulo": "el consumo de naftas y gasoil dejó de caer (la menor baja interanual de 2026 tras 4 meses en rojo), pero el promedio esconde una grieta por producto: el gasoil premium creció +6,0% mientras la nafta súper cayó −3,0%; el combustible del trabajo se movió, el del auto particular no. Ancla oficial (Secretaría de Energía, procesada por Politikon Chaco) confirmada por triple cobertura y serie coherente (mar −1,8%, abr −2,4%, may −0,2%)",
+      "fecha": "2026-07-23",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-23-combustibles-mayo-freno-caida"
+    },
+    {
+      "tema": "consumo de carne de cerdo / récord histórico por habitante (19,59 kg, 12 meses a mayo 2026) y la sustitución silenciosa de la carne vacuna",
+      "angulo": "ángulo de datos NUEVO respecto de la nota de carne vacuna (consumo en mínimo de 2 décadas): acá el eje es el CERDO como la carne que más crece. Cifra ancla: consumo aparente 19,59 kg/hab en el móvil a mayo 2026 (SAGyP), récord histórico, más que el doble de los 8,6 kg de 2012. CONFIRMADO por tres fuentes independientes que citan el dato oficial SAGyP: Bolsa de Comercio de Rosario (19,59 kg, mayo), Federación Porcina Argentina (19,44 kg, marzo, +8,9% i.a.) y CICCRA/Ámbito (+19,5 kg, récord). Récord previo documentado: 18,9 kg (2025). Apoyo: producción ene-may 354.588 t (+11,7% i.a., récord para el período), 16 años consecutivos de suba, faena ~3,7 M cabezas. Contexto de sustitución: vacuna 47,5 kg (piso en 2 décadas, CICCRA; pico 2008: 69,4 kg), pollo ~47 kg (disputa el 1er puesto); serie SAGyP 2025 coherente (vacuna 47,3 / pollo 47,7 / cerdo 18,9; total 116,5 kg). Motor: precio (cortes vacunos +50% i.a.; el cerdo, más eficiente de producir, más barato). Serie de consumo graficada: 2012 8,6 → 2021 15,86 → 2024 17 → 2025 18,9 → 2026 19,59.",
+      "fecha": "2026-07-23",
+      "estado": "publicada",
+      "articulo_id": "2026-07-23-cerdo-consumo-record"
+    }
+  ]
 }
