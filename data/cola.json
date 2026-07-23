@@ -1,7 +1,22 @@
 {
  "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
- "actualizado": "2026-07-23T19:20:00+00:00",
+ "actualizado": "2026-07-23T20:20:00+00:00",
  "borradores": [
+  {
+   "id": "2026-07-23-produccion-acero-junio",
+   "titulo": "320.100 toneladas de acero: por qué el mismo dato dice “cae” y “crece” a la vez",
+   "bajada": "En junio se produjeron 320.100 toneladas de acero crudo en la Argentina: 8,6% menos que en mayo pero 16,5% más que un año atrás, según la Cámara Argentina del Acero. Las dos cifras son ciertas: la industria se levantó del piso de 2024 (cuando cayó 26%) pero la mejora se frenó en el mes y sigue casi un tercio por debajo de un junio de actividad plena. Detrás del número: turnos suspendidos, importaciones que aprietan y una demanda partida entre la energía que tira y la construcción que no arranca.",
+   "seccion": "ECONOMÍA",
+   "formato": "Anatomía de un dato",
+   "numero": "320.100 t",
+   "numero_label": "toneladas de acero crudo producidas en junio 2026 (−8,6% mensual, +16,5% interanual, Cámara Argentina del Acero)",
+   "fecha": "2026-07-23",
+   "hora": "18:00",
+   "archivo": "articulos/2026-07-23-produccion-acero-junio.html",
+   "verificacion": "verificada",
+   "fuentes": 5,
+   "lectura": "30 seg → 12 min"
+  },
   {
    "id": "2026-07-23-globant-accion-desplome-90",
    "titulo": "Globant, el unicornio argentino: la acción se desplomó 91% desde su pico y volvió a valores de 2017",

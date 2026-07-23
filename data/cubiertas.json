@@ -455,6 +455,13 @@
       "fecha": "2026-07-23",
       "estado": "en_cola",
       "articulo_id": "2026-07-23-globant-accion-desplome-90"
+    },
+    {
+      "tema": "producción de acero crudo junio 2026 / 320.100 t (−8,6% mensual pero +16,5% interanual)",
+      "angulo": "el mismo dato cuenta dos historias: cae 8,6% frente a mayo pero sube 16,5% contra junio 2025 (base baja); la siderurgia se recupera del piso de 2024 (−26%, 3,9 Mt) pero sigue ~1/3 debajo de un junio pleno (2022: 463.600 t). Divergencia por producto: acero terminado sube, hierro primario −36,8%. Cifra ancla de la Cámara Argentina del Acero, cruzada con worldsteel (mundo +1,7%, Sudamérica −0,3%) y coherencia interna",
+      "fecha": "2026-07-23",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-23-produccion-acero-junio"
     }
   ]
 }
