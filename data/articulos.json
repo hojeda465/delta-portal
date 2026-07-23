@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-22T22:42:27+00:00",
+    "actualizado": "2026-07-23T13:10:01+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-23-agro-liquidacion-dolares-semestre",
+      "titulo": "Más granos, menos dólares: el agro liquidó US$13.378 millones en el semestre, 13% menos que en 2025",
+      "bajada": "Las agroexportadoras ingresaron US$13.378 millones entre enero y junio, unos US$2.000 millones menos que un año atrás, según CIARA-CEC. La paradoja del semestre: salió más mercadería al exterior, pero entraron menos dólares. Cayeron los precios internacionales y venció el recorte temporal de retenciones de 2025.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$13.378 M",
+      "numero_label": "liquidó el agro en el 1er semestre de 2026 (13% menos que en 2025)",
+      "fecha": "2026-07-23",
+      "hora": "12:00",
+      "archivo": "articulos/2026-07-23-agro-liquidacion-dolares-semestre.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 11 min"
+    },
     {
       "id": "2026-07-22-distribucion-ingreso-desigualdad",
       "titulo": "El 10% más rico se quedó con un tercio del ingreso: la desigualdad volvió a subir",
