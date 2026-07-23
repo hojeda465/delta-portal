@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-07-23T22:00:00+00:00",
-  "borradores": [
-    {
-      "id": "2026-07-23-combustibles-mayo-freno-caida",
-      "titulo": "La venta de combustibles casi dejó de caer: −0,2% en mayo, la baja más chica del año",
-      "bajada": "En mayo se despacharon 1.419.422 m³ de naftas y gasoil, apenas 0,2% menos que un año atrás: la menor caída interanual de 2026, tras cuatro meses en rojo. Pero el promedio esconde una grieta: el gasoil premium creció 6% mientras la nafta súper cayó 3%. El termómetro del bolsillo dejó de retroceder; todavía no arranca.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "−0,2%",
-      "numero_label": "cayó la venta de combustibles en mayo vs. un año atrás — la menor baja de 2026",
-      "fecha": "2026-07-23",
-      "hora": "14:00",
-      "archivo": "articulos/2026-07-23-combustibles-mayo-freno-caida.html",
-      "verificacion": "verificada",
-      "fuentes": 5,
-      "lectura": "30 seg → 11 min"
-    }
-  ]
+  "borradores": []
 }

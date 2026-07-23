@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-23T22:46:05+00:00",
+    "actualizado": "2026-07-23T22:48:56+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-23-combustibles-mayo-freno-caida",
+      "titulo": "La venta de combustibles casi dejó de caer: −0,2% en mayo, la baja más chica del año",
+      "bajada": "En mayo se despacharon 1.419.422 m³ de naftas y gasoil, apenas 0,2% menos que un año atrás: la menor caída interanual de 2026, tras cuatro meses en rojo. Pero el promedio esconde una grieta: el gasoil premium creció 6% mientras la nafta súper cayó 3%. El termómetro del bolsillo dejó de retroceder; todavía no arranca.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "−0,2%",
+      "numero_label": "cayó la venta de combustibles en mayo vs. un año atrás — la menor baja de 2026",
+      "fecha": "2026-07-23",
+      "hora": "14:00",
+      "archivo": "articulos/2026-07-23-combustibles-mayo-freno-caida.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 11 min"
+    },
     {
       "id": "2026-07-23-globant-accion-desplome-90",
       "titulo": "Globant, el unicornio argentino: la acción se desplomó 91% desde su pico y volvió a valores de 2017",
