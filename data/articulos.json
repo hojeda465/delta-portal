@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-23T22:41:18+00:00",
+    "actualizado": "2026-07-23T22:43:32+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-23-fci-record-money-market",
+      "titulo": "Los fondos comunes tocaron un récord de US$67.500 millones — pero el money market dejó de ganarle a la inflación",
+      "bajada": "La industria de fondos comunes de inversión administra un patrimonio récord: más de $100 billones —unos US$67.500 millones— a junio de 2026, casi un tercio más que a fin de 2025. Es donde la Argentina, sus empresas y sus billeteras virtuales guardan cada vez más pesos. Pero adentro de ese récord hay una fuga: el money market, el fondo donde se estaciona la liquidez, rinde ~1,5% mensual contra una inflación de 1,9% y perdió terreno frente a la renta fija y los fondos CER. El mismo número dice récord y dice mudanza.",
+      "seccion": "MERCADOS",
+      "formato": "Anatomía de un dato",
+      "numero": "US$67.500 M",
+      "numero_label": "patrimonio récord de la industria de FCI a junio 2026 (+31% en dólares desde fin de 2025); dentro, el money market en pesos cae a ~50% y rinde por debajo de la inflación (CAFCI; PPI; INDEC)",
+      "fecha": "2026-07-23",
+      "hora": "22:00",
+      "archivo": "articulos/2026-07-23-fci-record-money-market.html",
+      "verificacion": "verificada",
+      "fuentes": 7,
+      "lectura": "30 seg → 12 min"
+    },
     {
       "id": "2026-07-23-produccion-acero-junio",
       "titulo": "320.100 toneladas de acero: por qué el mismo dato dice “cae” y “crece” a la vez",
