@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-23T13:00:00+00:00",
-  "borradores": [
-    {
-      "id": "2026-07-22-swap-china-repago-renovacion",
-      "titulo": "El swap con China: Argentina repagó casi 9 de cada 10 dólares que debía, pero renueva el acuerdo de US$19.000 millones",
-      "bajada": "El tramo del swap de monedas con Beijing que el país tenía en uso bajó de US$5.000 millones a unos US$679 millones, según el último balance del Banco Central. Aun así, el Gobierno viajó a China a renovar el contrato marco completo, que vence el 6 de agosto. Menos deuda en yuanes, la misma red de contención.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "US$679 M",
-      "numero_label": "lo que quedaba del tramo activado del swap con China (se repagó casi el 90%)",
-      "fecha": "2026-07-22",
-      "hora": "23:25",
-      "archivo": "articulos/2026-07-22-swap-china-repago-renovacion.html",
-      "verificacion": "verificada",
-      "fuentes": 5,
-      "lectura": "30 seg → 11 min"
-    }
-  ]
+  "actualizado": "2026-07-23T13:10:00+00:00",
+  "borradores": []
 }
