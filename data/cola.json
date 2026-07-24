@@ -1,6 +1,6 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-24T14:21:00-03:00",
+  "actualizado": "2026-07-24T16:12:00-03:00",
   "borradores": [
     {
       "id": "2026-07-24-girasol-boom-exportaciones",
@@ -31,6 +31,21 @@
       "verificacion": "verificada",
       "fuentes": 6,
       "lectura": "30 seg → 11 min"
+    },
+    {
+      "id": "2026-07-24-consumo-shoppings-vs-supermercados",
+      "titulo": "El consumo se parte en dos: los shoppings crecieron 11,9% en mayo mientras el súper siguió en rojo",
+      "bajada": "En mayo, las ventas en los centros de compras subieron 11,9% interanual a precios constantes —su primer avance tras once meses de caídas—, según el INDEC. En el mismo mes, los supermercados cayeron 0,7% y los autoservicios mayoristas 2,3%. La recuperación del consumo llegó primero al shopping; a la góndola de todos los días, todavía no.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "+11,9%",
+      "numero_label": "crecieron las ventas en los shoppings en mayo 2026 (interanual, a precios constantes) — 1º avance tras once meses de caídas; el súper (−0,7%) y los mayoristas (−2,3%) siguen en baja",
+      "fecha": "2026-07-24",
+      "hora": "16:12",
+      "archivo": "articulos/2026-07-24-consumo-shoppings-vs-supermercados.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 10 min"
     }
   ]
 }

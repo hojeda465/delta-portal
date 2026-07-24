@@ -511,6 +511,13 @@
       "fecha": "2026-07-24",
       "estado": "en_cola",
       "articulo_id": "2026-07-24-litio-produccion-record"
+    },
+    {
+      "tema": "consumo / Encuesta INDEC de supermercados, mayoristas y shoppings mayo 2026",
+      "angulo": "el consumo se parte en dos: los centros de compras crecieron 11,9% i.a. real en mayo (primer avance tras once meses de caídas; valor previo abril −5,9% documentado) mientras supermercados (−0,7%) y mayoristas (−2,3%) siguieron en rojo. Distinto de la nota de consumo masivo de abril (los tres canales caían): el ángulo nuevo es la inflexión/divergencia del shopping. Cifra ancla +11,9% CONFIRMADA por triple fuente independiente sobre el informe del INDEC",
+      "fecha": "2026-07-24",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-24-consumo-shoppings-vs-supermercados"
     }
   ]
 }
