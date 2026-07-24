@@ -504,6 +504,13 @@
       "fecha": "2026-07-24",
       "estado": "en_cola",
       "articulo_id": "2026-07-24-girasol-boom-exportaciones"
+    },
+    {
+      "tema": "producción de litio / IPI minero mayo 2026 (carbonato +45,1% i.a.; índice minero total +9,2%, máximo de la serie desde 2017)",
+      "angulo": "el VOLUMEN físico producido de carbonato de litio saltó 45,1% i.a. en mayo (11.562 t) y +47,5% acumulado ene-may, traccionado por plantas nuevas que recién llegan a régimen; la capacidad instalada pasó de 35.500 a 186.000 t/año en una década. Ángulo distinto del de la nota de exportaciones mineras (que midió dólares): acá el eje es la producción física y la posición global de Argentina (4º productor, proyección Rystad de 2º hacia 2030). Cifra ancla INDEC confirmada + corroboración con datos de empresas (Eramet Centenario 80% de capacidad, CAEM 116.000 t en 2025). Base de comparación baja señalada como matiz.",
+      "fecha": "2026-07-24",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-24-litio-produccion-record"
     }
   ]
 }

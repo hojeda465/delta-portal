@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<title>El litio pisa el acelerador: la producción creció 45% en un año y empuja a la minería a su nivel más alto desde 2017 — CON INTERÉS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF8F4; --ink:#16130F; --ink-soft:#3C3833;
+    --teal:#0E7C86; --teal-deep:#0A5C63; --amber:#C4701F; --amber-bright:#E8833A;
+    --red:#C0392B; --green:#2E8B6F; --muted:#6B6560; --faint:#8A847C;
+    --grid:#E7E1D7; --rule:#DCD6CC; --card:#FFFFFF; --card-edge:#EAE4DA;
+    --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+    --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);line-height:1.65;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px}
+
+  /* ---------- Cintillo de borrador (se retira al aprobar) ---------- */
+  .draft-ribbon{background:var(--red);color:#fff;font-family:var(--mono);font-size:12px;
+    letter-spacing:.05em;text-align:center;padding:8px 12px;font-weight:600}
+  .borrador{background:#FBEEE9;border:1px solid #E4B8AE;border-left:3px solid var(--red);
+    border-radius:10px;padding:14px 18px;margin:18px 0 4px}
+  .borrador-in{font-family:var(--mono);font-size:13px;line-height:1.55;color:#8A3B2E}
+
+  /* ---------- Masthead ---------- */
+  .masthead{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:50}
+  .masthead .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:960px}
+  .brand{font-family:var(--serif);font-weight:700;font-size:26px;letter-spacing:-.01em;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
+  .brand .tri{color:var(--teal);font-size:22px;transform:translateY(-1px)}
+  .brand .tag{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:8px;margin-left:2px;font-weight:500}
+  .mh-date{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em}
+
+  /* ---------- Article header ---------- */
+  article{padding-top:34px}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-deep);font-weight:600;margin-bottom:16px}
+  .kicker .sep{color:var(--rule);margin:0 8px}
+  .kicker .fmt{color:var(--amber)}
+  h1{font-family:var(--serif);font-weight:700;font-size:40px;line-height:1.12;letter-spacing:-.015em;margin:0 0 18px}
+  .standfirst{font-family:var(--serif);font-size:20px;line-height:1.5;color:var(--ink-soft);font-weight:400;margin:0 0 24px}
+  .byline{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:12px 0;margin-bottom:8px}
+  .byline b{color:var(--ink);font-weight:600}
+  .byline .dot{width:3px;height:3px;border-radius:50%;background:var(--faint)}
+
+  /* ---------- Layer selector ---------- */
+  .layers{position:sticky;top:56px;background:var(--paper);z-index:40;padding:14px 0 12px;border-bottom:1px solid var(--rule);margin-bottom:8px}
+  .layers .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}
+  .layer-btns{display:flex;gap:8px;flex-wrap:wrap}
+  .layer-btns button{font-family:var(--mono);font-size:12px;border:1px solid var(--rule);background:var(--card);color:var(--ink-soft);padding:7px 13px;border-radius:999px;cursor:pointer;transition:.15s;font-weight:500}
+  .layer-btns button:hover{border-color:var(--teal)}
+  .layer-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .layer-btns button .t{color:var(--faint);margin-left:6px}
+  .layer-btns button.active .t{color:#B9B3A9}
+
+  /* ---------- Body prose ---------- */
+  .prose p{font-size:18px;line-height:1.7;margin:0 0 22px}
+  .prose p.lead:first-letter{font-family:var(--serif);float:left;font-size:60px;line-height:.82;font-weight:700;padding:4px 10px 0 0;color:var(--teal)}
+  .block{scroll-margin-top:120px;margin:0 0 10px}
+  .block-tag{display:flex;align-items:center;gap:10px;margin:44px 0 20px}
+  .block-tag .num{font-family:var(--mono);font-weight:600;font-size:13px;color:var(--paper);background:var(--teal);width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .block-tag .txt{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .block-tag .rule{flex:1;height:1px;background:var(--rule)}
+
+  /* ---------- The number (hero) ---------- */
+  .hero-num{background:var(--ink);color:var(--paper);border-radius:14px;padding:34px 32px;margin:6px 0 30px;position:relative;overflow:hidden}
+  .hero-num .big{font-family:var(--mono);font-weight:600;font-size:78px;line-height:1;letter-spacing:-.03em;color:#fff}
+  .hero-num .big .u{font-size:34px;color:var(--teal);margin-left:2px}
+  .hero-num .cap{font-family:var(--sans);font-size:15px;color:#CFC9BF;margin-top:12px;max-width:430px;line-height:1.5}
+  .hero-num .cap b{color:#fff;font-weight:600}
+  .hero-num .sparkrow{display:flex;gap:26px;margin-top:22px;padding-top:20px;border-top:1px solid #2E2A25;flex-wrap:wrap}
+  .hero-num .sr{display:flex;flex-direction:column}
+  .hero-num .sr .v{font-family:var(--mono);font-size:22px;font-weight:600;color:#fff}
+  .hero-num .sr .v.up{color:var(--amber-bright)}
+  .hero-num .sr .v.dn{color:#4FC0A4}
+  .hero-num .sr .k{font-size:11px;color:#A39D93;margin-top:3px;letter-spacing:.02em}
+
+  /* ---------- Stat tiles ---------- */
+  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 26px}
+  .tile{background:var(--card);border:1px solid var(--card-edge);border-radius:12px;padding:16px 15px}
+  .tile .v{font-family:var(--mono);font-size:30px;font-weight:600;letter-spacing:-.02em;line-height:1}
+  .tile .k{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.4}
+  .tile.good .v{color:var(--green)} .tile.bad .v{color:var(--red)} .tile.neu .v{color:var(--ink)}
+  .arrow{display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:20px}
+
+  /* ---------- Figure / chart ---------- */
+  figure{margin:10px 0 30px;background:var(--card);border:1px solid var(--card-edge);border-radius:14px;padding:22px 20px 16px}
+  figure .fig-head{margin-bottom:16px}
+  figure .fig-kick{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-deep);font-weight:600;margin-bottom:6px}
+  figure h3{font-family:var(--serif);font-size:20px;font-weight:600;margin:0 0 4px;line-height:1.25}
+  figure .fig-sub{font-size:13px;color:var(--muted);margin:0}
+  figure figcaption{font-size:12px;color:var(--faint);margin-top:14px;padding-top:12px;border-top:1px solid var(--grid);line-height:1.5;font-family:var(--mono)}
+  figure figcaption b{color:var(--muted);font-weight:600}
+  .chart-svg{width:100%;height:auto;display:block;overflow:visible}
+  .tt{position:fixed;pointer-events:none;background:var(--ink);color:#fff;font-family:var(--mono);font-size:12px;padding:7px 10px;border-radius:7px;opacity:0;transition:opacity .1s;z-index:100;white-space:nowrap;line-height:1.5}
+  .tt b{color:var(--teal)}
+
+  /* legend */
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:var(--muted);font-family:var(--mono)}
+  .legend .li{display:flex;align-items:center;gap:6px}
+  .legend .sw{width:11px;height:11px;border-radius:3px;flex:0 0 auto}
+
+  /* ---------- Sources / cocina ---------- */
+  .cocina{background:#F3EFE7;border:1px solid var(--card-edge);border-left:3px solid var(--teal);border-radius:10px;padding:18px 20px;margin:8px 0 26px}
+  .cocina h4{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-deep);margin:0 0 10px;font-weight:600}
+  .cocina p{font-size:15px;line-height:1.6;margin:0 0 10px;color:var(--ink-soft)}
+  .cocina p:last-child{margin-bottom:0}
+  .cocina .meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px dashed var(--rule);font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .cocina .meta span b{color:var(--ink);font-weight:600}
+
+  /* pull */
+  .pull{font-family:var(--serif);font-size:25px;line-height:1.35;font-weight:600;color:var(--teal-deep);border-top:2px solid var(--teal);border-bottom:2px solid var(--teal);padding:20px 0;margin:30px 0}
+
+  /* módulo ¿cómo te afecta? */
+  .afecta{background:var(--card);border:1px solid var(--card-edge);border-radius:12px;padding:20px 22px;margin:24px 0}
+  .afecta h4{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin:0 0 12px;font-weight:600}
+  .afecta p{font-size:16px;line-height:1.6;margin:0 0 12px;color:var(--ink-soft)}
+  .afecta p:last-child{margin-bottom:0}
+  .afecta p b{color:var(--ink);font-weight:600}
+
+  /* otras miradas */
+  .miradas{background:#F3EFE7;border:1px solid var(--card-edge);border-radius:12px;padding:20px 22px;margin:24px 0}
+  .miradas h4{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-deep);margin:0 0 12px;font-weight:600}
+  .miradas p{font-size:15px;line-height:1.6;margin:0 0 12px;color:var(--ink-soft)}
+  .miradas p:last-child{margin-bottom:0}
+  .miradas p b{color:var(--ink);font-weight:600}
+
+  /* deep dive collapsible */
+  .deep{border:1px solid var(--card-edge);border-radius:12px;overflow:hidden;margin:8px 0 20px;background:var(--card)}
+  .deep>summary{list-style:none;cursor:pointer;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;font-family:var(--mono);font-size:13px;font-weight:600;color:var(--ink)}
+  .deep>summary::-webkit-details-marker{display:none}
+  .deep>summary .plus{color:var(--teal);font-size:20px;transition:.2s}
+  .deep[open]>summary .plus{transform:rotate(45deg)}
+  .deep .deep-body{padding:2px 20px 18px}
+  .deep .deep-body p{font-size:16px;line-height:1.65;margin:0 0 16px;color:var(--ink-soft)}
+
+  /* footer */
+  footer{border-top:2px solid var(--ink);margin-top:50px;padding:28px 0 60px}
+  footer .wrap{max-width:720px}
+  footer .src h4{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+  footer .src ul{margin:0;padding:0;list-style:none;font-size:13px;line-height:1.9}
+  footer .src a{color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)}
+  footer .src a:hover{border-color:var(--teal)}
+  footer .foot-brand{font-family:var(--serif);font-weight:700;font-size:18px;margin-top:24px;color:var(--ink)}
+  footer .foot-brand .tri{color:var(--teal)}
+  footer .disc{font-size:12px;color:var(--faint);margin-top:6px;max-width:520px;line-height:1.5}
+
+  b.hl{background:linear-gradient(transparent 62%, #F3D9A8 62%);font-weight:600;padding:0 1px}
+
+  @media(max-width:600px){
+    h1{font-size:30px}.standfirst{font-size:18px}.prose p{font-size:17px}
+    .hero-num .big{font-size:52px}.hero-num{padding:26px 22px}
+    .tiles{grid-template-columns:1fr}.tile{display:flex;align-items:baseline;gap:14px}
+    .tile .k{margin-top:0}.arrow{display:none}
+    .wrap{padding:0 16px}
+  }
+</style>
+</head>
+<body data-palette="#0E7C86,#E8833A,#2E8B6F,#C0392B">
+
+<div class="draft-ribbon">&#9679; BORRADOR &middot; EN REVISIÓN — no publicado. Leé la nota completa antes de aprobar.</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="tri">%</span>Con Interés<span class="tag">La economía, con interés</span></a>
+    <a href="../index.html" class="mh-date" style="text-decoration:none">← Portada</a>
+  </div>
+</header>
+
+<div class="wrap">
+<div class="borrador">
+<div class="borrador-in">Borrador generado por la redacción de agentes y pendiente de aprobación. Leé la nota completa y, si está OK, aprobala respondiendo &laquo;aprobá la nota 2026-07-24-litio-produccion-record&raquo;.</div>
+</div>
+<article>
+
+  <div class="kicker">ECONOMÍA <span class="sep">/</span> <span class="fmt">Anatomía de un dato</span></div>
+
+  <h1>El litio pisa el acelerador: la producción creció 45% en un año y empuja a la minería a su nivel más alto desde 2017</h1>
+
+  <p class="standfirst">El volumen de carbonato de litio que produjo Argentina en mayo fue un 45,1% mayor que un año atrás, según el INDEC. Es el mineral que más traccionó al índice de producción minera, que tocó su punto más alto desde que arranca la serie, en 2017. Detrás del salto no hay un golpe de suerte: hay plantas nuevas que recién encienden motores. La letra chica es el precio.</p>
+
+  <div class="byline">
+    <span>Por <b>Redacción Con Interés</b></span><span class="dot"></span>
+    <span>24 de julio de 2026</span><span class="dot"></span>
+    <span>Lectura: 30 seg &rarr; 11 min</span>
+  </div>
+
+  <!-- Layer selector -->
+  <div class="layers">
+    <div class="lbl">Elegí cuánto querés bajar &darr;</div>
+    <div class="layer-btns">
+      <button data-go="b1" class="active">El número <span class="t">30s</span></button>
+      <button data-go="b2">La noticia <span class="t">1m</span></button>
+      <button data-go="b3">En contexto <span class="t">3m</span></button>
+      <button data-go="b4">Cómo lo sabemos <span class="t">2m</span></button>
+      <button data-go="b5">Por qué importa <span class="t">3m</span></button>
+      <button data-go="b6">Más profundo <span class="t">+</span></button>
+    </div>
+  </div>
+
+  <!-- ① EL NÚMERO -->
+  <div class="block" id="b1">
+    <div class="hero-num">
+      <div class="big">+45,1<span class="u"> %</span></div>
+      <div class="cap">Es lo que creció la producción de <b>carbonato de litio</b> en mayo de 2026 frente a mayo de 2025 (INDEC, Índice de Producción Industrial Minero). Ese mes se produjeron <b>11.562 toneladas</b>; en el acumulado enero-mayo, el litio sube <b>47,5%</b>.</div>
+      <div class="sparkrow">
+        <div class="sr"><span class="v up">+47,5%</span><span class="k">litio, acumulado ene–may 2026</span></div>
+        <div class="sr"><span class="v up">+9,2%</span><span class="k">índice minero total (i.a., mayo)</span></div>
+        <div class="sr"><span class="v">116.000 t</span><span class="k">producción de litio 2025 (CAEM)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ② LA NOTICIA -->
+  <div class="block prose" id="b2">
+    <div class="block-tag"><span class="num">2</span><span class="txt">La noticia</span><span class="rule"></span></div>
+    <p class="lead">La minería argentina viene marcando un dato fuerte detrás de otro, y en mayo volvió a hacerlo. El Índice de Producción Industrial Minero del INDEC subió <b class="hl">9,2% interanual</b> y quedó, según el propio organismo, por encima de todos los niveles registrados desde que la serie arranca, en 2017. El motor de ese máximo tiene nombre: el litio. La producción de carbonato de litio fue un 45,1% mayor que en mayo del año pasado, muy por encima del petróleo (+19,2%) y del gas (+5,5%).</p>
+    <p>No es un fogonazo de un mes. En lo que va de 2026 el litio acumula un alza del 47,5% frente al mismo tramo de 2025, y esa aceleración tiene una explicación física antes que estadística: son plantas nuevas que entraron en operación en los últimos dos años y que, recién ahora, empiezan a producir cerca de su capacidad de diseño. La pregunta que ordena esta nota: <b>¿es un salto estructural —Argentina que se sube en serio al negocio global del litio— o una foto que depende de un precio internacional que ya se dio vuelta una vez?</b></p>
+  </div>
+
+  <!-- ③ EN CONTEXTO -->
+  <div class="block prose" id="b3">
+    <div class="block-tag"><span class="num">3</span><span class="txt">El dato en contexto</span><span class="rule"></span></div>
+    <p>Un 45% impresiona, pero se entiende mejor mirando de dónde viene el litio argentino. Hace una década, el país producía cantidades marginales del llamado "oro blanco": la capacidad instalada rondaba las <b>35.500 toneladas</b> anuales de carbonato equivalente. Con la puesta en marcha de proyectos en Jujuy, Salta y Catamarca, esa capacidad trepó a unas <b>186.000 toneladas</b> en 2025, según la hoja de ruta de la Secretaría de Minería. Más de cinco veces en diez años. El salto de producción de este año es, sobre todo, esa capacidad que empieza a llenarse.</p>
+
+    <figure>
+      <div class="fig-head">
+        <div class="fig-kick">Antes / Después · Capacidad instalada de litio</div>
+        <h3>De 35.500 a 186.000 toneladas</h3>
+        <p class="fig-sub">Capacidad instalada de producción de carbonato de litio equivalente (toneladas/año).</p>
+      </div>
+      <svg id="chartCap" class="chart-svg" viewBox="0 0 680 190" role="img" aria-label="Gráfico de barras: la capacidad instalada de producción de litio pasó de unas 35.500 toneladas anuales hace una década a unas 186.000 toneladas en 2025, más de cinco veces."></svg>
+      <figcaption><b>Fuente:</b> Secretaría de Minería de la Nación (hoja de ruta del litio a 10 años). <b>Nota:</b> capacidad instalada, no producción efectiva; en 2025 la producción real fue de unas 116.000 t (CAEM). <b>Magnitud:</b> ≈5,2 veces en una década.</figcaption>
+    </figure>
+
+    <p>Ese despliegue cambió el lugar de Argentina en el mapa. Hoy es el <b>cuarto productor mundial</b> de litio, detrás de Australia, Chile y China. Y la proyección oficial es todavía más ambiciosa: la consultora Rystad Energy, citada por la Secretaría de Minería, calcula que el país podría superar a Chile hacia 2029 y quedar como <b>segundo productor mundial</b> —solo detrás de Australia— alrededor de 2030. Son proyecciones, no hechos: dependen de que la inversión y los precios acompañen.</p>
+
+    <div class="tiles">
+      <div class="tile good"><div class="v">+45,1%</div><div class="k">Litio, producción mayo 2026 (i.a.)</div></div>
+      <div class="tile neu"><div class="v">+19,2%</div><div class="k">Petróleo crudo, mayo 2026 (i.a.)</div></div>
+      <div class="tile neu"><div class="v">4º</div><div class="k">Puesto de Argentina como productor mundial de litio</div></div>
+    </div>
+  </div>
+
+  <!-- ④ CÓMO LO SABEMOS -->
+  <div class="block" id="b4">
+    <div class="block-tag"><span class="num">4</span><span class="txt">Cómo lo sabemos</span><span class="rule"></span></div>
+    <div class="cocina">
+      <h4>&#9651; La cocina del dato</h4>
+      <p>La cifra ancla nace del <b>INDEC</b>: su Índice de Producción Industrial Minero (informe del 7 de julio de 2026) mide el volumen físico producido de cada mineral. Ahí figura la producción de carbonato de litio de mayo —11.561,7 toneladas— y su variación interanual de 45,1%. No es una estimación de mercado: es el conteo oficial de toneladas.</p>
+      <p>Que el salto sea real y no un efecto estadístico se comprueba con una fuente independiente: los <b>datos de las propias empresas</b>. La planta Centenario-Ratones (Eramet, Salta), de 24.000 toneladas de capacidad, operaba hacia mediados de 2026 a cerca del 80% tras completar su puesta en marcha, y produjo 3.720 toneladas solo en el primer trimestre. A eso se suman los proyectos de Ganfeng, Río Tinto y Exar. La <b>Cámara Argentina de Empresas Mineras (CAEM)</b> ubicó la producción total de 2025 en unas 116.000 toneladas. Dos caminos distintos —el índice del INDEC y la suma de plantas— apuntan a lo mismo: más toneladas.</p>
+      <p>Un matiz honesto: parte del 45% se explica por una <b>base de comparación baja</b>. En mayo de 2025 varias plantas todavía estaban arrancando; comparar contra ese piso agranda el porcentaje. La tendencia de fondo es igual de clara, pero el número exacto conviene leerlo con esa aclaración.</p>
+      <div class="meta">
+        <span><b>Fuente</b> INDEC · Sec. Minería · CAEM · Eramet</span>
+        <span><b>Período</b> Mayo 2026</span>
+        <span><b>Mineral</b> Carbonato de litio</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⑤ POR QUÉ IMPORTA -->
+  <div class="block prose" id="b5">
+    <div class="block-tag"><span class="num">5</span><span class="txt">Por qué importa</span><span class="rule"></span></div>
+    <p>Importa por lo que el litio representa para dos cuentas argentinas. Una es la <b>cuenta de dólares</b>: el litio es hoy uno de los complejos exportadores que más rápido crece, y en un año de reservas ajustadas cada tonelada que sale suma divisas. La otra es la <b>cuenta del mapa</b>: la producción se concentra en la Puna —Jujuy, Salta y Catamarca—, provincias del norte donde una mina o una planta pesa muchísimo en el empleo y en la actividad local.</p>
+
+    <figure>
+      <div class="fig-head">
+        <div class="fig-kick">Producción · Carbonato de litio</div>
+        <h3>Más toneladas en la misma foto de mayo</h3>
+        <p class="fig-sub">Producción de carbonato de litio, mes de mayo. 2025 vs. 2026 (toneladas).</p>
+      </div>
+      <svg id="chartProd" class="chart-svg" viewBox="0 0 680 190" role="img" aria-label="Gráfico de barras: la producción de carbonato de litio de mayo pasó de unas 7.969 toneladas en 2025 a 11.562 toneladas en 2026, un alza del 45,1%."></svg>
+      <figcaption><b>Fuente:</b> INDEC, Índice de Producción Industrial Minero (mayo 2026). <b>Nota:</b> el volumen de mayo 2025 se reconstruye a partir de la variación interanual informada (+45,1%). <b>Magnitud:</b> ≈3.590 toneladas más en un mismo mes.</figcaption>
+    </figure>
+
+    <div class="pull">"El dato es real: se producen muchas más toneladas de litio. La duda no es esa, sino cuánto de esa tonelada extra se convierte en dólares cuando el precio internacional aprieta."</div>
+
+    <div class="afecta">
+      <h4>&#9992; ¿Cómo te afecta?</h4>
+      <p><b>Si vivís o trabajás en el norte:</b> ahí está el efecto más tangible. Las plantas de la Puna mueven empleo directo, transporte, servicios y regalías provinciales en Jujuy, Salta y Catamarca. Cuando la producción crece, esa actividad se derrama sobre pueblos donde hay pocas alternativas de trabajo formal.</p>
+      <p><b>Si mirás la macro y el dólar:</b> el litio es divisa nueva que no depende del clima pampeano ni de la soja. En un año en que el país cuenta los dólares de a uno, un complejo que exporta más ayuda —de a poco— a descomprimir la cuenta externa. Ojo: sigue siendo chico frente a la energía o el agro, y buena parte se va como materia prima, no como producto elaborado.</p>
+      <p><b>Si te preguntás por qué tanto ruido con el litio:</b> es el mineral de las baterías de autos eléctricos y de almacenamiento de energía. Argentina no vende litio para el consumo local, pero está parada sobre una de las mayores reservas del mundo justo cuando el planeta electrifica su transporte. De ahí que un dato de producción se lea, también, como una apuesta de largo plazo.</p>
+    </div>
+
+    <div class="miradas">
+      <h4>&#9678; Otras miradas</h4>
+      <p><b>La lectura optimista (Gobierno y sector):</b> es el despegue de una industria que puede llevar a Argentina al podio mundial del litio hacia 2030, con miles de millones de dólares en inversión comprometida bajo el RIGI y capacidad para multiplicar la producción actual.</p>
+      <p><b>La lectura cautelosa (analistas del mercado):</b> el precio del litio se derrumbó desde el pico de 2022 y, aunque rebota en 2026, sigue siendo volátil; una parte del boom es volumen que se paga barato. Y como se exporta sobre todo carbonato sin procesar, el valor agregado —cátodos, celdas, baterías— se sigue produciendo afuera.</p>
+    </div>
+
+    <p>Las dos miradas conviven. El crecimiento de la producción es un hecho duro y de fondo; que se convierta en un negocio grande y estable depende de un precio que Argentina no controla y de cuánto de la cadena logre quedarse en el país. Ese asterisco Con Interés no lo borra.</p>
+  </div>
+
+  <!-- ⑥ MÁS PROFUNDO -->
+  <div class="block" id="b6">
+    <div class="block-tag"><span class="num">6</span><span class="txt">Para ir más profundo</span><span class="rule"></span></div>
+
+    <details class="deep">
+      <summary><span>¿Por qué justo ahora? Plantas nuevas y precio que rebota</span><span class="plus">+</span></summary>
+      <div class="deep-body">
+        <p>El salto de 2026 combina dos cosas. La primera es maduración de inversiones: proyectos que se construyeron entre 2022 y 2024 —Centenario-Ratones de Eramet en Salta, Mariana de Ganfeng, la expansión de Sal de Vida de Río Tinto en Catamarca, Cauchari-Olaroz en Jujuy— recién este año operan cerca de su capacidad. Producir litio de salmuera lleva tiempo: hay que llenar piletas de evaporación y ajustar procesos, y por eso una planta tarda meses o años en llegar a su nivel de diseño.</p>
+        <p>La segunda es el precio. El carbonato de litio llegó a cotizar por encima de los US$70.000-80.000 la tonelada en el pico de 2022 y después se desplomó por sobreoferta global, hundiendo la rentabilidad de muchos proyectos. En 2026 se recuperó con fuerza —más del 80% según referencias del sector— y el precio de exportación argentino promedió unos US$23.816 por tonelada en mayo. Es decir: más toneladas <em>y</em> mejor pagadas que en 2025, aunque todavía lejos de la euforia de hace tres años.</p>
+      </div>
+    </details>
+
+    <details class="deep">
+      <summary><span>El podio mundial, con letra chica</span><span class="plus">+</span></summary>
+      <div class="deep-body">
+        <p>La proyección de que Argentina será el segundo productor mundial hacia 2030 proviene de la consultora Rystad Energy y fue adoptada por la Secretaría de Minería en su hoja de ruta a diez años, que apunta a unas 600.000 toneladas de capacidad hacia 2035. Es una meta, no un dato: otras estimaciones son más conservadoras —la chilena Cochilco calcula alrededor de 415.000 toneladas para el mismo horizonte— y todas dependen de que se concreten inversiones y de que el precio sostenga los proyectos.</p>
+        <p>También conviene precisar el "cuarto puesto" actual. Los rankings varían según la fuente y el año: algunos ubican a Chile tercero y a Argentina cuarta; otros, en plena reorganización del mercado, los ven muy cerca. Lo que no está en discusión es que Argentina es hoy la región de oferta de litio que más rápido crece del mundo, con las mayores reservas medidas.</p>
+      </div>
+    </details>
+
+    <details class="deep">
+      <summary><span>¿Se sostiene? Lo que hay que vigilar</span><span class="plus">+</span></summary>
+      <div class="deep-body">
+        <p><b>A favor:</b> hay capacidad instalada todavía sin llenar (la producción real de 2025, unas 116.000 t, está muy por debajo de las 186.000 t de capacidad), varios proyectos en construcción y reservas geológicas enormes. Si las plantas actuales terminan de llegar a régimen, la producción puede seguir subiendo aun sin obra nueva.</p>
+        <p><b>En contra:</b> el negocio depende de un precio internacional volátil y de una demanda global de baterías que se mueve al ritmo de la adopción de autos eléctricos. Además, exportar carbonato sin procesar deja el mayor valor agregado —y el empleo industrial— fuera del país. <b>Las variables a vigilar:</b> el precio del litio, el ritmo de utilización de las plantas y si aparece industria de valor agregado local. <em>Con Interés va a volver sobre este dato con los próximos informes del INDEC.</em></p>
+      </div>
+    </details>
+  </div>
+
+</article>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="src">
+      <h4>&#9651; Fuentes y transparencia</h4>
+      <ul>
+        <li>› INDEC — <a href="https://www.indec.gob.ar/uploads/informesdeprensa/ipi_minero_07_2641E92C484E.pdf">Índice de producción industrial minero, mayo de 2026 (PDF)</a></li>
+        <li>› El Inversor Energético &amp; Minero (sobre datos del INDEC) — <a href="https://www.elinversorenergetico.com/litio-el-volumen-de-carbonato-se-expandio-un-451-interanual-durante-mayo/">El volumen de carbonato de litio se expandió 45,1% interanual en mayo</a></li>
+        <li>› Buenos Aires Herald (sobre la hoja de ruta de la Secretaría de Minería) — <a href="https://buenosairesherald.com/business/mining/argentinas-new-10-year-lithium-plan-just-dropped">Argentina's new 10-year lithium plan just dropped</a></li>
+        <li>› Infobae — <a href="https://www.infobae.com/economia/2026/05/10/argentina-se-encamina-a-ser-el-segundo-productor-mundial-de-litio-superando-a-chile-y-china/">Argentina se encamina a ser el segundo productor mundial de litio</a></li>
+        <li>› Metalnomist — <a href="https://www.metalnomist.com/2026/07/eramet-argentina-lithium-plant-reaches.html">La planta de Eramet (Centenario-Ratones) alcanza el 80% de su capacidad</a></li>
+        <li>› BAE Negocios — <a href="https://www.baenegocios.com/economia/la-produccion-minera-crecio-9-2-en-mayo-impulsada-por-el-petroleo-y-el-litio-3700/">La producción minera creció 9,2% en mayo impulsada por el petróleo y el litio</a></li>
+      </ul>
+    </div>
+    <div class="foot-brand"><span class="tri">%</span> Con Interés</div>
+    <div style="font-family:var(--mono);font-size:12px;margin-top:8px"><a href="../index.html" style="color:var(--teal-deep);text-decoration:none">Portada</a> · <a href="../como-trabajamos.html" style="color:var(--teal-deep);text-decoration:none">Cómo trabajamos</a></div>
+    <p class="disc">Prototipo editorial. Los datos provienen de fuentes públicas citadas y fueron consolidados el 24/07/2026; las cifras pueden ser revisadas por los organismos emisores. Esta nota informa y contextualiza; no constituye asesoramiento financiero ni recomendación de inversión. Con Interés muestra su método a la vista: cada afirmación, con su número y su fuente.</p>
+  </div>
+</footer>
+
+<div class="tt" id="tt"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+const NS = "http://www.w3.org/2000/svg";
+const C = {teal:"#0E7C86", ink:"#16130F", green:"#2E8B6F", red:"#C0392B", grid:"#E7E1D7", muted:"#6B6560", faint:"#8A847C", amber:"#C4701F"};
+const mk = (n,a={}) => { const e=document.createElementNS(NS,n); for(const k in a) e.setAttribute(k,a[k]); return e; };
+const tt = $("#tt");
+function showTT(html,x,y){ tt.innerHTML=html; tt.style.opacity=1; tt.style.left=(x+14)+"px"; tt.style.top=(y-10)+"px"; }
+function hideTT(){ tt.style.opacity=0; }
+
+/* ---------- BEFORE/AFTER genérico ---------- */
+function beforeAfter(sel, data, unit, delta){
+  const svg=$(sel), W=680,H=190, m={t:20,r:20,b:34,l:20};
+  const iw=W-m.l-m.r, ih=H-m.t-m.b;
+  const maxV=Math.max(...data.map(d=>d[1]))*1.18;
+  const bw=150, cx0=m.l+90, cx1=m.l+90+320;
+  const centers=[cx0,cx1];
+  const baseY=m.t+ih;
+  data.forEach((d,i)=>{
+    const h=(d[1]/maxV)*ih, yy=baseY-h, cx=centers[i];
+    svg.appendChild(mk("rect",{x:cx-bw/2,y:yy,width:bw,height:h,rx:5,fill:d[2]}));
+    const v=mk("text",{x:cx,y:yy-10,"text-anchor":"middle","font-family":"IBM Plex Mono, monospace","font-size":21,"font-weight":600,fill:d[2]});
+    v.textContent=d[3]; svg.appendChild(v);
+    const k=mk("text",{x:cx,y:baseY+22,"text-anchor":"middle","font-family":"IBM Plex Mono, monospace","font-size":12,fill:C.muted});
+    k.textContent=d[0]; svg.appendChild(k);
+  });
+  const ay=m.t+ih/2;
+  svg.appendChild(mk("line",{x1:cx0+bw/2+16,y1:ay,x2:cx1-bw/2-30,y2:ay,stroke:C.amber,"stroke-width":2}));
+  svg.appendChild(mk("path",{d:"M"+(cx1-bw/2-30)+","+(ay-6)+" L"+(cx1-bw/2-18)+","+ay+" L"+(cx1-bw/2-30)+","+(ay+6)+" Z",fill:C.amber}));
+  const at=mk("text",{x:(cx0+cx1)/2,y:ay-14,"text-anchor":"middle","font-family":"IBM Plex Mono, monospace","font-size":13,"font-weight":600,fill:C.amber});
+  at.textContent=delta; svg.appendChild(at);
+}
+
+/* ③ Capacidad instalada de litio (t/año) */
+beforeAfter("#chartCap",
+  [["Hace una década",35500,C.muted,"35.500 t"],["2025",186000,C.green,"186.000 t"]],
+  "t","≈5,2x · +424%");
+
+/* ⑤ Producción de litio en mayo (t) */
+beforeAfter("#chartProd",
+  [["Mayo 2025",7969,C.muted,"≈7.969 t"],["Mayo 2026",11562,C.green,"11.562 t"]],
+  "t","+45,1%");
+
+/* ---------- Layer nav ---------- */
+document.querySelectorAll(".layer-btns button").forEach(b=>{
+  b.addEventListener("click",()=>{
+    document.querySelectorAll(".layer-btns button").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");
+    const el=document.getElementById(b.dataset.go);
+    if(b.dataset.go==="b6"){ const d=el.querySelector("details"); if(d)d.open=true; }
+    el.scrollIntoView({behavior:"smooth",block:"start"});
+  });
+});
+const blocks=[...document.querySelectorAll(".block")];
+const btns=[...document.querySelectorAll(".layer-btns button")];
+window.addEventListener("scroll",()=>{
+  let cur=blocks[0].id;
+  for(const bl of blocks){ if(bl.getBoundingClientRect().top<160) cur=bl.id; }
+  btns.forEach(b=>b.classList.toggle("active",b.dataset.go===cur));
+},{passive:true});
+</script>
+<!-- CI-WIDGETS --><script defer src="../assets/ticker.js?v=5"></script>
+<!-- CI-NOTA --><script defer src="../assets/nota.js?v=2"></script>
+</body>
+</html>

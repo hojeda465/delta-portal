@@ -1,6 +1,6 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-24T12:24:00-03:00",
+  "actualizado": "2026-07-24T14:21:00-03:00",
   "borradores": [
     {
       "id": "2026-07-24-girasol-boom-exportaciones",
@@ -16,6 +16,21 @@
       "verificacion": "verificada",
       "fuentes": 5,
       "lectura": "30 seg → 10 min"
+    },
+    {
+      "id": "2026-07-24-litio-produccion-record",
+      "titulo": "El litio pisa el acelerador: la producción creció 45% en un año y empuja a la minería a su nivel más alto desde 2017",
+      "bajada": "El volumen de carbonato de litio producido en mayo fue 45,1% mayor que un año atrás (INDEC). Es el mineral que más traccionó al índice de producción minera, que tocó su punto más alto desde 2017. Detrás del salto hay plantas nuevas llegando a régimen; la letra chica es el precio.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "+45,1%",
+      "numero_label": "creció la producción de carbonato de litio en mayo 2026 (interanual); el índice minero, en su nivel más alto desde 2017",
+      "fecha": "2026-07-24",
+      "hora": "14:21",
+      "archivo": "articulos/2026-07-24-litio-produccion-record.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 11 min"
     }
   ]
 }
