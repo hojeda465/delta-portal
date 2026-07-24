@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-24T13:30:00-03:00",
-  "borradores": []
+  "actualizado": "2026-07-24T12:24:00-03:00",
+  "borradores": [
+    {
+      "id": "2026-07-24-girasol-boom-exportaciones",
+      "titulo": "El renacer del girasol: las exportaciones se más que duplicaron y tocaron su mayor nivel en dos décadas",
+      "bajada": "El complejo girasolero exportó US$1.674 millones en los primeros cinco meses de 2026, un 126% más que un año atrás (INDEC). Detrás del salto: una cosecha récord del siglo (6,6 M t) y el hueco que dejó Ucrania en el mercado mundial. Un cultivo relegado vuelve a dar dólares — con la letra chica a la vista.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$1.674 M",
+      "numero_label": "exportó el complejo girasolero en enero-mayo 2026 (+126% i.a., el mayor nivel en dos décadas)",
+      "fecha": "2026-07-24",
+      "hora": "12:24",
+      "archivo": "articulos/2026-07-24-girasol-boom-exportaciones.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 10 min"
+    }
+  ]
 }
