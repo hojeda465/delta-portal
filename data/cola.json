@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-24T08:22:00-03:00",
-  "borradores": []
+  "actualizado": "2026-07-24T13:30:00-03:00",
+  "borradores": [
+    {
+      "id": "2026-07-24-record-pasajeros-avion",
+      "titulo": "Nunca volaron tantos: 24,57 millones de pasajeros en el semestre, pero el récord lo hizo el vuelo internacional",
+      "bajada": "Entre enero y junio pasaron por los aeropuertos argentinos 24.565.836 pasajeros, la cifra más alta para un semestre desde que hay registros (ANAC). Pero el vuelo internacional creció 14% mientras el de cabotaje se achicó: un récord con un solo motor.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "24,57 M",
+      "numero_label": "pasajeros transportados en el primer semestre de 2026 (récord histórico)",
+      "fecha": "2026-07-24",
+      "hora": "13:30",
+      "archivo": "articulos/2026-07-24-record-pasajeros-avion.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 10 min"
+    }
+  ]
 }

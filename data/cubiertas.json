@@ -490,6 +490,13 @@
       "fecha": "2026-07-24",
       "estado": "publicada",
       "articulo_id": "2026-07-24-deuda-externa-record-321-mil-millones"
+    },
+    {
+      "tema": "tráfico aéreo de pasajeros / récord histórico del 1er semestre 2026 (24.565.836 pasajeros, ANAC)",
+      "angulo": "el semestre marcó el mayor volumen de pasajeros desde que hay registros (+1% vs récord previo de H1 2025, 24.355.308), pero el récord lo empujó solo el vuelo internacional (+14%) mientras el cabotaje se contrajo ~5% por el recorte de oferta de Flybondi; junio cerró en rojo en ambos segmentos. Cifra ancla oficial de ANAC confirmada; superlativo documentado con el valor previo",
+      "fecha": "2026-07-24",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-24-record-pasajeros-avion"
     }
   ]
 }

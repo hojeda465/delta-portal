@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<title>Récord de pasajeros: 24,57 millones volaron en el semestre, pero el motor fue el vuelo internacional — CON INTERÉS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FAF8F4; --ink:#16130F; --ink-soft:#3C3833;
+    --teal:#0E7C86; --teal-deep:#0A5C63; --amber:#C4701F; --amber-bright:#E8833A;
+    --red:#C0392B; --green:#2E8B6F; --muted:#6B6560; --faint:#8A847C;
+    --grid:#E7E1D7; --rule:#DCD6CC; --card:#FFFFFF; --card-edge:#EAE4DA;
+    --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+    --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--sans);line-height:1.65;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  }
+  .wrap{max-width:720px;margin:0 auto;padding:0 22px}
+
+  /* ---------- Cintillo de borrador (se retira al aprobar) ---------- */
+  .draft-ribbon{background:var(--red);color:#fff;font-family:var(--mono);font-size:12px;
+    letter-spacing:.05em;text-align:center;padding:8px 12px;font-weight:600}
+  .borrador{background:#FBEEE9;border:1px solid #E4B8AE;border-left:3px solid var(--red);
+    border-radius:10px;padding:14px 18px;margin:18px 0 4px}
+  .borrador-in{font-family:var(--mono);font-size:13px;line-height:1.55;color:#8A3B2E}
+
+  /* ---------- Masthead ---------- */
+  .masthead{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:50}
+  .masthead .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;max-width:960px}
+  .brand{font-family:var(--serif);font-weight:700;font-size:26px;letter-spacing:-.01em;display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--ink)}
+  .brand .tri{color:var(--teal);font-size:22px;transform:translateY(-1px)}
+  .brand .tag{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:8px;margin-left:2px;font-weight:500}
+  .mh-date{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em}
+
+  /* ---------- Article header ---------- */
+  article{padding-top:34px}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-deep);font-weight:600;margin-bottom:16px}
+  .kicker .sep{color:var(--rule);margin:0 8px}
+  .kicker .fmt{color:var(--amber)}
+  h1{font-family:var(--serif);font-weight:700;font-size:40px;line-height:1.12;letter-spacing:-.015em;margin:0 0 18px}
+  .standfirst{font-family:var(--serif);font-size:20px;line-height:1.5;color:var(--ink-soft);font-weight:400;margin:0 0 24px}
+  .byline{display:flex;align-items:center;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:12px 0;margin-bottom:8px}
+  .byline b{color:var(--ink);font-weight:600}
+  .byline .dot{width:3px;height:3px;border-radius:50%;background:var(--faint)}
+
+  /* ---------- Layer selector ---------- */
+  .layers{position:sticky;top:56px;background:var(--paper);z-index:40;padding:14px 0 12px;border-bottom:1px solid var(--rule);margin-bottom:8px}
+  .layers .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}
+  .layer-btns{display:flex;gap:8px;flex-wrap:wrap}
+  .layer-btns button{font-family:var(--mono);font-size:12px;border:1px solid var(--rule);background:var(--card);color:var(--ink-soft);padding:7px 13px;border-radius:999px;cursor:pointer;transition:.15s;font-weight:500}
+  .layer-btns button:hover{border-color:var(--teal)}
+  .layer-btns button.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .layer-btns button .t{color:var(--faint);margin-left:6px}
+  .layer-btns button.active .t{color:#B9B3A9}
+
+  /* ---------- Body prose ---------- */
+  .prose p{font-size:18px;line-height:1.7;margin:0 0 22px}
+  .prose p.lead:first-letter{font-family:var(--serif);float:left;font-size:60px;line-height:.82;font-weight:700;padding:4px 10px 0 0;color:var(--teal)}
+  .block{scroll-margin-top:120px;margin:0 0 10px}
+  .block-tag{display:flex;align-items:center;gap:10px;margin:44px 0 20px}
+  .block-tag .num{font-family:var(--mono);font-weight:600;font-size:13px;color:var(--paper);background:var(--teal);width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+  .block-tag .txt{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .block-tag .rule{flex:1;height:1px;background:var(--rule)}
+
+  /* ---------- The number (hero) ---------- */
+  .hero-num{background:var(--ink);color:var(--paper);border-radius:14px;padding:34px 32px;margin:6px 0 30px;position:relative;overflow:hidden}
+  .hero-num .big{font-family:var(--mono);font-weight:600;font-size:78px;line-height:1;letter-spacing:-.03em;color:#fff}
+  .hero-num .big .u{font-size:38px;color:var(--teal);margin-left:2px}
+  .hero-num .cap{font-family:var(--sans);font-size:15px;color:#CFC9BF;margin-top:12px;max-width:400px;line-height:1.5}
+  .hero-num .cap b{color:#fff;font-weight:600}
+  .hero-num .sparkrow{display:flex;gap:26px;margin-top:22px;padding-top:20px;border-top:1px solid #2E2A25;flex-wrap:wrap}
+  .hero-num .sr{display:flex;flex-direction:column}
+  .hero-num .sr .v{font-family:var(--mono);font-size:22px;font-weight:600;color:#fff}
+  .hero-num .sr .v.up{color:var(--amber-bright)}
+  .hero-num .sr .v.dn{color:#4FC0A4}
+  .hero-num .sr .k{font-size:11px;color:#A39D93;margin-top:3px;letter-spacing:.02em}
+
+  /* ---------- Stat tiles ---------- */
+  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 26px}
+  .tile{background:var(--card);border:1px solid var(--card-edge);border-radius:12px;padding:16px 15px}
+  .tile .v{font-family:var(--mono);font-size:30px;font-weight:600;letter-spacing:-.02em;line-height:1}
+  .tile .k{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.4}
+  .tile.good .v{color:var(--green)} .tile.bad .v{color:var(--red)} .tile.neu .v{color:var(--ink)}
+  .arrow{display:flex;align-items:center;justify-content:center;color:var(--faint);font-size:20px}
+
+  /* ---------- Figure / chart ---------- */
+  figure{margin:10px 0 30px;background:var(--card);border:1px solid var(--card-edge);border-radius:14px;padding:22px 20px 16px}
+  figure .fig-head{margin-bottom:16px}
+  figure .fig-kick{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-deep);font-weight:600;margin-bottom:6px}
+  figure h3{font-family:var(--serif);font-size:20px;font-weight:600;margin:0 0 4px;line-height:1.25}
+  figure .fig-sub{font-size:13px;color:var(--muted);margin:0}
+  figure figcaption{font-size:12px;color:var(--faint);margin-top:14px;padding-top:12px;border-top:1px solid var(--grid);line-height:1.5;font-family:var(--mono)}
+  figure figcaption b{color:var(--muted);font-weight:600}
+  .chart-svg{width:100%;height:auto;display:block;overflow:visible}
+  .tt{position:fixed;pointer-events:none;background:var(--ink);color:#fff;font-family:var(--mono);font-size:12px;padding:7px 10px;border-radius:7px;opacity:0;transition:opacity .1s;z-index:100;white-space:nowrap;line-height:1.5}
+  .tt b{color:var(--teal)}
+
+  /* legend */
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:12px;font-size:12px;color:var(--muted);font-family:var(--mono)}
+  .legend .li{display:flex;align-items:center;gap:6px}
+  .legend .sw{width:11px;height:11px;border-radius:3px;flex:0 0 auto}
+
+  /* ---------- Sources / cocina ---------- */
+  .cocina{background:#F3EFE7;border:1px solid var(--card-edge);border-left:3px solid var(--teal);border-radius:10px;padding:18px 20px;margin:8px 0 26px}
+  .cocina h4{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-deep);margin:0 0 10px;font-weight:600}
+  .cocina p{font-size:15px;line-height:1.6;margin:0 0 10px;color:var(--ink-soft)}
+  .cocina p:last-child{margin-bottom:0}
+  .cocina .meta{display:flex;gap:20px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px dashed var(--rule);font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .cocina .meta span b{color:var(--ink);font-weight:600}
+
+  /* pull */
+  .pull{font-family:var(--serif);font-size:25px;line-height:1.35;font-weight:600;color:var(--teal-deep);border-top:2px solid var(--teal);border-bottom:2px solid var(--teal);padding:20px 0;margin:30px 0}
+
+  /* módulo ¿cómo te afecta? */
+  .afecta{background:var(--card);border:1px solid var(--card-edge);border-radius:12px;padding:20px 22px;margin:24px 0}
+  .afecta h4{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin:0 0 12px;font-weight:600}
+  .afecta p{font-size:16px;line-height:1.6;margin:0 0 12px;color:var(--ink-soft)}
+  .afecta p:last-child{margin-bottom:0}
+  .afecta p b{color:var(--ink);font-weight:600}
+
+  /* deep dive collapsible */
+  .deep{border:1px solid var(--card-edge);border-radius:12px;overflow:hidden;margin:8px 0 20px;background:var(--card)}
+  .deep>summary{list-style:none;cursor:pointer;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;font-family:var(--mono);font-size:13px;font-weight:600;color:var(--ink)}
+  .deep>summary::-webkit-details-marker{display:none}
+  .deep>summary .plus{color:var(--teal);font-size:20px;transition:.2s}
+  .deep[open]>summary .plus{transform:rotate(45deg)}
+  .deep .deep-body{padding:2px 20px 18px}
+  .deep .deep-body p{font-size:16px;line-height:1.65;margin:0 0 16px;color:var(--ink-soft)}
+
+  /* footer */
+  footer{border-top:2px solid var(--ink);margin-top:50px;padding:28px 0 60px}
+  footer .wrap{max-width:720px}
+  footer .src h4{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+  footer .src ul{margin:0;padding:0;list-style:none;font-size:13px;line-height:1.9}
+  footer .src a{color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)}
+  footer .src a:hover{border-color:var(--teal)}
+  footer .foot-brand{font-family:var(--serif);font-weight:700;font-size:18px;margin-top:24px;color:var(--ink)}
+  footer .foot-brand .tri{color:var(--teal)}
+  footer .disc{font-size:12px;color:var(--faint);margin-top:6px;max-width:520px;line-height:1.5}
+
+  b.hl{background:linear-gradient(transparent 62%, #F3D9A8 62%);font-weight:600;padding:0 1px}
+
+  @media(max-width:600px){
+    h1{font-size:30px}.standfirst{font-size:18px}.prose p{font-size:17px}
+    .hero-num .big{font-size:52px}.hero-num{padding:26px 22px}
+    .tiles{grid-template-columns:1fr}.tile{display:flex;align-items:baseline;gap:14px}
+    .tile .k{margin-top:0}.arrow{display:none}
+    .wrap{padding:0 16px}
+  }
+</style>
+</head>
+<body data-palette="#0E7C86,#E8833A,#2E8B6F,#C0392B">
+
+<div class="draft-ribbon">&#9679; BORRADOR &middot; EN REVISIÓN — no publicado. Leé la nota completa antes de aprobar.</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="tri">%</span>Con Interés<span class="tag">La economía, con interés</span></a>
+    <a href="../index.html" class="mh-date" style="text-decoration:none">← Portada</a>
+  </div>
+</header>
+
+<div class="wrap">
+<div class="borrador">
+<div class="borrador-in">Borrador generado por la redacción de agentes y pendiente de aprobación. Leé la nota completa y, si está OK, aprobala respondiendo &laquo;aprobá la nota 2026-07-24-record-pasajeros-avion&raquo;.</div>
+</div>
+<article>
+
+  <div class="kicker">ECONOMÍA <span class="sep">/</span> <span class="fmt">Anatomía de un dato</span></div>
+
+  <h1>Nunca volaron tantos: 24,57 millones de pasajeros en el semestre, pero el récord lo hizo el vuelo internacional</h1>
+
+  <p class="standfirst">Entre enero y junio pasaron por los aeropuertos argentinos 24.565.836 pasajeros, la cifra más alta para un semestre desde que hay registros, según la ANAC. Apenas 1% por encima del récord anterior. Detrás del número redondo hay una economía partida en el aire: el vuelo internacional creció 14% y el de cabotaje se achicó. Esta es la anatomía del dato — con las dos mitades a la vista.</p>
+
+  <div class="byline">
+    <span>Por <b>Redacción Con Interés</b></span><span class="dot"></span>
+    <span>24 de julio de 2026</span><span class="dot"></span>
+    <span>Lectura: 30 seg &rarr; 10 min</span>
+  </div>
+
+  <!-- Layer selector -->
+  <div class="layers">
+    <div class="lbl">Elegí cuánto querés bajar &darr;</div>
+    <div class="layer-btns">
+      <button data-go="b1" class="active">El número <span class="t">30s</span></button>
+      <button data-go="b2">La noticia <span class="t">1m</span></button>
+      <button data-go="b3">En contexto <span class="t">3m</span></button>
+      <button data-go="b4">Cómo lo sabemos <span class="t">2m</span></button>
+      <button data-go="b5">Por qué importa <span class="t">3m</span></button>
+      <button data-go="b6">Más profundo <span class="t">+</span></button>
+    </div>
+  </div>
+
+  <!-- ① EL NÚMERO -->
+  <div class="block" id="b1">
+    <div class="hero-num">
+      <div class="big">24,57<span class="u">M</span></div>
+      <div class="cap">Pasajeros transportados en los aeropuertos argentinos en el <b>primer semestre de 2026</b>, según la ANAC. La <b>cifra más alta para ese período desde que existen registros</b> — pero apenas 1% arriba del récord de 2025.</div>
+      <div class="sparkrow">
+        <div class="sr"><span class="v up">+1%</span><span class="k">vs. récord previo (H1 2025)</span></div>
+        <div class="sr"><span class="v up">+14%</span><span class="k">vuelo internacional (semestre)</span></div>
+        <div class="sr"><span class="v dn">&minus;5%</span><span class="k">vuelo de cabotaje (semestre)</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ② LA NOTICIA -->
+  <div class="block prose" id="b2">
+    <div class="block-tag"><span class="num">2</span><span class="txt">La noticia</span><span class="rule"></span></div>
+    <p class="lead">La Administración Nacional de Aviación Civil (ANAC) informó que en el primer semestre de 2026 volaron <b class="hl">24.565.836 pasajeros</b> por los aeropuertos del país. Es, textualmente, "la cifra más alta para ese período desde que existen registros": un récord histórico para un semestre, que supera en <b>1%</b> al máximo anterior, los 24.355.308 pasajeros de la primera mitad de 2025.</p>
+    <p>El titular es redondo y verdadero. Pero un centímetro debajo aparece una foto menos pareja. El récord no lo empujó el argentino que vuela dentro del país: lo empujó el <b>vuelo internacional</b>, que creció 14% en el semestre, mientras el <b>cabotaje</b> se contrajo alrededor de 5%. Y el mes que cerró el período —junio— terminó, en los dos segmentos, por debajo del año anterior. La pregunta que ordena esta nota: <b>si nunca voló tanta gente, ¿por qué el mercado de vuelos internos se está achicando?</b></p>
+  </div>
+
+  <!-- ③ EN CONTEXTO -->
+  <div class="block prose" id="b3">
+    <div class="block-tag"><span class="num">3</span><span class="txt">El dato en contexto</span><span class="rule"></span></div>
+    <p>Un récord "de 1%" pide mirar la serie para saber si es un salto o una meseta. Y es más lo segundo. Tras el desplome de la pandemia, el tráfico aéreo argentino se recuperó con fuerza hasta 2025 y este semestre apenas le sacó una nariz al año pasado. La montaña ya se subió; ahora se avanza al ras.</p>
+
+    <figure>
+      <div class="fig-head">
+        <div class="fig-kick">Serie · Pasajeros primer semestre</div>
+        <h3>Cuatro semestres, un techo que se aplana</h3>
+        <p class="fig-sub">Pasajeros transportados enero–junio, en millones (ANAC).</p>
+      </div>
+      <svg id="chartBars" class="chart-svg" viewBox="0 0 680 300" role="img" aria-label="Gráfico de barras del total de pasajeros del primer semestre: 21,79 millones en 2023, 21,40 millones en 2024, 24,36 millones en 2025 y 24,57 millones en 2026, el valor más alto de la serie."></svg>
+      <figcaption><b>Fuente:</b> ANAC, comunicado del 15/07/2026. <b>Nota:</b> el salto grande fue 2024→2025 (+14%); entre 2025 y 2026 el crecimiento se redujo a +1%.</figcaption>
+    </figure>
+
+    <p>El gráfico deja ver dos cosas. Primero, que 2026 es efectivamente el semestre más alto de la serie. Segundo, que la gran expansión ya ocurrió el año pasado: el salto 2024→2025 fue de <b>+14%</b>, y el de 2025→2026, de apenas <b>+1%</b>. El récord es real, pero es el techo de una meseta, no el comienzo de una nueva subida.</p>
+
+    <div class="tiles">
+      <div class="tile neu"><div class="v">24,57 M</div><div class="k">Pasajeros H1 2026 (récord)</div></div>
+      <div class="tile neu"><div class="v">193.900</div><div class="k">Movimientos aéreos H1 (+10% vs. 2024)</div></div>
+      <div class="tile neu"><div class="v">3,14 M</div><div class="k">Pasajeros solo en junio 2026</div></div>
+    </div>
+  </div>
+
+  <!-- ④ CÓMO LO SABEMOS -->
+  <div class="block" id="b4">
+    <div class="block-tag"><span class="num">4</span><span class="txt">Cómo lo sabemos</span><span class="rule"></span></div>
+    <div class="cocina">
+      <h4>&#9651; La cocina del dato</h4>
+      <p>El número surge del relevamiento de la <b>Administración Nacional de Aviación Civil (ANAC)</b>, el organismo estatal que registra el movimiento de pasajeros en todos los aeropuertos del país. La ANAC lo difundió en un comunicado oficial el <b>15 de julio de 2026</b> y lo enmarcó como "récord histórico" para un primer semestre.</p>
+      <p>Dos precisiones que un dato de tráfico aéreo siempre necesita. La primera: el total mezcla dos mercados muy distintos —los <b>vuelos de cabotaje</b> (dentro del país) y los <b>internacionales</b>—, que en 2026 se movieron en sentidos opuestos. La segunda: el récord es semestral; el <b>último mes, junio</b>, cerró en baja interanual en los dos segmentos (cabotaje &minus;17%, internacional &minus;3%), una señal de que el envión venía de los primeros meses del año.</p>
+      <div class="meta">
+        <span><b>Fuente</b> ANAC</span>
+        <span><b>Período</b> Ene–Jun 2026</span>
+        <span><b>Publicado</b> 15/07/2026</span>
+        <span><b>Cobertura</b> Aeropuertos del país</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⑤ POR QUÉ IMPORTA -->
+  <div class="block prose" id="b5">
+    <div class="block-tag"><span class="num">5</span><span class="txt">Por qué importa</span><span class="rule"></span></div>
+    <p>Acá está el giro. El mismo dato que se anuncia como récord esconde dos historias que van para lados contrarios. El motor del semestre fue el <b>vuelo internacional</b>; el que quedó en tierra fue el <b>cabotaje</b>.</p>
+
+    <figure>
+      <div class="fig-head">
+        <div class="fig-kick">Divergencia · Variación por segmento</div>
+        <h3>El récord tiene un solo motor</h3>
+        <p class="fig-sub">Variación interanual de pasajeros en el primer semestre 2026, por tipo de vuelo (%).</p>
+      </div>
+      <svg id="chartDiv" class="chart-svg" viewBox="0 0 680 220" role="img" aria-label="Gráfico de barras divergentes: el vuelo internacional creció 14% en el semestre, en verde; el vuelo de cabotaje cayó alrededor de 5%, en rojo."></svg>
+      <div class="legend">
+        <div class="li"><span class="sw" style="background:#2E8B6F"></span>Crece (internacional)</div>
+        <div class="li"><span class="sw" style="background:#C0392B"></span>Cae (cabotaje)</div>
+      </div>
+      <figcaption><b>Fuente:</b> ANAC e informes del sector (Infobae, Sir Chandler), semestre 2026. <b>Lectura:</b> sin el empuje del vuelo internacional, el total no habría marcado récord.</figcaption>
+    </figure>
+
+    <p>¿Por qué se achica el mercado interno mientras el récord total sube? La causa principal no es solo la demanda: es la <b>oferta</b>. La low cost <b>Flybondi</b> recortó fuerte sus vuelos en estos meses —aviones fuera de servicio y problemas operativos que arrastra la compañía—, y menos asientos ofrecidos significan menos pasajeros transportados. Del otro lado, el segmento internacional sumó <b>más rutas y frecuencias</b> (nuevas conexiones como Punta Cana–Rosario o San Pablo–Bariloche) y una demanda firme hacia el exterior.</p>
+
+    <p>El resultado es un mapa aéreo de dos velocidades: crece la conexión con el mundo, se enfría la conexión entre provincias. Y junio ya mostró el desgaste: fue el primer mes del año con los dos segmentos en rojo interanual.</p>
+
+    <div class="pull">"Nunca volaron tantos, pero cada vez más de esos vuelos salen del país. El récord es de la aviación argentina; la parte que se achica es la que une a los argentinos entre sí."</div>
+
+    <div class="afecta">
+      <h4>&#9992; ¿Cómo te afecta?</h4>
+      <p><b>Si viajás por el país:</b> el recorte de la oferta low cost es la razón de fondo del cabotaje en baja. Menos aviones compitiendo suele traducirse en menos opciones de horarios y en pasajes que cuestan más de conseguir baratos, sobre todo en rutas donde Flybondi era el jugador que empujaba los precios hacia abajo.</p>
+      <p><b>Si estás pensando en salir al exterior:</b> ahí está la parte que crece. Más rutas directas y más frecuencias amplían las alternativas y la competencia entre aerolíneas en los vuelos internacionales; el semestre agregó conexiones nuevas desde el interior sin pasar por Buenos Aires.</p>
+      <p><b>Si trabajás en turismo receptivo:</b> el segmento internacional en alza es una oportunidad, pero conviene mirarlo fino: parte del crecimiento son argentinos que salen, no solo extranjeros que llegan. El dato de la ANAC cuenta pasajeros, no si el bolsillo que paga el pasaje entra o sale del país.</p>
+    </div>
+  </div>
+
+  <!-- ⑥ MÁS PROFUNDO -->
+  <div class="block" id="b6">
+    <div class="block-tag"><span class="num">6</span><span class="txt">Para ir más profundo</span><span class="rule"></span></div>
+
+    <details class="deep">
+      <summary><span>El caso Flybondi: por qué una sola empresa mueve el número del cabotaje</span><span class="plus">+</span></summary>
+      <div class="deep-body">
+        <p>El mercado de cabotaje argentino es concentrado: unas pocas aerolíneas explican casi todos los asientos. Cuando una de ellas recorta capacidad, el efecto sobre el total es inmediato. En 2026, la reducción de la oferta de <b>Flybondi</b> —por aviones fuera de servicio y dificultades operativas— fue señalada por analistas del sector como la principal causa de la caída del cabotaje, más que un derrumbe de las ganas de volar de los argentinos.</p>
+        <p>Es una distinción importante: no es lo mismo un mercado que se achica porque la gente no quiere o no puede viajar, que uno que se achica porque hay menos aviones ofreciendo asientos. La demanda potencial puede seguir ahí; lo que falta es quién la transporte. Por eso el dato de pasajeros conviene leerlo junto al de <b>oferta de asientos y frecuencias</b>, no de forma aislada.</p>
+      </div>
+    </details>
+
+    <details class="deep">
+      <summary><span>Cabotaje vs. internacional: dos mercados que no juegan el mismo partido</span><span class="plus">+</span></summary>
+      <div class="deep-body">
+        <p>En junio de 2026, de los 3.144.651 pasajeros del mes, <b>2.044.144 fueron de cabotaje</b> y <b>1.100.507 internacionales</b>: el vuelo interno sigue siendo el más grande en volumen. Pero la dinámica manda al revés que el tamaño. Mientras el cabotaje cayó 17% interanual en junio y alrededor de 5% en el semestre, el internacional creció 14% en el acumulado, aun con un junio levemente negativo (&minus;3%).</p>
+        <p>La ANAC destacó además la <b>conectividad federal</b>: en junio, 168.625 pasajeros volaron directo desde aeropuertos del interior hacia destinos internacionales sin pasar por Buenos Aires, 4% más que en 2025 y 83% más que en 2023. Es la cara luminosa del dato: el interior se conecta cada vez más con el mundo sin escalar en Ezeiza o Aeroparque.</p>
+      </div>
+    </details>
+
+    <details class="deep">
+      <summary><span>¿Récord o meseta? La variable a vigilar en el segundo semestre</span><span class="plus">+</span></summary>
+      <div class="deep-body">
+        <p>El primer semestre de 2026 batió el récord, pero por un margen mínimo y con un junio en baja en los dos segmentos. Eso abre la pregunta sobre lo que viene. Si la oferta de cabotaje se normaliza —si Flybondi recompone su flota o aparece otro operador que ocupe el hueco—, el mercado interno podría recuperar terreno en la segunda mitad del año. Si no, el techo actual puede sostenerse solo por el empuje internacional.</p>
+        <p>La <b>variable a vigilar</b> es doble: la evolución de la oferta de asientos de cabotaje (cuántos aviones vuelan, no solo cuántos pasajeros suben) y si la demanda hacia el exterior mantiene el ritmo. <em>Con Interés va a volver sobre este dato cuando la ANAC publique el acumulado a septiembre, para ver si el récord del semestre fue un piso nuevo o un pico aislado.</em></p>
+      </div>
+    </details>
+  </div>
+
+</article>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="src">
+      <h4>&#9651; Fuentes y transparencia</h4>
+      <ul>
+        <li>› ANAC / Argentina.gob.ar — <a href="https://www.argentina.gob.ar/noticias/primer-semestre-record-historico-en-pasajeros-en-los-aeropuertos-del-pais">Primer semestre récord histórico en pasajeros en los aeropuertos del país (15/07/2026)</a></li>
+        <li>› Infobae — <a href="https://www.infobae.com/economia/2026/07/15/pese-a-la-caida-de-los-vuelos-de-cabotaje-el-sector-aerocomercial-alcanzo-un-record-historico-de-pasajeros-en-el-primer-semestre/">Pese a la caída de los vuelos de cabotaje, el sector aerocomercial alcanzó un récord histórico</a></li>
+        <li>› La Nación / Los Andes — <a href="https://www.losandes.com.ar/economia/record-historico-mas-245-millones-pasajeros-volaron-argentina-el-primer-semestre-n5998616">Récord histórico: más de 24,5 millones de pasajeros en el primer semestre</a></li>
+        <li>› Sir Chandler — <a href="https://www.sirchandler.com.ar/2026/07/primer-semestre-con-record-de-pasajeros-en-argentina-pero-con-junio-en-rojo/">Primer semestre con récord de pasajeros, pero con junio en rojo</a></li>
+        <li>› Noticias Argentinas — <a href="https://noticiasargentinas.com/economia/mas-de-24-5-millones-de-pasajeros-volaron-en-argentina-en-el-primer-semestre-_a6a579546222a027f5fb2ddba">Más de 24,5 millones de pasajeros volaron en Argentina en el primer semestre</a></li>
+      </ul>
+    </div>
+    <div class="foot-brand"><span class="tri">%</span> Con Interés</div>
+    <div style="font-family:var(--mono);font-size:12px;margin-top:8px"><a href="../index.html" style="color:var(--teal-deep);text-decoration:none">Portada</a> · <a href="../como-trabajamos.html" style="color:var(--teal-deep);text-decoration:none">Cómo trabajamos</a></div>
+    <p class="disc">Prototipo editorial. Los datos provienen de fuentes públicas citadas y fueron consolidados el 24/07/2026; las cifras pueden ser revisadas por el organismo emisor. Con Interés muestra su método a la vista: cada afirmación, con su número y su fuente. Esto no es asesoramiento financiero.</p>
+  </div>
+</footer>
+
+<div class="tt" id="tt"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+const NS = "http://www.w3.org/2000/svg";
+const C = {teal:"#0E7C86", ink:"#16130F", green:"#2E8B6F", red:"#C0392B", grid:"#E7E1D7", muted:"#6B6560", faint:"#8A847C", amber:"#C4701F"};
+const mk = (n,a={}) => { const e=document.createElementNS(NS,n); for(const k in a) e.setAttribute(k,a[k]); return e; };
+const tt = $("#tt");
+function showTT(html,x,y){ tt.innerHTML=html; tt.style.opacity=1; tt.style.left=(x+14)+"px"; tt.style.top=(y-10)+"px"; }
+function hideTT(){ tt.style.opacity=0; }
+
+/* ---------- BAR CHART: pasajeros por semestre ---------- */
+(function(){
+  const data=[
+    ["2023",21.79],["2024",21.40],["2025",24.36],["2026",24.57]
+  ];
+  const svg=$("#chartBars"), W=680,H=300, m={t:24,r:20,b:44,l:44};
+  const iw=W-m.l-m.r, ih=H-m.t-m.b;
+  const maxY=28, minY=0;
+  const y=v=> m.t + ih - ((v-minY)/(maxY-minY))*ih;
+  const bw=78, gap=(iw-data.length*bw)/(data.length-1);
+  // gridlines
+  for(let g=0; g<=28; g+=7){
+    const gy=y(g);
+    svg.appendChild(mk("line",{x1:m.l,y1:gy,x2:W-m.r,y2:gy,stroke:C.grid,"stroke-width":1}));
+    const lab=mk("text",{x:m.l-8,y:gy+4,"text-anchor":"end","font-family":"IBM Plex Mono, monospace","font-size":11,fill:C.faint});
+    lab.textContent=g+"M"; svg.appendChild(lab);
+  }
+  data.forEach((d,i)=>{
+    const xx=m.l+i*(bw+gap), yy=y(d[1]), h=(m.t+ih)-yy;
+    const isRec=i===data.length-1;
+    const rect=mk("rect",{x:xx,y:yy,width:bw,height:h,rx:5,fill:isRec?C.teal:"#B9CBC9"});
+    svg.appendChild(rect);
+    const v=mk("text",{x:xx+bw/2,y:yy-10,"text-anchor":"middle","font-family":"IBM Plex Mono, monospace","font-size":15,"font-weight":600,fill:isRec?C.teal:C.muted});
+    v.textContent=String(d[1]).replace(".",",")+"M"; svg.appendChild(v);
+    const k=mk("text",{x:xx+bw/2,y:m.t+ih+24,"text-anchor":"middle","font-family":"IBM Plex Mono, monospace","font-size":12,fill:C.muted});
+    k.textContent=d[0]; svg.appendChild(k);
+    rect.style.cursor="pointer";
+    rect.addEventListener("mousemove",e=>{rect.setAttribute("opacity",.82);
+      showTT("<b>H1 "+d[0]+"</b> · "+String(d[1]).replace(".",",")+" M pasajeros",e.clientX,e.clientY);});
+    rect.addEventListener("mouseleave",()=>{rect.setAttribute("opacity",1);hideTT();});
+  });
+  // etiqueta récord
+  const lastx=m.l+(data.length-1)*(bw+gap)+bw/2;
+  const rl=mk("text",{x:lastx,y:m.t-8,"text-anchor":"middle","font-family":"IBM Plex Mono, monospace","font-size":11,"font-weight":600,fill:C.teal});
+  rl.textContent="RÉCORD"; svg.appendChild(rl);
+})();
+
+/* ---------- DIVERGING BARS: variación por segmento ---------- */
+(function(){
+  const data=[
+    ["Vuelo internacional",14],["Vuelo de cabotaje",-5]
+  ];
+  const svg=$("#chartDiv"), W=680,H=220, m={t:18,r:30,b:24,l:170};
+  const iw=W-m.l-m.r, ih=H-m.t-m.b;
+  const maxV=18, minV=-10;
+  const zero = m.l + (0-minV)/(maxV-minV)*iw;
+  const bx=v=> m.l + (v-minV)/(maxV-minV)*iw;
+  const bh=44, gap=(ih-data.length*bh)/(data.length-1);
+  svg.appendChild(mk("line",{x1:zero,y1:m.t-2,x2:zero,y2:m.t+ih,stroke:C.muted,"stroke-width":1.5}));
+  data.forEach((d,i)=>{
+    const yy=m.t+i*(bh+gap);
+    const pos=d[1]>=0;
+    const x1=pos?zero:bx(d[1]), x2=pos?bx(d[1]):zero;
+    const w=Math.max(2,x2-x1);
+    const rect=mk("rect",{x:x1,y:yy,width:w,height:bh,rx:5,fill:pos?C.green:C.red});
+    svg.appendChild(rect);
+    const cl=mk("text",{x:m.l-14,y:yy+bh/2+5,"text-anchor":"end","font-family":"Inter, sans-serif","font-size":14,fill:C.ink});
+    cl.textContent=d[0]; svg.appendChild(cl);
+    const vlx = pos ? x2+10 : x1-10;
+    const vl=mk("text",{x:vlx,y:yy+bh/2+5,"text-anchor":pos?"start":"end","font-family":"IBM Plex Mono, monospace","font-size":16,"font-weight":600,fill:pos?C.green:C.red});
+    vl.textContent=(pos?"+":"")+String(d[1]).replace(".",",")+"%"; svg.appendChild(vl);
+    rect.style.cursor="pointer";
+    rect.addEventListener("mousemove",e=>{rect.setAttribute("opacity",.82);
+      showTT("<b>"+d[0]+"</b> · "+(pos?"+":"")+String(d[1]).replace(".",",")+"% i.a. (semestre)",e.clientX,e.clientY);});
+    rect.addEventListener("mouseleave",()=>{rect.setAttribute("opacity",1);hideTT();});
+  });
+  const note=mk("text",{x:zero,y:m.t+ih+18,"text-anchor":"middle","font-family":"IBM Plex Mono, monospace","font-size":10,fill:C.faint});
+  note.textContent="0%"; svg.appendChild(note);
+})();
+
+/* ---------- Layer nav ---------- */
+document.querySelectorAll(".layer-btns button").forEach(b=>{
+  b.addEventListener("click",()=>{
+    document.querySelectorAll(".layer-btns button").forEach(x=>x.classList.remove("active"));
+    b.classList.add("active");
+    const el=document.getElementById(b.dataset.go);
+    if(b.dataset.go==="b6"){ const d=el.querySelector("details"); if(d)d.open=true; }
+    el.scrollIntoView({behavior:"smooth",block:"start"});
+  });
+});
+// highlight active on scroll
+const blocks=[...document.querySelectorAll(".block")];
+const btns=[...document.querySelectorAll(".layer-btns button")];
+window.addEventListener("scroll",()=>{
+  let cur=blocks[0].id;
+  for(const bl of blocks){ if(bl.getBoundingClientRect().top<160) cur=bl.id; }
+  btns.forEach(b=>b.classList.toggle("active",b.dataset.go===cur));
+},{passive:true});
+</script>
+<!-- CI-WIDGETS --><script defer src="../assets/ticker.js?v=5"></script>
+<!-- CI-NOTA --><script defer src="../assets/nota.js?v=2"></script>
+</body>
+</html>
