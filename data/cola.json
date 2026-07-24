@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-23T23:40:00+00:00",
-  "borradores": []
+  "actualizado": "2026-07-24T08:22:00-03:00",
+  "borradores": [
+    {
+      "id": "2026-07-24-deuda-externa-record-321-mil-millones",
+      "titulo": "La deuda externa marcó un nuevo máximo: US$321.783 millones, y dos de cada tres dólares los debe el Estado",
+      "bajada": "Al 31 de marzo la deuda externa bruta sumó US$321.783 millones, según el INDEC: el mayor stock de la serie y US$43.710 millones más que un año atrás. Medida contra el PBI algunos la ven bajar; medida en dólares, no para de subir. Las dos lecturas del dato.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$321.783 M",
+      "numero_label": "deuda externa bruta al 31/03/2026 (INDEC), el mayor stock de la serie",
+      "fecha": "2026-07-24",
+      "hora": "08:22",
+      "archivo": "articulos/2026-07-24-deuda-externa-record-321-mil-millones.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 11 min"
+    }
+  ]
 }

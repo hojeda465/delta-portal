@@ -1,14 +1,14 @@
 {
   "descripcion": "La pregunta del día: la redacción la renueva una vez por día, derivada de la nota principal. Ver NEWSROOM.md.",
-  "fecha": "2026-07-22",
-  "pregunta": "El PBI argentino creció 2,3% interanual en el primer trimestre, pero la inversión se derrumbó 11,6%. ¿Por qué esa combinación preocupa a los economistas?",
+  "fecha": "2026-07-24",
+  "pregunta": "En julio de 2026 el dólar blue tocó un récord nominal de $1.555, pero varios economistas dijeron que, aun así, estaba 'barato'. ¿Cómo puede un precio ser récord y barato a la vez?",
   "opciones": [
-    "Porque sin inversión, el crecimiento de hoy no genera la capacidad de producir (y de crear empleo) de mañana",
-    "Porque la caída de la inversión hace subir automáticamente la inflación del mes siguiente",
-    "Porque el PBI solo puede crecer si la inversión crece al mismo tiempo, así que el dato debe estar mal medido"
+    "Porque 'récord nominal' mira solo el número en pesos; ajustado por la inflación acumulada, ese dólar compra menos que en picos anteriores",
+    "Porque el dólar blue es ilegal y su precio no cuenta para las mediciones oficiales de la economía",
+    "Porque los economistas hablaban del dólar oficial, que siempre es más barato que el blue"
   ],
   "correcta": 0,
-  "explicacion": "La inversión (máquinas, obras, equipos) es la que amplía la capacidad de producir en el futuro. Una economía puede crecer un tiempo usando la capacidad que ya tiene —como ahora, empujada por agro, minería y finanzas—, pero si la inversión cae 11,6%, ese motor se apaga: el crecimiento de hoy no se convierte en producción ni empleo de mañana. No hay relación automática con la inflación, y ambos datos pueden convivir sin error de medición.",
-  "nota": "articulos/2026-07-22-pbi-crece-inversion-cae.html",
+  "explicacion": "Un precio 'récord' en pesos no dice nada por sí solo si al lado corrió la inflación. Para saber si el dólar está caro o barato hay que medirlo en términos reales: cuántos bienes y salarios hacen falta para comprarlo. Como los precios y los sueldos en pesos subieron mucho más que el dólar, ese $1.555 'récord' representa menos poder de compra que picos anteriores: es nominalmente el más alto y, a la vez, real­mente barato. No tiene que ver con que sea legal o no, ni con el dólar oficial.",
+  "nota": "articulos/2026-07-23-brecha-cambiaria-dolar-blue.html",
   "leccion": ""
 }

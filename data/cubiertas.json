@@ -483,6 +483,13 @@
       "fecha": "2026-07-23",
       "estado": "publicada",
       "articulo_id": "2026-07-23-prepagas-cobertura-salud"
+    },
+    {
+      "tema": "deuda externa bruta / nuevo máximo de la serie del INDEC: US$321.783 M al 31/03/2026 (+15,7% i.a.)",
+      "angulo": "el stock de deuda externa bruta tocó su mayor nivel de la serie (US$321.783 M, valor nominal residual), +US$43.710 M en un año y +US$2.261 M en el trimestre; el 65% lo debe el sector público (Gobierno US$174.579 M + BCRA US$34.753 M). Las dos lecturas: medida contra el PBI habría bajado a ~46,9% (según Ámbito), pero en dólares no para de subir (Chequeado). Cifra ancla oficial del INDEC confirmada por doble fuente independiente; el % del PBI se presenta atribuido, sin superlativo propio. Ángulo distinto del déficit de cuenta corriente (2026-07-23) del mismo informe y de la deuda pública total (2026-07-20, Finanzas)",
+      "fecha": "2026-07-24",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-24-deuda-externa-record-321-mil-millones"
     }
   ]
 }
