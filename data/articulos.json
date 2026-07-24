@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-23T23:29:44+00:00",
+    "actualizado": "2026-07-24T11:43:43+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-24-deuda-externa-record-321-mil-millones",
+      "titulo": "La deuda externa marcó un nuevo máximo: US$321.783 millones, y dos de cada tres dólares los debe el Estado",
+      "bajada": "Al 31 de marzo la deuda externa bruta sumó US$321.783 millones, según el INDEC: el mayor stock de la serie y US$43.710 millones más que un año atrás. Medida contra el PBI algunos la ven bajar; medida en dólares, no para de subir. Las dos lecturas del dato.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$321.783 M",
+      "numero_label": "deuda externa bruta al 31/03/2026 (INDEC), el mayor stock de la serie",
+      "fecha": "2026-07-24",
+      "hora": "08:22",
+      "archivo": "articulos/2026-07-24-deuda-externa-record-321-mil-millones.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 11 min"
+    },
     {
       "id": "2026-07-23-prepagas-cobertura-salud",
       "titulo": "Las prepagas subieron 417% en dos años y 742.000 personas se quedaron sin cobertura privada",
