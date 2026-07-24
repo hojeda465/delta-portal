@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-07-24T11:43:43+00:00",
+    "actualizado": "2026-07-24T13:47:43+00:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-07-24-record-pasajeros-avion",
+      "titulo": "Nunca volaron tantos: 24,57 millones de pasajeros en el semestre, pero el récord lo hizo el vuelo internacional",
+      "bajada": "Entre enero y junio pasaron por los aeropuertos argentinos 24.565.836 pasajeros, la cifra más alta para un semestre desde que hay registros (ANAC). Pero el vuelo internacional creció 14% mientras el de cabotaje se achicó: un récord con un solo motor.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "24,57 M",
+      "numero_label": "pasajeros transportados en el primer semestre de 2026 (récord histórico)",
+      "fecha": "2026-07-24",
+      "hora": "13:30",
+      "archivo": "articulos/2026-07-24-record-pasajeros-avion.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-07-24-deuda-externa-record-321-mil-millones",
       "titulo": "La deuda externa marcó un nuevo máximo: US$321.783 millones, y dos de cada tres dólares los debe el Estado",
