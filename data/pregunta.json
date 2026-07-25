@@ -1,14 +1,14 @@
 {
   "descripcion": "La pregunta del día: la redacción la renueva una vez por día, derivada de la nota principal. Ver NEWSROOM.md.",
-  "fecha": "2026-07-24",
-  "pregunta": "En julio de 2026 el dólar blue tocó un récord nominal de $1.555, pero varios economistas dijeron que, aun así, estaba 'barato'. ¿Cómo puede un precio ser récord y barato a la vez?",
+  "fecha": "2026-07-25",
+  "pregunta": "En marzo de 2026 la deuda externa bruta de la Argentina tocó un récord de US$321.783 millones. ¿Qué mide exactamente ese número?",
   "opciones": [
-    "Porque 'récord nominal' mira solo el número en pesos; ajustado por la inflación acumulada, ese dólar compra menos que en picos anteriores",
-    "Porque el dólar blue es ilegal y su precio no cuenta para las mediciones oficiales de la economía",
-    "Porque los economistas hablaban del dólar oficial, que siempre es más barato que el blue"
+    "Todo lo que le deben al resto del mundo tanto el Estado como las empresas, los bancos y las familias del país",
+    "Solo la deuda del Gobierno nacional con el FMI y otros organismos internacionales",
+    "La cantidad de dólares que el Banco Central guarda en sus reservas"
   ],
   "correcta": 0,
-  "explicacion": "Un precio 'récord' en pesos no dice nada por sí solo si al lado corrió la inflación. Para saber si el dólar está caro o barato hay que medirlo en términos reales: cuántos bienes y salarios hacen falta para comprarlo. Como los precios y los sueldos en pesos subieron mucho más que el dólar, ese $1.555 'récord' representa menos poder de compra que picos anteriores: es nominalmente el más alto y, a la vez, real­mente barato. No tiene que ver con que sea legal o no, ni con el dólar oficial.",
-  "nota": "articulos/2026-07-23-brecha-cambiaria-dolar-blue.html",
+  "explicacion": "La deuda externa bruta suma TODO lo que los residentes de un país —sector público y privado— le deben a acreedores del exterior, en cualquier moneda. No es lo mismo que la deuda pública (que también incluye lo que el Estado debe dentro del país) ni que la deuda con el FMI (que es solo una parte). Y es lo opuesto a las reservas: las reservas son activos del Banco Central, no deudas. Por eso una empresa que toma un préstamo afuera o coloca un bono en Nueva York también engrosa la deuda externa, aunque el Estado no deba un peso más.",
+  "nota": "articulos/2026-07-24-deuda-externa-record-321-mil-millones.html",
   "leccion": ""
 }

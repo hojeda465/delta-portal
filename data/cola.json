@@ -1,6 +1,6 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-07-24T16:12:00-03:00",
+  "actualizado": "2026-07-25T08:26:00-03:00",
   "borradores": [
     {
       "id": "2026-07-24-girasol-boom-exportaciones",
@@ -45,6 +45,21 @@
       "archivo": "articulos/2026-07-24-consumo-shoppings-vs-supermercados.html",
       "verificacion": "verificada",
       "fuentes": 6,
+      "lectura": "30 seg → 10 min"
+    },
+    {
+      "id": "2026-07-25-pollo-record-consumo-49-kilos",
+      "titulo": "El pollo, imbatible en la mesa argentina: récord de 49,4 kilos por persona en 2025",
+      "bajada": "El consumo de carne aviar llegó a 49,4 kg por habitante en 2025, el nivel más alto registrado, con una producción récord de 2,47 millones de toneladas (CEPA). Ya venía cabeza a cabeza con la carne vacuna —la superó por primera vez en 2024— y la distancia se afianza. Detrás del cambio de dieta hay una razón fría: un kilo de asado cuesta casi cuatro kilos de pollo.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "49,4 kg",
+      "numero_label": "consumo de carne de pollo por habitante en 2025 — récord histórico (CEPA); supera los 48,1 kg de 2024",
+      "fecha": "2026-07-25",
+      "hora": "08:26",
+      "archivo": "articulos/2026-07-25-pollo-record-consumo-49-kilos.html",
+      "verificacion": "verificada",
+      "fuentes": 8,
       "lectura": "30 seg → 10 min"
     }
   ]
