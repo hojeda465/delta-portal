@@ -6,8 +6,12 @@
 
 - **Reorientado:** 2026-07-19 — de tablero de costos a tablero de crecimiento.
 - **Objetivo de Fase 1:** que el producto guste y escale en lectores, gratis.
-- **Estado:** medición **ACTIVA desde 19/07** — Cloudflare Web Analytics + Google Search Console
-  (sitemap enviado, 12 páginas descubiertas). Los valores siguen en `s/d` hasta juntar base real.
+- **Estado (corregido 27/07):** medición on-site **NO instalada.** Google Search Console
+  **verificado [DATO]** (meta-tag en la portada; captura señales de búsqueda). **Cloudflare
+  Web Analytics NO tiene beacon en ninguna página** y `assets/metrics.js` sigue con
+  `ENDPOINT=null` (nunca activado). Por eso volumen, interés y retención on-site siguen
+  **`s/d`**: el sitio no mide su propio tráfico. La afirmación previa "medición activa desde
+  19/07" era incorrecta y se rectifica acá.
 
 ---
 
@@ -53,9 +57,9 @@ retención en un solo número honesto.
 
 | Ítem | Cantidad | Fuente |
 |---|---|---|
-| Notas publicadas | 10 | **[DATO]** carpeta `articulos/` |
-| Lecciones publicadas | 8 | **[DATO]** carpeta `lecciones/` |
-| Cadencia de redacción | **1 nota/día** (bajada de horaria el 19/07) | **[DATO]** tarea programada |
+| Notas publicadas | **76** | **[DATO]** `articulos/` y `data/articulos.json`, 18–24/07 (antes decía 10) |
+| Lecciones publicadas | **9** | **[DATO]** carpeta `lecciones/` (antes decía 8) |
+| Cadencia de redacción REAL | **~11 notas/día** (76 en 7 días; pico 23 el 19/07) | **[DATO]** `data/articulos.json`. La cifra previa "1 nota/día" era incorrecta |
 
 ---
 
@@ -68,7 +72,7 @@ retención en un solo número honesto.
 | Captura de email (free tier) | **US$0** **[DATO]** | plan gratuito |
 | Dominio coninteres.com | ~US$1 / mes | **[SUPUESTO]** confirmar con registrador |
 | IA que escribe notas/lecciones + comité | **≈ tu suscripción de Claude** | **[DATO]** corre por la cuenta del socio, NO es factura de API aparte |
-| Costo incremental de tokens a 1 nota/día | **≈ despreciable** | **[SUPUESTO]** el "US$1–2/nota" era estimación equivalente, no un cargo real |
+| Costo incremental de tokens a ~11 notas/día | **s/d — sin medir** | **[SUPUESTO NO VALIDADO]** a ~11/día + comité + cola el "≈ despreciable" ya no se sostiene; falta pasar el consumo real de uso |
 
 > **Regla de gasto (Fase 1):** no hay proveedor pago ni presupuesto de tokens todavía.
 > El uso corre sobre lo que el socio ya tiene. El tope/kill-switch de tokens y una API

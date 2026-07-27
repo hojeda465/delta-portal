@@ -11,6 +11,30 @@ Uso:  python3 scripts/inject_meta.py
 import json, os, re
 from html import escape
 
+def jsonld_block(a, url, img):
+    """JSON-LD schema.org/Article para SEO (rich results + comprensión de Google)."""
+    data = {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": a.get("titulo", "")[:110],
+        "description": a.get("bajada", ""),
+        "datePublished": a.get("fecha", ""),
+        "dateModified": a.get("fecha", ""),
+        "mainEntityOfPage": {"@type": "WebPage", "@id": url},
+        "image": [img],
+        "articleSection": a.get("seccion", ""),
+        "inLanguage": "es-AR",
+        "author": {"@type": "Organization", "name": "Con Interés", "url": SITE},
+        "publisher": {
+            "@type": "Organization",
+            "name": "Con Interés",
+            "url": SITE,
+            "logo": {"@type": "ImageObject", "url": f"{SITE}/assets/og-delta.png"},
+        },
+    }
+    payload = json.dumps(data, ensure_ascii=False, separators=(",", ":"))
+    return f'<script type="application/ld+json">{payload}</script>\n'
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://coninteres.com"   # mantener igual que build_portada.py
 
@@ -25,6 +49,7 @@ def meta_block(a):
         "<!-- DELTA-META:start -->\n"
         '<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">\n'
         f'<link rel="canonical" href="{url}">\n'
+        f'<meta name="description" content="{desc}">\n'
         '<meta property="og:type" content="article">\n'
         '<meta property="og:site_name" content="Con Interés">\n'
         f'<meta property="og:title" content="{title}">\n'
@@ -36,7 +61,8 @@ def meta_block(a):
         f'<meta name="twitter:title" content="{title}">\n'
         f'<meta name="twitter:description" content="{desc}">\n'
         f'<meta name="twitter:image" content="{img}">\n'
-        "<!-- DELTA-META:end -->\n"
+        + jsonld_block(a, url, img)
+        + "<!-- DELTA-META:end -->\n"
     )
 
 def main():
