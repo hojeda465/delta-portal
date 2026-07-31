@@ -61,21 +61,6 @@
       "verificacion": "verificada",
       "fuentes": 8,
       "lectura": "30 seg → 10 min"
-    },
-    {
-      "id": "2026-07-31-alquileres-caba-oferta-multiplico",
-      "titulo": "El mercado de alquileres se dio vuelta: la oferta en CABA se multiplicó por casi cuatro",
-      "bajada": "Desde que el DNU 70/2023 derogó la Ley de Alquileres, la cantidad de departamentos ofrecidos en la Ciudad creció 287,9% (Mercado Libre–UdeSA) y los aumentos se desaceleraron hasta rozar la inflación: cerca del 33% interanual, según tres índices independientes. Para el que busca, más opciones; para el que ya alquila, la cuenta sigue apretada. Los números —y sus dos lecturas—, a la vista.",
-      "seccion": "ECONOMÍA",
-      "formato": "Antes / Después",
-      "numero": "+287,9%",
-      "numero_label": "creció la oferta de departamentos en alquiler en CABA desde la derogación de la Ley de Alquileres (Mercado Libre–UdeSA, jun 2026)",
-      "fecha": "2026-07-31",
-      "hora": "19:10",
-      "archivo": "articulos/2026-07-31-alquileres-caba-oferta-multiplico.html",
-      "verificacion": "verificada",
-      "fuentes": 8,
-      "lectura": "30 seg → 11 min"
     }
   ]
 }
