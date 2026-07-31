@@ -525,6 +525,13 @@
       "fecha": "2026-07-25",
       "estado": "en_cola",
       "articulo_id": "2026-07-25-pollo-record-consumo-49-kilos"
+    },
+    {
+      "tema": "mercado de alquileres CABA / la oferta se multiplicó por casi 4 (+287,9%) tras la derogación de la Ley de Alquileres",
+      "angulo": "desde el DNU 70/2023 la oferta de deptos publicados en CABA creció 287,9% (relevamiento Mercado Libre Inmuebles–UdeSA, jun 2026; corroborado por IDECBA 'récord de avisos' y CEPA) y los aumentos se desaceleraron hasta ≈ inflación (Zonaprop +31,3%, IDECBA +33,6%, ML–UdeSA +34% i.a., vs INDEC 33,5%). Distingue precio de oferta (avisos nuevos) de los contratos vigentes (INDEC 'Alquiler de la vivienda' +7,0% mensual jun). Cifra ancla CONFIRMADA por fuentes independientes; la accesibilidad es la otra lectura (Federación de Inquilinos: 73% con deudas)",
+      "fecha": "2026-07-31",
+      "estado": "en_cola",
+      "articulo_id": "2026-07-31-alquileres-caba-oferta-multiplico"
     }
   ]
 }
