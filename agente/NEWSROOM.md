@@ -131,6 +131,33 @@ Cada uno tiene un rol acotado: hace una cosa y la hace bien.
   en su `<head>` la línea `<meta name="robots" content="noindex">` (para que
   los buscadores no indexen material no aprobado); `aprobar.py` la quita al
   publicar.
+- **Si el `push` falla, hay PLAN B — el trabajo NO se pierde.** El contenedor
+  de cada corrida es efímero: lo que quedó solo en un commit local desaparece
+  con la sesión. El síntoma típico es un `403` del proxy del entorno
+  (`... is not in this session's authorized repository set`): la lectura
+  funciona, la escritura no. Ante eso el Publicador NO termina avisando
+  "no pude publicar" y nada más. Hace:
+  1. `git log -1` — confirmar que el commit local está hecho.
+  2. `git ls-remote https://github.com/hojeda465/delta-portal.git refs/heads/main`
+     — anotar el hash remoto sobre el que se armó el trabajo.
+  3. `git bundle create publicar.bundle main` — empaquetar el commit.
+  4. Escribir un `LEEME.md` con qué se publica, el hash remoto esperado y los
+     comandos de publicación:
+     ```
+     git clone -b main publicar.bundle delta-portal
+     cd delta-portal
+     git remote set-url origin https://github.com/hojeda465/delta-portal.git
+     git push origin main
+     ```
+  5. Entregar bundle + LEEME al humano por el chat (`SendUserFile`, en un .zip).
+  6. Encabezar el aviso diciendo que la nota **no** está en el sitio y que el
+     link a `coninteres.com` todavía no funciona.
+
+  **Nunca** se ponen credenciales en la URL del remoto. Cuando el repositorio
+  está autorizado en las *sources* de la sesión, el proxy del entorno inyecta
+  la credencial solo. Un PAT escrito a mano en el prompt o en la URL no sirve:
+  el proxy lo anula, y encima queda expuesto en los logs.
+
 - **Salida:** un borrador en la cola + notificación con el link para leerlo.
 
 ---

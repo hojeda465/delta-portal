@@ -52,6 +52,10 @@ Escribir `negocio/auditoria-AAAA-MM-DD.md` con:
   marca **URGENTE**.
 - Hace **commit + push del informe** y notifica al humano con: link al
   informe, cantidad de notas revisadas y la lista priorizada de acciones.
+- Si el **push falla**, aplica el **PLAN B** del Publicador (`NEWSROOM.md` §2 ⑥):
+  bundle + LEEME entregados por el chat, y el aviso encabezado con que el
+  informe todavía NO está en el repo. El informe nunca se queda solo dentro
+  del contenedor, que es efímero.
 
 ## Historial
 
