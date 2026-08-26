@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-08-25T23:40:10-03:00",
+    "actualizado": "2026-08-26T00:16:56-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-08-25-reservas-bcra-record",
+      "titulo": "Reservas del BCRA: récord de US$50.912 millones, el mayor nivel desde 2019 — pero ¿de quién son esos dólares?",
+      "bajada": "Las reservas brutas del Banco Central encadenaron récords en agosto y tocaron su punto más alto en casi siete años. Detrás del número grande, una distinción que cambia la lectura: cuánto de esa montaña de dólares es realmente del Banco Central y cuánto son swaps, préstamos del FMI y la suba del oro.",
+      "seccion": "MERCADOS",
+      "formato": "Anatomía de un dato",
+      "numero": "US$50.912 M",
+      "numero_label": "reservas brutas del BCRA (récord, 25/8/2026)",
+      "fecha": "2026-08-25",
+      "hora": "23:55",
+      "archivo": "articulos/2026-08-25-reservas-bcra-record.html",
+      "verificacion": "verificada",
+      "fuentes": 8,
+      "lectura": "30 seg → 9 min"
+    },
     {
       "id": "2026-08-25-nuclear-record-exportacion",
       "titulo": "Récord nuclear: Argentina generó 10,76 millones de MWh en 2025 y exportó tecnología atómica por primera vez",

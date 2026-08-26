@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-08-25T23:55:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-08-25-reservas-bcra-record",
-      "titulo": "Reservas del BCRA: récord de US$50.912 millones, el mayor nivel desde 2019 — pero ¿de quién son esos dólares?",
-      "bajada": "Las reservas brutas del Banco Central encadenaron récords en agosto y tocaron su punto más alto en casi siete años. Detrás del número grande, una distinción que cambia la lectura: cuánto de esa montaña de dólares es realmente del Banco Central y cuánto son swaps, préstamos del FMI y la suba del oro.",
-      "seccion": "MERCADOS",
-      "formato": "Anatomía de un dato",
-      "numero": "US$50.912 M",
-      "numero_label": "reservas brutas del BCRA (récord, 25/8/2026)",
-      "fecha": "2026-08-25",
-      "hora": "23:55",
-      "archivo": "articulos/2026-08-25-reservas-bcra-record.html",
-      "verificacion": "verificada",
-      "fuentes": 8,
-      "lectura": "30 seg → 9 min"
-    }
-  ]
+  "borradores": []
 }
