@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-08-25T23:45:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-08-25-nuclear-record-exportacion",
-      "titulo": "Récord nuclear: Argentina generó 10,76 millones de MWh en 2025 y exportó tecnología atómica por primera vez",
-      "bajada": "Con Atucha I parada por obras, las otras dos centrales marcaron el mayor nivel de generación de la historia —el segundo récord anual consecutivo— y cubren alrededor del 7% de la electricidad del país. En junio de 2026, Nucleoeléctrica sumó un hito: la primera venta al exterior de componentes para reactores.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "10,76 M",
-      "numero_label": "MWh: récord de generación nuclear (2025)",
-      "fecha": "2026-08-25",
-      "hora": "23:45",
-      "archivo": "articulos/2026-08-25-nuclear-record-exportacion.html",
-      "verificacion": "verificada",
-      "fuentes": 8,
-      "lectura": "30 seg → 9 min"
-    }
-  ]
+  "borradores": []
 }

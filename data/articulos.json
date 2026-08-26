@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-08-25T15:35:34-03:00",
+    "actualizado": "2026-08-25T23:40:10-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-08-25-nuclear-record-exportacion",
+      "titulo": "Récord nuclear: Argentina generó 10,76 millones de MWh en 2025 y exportó tecnología atómica por primera vez",
+      "bajada": "Con Atucha I parada por obras, las otras dos centrales marcaron el mayor nivel de generación de la historia —el segundo récord anual consecutivo— y cubren alrededor del 7% de la electricidad del país. En junio de 2026, Nucleoeléctrica sumó un hito: la primera venta al exterior de componentes para reactores.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "10,76 M",
+      "numero_label": "MWh: récord de generación nuclear (2025)",
+      "fecha": "2026-08-25",
+      "hora": "23:45",
+      "archivo": "articulos/2026-08-25-nuclear-record-exportacion.html",
+      "verificacion": "verificada",
+      "fuentes": 8,
+      "lectura": "30 seg → 9 min"
+    },
     {
       "id": "2026-08-25-mercadolibre-ingresos-record",
       "titulo": "Mercado Libre facturó más de US$10.000 millones en un trimestre por primera vez — y aun así ganó menos",
