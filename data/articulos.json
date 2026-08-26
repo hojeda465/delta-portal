@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-08-26T00:16:56-03:00",
+    "actualizado": "2026-08-26T00:40:04-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-08-26-chaco-deuda-bono-dolares",
+      "titulo": "El bono de US$250 millones: Chaco entra en la recta final de su deuda en dólares — pero el stock total sigue subiendo",
+      "bajada": "La provincia pagó en agosto la sexta de nueve cuotas —US$34 millones— del bono en dólares que emitió en 2016, y le quedan tres hasta febrero de 2028. Mientras salda su deuda en moneda dura más pesada, el stock total de deuda chaqueña creció 34,2% real en un año, muy por encima del promedio de las provincias.",
+      "seccion": "ECONOMÍA PROVINCIAL",
+      "formato": "Anatomía de un dato",
+      "numero": "US$250 M",
+      "numero_label": "bono en dólares de Chaco (2016)",
+      "fecha": "2026-08-26",
+      "hora": "00:40",
+      "archivo": "articulos/2026-08-26-chaco-deuda-bono-dolares.html",
+      "verificacion": "verificada",
+      "fuentes": 7,
+      "lectura": "30 seg → 9 min"
+    },
     {
       "id": "2026-08-25-reservas-bcra-record",
       "titulo": "Reservas del BCRA: récord de US$50.912 millones, el mayor nivel desde 2019 — pero ¿de quién son esos dólares?",
