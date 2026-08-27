@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-08-26T23:26:04-03:00",
+    "actualizado": "2026-08-27T18:08:18-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-08-27-inocencia-fiscal-2",
+      "titulo": "Inocencia Fiscal II: qué le baja al contribuyente — multas hasta 50% menos y un freno a ARCA",
+      "bajada": "Diputados le dio media sanción y el proyecto pasó al Senado. Si se convierte en ley, las multas formales bajan hasta la mitad, se presume que tu declaración jurada es correcta, y sólo una 'discrepancia significativa' —de al menos 15% y por encima de unos $5 millones— habilitará a ARCA a impugnarla.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de una medida",
+      "numero": "−50%",
+      "numero_label": "reducción de multas formales (Inocencia Fiscal II)",
+      "fecha": "2026-08-27",
+      "hora": "01:10",
+      "archivo": "articulos/2026-08-27-inocencia-fiscal-2.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-08-26-caputo-hipotecarios-fgs-anses",
       "titulo": "El plan hipotecario de $2 billones de Caputo: de dónde sale la plata, cómo funciona y a quién llega",

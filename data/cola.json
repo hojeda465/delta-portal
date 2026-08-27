@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-08-27T01:10:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-08-27-inocencia-fiscal-2",
-      "titulo": "Inocencia Fiscal II: qué le baja al contribuyente — multas hasta 50% menos y un freno a ARCA",
-      "bajada": "Diputados le dio media sanción y el proyecto pasó al Senado. Si se convierte en ley, las multas formales bajan hasta la mitad, se presume que tu declaración jurada es correcta, y sólo una 'discrepancia significativa' —de al menos 15% y por encima de unos $5 millones— habilitará a ARCA a impugnarla.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de una medida",
-      "numero": "−50%",
-      "numero_label": "reducción de multas formales (Inocencia Fiscal II)",
-      "fecha": "2026-08-27",
-      "hora": "01:10",
-      "archivo": "articulos/2026-08-27-inocencia-fiscal-2.html",
-      "verificacion": "verificada",
-      "fuentes": 6,
-      "lectura": "30 seg → 10 min"
-    }
-  ]
+  "borradores": []
 }
