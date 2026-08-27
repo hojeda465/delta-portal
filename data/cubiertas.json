@@ -560,6 +560,13 @@
       "fecha": "2026-08-26",
       "estado": "publicada",
       "articulo_id": "2026-08-26-chaco-deuda-bono-dolares"
+    },
+    {
+      "tema": "política económica / plan de créditos hipotecarios de Caputo con $2 billones del FGS de ANSES (26/8/2026)",
+      "angulo": "anuncio del 26/8/2026: el FGS de ANSES coloca $2 billones en plazos fijos en bancos (UVA+2,5% a +4,5%), que prestan a familias (máx UVA+7,5%, hasta 150.000 UVAs, 1ª vivienda) asumiendo el riesgo; primera licitación $200.000M; BCRA habilita prestar 15% de depósitos en dólares a empresas. Nota más profunda: mecanismo, qué es el FGS (fondo previsional, estatización AFJP 2008), riesgo UVA, no es gasto fiscal, y escala (18.000 familias vs déficit de 1,7M viviendas / 5,7M hogares). Cifras del plan CONFIRMADAS por múltiples medios; familias/ingreso/cuota marcados como estimaciones del anuncio; dato de Caputo sobre FGS US$30B->80B atribuido.",
+      "fecha": "2026-08-26",
+      "estado": "en_cola",
+      "articulo_id": "2026-08-26-caputo-hipotecarios-fgs-anses"
     }
   ]
 }
