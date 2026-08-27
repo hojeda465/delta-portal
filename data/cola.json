@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-08-26T13:20:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-08-26-caputo-hipotecarios-fgs-anses",
-      "titulo": "El plan hipotecario de $2 billones de Caputo: de dónde sale la plata, cómo funciona y a quién llega",
-      "bajada": "El Gobierno canalizará $2 billones del Fondo de Garantía de Sustentabilidad de la ANSES —el fondo que respalda las jubilaciones— para reactivar el crédito hipotecario UVA. El mecanismo paso a paso, las tasas, cuánto hay que ganar para calificar, y por qué las 18.000 familias que apunta a alcanzar conviven con un déficit de 1,7 millones de viviendas.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de una medida",
-      "numero": "$2 billones",
-      "numero_label": "del FGS de ANSES para crédito hipotecario",
-      "fecha": "2026-08-26",
-      "hora": "13:20",
-      "archivo": "articulos/2026-08-26-caputo-hipotecarios-fgs-anses.html",
-      "verificacion": "verificada",
-      "fuentes": 7,
-      "lectura": "30 seg → 12 min"
-    }
-  ]
+  "borradores": []
 }

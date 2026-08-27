@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-08-26T00:40:04-03:00",
+    "actualizado": "2026-08-26T23:26:04-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-08-26-caputo-hipotecarios-fgs-anses",
+      "titulo": "El plan hipotecario de $2 billones de Caputo: de dónde sale la plata, cómo funciona y a quién llega",
+      "bajada": "El Gobierno canalizará $2 billones del Fondo de Garantía de Sustentabilidad de la ANSES —el fondo que respalda las jubilaciones— para reactivar el crédito hipotecario UVA. El mecanismo paso a paso, las tasas, cuánto hay que ganar para calificar, y por qué las 18.000 familias que apunta a alcanzar conviven con un déficit de 1,7 millones de viviendas.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de una medida",
+      "numero": "$2 billones",
+      "numero_label": "del FGS de ANSES para crédito hipotecario",
+      "fecha": "2026-08-26",
+      "hora": "13:20",
+      "archivo": "articulos/2026-08-26-caputo-hipotecarios-fgs-anses.html",
+      "verificacion": "verificada",
+      "fuentes": 7,
+      "lectura": "30 seg → 12 min"
+    },
     {
       "id": "2026-08-26-chaco-deuda-bono-dolares",
       "titulo": "El bono de US$250 millones: Chaco entra en la recta final de su deuda en dólares — pero el stock total sigue subiendo",
