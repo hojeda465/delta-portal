@@ -586,7 +586,7 @@
       "tema": "retrospectiva 36 meses / inflación, tipo de cambio y tasa de interés 2023-2026 con datos oficiales",
       "angulo": "serie histórica con datos oficiales INDEC (IPC mensual: pico 25,5% dic-2023, anuales 211,4%/117,8%/31,5%, ~2% en 2026) y BCRA (dólar mayorista A3500: $350 sep-2023 -> deval a $800 dic-2023 -> ~$1.030 dic-2024 -> bandas abr-2025 -> ~$1.490 ago-2026; tasa: 133% oct-2023 -> 32% dic-2024 -> agregados monetarios 2025 -> ~24% plazo fijo 2026). Tres charts propios de eje temporal. Contexto: el dólar como ancla, costos en actividad/salario, atraso cambiario, última milla. Dólar y tasa presentados como HITOS de referencia (no serie continua); tasa 2026 es de mercado no de política, aclarado.",
       "fecha": "2026-08-27",
-      "estado": "en_cola",
+      "estado": "publicada",
       "articulo_id": "2026-08-27-tres-variables-36-meses"
     }
   ]

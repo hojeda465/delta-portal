@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-08-29T14:02:24-03:00",
+    "actualizado": "2026-08-29T14:36:08-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-08-27-tres-variables-36-meses",
+      "titulo": "Inflación, dólar y tasa: los 36 meses que transformaron la macro argentina",
+      "bajada": "Entre septiembre de 2023 y hoy, las tres variables que ordenan la economía cambiaron de escala: la inflación mensual pasó de un pico de 25,5% a rondar el 2%; el dólar oficial saltó de $350 a unos $1.490; y la tasa de interés se desplomó del 133% al orden del 24%. Un repaso con datos del INDEC y el BCRA, con el contexto de cada número.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de tres datos",
+      "numero": "36",
+      "numero_label": "meses de inflación, dólar y tasa (INDEC + BCRA)",
+      "fecha": "2026-08-27",
+      "hora": "02:15",
+      "archivo": "articulos/2026-08-27-tres-variables-36-meses.html",
+      "verificacion": "verificada",
+      "fuentes": 8,
+      "lectura": "30 seg → 13 min"
+    },
     {
       "id": "2026-08-27-inflacion-agosto-proyecciones",
       "titulo": "¿Sorpresa con la inflación? Los alimentos desaceleran y las proyecciones se acercan al 1,5%",
