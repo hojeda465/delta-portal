@@ -126,6 +126,13 @@
   .afecta p:last-child{margin-bottom:0}
   .afecta b{color:var(--ink);font-weight:600}
 
+  .casos{display:grid;gap:12px;margin:10px 0 4px}
+  .caso{background:var(--card);border:1px solid var(--card-edge);border-left:3px solid var(--teal);border-radius:10px;padding:14px 16px}
+  .caso h5{font-family:var(--sans);font-size:14px;font-weight:700;margin:0 0 4px;color:var(--ink)}
+  .caso p{font-size:14px;line-height:1.55;margin:0;color:var(--ink-soft)}
+  .caso .via{font-family:var(--mono);font-size:10.5px;color:var(--teal-deep);text-transform:uppercase;letter-spacing:.08em;margin-top:7px;display:block}
+  .casos-note{font-size:12px;color:var(--faint);font-family:var(--mono);margin:4px 0 22px}
+
   .pull{font-family:var(--serif);font-size:25px;line-height:1.35;font-weight:600;color:var(--teal-deep);border-top:2px solid var(--teal);border-bottom:2px solid var(--teal);padding:20px 0;margin:30px 0}
 
   .deep{border:1px solid var(--card-edge);border-radius:12px;overflow:hidden;margin:8px 0 20px;background:var(--card)}
@@ -216,16 +223,16 @@
   <!-- ③ LAS DOS CARAS -->
   <div class="block prose" id="b3">
     <div class="block-tag"><span class="num">3</span><span class="txt">Las dos caras</span><span class="rule"></span></div>
-    <p><b>Cara 1: la pobreza cayó, y mucho.</b> Es el dato que sí muestra que la mejora llegó a la base. Cuando la inflación se desacelera —sobre todo la de alimentos—, los hogares de menores ingresos, que gastan casi todo en comida, son los primeros en respirar. La caída fue fuerte y sostenida durante cuatro semestres:</p>
+    <p><b>Cara 1: la pobreza cayó, y mucho.</b> Es el dato que sí muestra que la mejora llegó a la base. Cuando la inflación se desacelera —sobre todo la de alimentos—, los hogares de menores ingresos, que gastan casi todo en comida, son los primeros en respirar. Pero conviene mirar de dónde arranca la cuenta: la pobreza se heredó en 41,7% (2<sup>do</sup> semestre 2023), <b>saltó</b> al pico de 52,9% con la devaluación de diciembre de 2023, y recién de ahí bajó:</p>
 
     <figure>
       <div class="fig-head">
         <div class="fig-kick">La mejora · Pobreza por semestre</div>
-        <h3>De 52,9% a 28,2% en año y medio</h3>
+        <h3>Del 41,7% heredado al pico de 52,9% — y de vuelta a 28,2%</h3>
         <p class="fig-sub">Personas bajo la línea de pobreza, Argentina (%, INDEC-EPH).</p>
       </div>
-      <svg id="chartPobreza" class="chart-svg" viewBox="0 0 680 260" role="img" aria-label="Gráfico de la pobreza por semestre: 52,9% en el primer semestre de 2024, 38,1% en el segundo, 31,6% en el primer semestre de 2025 y 28,2% en el segundo semestre de 2025."></svg>
-      <figcaption><b>Fuente:</b> INDEC, Encuesta Permanente de Hogares (EPH). <b>Nota:</b> 28,2% es el nivel más bajo en siete años. Aún así, casi 3 de cada 10 personas siguen bajo la línea de pobreza.</figcaption>
+      <svg id="chartPobreza" class="chart-svg" viewBox="0 0 680 260" role="img" aria-label="Gráfico de la pobreza por semestre: 41,7% en el segundo semestre de 2023 (nivel heredado), un pico de 52,9% en el primer semestre de 2024, 38,1% en el segundo, 31,6% en el primer semestre de 2025 y 28,2% en el segundo semestre de 2025."></svg>
+      <figcaption><b>Fuente:</b> INDEC, Encuesta Permanente de Hogares (EPH). <b>Las dos lecturas:</b> desde el pico (52,9%) la baja es de 24,7 puntos; desde el nivel heredado (41,7%), de 13,5 puntos. Empezar a contar en el pico agranda el logro. Y aun con 28,2% —mínimo en 7 años—, casi 3 de cada 10 personas siguen bajo la línea.</figcaption>
     </figure>
 
     <p><b>Cara 2: la brecha se ensanchó.</b> Que caiga la pobreza no significa que la torta se reparta mejor. En el primer trimestre de 2026 el coeficiente de Gini —la medida más usada de desigualdad— subió de 0,427 a 0,442 (más alto = más desigual). El 10% más rico concentró el 33,5% de todo el ingreso; el 10% más pobre, apenas el 1,8%. La distancia entre las puntas es enorme:</p>
@@ -260,6 +267,7 @@
       <h4>&#9651; La cocina del dato</h4>
       <p>Todo sale de la <b>Encuesta Permanente de Hogares (EPH)</b> del INDEC, que releva ingresos, pobreza y empleo en 31 aglomerados urbanos. La pobreza se publica por semestre; la distribución del ingreso y el Gini, por trimestre; los salarios, con el índice mensual y el RIPTE. Son las mismas fuentes con las que se miden los "buenos datos" macro — por eso sirven para chequear si la mejora se reparte.</p>
       <p>Dos precisiones de método. La <b>brecha</b> entre deciles cambia según cómo se mida: por medianas da 15 veces; por promedios, casi 19 — usamos la primera como titular porque es la que informa el INDEC, y aclaramos la segunda. Y el <b>salario informal</b> es el más difícil de medir: se estima con varios meses de rezago, así que su número real es más incierto que el de los registrados. Cuando el dato es flojo, lo decimos.</p>
+      <p>Dos límites del método que conviene tener presentes. Primero: las <b>apps</b> —Uber, Didi, Rappi, PedidosYa— cuentan como <b>empleo</b>. Quien trabajó una hora o más en la semana figura como "ocupado", casi siempre como cuentapropia informal; por eso la ocupación puede sostenerse mientras baja la calidad del trabajo. Segundo: la EPH releva <b>hogares en viviendas</b>, así que las personas en <b>situación de calle</b> quedan fuera de la muestra — la pobreza por ingresos no las capta, y es parte de por qué la mejora "no se nota" tanto como sugiere el número.</p>
       <div class="meta">
         <span><b>Fuente</b> INDEC (EPH) · RIPTE · IARAF</span>
         <span><b>Período</b> pobreza 2S-2025 · ingresos 1<sup>er</sup> trim. 2026</span>
@@ -278,6 +286,15 @@
       <div class="tile bad"><div class="v">0,442</div><div class="k">Gini 1<sup>er</sup> trim. 2026 (subió)</div></div>
       <div class="tile bad"><div class="v">−33,3%</div><div class="k">salario real de estatales nacionales vs nov-2023</div></div>
     </div>
+
+    <p><b>¿Y cómo salió esa gente de la pobreza?</b> No, en general, por conseguir un mejor trabajo, sino por tres vías. La principal es la <b>desinflación</b>: como la pobreza se mide por ingreso contra la canasta básica, cuando los precios —sobre todo los alimentos— frenan, la canasta deja de correr más rápido que los ingresos. En el segundo semestre de 2025 el ingreso familiar creció 18,3% y las canastas, 11–12%. La segunda vía fueron las <b>transferencias</b>: la AUH fue casi la única partida social que se salvó del ajuste y creció alrededor de <b class="hl">110% en términos reales</b>, junto con la Tarjeta Alimentar. Y la tercera es la que sorprende: <b>no hubo más empleo</b>. La tasa de ocupación quedó casi igual (45,2% vs 45,3%); cambió cuánto ganaba quien ya trabajaba, no cuántos trabajaban.</p>
+
+    <div class="casos">
+      <div class="caso"><h5>Marisa, 38 · dos hijos · conurbano</h5><p>Limpia casas por hora, en negro; cobra AUH + Tarjeta Alimentar. A principios de 2024 su ingreso equivalía a ~70% de la línea de pobreza de su hogar. A fines de 2025 llega a ~105%: cruzó la línea. No cambió de trabajo — la sacaron la AUH y el freno de los precios.</p><span class="via">Salió · desinflación + transferencias</span></div>
+      <div class="caso"><h5>Bruno, 26 · CABA</h5><p>En 2024 cerró el local donde trabajaba en blanco. Hoy reparte para una app 10 horas por día. Para el INDEC es un "ocupado" más — pero pasó de un empleo registrado a uno informal, sin aportes. La estadística de empleo no lo distingue.</p><span class="via">Empleo · de registrado a plataforma</span></div>
+      <div class="caso"><h5>Héctor, 71 · jubilado</h5><p>Cobra la mínima más un bono congelado desde 2024. Su haber se ajusta por inflación, así que dejó de perder, pero quedó ~un tercio abajo de 2023. No "salió" de nada: sigue recortando.</p><span class="via">Quedó atrás · jubilados y estatales</span></div>
+    </div>
+    <p class="casos-note">Casos ilustrativos: personajes ficticios, patrones y cifras reales.</p>
 
     <p>Y acá aparece la pregunta de fondo que planteás vos: la <b>movilidad ascendente</b>, la promesa de que trabajando se progresa. Salir de la pobreza no es lo mismo que ascender: muchos de los que cruzaron la línea siguen apenas por encima, con empleos informales, sin aportes ni estabilidad. Con una informalidad que roza el 43% y salarios que en el mejor de los casos empataron a los de hace dos años, el ascensor social se mueve despacio. La estabilización creó el piso; falta ver si genera el <b>crecimiento con buenos empleos</b> que permite subir.</p>
 
@@ -365,7 +382,7 @@ function hideTT(){ tt.style.opacity=0; }
 
 /* ---------- POBREZA por semestre ---------- */
 (function(){
-  const data=[["1S-24",52.9],["2S-24",38.1],["1S-25",31.6],["2S-25",28.2]];
+  const data=[["2S-23",41.7],["1S-24",52.9],["2S-24",38.1],["1S-25",31.6],["2S-25",28.2]];
   const svg=$("#chartPobreza"), W=680,H=260, m={t:26,r:24,b:36,l:38};
   const iw=W-m.l-m.r, ih=H-m.t-m.b, maxY=56;
   const x=i=> m.l + (i/(data.length-1))*iw;
@@ -380,10 +397,10 @@ function hideTT(){ tt.style.opacity=0; }
   grad.appendChild(mk("stop",{offset:"0%","stop-color":C.teal,"stop-opacity":.16})); grad.appendChild(mk("stop",{offset:"100%","stop-color":C.teal,"stop-opacity":0})); svg.appendChild(grad);
   svg.appendChild(mk("path",{d:area,fill:"url(#gp)"}));
   svg.appendChild(mk("path",{d:dp,fill:"none",stroke:C.teal,"stroke-width":2.5,"stroke-linejoin":"round","stroke-linecap":"round"}));
-  data.forEach((d,i)=>{ const cx=x(i),cy=y(d[1]); const edge=(i===0||i===data.length-1);
-    svg.appendChild(mk("circle",{cx,cy,r:edge?5.5:4,fill:edge?C.teal:"#fff",stroke:C.teal,"stroke-width":2}));
-    const t=mk("text",{x:cx,y:cy-13,"text-anchor":"middle","font-family":"IBM Plex Mono, monospace","font-size":13,"font-weight":600,fill:i===0?C.red:(i===data.length-1?C.green:C.ink)}); t.textContent=String(d[1]).replace(".",",")+"%"; svg.appendChild(t);
-    const xl=mk("text",{x:cx,y:m.t+ih+22,"text-anchor":"middle","font-family":"IBM Plex Mono, monospace","font-size":11,fill:C.faint}); xl.textContent=d[0]; svg.appendChild(xl);
+  data.forEach((d,i)=>{ const cx=x(i),cy=y(d[1]); const peak=(i===1), last=(i===data.length-1), her=(i===0); const mark=peak||last||her;
+    svg.appendChild(mk("circle",{cx,cy,r:mark?5.5:4,fill:mark?(peak?C.red:(last?C.green:C.amber)):"#fff",stroke:C.teal,"stroke-width":2}));
+    const t=mk("text",{x:cx,y:cy-13,"text-anchor":"middle","font-family":"IBM Plex Mono, monospace","font-size":13,"font-weight":600,fill:peak?C.red:(last?C.green:(her?C.amber:C.ink))}); t.textContent=String(d[1]).replace(".",",")+"%"; svg.appendChild(t);
+    const xl=mk("text",{x:cx,y:m.t+ih+22,"text-anchor":"middle","font-family":"IBM Plex Mono, monospace","font-size":11,fill:her?C.amber:C.faint}); xl.textContent=d[0]; svg.appendChild(xl);
   });
 })();
 
