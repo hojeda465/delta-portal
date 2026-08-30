@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-08-29T14:36:08-03:00",
+    "actualizado": "2026-08-30T15:52:26-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-08-27-a-quien-le-llega-distribucion",
+      "titulo": "Si la macro va bien, ¿a quién le llega? La distribución de la mejora, en datos",
+      "bajada": "La pobreza se desplomó de 52,9% a 28,2% en año y medio —un avance social real—, pero la desigualdad volvió a subir, el 10% más rico gana 15 veces lo del más pobre y los salarios se recuperaron de forma muy despareja. La distribución de la mejora, con datos del INDEC.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "15 veces",
+      "numero_label": "gana el 10% más rico vs el más pobre (INDEC)",
+      "fecha": "2026-08-27",
+      "hora": "03:05",
+      "archivo": "articulos/2026-08-27-a-quien-le-llega-distribucion.html",
+      "verificacion": "verificada",
+      "fuentes": 8,
+      "lectura": "30 seg → 11 min"
+    },
     {
       "id": "2026-08-27-tres-variables-36-meses",
       "titulo": "Inflación, dólar y tasa: los 36 meses que transformaron la macro argentina",
