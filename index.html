@@ -51,7 +51,10 @@
   .concept .item{color:#CFC9BF} .concept .item b{color:#fff;font-weight:600}
   .concept .sep{color:#3E3A34}
 
-  .secnav{border-bottom:1px solid var(--rule);position:sticky;top:96px;background:var(--paper);z-index:60;box-shadow:0 1px 0 rgba(22,19,15,.04)}
+  /* top lo fija apilar() midiendo masthead + ticker. El default es 0 y no 96px
+     a proposito: si el ticker no carga, la barra queda pegada al masthead en vez
+     de dejar un hueco por el que se ve pasar el contenido. */
+  .secnav{border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--paper);z-index:60;box-shadow:0 1px 0 rgba(22,19,15,.04)}
   .lema{border-bottom:1px solid var(--rule);background:var(--paper)}
   .lema .wrap{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;padding:16px 24px 15px}
   .lema .l1{font-family:var(--serif);font-size:clamp(19px,2.4vw,26px);font-weight:700;font-style:italic;color:var(--ink);letter-spacing:-.02em;font-optical-sizing:auto}
@@ -101,7 +104,7 @@
   .rh-rule{flex:1;height:1px;background:var(--rule)}
   .sec-head h2{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0}
   .sec-count{font-family:var(--mono);font-size:11px;color:var(--faint)}
-  .sec-group{scroll-margin-top:calc(var(--stack,150px) + 8px)}
+  .sec-group,.dia,.dia-bloque,.mes-sep{scroll-margin-top:calc(var(--stack,150px) + 8px)}
 
   .learn-band{background:linear-gradient(120deg,#16130F,#0A5C63);border-radius:16px;padding:32px 34px;margin:40px 0 6px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
   .learn-band .lb-kick{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#E8833A;font-weight:600;margin-bottom:8px}
@@ -191,8 +194,36 @@
   .sec-hero p{font-size:15px;color:var(--muted);margin:0}
   .sec-hero .volver{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;
     display:inline-block;margin-bottom:12px}
-  .mes-bloque{margin-bottom:30px}
-  .mes-bloque .sec-head h2{font-size:19px}
+  .mes-sep{display:flex;align-items:center;gap:12px;margin:34px 0 20px -26px;padding-left:26px}
+  .mes-sep h2{font-family:var(--serif);font-size:22px;font-weight:700;margin:0;text-transform:capitalize}
+  .dia-bloque{margin-bottom:26px}
+  /* ---------- linea de tiempo por dia ---------- */
+  .timeline{position:relative;padding-left:26px;margin-top:26px}
+  .timeline:before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:2px;
+    background:linear-gradient(180deg,var(--ink) 0%,var(--rule) 92%,transparent 100%)}
+  .dia{position:relative;margin-bottom:38px}
+  .dia-head{display:flex;align-items:center;gap:12px;margin:0 0 16px -26px;padding-left:26px;position:relative}
+  .dia-punto{position:absolute;left:0;top:50%;transform:translateY(-50%);width:12px;height:12px;
+    border-radius:50%;background:var(--ink);box-shadow:0 0 0 4px var(--paper)}
+  .dia:first-child .dia-punto{background:var(--amber);box-shadow:0 0 0 4px var(--paper),0 0 0 7px rgba(196,112,31,.25)}
+  .dia-head h2{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--ink);margin:0;white-space:nowrap}
+  .dia:first-child .dia-head h2{color:var(--amber)}
+  .dia-rule{flex:1;height:1px;background:var(--rule)}
+  .dia-count{font-family:var(--mono);font-size:11px;color:var(--faint);white-space:nowrap}
+  .dia-body>*+*{margin-top:14px}
+  .mas-dia{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12.5px;
+    color:var(--muted);text-decoration:none;border:1px dashed var(--rule);border-radius:999px;
+    padding:8px 15px;transition:.15s}
+  .mas-dia:hover{border-color:var(--teal);color:var(--teal-deep);border-style:solid}
+  .mas-dia .mm{font-size:14px}
+  @media(max-width:600px){
+    .timeline{padding-left:18px}
+    .timeline:before{left:3px}
+    .dia-head{margin-left:-18px;padding-left:18px;gap:8px}
+    .dia-head h2{font-size:11.5px;white-space:normal}
+    .dia-punto{width:9px;height:9px}
+  }
 </style>
 </head>
 <body>
@@ -211,130 +242,208 @@
 <div class="lema"><div class="wrap"><span class="l1">Entender no debería costarte nada<span class="fin">.</span></span><span class="l2">Datos verificados, explicados sin jerga, sin pedirte nada a cambio.</span></div></div>
 
 <main class="wrap">
-  
-    <a class="lead" data-sec="DEPORTES" href="articulos/2026-08-31-messi-seleccion-numeros-finanzas.html">
-      <div class="lead-num" style="--sc:#C0392B">
-        <span class="ln-big" style="font-size:64px">207</span>
-        <span class="ln-lab">partidos de Messi con la selección mayor: récord histórico, junto con sus 125 goles</span>
+  <div id="ci-semaforo"></div>
+  <div class="timeline">
+    <section class="dia" id="d-2026-08-31">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>HOY · lunes 31 de agosto</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">5 notas</span>
       </div>
-      <div class="lead-body">
-        <div class="kick" style="color:#C0392B">DEPORTES <span>/ Infografía</span></div>
-        <h2>Messi se retira de la selección: 207 partidos, 125 goles y US$108,5 millones en premios oficiales que cobró la AFA</h2>
+      <div class="dia-body">
+    <a class="lider" href="articulos/2026-08-31-messi-seleccion-numeros-finanzas.html" style="--sc:#C0392B">
+      <div class="l-body">
+        <div class="kick" style="color:#C0392B">Deportes <span>/ Infografía</span></div>
+        <h3>Messi se retira de la selección: 207 partidos, 125 goles y US$108,5 millones en premios oficiales que cobró la AFA</h3>
         <p>Debutó el 17 de agosto de 2005 y lo echaron a los 43 segundos. Se va 21 años después como el jugador con más partidos y más goles de la historia argentina. Su carrera en números y en dinero: lo que sus títulos le dejaron a la AFA, cómo la federación pasó de 5 a más de 100 sponsors, y por qué lo que Messi cobró no es público.</p>
         <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>30 seg → 14 min<span class="dot"></span>31 ago 2026</div>
       </div>
-    </a>
-  <div id="ci-semaforo"></div>
-  <div class="rail-head"><span class="rh-txt">Lo último</span><span class="rh-rule"></span></div><div class="grid grid-2">
+      <div class="l-num"><span class="ln" style="font-size:42px">207</span><span class="ll">partidos de Messi con la selección mayor: récord histórico, junto con sus 125 goles</span></div>
+    </a><div class="grid">
     <a class="card" data-sec="MERCADOS" href="articulos/2026-08-31-messi-empresario-balances.html" style="--sc:#0A5C63">
       <div class="kick" style="color:#0A5C63">Los mercados</div>
       <h3>El negocio de Messi no son los hoteles: es su nombre. La empresa que administra su imagen ganó €11 millones en 2024; la hotelera perdió plata</h3>
       <div class="card-num"><b>€61,9 M</b> facturó en 2024 la sociedad que administra los derechos de imagen de Messi, con más de €11 M de beneficio</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>31 ago 2026</div>
     </a>
-
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-08-31-comercio-exterior-brecha-aduana-cambios.html" style="--sc:#C4701F">
       <div class="kick" style="color:#C4701F">El país</div>
       <h3>Dos organismos del Estado miden el mismo comercio exterior: en exportaciones coinciden con 0,2% de diferencia; en importaciones faltan US$40.682 millones</h3>
       <div class="card-num"><b>US$40.682 M</b> importaciones que la aduana registró y no se pagaron por el mercado de cambios en 36 meses</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>31 ago 2026</div>
+    </a></div><div class="rows">
+    <a class="row" href="articulos/2026-08-31-autos-chinos-patentamientos-produccion.html">
+      <span class="r-num" style="color:#C4701F">28.291</span>
+      <span class="r-tit">Los autos chinos pasaron de 3.985 a 28.291 patentamientos en un año: ya son uno de cada nueve autos nuevos, y la producción nacional de autos se partió al medio</span>
+      <span class="r-fecha">31 ago 2026</span>
     </a>
-
-    <a class="card" data-sec="ECONOMÍA" href="articulos/2026-08-31-autos-chinos-patentamientos-produccion.html" style="--sc:#C4701F">
-      <div class="kick" style="color:#C4701F">El país</div>
-      <h3>Los autos chinos pasaron de 3.985 a 28.291 patentamientos en un año: ya son uno de cada nueve autos nuevos, y la producción nacional de autos se partió al medio</h3>
-      <div class="card-num"><b>28.291</b> vehículos de marcas chinas patentados entre enero y julio de 2026; eran 3.985 un año antes</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>31 ago 2026</div>
-    </a>
-
-    <a class="card" data-sec="ECONOMÍA" href="articulos/2026-08-31-produccion-petroleo-record-912-mil-barriles.html" style="--sc:#C4701F">
-      <div class="kick" style="color:#C4701F">El país</div>
-      <h3>La Argentina bombea más petróleo que nunca: 912.939 barriles por día en julio, y el récord de 1998 quedó 54.635 barriles atrás</h3>
-      <div class="card-num"><b>912.939 b/d</b> producción de petróleo de julio de 2026, el máximo de la serie oficial</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>31 ago 2026</div>
-    </a></div>
-  
-    <section class="sec-group" id="sec-tu-plata">
-      <div class="sec-head"><h2 style="color:#0E7C86">Tu plata</h2><span class="sec-sub">sueldo · precios · ahorro · crédito</span><span class="rh-rule"></span><span class="sec-count">32 notas</span></div>
-      
-    <a class="lider" href="articulos/2026-08-30-dolares-personas-humanas-julio.html" style="--sc:#0E7C86">
+    <a class="row" href="articulos/2026-08-31-produccion-petroleo-record-912-mil-barriles.html">
+      <span class="r-num" style="color:#C4701F">912.939 b/d</span>
+      <span class="r-tit">La Argentina bombea más petróleo que nunca: 912.939 barriles por día en julio, y el récord de 1998 quedó 54.635 barriles atrás</span>
+      <span class="r-fecha">31 ago 2026</span>
+    </a></div></div>
+    </section>
+    <section class="dia" id="d-2026-08-30">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>domingo 30 de agosto</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">2 notas</span>
+      </div>
+      <div class="dia-body">
+    <a class="lider" href="articulos/2026-08-30-leonas-becas-enard.html" style="--sc:#C0392B">
       <div class="l-body">
-        <div class="kick" style="color:#0E7C86">Tu plata <span>/ Anatomía de un dato</span></div>
-        <h3>Los argentinos compraron US$2.916 millones en dólar billete en julio, el máximo en nueve meses — y un tercio se fue a pagar la tarjeta</h3>
-        <p>Fueron 1,7 millones de personas, un 44,7% más que en junio, según el informe cambiario del BCRA. Es el monto más alto desde octubre de 2025. Pero el propio Banco Central estima que de cada 10 dólares que salieron, unos 3 no fueron ahorro: sirvieron para cancelar consumos con tarjeta.</p>
+        <div class="kick" style="color:#C0392B">Deportes <span>/ Anatomía de un dato</span></div>
+        <h3>Las Leonas son campeonas del mundo: la beca más alta que paga el Estado a un deportista es de $1.699.500 por mes, un 8,6% arriba de la línea de pobreza</h3>
+        <p>Las 20 campeonas del Mundial de hockey figuran en la nómina de becados del ENARD. Quince cobran la beca máxima, cuatro una intermedia y una $404.481. Cruzamos los dos documentos oficiales del organismo con el plantel campeón, nombre por nombre. La aclaración que ordena todo: esa beca no es un sueldo.</p>
         <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>30 seg → 11 min<span class="dot"></span>30 ago 2026</div>
       </div>
-      <div class="l-num"><span class="ln" style="font-size:24px">US$2.916 M</span><span class="ll">compra neta de dólar billete de las personas humanas en julio de 2026 (BCRA)</span></div>
+      <div class="l-num"><span class="ln" style="font-size:24px">$1.699.500</span><span class="ll">beca mensual máxima del ENARD para un atleta; la cobran 15 de las 20 campeonas del mundo</span></div>
     </a><div class="grid">
-    <a class="card" data-sec="ECONOMÍA" href="articulos/2026-08-27-a-quien-le-llega-distribucion.html" style="--sc:#0E7C86">
-      
-      <h3>Si la macro va bien, ¿a quién le llega? La distribución de la mejora, en datos</h3>
-      <div class="card-num"><b>15 veces</b> gana el 10% más rico vs el más pobre (INDEC)</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>27 ago 2026</div>
-    </a>
+    <a class="card" data-sec="ECONOMÍA" href="articulos/2026-08-30-dolares-personas-humanas-julio.html" style="--sc:#0E7C86">
+      <div class="kick" style="color:#0E7C86">Tu plata</div>
+      <h3>Los argentinos compraron US$2.916 millones en dólar billete en julio, el máximo en nueve meses — y un tercio se fue a pagar la tarjeta</h3>
+      <div class="card-num"><b>US$2.916 M</b> compra neta de dólar billete de las personas humanas en julio de 2026 (BCRA)</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>30 ago 2026</div>
+    </a></div></div>
+    </section>
+    <section class="dia" id="d-2026-08-27">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>jueves 27 de agosto</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">4 notas</span>
+      </div>
+      <div class="dia-body">
+    <a class="lider" href="articulos/2026-08-27-a-quien-le-llega-distribucion.html" style="--sc:#0E7C86">
+      <div class="l-body">
+        <div class="kick" style="color:#0E7C86">Tu plata <span>/ Anatomía de un dato</span></div>
+        <h3>Si la macro va bien, ¿a quién le llega? La distribución de la mejora, en datos</h3>
+        <p>La pobreza se desplomó de 52,9% a 28,2% en año y medio —un avance social real—, pero la desigualdad volvió a subir, el 10% más rico gana 15 veces lo del más pobre y los salarios se recuperaron de forma muy despareja. La distribución de la mejora, con datos del INDEC.</p>
+        <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>30 seg → 11 min<span class="dot"></span>27 ago 2026</div>
+      </div>
+      <div class="l-num"><span class="ln" style="font-size:32px">15 veces</span><span class="ll">gana el 10% más rico vs el más pobre (INDEC)</span></div>
+    </a><div class="grid">
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-08-27-tres-variables-36-meses.html" style="--sc:#0E7C86">
-      
+      <div class="kick" style="color:#0E7C86">Tu plata</div>
       <h3>Inflación, dólar y tasa: los 36 meses que transformaron la macro argentina</h3>
       <div class="card-num"><b>36</b> meses de inflación, dólar y tasa (INDEC + BCRA)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>27 ago 2026</div>
     </a>
     <a class="card" data-sec="ECONOMÍA" href="articulos/2026-08-27-inflacion-agosto-proyecciones.html" style="--sc:#0E7C86">
-      
+      <div class="kick" style="color:#0E7C86">Tu plata</div>
       <h3>¿Sorpresa con la inflación? Los alimentos desaceleran y las proyecciones se acercan al 1,5%</h3>
       <div class="card-num"><b>~1,6%</b> inflación de agosto que proyectan las consultoras (estimación)</div>
       <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>27 ago 2026</div>
     </a></div><div class="rows">
-    <a class="row" href="articulos/2026-08-26-caputo-hipotecarios-fgs-anses.html">
-      <span class="r-num" style="color:#0E7C86">$2 billones</span>
-      <span class="r-tit">El plan hipotecario de $2 billones de Caputo: de dónde sale la plata, cómo funciona y a quién llega</span>
-      <span class="r-fecha">26 ago 2026</span>
+    <a class="row" href="articulos/2026-08-27-inocencia-fiscal-2.html">
+      <span class="r-num" style="color:#C4701F">−50%</span>
+      <span class="r-tit">Inocencia Fiscal II: qué le baja al contribuyente — multas hasta 50% menos y un freno a ARCA</span>
+      <span class="r-fecha">27 ago 2026</span>
+    </a></div></div>
+    </section>
+    <section class="dia" id="d-2026-08-26">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>miércoles 26 de agosto</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">2 notas</span>
+      </div>
+      <div class="dia-body"><div class="grid">
+    <a class="card" data-sec="ECONOMÍA" href="articulos/2026-08-26-caputo-hipotecarios-fgs-anses.html" style="--sc:#0E7C86">
+      <div class="kick" style="color:#0E7C86">Tu plata</div>
+      <h3>El plan hipotecario de $2 billones de Caputo: de dónde sale la plata, cómo funciona y a quién llega</h3>
+      <div class="card-num"><b>$2 billones</b> del FGS de ANSES para crédito hipotecario</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>26 ago 2026</div>
     </a>
-    <a class="row" href="articulos/2026-07-25-pollo-record-consumo-49-kilos.html">
-      <span class="r-num" style="color:#0E7C86">49,4 kg</span>
-      <span class="r-tit">El pollo, imbatible en la mesa argentina: récord de 49,4 kilos por persona en 2025</span>
-      <span class="r-fecha">25 jul 2026</span>
+    <a class="card" data-sec="ECONOMÍA PROVINCIAL" href="articulos/2026-08-26-chaco-deuda-bono-dolares.html" style="--sc:#2E8B6F">
+      <div class="kick" style="color:#2E8B6F">Tu provincia</div>
+      <h3>El bono de US$250 millones: Chaco entra en la recta final de su deuda en dólares — pero el stock total sigue subiendo</h3>
+      <div class="card-num"><b>US$250 M</b> bono en dólares de Chaco (2016)</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>26 ago 2026</div>
+    </a></div></div>
+    </section>
+    <section class="dia" id="d-2026-08-25">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>martes 25 de agosto</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">3 notas</span>
+      </div>
+      <div class="dia-body"><div class="grid">
+    <a class="card" data-sec="MERCADOS" href="articulos/2026-08-25-reservas-bcra-record.html" style="--sc:#0A5C63">
+      <div class="kick" style="color:#0A5C63">Los mercados</div>
+      <h3>Reservas del BCRA: récord de US$50.912 millones, el mayor nivel desde 2019 — pero ¿de quién son esos dólares?</h3>
+      <div class="card-num"><b>US$50.912 M</b> reservas brutas del BCRA (récord, 25/8/2026)</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>25 ago 2026</div>
     </a>
+    <a class="card" data-sec="ECONOMÍA" href="articulos/2026-08-25-nuclear-record-exportacion.html" style="--sc:#C4701F">
+      <div class="kick" style="color:#C4701F">El país</div>
+      <h3>Récord nuclear: Argentina generó 10,76 millones de MWh en 2025 y exportó tecnología atómica por primera vez</h3>
+      <div class="card-num"><b>10,76 M</b> MWh: récord de generación nuclear (2025)</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>25 ago 2026</div>
+    </a>
+    <a class="card" data-sec="MERCADOS" href="articulos/2026-08-25-mercadolibre-ingresos-record.html" style="--sc:#0A5C63">
+      <div class="kick" style="color:#0A5C63">Los mercados</div>
+      <h3>Mercado Libre facturó más de US$10.000 millones en un trimestre por primera vez — y aun así ganó menos</h3>
+      <div class="card-num"><b>US$10.169M</b> ingresos de Mercado Libre en el 2º trimestre 2026</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>25 ago 2026</div>
+    </a></div></div>
+    </section>
+    <section class="dia" id="d-2026-07-31">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>viernes 31 de julio</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">1 nota</span>
+      </div>
+      <div class="dia-body"><div class="grid">
+    <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-31-alquileres-caba-oferta-multiplico.html" style="--sc:#0E7C86">
+      <div class="kick" style="color:#0E7C86">Tu plata</div>
+      <h3>El mercado de alquileres se dio vuelta: la oferta en CABA se multiplicó por casi cuatro</h3>
+      <div class="card-num"><b>+287,9%</b> creció la oferta de departamentos en alquiler en CABA desde la derogación de la Ley de Alquileres (Mercado Libre–UdeSA, jun 2026)</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>31 jul 2026</div>
+    </a></div></div>
+    </section>
+    <section class="dia" id="d-2026-07-25">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>sábado 25 de julio</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">1 nota</span>
+      </div>
+      <div class="dia-body"><div class="grid">
+    <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-25-pollo-record-consumo-49-kilos.html" style="--sc:#0E7C86">
+      <div class="kick" style="color:#0E7C86">Tu plata</div>
+      <h3>El pollo, imbatible en la mesa argentina: récord de 49,4 kilos por persona en 2025</h3>
+      <div class="card-num"><b>49,4 kg</b> consumo de carne de pollo por habitante en 2025 — récord histórico (CEPA); supera los 48,1 kg de 2024</div>
+      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>25 jul 2026</div>
+    </a></div></div>
+    </section>
+    <section class="dia" id="d-2026-07-24">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>viernes 24 de julio</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">5 notas</span>
+      </div>
+      <div class="dia-body"><div class="rows">
     <a class="row" href="articulos/2026-07-24-consumo-shoppings-vs-supermercados.html">
       <span class="r-num" style="color:#0E7C86">+11,9%</span>
       <span class="r-tit">El consumo se parte en dos: los shoppings crecieron 11,9% en mayo mientras el súper siguió en rojo</span>
       <span class="r-fecha">24 jul 2026</span>
     </a>
-    <a class="row" href="articulos/2026-07-31-alquileres-caba-oferta-multiplico.html">
-      <span class="r-num" style="color:#0E7C86">+287,9%</span>
-      <span class="r-tit">El mercado de alquileres se dio vuelta: la oferta en CABA se multiplicó por casi cuatro</span>
-      <span class="r-fecha">31 jul 2026</span>
-    </a></div><a class="vertodas" href="seccion-tu-plata.html">Ver las 32 notas de Tu plata <span class="fl">&rarr;</span></a>
-    </section>
-    <section class="sec-group" id="sec-el-pais">
-      <div class="sec-head"><h2 style="color:#C4701F">El país</h2><span class="sec-sub">actividad · empleo · cuentas públicas · energía</span><span class="rh-rule"></span><span class="sec-count">39 notas</span></div>
-      
-    <a class="lider" href="articulos/2026-08-27-inocencia-fiscal-2.html" style="--sc:#C4701F">
-      <div class="l-body">
-        <div class="kick" style="color:#C4701F">El país <span>/ Anatomía de una medida</span></div>
-        <h3>Inocencia Fiscal II: qué le baja al contribuyente — multas hasta 50% menos y un freno a ARCA</h3>
-        <p>Diputados le dio media sanción y el proyecto pasó al Senado. Si se convierte en ley, las multas formales bajan hasta la mitad, se presume que tu declaración jurada es correcta, y sólo una &#x27;discrepancia significativa&#x27; —de al menos 15% y por encima de unos $5 millones— habilitará a ARCA a impugnarla.</p>
-        <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>30 seg → 10 min<span class="dot"></span>27 ago 2026</div>
-      </div>
-      <div class="l-num"><span class="ln" style="font-size:42px">−50%</span><span class="ll">reducción de multas formales (Inocencia Fiscal II)</span></div>
-    </a><div class="grid">
-    <a class="card" data-sec="ECONOMÍA" href="articulos/2026-08-25-nuclear-record-exportacion.html" style="--sc:#C4701F">
-      
-      <h3>Récord nuclear: Argentina generó 10,76 millones de MWh en 2025 y exportó tecnología atómica por primera vez</h3>
-      <div class="card-num"><b>10,76 M</b> MWh: récord de generación nuclear (2025)</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>25 ago 2026</div>
+    <a class="row" href="articulos/2026-07-24-litio-produccion-record.html">
+      <span class="r-num" style="color:#C4701F">+45,1%</span>
+      <span class="r-tit">El litio pisa el acelerador: la producción creció 45% en un año y empuja a la minería a su nivel más alto desde 2017</span>
+      <span class="r-fecha">24 jul 2026</span>
     </a>
-    <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-24-litio-produccion-record.html" style="--sc:#C4701F">
-      
-      <h3>El litio pisa el acelerador: la producción creció 45% en un año y empuja a la minería a su nivel más alto desde 2017</h3>
-      <div class="card-num"><b>+45,1%</b> creció la producción de carbonato de litio en mayo 2026 (interanual); el índice minero, en su nivel más alto desde 2017</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>24 jul 2026</div>
+    <a class="row" href="articulos/2026-07-24-girasol-boom-exportaciones.html">
+      <span class="r-num" style="color:#C4701F">US$1.674 M</span>
+      <span class="r-tit">El renacer del girasol: las exportaciones se más que duplicaron y tocaron su mayor nivel en dos décadas</span>
+      <span class="r-fecha">24 jul 2026</span>
     </a>
-    <a class="card" data-sec="ECONOMÍA" href="articulos/2026-07-24-girasol-boom-exportaciones.html" style="--sc:#C4701F">
-      
-      <h3>El renacer del girasol: las exportaciones se más que duplicaron y tocaron su mayor nivel en dos décadas</h3>
-      <div class="card-num"><b>US$1.674 M</b> exportó el complejo girasolero en enero-mayo 2026 (+126% i.a., el mayor nivel en dos décadas)</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>24 jul 2026</div>
-    </a></div><div class="rows">
     <a class="row" href="articulos/2026-07-24-record-pasajeros-avion.html">
       <span class="r-num" style="color:#C4701F">24,57 M</span>
       <span class="r-tit">Nunca volaron tantos: 24,57 millones de pasajeros en el semestre, pero el récord lo hizo el vuelo internacional</span>
@@ -344,141 +453,232 @@
       <span class="r-num" style="color:#C4701F">US$321.783 M</span>
       <span class="r-tit">La deuda externa marcó un nuevo máximo: US$321.783 millones, y dos de cada tres dólares los debe el Estado</span>
       <span class="r-fecha">24 jul 2026</span>
+    </a></div></div>
+    </section>
+    <section class="dia" id="d-2026-07-23">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>jueves 23 de julio</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">13 notas</span>
+      </div>
+      <div class="dia-body"><div class="rows">
+    <a class="row" href="articulos/2026-07-23-prepagas-cobertura-salud.html">
+      <span class="r-num" style="color:#0E7C86">742.000</span>
+      <span class="r-tit">Las prepagas subieron 417% en dos años y 742.000 personas se quedaron sin cobertura privada</span>
+      <span class="r-fecha">23 jul 2026</span>
+    </a>
+    <a class="row" href="articulos/2026-07-23-combustibles-mayo-freno-caida.html">
+      <span class="r-num" style="color:#0E7C86">−0,2%</span>
+      <span class="r-tit">La venta de combustibles casi dejó de caer: −0,2% en mayo, la baja más chica del año</span>
+      <span class="r-fecha">23 jul 2026</span>
     </a>
     <a class="row" href="articulos/2026-07-23-globant-accion-desplome-90.html">
       <span class="r-num" style="color:#C4701F">-91%</span>
       <span class="r-tit">Globant, el unicornio argentino: la acción se desplomó 91% desde su pico y volvió a valores de 2017</span>
       <span class="r-fecha">23 jul 2026</span>
     </a>
+    <a class="row" href="articulos/2026-07-23-brecha-cambiaria-dolar-blue.html">
+      <span class="r-num" style="color:#0A5C63">+1,6%</span>
+      <span class="r-tit">El dólar blue tocó un récord de $1.555 y aun así casi no se movió en el año: la historia del paralelo que se quedó quieto</span>
+      <span class="r-fecha">23 jul 2026</span>
+    </a>
+    <a class="row" href="articulos/2026-07-23-fci-record-money-market.html">
+      <span class="r-num" style="color:#0A5C63">US$67.500 M</span>
+      <span class="r-tit">Los fondos comunes tocaron un récord de US$67.500 millones — pero el money market dejó de ganarle a la inflación</span>
+      <span class="r-fecha">23 jul 2026</span>
+    </a>
     <a class="row" href="articulos/2026-07-23-produccion-acero-junio.html">
       <span class="r-num" style="color:#C4701F">320.100 t</span>
       <span class="r-tit">320.100 toneladas de acero: por qué el mismo dato dice “cae” y “crece” a la vez</span>
       <span class="r-fecha">23 jul 2026</span>
-    </a></div><a class="vertodas" href="seccion-el-pais.html">Ver las 39 notas de El país <span class="fl">&rarr;</span></a>
+    </a></div><a class="mas-dia" href="archivo.html#d-2026-07-23"><span class="mm">&#8853;</span> ver las otras 7 notas del día</a></div>
     </section>
-    <section class="sec-group" id="sec-los-mercados">
-      <div class="sec-head"><h2 style="color:#0A5C63">Los mercados</h2><span class="sec-sub">dólar · bonos · empresas · inversión</span><span class="rh-rule"></span><span class="sec-count">12 notas</span></div>
-      
-    <a class="lider" href="articulos/2026-08-25-reservas-bcra-record.html" style="--sc:#0A5C63">
-      <div class="l-body">
-        <div class="kick" style="color:#0A5C63">Los mercados <span>/ Anatomía de un dato</span></div>
-        <h3>Reservas del BCRA: récord de US$50.912 millones, el mayor nivel desde 2019 — pero ¿de quién son esos dólares?</h3>
-        <p>Las reservas brutas del Banco Central encadenaron récords en agosto y tocaron su punto más alto en casi siete años. Detrás del número grande, una distinción que cambia la lectura: cuánto de esa montaña de dólares es realmente del Banco Central y cuánto son swaps, préstamos del FMI y la suba del oro.</p>
-        <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>30 seg → 9 min<span class="dot"></span>25 ago 2026</div>
+    <section class="dia" id="d-2026-07-22">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>miércoles 22 de julio</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">15 notas</span>
       </div>
-      <div class="l-num"><span class="ln" style="font-size:24px">US$50.912 M</span><span class="ll">reservas brutas del BCRA (récord, 25/8/2026)</span></div>
-    </a><div class="grid">
-    <a class="card" data-sec="MERCADOS" href="articulos/2026-08-25-mercadolibre-ingresos-record.html" style="--sc:#0A5C63">
-      
-      <h3>Mercado Libre facturó más de US$10.000 millones en un trimestre por primera vez — y aun así ganó menos</h3>
-      <div class="card-num"><b>US$10.169M</b> ingresos de Mercado Libre en el 2º trimestre 2026</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>25 ago 2026</div>
+      <div class="dia-body"><div class="rows">
+    <a class="row" href="articulos/2026-07-22-swap-china-repago-renovacion.html">
+      <span class="r-num" style="color:#C4701F">US$679 M</span>
+      <span class="r-tit">El swap con China: Argentina repagó casi 9 de cada 10 dólares que debía, pero renueva el acuerdo de US$19.000 millones</span>
+      <span class="r-fecha">22 jul 2026</span>
     </a>
-    <a class="card" data-sec="MERCADOS" href="articulos/2026-07-23-brecha-cambiaria-dolar-blue.html" style="--sc:#0A5C63">
-      
-      <h3>El dólar blue tocó un récord de $1.555 y aun así casi no se movió en el año: la historia del paralelo que se quedó quieto</h3>
-      <div class="card-num"><b>+1,6%</b> subió el dólar blue en lo que va de 2026 —hasta su récord nominal de $1.555— mientras la inflación acumuló ~17% (relevamientos de mercado; INDEC)</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>23 jul 2026</div>
+    <a class="row" href="articulos/2026-07-22-emae-actividad-mayo-freno.html">
+      <span class="r-num" style="color:#C4701F">−0,5%</span>
+      <span class="r-tit">La actividad cayó 0,5% en mayo, su segundo mes en baja: el rebote se frenó</span>
+      <span class="r-fecha">22 jul 2026</span>
     </a>
-    <a class="card" data-sec="MERCADOS" href="articulos/2026-07-23-fci-record-money-market.html" style="--sc:#0A5C63">
-      
-      <h3>Los fondos comunes tocaron un récord de US$67.500 millones — pero el money market dejó de ganarle a la inflación</h3>
-      <div class="card-num"><b>US$67.500 M</b> patrimonio récord de la industria de FCI a junio 2026 (+31% en dólares desde fin de 2025); dentro, el money market en pesos cae a ~50% y rinde por debajo de la inflación (CAFCI; PPI; INDEC)</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>23 jul 2026</div>
-    </a></div><div class="rows">
+    <a class="row" href="articulos/2026-07-22-distribucion-ingreso-desigualdad.html">
+      <span class="r-num" style="color:#C4701F">33,5%</span>
+      <span class="r-tit">El 10% más rico se quedó con un tercio del ingreso: la desigualdad volvió a subir</span>
+      <span class="r-fecha">22 jul 2026</span>
+    </a>
     <a class="row" href="articulos/2026-07-22-riesgo-pais-cerca-400.html">
       <span class="r-num" style="color:#0A5C63">410 pb</span>
       <span class="r-tit">El riesgo país cae hacia los 400 puntos: la puerta de vuelta a los mercados de deuda</span>
+      <span class="r-fecha">22 jul 2026</span>
+    </a>
+    <a class="row" href="articulos/2026-07-22-autos-usados-junio-mejor-mes.html">
+      <span class="r-num" style="color:#C4701F">155.492</span>
+      <span class="r-tit">Junio movió 155.492 autos usados, el mejor mes del año — pero el semestre cerró en baja</span>
       <span class="r-fecha">22 jul 2026</span>
     </a>
     <a class="row" href="articulos/2026-07-22-rem-bcra-dolar-proyeccion.html">
       <span class="r-num" style="color:#0A5C63">$1.673</span>
       <span class="r-tit">El mercado le pone número al dólar de fin de año: $1.673</span>
       <span class="r-fecha">22 jul 2026</span>
+    </a></div><a class="mas-dia" href="archivo.html#d-2026-07-22"><span class="mm">&#8853;</span> ver las otras 9 notas del día</a></div>
+    </section>
+    <section class="dia" id="d-2026-07-21">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>martes 21 de julio</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">8 notas</span>
+      </div>
+      <div class="dia-body"><div class="rows">
+    <a class="row" href="articulos/2026-07-21-rigi-pampa-4521-millones.html">
+      <span class="r-num" style="color:#C4701F">US$4.521 M</span>
+      <span class="r-tit">US$4.521 millones para Vaca Muerta: el proyecto que dejó al RIGI al borde de los US$46.000 millones</span>
+      <span class="r-fecha">21 jul 2026</span>
     </a>
-    <a class="row" href="articulos/2026-07-22-moodys-sube-calificacion-b3.html">
-      <span class="r-num" style="color:#0A5C63">B3</span>
-      <span class="r-tit">Moody&#x27;s subió la nota de Argentina a B3: qué cambia (y qué no) cuando las tres calificadoras se alinean</span>
-      <span class="r-fecha">22 jul 2026</span>
+    <a class="row" href="articulos/2026-07-21-record-gas-neuquen-gnl.html">
+      <span class="r-num" style="color:#C4701F">115</span>
+      <span class="r-tit">Récord de gas en Neuquén: 115 millones de m³ por día, y por qué el país todavía importa barcos en invierno</span>
+      <span class="r-fecha">21 jul 2026</span>
     </a>
-    <a class="row" href="articulos/2026-07-20-soja-mercado-seis-meses.html">
-      <span class="r-num" style="color:#0A5C63">US$12,15</span>
-      <span class="r-tit">Soja: qué está diciendo el mercado sobre los próximos seis meses</span>
+    <a class="row" href="articulos/2026-07-21-cheques-rechazados-cadena-pagos.html">
+      <span class="r-num" style="color:#C4701F">99.431</span>
+      <span class="r-tit">Casi 100.000 cheques rebotaron en un mes: la otra cara de la calma económica</span>
+      <span class="r-fecha">21 jul 2026</span>
+    </a>
+    <a class="row" href="articulos/2026-07-21-credito-privado-rebota-empresas.html">
+      <span class="r-num" style="color:#0E7C86">+1,7%</span>
+      <span class="r-tit">El crédito cortó cinco meses de caída: subió 1,7% en junio, pero lo empujaron las empresas</span>
+      <span class="r-fecha">21 jul 2026</span>
+    </a>
+    <a class="row" href="articulos/2026-07-21-compras-courier-se-duplican.html">
+      <span class="r-num" style="color:#0E7C86">US$643 M</span>
+      <span class="r-tit">Las compras al exterior por courier se duplicaron: US$643 millones de Shein, Temu y Amazon en seis meses</span>
+      <span class="r-fecha">21 jul 2026</span>
+    </a>
+    <a class="row" href="articulos/2026-07-21-empleo-registrado-abril-anatomia.html">
+      <span class="r-num" style="color:#C4701F">28.736</span>
+      <span class="r-tit">Se perdieron 28.736 empleos registrados en abril, pero solo 4 de cada 10 eran asalariados privados</span>
+      <span class="r-fecha">21 jul 2026</span>
+    </a></div><a class="mas-dia" href="archivo.html#d-2026-07-21"><span class="mm">&#8853;</span> ver las otras 2 notas del día</a></div>
+    </section>
+    <section class="dia" id="d-2026-07-20">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>lunes 20 de julio</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">11 notas</span>
+      </div>
+      <div class="dia-body"><div class="rows">
+    <a class="row" href="articulos/2026-07-20-mora-familias-record.html">
+      <span class="r-num" style="color:#0E7C86">12,1%</span>
+      <span class="r-tit">La mora de las familias llegó a 12,1%: el récord de deudas impagas que la desinflación todavía no frena</span>
       <span class="r-fecha">20 jul 2026</span>
-    </a></div><a class="vertodas" href="seccion-los-mercados.html">Ver las 12 notas de Los mercados <span class="fl">&rarr;</span></a>
+    </a>
+    <a class="row" href="articulos/2026-07-20-corralones-construccion-buenos-aires.html">
+      <span class="r-num" style="color:#2E8B6F">+4,1%</span>
+      <span class="r-tit">La construcción rebota en las estadísticas, pero no en el mostrador del corralón</span>
+      <span class="r-fecha">20 jul 2026</span>
+    </a>
+    <a class="row" href="articulos/2026-07-20-ia-no-reemplaza-oficios.html">
+      <span class="r-num" style="color:#C4701F">3,3%</span>
+      <span class="r-tit">Por qué la inteligencia artificial no viene por el plomero — y sí por el oficinista</span>
+      <span class="r-fecha">20 jul 2026</span>
+    </a>
+    <a class="row" href="articulos/2026-07-20-bono-jubilados-congelado.html">
+      <span class="r-num" style="color:#0E7C86">$70.000</span>
+      <span class="r-tit">El número que no se movió: el bono a los jubilados lleva más de dos años congelado en $70.000</span>
+      <span class="r-fecha">20 jul 2026</span>
+    </a>
+    <a class="row" href="articulos/2026-07-20-deuda-publica-dos-lecturas.html">
+      <span class="r-num" style="color:#C4701F">US$474.192 M</span>
+      <span class="r-tit">La deuda pública bajó por segundo mes seguido — y sigue a un paso de su récord</span>
+      <span class="r-fecha">20 jul 2026</span>
+    </a>
+    <a class="row" href="articulos/2026-07-20-carne-vacuna-consumo-minimo-record-exportacion.html">
+      <span class="r-num" style="color:#0E7C86">47,5 kg</span>
+      <span class="r-tit">La carne se exporta como nunca y se come como hace veinte años</span>
+      <span class="r-fecha">20 jul 2026</span>
+    </a></div><a class="mas-dia" href="archivo.html#d-2026-07-20"><span class="mm">&#8853;</span> ver las otras 5 notas del día</a></div>
     </section>
-    <section class="sec-group" id="sec-tu-provincia">
-      <div class="sec-head"><h2 style="color:#2E8B6F">Tu provincia</h2><span class="sec-sub">las economías del interior, en números</span><span class="rh-rule"></span><span class="sec-count">7 notas</span></div>
-      
-    <a class="lider" href="articulos/2026-08-26-chaco-deuda-bono-dolares.html" style="--sc:#2E8B6F">
-      <div class="l-body">
-        <div class="kick" style="color:#2E8B6F">Tu provincia <span>/ Anatomía de un dato</span></div>
-        <h3>El bono de US$250 millones: Chaco entra en la recta final de su deuda en dólares — pero el stock total sigue subiendo</h3>
-        <p>La provincia pagó en agosto la sexta de nueve cuotas —US$34 millones— del bono en dólares que emitió en 2016, y le quedan tres hasta febrero de 2028. Mientras salda su deuda en moneda dura más pesada, el stock total de deuda chaqueña creció 34,2% real en un año, muy por encima del promedio de las provincias.</p>
-        <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>30 seg → 9 min<span class="dot"></span>26 ago 2026</div>
+    <section class="dia" id="d-2026-07-19">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>domingo 19 de julio</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">23 notas</span>
       </div>
-      <div class="l-num"><span class="ln" style="font-size:32px">US$250 M</span><span class="ll">bono en dólares de Chaco (2016)</span></div>
-    </a><div class="grid">
-    <a class="card" data-sec="ECONOMÍA PROVINCIAL" href="articulos/2026-07-22-vino-mas-litros-menos-dolares.html" style="--sc:#2E8B6F">
-      
-      <h3>Argentina exportó 14,2% más vino y casi los mismos dólares: la trampa del granel barato</h3>
-      <div class="card-num"><b>+14,2%</b> más volumen de vino exportado (1er semestre 2026)</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>22 jul 2026</div>
-    </a>
-    <a class="card" data-sec="ECONOMÍA PROVINCIAL" href="articulos/2026-07-20-corralones-construccion-buenos-aires.html" style="--sc:#2E8B6F">
-      
-      <h3>La construcción rebota en las estadísticas, pero no en el mostrador del corralón</h3>
-      <div class="card-num"><b>+4,1%</b> creció la construcción en mayo (ISAC-INDEC), pero la venta de materiales cae</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>20 jul 2026</div>
-    </a>
-    <a class="card" data-sec="ECONOMÍA PROVINCIAL" href="articulos/2026-07-19-economia-misiones.html" style="--sc:#2E8B6F">
-      
-      <h3>La economía de Misiones en números: yerba, té y la provincia que más industrializa del NEA</h3>
-      <div class="card-num"><b>85%</b> de la yerba mate del país se produce acá</div>
-      <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>19 jul 2026</div>
-    </a></div><div class="rows">
-    <a class="row" href="articulos/2026-07-19-economia-formosa.html">
-      <span class="r-num" style="color:#2E8B6F">82%</span>
-      <span class="r-tit">La economía de Formosa en números: la provincia que más depende del Estado nacional</span>
+      <div class="dia-body"><div class="rows">
+    <a class="row" href="articulos/2026-07-19-bcra-compra-record-dolares.html">
+      <span class="r-num" style="color:#0A5C63">US$532 M</span>
+      <span class="r-tit">El Banco Central compró US$532 millones en un día: el récord de la era Milei, con un asterisco</span>
       <span class="r-fecha">19 jul 2026</span>
     </a>
-    <a class="row" href="articulos/2026-07-19-economia-corrientes.html">
-      <span class="r-num" style="color:#2E8B6F">47,5%</span>
-      <span class="r-tit">La economía de Corrientes en números: el país del arroz, el bosque y los esteros</span>
+    <a class="row" href="articulos/2026-07-19-mineria-record-litio.html">
+      <span class="r-num" style="color:#C4701F">US$3.934 M</span>
+      <span class="r-tit">La minería batió un récord de US$3.934 millones y el litio se transformó en su nueva estrella</span>
       <span class="r-fecha">19 jul 2026</span>
     </a>
-    <a class="row" href="articulos/2026-07-19-economia-chaco.html">
-      <span class="r-num" style="color:#2E8B6F">1,6%</span>
-      <span class="r-tit">La economía del Chaco en números: qué produce, cuánto exporta y de qué vive</span>
+    <a class="row" href="articulos/2026-07-19-superavit-comercial-record-mayo.html">
+      <span class="r-num" style="color:#C4701F">US$3.504 M</span>
+      <span class="r-tit">US$3.504 millones: el mayor superávit comercial de la serie — y a dónde van esos dólares</span>
       <span class="r-fecha">19 jul 2026</span>
-    </a></div>
-    </section>
-    <section class="sec-group" id="sec-el-mundo">
-      <div class="sec-head"><h2 style="color:#7A5CC4">El mundo</h2><span class="sec-sub">lo global que toca a la Argentina</span><span class="rh-rule"></span><span class="sec-count">1 notas</span></div>
-      
-    <a class="lider" href="articulos/2026-07-18-malvinas-sea-lion.html" style="--sc:#7A5CC4">
-      <div class="l-body">
-        <div class="kick" style="color:#7A5CC4">El mundo <span>/ Anatomía de un dato</span></div>
-        <h3>Sea Lion: cuánto petróleo hay en juego en Malvinas (y por qué podría dar vuelta la economía de las islas)</h3>
-        <p>En diciembre se aprobó la inversión para extraer petróleo del mar que rodea a las Malvinas. El proyecto cuesta casi seis veces todo lo que producen las islas en un año. Argentina protesta por soberanía; los números explican por qué el tema no va a desaparecer.</p>
-        <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>30 seg → 10 min<span class="dot"></span>18 jul 2026</div>
-      </div>
-      <div class="l-num"><span class="ln" style="font-size:24px">US$2.100 M</span><span class="ll">inversión del proyecto Sea Lion</span></div>
     </a>
-    </section>
-    <section class="sec-group" id="sec-deportes">
-      <div class="sec-head"><h2 style="color:#C0392B">Deportes</h2><span class="sec-sub">la economía del deporte, en números</span><span class="rh-rule"></span><span class="sec-count">1 notas</span></div>
-      
-    <a class="lider" href="articulos/2026-08-30-leonas-becas-enard.html" style="--sc:#C0392B">
-      <div class="l-body">
-        <div class="kick" style="color:#C0392B">Deportes <span>/ Anatomía de un dato</span></div>
-        <h3>Las Leonas son campeonas del mundo: la beca más alta que paga el Estado a un deportista es de $1.699.500 por mes, un 8,6% arriba de la línea de pobreza</h3>
-        <p>Las 20 campeonas del Mundial de hockey figuran en la nómina de becados del ENARD. Quince cobran la beca máxima, cuatro una intermedia y una $404.481. Cruzamos los dos documentos oficiales del organismo con el plantel campeón, nombre por nombre. La aclaración que ordena todo: esa beca no es un sueldo.</p>
-        <div class="meta"><span class="verif ok">&#10003; Verificada</span><span class="dot"></span>30 seg → 11 min<span class="dot"></span>30 ago 2026</div>
-      </div>
-      <div class="l-num"><span class="ln" style="font-size:24px">$1.699.500</span><span class="ll">beca mensual máxima del ENARD para un atleta; la cobran 15 de las 20 campeonas del mundo</span></div>
+    <a class="row" href="articulos/2026-07-19-produccion-autos-tercer-ano-baja.html">
+      <span class="r-num" style="color:#C4701F">204.658</span>
+      <span class="r-tit">La fábrica se apaga: la producción de autos cayó 18,3% y va por su tercer año en baja</span>
+      <span class="r-fecha">19 jul 2026</span>
     </a>
+    <a class="row" href="articulos/2026-07-19-carga-deuda-familias-salario.html">
+      <span class="r-num" style="color:#0E7C86">24,1%</span>
+      <span class="r-tit">El 24,1% del salario formal ya se va en pagar deudas: el freno oculto al consumo</span>
+      <span class="r-fecha">19 jul 2026</span>
+    </a>
+    <a class="row" href="articulos/2026-07-19-capacidad-instalada-industria-ociosa.html">
+      <span class="r-num" style="color:#C4701F">58,4%</span>
+      <span class="r-tit">La industria usó el 58,4% de su capacidad en mayo: cuatro de cada diez máquinas, paradas</span>
+      <span class="r-fecha">19 jul 2026</span>
+    </a></div><a class="mas-dia" href="archivo.html#d-2026-07-19"><span class="mm">&#8853;</span> ver las otras 17 notas del día</a></div>
     </section>
+    <section class="dia" id="d-2026-07-18">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>sábado 18 de julio</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">4 notas</span>
+      </div>
+      <div class="dia-body"><div class="rows">
+    <a class="row" href="articulos/2026-07-18-depositos-dolares-record.html">
+      <span class="r-num" style="color:#0A5C63">US$40.437 M</span>
+      <span class="r-tit">Los depósitos privados en dólares tocaron US$40.437 millones: el nivel más alto en 26 años</span>
+      <span class="r-fecha">18 jul 2026</span>
+    </a>
+    <a class="row" href="articulos/2026-07-18-vaca-muerta-superavit-energetico.html">
+      <span class="r-num" style="color:#C4701F">67%</span>
+      <span class="r-tit">Dos de cada tres barriles: cómo Vaca Muerta dio vuelta la balanza energética argentina</span>
+      <span class="r-fecha">18 jul 2026</span>
+    </a>
+    <a class="row" href="articulos/2026-07-18-malvinas-sea-lion.html">
+      <span class="r-num" style="color:#7A5CC4">US$2.100 M</span>
+      <span class="r-tit">Sea Lion: cuánto petróleo hay en juego en Malvinas (y por qué podría dar vuelta la economía de las islas)</span>
+      <span class="r-fecha">18 jul 2026</span>
+    </a>
+    <a class="row" href="articulos/2026-07-18-inflacion-argentina.html">
+      <span class="r-num" style="color:#0E7C86">1,9%</span>
+      <span class="r-tit">La inflación bajó a 1,9%: por qué los números buenos todavía no se sienten en la calle</span>
+      <span class="r-fecha">18 jul 2026</span>
+    </a></div></div>
+    </section></div>
   
 <section class="learn-band">
   <div class="lb-body">

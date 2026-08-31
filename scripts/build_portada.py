@@ -173,7 +173,6 @@ def fila(a):
 # es la primera de la lista. Después vienen 4 DESTACADAS (las más recientes) y el
 # resto se agrupa POR SECCIÓN — portada curada, no un muro de notas.
 lead = next((a for a in articulos if a.get("destacada")), None) or (articulos[0] if articulos else None)
-lead_html = card_lead(lead) if lead else '<p class="empty">Todavía no hay notas publicadas.</p>'
 
 resto = [a for a in articulos if a is not lead]
 destacadas = resto[:4]
@@ -186,34 +185,81 @@ if destacadas:
         '<div class="grid grid-2">' + "\n".join(card(a, con_kick=True) for a in destacadas) + "</div>"
     )
 
-secciones_html = ""
-for g in GRUPOS:
-    notas = [a for a in por_seccion if grupo_de(a) == g["id"]]
-    if not notas:
-        continue
-    # RITMO editorial: 1 líder (historia) + hasta 3 en número + lista compacta;
-    # lo más viejo queda plegado en "ver más".
-    lider_g = notas[0]
-    en_numero = notas[1:4]
-    compactas = notas[4:8]
-    plegadas = notas[8:]
-    cuerpo = card_lider(lider_g)
-    if en_numero:
-        cuerpo += '<div class="grid">' + "".join(card(a) for a in en_numero) + "</div>"
-    if compactas:
-        cuerpo += '<div class="rows">' + "".join(fila(a) for a in compactas) + "</div>"
-    if plegadas:
-        # ya no se pliegan en la portada: viven en la pagina de la seccion
-        cuerpo += (f'<a class="vertodas" href="{url_seccion(g["id"])}">'
-                   f'Ver las {len(notas)} notas de {escape(g["label"])} <span class="fl">&rarr;</span></a>')
-    secciones_html += f"""
-    <section class="sec-group" id="sec-{g['id']}">
-      <div class="sec-head"><h2 style="color:{g['color']}">{escape(g['label'])}</h2><span class="sec-sub">{escape(g['sub'])}</span><span class="rh-rule"></span><span class="sec-count">{len(notas)} notas</span></div>
-      {cuerpo}
+# ---- LINEA DE TIEMPO: la portada se ordena por dia, no por seccion --------
+# Cada dia es un nodo de la linea. Dentro del dia hay jerarquia: la nota
+# destacada va grande, dos en tarjeta y hasta tres en fila. Si el dia tiene
+# mas, se enlaza al archivo, que esta agrupado por dia.
+DIAS_LARGO = ["lunes","martes","miercoles","jueves","viernes","sabado","domingo"]
+DIAS_LARGO = ["lunes","martes","miércoles","jueves","viernes","sábado","domingo"]
+MESES_LARGO = ["enero","febrero","marzo","abril","mayo","junio",
+               "julio","agosto","septiembre","octubre","noviembre","diciembre"]
+TOPE_DIA = 6
+# La portada suma un dia por dia, asi que el detalle se degrada con la
+# antiguedad: los primeros dias llevan tarjeta grande, los siguientes tarjetas
+# normales y los mas viejos solo filas. Asi la linea de tiempo queda completa
+# sin que la pagina crezca sin techo.
+DIAS_DESTACADOS = 3   # con tarjeta grande
+DIAS_CON_TARJETA = 7  # hasta aca, con tarjetas; despues solo filas
+
+def titulo_dia(f, es_hoy=False):
+    try:
+        d = datetime.date.fromisoformat(f)
+        t = f"{DIAS_LARGO[d.weekday()]} {d.day} de {MESES_LARGO[d.month-1]}"
+        return ("HOY · " + t) if es_hoy else t
+    except Exception:
+        return f
+
+_por_dia = {}
+for a in articulos:
+    _por_dia.setdefault(a["fecha"], []).append(a)
+_dias = sorted(_por_dia, reverse=True)
+_hoy = portal.get("actualizado", "")[:10]
+
+timeline_html = ""
+for i, f in enumerate(_dias):
+    del_dia = _por_dia[f]
+    # dentro del dia manda la marcada como destacada; si no, la primera
+    dest = next((a for a in del_dia if a.get("destacada")), del_dia[0])
+    resto = [a for a in del_dia if a is not dest]
+    en_tarjeta = resto[:2]
+    en_fila = resto[2:TOPE_DIA - 1]
+    sobran = len(resto) - len(en_tarjeta) - len(en_fila)
+
+    if i < DIAS_DESTACADOS:
+        # dia reciente: tarjeta grande + tarjetas + filas
+        cuerpo_d = card_lider(dest)
+        if en_tarjeta:
+            cuerpo_d += '<div class="grid">' + "".join(card(a, con_kick=True) for a in en_tarjeta) + "</div>"
+        if en_fila:
+            cuerpo_d += '<div class="rows">' + "".join(fila(a) for a in en_fila) + "</div>"
+    elif i < DIAS_CON_TARJETA:
+        # dia intermedio: todo en tarjetas normales, sin la grande
+        cuerpo_d = ('<div class="grid">' + card(dest, con_kick=True)
+                    + "".join(card(a, con_kick=True) for a in en_tarjeta) + "</div>")
+        if en_fila:
+            cuerpo_d += '<div class="rows">' + "".join(fila(a) for a in en_fila) + "</div>"
+    else:
+        # dia viejo: solo filas, que es lo que menos pesa
+        cuerpo_d = ('<div class="rows">'
+                    + "".join(fila(a) for a in [dest] + en_tarjeta + en_fila) + "</div>")
+    if sobran > 0:
+        cuerpo_d += (f'<a class="mas-dia" href="archivo.html#d-{f}">'
+                     f'<span class="mm">&#8853;</span> ver las otras {sobran} notas del d\u00eda</a>')
+
+    timeline_html += f"""
+    <section class="dia" id="d-{f}">
+      <div class="dia-head">
+        <span class="dia-punto"></span>
+        <h2>{escape(titulo_dia(f, f == _hoy))}</h2>
+        <span class="dia-rule"></span>
+        <span class="dia-count">{len(del_dia)} {'nota' if len(del_dia) == 1 else 'notas'}</span>
+      </div>
+      <div class="dia-body">{cuerpo_d}</div>
     </section>"""
 
-if not (destacadas_html or secciones_html):
-    secciones_html = '<p class="empty small">La redacción publicará más notas en las próximas horas.</p>'
+if not timeline_html:
+    timeline_html = '<p class="empty small">La redacción publicará más notas en las próximas horas.</p>'
+timeline_html = '<div class="timeline">' + timeline_html + '</div>'
 
 # ---- banda Modo Aprendizaje ---------------------------------------------
 aprender_html = """
@@ -301,7 +347,10 @@ CSS = """<style>
   .concept .item{color:#CFC9BF} .concept .item b{color:#fff;font-weight:600}
   .concept .sep{color:#3E3A34}
 
-  .secnav{border-bottom:1px solid var(--rule);position:sticky;top:96px;background:var(--paper);z-index:60;box-shadow:0 1px 0 rgba(22,19,15,.04)}
+  /* top lo fija apilar() midiendo masthead + ticker. El default es 0 y no 96px
+     a proposito: si el ticker no carga, la barra queda pegada al masthead en vez
+     de dejar un hueco por el que se ve pasar el contenido. */
+  .secnav{border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--paper);z-index:60;box-shadow:0 1px 0 rgba(22,19,15,.04)}
   .lema{border-bottom:1px solid var(--rule);background:var(--paper)}
   .lema .wrap{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;padding:16px 24px 15px}
   .lema .l1{font-family:var(--serif);font-size:clamp(19px,2.4vw,26px);font-weight:700;font-style:italic;color:var(--ink);letter-spacing:-.02em;font-optical-sizing:auto}
@@ -351,7 +400,7 @@ CSS = """<style>
   .rh-rule{flex:1;height:1px;background:var(--rule)}
   .sec-head h2{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0}
   .sec-count{font-family:var(--mono);font-size:11px;color:var(--faint)}
-  .sec-group{scroll-margin-top:calc(var(--stack,150px) + 8px)}
+  .sec-group,.dia,.dia-bloque,.mes-sep{scroll-margin-top:calc(var(--stack,150px) + 8px)}
 
   .learn-band{background:linear-gradient(120deg,#16130F,#0A5C63);border-radius:16px;padding:32px 34px;margin:40px 0 6px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
   .learn-band .lb-kick{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#E8833A;font-weight:600;margin-bottom:8px}
@@ -441,8 +490,36 @@ CSS = """<style>
   .sec-hero p{font-size:15px;color:var(--muted);margin:0}
   .sec-hero .volver{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;
     display:inline-block;margin-bottom:12px}
-  .mes-bloque{margin-bottom:30px}
-  .mes-bloque .sec-head h2{font-size:19px}
+  .mes-sep{display:flex;align-items:center;gap:12px;margin:34px 0 20px -26px;padding-left:26px}
+  .mes-sep h2{font-family:var(--serif);font-size:22px;font-weight:700;margin:0;text-transform:capitalize}
+  .dia-bloque{margin-bottom:26px}
+  /* ---------- linea de tiempo por dia ---------- */
+  .timeline{position:relative;padding-left:26px;margin-top:26px}
+  .timeline:before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:2px;
+    background:linear-gradient(180deg,var(--ink) 0%,var(--rule) 92%,transparent 100%)}
+  .dia{position:relative;margin-bottom:38px}
+  .dia-head{display:flex;align-items:center;gap:12px;margin:0 0 16px -26px;padding-left:26px;position:relative}
+  .dia-punto{position:absolute;left:0;top:50%;transform:translateY(-50%);width:12px;height:12px;
+    border-radius:50%;background:var(--ink);box-shadow:0 0 0 4px var(--paper)}
+  .dia:first-child .dia-punto{background:var(--amber);box-shadow:0 0 0 4px var(--paper),0 0 0 7px rgba(196,112,31,.25)}
+  .dia-head h2{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--ink);margin:0;white-space:nowrap}
+  .dia:first-child .dia-head h2{color:var(--amber)}
+  .dia-rule{flex:1;height:1px;background:var(--rule)}
+  .dia-count{font-family:var(--mono);font-size:11px;color:var(--faint);white-space:nowrap}
+  .dia-body>*+*{margin-top:14px}
+  .mas-dia{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12.5px;
+    color:var(--muted);text-decoration:none;border:1px dashed var(--rule);border-radius:999px;
+    padding:8px 15px;transition:.15s}
+  .mas-dia:hover{border-color:var(--teal);color:var(--teal-deep);border-style:solid}
+  .mas-dia .mm{font-size:14px}
+  @media(max-width:600px){
+    .timeline{padding-left:18px}
+    .timeline:before{left:3px}
+    .dia-head{margin-left:-18px;padding-left:18px;gap:8px}
+    .dia-head h2{font-size:11.5px;white-space:normal}
+    .dia-punto{width:9px;height:9px}
+  }
 </style>"""
 
 HTML = f"""<!DOCTYPE html>
@@ -488,10 +565,8 @@ HTML = f"""<!DOCTYPE html>
 <div class="lema"><div class="wrap"><span class="l1">Entender no debería costarte nada<span class="fin">.</span></span><span class="l2">Datos verificados, explicados sin jerga, sin pedirte nada a cambio.</span></div></div>
 
 <main class="wrap">
-  {lead_html}
   <div id="ci-semaforo"></div>
-  {destacadas_html}
-  {secciones_html}
+  {timeline_html}
   {aprender_html}
   {cola_html}
 </main>
@@ -654,6 +729,45 @@ for g in GRUPOS:
   </div>
 </footer>
 
+<script>
+(function(){{
+  // 1) Apila masthead + ticker + barra de secciones como encabezado fijo,
+  //    midiendo alturas reales. Sin esto la barra de secciones queda flotando
+  //    sobre el contenido, porque el ticker se inyecta de forma asincrona.
+  var mast=document.querySelector('.masthead'), sn=document.querySelector('.secnav');
+  function apilar(){{
+    var tk=document.getElementById('ci-ticker');
+    var h1=mast?mast.offsetHeight:0;
+    var h2=tk?tk.offsetHeight:0;
+    if(tk){{ tk.style.position='sticky'; tk.style.top=h1+'px'; tk.style.zIndex=65; }}
+    if(sn) sn.style.top=(h1+h2)+'px';
+    document.documentElement.style.setProperty('--stack',(h1+h2+(sn?sn.offsetHeight:0))+'px');
+  }}
+  // 2) El mismo desplazamiento desfasa el salto al ancla que hace el
+  //    navegador, asi que se rehace cuando la pagina termina de acomodarse.
+  function irAlAncla(){{
+    if(!location.hash) return;
+    var el=document.getElementById(location.hash.slice(1));
+    if(el) el.scrollIntoView({{block:"start"}});
+  }}
+  // Mientras el ticker termina de cargar el contenido se sigue moviendo, asi
+  // que hay que rehacer el salto varias veces. Pero si el lector ya scrolleo,
+  // se deja de corregir: nada peor que la pagina saltando sola.
+  var libre = true;
+  ['wheel','touchmove','keydown'].forEach(function(ev){{
+    window.addEventListener(ev, function(){{ libre = false; }}, {{passive:true}});
+  }});
+  apilar();
+  window.addEventListener('resize', apilar);
+  window.addEventListener('load', function(){{ apilar(); if(libre) irAlAncla(); }});
+  var t=0, iv=setInterval(function(){{
+    apilar();
+    if(libre) irAlAncla();
+    if(++t>12) clearInterval(iv);
+  }}, 300);
+  window.addEventListener('hashchange', function(){{ libre = true; irAlAncla(); }});
+}})();
+</script>
 <!-- CI-WIDGETS --><script defer src="assets/ticker.js?v=4"></script>
 </body>
 </html>"""
@@ -669,18 +783,22 @@ for g in GRUPOS:
 MESES_LARGO = ["enero","febrero","marzo","abril","mayo","junio",
                "julio","agosto","septiembre","octubre","noviembre","diciembre"]
 
-_por_mes = {}
-for a in articulos:
-    y, m, _ = a["fecha"].split("-")
-    _por_mes.setdefault((int(y), int(m)), []).append(a)
-
+# se agrupa por DIA, con un ancla id="d-AAAA-MM-DD" para que la portada
+# pueda enlazar "ver las otras N notas del dia". El mes queda como separador.
 _bloques = ""
-for (y, m) in sorted(_por_mes, reverse=True):
-    notas_m = _por_mes[(y, m)]
+_mes_actual = None
+for f in sorted(_por_dia, reverse=True):
+    y, m, _d = (int(x) for x in f.split("-"))
+    if (y, m) != _mes_actual:
+        _mes_actual = (y, m)
+        _n_mes = sum(1 for a in articulos if a["fecha"].startswith(f"{y}-{m:02d}"))
+        _bloques += f"""
+    <div class="mes-sep"><h2>{MESES_LARGO[m-1]} de {y}</h2><span class="rh-rule"></span><span class="sec-count">{_n_mes} notas</span></div>"""
+    notas_d = _por_dia[f]
     _bloques += f"""
-    <section class="mes-bloque">
-      <div class="sec-head"><h2>{MESES_LARGO[m-1]} de {y}</h2><span class="rh-rule"></span><span class="sec-count">{len(notas_m)} notas</span></div>
-      <div class="rows">{"".join(fila(a) for a in notas_m)}</div>
+    <section class="dia-bloque" id="d-{f}">
+      <div class="dia-head"><span class="dia-punto"></span><h2>{escape(titulo_dia(f))}</h2><span class="dia-rule"></span><span class="dia-count">{len(notas_d)} {'nota' if len(notas_d)==1 else 'notas'}</span></div>
+      <div class="rows">{"".join(fila(a) for a in notas_d)}</div>
     </section>"""
 
 _desc_arch = f"Todas las notas de {portal['nombre']}, mes por mes: {len(articulos)} datos verificados de la economia argentina."
@@ -721,7 +839,7 @@ ARCHIVO = f"""<!DOCTYPE html>
     <h1>Archivo</h1>
     <p>Todas las notas publicadas, de la más nueva a la más vieja &middot; {len(articulos)} en total</p>
   </div>
-  {_bloques}
+  <div class="timeline">{_bloques}</div>
 </main>
 
 <footer>
@@ -735,6 +853,45 @@ ARCHIVO = f"""<!DOCTYPE html>
   </div>
 </footer>
 
+<script>
+(function(){{
+  // 1) Apila masthead + ticker + barra de secciones como encabezado fijo,
+  //    midiendo alturas reales. Sin esto la barra de secciones queda flotando
+  //    sobre el contenido, porque el ticker se inyecta de forma asincrona.
+  var mast=document.querySelector('.masthead'), sn=document.querySelector('.secnav');
+  function apilar(){{
+    var tk=document.getElementById('ci-ticker');
+    var h1=mast?mast.offsetHeight:0;
+    var h2=tk?tk.offsetHeight:0;
+    if(tk){{ tk.style.position='sticky'; tk.style.top=h1+'px'; tk.style.zIndex=65; }}
+    if(sn) sn.style.top=(h1+h2)+'px';
+    document.documentElement.style.setProperty('--stack',(h1+h2+(sn?sn.offsetHeight:0))+'px');
+  }}
+  // 2) El mismo desplazamiento desfasa el salto al ancla que hace el
+  //    navegador, asi que se rehace cuando la pagina termina de acomodarse.
+  function irAlAncla(){{
+    if(!location.hash) return;
+    var el=document.getElementById(location.hash.slice(1));
+    if(el) el.scrollIntoView({{block:"start"}});
+  }}
+  // Mientras el ticker termina de cargar el contenido se sigue moviendo, asi
+  // que hay que rehacer el salto varias veces. Pero si el lector ya scrolleo,
+  // se deja de corregir: nada peor que la pagina saltando sola.
+  var libre = true;
+  ['wheel','touchmove','keydown'].forEach(function(ev){{
+    window.addEventListener(ev, function(){{ libre = false; }}, {{passive:true}});
+  }});
+  apilar();
+  window.addEventListener('resize', apilar);
+  window.addEventListener('load', function(){{ apilar(); if(libre) irAlAncla(); }});
+  var t=0, iv=setInterval(function(){{
+    apilar();
+    if(libre) irAlAncla();
+    if(++t>12) clearInterval(iv);
+  }}, 300);
+  window.addEventListener('hashchange', function(){{ libre = true; irAlAncla(); }});
+}})();
+</script>
 <!-- CI-WIDGETS --><script defer src="assets/ticker.js?v=4"></script>
 </body>
 </html>"""
@@ -859,6 +1016,45 @@ HOY = f"""<!DOCTYPE html>
   }}
   window.addEventListener('scroll',tick,{{passive:true}});
   tick();
+}})();
+</script>
+<script>
+(function(){{
+  // 1) Apila masthead + ticker + barra de secciones como encabezado fijo,
+  //    midiendo alturas reales. Sin esto la barra de secciones queda flotando
+  //    sobre el contenido, porque el ticker se inyecta de forma asincrona.
+  var mast=document.querySelector('.masthead'), sn=document.querySelector('.secnav');
+  function apilar(){{
+    var tk=document.getElementById('ci-ticker');
+    var h1=mast?mast.offsetHeight:0;
+    var h2=tk?tk.offsetHeight:0;
+    if(tk){{ tk.style.position='sticky'; tk.style.top=h1+'px'; tk.style.zIndex=65; }}
+    if(sn) sn.style.top=(h1+h2)+'px';
+    document.documentElement.style.setProperty('--stack',(h1+h2+(sn?sn.offsetHeight:0))+'px');
+  }}
+  // 2) El mismo desplazamiento desfasa el salto al ancla que hace el
+  //    navegador, asi que se rehace cuando la pagina termina de acomodarse.
+  function irAlAncla(){{
+    if(!location.hash) return;
+    var el=document.getElementById(location.hash.slice(1));
+    if(el) el.scrollIntoView({{block:"start"}});
+  }}
+  // Mientras el ticker termina de cargar el contenido se sigue moviendo, asi
+  // que hay que rehacer el salto varias veces. Pero si el lector ya scrolleo,
+  // se deja de corregir: nada peor que la pagina saltando sola.
+  var libre = true;
+  ['wheel','touchmove','keydown'].forEach(function(ev){{
+    window.addEventListener(ev, function(){{ libre = false; }}, {{passive:true}});
+  }});
+  apilar();
+  window.addEventListener('resize', apilar);
+  window.addEventListener('load', function(){{ apilar(); if(libre) irAlAncla(); }});
+  var t=0, iv=setInterval(function(){{
+    apilar();
+    if(libre) irAlAncla();
+    if(++t>12) clearInterval(iv);
+  }}, 300);
+  window.addEventListener('hashchange', function(){{ libre = true; irAlAncla(); }});
 }})();
 </script>
 <!-- CI-WIDGETS --><script defer src="assets/ticker.js?v=5"></script>

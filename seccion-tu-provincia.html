@@ -44,7 +44,10 @@
   .concept .item{color:#CFC9BF} .concept .item b{color:#fff;font-weight:600}
   .concept .sep{color:#3E3A34}
 
-  .secnav{border-bottom:1px solid var(--rule);position:sticky;top:96px;background:var(--paper);z-index:60;box-shadow:0 1px 0 rgba(22,19,15,.04)}
+  /* top lo fija apilar() midiendo masthead + ticker. El default es 0 y no 96px
+     a proposito: si el ticker no carga, la barra queda pegada al masthead en vez
+     de dejar un hueco por el que se ve pasar el contenido. */
+  .secnav{border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--paper);z-index:60;box-shadow:0 1px 0 rgba(22,19,15,.04)}
   .lema{border-bottom:1px solid var(--rule);background:var(--paper)}
   .lema .wrap{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;padding:16px 24px 15px}
   .lema .l1{font-family:var(--serif);font-size:clamp(19px,2.4vw,26px);font-weight:700;font-style:italic;color:var(--ink);letter-spacing:-.02em;font-optical-sizing:auto}
@@ -94,7 +97,7 @@
   .rh-rule{flex:1;height:1px;background:var(--rule)}
   .sec-head h2{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0}
   .sec-count{font-family:var(--mono);font-size:11px;color:var(--faint)}
-  .sec-group{scroll-margin-top:calc(var(--stack,150px) + 8px)}
+  .sec-group,.dia,.dia-bloque,.mes-sep{scroll-margin-top:calc(var(--stack,150px) + 8px)}
 
   .learn-band{background:linear-gradient(120deg,#16130F,#0A5C63);border-radius:16px;padding:32px 34px;margin:40px 0 6px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
   .learn-band .lb-kick{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#E8833A;font-weight:600;margin-bottom:8px}
@@ -184,8 +187,36 @@
   .sec-hero p{font-size:15px;color:var(--muted);margin:0}
   .sec-hero .volver{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;
     display:inline-block;margin-bottom:12px}
-  .mes-bloque{margin-bottom:30px}
-  .mes-bloque .sec-head h2{font-size:19px}
+  .mes-sep{display:flex;align-items:center;gap:12px;margin:34px 0 20px -26px;padding-left:26px}
+  .mes-sep h2{font-family:var(--serif);font-size:22px;font-weight:700;margin:0;text-transform:capitalize}
+  .dia-bloque{margin-bottom:26px}
+  /* ---------- linea de tiempo por dia ---------- */
+  .timeline{position:relative;padding-left:26px;margin-top:26px}
+  .timeline:before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:2px;
+    background:linear-gradient(180deg,var(--ink) 0%,var(--rule) 92%,transparent 100%)}
+  .dia{position:relative;margin-bottom:38px}
+  .dia-head{display:flex;align-items:center;gap:12px;margin:0 0 16px -26px;padding-left:26px;position:relative}
+  .dia-punto{position:absolute;left:0;top:50%;transform:translateY(-50%);width:12px;height:12px;
+    border-radius:50%;background:var(--ink);box-shadow:0 0 0 4px var(--paper)}
+  .dia:first-child .dia-punto{background:var(--amber);box-shadow:0 0 0 4px var(--paper),0 0 0 7px rgba(196,112,31,.25)}
+  .dia-head h2{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--ink);margin:0;white-space:nowrap}
+  .dia:first-child .dia-head h2{color:var(--amber)}
+  .dia-rule{flex:1;height:1px;background:var(--rule)}
+  .dia-count{font-family:var(--mono);font-size:11px;color:var(--faint);white-space:nowrap}
+  .dia-body>*+*{margin-top:14px}
+  .mas-dia{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12.5px;
+    color:var(--muted);text-decoration:none;border:1px dashed var(--rule);border-radius:999px;
+    padding:8px 15px;transition:.15s}
+  .mas-dia:hover{border-color:var(--teal);color:var(--teal-deep);border-style:solid}
+  .mas-dia .mm{font-size:14px}
+  @media(max-width:600px){
+    .timeline{padding-left:18px}
+    .timeline:before{left:3px}
+    .dia-head{margin-left:-18px;padding-left:18px;gap:8px}
+    .dia-head h2{font-size:11.5px;white-space:normal}
+    .dia-punto{width:9px;height:9px}
+  }
 </style>
 </head>
 <body>
@@ -265,6 +296,45 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  // 1) Apila masthead + ticker + barra de secciones como encabezado fijo,
+  //    midiendo alturas reales. Sin esto la barra de secciones queda flotando
+  //    sobre el contenido, porque el ticker se inyecta de forma asincrona.
+  var mast=document.querySelector('.masthead'), sn=document.querySelector('.secnav');
+  function apilar(){
+    var tk=document.getElementById('ci-ticker');
+    var h1=mast?mast.offsetHeight:0;
+    var h2=tk?tk.offsetHeight:0;
+    if(tk){ tk.style.position='sticky'; tk.style.top=h1+'px'; tk.style.zIndex=65; }
+    if(sn) sn.style.top=(h1+h2)+'px';
+    document.documentElement.style.setProperty('--stack',(h1+h2+(sn?sn.offsetHeight:0))+'px');
+  }
+  // 2) El mismo desplazamiento desfasa el salto al ancla que hace el
+  //    navegador, asi que se rehace cuando la pagina termina de acomodarse.
+  function irAlAncla(){
+    if(!location.hash) return;
+    var el=document.getElementById(location.hash.slice(1));
+    if(el) el.scrollIntoView({block:"start"});
+  }
+  // Mientras el ticker termina de cargar el contenido se sigue moviendo, asi
+  // que hay que rehacer el salto varias veces. Pero si el lector ya scrolleo,
+  // se deja de corregir: nada peor que la pagina saltando sola.
+  var libre = true;
+  ['wheel','touchmove','keydown'].forEach(function(ev){
+    window.addEventListener(ev, function(){ libre = false; }, {passive:true});
+  });
+  apilar();
+  window.addEventListener('resize', apilar);
+  window.addEventListener('load', function(){ apilar(); if(libre) irAlAncla(); });
+  var t=0, iv=setInterval(function(){
+    apilar();
+    if(libre) irAlAncla();
+    if(++t>12) clearInterval(iv);
+  }, 300);
+  window.addEventListener('hashchange', function(){ libre = true; irAlAncla(); });
+})();
+</script>
 <!-- CI-WIDGETS --><script defer src="assets/ticker.js?v=4"></script>
 </body>
 </html>

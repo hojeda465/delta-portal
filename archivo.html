@@ -44,7 +44,10 @@
   .concept .item{color:#CFC9BF} .concept .item b{color:#fff;font-weight:600}
   .concept .sep{color:#3E3A34}
 
-  .secnav{border-bottom:1px solid var(--rule);position:sticky;top:96px;background:var(--paper);z-index:60;box-shadow:0 1px 0 rgba(22,19,15,.04)}
+  /* top lo fija apilar() midiendo masthead + ticker. El default es 0 y no 96px
+     a proposito: si el ticker no carga, la barra queda pegada al masthead en vez
+     de dejar un hueco por el que se ve pasar el contenido. */
+  .secnav{border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--paper);z-index:60;box-shadow:0 1px 0 rgba(22,19,15,.04)}
   .lema{border-bottom:1px solid var(--rule);background:var(--paper)}
   .lema .wrap{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;padding:16px 24px 15px}
   .lema .l1{font-family:var(--serif);font-size:clamp(19px,2.4vw,26px);font-weight:700;font-style:italic;color:var(--ink);letter-spacing:-.02em;font-optical-sizing:auto}
@@ -94,7 +97,7 @@
   .rh-rule{flex:1;height:1px;background:var(--rule)}
   .sec-head h2{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0}
   .sec-count{font-family:var(--mono);font-size:11px;color:var(--faint)}
-  .sec-group{scroll-margin-top:calc(var(--stack,150px) + 8px)}
+  .sec-group,.dia,.dia-bloque,.mes-sep{scroll-margin-top:calc(var(--stack,150px) + 8px)}
 
   .learn-band{background:linear-gradient(120deg,#16130F,#0A5C63);border-radius:16px;padding:32px 34px;margin:40px 0 6px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
   .learn-band .lb-kick{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#E8833A;font-weight:600;margin-bottom:8px}
@@ -184,8 +187,36 @@
   .sec-hero p{font-size:15px;color:var(--muted);margin:0}
   .sec-hero .volver{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;
     display:inline-block;margin-bottom:12px}
-  .mes-bloque{margin-bottom:30px}
-  .mes-bloque .sec-head h2{font-size:19px}
+  .mes-sep{display:flex;align-items:center;gap:12px;margin:34px 0 20px -26px;padding-left:26px}
+  .mes-sep h2{font-family:var(--serif);font-size:22px;font-weight:700;margin:0;text-transform:capitalize}
+  .dia-bloque{margin-bottom:26px}
+  /* ---------- linea de tiempo por dia ---------- */
+  .timeline{position:relative;padding-left:26px;margin-top:26px}
+  .timeline:before{content:"";position:absolute;left:5px;top:8px;bottom:8px;width:2px;
+    background:linear-gradient(180deg,var(--ink) 0%,var(--rule) 92%,transparent 100%)}
+  .dia{position:relative;margin-bottom:38px}
+  .dia-head{display:flex;align-items:center;gap:12px;margin:0 0 16px -26px;padding-left:26px;position:relative}
+  .dia-punto{position:absolute;left:0;top:50%;transform:translateY(-50%);width:12px;height:12px;
+    border-radius:50%;background:var(--ink);box-shadow:0 0 0 4px var(--paper)}
+  .dia:first-child .dia-punto{background:var(--amber);box-shadow:0 0 0 4px var(--paper),0 0 0 7px rgba(196,112,31,.25)}
+  .dia-head h2{font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--ink);margin:0;white-space:nowrap}
+  .dia:first-child .dia-head h2{color:var(--amber)}
+  .dia-rule{flex:1;height:1px;background:var(--rule)}
+  .dia-count{font-family:var(--mono);font-size:11px;color:var(--faint);white-space:nowrap}
+  .dia-body>*+*{margin-top:14px}
+  .mas-dia{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12.5px;
+    color:var(--muted);text-decoration:none;border:1px dashed var(--rule);border-radius:999px;
+    padding:8px 15px;transition:.15s}
+  .mas-dia:hover{border-color:var(--teal);color:var(--teal-deep);border-style:solid}
+  .mas-dia .mm{font-size:14px}
+  @media(max-width:600px){
+    .timeline{padding-left:18px}
+    .timeline:before{left:3px}
+    .dia-head{margin-left:-18px;padding-left:18px;gap:8px}
+    .dia-head h2{font-size:11.5px;white-space:normal}
+    .dia-punto{width:9px;height:9px}
+  }
 </style>
 </head>
 <body>
@@ -205,9 +236,10 @@
     <h1>Archivo</h1>
     <p>Todas las notas publicadas, de la más nueva a la más vieja &middot; 97 en total</p>
   </div>
-  
-    <section class="mes-bloque">
-      <div class="sec-head"><h2>agosto de 2026</h2><span class="rh-rule"></span><span class="sec-count">16 notas</span></div>
+  <div class="timeline">
+    <div class="mes-sep"><h2>agosto de 2026</h2><span class="rh-rule"></span><span class="sec-count">16 notas</span></div>
+    <section class="dia-bloque" id="d-2026-08-31">
+      <div class="dia-head"><span class="dia-punto"></span><h2>lunes 31 de agosto</h2><span class="dia-rule"></span><span class="dia-count">5 notas</span></div>
       <div class="rows">
     <a class="row" href="articulos/2026-08-31-messi-empresario-balances.html">
       <span class="r-num" style="color:#0A5C63">€61,9 M</span>
@@ -233,7 +265,11 @@
       <span class="r-num" style="color:#C4701F">912.939 b/d</span>
       <span class="r-tit">La Argentina bombea más petróleo que nunca: 912.939 barriles por día en julio, y el récord de 1998 quedó 54.635 barriles atrás</span>
       <span class="r-fecha">31 ago 2026</span>
-    </a>
+    </a></div>
+    </section>
+    <section class="dia-bloque" id="d-2026-08-30">
+      <div class="dia-head"><span class="dia-punto"></span><h2>domingo 30 de agosto</h2><span class="dia-rule"></span><span class="dia-count">2 notas</span></div>
+      <div class="rows">
     <a class="row" href="articulos/2026-08-30-leonas-becas-enard.html">
       <span class="r-num" style="color:#C0392B">$1.699.500</span>
       <span class="r-tit">Las Leonas son campeonas del mundo: la beca más alta que paga el Estado a un deportista es de $1.699.500 por mes, un 8,6% arriba de la línea de pobreza</span>
@@ -243,7 +279,11 @@
       <span class="r-num" style="color:#0E7C86">US$2.916 M</span>
       <span class="r-tit">Los argentinos compraron US$2.916 millones en dólar billete en julio, el máximo en nueve meses — y un tercio se fue a pagar la tarjeta</span>
       <span class="r-fecha">30 ago 2026</span>
-    </a>
+    </a></div>
+    </section>
+    <section class="dia-bloque" id="d-2026-08-27">
+      <div class="dia-head"><span class="dia-punto"></span><h2>jueves 27 de agosto</h2><span class="dia-rule"></span><span class="dia-count">4 notas</span></div>
+      <div class="rows">
     <a class="row" href="articulos/2026-08-27-a-quien-le-llega-distribucion.html">
       <span class="r-num" style="color:#0E7C86">15 veces</span>
       <span class="r-tit">Si la macro va bien, ¿a quién le llega? La distribución de la mejora, en datos</span>
@@ -263,7 +303,11 @@
       <span class="r-num" style="color:#C4701F">−50%</span>
       <span class="r-tit">Inocencia Fiscal II: qué le baja al contribuyente — multas hasta 50% menos y un freno a ARCA</span>
       <span class="r-fecha">27 ago 2026</span>
-    </a>
+    </a></div>
+    </section>
+    <section class="dia-bloque" id="d-2026-08-26">
+      <div class="dia-head"><span class="dia-punto"></span><h2>miércoles 26 de agosto</h2><span class="dia-rule"></span><span class="dia-count">2 notas</span></div>
+      <div class="rows">
     <a class="row" href="articulos/2026-08-26-caputo-hipotecarios-fgs-anses.html">
       <span class="r-num" style="color:#0E7C86">$2 billones</span>
       <span class="r-tit">El plan hipotecario de $2 billones de Caputo: de dónde sale la plata, cómo funciona y a quién llega</span>
@@ -273,7 +317,11 @@
       <span class="r-num" style="color:#2E8B6F">US$250 M</span>
       <span class="r-tit">El bono de US$250 millones: Chaco entra en la recta final de su deuda en dólares — pero el stock total sigue subiendo</span>
       <span class="r-fecha">26 ago 2026</span>
-    </a>
+    </a></div>
+    </section>
+    <section class="dia-bloque" id="d-2026-08-25">
+      <div class="dia-head"><span class="dia-punto"></span><h2>martes 25 de agosto</h2><span class="dia-rule"></span><span class="dia-count">3 notas</span></div>
+      <div class="rows">
     <a class="row" href="articulos/2026-08-25-reservas-bcra-record.html">
       <span class="r-num" style="color:#0A5C63">US$50.912 M</span>
       <span class="r-tit">Reservas del BCRA: récord de US$50.912 millones, el mayor nivel desde 2019 — pero ¿de quién son esos dólares?</span>
@@ -290,14 +338,28 @@
       <span class="r-fecha">25 ago 2026</span>
     </a></div>
     </section>
-    <section class="mes-bloque">
-      <div class="sec-head"><h2>julio de 2026</h2><span class="rh-rule"></span><span class="sec-count">81 notas</span></div>
+    <div class="mes-sep"><h2>julio de 2026</h2><span class="rh-rule"></span><span class="sec-count">81 notas</span></div>
+    <section class="dia-bloque" id="d-2026-07-31">
+      <div class="dia-head"><span class="dia-punto"></span><h2>viernes 31 de julio</h2><span class="dia-rule"></span><span class="dia-count">1 nota</span></div>
+      <div class="rows">
+    <a class="row" href="articulos/2026-07-31-alquileres-caba-oferta-multiplico.html">
+      <span class="r-num" style="color:#0E7C86">+287,9%</span>
+      <span class="r-tit">El mercado de alquileres se dio vuelta: la oferta en CABA se multiplicó por casi cuatro</span>
+      <span class="r-fecha">31 jul 2026</span>
+    </a></div>
+    </section>
+    <section class="dia-bloque" id="d-2026-07-25">
+      <div class="dia-head"><span class="dia-punto"></span><h2>sábado 25 de julio</h2><span class="dia-rule"></span><span class="dia-count">1 nota</span></div>
       <div class="rows">
     <a class="row" href="articulos/2026-07-25-pollo-record-consumo-49-kilos.html">
       <span class="r-num" style="color:#0E7C86">49,4 kg</span>
       <span class="r-tit">El pollo, imbatible en la mesa argentina: récord de 49,4 kilos por persona en 2025</span>
       <span class="r-fecha">25 jul 2026</span>
-    </a>
+    </a></div>
+    </section>
+    <section class="dia-bloque" id="d-2026-07-24">
+      <div class="dia-head"><span class="dia-punto"></span><h2>viernes 24 de julio</h2><span class="dia-rule"></span><span class="dia-count">5 notas</span></div>
+      <div class="rows">
     <a class="row" href="articulos/2026-07-24-consumo-shoppings-vs-supermercados.html">
       <span class="r-num" style="color:#0E7C86">+11,9%</span>
       <span class="r-tit">El consumo se parte en dos: los shoppings crecieron 11,9% en mayo mientras el súper siguió en rojo</span>
@@ -313,11 +375,6 @@
       <span class="r-tit">El renacer del girasol: las exportaciones se más que duplicaron y tocaron su mayor nivel en dos décadas</span>
       <span class="r-fecha">24 jul 2026</span>
     </a>
-    <a class="row" href="articulos/2026-07-31-alquileres-caba-oferta-multiplico.html">
-      <span class="r-num" style="color:#0E7C86">+287,9%</span>
-      <span class="r-tit">El mercado de alquileres se dio vuelta: la oferta en CABA se multiplicó por casi cuatro</span>
-      <span class="r-fecha">31 jul 2026</span>
-    </a>
     <a class="row" href="articulos/2026-07-24-record-pasajeros-avion.html">
       <span class="r-num" style="color:#C4701F">24,57 M</span>
       <span class="r-tit">Nunca volaron tantos: 24,57 millones de pasajeros en el semestre, pero el récord lo hizo el vuelo internacional</span>
@@ -327,7 +384,11 @@
       <span class="r-num" style="color:#C4701F">US$321.783 M</span>
       <span class="r-tit">La deuda externa marcó un nuevo máximo: US$321.783 millones, y dos de cada tres dólares los debe el Estado</span>
       <span class="r-fecha">24 jul 2026</span>
-    </a>
+    </a></div>
+    </section>
+    <section class="dia-bloque" id="d-2026-07-23">
+      <div class="dia-head"><span class="dia-punto"></span><h2>jueves 23 de julio</h2><span class="dia-rule"></span><span class="dia-count">13 notas</span></div>
+      <div class="rows">
     <a class="row" href="articulos/2026-07-23-prepagas-cobertura-salud.html">
       <span class="r-num" style="color:#0E7C86">742.000</span>
       <span class="r-tit">Las prepagas subieron 417% en dos años y 742.000 personas se quedaron sin cobertura privada</span>
@@ -392,7 +453,11 @@
       <span class="r-num" style="color:#0E7C86">US$13.378 M</span>
       <span class="r-tit">Más granos, menos dólares: el agro liquidó US$13.378 millones en el semestre, 13% menos que en 2025</span>
       <span class="r-fecha">23 jul 2026</span>
-    </a>
+    </a></div>
+    </section>
+    <section class="dia-bloque" id="d-2026-07-22">
+      <div class="dia-head"><span class="dia-punto"></span><h2>miércoles 22 de julio</h2><span class="dia-rule"></span><span class="dia-count">15 notas</span></div>
+      <div class="rows">
     <a class="row" href="articulos/2026-07-22-swap-china-repago-renovacion.html">
       <span class="r-num" style="color:#C4701F">US$679 M</span>
       <span class="r-tit">El swap con China: Argentina repagó casi 9 de cada 10 dólares que debía, pero renueva el acuerdo de US$19.000 millones</span>
@@ -467,7 +532,11 @@
       <span class="r-num" style="color:#C4701F">−1,4%</span>
       <span class="r-tit">El cemento hila tres meses en baja: la construcción no consolida el rebote</span>
       <span class="r-fecha">22 jul 2026</span>
-    </a>
+    </a></div>
+    </section>
+    <section class="dia-bloque" id="d-2026-07-21">
+      <div class="dia-head"><span class="dia-punto"></span><h2>martes 21 de julio</h2><span class="dia-rule"></span><span class="dia-count">8 notas</span></div>
+      <div class="rows">
     <a class="row" href="articulos/2026-07-21-rigi-pampa-4521-millones.html">
       <span class="r-num" style="color:#C4701F">US$4.521 M</span>
       <span class="r-tit">US$4.521 millones para Vaca Muerta: el proyecto que dejó al RIGI al borde de los US$46.000 millones</span>
@@ -507,7 +576,11 @@
       <span class="r-num" style="color:#C4701F">+43,5%</span>
       <span class="r-tit">Se patentaron más de 440.000 motos en seis meses: por qué las dos ruedas vuelan mientras los autos caen</span>
       <span class="r-fecha">21 jul 2026</span>
-    </a>
+    </a></div>
+    </section>
+    <section class="dia-bloque" id="d-2026-07-20">
+      <div class="dia-head"><span class="dia-punto"></span><h2>lunes 20 de julio</h2><span class="dia-rule"></span><span class="dia-count">11 notas</span></div>
+      <div class="rows">
     <a class="row" href="articulos/2026-07-20-mora-familias-record.html">
       <span class="r-num" style="color:#0E7C86">12,1%</span>
       <span class="r-tit">La mora de las familias llegó a 12,1%: el récord de deudas impagas que la desinflación todavía no frena</span>
@@ -562,7 +635,11 @@
       <span class="r-num" style="color:#0E7C86">1,1%</span>
       <span class="r-tit">La inflación mayorista bajó a 1,1% en junio y quedó debajo de la góndola: el número que se adelanta</span>
       <span class="r-fecha">20 jul 2026</span>
-    </a>
+    </a></div>
+    </section>
+    <section class="dia-bloque" id="d-2026-07-19">
+      <div class="dia-head"><span class="dia-punto"></span><h2>domingo 19 de julio</h2><span class="dia-rule"></span><span class="dia-count">23 notas</span></div>
+      <div class="rows">
     <a class="row" href="articulos/2026-07-19-bcra-compra-record-dolares.html">
       <span class="r-num" style="color:#0A5C63">US$532 M</span>
       <span class="r-tit">El Banco Central compró US$532 millones en un día: el récord de la era Milei, con un asterisco</span>
@@ -677,7 +754,11 @@
       <span class="r-num" style="color:#0E7C86">$1.531.473</span>
       <span class="r-tit">Una familia necesitó $1.531.473 para no ser pobre en junio: la canasta le volvió a ganar a la inflación</span>
       <span class="r-fecha">19 jul 2026</span>
-    </a>
+    </a></div>
+    </section>
+    <section class="dia-bloque" id="d-2026-07-18">
+      <div class="dia-head"><span class="dia-punto"></span><h2>sábado 18 de julio</h2><span class="dia-rule"></span><span class="dia-count">4 notas</span></div>
+      <div class="rows">
     <a class="row" href="articulos/2026-07-18-depositos-dolares-record.html">
       <span class="r-num" style="color:#0A5C63">US$40.437 M</span>
       <span class="r-tit">Los depósitos privados en dólares tocaron US$40.437 millones: el nivel más alto en 26 años</span>
@@ -698,7 +779,7 @@
       <span class="r-tit">La inflación bajó a 1,9%: por qué los números buenos todavía no se sienten en la calle</span>
       <span class="r-fecha">18 jul 2026</span>
     </a></div>
-    </section>
+    </section></div>
 </main>
 
 <footer>
@@ -712,6 +793,45 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  // 1) Apila masthead + ticker + barra de secciones como encabezado fijo,
+  //    midiendo alturas reales. Sin esto la barra de secciones queda flotando
+  //    sobre el contenido, porque el ticker se inyecta de forma asincrona.
+  var mast=document.querySelector('.masthead'), sn=document.querySelector('.secnav');
+  function apilar(){
+    var tk=document.getElementById('ci-ticker');
+    var h1=mast?mast.offsetHeight:0;
+    var h2=tk?tk.offsetHeight:0;
+    if(tk){ tk.style.position='sticky'; tk.style.top=h1+'px'; tk.style.zIndex=65; }
+    if(sn) sn.style.top=(h1+h2)+'px';
+    document.documentElement.style.setProperty('--stack',(h1+h2+(sn?sn.offsetHeight:0))+'px');
+  }
+  // 2) El mismo desplazamiento desfasa el salto al ancla que hace el
+  //    navegador, asi que se rehace cuando la pagina termina de acomodarse.
+  function irAlAncla(){
+    if(!location.hash) return;
+    var el=document.getElementById(location.hash.slice(1));
+    if(el) el.scrollIntoView({block:"start"});
+  }
+  // Mientras el ticker termina de cargar el contenido se sigue moviendo, asi
+  // que hay que rehacer el salto varias veces. Pero si el lector ya scrolleo,
+  // se deja de corregir: nada peor que la pagina saltando sola.
+  var libre = true;
+  ['wheel','touchmove','keydown'].forEach(function(ev){
+    window.addEventListener(ev, function(){ libre = false; }, {passive:true});
+  });
+  apilar();
+  window.addEventListener('resize', apilar);
+  window.addEventListener('load', function(){ apilar(); if(libre) irAlAncla(); });
+  var t=0, iv=setInterval(function(){
+    apilar();
+    if(libre) irAlAncla();
+    if(++t>12) clearInterval(iv);
+  }, 300);
+  window.addEventListener('hashchange', function(){ libre = true; irAlAncla(); });
+})();
+</script>
 <!-- CI-WIDGETS --><script defer src="assets/ticker.js?v=4"></script>
 </body>
 </html>

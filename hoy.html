@@ -139,6 +139,45 @@
   tick();
 })();
 </script>
+<script>
+(function(){
+  // 1) Apila masthead + ticker + barra de secciones como encabezado fijo,
+  //    midiendo alturas reales. Sin esto la barra de secciones queda flotando
+  //    sobre el contenido, porque el ticker se inyecta de forma asincrona.
+  var mast=document.querySelector('.masthead'), sn=document.querySelector('.secnav');
+  function apilar(){
+    var tk=document.getElementById('ci-ticker');
+    var h1=mast?mast.offsetHeight:0;
+    var h2=tk?tk.offsetHeight:0;
+    if(tk){ tk.style.position='sticky'; tk.style.top=h1+'px'; tk.style.zIndex=65; }
+    if(sn) sn.style.top=(h1+h2)+'px';
+    document.documentElement.style.setProperty('--stack',(h1+h2+(sn?sn.offsetHeight:0))+'px');
+  }
+  // 2) El mismo desplazamiento desfasa el salto al ancla que hace el
+  //    navegador, asi que se rehace cuando la pagina termina de acomodarse.
+  function irAlAncla(){
+    if(!location.hash) return;
+    var el=document.getElementById(location.hash.slice(1));
+    if(el) el.scrollIntoView({block:"start"});
+  }
+  // Mientras el ticker termina de cargar el contenido se sigue moviendo, asi
+  // que hay que rehacer el salto varias veces. Pero si el lector ya scrolleo,
+  // se deja de corregir: nada peor que la pagina saltando sola.
+  var libre = true;
+  ['wheel','touchmove','keydown'].forEach(function(ev){
+    window.addEventListener(ev, function(){ libre = false; }, {passive:true});
+  });
+  apilar();
+  window.addEventListener('resize', apilar);
+  window.addEventListener('load', function(){ apilar(); if(libre) irAlAncla(); });
+  var t=0, iv=setInterval(function(){
+    apilar();
+    if(libre) irAlAncla();
+    if(++t>12) clearInterval(iv);
+  }, 300);
+  window.addEventListener('hashchange', function(){ libre = true; irAlAncla(); });
+})();
+</script>
 <!-- CI-WIDGETS --><script defer src="assets/ticker.js?v=5"></script>
 </body>
 </html>

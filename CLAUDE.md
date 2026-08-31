@@ -117,14 +117,21 @@ pregunta.
 ## 5. Donde vive cada cosa
 
 ```
-index.html              portada (GENERADA - no editar a mano)
+index.html              portada: LINEA DE TIEMPO por dia (GENERADA - no editar
+                        a mano). Cada dia es un nodo; dentro del dia manda la
+                        nota con "destacada": true y si no la primera. El
+                        detalle se degrada con la antiguedad: 3 dias con
+                        tarjeta grande, hasta 7 con tarjetas, el resto solo
+                        filas. Tope de 6 notas por dia; el resto enlaza a
+                        archivo.html#d-AAAA-MM-DD.
 hoy.html                "El cierre" (GENERADA - no editar a mano)
 seccion-<id>.html       una pagina por seccion, paginada de a 20 (GENERADAS)
                         seccion-tu-plata.html, -2.html, -3.html... Las notas
                         viejas ya no se pliegan en la portada: viven aca.
                         Grupos: tu-plata, el-pais, los-mercados, tu-provincia,
                         el-mundo y deportes.
-archivo.html            todas las notas por mes, cronologico (GENERADA)
+archivo.html            todas las notas por DIA, cronologico (GENERADA). Es
+                        el destino de los enlaces "ver las otras N del dia".
 articulos/              notas publicadas
 cola/                   borradores esperando aprobacion
 fichas/                 fichas de investigacion (mision 4, no se publican)
