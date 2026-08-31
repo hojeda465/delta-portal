@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-08-30T23:47:24-03:00",
+    "actualizado": "2026-08-31T12:35:30-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-08-31-produccion-petroleo-record-912-mil-barriles",
+      "titulo": "La Argentina bombea más petróleo que nunca: 912.939 barriles por día en julio, y el récord de 1998 quedó 54.635 barriles atrás",
+      "bajada": "El récord es real y lo confirmamos sumando la base oficial pozo por pozo. Pero el pico previo no fue de 847.000 barriles diarios —esa cifra coincide con el promedio anual de 1998— sino de 858.304 en mayo de aquel año. Comparar un récord mensual contra un promedio anual infla la hazaña.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "912.939 b/d",
+      "numero_label": "producción de petróleo de julio de 2026, el máximo de la serie oficial",
+      "fecha": "2026-08-31",
+      "hora": "12:30",
+      "archivo": "articulos/2026-08-31-produccion-petroleo-record-912-mil-barriles.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 11 min"
+    },
     {
       "id": "2026-08-30-leonas-becas-enard",
       "titulo": "Las Leonas son campeonas del mundo: la beca más alta que paga el Estado a un deportista es de $1.699.500 por mes, un 8,6% arriba de la línea de pobreza",

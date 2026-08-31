@@ -1,5 +1,21 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-08-30T23:30:00-03:00",
-  "borradores": []
+  "actualizado": "2026-08-31T12:30:00-03:00",
+  "borradores": [
+    {
+      "id": "2026-08-31-comercio-exterior-brecha-aduana-cambios",
+      "titulo": "Dos organismos del Estado miden el mismo comercio exterior: en exportaciones coinciden con 0,2% de diferencia; en importaciones faltan US$40.682 millones",
+      "bajada": "El INDEC mide la mercadería en la aduana; el BCRA, los dólares que se pagan. Armamos las dos series mes a mes durante 36 meses. La brecha exportadora tenía un decreto que la explicaba y se fue a cero cuando lo derogaron. La importadora no cerró: una parte es cómo se valúa, otra una norma de 2023, y queda un resto sin explicar.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$40.682 M",
+      "numero_label": "importaciones que la aduana registró y no se pagaron por el mercado de cambios en 36 meses",
+      "fecha": "2026-08-31",
+      "hora": "01:00",
+      "archivo": "cola/2026-08-31-comercio-exterior-brecha-aduana-cambios.html",
+      "verificacion": "verificada",
+      "fuentes": 7,
+      "lectura": "30 seg → 12 min"
+    }
+  ]
 }

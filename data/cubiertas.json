@@ -609,6 +609,20 @@
       "fecha": "2026-08-30",
       "estado": "publicada",
       "articulo_id": "2026-08-30-leonas-becas-enard"
+    },
+    {
+      "tema": "comercio exterior 36 meses / brecha entre el ICA del INDEC (aduana) y el balance cambiario del BCRA (caja)",
+      "angulo": "ago-2023 a jul-2026. Serie mensual construida desde 3 ediciones de los cuadros del ICA + anexo estadístico del BCRA. Hallazgo central: la brecha de exportaciones (-14,2% durante el dólar blend) se va a +0,2% tras la derogación del Decreto 28/2023 por el Decreto 269/2025 (14/04/2025) — experimento natural que valida ambas series. La de importaciones NO cierra: -US$40.682 M en 36 meses, de los cuales ~US$10.700 M son cuña CIF/FOB (INDEC valúa CIF, BCRA paga FOB; ratio de flete del cuadro 5: US$54,3 por cada US$1.000) y el resto se explica parcialmente por la Com. A 7917 (pago en 4 cuotas). Residuo post-normalización: ~-6,8% del FOB, SIN VERIFICAR. Causa normativa tomada del apartado 'Normativa relevante' del propio informe del BCRA. Base: ficha fichas/2026-08-31-comercio-exterior-36-meses.html",
+      "fecha": "2026-08-31",
+      "estado": "en_cola",
+      "articulo_id": "2026-08-31-comercio-exterior-brecha-aduana-cambios"
+    },
+    {
+      "tema": "producción de petróleo / récord de julio 2026 (912.939 b/d) y la corrección del pico histórico de 1998",
+      "angulo": "actualiza el récord de 2026-07-22-record-petroleo-900-mil-barriles (mayo, 903.700 b/d) con el dato de julio, pero el ángulo nuevo es de VERIFICACIÓN: se recalculó todo desde la base primaria (Capítulo IV, 573.180 filas) en lugar de tomar la cifra difundida. Correcciones sobre lo que circuló: el total es 912.939 b/d y no 916.200 (-0,36%, la base se rectifica tras la difusión); el interanual es +12,6% y no +17,2% (ese valor sale de comparar contra junio-2025, 781.528, en vez de julio-2025, 811.034); y el pico de 1998 es 858.304 b/d de mayo, no ~847.000 —cifra que coincide con el PROMEDIO ANUAL de 1998 (846.930)—, así que la ventaja real es 54.635 b/d (+6,4%) y no ~66.000. Confirmados: 70,2% Vaca Muerta, +26,3% no convencional, oct-2025 860.378 como primer mes sobre el pico del 98, exportaciones de crudo US$5.722 M ene-jul (INDEC, cuadro 8). Descartada la serie 'promedio diaria total país' por estar incompleta para julio (492.354 b/d). Reemplaza al borrador 2026-08-30-...-916-mil-barriles, que llegó por bundle desde una corrida en la nube y tenía la cifra ancla y el interanual mal.",
+      "fecha": "2026-08-31",
+      "estado": "publicada",
+      "articulo_id": "2026-08-31-produccion-petroleo-record-912-mil-barriles"
     }
   ]
 }
