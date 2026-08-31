@@ -623,6 +623,13 @@
       "fecha": "2026-08-31",
       "estado": "publicada",
       "articulo_id": "2026-08-31-produccion-petroleo-record-912-mil-barriles"
+    },
+    {
+      "tema": "autos chinos / patentamientos ene-jul 2026 (28.291 unidades, +609,9%) y su relación con la caída de la producción nacional",
+      "angulo": "nace de una hipótesis del editor: 'nadie habla de la superpoblación de autos chinos'. Se verificó contando UNO POR UNO el registro de inscripciones iniciales de la DNRPA (datos abiertos, 2025 y 2026 completos), no cifras de cámaras. Resultado: chinos 3.985 -> 28.291 (+609,9%) con el mercado cayendo 10% (341.282 -> 306.990 livianos). Participación 1,2%->9,2% en livianos y 1,4%->11,8% en autos+SUV. El origen del abastecimiento se dio vuelta: nacional 36,6%->28,9%, Protocolo 21 (Brasil) 52,7%->44,1%, importado extrazona 10,7%->27,0% (+126,6%). HALLAZGO PROPIO no publicado en otro lado: el avance chino se concentra donde la Argentina no fabrica — autos+SUV nacionales -47,7% con 11,8% de participación china, vs pickups nacionales -18,7% con apenas 1,6% china. Marcas: BYD 9.274, BAIC 5.932, Chery 3.581, Haval 3.048, MG 2.173. Cruzado con INDEC (impo de vehículos de pasajeros: China US$185,4->748,0 M, +303,4%; Brasil -27,9%; total +2,8%) y ADEFA (producción -18,0%, mayoristas -24,9%, exportaciones +1,6%). La nota NO afirma causalidad: lo dice en la cocina, en la capa 6 y en el disclaimer. La hipótesis 'nadie habla' se matiza explícitamente: la prensa especializada sí cubre el fenómeno; lo no cubierto es el vínculo con la producción.",
+      "fecha": "2026-08-31",
+      "estado": "en_cola",
+      "articulo_id": "2026-08-31-autos-chinos-patentamientos-produccion"
     }
   ]
 }
