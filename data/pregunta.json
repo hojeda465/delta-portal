@@ -1,14 +1,14 @@
 {
   "descripcion": "La pregunta del día: la redacción la renueva una vez por día, derivada de la nota principal. Ver NEWSROOM.md.",
-  "fecha": "2026-07-25",
-  "pregunta": "En marzo de 2026 la deuda externa bruta de la Argentina tocó un récord de US$321.783 millones. ¿Qué mide exactamente ese número?",
+  "fecha": "2026-08-30",
+  "pregunta": "En el segundo trimestre de 2026 Mercado Libre facturó US$10.169 millones, un 50% más que un año antes: su récord histórico. Y sin embargo ganó 11% menos que en el mismo trimestre de 2025. ¿Cuál es la explicación principal?",
   "opciones": [
-    "Todo lo que le deben al resto del mundo tanto el Estado como las empresas, los bancos y las familias del país",
-    "Solo la deuda del Gobierno nacional con el FMI y otros organismos internacionales",
-    "La cantidad de dólares que el Banco Central guarda en sus reservas"
+    "Presta cada vez más plata, y las normas contables la obligan a apartar por adelantado una parte del resultado para cubrir los créditos que podrían no cobrarse",
+    "Bajó los precios de los productos para ganarle mercado a la competencia, y esa rebaja se comió la ganancia",
+    "El crecimiento fue solo nominal: descontada la inflación, en realidad facturó lo mismo que un año atrás"
   ],
   "correcta": 0,
-  "explicacion": "La deuda externa bruta suma TODO lo que los residentes de un país —sector público y privado— le deben a acreedores del exterior, en cualquier moneda. No es lo mismo que la deuda pública (que también incluye lo que el Estado debe dentro del país) ni que la deuda con el FMI (que es solo una parte). Y es lo opuesto a las reservas: las reservas son activos del Banco Central, no deudas. Por eso una empresa que toma un préstamo afuera o coloca un bono en Nueva York también engrosa la deuda externa, aunque el Estado no deba un peso más.",
-  "nota": "articulos/2026-07-24-deuda-externa-record-321-mil-millones.html",
-  "leccion": ""
+  "explicacion": "Cuando una empresa presta dinero no puede anotar toda la ganancia de una vez: las normas contables la obligan a estimar qué porción de esos créditos probablemente no se cobre y a descontarla del resultado en el momento de prestar. Son las previsiones por incobrabilidad. La cartera de crédito de Mercado Pago creció 75% en un año, hasta US$16.375 millones, así que las previsiones crecieron con ella y comprimieron el margen operativo del 12,2% al 6,7%. Por eso conviven un ingreso récord y una ganancia que baja. Ojo con los dos distractores: son errores razonables, pero acá la facturación creció en serio (no fue solo inflación) y el problema no estuvo en el precio de venta sino en el costo de financiar el propio crecimiento.",
+  "nota": "articulos/2026-08-25-mercadolibre-ingresos-record.html",
+  "leccion": "lecciones/deuda-credito.html"
 }

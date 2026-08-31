@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-08-25T15:35:34-03:00",
+    "actualizado": "2026-08-30T21:59:12-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-08-30-dolares-personas-humanas-julio",
+      "titulo": "Los argentinos compraron US$2.916 millones en dólar billete en julio, el máximo en nueve meses — y un tercio se fue a pagar la tarjeta",
+      "bajada": "Fueron 1,7 millones de personas, un 44,7% más que en junio, según el informe cambiario del BCRA. Es el monto más alto desde octubre de 2025. Pero el propio Banco Central estima que de cada 10 dólares que salieron, unos 3 no fueron ahorro: sirvieron para cancelar consumos con tarjeta.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "US$2.916 M",
+      "numero_label": "compra neta de dólar billete de las personas humanas en julio de 2026 (BCRA)",
+      "fecha": "2026-08-30",
+      "hora": "21:00",
+      "archivo": "articulos/2026-08-30-dolares-personas-humanas-julio.html",
+      "verificacion": "verificada",
+      "fuentes": 5,
+      "lectura": "30 seg → 11 min"
+    },
     {
       "id": "2026-08-25-mercadolibre-ingresos-record",
       "titulo": "Mercado Libre facturó más de US$10.000 millones en un trimestre por primera vez — y aun así ganó menos",

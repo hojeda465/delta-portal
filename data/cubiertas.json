@@ -539,6 +539,13 @@
       "fecha": "2026-08-25",
       "estado": "publicada",
       "articulo_id": "2026-08-25-mercadolibre-ingresos-record"
+    },
+    {
+      "tema": "compra de dólar billete de personas humanas / julio 2026 (US$2.916 M netos, máximo en nueve meses)",
+      "angulo": "1,7 millones de personas compraron billetes por US$3.319 M brutos y 697 mil vendieron por US$404 M: compra neta de US$2.916 M, +44,7% mensual y la mayor desde oct-2025 (US$4.196 M). El ángulo propio es doble: (a) el BCRA estima que de los ~US$3.000 M de salida neta, ~US$900 M no fueron ahorro sino pago de consumos con tarjeta, ~US$1.000 M quedaron en depósitos locales y ~US$1.000 M se fueron del país; (b) reconciliación de las CUATRO cifras que circularon por el mismo hecho (2.916 netas / 3.319 brutas / 3.462 billetes+giros / 4.124 compra neta total de moneda extranjera). Cifra ancla CONFIRMADA por doble fuente primaria independiente: informe BCRA julio 2026 y anexo estadístico crudo (cálculo propio: 3.319,4 − 403,6 = 2.915,8, coincide al decimal). Serie mensual abr-2025→jul-2026 calculada por Con Interés desde el anexo. Destinos marcados como ESTIMACIÓN del organismo.",
+      "fecha": "2026-08-30",
+      "estado": "publicada",
+      "articulo_id": "2026-08-30-dolares-personas-humanas-julio"
     }
   ]
 }
