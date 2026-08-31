@@ -1,6 +1,6 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-08-31T18:00:00-03:00",
+  "actualizado": "2026-08-31T21:00:00-03:00",
   "borradores": [
     {
       "id": "2026-08-31-comercio-exterior-brecha-aduana-cambios",
@@ -16,6 +16,21 @@
       "verificacion": "verificada",
       "fuentes": 7,
       "lectura": "30 seg → 12 min"
+    },
+    {
+      "id": "2026-08-31-messi-seleccion-numeros-finanzas",
+      "titulo": "Messi se retira de la selección: 207 partidos, 125 goles y US$108,5 millones en premios oficiales que cobró la AFA",
+      "bajada": "Debutó el 17 de agosto de 2005 y lo echaron a los 43 segundos. Se va 21 años después como el jugador con más partidos y más goles de la historia argentina. Su carrera en números y en dinero: lo que sus títulos le dejaron a la AFA, cómo la federación pasó de 5 a más de 100 sponsors, y por qué lo que Messi cobró no es público.",
+      "seccion": "DEPORTES",
+      "formato": "Infografía",
+      "numero": "207",
+      "numero_label": "partidos de Messi con la selección mayor: récord histórico, junto con sus 125 goles",
+      "fecha": "2026-08-31",
+      "hora": "21:00",
+      "archivo": "cola/2026-08-31-messi-seleccion-numeros-finanzas.html",
+      "verificacion": "verificada",
+      "fuentes": 9,
+      "lectura": "30 seg → 14 min"
     }
   ]
 }
