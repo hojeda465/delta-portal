@@ -119,6 +119,9 @@ pregunta.
 ```
 index.html              portada (GENERADA - no editar a mano)
 hoy.html                "El cierre" (GENERADA - no editar a mano)
+seccion-<id>.html       una pagina por seccion, paginada de a 20 (GENERADAS)
+                        seccion-tu-plata.html, -2.html, -3.html... Las notas
+                        viejas ya no se pliegan en la portada: viven aca.
 articulos/              notas publicadas
 cola/                   borradores esperando aprobacion
 fichas/                 fichas de investigacion (mision 4, no se publican)

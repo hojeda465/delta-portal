@@ -105,6 +105,16 @@ GRUPOS = [
 ]
 GRUPO_POR_ID = {g["id"]: g for g in GRUPOS}
 
+
+# ---- paginas de seccion -------------------------------------------------
+# Cada grupo tiene su propia pagina, paginada. Viven en la raiz como
+# seccion-<id>.html para que las rutas relativas del resto del sitio
+# (assets/, articulos/, aprender.html...) sigan valiendo sin cambios.
+POR_PAGINA = 20
+
+def url_seccion(gid, pag=1):
+    return f"seccion-{gid}.html" if pag <= 1 else f"seccion-{gid}-{pag}.html"
+
 def grupo_de(a):
     s = a["seccion"]
     if s == "MERCADOS":
@@ -190,8 +200,9 @@ for g in GRUPOS:
     if compactas:
         cuerpo += '<div class="rows">' + "".join(fila(a) for a in compactas) + "</div>"
     if plegadas:
-        cuerpo += (f'<details class="vermas"><summary>Ver las otras {len(plegadas)} notas de {escape(g["label"])} <span class="plus">+</span></summary>'
-                   + '<div class="rows">' + "".join(fila(a) for a in plegadas) + "</div></details>")
+        # ya no se pliegan en la portada: viven en la pagina de la seccion
+        cuerpo += (f'<a class="vertodas" href="{url_seccion(g["id"])}">'
+                   f'Ver las {len(notas)} notas de {escape(g["label"])} <span class="fl">&rarr;</span></a>')
     secciones_html += f"""
     <section class="sec-group" id="sec-{g['id']}">
       <div class="sec-head"><h2 style="color:{g['color']}">{escape(g['label'])}</h2><span class="sec-sub">{escape(g['sub'])}</span><span class="rh-rule"></span><span class="sec-count">{len(notas)} notas</span></div>
@@ -252,8 +263,182 @@ if borradores:
 else:
     cola_html = ""
 
+# los chips del nav ahora apuntan a la pagina de cada seccion, no a un ancla
 secciones_nav = "".join(
-    f'<a class="sec-chip" href="#sec-{g["id"]}" style="--sc:{g["color"]}">{escape(g["label"])}</a>' for g in GRUPOS)
+    f'<a class="sec-chip" href="{url_seccion(g["id"])}" style="--sc:{g["color"]}">{escape(g["label"])}</a>'
+    for g in GRUPOS if any(grupo_de(a) == g["id"] for a in articulos))
+
+# ---- hoja de estilo compartida por la portada y las paginas de seccion ----
+# Se define una sola vez: si cambia el diseno, cambia en todas a la vez.
+CSS = """<style>
+  :root{
+    --paper:#FAF8F4;--ink:#16130F;--ink-soft:#3C3833;--teal:#0E7C86;--teal-deep:#0A5C63;
+    --amber:#C4701F;--red:#C0392B;--green:#2E8B6F;--muted:#6B6560;--faint:#8A847C;
+    --grid:#E7E1D7;--rule:#DCD6CC;--card:#FFFFFF;--card-edge:#EAE4DA;
+    --serif:"Source Serif 4",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace;
+  }
+  *{box-sizing:border-box} html{scroll-behavior:smooth}
+  ::selection{background:var(--teal);color:#fff}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{text-decoration:none;color:inherit}
+
+  .masthead{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:70}
+  .masthead .wrap{display:flex;align-items:center;justify-content:space-between;padding:10px 24px}
+  .brand{font-family:var(--serif);font-weight:700;font-size:clamp(24px,2.6vw,31px);letter-spacing:-.025em;display:flex;align-items:center;gap:10px;color:var(--ink);cursor:pointer;font-optical-sizing:auto}
+  .brand:hover .tri{color:var(--teal-deep)}
+  .brand .tri{color:var(--teal);font-size:28px;transform:translateY(-2px)}
+  .brand .tag{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:10px;font-weight:500}
+  .mh-right{text-align:right;font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6}
+  .mh-right b{color:var(--ink)}
+
+  .concept{background:var(--ink);color:var(--paper)}
+  .concept .wrap{display:flex;align-items:center;gap:18px;padding:11px 24px;flex-wrap:wrap;font-size:13px}
+  .concept .k{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#4FC0A4;font-weight:600}
+  .concept .item{color:#CFC9BF} .concept .item b{color:#fff;font-weight:600}
+  .concept .sep{color:#3E3A34}
+
+  .secnav{border-bottom:1px solid var(--rule);position:sticky;top:96px;background:var(--paper);z-index:60;box-shadow:0 1px 0 rgba(22,19,15,.04)}
+  .lema{border-bottom:1px solid var(--rule);background:var(--paper)}
+  .lema .wrap{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;padding:16px 24px 15px}
+  .lema .l1{font-family:var(--serif);font-size:clamp(19px,2.4vw,26px);font-weight:700;font-style:italic;color:var(--ink);letter-spacing:-.02em;font-optical-sizing:auto}
+  .lema .l1 .fin{color:var(--teal)}
+  .lema .l2{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em}
+  @media(max-width:600px){.lema .l1{font-size:18px}.lema .wrap{gap:6px;padding:12px 24px}}
+  .secnav .wrap{display:flex;gap:8px;padding:12px 24px;flex-wrap:wrap}
+  .sec-chip{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--sc);background:var(--paper);border:1px solid var(--card-edge);padding:6px 13px;border-radius:999px;font-weight:600;cursor:pointer;transition:.15s}
+  .sec-chip:hover{border-color:var(--sc)}
+  .sec-chip.active{background:var(--sc);color:#fff;border-color:var(--sc)}
+  .lead.is-hidden,.card.is-hidden{display:none}
+
+  main{padding:clamp(28px,4vw,44px) 0 20px}
+  .nav-extra{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;white-space:nowrap;font-weight:600;padding:6px 4px}
+  .nav-extra:first-of-type{margin-left:auto}
+  .nav-extra:hover{color:var(--teal)}
+  .learn-link{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;display:flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600}
+  .learn-link b{background:var(--amber);color:#fff;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:999px;font-weight:600}
+  .learn-link:hover{color:var(--teal)}
+  @media(max-width:640px){
+    .masthead .wrap{padding:8px 16px}
+    .brand{white-space:nowrap}
+    .brand .tag{display:none}
+    .mh-right{display:none}
+    .secnav .wrap{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:10px 16px}
+    .secnav .wrap::-webkit-scrollbar{display:none}
+    .sec-chip,.nav-extra,.learn-link{flex:0 0 auto}
+  }
+  .empty{color:var(--muted);font-family:var(--mono);font-size:14px;padding:40px 0} .empty.small{padding:14px}
+
+  .lead{display:grid;grid-template-columns:300px 1fr;gap:30px;border-bottom:1px solid var(--rule);padding-bottom:30px;margin-bottom:30px;align-items:center}
+  .lead-num{background:var(--ink);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;justify-content:center;min-height:210px}
+  .lead-num .ln-big{font-family:var(--mono);font-weight:600;font-size:64px;line-height:1;letter-spacing:-.045em;color:#fff;font-variant-numeric:tabular-nums}
+  .lead-num .ln-lab{font-size:13px;color:#B9B3A9;margin-top:12px;line-height:1.45}
+  .lead-num{border-top:4px solid var(--sc)}
+  .lead-body .kick,.card .kick{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:12px}
+  .lead-body .kick span{color:var(--faint)}
+  .lead-body h2{font-family:var(--serif);font-weight:700;font-size:clamp(30px,4.4vw,50px);line-height:1.05;letter-spacing:-.028em;margin:0 0 16px;text-wrap:balance;font-optical-sizing:auto}
+  .lead-body p{font-size:clamp(15px,1.5vw,18px);color:var(--ink-soft);margin:0 0 16px;max-width:58ch;text-wrap:pretty;line-height:1.62}
+  .lead:hover h2{color:var(--teal-deep)}
+
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  .grid-2 .card h3{font-size:19px}
+  .rail-head,.sec-head{display:flex;align-items:center;gap:14px;margin:clamp(36px,5vw,54px) 0 20px}
+  .rail-head .rh-txt{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+  .rh-rule{flex:1;height:1px;background:var(--rule)}
+  .sec-head h2{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0}
+  .sec-count{font-family:var(--mono);font-size:11px;color:var(--faint)}
+  .sec-group{scroll-margin-top:calc(var(--stack,150px) + 8px)}
+
+  .learn-band{background:linear-gradient(120deg,#16130F,#0A5C63);border-radius:16px;padding:32px 34px;margin:40px 0 6px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+  .learn-band .lb-kick{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#E8833A;font-weight:600;margin-bottom:8px}
+  .learn-band h2{font-family:var(--serif);font-size:27px;font-weight:700;color:#fff;margin:0 0 8px;line-height:1.2}
+  .learn-band p{font-size:14px;color:#CDE4E1;margin:0;max-width:58ch;line-height:1.55}
+  .learn-band .lb-body{flex:1 1 380px}
+  .lb-cta{font-family:var(--sans);font-size:15px;font-weight:600;background:#fff;color:var(--ink);padding:13px 24px;border-radius:10px;white-space:nowrap;transition:.15s}
+  .lb-cta:hover{background:#F3D9A8}
+
+  .editor{display:flex;gap:16px;align-items:flex-start;margin-top:22px;padding-top:20px;border-top:1px dashed var(--rule);max-width:520px}
+  .ed-foto{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:0 0 auto}
+  .ed-ini{background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:24px;font-weight:700}
+  .ed-rol{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);font-weight:600}
+  .ed-nombre{font-family:var(--serif);font-size:17px;font-weight:700;margin:2px 0}
+  .ed-bio{font-size:13px;color:var(--muted);line-height:1.55}
+  .card{background:var(--card);border:1px solid var(--card-edge);border-radius:14px;padding:20px;display:flex;flex-direction:column;transition:.15s}
+  .card:hover{transform:translateY(-2px);border-color:var(--sc)}
+  .card h3{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.26;letter-spacing:-.012em;margin:0 0 14px;flex:1;color:var(--ink);text-wrap:balance}
+  .card-num{font-family:var(--mono);font-size:12px;color:var(--muted);border-left:3px solid var(--sc);padding-left:10px;margin-bottom:14px;line-height:1.45;font-variant-numeric:tabular-nums}
+  .card-num b{color:var(--ink);font-size:16px}
+  .grid-2 .card h3{font-size:21px}
+  .sec-sub{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.02em}
+
+  .lider{display:grid;grid-template-columns:1fr 250px;gap:26px;background:var(--card);border:1px solid var(--card-edge);border-left:4px solid var(--sc);border-radius:14px;padding:24px 26px;margin-bottom:20px;align-items:center;transition:.15s}
+  .lider:hover{border-color:var(--sc);transform:translateY(-2px)}
+  .lider h3{font-family:var(--serif);font-weight:700;font-size:clamp(21px,2.6vw,29px);line-height:1.12;letter-spacing:-.02em;margin:0 0 10px;color:var(--ink);text-wrap:balance;font-optical-sizing:auto}
+  .lider p{font-size:14px;color:var(--ink-soft);margin:0 0 12px;line-height:1.6;text-wrap:pretty;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .l-num{border-left:1px solid var(--grid);padding-left:24px}
+  .l-num .ln{font-family:var(--mono);font-weight:600;line-height:1;letter-spacing:-.02em;color:var(--sc);display:block}
+  .l-num .ll{font-size:12px;color:var(--muted);line-height:1.4;display:block;margin-top:8px}
+  .rows{display:flex;flex-direction:column;margin-top:14px}
+  .row{display:flex;align-items:baseline;gap:14px;padding:10px 4px;border-top:1px dashed var(--rule);transition:.1s}
+  .row:hover{background:var(--card)}
+  .r-num{font-family:var(--mono);font-size:14px;font-weight:600;flex:0 0 110px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .r-tit{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--ink-soft);flex:1;line-height:1.35}
+  .row:hover .r-tit{color:var(--teal-deep)}
+  .r-fecha{font-family:var(--mono);font-size:11px;color:var(--faint);white-space:nowrap}
+  .vermas{margin-top:6px}
+  .vermas summary{list-style:none;cursor:pointer;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted);padding:10px 4px;display:flex;align-items:center;gap:8px}
+  .vermas summary::-webkit-details-marker{display:none}
+  .vermas summary:hover{color:var(--teal-deep)}
+  .vermas .plus{color:var(--teal);font-size:16px;transition:.2s}
+  .vermas[open] .plus{transform:rotate(45deg)}
+  @media(max-width:700px){.lider{grid-template-columns:1fr}.l-num{border-left:none;border-top:1px solid var(--grid);padding:14px 0 0}.r-num{flex-basis:84px;font-size:12px}.r-fecha{display:none}}
+
+  .meta{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;color:var(--muted);flex-wrap:wrap;font-variant-numeric:tabular-nums}
+  .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--faint)}
+  .verif{font-weight:600} .verif.ok{color:var(--green)} .verif.pend{color:var(--amber)}
+
+  .cola{background:#F3EFE7;border:1px solid var(--card-edge);border-left:3px solid var(--amber);border-radius:12px;padding:20px 22px;margin:34px 0 10px}
+  .cola-head{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:9px;margin-bottom:14px}
+  .pulse{width:9px;height:9px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(196,112,31,.5);animation:p 2s infinite}
+  @keyframes p{70%{box-shadow:0 0 0 8px rgba(196,112,31,0)}100%{box-shadow:0 0 0 0 rgba(196,112,31,0)}}
+  .q-list{list-style:none;margin:0;padding:0}
+  .q-list li{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px dashed var(--rule);font-size:15px}
+  .q-sec{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--amber);font-weight:600;flex:0 0 auto}
+  .q-tit{flex:1;color:var(--ink-soft)}
+  .q-badge{font-family:var(--mono);font-size:10px;background:var(--amber);color:#fff;padding:3px 9px;border-radius:999px;font-weight:600}
+  .q-leer{font-family:var(--mono);font-size:11px;color:var(--teal-deep);font-weight:600;white-space:nowrap;border-bottom:1px solid var(--grid)}
+  .q-leer:hover{color:var(--teal)}
+  .cola-foot{font-size:12px;color:var(--muted);margin:12px 0 0}
+
+  footer{border-top:2px solid var(--ink);margin-top:44px;padding:26px 0 60px}
+  footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .f-brand{font-family:var(--serif);font-weight:700;font-size:20px} .f-brand .tri{color:var(--teal)}
+  .f-desc{font-size:13px;color:var(--muted);max-width:480px;margin-top:6px;line-height:1.55}
+  .f-meta{font-family:var(--mono);font-size:11px;color:var(--faint);text-align:right;line-height:1.8}
+
+  @media(max-width:820px){
+    .grid{grid-template-columns:1fr 1fr} .lead{grid-template-columns:1fr} .lead-num{min-height:150px}
+    .lead-body h2{font-size:27px} .brand{font-size:28px}
+  }
+  @media(max-width:560px){ .grid{grid-template-columns:1fr} .concept .wrap{gap:8px 14px} }
+  .vertodas{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-family:var(--mono);
+    font-size:13px;color:var(--teal-deep);text-decoration:none;border:1px solid var(--rule);
+    border-radius:999px;padding:9px 16px;transition:.15s;background:var(--card)}
+  .vertodas:hover{border-color:var(--teal);background:#fff}
+  .vertodas .fl{font-size:15px}
+  .pager{display:flex;gap:8px;align-items:center;justify-content:center;margin:34px 0 10px;flex-wrap:wrap}
+  .pager a,.pager span{font-family:var(--mono);font-size:13px;padding:8px 14px;border-radius:8px;
+    border:1px solid var(--rule);text-decoration:none;color:var(--ink-soft);background:var(--card)}
+  .pager a:hover{border-color:var(--teal);color:var(--teal-deep)}
+  .pager .actual{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .pager .off{opacity:.4}
+  .sec-hero{border-bottom:2px solid var(--ink);padding:26px 0 18px;margin-bottom:26px}
+  .sec-hero h1{font-family:var(--serif);font-size:38px;font-weight:700;margin:0 0 6px;letter-spacing:-.015em}
+  .sec-hero p{font-size:15px;color:var(--muted);margin:0}
+  .sec-hero .volver{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;
+    display:inline-block;margin-bottom:12px}
+</style>"""
 
 HTML = f"""<!DOCTYPE html>
 <html lang="es">
@@ -280,159 +465,7 @@ HTML = f"""<!DOCTYPE html>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <script defer src="assets/ticker.js?v=4"></script>
-<style>
-  :root{{
-    --paper:#FAF8F4;--ink:#16130F;--ink-soft:#3C3833;--teal:#0E7C86;--teal-deep:#0A5C63;
-    --amber:#C4701F;--red:#C0392B;--green:#2E8B6F;--muted:#6B6560;--faint:#8A847C;
-    --grid:#E7E1D7;--rule:#DCD6CC;--card:#FFFFFF;--card-edge:#EAE4DA;
-    --serif:"Source Serif 4",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"IBM Plex Mono",monospace;
-  }}
-  *{{box-sizing:border-box}} html{{scroll-behavior:smooth}}
-  ::selection{{background:var(--teal);color:#fff}}
-  body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}}
-  .wrap{{max-width:1080px;margin:0 auto;padding:0 24px}}
-  a{{text-decoration:none;color:inherit}}
-
-  .masthead{{border-bottom:2px solid var(--ink);position:sticky;top:0;background:var(--paper);z-index:70}}
-  .masthead .wrap{{display:flex;align-items:center;justify-content:space-between;padding:10px 24px}}
-  .brand{{font-family:var(--serif);font-weight:700;font-size:clamp(24px,2.6vw,31px);letter-spacing:-.025em;display:flex;align-items:center;gap:10px;color:var(--ink);cursor:pointer;font-optical-sizing:auto}}
-  .brand:hover .tri{{color:var(--teal-deep)}}
-  .brand .tri{{color:var(--teal);font-size:28px;transform:translateY(-2px)}}
-  .brand .tag{{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;border-left:1px solid var(--rule);padding-left:10px;font-weight:500}}
-  .mh-right{{text-align:right;font-family:var(--mono);font-size:11px;color:var(--muted);line-height:1.6}}
-  .mh-right b{{color:var(--ink)}}
-
-  .concept{{background:var(--ink);color:var(--paper)}}
-  .concept .wrap{{display:flex;align-items:center;gap:18px;padding:11px 24px;flex-wrap:wrap;font-size:13px}}
-  .concept .k{{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#4FC0A4;font-weight:600}}
-  .concept .item{{color:#CFC9BF}} .concept .item b{{color:#fff;font-weight:600}}
-  .concept .sep{{color:#3E3A34}}
-
-  .secnav{{border-bottom:1px solid var(--rule);position:sticky;top:96px;background:var(--paper);z-index:60;box-shadow:0 1px 0 rgba(22,19,15,.04)}}
-  .lema{{border-bottom:1px solid var(--rule);background:var(--paper)}}
-  .lema .wrap{{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;padding:16px 24px 15px}}
-  .lema .l1{{font-family:var(--serif);font-size:clamp(19px,2.4vw,26px);font-weight:700;font-style:italic;color:var(--ink);letter-spacing:-.02em;font-optical-sizing:auto}}
-  .lema .l1 .fin{{color:var(--teal)}}
-  .lema .l2{{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.04em}}
-  @media(max-width:600px){{.lema .l1{{font-size:18px}}.lema .wrap{{gap:6px;padding:12px 24px}}}}
-  .secnav .wrap{{display:flex;gap:8px;padding:12px 24px;flex-wrap:wrap}}
-  .sec-chip{{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--sc);background:var(--paper);border:1px solid var(--card-edge);padding:6px 13px;border-radius:999px;font-weight:600;cursor:pointer;transition:.15s}}
-  .sec-chip:hover{{border-color:var(--sc)}}
-  .sec-chip.active{{background:var(--sc);color:#fff;border-color:var(--sc)}}
-  .lead.is-hidden,.card.is-hidden{{display:none}}
-
-  main{{padding:clamp(28px,4vw,44px) 0 20px}}
-  .nav-extra{{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;white-space:nowrap;font-weight:600;padding:6px 4px}}
-  .nav-extra:first-of-type{{margin-left:auto}}
-  .nav-extra:hover{{color:var(--teal)}}
-  .learn-link{{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;display:flex;align-items:center;gap:7px;white-space:nowrap;font-weight:600}}
-  .learn-link b{{background:var(--amber);color:#fff;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:2px 6px;border-radius:999px;font-weight:600}}
-  .learn-link:hover{{color:var(--teal)}}
-  @media(max-width:640px){{
-    .masthead .wrap{{padding:8px 16px}}
-    .brand{{white-space:nowrap}}
-    .brand .tag{{display:none}}
-    .mh-right{{display:none}}
-    .secnav .wrap{{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:10px 16px}}
-    .secnav .wrap::-webkit-scrollbar{{display:none}}
-    .sec-chip,.nav-extra,.learn-link{{flex:0 0 auto}}
-  }}
-  .empty{{color:var(--muted);font-family:var(--mono);font-size:14px;padding:40px 0}} .empty.small{{padding:14px}}
-
-  .lead{{display:grid;grid-template-columns:300px 1fr;gap:30px;border-bottom:1px solid var(--rule);padding-bottom:30px;margin-bottom:30px;align-items:center}}
-  .lead-num{{background:var(--ink);border-radius:16px;padding:32px 26px;display:flex;flex-direction:column;justify-content:center;min-height:210px}}
-  .lead-num .ln-big{{font-family:var(--mono);font-weight:600;font-size:64px;line-height:1;letter-spacing:-.045em;color:#fff;font-variant-numeric:tabular-nums}}
-  .lead-num .ln-lab{{font-size:13px;color:#B9B3A9;margin-top:12px;line-height:1.45}}
-  .lead-num{{border-top:4px solid var(--sc)}}
-  .lead-body .kick,.card .kick{{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;margin-bottom:12px}}
-  .lead-body .kick span{{color:var(--faint)}}
-  .lead-body h2{{font-family:var(--serif);font-weight:700;font-size:clamp(30px,4.4vw,50px);line-height:1.05;letter-spacing:-.028em;margin:0 0 16px;text-wrap:balance;font-optical-sizing:auto}}
-  .lead-body p{{font-size:clamp(15px,1.5vw,18px);color:var(--ink-soft);margin:0 0 16px;max-width:58ch;text-wrap:pretty;line-height:1.62}}
-  .lead:hover h2{{color:var(--teal-deep)}}
-
-  .grid{{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}}
-  .grid-2{{grid-template-columns:repeat(2,1fr)}}
-  .grid-2 .card h3{{font-size:19px}}
-  .rail-head,.sec-head{{display:flex;align-items:center;gap:14px;margin:clamp(36px,5vw,54px) 0 20px}}
-  .rail-head .rh-txt{{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--muted)}}
-  .rh-rule{{flex:1;height:1px;background:var(--rule)}}
-  .sec-head h2{{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin:0}}
-  .sec-count{{font-family:var(--mono);font-size:11px;color:var(--faint)}}
-  .sec-group{{scroll-margin-top:calc(var(--stack,150px) + 8px)}}
-
-  .learn-band{{background:linear-gradient(120deg,#16130F,#0A5C63);border-radius:16px;padding:32px 34px;margin:40px 0 6px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}}
-  .learn-band .lb-kick{{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#E8833A;font-weight:600;margin-bottom:8px}}
-  .learn-band h2{{font-family:var(--serif);font-size:27px;font-weight:700;color:#fff;margin:0 0 8px;line-height:1.2}}
-  .learn-band p{{font-size:14px;color:#CDE4E1;margin:0;max-width:58ch;line-height:1.55}}
-  .learn-band .lb-body{{flex:1 1 380px}}
-  .lb-cta{{font-family:var(--sans);font-size:15px;font-weight:600;background:#fff;color:var(--ink);padding:13px 24px;border-radius:10px;white-space:nowrap;transition:.15s}}
-  .lb-cta:hover{{background:#F3D9A8}}
-
-  .editor{{display:flex;gap:16px;align-items:flex-start;margin-top:22px;padding-top:20px;border-top:1px dashed var(--rule);max-width:520px}}
-  .ed-foto{{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:0 0 auto}}
-  .ed-ini{{background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:24px;font-weight:700}}
-  .ed-rol{{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);font-weight:600}}
-  .ed-nombre{{font-family:var(--serif);font-size:17px;font-weight:700;margin:2px 0}}
-  .ed-bio{{font-size:13px;color:var(--muted);line-height:1.55}}
-  .card{{background:var(--card);border:1px solid var(--card-edge);border-radius:14px;padding:20px;display:flex;flex-direction:column;transition:.15s}}
-  .card:hover{{transform:translateY(-2px);border-color:var(--sc)}}
-  .card h3{{font-family:var(--serif);font-weight:600;font-size:19px;line-height:1.26;letter-spacing:-.012em;margin:0 0 14px;flex:1;color:var(--ink);text-wrap:balance}}
-  .card-num{{font-family:var(--mono);font-size:12px;color:var(--muted);border-left:3px solid var(--sc);padding-left:10px;margin-bottom:14px;line-height:1.45;font-variant-numeric:tabular-nums}}
-  .card-num b{{color:var(--ink);font-size:16px}}
-  .grid-2 .card h3{{font-size:21px}}
-  .sec-sub{{font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.02em}}
-
-  .lider{{display:grid;grid-template-columns:1fr 250px;gap:26px;background:var(--card);border:1px solid var(--card-edge);border-left:4px solid var(--sc);border-radius:14px;padding:24px 26px;margin-bottom:20px;align-items:center;transition:.15s}}
-  .lider:hover{{border-color:var(--sc);transform:translateY(-2px)}}
-  .lider h3{{font-family:var(--serif);font-weight:700;font-size:clamp(21px,2.6vw,29px);line-height:1.12;letter-spacing:-.02em;margin:0 0 10px;color:var(--ink);text-wrap:balance;font-optical-sizing:auto}}
-  .lider p{{font-size:14px;color:var(--ink-soft);margin:0 0 12px;line-height:1.6;text-wrap:pretty;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}}
-  .l-num{{border-left:1px solid var(--grid);padding-left:24px}}
-  .l-num .ln{{font-family:var(--mono);font-weight:600;line-height:1;letter-spacing:-.02em;color:var(--sc);display:block}}
-  .l-num .ll{{font-size:12px;color:var(--muted);line-height:1.4;display:block;margin-top:8px}}
-  .rows{{display:flex;flex-direction:column;margin-top:14px}}
-  .row{{display:flex;align-items:baseline;gap:14px;padding:10px 4px;border-top:1px dashed var(--rule);transition:.1s}}
-  .row:hover{{background:var(--card)}}
-  .r-num{{font-family:var(--mono);font-size:14px;font-weight:600;flex:0 0 110px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
-  .r-tit{{font-family:var(--serif);font-size:15px;font-weight:600;color:var(--ink-soft);flex:1;line-height:1.35}}
-  .row:hover .r-tit{{color:var(--teal-deep)}}
-  .r-fecha{{font-family:var(--mono);font-size:11px;color:var(--faint);white-space:nowrap}}
-  .vermas{{margin-top:6px}}
-  .vermas summary{{list-style:none;cursor:pointer;font-family:var(--mono);font-size:12px;font-weight:600;color:var(--muted);padding:10px 4px;display:flex;align-items:center;gap:8px}}
-  .vermas summary::-webkit-details-marker{{display:none}}
-  .vermas summary:hover{{color:var(--teal-deep)}}
-  .vermas .plus{{color:var(--teal);font-size:16px;transition:.2s}}
-  .vermas[open] .plus{{transform:rotate(45deg)}}
-  @media(max-width:700px){{.lider{{grid-template-columns:1fr}}.l-num{{border-left:none;border-top:1px solid var(--grid);padding:14px 0 0}}.r-num{{flex-basis:84px;font-size:12px}}.r-fecha{{display:none}}}}
-
-  .meta{{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:11px;color:var(--muted);flex-wrap:wrap;font-variant-numeric:tabular-nums}}
-  .meta .dot{{width:3px;height:3px;border-radius:50%;background:var(--faint)}}
-  .verif{{font-weight:600}} .verif.ok{{color:var(--green)}} .verif.pend{{color:var(--amber)}}
-
-  .cola{{background:#F3EFE7;border:1px solid var(--card-edge);border-left:3px solid var(--amber);border-radius:12px;padding:20px 22px;margin:34px 0 10px}}
-  .cola-head{{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:9px;margin-bottom:14px}}
-  .pulse{{width:9px;height:9px;border-radius:50%;background:var(--amber);box-shadow:0 0 0 0 rgba(196,112,31,.5);animation:p 2s infinite}}
-  @keyframes p{{70%{{box-shadow:0 0 0 8px rgba(196,112,31,0)}}100%{{box-shadow:0 0 0 0 rgba(196,112,31,0)}}}}
-  .q-list{{list-style:none;margin:0;padding:0}}
-  .q-list li{{display:flex;align-items:center;gap:12px;padding:11px 0;border-top:1px dashed var(--rule);font-size:15px}}
-  .q-sec{{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--amber);font-weight:600;flex:0 0 auto}}
-  .q-tit{{flex:1;color:var(--ink-soft)}}
-  .q-badge{{font-family:var(--mono);font-size:10px;background:var(--amber);color:#fff;padding:3px 9px;border-radius:999px;font-weight:600}}
-  .q-leer{{font-family:var(--mono);font-size:11px;color:var(--teal-deep);font-weight:600;white-space:nowrap;border-bottom:1px solid var(--grid)}}
-  .q-leer:hover{{color:var(--teal)}}
-  .cola-foot{{font-size:12px;color:var(--muted);margin:12px 0 0}}
-
-  footer{{border-top:2px solid var(--ink);margin-top:44px;padding:26px 0 60px}}
-  footer .wrap{{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}}
-  .f-brand{{font-family:var(--serif);font-weight:700;font-size:20px}} .f-brand .tri{{color:var(--teal)}}
-  .f-desc{{font-size:13px;color:var(--muted);max-width:480px;margin-top:6px;line-height:1.55}}
-  .f-meta{{font-family:var(--mono);font-size:11px;color:var(--faint);text-align:right;line-height:1.8}}
-
-  @media(max-width:820px){{
-    .grid{{grid-template-columns:1fr 1fr}} .lead{{grid-template-columns:1fr}} .lead-num{{min-height:150px}}
-    .lead-body h2{{font-size:27px}} .brand{{font-size:28px}}
-  }}
-  @media(max-width:560px){{ .grid{{grid-template-columns:1fr}} .concept .wrap{{gap:8px 14px}} }}
-</style>
+{CSS}
 </head>
 <body>
 
@@ -515,6 +548,114 @@ HTML = f"""<!DOCTYPE html>
 out = os.path.join(ROOT, "index.html")
 with open(out, "w", encoding="utf-8") as f:
     f.write(HTML)
+
+
+# ---- generacion de las paginas de seccion -------------------------------
+# Una pagina por grupo, paginada de a POR_PAGINA. La pagina 1 es
+# seccion-<id>.html y las siguientes seccion-<id>-2.html, -3.html...
+# Reutilizan el CSS y el chrome de la portada; las rutas relativas valen
+# igual porque viven en la raiz.
+paginas_seccion = []
+
+def _pager(gid, pag, total):
+    if total <= 1:
+        return ""
+    piezas = []
+    piezas.append(f'<a href="{url_seccion(gid, pag-1)}">&larr; Anterior</a>'
+                  if pag > 1 else '<span class="off">&larr; Anterior</span>')
+    for n in range(1, total + 1):
+        piezas.append(f'<span class="actual">{n}</span>' if n == pag
+                      else f'<a href="{url_seccion(gid, n)}">{n}</a>')
+    piezas.append(f'<a href="{url_seccion(gid, pag+1)}">Siguiente &rarr;</a>'
+                  if pag < total else '<span class="off">Siguiente &rarr;</span>')
+    return '<nav class="pager">' + "".join(piezas) + "</nav>"
+
+for g in GRUPOS:
+    notas_g = [a for a in articulos if grupo_de(a) == g["id"]]
+    if not notas_g:
+        continue
+    total_pags = (len(notas_g) + POR_PAGINA - 1) // POR_PAGINA
+    for pag in range(1, total_pags + 1):
+        tanda = notas_g[(pag - 1) * POR_PAGINA: pag * POR_PAGINA]
+        # la primera de la primera pagina va como lider; el resto, en grilla
+        if pag == 1:
+            cuerpo_s = card_lider(tanda[0])
+            if tanda[1:]:
+                cuerpo_s += '<div class="grid">' + "".join(card(a) for a in tanda[1:]) + "</div>"
+        else:
+            cuerpo_s = '<div class="grid">' + "".join(card(a) for a in tanda) + "</div>"
+
+        desc_s = f"{g['label']}: {g['sub']}. {len(notas_g)} notas verificadas de {portal['nombre']}."
+        titulo_s = f"{g['label']} — {portal['nombre']}"
+        if pag > 1:
+            titulo_s = f"{g['label']} (página {pag}) — {portal['nombre']}"
+        canon = f"{SITE}/{url_seccion(g['id'], pag)}"
+
+        rel = ""
+        if pag > 1:
+            rel += f'<link rel="prev" href="{SITE}/{url_seccion(g["id"], pag-1)}">\n'
+        if pag < total_pags:
+            rel += f'<link rel="next" href="{SITE}/{url_seccion(g["id"], pag+1)}">\n'
+
+        PAG = f"""<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{escape(titulo_s)}</title>
+<meta name="description" content="{escape(desc_s)}">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="canonical" href="{canon}">
+{rel}<meta property="og:type" content="website">
+<meta property="og:site_name" content="{escape(portal['nombre'])}">
+<meta property="og:title" content="{escape(titulo_s)}">
+<meta property="og:description" content="{escape(desc_s)}">
+<meta property="og:url" content="{canon}">
+<meta property="og:locale" content="es_AR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+{CSS}
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="tri">%</span>{escape(portal['nombre'])}<span class="tag">Diario de economía en datos</span></a>
+    <div class="mh-right"><div>{FECHA_MASTHEAD}</div></div>
+  </div>
+</header>
+
+<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="pregunta.html">? La pregunta</a><a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> &rarr;</a></div></nav>
+
+<main class="wrap">
+  <div class="sec-hero">
+    <a class="volver" href="index.html">&larr; Portada</a>
+    <h1 style="color:{g['color']}">{escape(g['label'])}</h1>
+    <p>{escape(g['sub'])} &middot; {len(notas_g)} notas{'' if total_pags == 1 else f' &middot; página {pag} de {total_pags}'}</p>
+  </div>
+  {cuerpo_s}
+  {_pager(g['id'], pag, total_pags)}
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="f-brand"><span class="tri">%</span> {escape(portal['nombre'])}</div>
+      <div class="f-desc">{escape(portal['descripcion'])}</div>
+      <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos &rarr;</a> &middot; <a href="aprender.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">Modo Aprendizaje &rarr;</a></div>
+      <div style="margin-top:8px;font-family:var(--mono);font-size:11px;color:var(--faint)"><a href="legal.html" style="color:var(--muted);text-decoration:none">Aviso legal y correcciones</a> &middot; <a href="privacidad.html" style="color:var(--muted);text-decoration:none">Política de privacidad</a> &middot; El contenido de este sitio es informativo y educativo; no constituye asesoramiento financiero.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- CI-WIDGETS --><script defer src="assets/ticker.js?v=4"></script>
+</body>
+</html>"""
+        ruta = os.path.join(ROOT, url_seccion(g["id"], pag))
+        with open(ruta, "w", encoding="utf-8") as f:
+            f.write(PAG)
+        paginas_seccion.append(url_seccion(g["id"], pag))
 
 # ---- hoy.html — "El cierre": los 5 datos del día, finito ----------------
 _top5 = articulos[:5]
@@ -649,6 +790,9 @@ for pg in ("aprender.html", "como-trabajamos.html", "legal.html", "privacidad.ht
     urls.append(f"  <url><loc>{SITE}/{pg}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>")
 for ind in ("dolar-oficial", "dolar-blue", "dolar-mep", "riesgo-pais", "inflacion"):
     urls.append(f"  <url><loc>{SITE}/indicador/{ind}.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>")
+# las paginas de seccion: si no entran aca, nacen sin indexar
+for pg in paginas_seccion:
+    urls.append(f"  <url><loc>{SITE}/{pg}</loc><changefreq>daily</changefreq><priority>0.8</priority></url>")
 for a in articulos:
     urls.append(
         f"  <url><loc>{SITE}/{escape(a['archivo'])}</loc>"
