@@ -102,6 +102,7 @@ GRUPOS = [
     {"id": "los-mercados", "label": "Los mercados", "sub": "dólar · bonos · empresas · inversión", "color": "#0A5C63"},
     {"id": "tu-provincia", "label": "Tu provincia", "sub": "las economías del interior, en números", "color": "#2E8B6F"},
     {"id": "el-mundo", "label": "El mundo", "sub": "lo global que toca a la Argentina", "color": "#7A5CC4"},
+    {"id": "deportes", "label": "Deportes", "sub": "la economía del deporte, en números", "color": "#C0392B"},
 ]
 GRUPO_POR_ID = {g["id"]: g for g in GRUPOS}
 
@@ -123,6 +124,8 @@ def grupo_de(a):
         return "tu-provincia"
     if s == "MUNDO":
         return "el-mundo"
+    if s == "DEPORTES":
+        return "deportes"
     texto = (a["titulo"] + " " + a.get("bajada", "") + " " + a.get("numero_label", "")).lower()
     return "tu-plata" if any(k in texto for k in TU_PLATA_KW) else "el-pais"
 
@@ -438,6 +441,8 @@ CSS = """<style>
   .sec-hero p{font-size:15px;color:var(--muted);margin:0}
   .sec-hero .volver{font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;
     display:inline-block;margin-bottom:12px}
+  .mes-bloque{margin-bottom:30px}
+  .mes-bloque .sec-head h2{font-size:19px}
 </style>"""
 
 HTML = f"""<!DOCTYPE html>
@@ -478,7 +483,7 @@ HTML = f"""<!DOCTYPE html>
   </div>
 </header>
 
-<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="pregunta.html">? La pregunta</a><a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
+<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="pregunta.html">? La pregunta</a><a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="nav-extra" href="archivo.html">&#9776; Archivo</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
 
 <div class="lema"><div class="wrap"><span class="l1">Entender no debería costarte nada<span class="fin">.</span></span><span class="l2">Datos verificados, explicados sin jerga, sin pedirte nada a cambio.</span></div></div>
 
@@ -626,7 +631,7 @@ for g in GRUPOS:
   </div>
 </header>
 
-<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="pregunta.html">? La pregunta</a><a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> &rarr;</a></div></nav>
+<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="pregunta.html">? La pregunta</a><a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="nav-extra" href="archivo.html">&#9776; Archivo</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> &rarr;</a></div></nav>
 
 <main class="wrap">
   <div class="sec-hero">
@@ -656,6 +661,85 @@ for g in GRUPOS:
         with open(ruta, "w", encoding="utf-8") as f:
             f.write(PAG)
         paginas_seccion.append(url_seccion(g["id"], pag))
+
+
+# ---- archivo.html — todas las notas, por mes ---------------------------
+# Una sola pagina, cronologica, sin paginar: es el indice completo del diario.
+# Usa filas compactas, que pesan poco: 97 notas ocupan menos que una portada.
+MESES_LARGO = ["enero","febrero","marzo","abril","mayo","junio",
+               "julio","agosto","septiembre","octubre","noviembre","diciembre"]
+
+_por_mes = {}
+for a in articulos:
+    y, m, _ = a["fecha"].split("-")
+    _por_mes.setdefault((int(y), int(m)), []).append(a)
+
+_bloques = ""
+for (y, m) in sorted(_por_mes, reverse=True):
+    notas_m = _por_mes[(y, m)]
+    _bloques += f"""
+    <section class="mes-bloque">
+      <div class="sec-head"><h2>{MESES_LARGO[m-1]} de {y}</h2><span class="rh-rule"></span><span class="sec-count">{len(notas_m)} notas</span></div>
+      <div class="rows">{"".join(fila(a) for a in notas_m)}</div>
+    </section>"""
+
+_desc_arch = f"Todas las notas de {portal['nombre']}, mes por mes: {len(articulos)} datos verificados de la economia argentina."
+ARCHIVO = f"""<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archivo — {escape(portal['nombre'])}</title>
+<meta name="description" content="{escape(_desc_arch)}">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="canonical" href="{SITE}/archivo.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{escape(portal['nombre'])}">
+<meta property="og:title" content="Archivo — {escape(portal['nombre'])}">
+<meta property="og:description" content="{escape(_desc_arch)}">
+<meta property="og:url" content="{SITE}/archivo.html">
+<meta property="og:locale" content="es_AR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+{CSS}
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="tri">%</span>{escape(portal['nombre'])}<span class="tag">Diario de economía en datos</span></a>
+    <div class="mh-right"><div>{FECHA_MASTHEAD}</div></div>
+  </div>
+</header>
+
+<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="pregunta.html">? La pregunta</a><a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="nav-extra" href="archivo.html">&#9776; Archivo</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> &rarr;</a></div></nav>
+
+<main class="wrap">
+  <div class="sec-hero">
+    <a class="volver" href="index.html">&larr; Portada</a>
+    <h1>Archivo</h1>
+    <p>Todas las notas publicadas, de la más nueva a la más vieja &middot; {len(articulos)} en total</p>
+  </div>
+  {_bloques}
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="f-brand"><span class="tri">%</span> {escape(portal['nombre'])}</div>
+      <div class="f-desc">{escape(portal['descripcion'])}</div>
+      <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos &rarr;</a> &middot; <a href="aprender.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">Modo Aprendizaje &rarr;</a></div>
+      <div style="margin-top:8px;font-family:var(--mono);font-size:11px;color:var(--faint)"><a href="legal.html" style="color:var(--muted);text-decoration:none">Aviso legal y correcciones</a> &middot; <a href="privacidad.html" style="color:var(--muted);text-decoration:none">Política de privacidad</a> &middot; El contenido de este sitio es informativo y educativo; no constituye asesoramiento financiero.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- CI-WIDGETS --><script defer src="assets/ticker.js?v=4"></script>
+</body>
+</html>"""
+with open(os.path.join(ROOT, "archivo.html"), "w", encoding="utf-8") as f:
+    f.write(ARCHIVO)
 
 # ---- hoy.html — "El cierre": los 5 datos del día, finito ----------------
 _top5 = articulos[:5]
@@ -786,7 +870,7 @@ with open(os.path.join(ROOT, "hoy.html"), "w", encoding="utf-8") as f:
 # ---- sitemap.xml (para SEO) --------------------------------------------
 urls = [f"  <url><loc>{SITE}/</loc><changefreq>hourly</changefreq><priority>1.0</priority></url>"]
 urls.append(f"  <url><loc>{SITE}/hoy.html</loc><changefreq>hourly</changefreq><priority>0.9</priority></url>")
-for pg in ("aprender.html", "como-trabajamos.html", "legal.html", "privacidad.html", "herramientas.html", "pregunta.html"):
+for pg in ("aprender.html", "como-trabajamos.html", "legal.html", "privacidad.html", "herramientas.html", "pregunta.html", "archivo.html"):
     urls.append(f"  <url><loc>{SITE}/{pg}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>")
 for ind in ("dolar-oficial", "dolar-blue", "dolar-mep", "riesgo-pais", "inflacion"):
     urls.append(f"  <url><loc>{SITE}/indicador/{ind}.html</loc><changefreq>daily</changefreq><priority>0.8</priority></url>")
