@@ -3,3 +3,8 @@ node_modules/
 .DS_Store
 __pycache__/
 *.pyc
+# Fichas de investigacion: documentos de trabajo, no se publican
+fichas/*.html
+# Guia local del agente: contiene una nota de seguridad con rutas de
+# credenciales de la maquina de Horacio. Queda local, no se publica.
+agente/local/LEEME.md
