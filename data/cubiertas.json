@@ -614,7 +614,7 @@
       "tema": "comercio exterior 36 meses / brecha entre el ICA del INDEC (aduana) y el balance cambiario del BCRA (caja)",
       "angulo": "ago-2023 a jul-2026. Serie mensual construida desde 3 ediciones de los cuadros del ICA + anexo estadístico del BCRA. Hallazgo central: la brecha de exportaciones (-14,2% durante el dólar blend) se va a +0,2% tras la derogación del Decreto 28/2023 por el Decreto 269/2025 (14/04/2025) — experimento natural que valida ambas series. La de importaciones NO cierra: -US$40.682 M en 36 meses, de los cuales ~US$10.700 M son cuña CIF/FOB (INDEC valúa CIF, BCRA paga FOB; ratio de flete del cuadro 5: US$54,3 por cada US$1.000) y el resto se explica parcialmente por la Com. A 7917 (pago en 4 cuotas). Residuo post-normalización: ~-6,8% del FOB, SIN VERIFICAR. Causa normativa tomada del apartado 'Normativa relevante' del propio informe del BCRA. Base: ficha fichas/2026-08-31-comercio-exterior-36-meses.html",
       "fecha": "2026-08-31",
-      "estado": "en_cola",
+      "estado": "publicada",
       "articulo_id": "2026-08-31-comercio-exterior-brecha-aduana-cambios"
     },
     {
@@ -635,7 +635,7 @@
       "tema": "retiro de Messi de la selección / infografía de su carrera en números y finanzas",
       "angulo": "infografía (formato nuevo) por el anuncio del 31/08/2026. Deportivo: 207 PJ y 125 goles (ambos récord histórico; superó a Mascherano 147 y Batistuta 56), goles por competencia 54 amistosos + 36 eliminatorias + 21 mundiales + 14 Copa América = 125; debut 17/08/2005 vs Hungría con expulsión a los 43 segundos; 4 títulos con la mayor (CA 2021, Finalissima 2022, Mundial 2022, CA 2024) y 3 finales de Mundial. Financiero: premios oficiales de FIFA/CONMEBOL a la AFA por sus 4 títulos + subcampeonato 2026 = US$108,5 M (CA21 14 / M22 43,5 / CA24 18 / M26 33); Finalissima sin premio publicado; AFA de 5 sponsors (2017) a +100 (2026) con superávit 8x al 30/06/2023 y >50% de facturación comercial; Forbes US$140 M en 2026; valor Transfermarkt pico €180 M (2018) -> €20 M. LÍMITE CENTRAL declarado en la nota: cuánto cobró Messi personalmente por la selección NO es público (FIFA/CONMEBOL pagan a la federación y el reparto no se publica); no se estima. Correcciones a lo que circuló: 193 PJ/118 goles era la versión inicial (quedó 207/125) y varias coberturas listaron 'Copa América 2019' como título, que es un error (fue 2021).",
       "fecha": "2026-08-31",
-      "estado": "en_cola",
+      "estado": "publicada",
       "articulo_id": "2026-08-31-messi-seleccion-numeros-finanzas"
     }
   ]
