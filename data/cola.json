@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
   "actualizado": "2026-08-31T22:30:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-08-31-messi-empresario-balances",
-      "titulo": "El negocio de Messi no son los hoteles: es su nombre. La empresa que administra su imagen ganó €11 millones en 2024; la hotelera perdió plata",
-      "bajada": "Con el retiro llegó el retrato del Messi empresario y un patrimonio que se estima cerca de los US$1.000 millones. Fuimos a los papeles —el BORME español, las cuentas depositadas y una sociedad suya que cotiza en bolsa— y el balance cuenta otra cosa: de las cuatro patas del holding, la única claramente rentable es la que no tiene un ladrillo.",
-      "seccion": "MERCADOS",
-      "formato": "Anatomía de un dato",
-      "numero": "€61,9 M",
-      "numero_label": "facturó en 2024 la sociedad que administra los derechos de imagen de Messi, con más de €11 M de beneficio",
-      "fecha": "2026-08-31",
-      "hora": "22:30",
-      "archivo": "cola/2026-08-31-messi-empresario-balances.html",
-      "verificacion": "verificada",
-      "fuentes": 8,
-      "lectura": "30 seg → 12 min"
-    }
-  ]
+  "borradores": []
 }
