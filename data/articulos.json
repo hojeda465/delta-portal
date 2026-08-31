@@ -45,7 +45,8 @@
       "archivo": "articulos/2026-08-31-messi-seleccion-numeros-finanzas.html",
       "verificacion": "verificada",
       "fuentes": 9,
-      "lectura": "30 seg → 14 min"
+      "lectura": "30 seg → 14 min",
+      "destacada": true
     },
     {
       "id": "2026-08-31-autos-chinos-patentamientos-produccion",
