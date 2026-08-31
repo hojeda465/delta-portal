@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-08-30T22:15:00-03:00",
+    "actualizado": "2026-08-30T23:47:24-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-08-30-leonas-becas-enard",
+      "titulo": "Las Leonas son campeonas del mundo: la beca más alta que paga el Estado a un deportista es de $1.699.500 por mes, un 8,6% arriba de la línea de pobreza",
+      "bajada": "Las 20 campeonas del Mundial de hockey figuran en la nómina de becados del ENARD. Quince cobran la beca máxima, cuatro una intermedia y una $404.481. Cruzamos los dos documentos oficiales del organismo con el plantel campeón, nombre por nombre. La aclaración que ordena todo: esa beca no es un sueldo.",
+      "seccion": "DEPORTES",
+      "formato": "Anatomía de un dato",
+      "numero": "$1.699.500",
+      "numero_label": "beca mensual máxima del ENARD para un atleta; la cobran 15 de las 20 campeonas del mundo",
+      "fecha": "2026-08-30",
+      "hora": "23:30",
+      "archivo": "articulos/2026-08-30-leonas-becas-enard.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 11 min"
+    },
     {
       "id": "2026-08-30-dolares-personas-humanas-julio",
       "titulo": "Los argentinos compraron US$2.916 millones en dólar billete en julio, el máximo en nueve meses — y un tercio se fue a pagar la tarjeta",
