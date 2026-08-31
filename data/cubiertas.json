@@ -541,6 +541,62 @@
       "articulo_id": "2026-08-25-mercadolibre-ingresos-record"
     },
     {
+      "tema": "energía nuclear / récord de generación 2025 (10.760.572 MWh, 2º año consecutivo) y la primera exportación de tecnología nuclear argentina",
+      "angulo": "las centrales nucleares batieron el récord histórico de generación en 2025 con solo dos reactores activos (Atucha I en Proyecto de Extensión de Vida); cubren ~7% de la electricidad nacional; en junio de 2026 Nucleoeléctrica concretó la primera exportación internacional de componentes para reactores (FROSP a Candu Energy). Cifra ancla confirmada por Nucleoeléctrica y corroborada por World Nuclear Association (neto vs bruto); superlativos con valor previo; monto de exportación marcado como reportado por EconoJournal.",
+      "fecha": "2026-08-25",
+      "estado": "publicada",
+      "articulo_id": "2026-08-25-nuclear-record-exportacion"
+    },
+    {
+      "tema": "reservas del BCRA / récord de reservas brutas US$50.912 M (25/8/2026), máximo desde el 6/9/2019, y la diferencia brutas vs netas",
+      "angulo": "a diferencia de la nota de julio sobre la COMPRA de dólares del BCRA, el eje acá es el STOCK récord cruzando el umbral de 2019 y la composición: en 2025 las brutas subieron US$11.558M pero las compras propias fueron solo US$198M (el resto, FMI ~US$11.687M y revaluación del oro ~US$3.400M); netas negativas en may-2026 (LA NACION) y acercándose a la meta del FMI hacia mediados de 2026. Cifra ancla (brutas, dato oficial BCRA) CONFIRMADA; netas marcadas como estimación privada.",
+      "fecha": "2026-08-25",
+      "estado": "publicada",
+      "articulo_id": "2026-08-25-reservas-bcra-record"
+    },
+    {
+      "tema": "deuda pública de Chaco / bono en dólares de US$250 M (2016) en recta final y stock total +34,2% real en el 1er trim. 2026",
+      "angulo": "la provincia pagó en agosto 2026 la 6ª de 9 cuotas (US$34M) del bono emitido en 2016 (9,375%, reestructurado 2021 a 8,25%, vence feb-2028); quedan 3 cuotas. Tensión: mientras amortiza esa deuda en dólares, el stock total creció 34,2% real i.a. (Politikón/DNAP), muy por encima del 7% promedio provincial; 81,1% de la deuda provincial en moneda extranjera. Superávit fiscal Q1-2026 ($29.216M). Cifras del bono y servicios CONFIRMADAS; monto acumulado desembolsado (>US$200M) atribuido al oficialismo; superlativo 'deuda más grande' atribuido.",
+      "fecha": "2026-08-26",
+      "estado": "publicada",
+      "articulo_id": "2026-08-26-chaco-deuda-bono-dolares"
+    },
+    {
+      "tema": "política económica / plan de créditos hipotecarios de Caputo con $2 billones del FGS de ANSES (26/8/2026)",
+      "angulo": "anuncio del 26/8/2026: el FGS de ANSES coloca $2 billones en plazos fijos en bancos (UVA+2,5% a +4,5%), que prestan a familias (máx UVA+7,5%, hasta 150.000 UVAs, 1ª vivienda) asumiendo el riesgo; primera licitación $200.000M; BCRA habilita prestar 15% de depósitos en dólares a empresas. Nota más profunda: mecanismo, qué es el FGS (fondo previsional, estatización AFJP 2008), riesgo UVA, no es gasto fiscal, y escala (18.000 familias vs déficit de 1,7M viviendas / 5,7M hogares). Cifras del plan CONFIRMADAS por múltiples medios; familias/ingreso/cuota marcados como estimaciones del anuncio; dato de Caputo sobre FGS US$30B->80B atribuido.",
+      "fecha": "2026-08-26",
+      "estado": "publicada",
+      "articulo_id": "2026-08-26-caputo-hipotecarios-fgs-anses"
+    },
+    {
+      "tema": "Ley de Inocencia Fiscal II / media sanción en Diputados (26/8/2026) y beneficios para el contribuyente",
+      "angulo": "eje en los beneficios: reducción de multas formales 25% permanente (PyMEs/personas) y 50% transitoria (desde 2/1/2026, incluso pagadas/firmes); las materiales no bajan. Presunción de exactitud de la DJ; ARCA debe probar una 'discrepancia significativa' (ajuste ≥15% del impuesto Y > ~$5M = 5% del umbral de evasión simple) o facturas apócrifas; 15 días para rectificar; carga de la prueba en ARCA. Ganancias: elimina topes de ingresos/patrimonio del régimen simplificado; límite a presunciones de ARCA hasta 31/12/2027; excluye funcionarios. ESTADO: media sanción, pasa al Senado (NO es ley aún). Cifras corroboradas por El Cronista, Bloomberg Línea y SIAP; piso de $5M marcado como aproximado. Incluye 'otras miradas' con la crítica (debilita control/recaudación).",
+      "fecha": "2026-08-27",
+      "estado": "publicada",
+      "articulo_id": "2026-08-27-inocencia-fiscal-2"
+    },
+    {
+      "tema": "inflación agosto 2026 / proyecciones privadas se recortan al rango 1,5%-1,9% por desaceleración de alimentos",
+      "angulo": "tras el rebote de julio (2,1% INDEC, por estacionalidad de vacaciones), las consultoras recortan la proyección de agosto: EcoGo 1,5%, consenso ~1,6%, Analytica/EconViews ~1,9%. Motor: alimentos +0,3% (EcoGo)/+0,5% (Analytica), con carnes +0,7% (peso pesado) frente a verduras +4,8%. Bausili anticipó dato menor a julio y probablemente a junio. TODO son PROYECCIONES (el IPC oficial sale a mediados de sept), marcadas como estimación. Incluye general vs núcleo, alta frecuencia, 'última milla' y la cita de Menescaldi ('el 0% no sirve'). Julio 2,1% confirmado (INDEC/Chequeado).",
+      "fecha": "2026-08-27",
+      "estado": "publicada",
+      "articulo_id": "2026-08-27-inflacion-agosto-proyecciones"
+    },
+    {
+      "tema": "retrospectiva 36 meses / inflación, tipo de cambio y tasa de interés 2023-2026 con datos oficiales",
+      "angulo": "serie histórica con datos oficiales INDEC (IPC mensual: pico 25,5% dic-2023, anuales 211,4%/117,8%/31,5%, ~2% en 2026) y BCRA (dólar mayorista A3500: $350 sep-2023 -> deval a $800 dic-2023 -> ~$1.030 dic-2024 -> bandas abr-2025 -> ~$1.490 ago-2026; tasa: 133% oct-2023 -> 32% dic-2024 -> agregados monetarios 2025 -> ~24% plazo fijo 2026). Tres charts propios de eje temporal. Contexto: el dólar como ancla, costos en actividad/salario, atraso cambiario, última milla. Dólar y tasa presentados como HITOS de referencia (no serie continua); tasa 2026 es de mercado no de política, aclarado.",
+      "fecha": "2026-08-27",
+      "estado": "publicada",
+      "articulo_id": "2026-08-27-tres-variables-36-meses"
+    },
+    {
+      "tema": "distribución de la recuperación / ¿a quién le llega la mejora macro? pobreza vs desigualdad vs salarios",
+      "angulo": "responde la crítica: la macro mejora pero ¿llega al obrero? Datos INDEC: pobreza cayó 52,9% (1S24) -> 38,1% -> 31,6% -> 28,2% (2S25, mín 7 años) = SÍ llegó a la base; PERO Gini subió 0,427->0,442 (Q1-2026), decil 10 concentra 33,5% vs decil 1 1,8%, brecha 15x (medianas)/~19x (promedios); salario real vs nov-2023: privados reg -0,9%, púb provinciales -5,5%, púb nacionales -33,3%, informales rezagados con informalidad ~43%. Movilidad: sin panel oficial, se usa proxies (salida de pobreza + salario + formalidad). Distinto de la nota Q1-2026 de Gini (esta es síntesis de la distribución de la recuperación con pobreza+salarios+movilidad). Balanceada con otras miradas.",
+      "fecha": "2026-08-27",
+      "estado": "publicada",
+      "articulo_id": "2026-08-27-a-quien-le-llega-distribucion"
+    },
+    {
       "tema": "compra de dólar billete de personas humanas / julio 2026 (US$2.916 M netos, máximo en nueve meses)",
       "angulo": "1,7 millones de personas compraron billetes por US$3.319 M brutos y 697 mil vendieron por US$404 M: compra neta de US$2.916 M, +44,7% mensual y la mayor desde oct-2025 (US$4.196 M). El ángulo propio es doble: (a) el BCRA estima que de los ~US$3.000 M de salida neta, ~US$900 M no fueron ahorro sino pago de consumos con tarjeta, ~US$1.000 M quedaron en depósitos locales y ~US$1.000 M se fueron del país; (b) reconciliación de las CUATRO cifras que circularon por el mismo hecho (2.916 netas / 3.319 brutas / 3.462 billetes+giros / 4.124 compra neta total de moneda extranjera). Cifra ancla CONFIRMADA por doble fuente primaria independiente: informe BCRA julio 2026 y anexo estadístico crudo (cálculo propio: 3.319,4 − 403,6 = 2.915,8, coincide al decimal). Serie mensual abr-2025→jul-2026 calculada por Con Interés desde el anexo. Destinos marcados como ESTIMACIÓN del organismo.",
       "fecha": "2026-08-30",
