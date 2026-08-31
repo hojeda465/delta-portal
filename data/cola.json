@@ -16,21 +16,6 @@
       "verificacion": "verificada",
       "fuentes": 7,
       "lectura": "30 seg → 12 min"
-    },
-    {
-      "id": "2026-08-31-autos-chinos-patentamientos-produccion",
-      "titulo": "Los autos chinos pasaron de 3.985 a 28.291 patentamientos en un año: ya son uno de cada nueve autos nuevos, y la producción nacional de autos se partió al medio",
-      "bajada": "Contamos el registro oficial de patentamientos, marca por marca. Las chinas multiplicaron por siete sus unidades mientras el mercado se achicaba 10%. El hallazgo es dónde pegó: en pickups, lo que la Argentina fabrica, siguen siendo el 1,6%; en autos y SUV llegaron al 11,8%, y ahí la producción nacional cayó 47,7%.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "28.291",
-      "numero_label": "vehículos de marcas chinas patentados entre enero y julio de 2026; eran 3.985 un año antes",
-      "fecha": "2026-08-31",
-      "hora": "18:00",
-      "archivo": "cola/2026-08-31-autos-chinos-patentamientos-produccion.html",
-      "verificacion": "verificada",
-      "fuentes": 6,
-      "lectura": "30 seg → 13 min"
     }
   ]
 }
