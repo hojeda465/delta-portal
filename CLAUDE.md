@@ -152,9 +152,11 @@ Se leen al empezar y se actualizan al terminar.
 - **El kit social esta suspendido** por decision del editor (22/07/2026). No
   generar `kits/<id>.md` en las corridas.
 - **`data/pregunta.json` se toca una sola vez por dia**, en la primera corrida.
-- **Hay dos tareas programadas en la nube** que siguen corriendo la redaccion.
-  Si empezas a correr la redaccion desde aca, conviene apagarlas o vas a tener
-  dos borradores del mismo dia.
+- **La redaccion automatica en la nube esta suspendida** desde el 31/08/2026:
+  la tarea que corria cada 2 horas ya no genera borradores. La unica redaccion
+  activa es la de esta maquina, asi que ya no hay riesgo de dos borradores del
+  mismo dia compitiendo por el mismo tema. Sigue en pie la auditoria de los
+  lunes a las 7, que no genera notas.
 
 ---
 
