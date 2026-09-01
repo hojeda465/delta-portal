@@ -19,8 +19,12 @@
   "use strict";
 
   // === CONFIG (completar al activar) ===
-  var ENDPOINT = null;          // p.ej. "https://coninteres.goatcounter.com/count"
-  var PROVIDER = null;          // "goatcounter" | "plausible" | "cloudflare"
+  // OJO: este archivo manda un POST con JSON ({p, e, t}) por sendBeacon.
+  // NO sirve apuntarlo a GoatCounter, Plausible ni Cloudflare: esperan un GET
+  // con parametros y descartarian todo en silencio, lo que es peor que no
+  // medir (ceros que parecen datos). Necesita un receptor propio que acepte
+  // el POST — ver negocio/activar-medicion.md, camino B.
+  var ENDPOINT = null;          // p.ej. "https://ci-metrics.<cuenta>.workers.dev"
   // ======================================
 
   if (!ENDPOINT) return;        // sin proveedor definido: no medimos, no molestamos.

@@ -102,50 +102,40 @@
   </div>
 </footer>
 
+<script src="assets/pregunta.js?v=1"></script>
 <script>
 (function(){
   "use strict";
-  var K="ci_pregunta";
-  var MES=["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
-  function est(){ try{return JSON.parse(localStorage.getItem(K)||"{}");}catch(e){return {};} }
-  function guardar(s){ try{localStorage.setItem(K,JSON.stringify(s));}catch(e){} }
-  function diaAnterior(iso){ var d=new Date(iso+"T12:00:00"); d.setDate(d.getDate()-1); return d.toISOString().slice(0,10); }
+  // La logica (respuesta correcta, racha, texto para compartir) vive en
+  // assets/pregunta.js, compartida con el bloque de la portada. Aca solo se
+  // dibuja la version completa.
+  var Q=window.CIPregunta;
 
-  fetch("data/pregunta.json").then(function(r){return r.json();}).then(function(P){
-    var f=P.fecha.split("-");
-    document.getElementById("qFecha").textContent = "Pregunta del "+(+f[2])+" de "+MES[+f[1]-1]+" de "+f[0];
+  Q.cargar("").then(function(P){
+    document.getElementById("qFecha").textContent = "Pregunta del "+Q.fechaLarga(P.fecha);
     document.getElementById("qTexto").textContent = P.pregunta;
-    var s=est();
-    pintarRachaTop(s);
+    pintarRachaTop(Q.estado());
     var ops=document.getElementById("qOps");
     P.opciones.forEach(function(o,i){
       var b=document.createElement("button");
       b.className="op"; b.type="button"; b.textContent=o;
-      b.addEventListener("click",function(){ responder(P,i,b); });
+      b.addEventListener("click",function(){ responder(P,i); });
       ops.appendChild(b);
     });
-    // ¿ya respondió la de hoy?
-    if(s.ultimaFecha===P.fecha && s.ultimaEleccion!=null){
-      mostrar(P, s.ultimaEleccion, true);
-    }
+    // ¿ya respondió la de hoy? (puede haberla respondido en la portada)
+    var ya=Q.respondida(P);
+    if(ya!=null) mostrar(P, ya);
   }).catch(function(){
     document.getElementById("qTexto").textContent="No se pudo cargar la pregunta. Probá de nuevo en unos minutos.";
   });
 
-  function responder(P,i,btn){
-    var s=est();
-    if(s.ultimaFecha===P.fecha) return; // ya jugó hoy
-    var acierto = (i===P.correcta);
-    if(s.rachaFecha===diaAnterior(P.fecha)) s.racha=(s.racha||0)+1;
-    else s.racha=1;
-    s.rachaFecha=P.fecha; s.ultimaFecha=P.fecha; s.ultimaEleccion=i;
-    s.jugadas=(s.jugadas||0)+1; s.aciertos=(s.aciertos||0)+(acierto?1:0);
-    guardar(s);
-    mostrar(P,i,false);
+  function responder(P,i){
+    Q.responder(P,i);
+    mostrar(P,i);
   }
 
   function mostrar(P,eleccion){
-    var s=est();
+    var s=Q.estado();
     var acierto=(eleccion===P.correcta);
     var botones=document.querySelectorAll(".op");
     botones.forEach(function(b,j){
@@ -166,7 +156,7 @@
     document.getElementById("rachaN").textContent = s.racha||1;
     document.getElementById("rachaTxt").textContent = ((s.racha||1)===1 ? "día de racha." : "días de racha.");
     pintarRachaTop(s);
-    var texto = (acierto?"🟩":"🟥")+" La Pregunta del Día de Con Interés · racha: "+(s.racha||1)+(s.racha===1?" día":" días")+" · Jugala vos: https://coninteres.com/pregunta.html";
+    var texto = Q.textoCompartir(acierto, s.racha||1);
     document.getElementById("bWsp").onclick=function(){ window.open("https://wa.me/?text="+encodeURIComponent(texto),"_blank"); };
     document.getElementById("bCp").onclick=function(){
       (navigator.clipboard?navigator.clipboard.writeText(texto):Promise.reject()).then(function(){
@@ -177,10 +167,11 @@
 
   function pintarRachaTop(s){
     var el=document.getElementById("rachaTop");
-    if(s.racha>0) el.innerHTML="Racha: <b>"+s.racha+(s.racha===1?" día":" días")+"</b> · Aciertos: "+(s.aciertos||0)+"/"+(s.jugadas||0);
+    if(s.racha>0) el.innerHTML="Racha: <b>"+Q.plural(s.racha,"día","días")+"</b> · Aciertos: "+(s.aciertos||0)+"/"+(s.jugadas||0);
   }
 })();
 </script>
 <!-- CI-WIDGETS --><script defer src="assets/ticker.js?v=5"></script>
+<!-- CI-METRICS --><script defer src="assets/metrics.js?v=1"></script>
 </body>
 </html>
