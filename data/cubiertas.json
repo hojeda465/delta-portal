@@ -658,6 +658,20 @@
       "fecha": "2026-09-01",
       "estado": "publicada",
       "articulo_id": "2026-09-01-mora-familias-freno-tarjetas"
+    },
+    {
+      "tema": "salario minimo vital y movil contra la linea de pobreza (nov-2025 a jul-2026)",
+      "angulo": "El 01/09/2026 se anuncio un esquema que llevaria el SMVM a $437.000 en abril de 2027. VERIFICADO que NO estaba publicado en el Boletin Oficial: se reviso la primera seccion de la edicion del 1/9 y no hay resolucion del Consejo del Salario. Por eso la nota no trabaja sobre el anuncio sino sobre lo firmado: la Resolucion 9/2025 (BO 03/12/2025), que fija el SMVM mes a mes de nov-2025 ($328.400) a ago-2026 ($376.600) y deja septiembre sin monto. ANGULO: cruzar esa serie con la linea de pobreza por adulto equivalente del INDEC (canastas). HALLAZGO: el SMVM cubria 80,7% de la linea en nov-2025 y 73,5% en jul-2026 ($372.400 contra $506.380,55; faltan $133.981). Cae los 8 meses SIN una sola excepcion, -7,2 puntos. Ademas: equivale a 1,63 lineas de indigencia y al 23,8% de la canasta de un hogar de 4 ($1.564.715,90). DETALLE DE LECTURA que se documenta en la nota: el tramo de marzo-2026 ($352.400) esta escrito en la resolucion como '1° de Marzo 2026', sin el 'de' antes del ano, y se puede saltear al leer la norma en diagonal. NO SE AFIRMA: que quien cobra el minimo sea pobre (la pobreza se mide por ingreso del hogar, no por un salario individual), ni se compara los $437.000 anunciados contra una canasta futura que no existe. La comparacion mensual llega hasta julio porque la canasta de agosto se publica el 10/09. Distinto de 2026-07-20-salario-real-abril (salario registrado, RIPTE) y de las notas de canasta: aca el eje es el PISO legal contra la linea oficial de pobreza.",
+      "fecha": "2026-09-01",
+      "estado": "en_cola",
+      "articulo_id": "2026-09-01-salario-minimo-linea-pobreza"
+    },
+    {
+      "tema": "credito a empresas 24 meses (jun-2024 a jun-2026) + financiamiento de organismos internacionales",
+      "angulo": "Pedido del editor: mercado crediticio para PyMEs, 24 meses, mas lineas de organismos internacionales abiertas. DATOS: anexo del Informe sobre Bancos del BCRA (saldos por linea) deflactado por IPC del INDEC. HALLAZGO PRINCIPAL: el credito real a empresas crecio 97,1% en 24 meses PERO 92,4% ocurrio en los primeros 17 meses (jun-24 a nov-25) y solo 2,4% en los ultimos 7; entre nov-25 y may-26 cayo 1,7% real y recien en junio repunto. La mora de empresas paso de 1,02% a 3,50% (x3,4). Saldo jun-26: $87,5 billones, de los cuales $3,1 billones en mora. COMPOSICION: prefinanciacion de exportaciones +182,1% real (el credito con venta comprometida como respaldo), adelantos en cuenta apenas +24,8% (el credito de emergencia), que bajaron de 18,4% a 11,6% del total. SOBRE LOS ORGANISMOS: verificado en la propia pagina del BID Invest (seccion Soluciones) que trabaja con instituciones financieras e intermediarios, NO con PyMEs directamente. No existe ventanilla multilateral para una PyME argentina: la plata llega via bancos. Las lineas abiertas y publicadas para empresas estan en BICE y CFI. LIMITACION DECLARADA EN LA NOTA: el BCRA abre la serie por familias/empresas, NO por tamano de empresa, asi que NO se afirma que este crecimiento haya llegado a las PyMEs en la misma proporcion; la prefinanciacion de exportaciones se concentra en exportadores, que suelen ser grandes. Tampoco se publican tasas: las paginas de producto las cargan por JS y cambian seguido, y se explica por que no se publican. Complementa a 2026-09-01-mora-familias-freno-tarjetas, que usa el mismo informe del lado de los hogares; se enlazan entre si.",
+      "fecha": "2026-09-01",
+      "estado": "publicada",
+      "articulo_id": "2026-09-01-credito-empresas-24-meses-organismos"
     }
   ]
 }

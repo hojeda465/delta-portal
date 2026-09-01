@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-09-01T09:30:23-03:00",
+    "actualizado": "2026-09-01T11:49:55-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-09-01-credito-empresas-24-meses-organismos",
+      "titulo": "El crédito a las empresas casi se duplicó en dos años, pero todo el crecimiento pasó antes de noviembre: en los últimos siete meses se frenó y la mora se triplicó",
+      "bajada": "Bajamos la serie completa del Banco Central y la descontamos por inflación. En 24 meses el crédito real a empresas creció 97,1%, pero 92,4% de eso ocurrió en los primeros 17. Y sobre el financiamiento de organismos internacionales, que se busca todos los días: el BID Invest lo dice en su propia página, trabaja con bancos, no con PyMEs.",
+      "seccion": "MERCADOS",
+      "formato": "Anatomía de un dato",
+      "numero": "97,1%",
+      "numero_label": "creció el crédito real a empresas en 24 meses, pero casi todo antes de noviembre",
+      "fecha": "2026-09-01",
+      "hora": "16:00",
+      "archivo": "articulos/2026-09-01-credito-empresas-24-meses-organismos.html",
+      "verificacion": "verificada",
+      "fuentes": 6,
+      "lectura": "30 seg → 10 min"
+    },
     {
       "id": "2026-09-01-mora-familias-freno-tarjetas",
       "titulo": "Después de 19 meses de suba, la mora de las familias se frenó — pero fue solo por las tarjetas: personales, prendarios e hipotecarios están los tres en su récord",
