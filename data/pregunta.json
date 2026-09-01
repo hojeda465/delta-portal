@@ -1,14 +1,14 @@
 {
   "descripcion": "La pregunta del día: la redacción la renueva una vez por día, derivada de la nota principal. Ver NEWSROOM.md.",
-  "fecha": "2026-08-30",
-  "pregunta": "En el segundo trimestre de 2026 Mercado Libre facturó US$10.169 millones, un 50% más que un año antes: su récord histórico. Y sin embargo ganó 11% menos que en el mismo trimestre de 2025. ¿Cuál es la explicación principal?",
+  "fecha": "2026-09-01",
+  "pregunta": "En junio de 2026 la mora del crédito a las familias bajó por primera vez en 20 meses: de 12,80% a 12,77%. Pero al abrir el dato por tipo de préstamo aparece que los personales, los prendarios y los hipotecarios subieron, y los tres tocaron su máximo histórico. ¿Cómo puede bajar el promedio si tres de las cuatro líneas subieron?",
   "opciones": [
-    "Presta cada vez más plata, y las normas contables la obligan a apartar por adelantado una parte del resultado para cubrir los créditos que podrían no cobrarse",
-    "Bajó los precios de los productos para ganarle mercado a la competencia, y esa rebaja se comió la ganancia",
-    "El crecimiento fue solo nominal: descontada la inflación, en realidad facturó lo mismo que un año atrás"
+    "Porque la cuarta línea, las tarjetas de crédito, bajó bastante más de lo que subieron las otras tres, y es la de mayor peso en la cartera",
+    "Porque el promedio no se calcula sumando las cuatro líneas, sino que el BCRA lo estima aparte con otra metodología",
+    "Porque los hipotecarios tienen tanto peso en el total que arrastran el promedio, aunque su mora sea baja"
   ],
   "correcta": 0,
-  "explicacion": "Cuando una empresa presta dinero no puede anotar toda la ganancia de una vez: las normas contables la obligan a estimar qué porción de esos créditos probablemente no se cobre y a descontarla del resultado en el momento de prestar. Son las previsiones por incobrabilidad. La cartera de crédito de Mercado Pago creció 75% en un año, hasta US$16.375 millones, así que las previsiones crecieron con ella y comprimieron el margen operativo del 12,2% al 6,7%. Por eso conviven un ingreso récord y una ganancia que baja. Ojo con los dos distractores: son errores razonables, pero acá la facturación creció en serio (no fue solo inflación) y el problema no estuvo en el precio de venta sino en el costo de financiar el propio crecimiento.",
-  "nota": "articulos/2026-08-25-mercadolibre-ingresos-record.html",
+  "explicacion": "El total no es el promedio simple de las cuatro líneas: es un promedio ponderado por cuánta plata hay prestada en cada una. Las tarjetas son la cartera más grande de las familias —unos $23,3 billones— y su mora cayó 0,53 puntos en el mes, de 13,11% a 12,58%. Esa baja, en la línea más pesada, alcanzó para compensar las subas de personales (+0,42 punto, hasta 16,37%), prendarios (+0,25, hasta 7,95%) e hipotecarios (+0,01, hasta 1,63%). Por eso el titular \"bajó la mora\" y el titular \"la mora está en récord\" pueden ser los dos ciertos el mismo mes: describen cosas distintas. Ojo con los distractores: el BCRA sí construye el total desde las mismas carteras, y los hipotecarios son justamente la línea con menos mora, así que no pueden empujar el promedio para abajo por su peso.",
+  "nota": "articulos/2026-09-01-mora-familias-freno-tarjetas.html",
   "leccion": "lecciones/deuda-credito.html"
 }

@@ -651,6 +651,13 @@
       "fecha": "2026-08-31",
       "estado": "publicada",
       "articulo_id": "2026-08-31-cine-argentino-tres-de-cada-cien-entradas"
+    },
+    {
+      "tema": "morosidad / el freno de junio 2026 y su composicion por tipo de credito",
+      "angulo": "ACTUALIZA la serie de la nota del 20/07/2026 (que llegaba a abril) pero con angulo NUEVO: no es 'la mora subio otra vez' sino que en junio 2026 BAJO por primera vez desde octubre de 2024, y el freno lo explica una sola linea. Datos del anexo del Informe sobre Bancos del BCRA (xlsx, serie mensual desde 2010). Familias: 12,7958% en mayo (MAXIMO de toda la serie) -> 12,7718% en junio, -0,024 pp. Antes: 19 meses consecutivos de suba desde octubre de 2024 (2,49%), x5,1. COMPOSICION, que es el hallazgo: tarjetas -0,53 pp (13,11 -> 12,58) es la UNICA que bajo; personales +0,42 hasta 16,37%, prendarios +0,25 hasta 7,95% e hipotecarios +0,01 hasta 1,63% estan los TRES en su maximo de la serie. Empresas 3,50% (su maximo historico es 8,10% en feb-2020, o sea las familias hoy estan por encima del peor momento de las empresas). Cartera a familias $70,3 billones, en mora $9,0 billones (calculo propio). VERIFICACION: se cruzaron las dos tablas del anexo que traen la irregularidad del sector privado, armadas por separado: coinciden en los 198 meses sin una sola diferencia. Coherencia: el total del sector privado (7,63%) queda entre empresas y familias. SE DECLARA que el BCRA es unico productor de la estadistica y no hay segunda fuente independiente. IMPORTANTE: los portales del 01/09 hablaban de 'la mora de julio'; el ultimo informe es del 21/08 con datos a JUNIO y el de julio sale el 18/09 segun el calendario del BCRA. NO se publico la cifra de prestamos dados de baja por incobrables que circulaba (143.000): no se encontro en la fuente primaria.",
+      "fecha": "2026-09-01",
+      "estado": "publicada",
+      "articulo_id": "2026-09-01-mora-familias-freno-tarjetas"
     }
   ]
 }
