@@ -644,6 +644,13 @@
       "fecha": "2026-08-31",
       "estado": "publicada",
       "articulo_id": "2026-08-31-messi-empresario-balances"
+    },
+    {
+      "tema": "Cine argentino / de donde sale la plata del Fondo de Fomento del INCAA",
+      "angulo": "Sale de la ficha de contexto del INCAA del 31/08/2026. Angulo: no cuanto GASTA el INCAA (que no se pudo verificar) sino de donde SALE la plata. El impuesto del 10% a la entrada (Leyes 17.741 y 26.522) recaudo $20.626.764.874 entre el 1/1 y el 30/8/2026; $19.974.740.965 (96,8%) los aportaron entradas a peliculas EXTRANJERAS y $652.023.909 (3,2%) entradas a peliculas nacionales. HALLAZGOS: 492 estrenos (190 extranjeros, 159 nacionales, 143 festivales); el cine argentino vendio 852.449 de 24.723.334 entradas (3,4%); 120 de 159 estrenos nacionales no llegaron a 1.000 espectadores y la mediana es 378; Yo, Narciso concentra el 47,3% del publico del cine nacional; Toy Story 5 (3.926.099) hizo 4,6 veces todo el cine argentino del ano. FUENTE: tablero publico del SAF en Tableau, que la pagina del INCAA carga por JS y no expone en HTML. CONTROL: precio implicito del tablero $8.343, entre los dos oficiales del periodo ($8.548,06 y $9.104,65). LO QUE NO CERRO Y SE DECLARA EN LA NOTA: Harry Potter y la piedra filosofal figura con 1.536.729 entradas y $298.811.830 ($194 por entrada); se hizo analisis de sensibilidad y sin esa fila el share nacional pasa de 3,4% a 3,7% y el reparto del impuesto queda igual en 96,8%, asi que la conclusion se sostiene con el dato y sin el. NO se publica el presupuesto del INCAA ni el fomento por pelicula (Presupuesto Abierto exige token de registro), ni se presenta esto como taquilla total del ano: el propio INCAA aclara que su tablero son estrenos agrupados por ano y no ranking de exhibicion.",
+      "fecha": "2026-08-31",
+      "estado": "publicada",
+      "articulo_id": "2026-08-31-cine-argentino-tres-de-cada-cien-entradas"
     }
   ]
 }

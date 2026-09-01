@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-08-31T19:29:17-03:00",
+    "actualizado": "2026-08-31T23:32:02-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-08-31-cine-argentino-tres-de-cada-cien-entradas",
+      "titulo": "De cada $100 del impuesto que financia al cine argentino, $97 los paga una entrada a una película extranjera",
+      "bajada": "El fomento al cine nacional se sostiene con el 10% de cada entrada vendida en el país. Fuimos al tablero oficial del INCAA y calculamos de dónde sale esa plata: entre enero y agosto se estrenaron 492 películas, las argentinas vendieron el 3,4% de las entradas, y 120 de los 159 estrenos nacionales no llegaron a mil espectadores.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "96,8%",
+      "numero_label": "del impuesto que financia al cine argentino sale de entradas a películas extranjeras",
+      "fecha": "2026-08-31",
+      "hora": "23:30",
+      "archivo": "articulos/2026-08-31-cine-argentino-tres-de-cada-cien-entradas.html",
+      "verificacion": "verificada",
+      "fuentes": 4,
+      "lectura": "30 seg → 9 min"
+    },
     {
       "id": "2026-08-31-messi-empresario-balances",
       "titulo": "El negocio de Messi no son los hoteles: es su nombre. La empresa que administra su imagen ganó €11 millones en 2024; la hotelera perdió plata",
