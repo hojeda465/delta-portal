@@ -7,6 +7,14 @@ en todo lo que sea criterio. Esta mision solo ordena los pasos.
 
 ## Antes de empezar
 
+0. **Corre `python scripts/agenda.py`.** Es lo primero. Te dice que publican el
+   INDEC y el BCRA en los proximos dias, con fecha y hora oficiales, y cual fue
+   nuestra ultima nota de esa misma serie. La corrida ya no arranca en una
+   pagina en blanco.
+   - Si hay algo que sale HOY o MANANA con prioridad alta, ese es el candidato
+     obvio: fuente primaria garantizada y serie previa para comparar.
+   - Si el calendario avisa que tiene mas de 20 dias, rehacelo antes:
+     `python scripts/build_calendario.py`.
 1. Lee `data/cubiertas.json`. Es la memoria de temas: nada que figure ahi como
    `publicada` o `en_cola` se repite, salvo que tengas un angulo de datos
    genuinamente nuevo (y entonces explicas cual es la diferencia).
@@ -20,9 +28,11 @@ en todo lo que sea criterio. Esta mision solo ordena los pasos.
 Corre los seis agentes en cadena. La salida de cada uno es la entrada del que
 sigue:
 
-1. **Rastreador** - releva lo mas destacado del momento en infobae, lanacion,
-   clarin, ambito, iprofesional, cronista, tn y pagina12. Prioriza lo que
-   aparece repetido en varias portadas. Salida: 8-12 candidatas.
+1. **Rastreador** - primero la agenda del paso 0: lo que sale del calendario
+   oficial entra como candidato con ventaja. Despues releva lo mas destacado
+   del momento en infobae, lanacion, clarin, ambito, iprofesional, cronista, tn
+   y pagina12, priorizando lo que aparece repetido en varias portadas. Salida:
+   8-12 candidatas, marcando cuales vienen del calendario.
 2. **Editor** - elige UNA. Criterios en orden: riqueza de datos, relevancia para
    el lector argentino hoy, no repetir.
 3. **Investigador** - va a las fuentes PRIMARIAS (INDEC, BCRA, Ministerio de

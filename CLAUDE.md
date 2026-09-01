@@ -127,7 +127,13 @@ index.html              portada: LINEA DE TIEMPO por dia (GENERADA - no editar
                         DEL DIA: la destacada del dia mas reciente sale de la
                         linea y encabeza la portada con su rotulo; el nodo de
                         hoy lista el resto y dice "N notas mas". Debajo, el
-                        semaforo economico en franja de 5 columnas.
+                        semaforo economico en franja de 5 columnas. Debajo
+                        del bloque de hoy va LA PREGUNTA DEL DIA, que hasta el
+                        31/08/2026 solo se alcanzaba por el nav y casi nadie
+                        veia. La logica (respuesta correcta, racha) esta en
+                        assets/pregunta.js, compartida con pregunta.html para
+                        que no puedan divergir; la racha vive solo en el
+                        navegador del lector.
                         build_portada.py acepta CI_VARIANTE (lead / compacta /
                         actual) para generar maquetas sin pisar index.html.
 hoy.html                "El cierre" (GENERADA - no editar a mano)
@@ -147,11 +153,18 @@ data/                   manifiestos JSON - la fuente de verdad
   cola.json               borradores en cola
   cubiertas.json          memoria de temas (anti-duplicados)
   pregunta.json           la pregunta del dia
+  calendario.json         QUE PUBLICAN INDEC Y BCRA en los proximos 120 dias,
+                          con fecha y hora oficiales. GENERADO por
+                          scripts/build_calendario.py desde los calendarios de
+                          difusion de cada organismo. Ninguna fecha se estima.
   eventos.json            anotaciones de las fichas de indicador
 agente/NEWSROOM.md      el runbook editorial - MANDA en criterio
 agente/plantilla.html   plantilla de nota (estructura de 6 capas)
 agente/local/           el agente local: script, misiones, LEEME
 scripts/                build_portada.py, aprobar.py, rechazar.py, ...
+  build_calendario.py     rehace data/calendario.json desde INDEC y BCRA
+  agenda.py               que sale en los proximos dias + nuestra ultima nota
+                          de esa misma serie. Es el paso 0 de toda corrida.
 negocio/                tablero de crecimiento y metricas
 ```
 
@@ -171,6 +184,14 @@ Se leen al empezar y se actualizan al terminar.
 - **El kit social esta suspendido** por decision del editor (22/07/2026). No
   generar `kits/<id>.md` en las corridas.
 - **`data/pregunta.json` se toca una sola vez por dia**, en la primera corrida.
+- **El flujo de notas es a rafagas, no constante.** Entre el 18/07 y el
+  31/08/2026 hubo notas en 14 de 45 dias: el 69% del periodo no publico nada,
+  con un apagon de 24 dias en agosto. No es falta de capacidad (el mejor dia
+  produjo 23 notas) sino falta de disparador y de colchon: nada arranca si
+  Horacio no hace doble clic, y la cola esta siempre en cero. El calendario de
+  publicaciones oficiales (`data/calendario.json`, 31/08/2026) ataca la mitad
+  del problema: la corrida ya no arranca en blanco. Falta la otra mitad, un
+  colchon de borradores para los dias flojos.
 - **La redaccion automatica en la nube esta suspendida** desde el 31/08/2026:
   la tarea que corria cada 2 horas ya no genera borradores. La unica redaccion
   activa es la de esta maquina, asi que ya no hay riesgo de dos borradores del

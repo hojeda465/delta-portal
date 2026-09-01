@@ -63,17 +63,30 @@ Los agentes corren en cadena. La salida de cada uno es la entrada del siguiente.
 Cada uno tiene un rol acotado: hace una cosa y la hace bien.
 
 ### ① Rastreador — *¿qué está pasando?*
-- **Entrada:** nada (arranca la corrida).
-- **Tarea:** relevar las noticias más destacadas del momento en los principales
-  portales argentinos. Fuentes de barrido:
+- **Entrada:** `data/calendario.json` — **la corrida NO arranca en blanco.**
+- **Tarea A — la agenda, primero.** Correr `python scripts/agenda.py`. Muestra
+  qué publican el INDEC y el BCRA en los próximos días, con fecha y hora
+  oficiales, y cuál fue nuestra última nota de esa misma serie. Un dato que
+  sale hoy a las 16 le gana a cualquier cosa que haya en las portadas: llegamos
+  primero, con la serie ya armada y el número anterior a mano.
+  Si el calendario tiene más de 20 días, rehacerlo:
+  `python scripts/build_calendario.py`.
+- **Tarea B — el barrido**, para los días sin publicación oficial relevante o
+  cuando algo se impone en la agenda pública. Relevar las noticias más
+  destacadas del momento en los principales portales argentinos. Fuentes:
   `infobae.com`, `lanacion.com.ar`, `clarin.com`, `ambito.com`,
   `iprofesional.com`, `cronista.com`, `tn.com.ar`, `pagina12.com.ar`.
   Priorizar lo que aparece repetido en varias portadas (señal de relevancia).
-- **Salida:** lista de 8–12 candidatas con: título, portal, tema, y una nota de
-  1 línea sobre "qué dato o cifra tiene adentro".
+- **Salida:** lista de 8–12 candidatas con: título, origen (calendario oficial
+  o portal), tema, y una nota de 1 línea sobre "qué dato o cifra tiene adentro".
+  Las que vienen del calendario van primero y marcadas: son las únicas de las
+  que se sabe de antemano que va a haber dato duro.
 
 ### ② Editor — *¿cuál contamos, y por qué?*
 - **Entrada:** las candidatas del Rastreador + `data/cubiertas.json`.
+  Si hay una candidata del calendario oficial, **compite con ventaja**: tiene
+  fuente primaria garantizada y serie previa. No es una regla automática, pero
+  descartarla exige una razón.
 - **Tarea:** elegir UNA. Criterios, en orden:
   1. **Riqueza de datos** — que exista una cifra fuerte y una serie/contexto detrás. (Con Interés no cubre bien lo que no tiene números.)
   2. **Relevancia** — cuánto le importa al lector argentino hoy.
