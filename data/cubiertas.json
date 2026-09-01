@@ -693,6 +693,13 @@
       "fecha": "2026-09-01",
       "estado": "publicada",
       "articulo_id": "2026-09-01-mortalidad-infantil-muertes-evitables"
+    },
+    {
+      "tema": "precios relativos / mapa de las doce divisiones del IPC entre dic-2023 y jul-2026: Vivienda +530,6% contra Prendas +123,9%, y el cociente servicios/bienes de vuelta en el nivel de 2017",
+      "angulo": "ángulo NUEVO respecto de las notas de inflación ya cubiertas (inflación junio 2026, IPIM, retrospectiva 36 meses de inflación/dólar/tasa, canasta básica): ninguna abrió el IPC por división ni midió precios relativos. Cifra ancla: 406,7 puntos porcentuales de brecha entre la división que más subió (Vivienda, agua, electricidad, gas y otros combustibles, +530,6%) y la que menos (Prendas de vestir y calzado, +123,9%) entre dic-2023 y jul-2026, contra un nivel general de +241,8%. CONFIRMADA: reconstruimos las 13 agregaciones desde las series abiertas del INDEC (IPC nacional base dic-2016) y verificamos el acumulado 2026 de las 13 contra el cuadro publicado en el informe técnico del INDEC de julio de 2026: coinciden todas, con desvíos de 0,01 a 0,05 pp por redondeo. Segundo eje, que es el hallazgo que ordena la nota: el cociente servicios/bienes (base dic-2017=100) cayó de 104,3 en abr-2018 a 52,4 en ene-2024 (piso de la serie) y volvió a 94,9 en jul-2026 — los servicios no se dispararon a un terreno desconocido, volvieron casi al nivel de 2017. Apoyo: Servicios +415,2% vs Bienes +189,8% (multiplicadores 5,2 y 2,9); Regulados +415,9% vs Núcleo +221,7%. Seis divisiones le ganan al promedio y seis le pierden; Alimentos (+209,3%) y Salud (+235,4%) quedan por debajo. Caveat metodológico central y verificado por triple fuente (nota metodológica del propio informe del INDEC + Chequeado + Perfil): los ponderadores siguen siendo los de la ENGHo 2004/05; el reemplazo por la ENGHo 2017/18 se anunció para enero de 2026 y quedó SUSPENDIDO. Vivienda pesa 9,4% y pesaría 14,5%. Se DESCARTARON dos fuentes en el cierre: El Economista (muro de registro, no se pudo leer entera) e IERAL (el artículo enlazado era sobre competitividad internacional de precios y no respaldaba la cifra que se le atribuía). No atribuye el resultado a una sola causa ni dice si el nivel de 2017 era el correcto. No es asesoramiento financiero.",
+      "fecha": "2026-09-01",
+      "estado": "publicada",
+      "articulo_id": "2026-09-01-precios-relativos-doce-divisiones-ipc"
     }
   ]
 }

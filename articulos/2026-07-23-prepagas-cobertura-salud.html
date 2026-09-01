@@ -173,6 +173,15 @@
 
   b.hl{background:linear-gradient(transparent 62%, #F3D9A8 62%);font-weight:600;padding:0 1px}
 
+  /* correccion publica (NEWSROOM 2 bis.8) */
+  .correccion{background:#FBEAE6;border:1px solid #E8BFB6;border-left:3px solid var(--red);
+    border-radius:10px;padding:16px 18px;margin:22px 0 4px}
+  .correccion h4{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--red);margin:0 0 8px;font-weight:600}
+  .correccion p{font-size:14.5px;line-height:1.6;margin:0 0 8px;color:var(--ink-soft)}
+  .correccion p:last-child{margin-bottom:0}
+  .correccion b{color:var(--ink);font-weight:600}
+
   @media(max-width:600px){
     h1{font-size:30px}.standfirst{font-size:18px}.prose p{font-size:17px}
     .hero-num .big{font-size:54px}.hero-num{padding:26px 22px}
@@ -194,6 +203,21 @@
 
 <div class="wrap">
 <article>
+
+  <div class="correccion">
+    <h4>&#9651; Corrección &#183; 1 de septiembre de 2026</h4>
+    <p>Esta nota se publicó el 23 de julio de 2026 con una cifra de inflación equivocada. Decía que
+    el nivel general de precios había acumulado <b>293%</b> desde diciembre de 2023, tomándola de un
+    informe del Instituto Argentina Grande (IAG). Al reconstruir la serie del IPC del INDEC comprobamos
+    que <b>el dato correcto es 228,5%</b> hasta mayo de 2026, la ventana del informe citado (234,7% a
+    junio y 241,8% a julio). Ninguna ventana razonable de esa serie da 293%.</p>
+    <p>Corregimos el número donde aparecía &#8212;copete de datos, cuerpo, gráfico, placas y capa ⑥&#8212;
+    y rehicimos la comparación. <b>La brecha contra la cuota de prepaga no se achica: se agranda</b>,
+    de los 124 puntos porcentuales que decía la nota a 188,5. La cifra ancla del título
+    &#8212;las 742.000 personas con menos cobertura, que sale de la EPH del INDEC&#8212; <b>no se modifica</b>.</p>
+    <p>El aumento de 417% de las cuotas sigue siendo una estimación del IAG que no pudimos verificar
+    contra una fuente primaria, y así se declara desde la publicación original en la capa ④.</p>
+  </div>
 
   <div class="kicker">ECONOMÍA <span class="sep">/</span> <span class="fmt">Anatomía de un dato</span></div>
 
@@ -228,7 +252,7 @@
       <div class="sparkrow">
         <div class="sr"><span class="v dn">65,4%</span><span class="k">cobertura privada/social (2S 2025)</span></div>
         <div class="sr"><span class="v up">+417%</span><span class="k">cuota de prepaga (2 años, s/ IAG)</span></div>
-        <div class="sr"><span class="v">+293%</span><span class="k">inflación en el mismo período</span></div>
+        <div class="sr"><span class="v">+228,5%</span><span class="k">inflación del INDEC en el mismo período</span></div>
       </div>
     </div>
   </div>
@@ -236,8 +260,8 @@
   <!-- ② LA NOTICIA -->
   <div class="block prose" id="b2">
     <div class="block-tag"><span class="num">2</span><span class="txt">La noticia</span><span class="rule"></span></div>
-    <p class="lead">Este mes las prepagas volvieron a mover la cuota: entre <b class="hl">2,1% y 2,3%</b> en julio, según los cuadros tarifarios de OSDE, Swiss Medical, Medifé, Avalian y Sancor Salud. Es un aumento chico, en línea con la inflación de hoy. Pero es la última cuota de una escalera muy larga: desde diciembre de 2023, las cuotas de la medicina prepaga acumularon subas del <b>417%</b>, contra una inflación del <b>293%</b> en el mismo lapso, según un informe del Instituto Argentina Grande (IAG) sobre datos del INDEC.</p>
-    <p>Ese desfasaje dejó una marca que no aparece en el precio de la cuota, sino en cuánta gente puede pagarla. Los datos del INDEC muestran que la proporción de la población con obra social, prepaga o mutual bajó de <b>67,5%</b> en el segundo semestre de 2023 a <b>65,4%</b> en el segundo semestre de 2025. La pregunta que ordena esta nota: cuando la salud privada sube tres veces más rápido que todo lo demás, <b>¿quién se queda afuera?</b></p>
+    <p class="lead">Este mes las prepagas volvieron a mover la cuota: entre <b class="hl">2,1% y 2,3%</b> en julio, según los cuadros tarifarios de OSDE, Swiss Medical, Medifé, Avalian y Sancor Salud. Es un aumento chico, en línea con la inflación de hoy. Pero es la última cuota de una escalera muy larga: desde diciembre de 2023, las cuotas de la medicina prepaga acumularon subas del <b>417%</b> hasta mayo de 2026, según un informe del Instituto Argentina Grande (IAG). La inflación del mismo lapso, medida sobre la serie del IPC del INDEC, fue de <b>228,5%</b>.</p>
+    <p>Ese desfasaje dejó una marca que no aparece en el precio de la cuota, sino en cuánta gente puede pagarla. Los datos del INDEC muestran que la proporción de la población con obra social, prepaga o mutual bajó de <b>67,5%</b> en el segundo semestre de 2023 a <b>65,4%</b> en el segundo semestre de 2025. La pregunta que ordena esta nota: cuando la cuota de la salud privada acumula 188,5 puntos más que todo lo demás, <b>¿quién se queda afuera?</b></p>
   </div>
 
   <!-- ③ EN CONTEXTO -->
@@ -255,7 +279,7 @@
       <figcaption><b>Fuente:</b> INDEC, Indicadores de condiciones de vida de los hogares (EPH). <b>Nota:</b> el dato del 2S 2025 (65,4%) surge del procesamiento del IAG; el INDEC confirma la baja interanual en su informe del 1S 2025 (67,8% → 66,5%). Cifras de la población urbana relevada por la EPH.</figcaption>
     </figure>
 
-    <p>El motor de esa caída está del otro lado del mostrador: el precio. La cuota de la prepaga no solo subió, subió mucho más rápido que los ingresos y que la inflación general. Si se toma diciembre de 2023 como base 100, la cuota promedio quedó cerca de <b>517</b> a mediados de 2026, mientras el nivel general de precios llegó a <b>393</b>. Esa brecha —más de 120 puntos— es lo que se acumula, mes a mes, en el resumen de la tarjeta.</p>
+    <p>El motor de esa caída está del otro lado del mostrador: el precio. La cuota de la prepaga no solo subió, subió mucho más rápido que los ingresos y que la inflación general. Si se toma diciembre de 2023 como base 100, la cuota promedio quedó cerca de <b>517</b> en mayo de 2026, mientras el nivel general de precios llegó a <b>328,5</b>. Esa brecha —188,5 puntos— es lo que se acumula, mes a mes, en el resumen de la tarjeta.</p>
 
     <figure>
       <div class="fig-head">
@@ -263,17 +287,17 @@
         <h3>La cuota corrió más rápido que todo lo demás</h3>
         <p class="fig-sub">Aumento acumulado desde diciembre de 2023 hasta mediados de 2026 (%).</p>
       </div>
-      <svg id="chartDiv" class="chart-svg" viewBox="0 0 680 240" role="img" aria-label="Gráfico de barras: la cuota de prepaga acumuló +417% desde diciembre de 2023, contra +293% de inflación en el mismo período."></svg>
+      <svg id="chartDiv" class="chart-svg" viewBox="0 0 680 240" role="img" aria-label="Gráfico de barras: la cuota de prepaga acumuló +417% desde diciembre de 2023, contra +228,5% de inflación en el mismo período."></svg>
       <div class="legend">
         <div class="li"><span class="sw" style="background:#C0392B"></span>Cuota de prepaga</div>
         <div class="li"><span class="sw" style="background:#6B6560"></span>Inflación (IPC general)</div>
       </div>
-      <figcaption><b>Fuente:</b> Instituto Argentina Grande (IAG) sobre datos del INDEC (IPC). <b>Lectura:</b> la prepaga acumuló 124 puntos porcentuales más que la inflación general en poco más de dos años.</figcaption>
+      <figcaption><b>Fuente:</b> la cuota, Instituto Argentina Grande (IAG); la inflación, serie del IPC nacional del INDEC (base dic-2016). <b>Lectura:</b> la prepaga acumuló 188,5 puntos porcentuales más que la inflación general en poco más de dos años. <b>Cifra corregida el 01/09/2026:</b> la inflación es la de la serie del IPC del INDEC.</figcaption>
     </figure>
 
     <div class="tiles">
       <div class="tile bad"><div class="v">+417%</div><div class="k">Cuota de prepaga (dic-23 a may-26)</div></div>
-      <div class="tile neu"><div class="v">+293%</div><div class="k">Inflación en el mismo período</div></div>
+      <div class="tile neu"><div class="v">+228,5%</div><div class="k">Inflación del INDEC en el mismo período</div></div>
       <div class="tile bad"><div class="v">10,3 M</div><div class="k">Personas solo con sistema público (2S 2025)</div></div>
     </div>
   </div>
@@ -338,7 +362,7 @@
       <summary><span>¿Por qué las prepagas subieron tanto? La desregulación de 2024</span><span class="plus">+</span></summary>
       <div class="deep-body">
         <p>Hasta 2023, los aumentos de la medicina prepaga estaban regulados: el Gobierno autorizaba subas por decreto, que casi siempre quedaban por debajo de la inflación y de los costos del sector. El DNU 70/2023 desreguló esos precios a comienzos de 2024 y las empresas aplicaron aumentos fuertes para recomponer lo atrasado. Tras un round de idas y vueltas —incluida una intervención judicial y de la Secretaría de Comercio que obligó a algunas empresas a devolver parte de lo cobrado—, el esquema quedó en un punto intermedio: precios más libres, pero con la obligación de informar los aumentos por anticipado y con topes atados al índice de precios de salud del INDEC.</p>
-        <p>El resultado neto de ese período es el que mide el IAG: una cuota que, base 100 en diciembre de 2023, acumuló alrededor de 417% de aumento hasta mediados de 2026, contra 293% del nivel general de precios. La brecha se concentró en 2024, el año del salto inicial; en 2026 los aumentos volvieron a moverse cerca de la inflación (acumularon en torno al 13% en el primer semestre).</p>
+        <p>El resultado neto de ese período es el que mide el IAG: una cuota que, base 100 en diciembre de 2023, acumuló alrededor de 417% de aumento hasta mayo de 2026, contra 228,5% del nivel general de precios según la serie del IPC del INDEC. La brecha se concentró en 2024, el año del salto inicial; en 2026 los aumentos volvieron a moverse cerca de la inflación (acumularon en torno al 13% en el primer semestre).</p>
       </div>
     </details>
 
@@ -442,7 +466,7 @@ function hideTT(){ tt.style.opacity=0; }
 (function(){
   const data=[
     ["Cuota de prepaga",417,C.red],
-    ["Inflación (IPC general)",293,C.muted]
+    ["Inflación (IPC general)",228.5,C.muted]
   ];
   const svg=$("#chartDiv"), W=680,H=240, m={t:16,r:70,b:24,l:190};
   const iw=W-m.l-m.r, ih=H-m.t-m.b;

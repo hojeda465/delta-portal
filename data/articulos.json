@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-09-01T17:13:26-03:00",
+    "actualizado": "2026-09-01T18:54:17-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-09-01-precios-relativos-doce-divisiones-ipc",
+      "titulo": "Las tarifas subieron 530% y la ropa 124%: el mapa completo de qué se encareció y qué se abarató desde diciembre de 2023",
+      "bajada": "El IPC acumuló 241,8% en 32 meses, pero ese promedio esconde doce rubros que corrieron a velocidades muy distintas: 407 puntos separan al primero del último. Ordenamos los doce con los datos del INDEC. Y el hallazgo no es que los servicios se dispararon, sino de dónde venían: en enero de 2024 estaban en el punto más barato de la última década frente a los bienes, y hoy volvieron casi exactamente a donde estaban en 2017.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "406,7 pp",
+      "numero_label": "de diferencia entre el rubro de precios que más subió del IPC y el que menos subió desde diciembre de 2023: las tarifas de la vivienda contra la ropa",
+      "fecha": "2026-09-01",
+      "hora": "22:00",
+      "archivo": "articulos/2026-09-01-precios-relativos-doce-divisiones-ipc.html",
+      "verificacion": "verificada",
+      "fuentes": 4,
+      "lectura": "30 seg → 9 min"
+    },
     {
       "id": "2026-09-01-mortalidad-infantil-muertes-evitables",
       "titulo": "En 2024 murieron 176 bebés menos que en 2023 y la tasa de mortalidad infantil igual subió — el indicador que empeoró de verdad es que 7 de cada 10 de esas muertes eran evitables",
