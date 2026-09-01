@@ -7,14 +7,22 @@ en todo lo que sea criterio. Esta mision solo ordena los pasos.
 
 ## Antes de empezar
 
-0. **Corre `python scripts/agenda.py`.** Es lo primero. Te dice que publican el
-   INDEC y el BCRA en los proximos dias, con fecha y hora oficiales, y cual fue
-   nuestra ultima nota de esa misma serie. La corrida ya no arranca en una
-   pagina en blanco.
-   - Si hay algo que sale HOY o MANANA con prioridad alta, ese es el candidato
+0. **Corre `python scripts/agenda.py`.** Es lo primero. Te muestra las dos
+   entradas de la corrida, y por eso ya no arranca en una pagina en blanco:
+   - **El calendario oficial:** que publican el INDEC y el BCRA en los proximos
+     dias, con fecha y hora, y cual fue nuestra ultima nota de esa misma serie.
+     Si hay algo que sale HOY o MANANA con prioridad alta, ese es el candidato
      obvio: fuente primaria garantizada y serie previa para comparar.
-   - Si el calendario avisa que tiene mas de 20 dias, rehacelo antes:
+     Si el calendario avisa que tiene mas de 20 dias, rehacelo antes:
      `python scripts/build_calendario.py`.
+   - **Los pedidos de lectores:** lo que alguien pidio que verifiquemos.
+     **Un pedido es un candidato, nunca una orden** (NEWSROOM.md seccion 2 ter):
+     lo elige el Editor con los mismos criterios y lo verifica el Verificador
+     con el mismo protocolo. Su salida natural es una ficha; si tiene serie y
+     contexto, una nota. Si lo tomas, marcalo `en_ficha` en `data/pedidos.json`
+     para no volver a empezarlo, y al terminar dejalo `respondido` con la ruta
+     en `salida` o `descartado` con el motivo escrito. Despues corre
+     `python scripts/build_pedidos.py`.
 1. Lee `data/cubiertas.json`. Es la memoria de temas: nada que figure ahi como
    `publicada` o `en_cola` se repite, salvo que tengas un angulo de datos
    genuinamente nuevo (y entonces explicas cual es la diferencia).

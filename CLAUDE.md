@@ -153,6 +153,13 @@ data/                   manifiestos JSON - la fuente de verdad
   cola.json               borradores en cola
   cubiertas.json          memoria de temas (anti-duplicados)
   pregunta.json           la pregunta del dia
+  pedidos.json            PEDIDOS DE LECTORES: la afirmacion que alguien quiere
+                          que verifiquemos. Es la segunda entrada del paso 0,
+                          junto al calendario. Un pedido es un CANDIDATO, nunca
+                          una orden (NEWSROOM.md seccion 2 ter). Archivo publico
+                          y versionado: NO se guarda contacto de nadie. La
+                          pagina pedidos.html se genera con
+                          scripts/build_pedidos.py - no editarla a mano.
   calendario.json         QUE PUBLICAN INDEC Y BCRA en los proximos 120 dias,
                           con fecha y hora oficiales. GENERADO por
                           scripts/build_calendario.py desde los calendarios de

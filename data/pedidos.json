@@ -1,0 +1,17 @@
+{
+  "descripcion": "Pedidos de verificación de los lectores. Es la entrada de co-creación: el lector aporta la afirmación que no le cierra, la redacción aporta el chequeo. Se lee en el paso 0 de la corrida (scripts/agenda.py) junto con el calendario oficial, y alimenta al Rastreador. REGLA: un pedido es un CANDIDATO, no una orden — ver agente/NEWSROOM.md, sección 2 ter.",
+  "esquema": {
+    "id": "p-NNNN, correlativo",
+    "recibido": "AAAA-MM-DD",
+    "afirmacion": "lo que el lector pide verificar, transcripto sin editar",
+    "de_donde": "dónde lo escuchó o leyó, si lo dijo (opcional)",
+    "canal": "formulario | correo | telegram",
+    "credito": "nombre de pila y provincia, SOLO si el lector autorizó que lo acreditemos. Vacío por defecto",
+    "estado": "recibido | en_ficha | respondido | descartado",
+    "motivo": "obligatorio si estado = descartado",
+    "salida": "ruta de la ficha o de la nota que responde el pedido"
+  },
+  "nota_de_privacidad": "Este archivo es público y versionado. NO se guarda acá el correo, el teléfono ni el apellido de nadie. El contacto queda en la casilla del editor y no se publica.",
+  "actualizado": "2026-09-01T22:40:00-03:00",
+  "pedidos": []
+}

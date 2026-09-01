@@ -12,6 +12,11 @@ que actualizar y contra la que hay que comparar.
 Es la diferencia entre "a ver que encuentro hoy" y "el jueves a las 16 sale el
 IPC de agosto, la ultima que escribimos fue esta, y el dato a superar es este".
 
+Ademas lee data/pedidos.json y lista lo que pidieron los lectores. Son las dos
+entradas del paso 0: lo que va a salir (el calendario) y lo que alguien quiere
+saber (los pedidos). Un pedido es un CANDIDATO para el Editor, nunca una orden:
+ver agente/NEWSROOM.md, seccion 2 ter.
+
 Uso:
   python scripts/agenda.py                # los proximos 14 dias
   python scripts/agenda.py --dias 30
@@ -121,6 +126,43 @@ def cargar(nombre):
     return json.load(io.open(p, encoding="utf-8"))
 
 
+def pedidos_pendientes():
+    """Lo que pidieron los lectores y todavia no tiene respuesta."""
+    datos = cargar("pedidos.json")
+    if not datos:
+        return []
+    return [p for p in datos.get("pedidos", [])
+            if p.get("estado") in ("recibido", "en_ficha")]
+
+
+def imprimir_pedidos(pend):
+    """La segunda entrada del paso 0. Se imprime siempre, aunque este vacia:
+    que aparezca en cero es informacion (nadie pidio nada todavia), y que no
+    aparezca haria olvidar que el canal existe."""
+    print()
+    print("=" * 78)
+    print("PEDIDOS DE LECTORES  (%d sin responder)" % len(pend))
+    print("=" * 78)
+    if not pend:
+        print("  No hay pedidos pendientes.")
+        print("  Entran por pedidos.html y se registran en data/pedidos.json.")
+        return
+    for p in sorted(pend, key=lambda x: x.get("recibido", "")):
+        en_ficha = p.get("estado") == "en_ficha"
+        print("  %s [%s] %s  %s" % (" * " if en_ficha else "   ",
+                                    p.get("id", "?"),
+                                    p.get("recibido", ""),
+                                    p.get("afirmacion", "")[:58]))
+        if p.get("de_donde"):
+            print("        el lector dice que salio de: %s" % p["de_donde"][:58])
+        if en_ficha:
+            print("        YA EN FICHA - no volver a empezarlo")
+    print()
+    print("  Un pedido es un candidato para el Editor, no una orden: se elige")
+    print("  con los mismos criterios (riqueza de datos, relevancia, no repetir)")
+    print("  y se verifica con el mismo protocolo. Ver NEWSROOM.md, seccion 2 ter.")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dias", type=int, default=14)
@@ -159,6 +201,7 @@ def main():
 
     if not filas:
         print("No hay publicaciones en la ventana pedida.")
+        imprimir_pedidos(pedidos_pendientes())
         return 0
 
     print("AGENDA - %s al %s   (%d publicaciones%s)"
@@ -219,6 +262,8 @@ def main():
     print("\n" + "=" * 78)
     print("*** prioridad alta   * media   |  fuentes:", ", ".join(cal["fuentes"]))
     print("La prioridad es preclasificacion editorial, no dato de la fuente.")
+
+    imprimir_pedidos(pedidos_pendientes())
     return 0
 
 
