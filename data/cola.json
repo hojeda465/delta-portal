@@ -1,21 +1,5 @@
 {
   "descripcion": "Cola de revisión: borradores generados por la redacción de agentes, pendientes de aprobación humana antes de publicarse.",
-  "actualizado": "2026-09-01T18:00:00-03:00",
-  "borradores": [
-    {
-      "id": "2026-09-01-salario-minimo-linea-pobreza",
-      "titulo": "El salario mínimo cubre el 73,5% de lo que necesita una sola persona para no ser pobre, y perdió terreno ocho meses seguidos",
-      "bajada": "Hoy se anunció que subirá hasta $437.000 en abril. Fuimos a lo que está firmado: la resolución vigente lo dejó en $376.600 hasta agosto, y septiembre quedó sin monto fijado. Puesto al lado de la línea de pobreza que publica el INDEC, el salario mínimo se aleja todos los meses desde noviembre.",
-      "seccion": "ECONOMÍA",
-      "formato": "Anatomía de un dato",
-      "numero": "73,5%",
-      "numero_label": "de la línea de pobreza de una persona cubría el salario mínimo en julio",
-      "fecha": "2026-09-01",
-      "hora": "12:30",
-      "archivo": "cola/2026-09-01-salario-minimo-linea-pobreza.html",
-      "verificacion": "verificada",
-      "fuentes": 5,
-      "lectura": "30 seg → 7 min"
-    }
-  ]
+  "actualizado": "2026-09-01T19:30:00-03:00",
+  "borradores": []
 }
