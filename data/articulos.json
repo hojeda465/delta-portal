@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-09-01T16:04:58-03:00",
+    "actualizado": "2026-09-01T17:13:26-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-09-01-mortalidad-infantil-muertes-evitables",
+      "titulo": "En 2024 murieron 176 bebés menos que en 2023 y la tasa de mortalidad infantil igual subió — el indicador que empeoró de verdad es que 7 de cada 10 de esas muertes eran evitables",
+      "bajada": "La tasa pasó de 8,0 a 8,5 por cada mil nacidos vivos y el número circuló como una mala noticia. Fuimos a la serie completa del Ministerio de Salud: la tasa no subió porque murieran más bebés, sino porque nacieron 47.767 menos. Debajo de esa aritmética hay otro dato, que no depende del denominador y que empeora sin pausa desde 2019.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "71,1%",
+      "numero_label": "de las muertes de menores de 1 año de 2024 fue por causas que el Ministerio de Salud clasifica como reducibles",
+      "fecha": "2026-09-01",
+      "hora": "21:00",
+      "archivo": "articulos/2026-09-01-mortalidad-infantil-muertes-evitables.html",
+      "verificacion": "verificada",
+      "fuentes": 8,
+      "lectura": "30 seg → 9 min"
+    },
     {
       "id": "2026-09-01-exportaciones-mapa-destinos-europa-asia",
       "titulo": "Las exportaciones a Europa crecieron 19% y eso es menos que el promedio: el mapa del comercio argentino se está corriendo a Asia y Estados Unidos",
