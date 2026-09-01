@@ -123,7 +123,13 @@ index.html              portada: LINEA DE TIEMPO por dia (GENERADA - no editar
                         detalle se degrada con la antiguedad: 3 dias con
                         tarjeta grande, hasta 7 con tarjetas, el resto solo
                         filas. Tope de 6 notas por dia; el resto enlaza a
-                        archivo.html#d-AAAA-MM-DD.
+                        archivo.html#d-AAAA-MM-DD. Arriba de todo va LA NOTA
+                        DEL DIA: la destacada del dia mas reciente sale de la
+                        linea y encabeza la portada con su rotulo; el nodo de
+                        hoy lista el resto y dice "N notas mas". Debajo, el
+                        semaforo economico en franja de 5 columnas.
+                        build_portada.py acepta CI_VARIANTE (lead / compacta /
+                        actual) para generar maquetas sin pisar index.html.
 hoy.html                "El cierre" (GENERADA - no editar a mano)
 seccion-<id>.html       una pagina por seccion, paginada de a 20 (GENERADAS)
                         seccion-tu-plata.html, -2.html, -3.html... Las notas

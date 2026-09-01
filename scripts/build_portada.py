@@ -215,9 +215,40 @@ for a in articulos:
 _dias = sorted(_por_dia, reverse=True)
 _hoy = portal.get("actualizado", "")[:10]
 
+# La portada admite variantes de maqueta para poder compararlas en el navegador
+# antes de decidir:
+#   lead      (default) la nota destacada del dia sale de la linea de tiempo y
+#             sube arriba de todo, bajo el rotulo "La nota del dia", y el
+#             semaforo va en franja de 5 columnas. Decision del editor
+#             (31/08/2026): la portada tiene que decir cual es LA nota, y eso
+#             pesa mas que mantener la lider dentro de su dia. Costo asumido:
+#             el nodo de hoy dice "4 notas mas" en vez de "5 notas".
+#   compacta  solo la franja del semaforo; la lider queda dentro de su dia.
+#   actual    la portada previa, con el semaforo en 5 tarjetas grandes.
+# Las no-default se piden con CI_VARIANTE y escriben en CI_SALIDA para no pisar
+# index.html: CI_VARIANTE=lead CI_SALIDA=preview.html python scripts/build_portada.py
+VARIANTE = os.environ.get("CI_VARIANTE", "lead")
+SALIDA_PORTADA = os.environ.get("CI_SALIDA", "index.html")
+
+# En la variante "lead" la nota destacada del dia mas reciente sale de la linea
+# de tiempo y se muestra arriba, para que el primer titular entre en la primera
+# pantalla sin tener que scrollear.
+lead_portada = None
+if VARIANTE == "lead" and _dias:
+    _d0 = _por_dia[_dias[0]]
+    lead_portada = next((a for a in _d0 if a.get("destacada")), _d0[0])
+
 timeline_html = ""
+subio_la_lider = False
 for i, f in enumerate(_dias):
     del_dia = _por_dia[f]
+    subio_la_lider = lead_portada is not None and i == 0
+    if subio_la_lider:
+        # ya se muestra arriba: el dia lista el resto, y si no queda nada el
+        # nodo del dia no se dibuja (seria un dia vacio abajo de su propia nota)
+        del_dia = [a for a in del_dia if a is not lead_portada]
+        if not del_dia:
+            continue
     # dentro del dia manda la marcada como destacada; si no, la primera
     dest = next((a for a in del_dia if a.get("destacada")), del_dia[0])
     resto = [a for a in del_dia if a is not dest]
@@ -252,7 +283,7 @@ for i, f in enumerate(_dias):
         <span class="dia-punto"></span>
         <h2>{escape(titulo_dia(f, f == _hoy))}</h2>
         <span class="dia-rule"></span>
-        <span class="dia-count">{len(del_dia)} {'nota' if len(del_dia) == 1 else 'notas'}</span>
+        <span class="dia-count">{len(del_dia)} {'nota' if len(del_dia) == 1 else 'notas'}{' más' if subio_la_lider else ''}</span>
       </div>
       <div class="dia-body">{cuerpo_d}</div>
     </section>"""
@@ -260,6 +291,16 @@ for i, f in enumerate(_dias):
 if not timeline_html:
     timeline_html = '<p class="empty small">La redacción publicará más notas en las próximas horas.</p>'
 timeline_html = '<div class="timeline">' + timeline_html + '</div>'
+
+lead_html = ""
+sem_class = ""
+if VARIANTE in ("lead", "compacta"):
+    sem_class = ' class="sem-linea"'
+if lead_portada is not None:
+    lead_html = ('<div class="lead-dia">'
+                 '<div class="lead-kick"><span class="lk-punto"></span>La nota del día'
+                 '<span class="lk-fecha">' + escape(titulo_dia(_dias[0], _dias[0] == _hoy)) + '</span></div>'
+                 + card_lider(lead_portada) + '</div>')
 
 # ---- banda Modo Aprendizaje ---------------------------------------------
 aprender_html = """
@@ -520,6 +561,35 @@ CSS = """<style>
     .dia-head h2{font-size:11.5px;white-space:normal}
     .dia-punto{width:9px;height:9px}
   }
+  /* ---------- variante: la nota del dia arriba de la linea ---------- */
+  .lead-dia{margin:0 0 22px}
+  .lead-kick{display:flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11px;
+    font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin:0 0 11px}
+  .lead-kick .lk-punto{width:8px;height:8px;border-radius:50%;background:var(--amber);flex:none}
+  .lead-kick .lk-fecha{color:var(--faint);font-weight:400;letter-spacing:.04em}
+  .lead-kick .lk-fecha:before{content:"·";margin-right:9px}
+  .lead-dia .lider{border-left-width:5px}
+  .lead-dia .lider h3{font-size:clamp(25px,3.6vw,36px);line-height:1.15}
+  .lead-dia .lider p{font-size:16px}
+  /* ---------- variante: semaforo comprimido a una franja ----------
+     Gana por especificidad a los estilos que inyecta ticker.js, que van
+     en un <style> agregado despues de este; por eso el prefijo .sem-linea. */
+  .sem-linea{margin:0 0 20px}
+  .sem-linea .ci-sem{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:0;
+    background:var(--card);border:1px solid var(--card-edge);border-radius:10px;overflow:hidden}
+  .sem-linea .ci-sem-t{min-width:0;background:transparent;border:0;
+    border-right:1px solid var(--grid);border-radius:0;padding:8px 13px}
+  .sem-linea .ci-sem-t:last-child{border-right:0}
+  .sem-linea .ci-sem-t:hover{transform:none;background:var(--paper);border-color:var(--grid)}
+  .sem-linea .ci-sem-t .k{display:block;margin:0 0 1px;font-size:9px}
+  .sem-linea .ci-sem-t .v{font-size:15px}
+  .sem-linea .ci-sem-t .d{display:inline;margin:0 0 0 5px;font-size:10px;font-weight:500;
+    white-space:nowrap}
+  .sem-linea .ci-sem-cap{margin:7px 0 0;font-size:10px}
+  @media(max-width:820px){
+    .sem-linea .ci-sem{display:grid;grid-template-columns:repeat(2,1fr)}
+    .sem-linea .ci-sem-t{border-bottom:1px solid var(--grid)}
+  }
 </style>"""
 
 HTML = f"""<!DOCTYPE html>
@@ -565,7 +635,8 @@ HTML = f"""<!DOCTYPE html>
 <div class="lema"><div class="wrap"><span class="l1">Entender no debería costarte nada<span class="fin">.</span></span><span class="l2">Datos verificados, explicados sin jerga, sin pedirte nada a cambio.</span></div></div>
 
 <main class="wrap">
-  <div id="ci-semaforo"></div>
+  {lead_html}
+  <div id="ci-semaforo"{sem_class}></div>
   {timeline_html}
   {aprender_html}
   {cola_html}
@@ -625,7 +696,7 @@ HTML = f"""<!DOCTYPE html>
 </body>
 </html>"""
 
-out = os.path.join(ROOT, "index.html")
+out = os.path.join(ROOT, SALIDA_PORTADA)
 with open(out, "w", encoding="utf-8") as f:
     f.write(HTML)
 
