@@ -19,12 +19,12 @@
   "articulos": [
     {
       "id": "2026-09-01-financiamiento-pyme-donde-pedir-credito",
-      "titulo": "Ningún organismo internacional le presta a tu PyME: el mapa real de dónde pedir crédito, verificado vía por vía",
-      "bajada": "Relevamos doce caminos de financiamiento y leímos lo que cada organismo dice de sí mismo en su propia página. El FMI, el Banco Mundial, el IFC, el BID Invest y hasta el fondo de garantías del Estado tienen algo en común: ninguno te presta a vos. Todos terminan en el mismo lugar, el mostrador de un banco. Y en la ventanilla oficial de PyMEs hoy no figura ningún aporte no reembolsable.",
+      "titulo": "Dónde puede pedir crédito una PyME hoy: las 12 vías, verificadas una por una, y cuáles te atienden directamente",
+      "bajada": "Relevamos doce caminos de financiamiento y leímos lo que cada organismo dice de sí mismo en su propia página. En cinco podés golpear la puerta vos: BICE, Banco Nación, CFI, la factura electrónica y el mercado de capitales. Otros cuatro sí financian a PyMEs pero por otra vía —le prestan o le garantizan al banco que después te presta a vos— y dos, el FMI y el Banco Mundial, no financian empresas: su contraparte son los Estados. Saber cuál es cuál te ahorra golpear la puerta equivocada.",
       "seccion": "ECONOMÍA",
       "formato": "Guía de datos",
-      "numero": "0",
-      "numero_label": "organismos internacionales a los que una PyME puede pedirle un crédito directo",
+      "numero": "5",
+      "numero_label": "puertas donde una PyME puede presentarse directamente, de 12 vías relevadas",
       "fecha": "2026-09-01",
       "hora": "18:00",
       "archivo": "articulos/2026-09-01-financiamiento-pyme-donde-pedir-credito.html",
