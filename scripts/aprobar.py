@@ -71,7 +71,9 @@ def main(draft_id):
     #    El orden importa: build_portada deja al dia las paginas de seccion, de
     #    donde build_tarjetas saca el color de la nota; e inject_meta se corre
     #    ultimo porque apunta el og:image a la tarjeta, que ya tiene que existir.
-    for script in ("build_portada.py", "build_tarjetas.py", "inject_meta.py"):
+    #    build_feed va al final porque cada item cita la tarjeta de su nota.
+    for script in ("build_portada.py", "build_tarjetas.py", "inject_meta.py",
+                   "build_feed.py"):
         subprocess.run([sys.executable, os.path.join(ROOT, "scripts", script)], check=True)
     print(f"PUBLICADA: {draft['titulo']}")
 

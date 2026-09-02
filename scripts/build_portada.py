@@ -668,6 +668,7 @@ HTML = f"""<!DOCTYPE html>
 <title>{escape(portal['nombre'])} — {escape(portal['tagline'])}</title>
 <meta name="description" content="{escape(portal['descripcion'])}">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="Con Interés" href="/feed.xml">
 <link rel="canonical" href="{SITE}/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{escape(portal['nombre'])}">
@@ -717,7 +718,7 @@ HTML = f"""<!DOCTYPE html>
     <div>
       <div class="f-brand"><span class="tri">%</span> {escape(portal['nombre'])}</div>
       <div class="f-desc">{escape(portal['descripcion'])}</div>
-      <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos — método, IA y ética →</a> · <a href="aprender.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">Modo Aprendizaje →</a></div>
+      <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos — método, IA y ética →</a> · <a href="aprender.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">Modo Aprendizaje →</a> · <a href="feed.xml" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">RSS →</a></div>
       <div style="margin-top:8px;font-family:var(--mono);font-size:11px;color:var(--faint)"><a href="legal.html" style="color:var(--muted);text-decoration:none">Aviso legal y correcciones</a> · <a href="privacidad.html" style="color:var(--muted);text-decoration:none">Política de privacidad</a> · El contenido de este sitio es informativo y educativo; no constituye asesoramiento financiero.</div>
       {editor_html}
     </div>
@@ -826,6 +827,7 @@ for g in GRUPOS:
 <title>{escape(titulo_s)}</title>
 <meta name="description" content="{escape(desc_s)}">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="Con Interés" href="/feed.xml">
 <link rel="canonical" href="{canon}">
 {rel}<meta property="og:type" content="website">
 <meta property="og:site_name" content="{escape(portal['nombre'])}">
@@ -864,7 +866,7 @@ for g in GRUPOS:
     <div>
       <div class="f-brand"><span class="tri">%</span> {escape(portal['nombre'])}</div>
       <div class="f-desc">{escape(portal['descripcion'])}</div>
-      <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos &rarr;</a> &middot; <a href="aprender.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">Modo Aprendizaje &rarr;</a></div>
+      <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos &rarr;</a> &middot; <a href="aprender.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">Modo Aprendizaje &rarr;</a> &middot; <a href="feed.xml" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">RSS &rarr;</a></div>
       <div style="margin-top:8px;font-family:var(--mono);font-size:11px;color:var(--faint)"><a href="legal.html" style="color:var(--muted);text-decoration:none">Aviso legal y correcciones</a> &middot; <a href="privacidad.html" style="color:var(--muted);text-decoration:none">Política de privacidad</a> &middot; El contenido de este sitio es informativo y educativo; no constituye asesoramiento financiero.</div>
     </div>
   </div>
@@ -952,6 +954,7 @@ ARCHIVO = f"""<!DOCTYPE html>
 <title>Archivo — {escape(portal['nombre'])}</title>
 <meta name="description" content="{escape(_desc_arch)}">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="Con Interés" href="/feed.xml">
 <link rel="canonical" href="{SITE}/archivo.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="{escape(portal['nombre'])}">
@@ -989,7 +992,7 @@ ARCHIVO = f"""<!DOCTYPE html>
     <div>
       <div class="f-brand"><span class="tri">%</span> {escape(portal['nombre'])}</div>
       <div class="f-desc">{escape(portal['descripcion'])}</div>
-      <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos &rarr;</a> &middot; <a href="aprender.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">Modo Aprendizaje &rarr;</a></div>
+      <div style="margin-top:10px"><a href="como-trabajamos.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">% Cómo trabajamos &rarr;</a> &middot; <a href="aprender.html" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">Modo Aprendizaje &rarr;</a> &middot; <a href="feed.xml" style="font-family:var(--mono);font-size:12px;color:var(--teal-deep);text-decoration:none;border-bottom:1px solid var(--grid)">RSS &rarr;</a></div>
       <div style="margin-top:8px;font-family:var(--mono);font-size:11px;color:var(--faint)"><a href="legal.html" style="color:var(--muted);text-decoration:none">Aviso legal y correcciones</a> &middot; <a href="privacidad.html" style="color:var(--muted);text-decoration:none">Política de privacidad</a> &middot; El contenido de este sitio es informativo y educativo; no constituye asesoramiento financiero.</div>
     </div>
   </div>
@@ -1063,6 +1066,7 @@ HOY = f"""<!DOCTYPE html>
 <title>El cierre — los 5 datos de hoy — {escape(portal['nombre'])}</title>
 <meta name="description" content="La edición finita de Con Interés: los 5 datos verificados del día, 30 segundos cada uno. Terminás y estás al día. Sin publicidad, sin registro.">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="alternate" type="application/rss+xml" title="Con Interés" href="/feed.xml">
 <link rel="canonical" href="{SITE}/hoy.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

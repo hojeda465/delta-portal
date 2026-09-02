@@ -142,6 +142,13 @@ seccion-<id>.html       una pagina por seccion, paginada de a 20 (GENERADAS)
                         viejas ya no se pliegan en la portada: viven aca.
                         Grupos: tu-plata, el-pais, los-mercados, tu-provincia,
                         el-mundo y deportes.
+feed.xml                RSS 2.0 de las ultimas 30 notas (GENERADO por
+                        scripts/build_feed.py). Cada item lleva la tarjeta de
+                        la nota como enclosure y su cifra ancla en <ci:numero>.
+                        Es lo que permite automatizar la distribucion en redes
+                        SIN escribir un bot y SIN poner credenciales en ningun
+                        lado: se enchufa a un programador de posteos y queda un
+                        paso de revision humana antes de publicar.
 archivo.html            todas las notas por DIA, cronologico (GENERADA). Es
                         el destino de los enlaces "ver las otras N del dia".
 articulos/              notas publicadas

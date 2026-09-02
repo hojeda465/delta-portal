@@ -533,6 +533,30 @@ interpretar la actualidad. El propósito es hacer cultura económica.
 > sección queda como especificación para cuando se reactive la distribución
 > en redes.
 
+### 9 bis. La infraestructura de distribución que sí está lista (01/09/2026)
+
+Aunque el kit siga suspendido, el sitio ya tiene las dos piezas que hacen falta
+para distribuir sin trabajo manual y sin bot:
+
+1. **`assets/tarjetas/<id>.png`** — la imagen con la cifra ancla (ver §4). Es lo
+   que se ve antes que el texto en X y en WhatsApp.
+2. **`feed.xml`** — RSS 2.0 de las últimas 30 notas, con la tarjeta de cada una
+   como `enclosure` y `media:content`, y la cifra ancla en `<ci:numero>`.
+
+**El camino recomendado para automatizar X es el feed, no un bot propio.** Se
+enchufa `feed.xml` a un programador de posteos (Buffer, Make, Zapier) y:
+
+- no se paga la API de X —desde el 06/02/2026 es pago por uso: US$0,015 por
+  post y **US$0,20 si contiene un link**—;
+- **las credenciales no tocan este repositorio ni la máquina del editor**, que
+  es la regla 3 de `CLAUDE.md` y viene de un incidente real;
+- queda un **paso de revisión humana** antes de que salga, que es exactamente lo
+  que protege la regla de arriba: ningún agente auto-publica en redes.
+
+Ese precio también dice algo editorial: X cobra 13 veces más por un post con
+link porque distribuye menos los links. La consecuencia práctica es postear la
+**tarjeta con el dato** y dejar el link en la respuesta, no al revés.
+
 Cada nota que llega a la cola sale con su **kit social** listo para pegar, siguiendo
 `negocio/playbook.md`. Regla de oro operativa: **ningún agente auto-publica en redes**
 (una cuenta nueva que postea sola se expone a suspensión, y va contra las reglas de X).
