@@ -700,6 +700,13 @@
       "fecha": "2026-09-01",
       "estado": "publicada",
       "articulo_id": "2026-09-01-precios-relativos-doce-divisiones-ipc"
+    },
+    {
+      "tema": "robótica doméstica y humanoides / valuación contra mercado real",
+      "angulo": "el mercado que se vende (32,72 M de robots de limpieza, márgenes de un dígito) contra el que se financia (Unitree, 5.632 humanoides y 201 veces las ventas), con el precio argentino medido en horas de trabajo de casas particulares",
+      "fecha": "2026-09-02",
+      "estado": "publicada",
+      "articulo_id": "2026-09-02-humanoides-valuacion-mercado-real"
     }
   ]
 }

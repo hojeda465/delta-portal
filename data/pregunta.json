@@ -1,14 +1,14 @@
 {
   "descripcion": "La pregunta del día: la redacción la renueva una vez por día, derivada de la nota principal. Ver NEWSROOM.md.",
-  "fecha": "2026-09-01",
-  "pregunta": "En junio de 2026 la mora del crédito a las familias bajó por primera vez en 20 meses: de 12,80% a 12,77%. Pero al abrir el dato por tipo de préstamo aparece que los personales, los prendarios y los hipotecarios subieron, y los tres tocaron su máximo histórico. ¿Cómo puede bajar el promedio si tres de las cuatro líneas subieron?",
+  "fecha": "2026-09-02",
+  "pregunta": "Desde diciembre de 2023 el IPC acumuló 241,8% en 32 meses. Dentro de ese promedio, las tarifas de la vivienda subieron 530% y la ropa, 124%. Si la ropa aumentó 124% —más del doble—, ¿qué quiere decir que haya subido menos que el índice general?",
   "opciones": [
-    "Porque la cuarta línea, las tarjetas de crédito, bajó bastante más de lo que subieron las otras tres, y es la de mayor peso en la cartera",
-    "Porque el promedio no se calcula sumando las cuatro líneas, sino que el BCRA lo estima aparte con otra metodología",
-    "Porque los hipotecarios tienen tanto peso en el total que arrastran el promedio, aunque su mora sea baja"
+    "Que se abarató frente al resto de los precios: para comprar la misma ropa hace falta hoy una porción más chica del gasto total, aunque en pesos cueste más del doble",
+    "Que la ropa bajó de precio: 124% es la suba nominal, pero el dato real del INDEC muestra una caída",
+    "Que el INDEC le bajó el peso a la ropa dentro de la canasta, y por eso su suba quedó por debajo del promedio"
   ],
   "correcta": 0,
-  "explicacion": "El total no es el promedio simple de las cuatro líneas: es un promedio ponderado por cuánta plata hay prestada en cada una. Las tarjetas son la cartera más grande de las familias —unos $23,3 billones— y su mora cayó 0,53 puntos en el mes, de 13,11% a 12,58%. Esa baja, en la línea más pesada, alcanzó para compensar las subas de personales (+0,42 punto, hasta 16,37%), prendarios (+0,25, hasta 7,95%) e hipotecarios (+0,01, hasta 1,63%). Por eso el titular \"bajó la mora\" y el titular \"la mora está en récord\" pueden ser los dos ciertos el mismo mes: describen cosas distintas. Ojo con los distractores: el BCRA sí construye el total desde las mismas carteras, y los hipotecarios son justamente la línea con menos mora, así que no pueden empujar el promedio para abajo por su peso.",
-  "nota": "articulos/2026-09-01-mora-familias-freno-tarjetas.html",
-  "leccion": "lecciones/deuda-credito.html"
+  "explicacion": "Un índice general es un promedio ponderado: adentro conviven rubros que corren muy por encima y muy por debajo. Que la ropa haya subido 124% mientras el IPC subía 241,8% no significa que esté más barata en pesos —cuesta más del doble que en diciembre de 2023—, sino que se abarató en términos relativos: perdió peso frente al resto de la canasta. Esto es lo que se llama un cambio de precios relativos, y entre el rubro que más subió y el que menos subió hay 406,7 puntos porcentuales de distancia. Ojo con los distractores: el 124% es una suba, no una baja; y los ponderadores del INDEC definen cuánto pesa cada rubro en el promedio, no cuánto sube su precio. Una advertencia final: 'se abarató en relación al promedio' no equivale a 'te alcanza para más'. Eso depende de cómo se movió tu ingreso, que es otro dato.",
+  "nota": "articulos/2026-09-01-precios-relativos-doce-divisiones-ipc.html",
+  "leccion": "lecciones/inflacion-bolsillo.html"
 }

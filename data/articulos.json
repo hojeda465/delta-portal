@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-09-01T18:54:17-03:00",
+    "actualizado": "2026-09-02T15:47:31-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-09-02-humanoides-valuacion-mercado-real",
+      "titulo": "Vendió 5.632 robots humanoides en tres años y la bolsa la valuó en 50.800 millones de dólares: la robótica que se financia no es la que se vende",
+      "bajada": "Unitree, la primera fabricante de robots humanoides en cotizar en bolsa, debutó en la bolsa de Shanghái el 19 de agosto y cerró su primer día valiendo 201 veces lo que factura. Al mismo tiempo, el robot que sí se vende en volumen —el que limpia pisos: 32,72 millones de unidades en 2025— deja márgenes de entre 7 y 12 centavos por peso y ya fundió a iRobot, la empresa que lanzó el Roomba en 2002. Fuimos al prospecto, a los balances y a las góndolas: son dos industrias distintas con el mismo nombre.",
+      "seccion": "MUNDO",
+      "formato": "Anatomía de un dato",
+      "numero": "5.632",
+      "numero_label": "los robots humanoides que Unitree vendió en toda su historia (2023-2025), según su prospecto, mientras la bolsa de Shanghái la valuaba en 50.800 millones de dólares",
+      "fecha": "2026-09-02",
+      "hora": "18:00",
+      "archivo": "articulos/2026-09-02-humanoides-valuacion-mercado-real.html",
+      "verificacion": "verificada",
+      "fuentes": 12,
+      "lectura": "30 seg → 8 min"
+    },
     {
       "id": "2026-09-01-precios-relativos-doce-divisiones-ipc",
       "titulo": "Las tarifas subieron 530% y la ropa 124%: el mapa completo de qué se encareció y qué se abarató desde diciembre de 2023",
