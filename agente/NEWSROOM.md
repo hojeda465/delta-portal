@@ -358,6 +358,20 @@ publicar se mueve a `articulos` en `data/articulos.json`):
 Tras cualquier cambio de manifiesto: `python3 scripts/build_portada.py` para
 regenerar la portada, y luego commit + push.
 
+**La tarjeta de compartir (`assets/tarjetas/<id>.png`).** Cada nota publicada
+tiene su propia imagen de 1200×630 con la **cifra ancla** en grande, generada
+por `scripts/build_tarjetas.py` desde `data/articulos.json`. En X y en WhatsApp
+la tarjeta *es* el posteo: es lo que se ve antes que el texto. Hasta el
+01/09/2026 las 105 notas compartían la misma placa genérica, que es tirar lo más
+compartible que tenemos. `aprobar.py` la genera sola al publicar, en este orden:
+`build_portada.py` (deja al día las páginas de sección, de donde sale el color)
+→ `build_tarjetas.py` → `inject_meta.py` (apunta el `og:image` a la tarjeta).
+
+Consecuencia editorial: **el campo `numero` del manifiesto ya no es solo un
+adorno de la portada, es la imagen con la que la nota circula.** Si una nota no
+tiene cifra ancla, su tarjeta sale sin número y pierde casi todo su valor. Una
+razón más para que ninguna nota salga sin un número que la sostenga.
+
 **Widgets compartidos (obligatorio en toda página nueva).** Cada nota debe
 incluir, justo antes de `</body>`:
 

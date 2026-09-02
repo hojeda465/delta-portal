@@ -40,11 +40,25 @@ SITE = "https://coninteres.com"   # mantener igual que build_portada.py
 
 BLOCK_RE = re.compile(r"[ \t]*<!-- DELTA-META:start -->.*?<!-- DELTA-META:end -->\n?", re.S)
 
+def imagen_de(a):
+    """La tarjeta propia de la nota, con su cifra ancla, si existe.
+
+    Hasta el 01/09/2026 todas las notas compartían la misma placa genérica y en
+    X —donde la tarjeta ES el posteo— eso desperdiciaba lo más compartible que
+    tenemos, que es el número. Las genera scripts/build_tarjetas.py; si falta,
+    se cae a la placa de marca y no se rompe nada.
+    """
+    rel = f"assets/tarjetas/{a['id']}.png"
+    if os.path.exists(os.path.join(ROOT, rel)):
+        return f"{SITE}/{rel}"
+    return f"{SITE}/assets/og-delta.png"
+
+
 def meta_block(a):
     url = f"{SITE}/{a['archivo']}"
     title = escape(a['titulo']) + " — Con Interés"
     desc = escape(a.get('bajada', ''))
-    img = f"{SITE}/assets/og-delta.png"
+    img = imagen_de(a)
     return (
         "<!-- DELTA-META:start -->\n"
         '<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">\n'

@@ -31,7 +31,10 @@ ejecute bien.
    ```
    Mueve el archivo de `cola/` a `articulos/`, pasa la entrada de `cola.json` a
    `articulos.json`, marca el tema como `publicada` en `cubiertas.json`, saca el
-   `noindex` y regenera la portada.
+   `noindex`, regenera la portada, **genera la tarjeta de compartir** con la
+   cifra ancla (`assets/tarjetas/<id>.png`) y apunta el `og:image` de la nota a
+   esa tarjeta. Es la imagen con la que la nota va a circular en X y en
+   WhatsApp: si el manifiesto no trae `numero`, sale sin numero.
 
    **Rechazar:**
    ```

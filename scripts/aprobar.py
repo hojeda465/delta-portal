@@ -67,9 +67,12 @@ def main(draft_id):
 
     save("articulos.json", art); save("cola.json", cola); save("cubiertas.json", cub)
 
-    # 5) inyectar metadatos de marca/redes y regenerar portada + sitemap
-    subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "inject_meta.py")], check=True)
-    subprocess.run([sys.executable, os.path.join(ROOT, "scripts", "build_portada.py")], check=True)
+    # 5) regenerar el sitio, la tarjeta de compartir y los metadatos.
+    #    El orden importa: build_portada deja al dia las paginas de seccion, de
+    #    donde build_tarjetas saca el color de la nota; e inject_meta se corre
+    #    ultimo porque apunta el og:image a la tarjeta, que ya tiene que existir.
+    for script in ("build_portada.py", "build_tarjetas.py", "inject_meta.py"):
+        subprocess.run([sys.executable, os.path.join(ROOT, "scripts", script)], check=True)
     print(f"PUBLICADA: {draft['titulo']}")
 
     # 6) mostrar el kit social listo para pegar (X + Telegram), si existe

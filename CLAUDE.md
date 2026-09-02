@@ -169,6 +169,11 @@ agente/NEWSROOM.md      el runbook editorial - MANDA en criterio
 agente/plantilla.html   plantilla de nota (estructura de 6 capas)
 agente/local/           el agente local: script, misiones, LEEME
 scripts/                build_portada.py, aprobar.py, rechazar.py, ...
+  build_tarjetas.py       una tarjeta de compartir por nota (1200x630) con su
+                          CIFRA ANCLA, en assets/tarjetas/<id>.png. Es la imagen
+                          con la que la nota circula en X y WhatsApp. La genera
+                          aprobar.py sola al publicar; para rehacer todo el
+                          archivo: python scripts/build_tarjetas.py --forzar
   build_calendario.py     rehace data/calendario.json desde INDEC y BCRA
   agenda.py               que sale en los proximos dias + nuestra ultima nota
                           de esa misma serie. Es el paso 0 de toda corrida.
