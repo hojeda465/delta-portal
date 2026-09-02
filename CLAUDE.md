@@ -153,13 +153,13 @@ data/                   manifiestos JSON - la fuente de verdad
   cola.json               borradores en cola
   cubiertas.json          memoria de temas (anti-duplicados)
   pregunta.json           la pregunta del dia
-  pedidos.json            PEDIDOS DE LECTORES: la afirmacion que alguien quiere
-                          que verifiquemos. Es la segunda entrada del paso 0,
-                          junto al calendario. Un pedido es un CANDIDATO, nunca
-                          una orden (NEWSROOM.md seccion 2 ter). Archivo publico
-                          y versionado: NO se guarda contacto de nadie. La
-                          pagina pedidos.html se genera con
-                          scripts/build_pedidos.py - no editarla a mano.
+  pedidos.json            PEDIDOS DE LECTORES - SUSPENDIDO (01/09/2026). El
+                          mecanismo esta completo pero sin canal de entrada:
+                          falta una casilla propia del medio o un formulario.
+                          pedidos.html se dio de baja y el link salio del nav.
+                          Ver NEWSROOM.md seccion 2 ter para reactivarlo. Un
+                          pedido es un CANDIDATO, nunca una orden. Archivo
+                          publico y versionado: NO se guarda contacto de nadie.
   calendario.json         QUE PUBLICAN INDEC Y BCRA en los proximos 120 dias,
                           con fecha y hora oficiales. GENERADO por
                           scripts/build_calendario.py desde los calendarios de

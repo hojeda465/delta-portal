@@ -126,19 +126,27 @@ def cargar(nombre):
     return json.load(io.open(p, encoding="utf-8"))
 
 
+def pedidos_registrados():
+    """Todos los pedidos del manifiesto, en cualquier estado."""
+    datos = cargar("pedidos.json")
+    return (datos or {}).get("pedidos", [])
+
+
 def pedidos_pendientes():
     """Lo que pidieron los lectores y todavia no tiene respuesta."""
-    datos = cargar("pedidos.json")
-    if not datos:
-        return []
-    return [p for p in datos.get("pedidos", [])
+    return [p for p in pedidos_registrados()
             if p.get("estado") in ("recibido", "en_ficha")]
 
 
 def imprimir_pedidos(pend):
-    """La segunda entrada del paso 0. Se imprime siempre, aunque este vacia:
-    que aparezca en cero es informacion (nadie pidio nada todavia), y que no
-    aparezca haria olvidar que el canal existe."""
+    """La segunda entrada del paso 0.
+
+    Mientras el canal de pedidos este suspendido (ver NEWSROOM.md 2 ter) el
+    manifiesto esta vacio y este bloque no imprime nada: no tiene sentido
+    ensuciar cada corrida con una seccion en cero de algo que todavia no
+    esta abierto. Reaparece solo cuando entra el primer pedido."""
+    if not pedidos_registrados():
+        return
     print()
     print("=" * 78)
     print("PEDIDOS DE LECTORES  (%d sin responder)" % len(pend))

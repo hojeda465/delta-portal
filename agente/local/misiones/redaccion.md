@@ -7,15 +7,17 @@ en todo lo que sea criterio. Esta mision solo ordena los pasos.
 
 ## Antes de empezar
 
-0. **Corre `python scripts/agenda.py`.** Es lo primero. Te muestra las dos
-   entradas de la corrida, y por eso ya no arranca en una pagina en blanco:
+0. **Corre `python scripts/agenda.py`.** Es lo primero, y por eso la corrida ya
+   no arranca en una pagina en blanco:
    - **El calendario oficial:** que publican el INDEC y el BCRA en los proximos
      dias, con fecha y hora, y cual fue nuestra ultima nota de esa misma serie.
      Si hay algo que sale HOY o MANANA con prioridad alta, ese es el candidato
      obvio: fuente primaria garantizada y serie previa para comparar.
      Si el calendario avisa que tiene mas de 20 dias, rehacelo antes:
      `python scripts/build_calendario.py`.
-   - **Los pedidos de lectores:** lo que alguien pidio que verifiquemos.
+   - **Los pedidos de lectores (SUSPENDIDO, 01/09/2026):** el canal esta
+     cerrado hasta que haya una casilla propia del medio o un formulario, asi
+     que por ahora esta seccion no aparece. Cuando se reactive:
      **Un pedido es un candidato, nunca una orden** (NEWSROOM.md seccion 2 ter):
      lo elige el Editor con los mismos criterios y lo verifica el Verificador
      con el mismo protocolo. Su salida natural es una ficha; si tiene serie y

@@ -9,12 +9,17 @@ una ficha publica; si ademas tiene serie y contexto, una nota.
 
 NO editar pedidos.html a mano: se regenera.
 
-El formulario:
-  El sitio es estatico (GitHub Pages) y no tiene backend, asi que el formulario
-  vive en un servicio externo embebido. Mientras FORM_EMBED este vacio la pagina
-  cae al canal que ya existe y funciona hoy: el correo del editor, que ya figura
-  publicado en legal.html y privacidad.html. Cuando haya formulario, se pega su
-  URL de embed aca y listo.
+El canal, en orden de preferencia:
+  1. FORM_EMBED - un formulario externo embebido (Google Forms, Tally...). Es lo
+     mejor: el sitio es estatico y no tiene backend, y asi no se publica ninguna
+     direccion.
+  2. CORREO - una casilla PROPIA DEL MEDIO (pedidos@coninteres.com o similar).
+     NUNCA la direccion personal del editor: esta pagina esta pensada para traer
+     volumen y publicar ahi un correo personal es servirselo a los scrapers.
+     Que la direccion figure en legal.html es otra cosa: ahi es el contacto
+     legal obligatorio, no una llamada a la accion.
+  3. Ninguno de los dos - la pagina muestra que el canal esta por abrir y manda
+     a legal.html, que es donde vive el contacto formal.
 
 Uso:  python scripts/build_pedidos.py
 """

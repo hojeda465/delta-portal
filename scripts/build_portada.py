@@ -700,7 +700,7 @@ HTML = f"""<!DOCTYPE html>
   </div>
 </header>
 
-<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="pedidos.html">&#9998; Ped&iacute; un chequeo</a><a class="nav-extra" href="pregunta.html">? La pregunta</a><a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="nav-extra" href="archivo.html">&#9776; Archivo</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
+<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="pregunta.html">? La pregunta</a><a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="nav-extra" href="archivo.html">&#9776; Archivo</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> →</a></div></nav>
 
 <div class="lema"><div class="wrap"><span class="l1">Entender no debería costarte nada<span class="fin">.</span></span><span class="l2">Datos verificados, explicados sin jerga, sin pedirte nada a cambio.</span></div></div>
 
@@ -847,7 +847,7 @@ for g in GRUPOS:
   </div>
 </header>
 
-<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="pedidos.html">&#9998; Ped&iacute; un chequeo</a><a class="nav-extra" href="pregunta.html">? La pregunta</a><a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="nav-extra" href="archivo.html">&#9776; Archivo</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> &rarr;</a></div></nav>
+<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="pregunta.html">? La pregunta</a><a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="nav-extra" href="archivo.html">&#9776; Archivo</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> &rarr;</a></div></nav>
 
 <main class="wrap">
   <div class="sec-hero">
@@ -973,7 +973,7 @@ ARCHIVO = f"""<!DOCTYPE html>
   </div>
 </header>
 
-<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="pedidos.html">&#9998; Ped&iacute; un chequeo</a><a class="nav-extra" href="pregunta.html">? La pregunta</a><a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="nav-extra" href="archivo.html">&#9776; Archivo</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> &rarr;</a></div></nav>
+<nav class="secnav"><div class="wrap">{secciones_nav}<a class="nav-extra" href="pregunta.html">? La pregunta</a><a class="nav-extra" href="hoy.html">&#10003; El cierre</a><a class="nav-extra" href="herramientas.html">&#8983; Herramientas</a><a class="nav-extra" href="archivo.html">&#9776; Archivo</a><a class="learn-link" href="aprender.html">% Modo Aprendizaje <b>beta</b> &rarr;</a></div></nav>
 
 <main class="wrap">
   <div class="sec-hero">

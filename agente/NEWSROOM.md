@@ -213,7 +213,19 @@ son de legalidad, y ninguna nota que las viole puede salir de la cola.
 
 ---
 
-## 2 ter. Pedidos de lectores — co-creación con reglas
+## 2 ter. Pedidos de lectores — co-creación con reglas ⏸️ SUSPENDIDO
+
+> **SUSPENDIDO por decisión del editor (01/09/2026):** la página `pedidos.html`
+> se dio de baja y el link salió del nav. El mecanismo quedó completo pero sin
+> canal de entrada: el único disponible era el correo personal del editor, y
+> publicarlo como llamada a la acción en una página pensada para traer volumen
+> es exponerlo a los scrapers. **Falta definir un canal propio del medio**
+> (un formulario externo, o una casilla `@coninteres.com`). Hasta entonces
+> `data/pedidos.json` queda vacío y `agenda.py` no imprime la sección.
+>
+> Para reactivarlo: configurar `FORM_EMBED` o `CORREO` en
+> `scripts/build_pedidos.py`, correr ese script y volver a poner el link en el
+> nav de `build_portada.py`. Todo lo que sigue es la especificación vigente.
 
 Con Interés recibe pedidos de verificación del público: un lector manda una
 afirmación que no le cierra —un titular, una frase de un funcionario, un audio
