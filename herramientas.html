@@ -57,7 +57,32 @@
   footer .wrap{font-family:var(--mono);font-size:12px;color:var(--muted)}
   footer a{text-decoration:none}
   .disclaimer{background:#F3EFE7;border-left:3px solid var(--amber);border-radius:10px;padding:14px 18px;font-size:13px;color:var(--muted);margin:30px 0 0}
-  @media(max-width:600px){h1{font-size:30px}.tool{padding:20px 16px}}
+  /* calculadora de canasta propia */
+  .gastos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px 14px;margin-bottom:16px}
+  .gastos .campo{min-width:0}
+  .gastos .campo input{min-width:0;width:100%;font-size:14px;padding:9px 11px}
+  .gastos .campo label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .fila-acc{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+  .btn-sec{font-family:var(--mono);font-size:12.5px;background:none;border:1px solid var(--rule);
+    border-radius:999px;padding:9px 16px;color:var(--teal-deep);cursor:pointer;transition:.15s}
+  .btn-sec:hover{border-color:var(--teal)}
+  .tot-gasto{font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-left:auto}
+  .tot-gasto b{color:var(--ink)}
+  .tabla-rubros{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:18px}
+  .tabla-rubros th{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--faint);text-align:right;padding:8px 6px;border-bottom:1px solid var(--rule);font-weight:600}
+  .tabla-rubros th:first-child{text-align:left}
+  .tabla-rubros td{padding:8px 6px;border-bottom:1px solid var(--grid);text-align:right;
+    font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink-soft)}
+  .tabla-rubros td:first-child{text-align:left;font-family:var(--sans)}
+  .tabla-rubros tr:last-child td{border-bottom:0}
+  .tabla-rubros .apo{color:var(--ink);font-weight:600}
+  .barra{display:inline-block;height:9px;border-radius:2px;background:var(--teal);vertical-align:middle;margin-right:7px}
+  .metodo-det{margin-top:16px;border-top:1px dotted var(--grid);padding-top:12px}
+  .metodo-det summary{font-family:var(--mono);font-size:12px;color:var(--teal-deep);cursor:pointer}
+  .metodo-det p{font-size:13.5px;color:var(--muted);line-height:1.6;margin:10px 0 0}
+  @media(max-width:700px){.gastos{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){h1{font-size:30px}.tool{padding:20px 16px}.gastos{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -73,13 +98,60 @@
   <div class="hero">
     <div class="kicker">% Herramientas · gratis · sin registro</div>
     <h1>Tu bolsillo, en números</h1>
-    <p>Tres calculadoras con datos oficiales (INDEC y mercado cambiario). Todo se calcula en tu navegador: no guardamos nada, no pedimos nada.</p>
+    <p>Cuatro calculadoras con datos oficiales (INDEC y mercado cambiario). Todo se calcula en tu navegador: no guardamos nada, no pedimos nada.</p>
     <p class="fine">Datos: argentinadatos.com (IPC INDEC · cotizaciones históricas). Se actualizan solos.</p>
   </div>
 
+  <!-- 1 · TU CANASTA -->
+  <section class="tool" id="t-canasta">
+    <div class="t-kick">1 · Tu canasta</div>
+    <h2>¿Cuánto fue <em>tu</em> inflación?</h2>
+    <p class="t-sub">El IPC es un promedio ponderado de doce rubros que corrieron a velocidades
+    muy distintas, y nadie consume el promedio. Poné, a ojo, cuánto se te va por mes en cada
+    cosa y calculamos la inflación de <b>tu</b> canasta con las series del INDEC.</p>
+
+    <div class="gastos">
+      <div class="campo"><label for="g-vivienda">Alquiler, expensas, luz, gas</label><input type="number" id="g-vivienda" min="0" placeholder="0" inputmode="numeric"></div>
+      <div class="campo"><label for="g-alimentos">Súper y comida en casa</label><input type="number" id="g-alimentos" min="0" placeholder="0" inputmode="numeric"></div>
+      <div class="campo"><label for="g-transporte">Transporte y nafta</label><input type="number" id="g-transporte" min="0" placeholder="0" inputmode="numeric"></div>
+      <div class="campo"><label for="g-salud">Prepaga y medicamentos</label><input type="number" id="g-salud" min="0" placeholder="0" inputmode="numeric"></div>
+      <div class="campo"><label for="g-educacion">Educación y cuotas</label><input type="number" id="g-educacion" min="0" placeholder="0" inputmode="numeric"></div>
+      <div class="campo"><label for="g-comunicacion">Celular e internet</label><input type="number" id="g-comunicacion" min="0" placeholder="0" inputmode="numeric"></div>
+      <div class="campo"><label for="g-restaurantes">Salidas y delivery</label><input type="number" id="g-restaurantes" min="0" placeholder="0" inputmode="numeric"></div>
+      <div class="campo"><label for="g-prendas">Ropa y calzado</label><input type="number" id="g-prendas" min="0" placeholder="0" inputmode="numeric"></div>
+      <div class="campo"><label for="g-resto">Todo lo demás</label><input type="number" id="g-resto" min="0" placeholder="0" inputmode="numeric"></div>
+    </div>
+    <div class="fila-acc">
+      <div class="campo"><label for="c-periodo">Período</label><select id="c-periodo"></select></div>
+      <button class="calc" id="c-btn">Calcular mi inflación</button>
+      <button class="btn-sec" id="c-ej">Probar con un ejemplo</button>
+      <span class="tot-gasto" id="c-tot"></span>
+    </div>
+    <div class="resultado" id="c-res"></div>
+
+    <details class="metodo-det">
+      <summary>Cómo se calcula esto (y qué no es)</summary>
+      <p>Tomamos las doce divisiones del IPC nacional del INDEC (base diciembre 2016) y las
+      pesamos con <b>tu</b> gasto en vez de con el de la canasta oficial. Para cada rubro:
+      cuánto varió su precio en el período elegido, multiplicado por cuánto pesa en tu
+      presupuesto. La suma es tu inflación.</p>
+      <p>«Todo lo demás» se reparte entre equipamiento del hogar, recreación y cultura,
+      bebidas alcohólicas y tabaco, y bienes y servicios varios, en la proporción que tienen
+      en la canasta oficial.</p>
+      <p><b>Es una estimación, no una medición.</b> El INDEC releva precios de variedades
+      concretas en comercios concretos; acá reponderamos sus índices con tu gasto declarado a
+      ojo. Sirve para entender por qué tu experiencia no coincide con el titular, no para
+      indexar un contrato. Los ponderadores oficiales, además, salen de una encuesta de gastos
+      de 2004/05: es la canasta vigente, aunque el INDEC preparó una actualización que quedó
+      suspendida.</p>
+      <p>Nada de lo que escribís sale de tu navegador: no se guarda, no se envía, no hay
+      cuenta ni cookies.</p>
+    </details>
+  </section>
+
   <!-- 1 · SUELDO VS INFLACIÓN -->
   <section class="tool" id="t-sueldo">
-    <div class="t-kick">1 · Sueldo</div>
+    <div class="t-kick">2 · Sueldo</div>
     <h2>¿Tu sueldo le ganó a la inflación?</h2>
     <p class="t-sub">Compará cuánto cobrabas antes con cuánto cobrás hoy, descontando la inflación acumulada entre las dos fechas.</p>
     <div class="campos">
@@ -93,7 +165,7 @@
 
   <!-- 2 · DEFLACTOR -->
   <section class="tool" id="t-deflactor">
-    <div class="t-kick">2 · El valor de la plata</div>
+    <div class="t-kick">3 · El valor de la plata</div>
     <h2>¿Cuánto vale hoy la plata de antes?</h2>
     <p class="t-sub">Un monto de otra época, traducido a pesos de hoy según la inflación oficial acumulada.</p>
     <div class="campos">
@@ -106,7 +178,7 @@
 
   <!-- 3 · DÓLAR VS PRECIOS -->
   <section class="tool" id="t-dolar">
-    <div class="t-kick">3 · Ahorro</div>
+    <div class="t-kick">4 · Ahorro</div>
     <h2>¿Qué corrió más rápido: el dólar o los precios?</h2>
     <p class="t-sub">Si en tal mes comprabas dólar blue u oficial, ¿le ganaste a la inflación hasta hoy? Mirada al pasado con datos reales — no es una recomendación a futuro.</p>
     <div class="campos">
@@ -242,5 +314,129 @@
 </script>
 <!-- CI-WIDGETS --><script defer src="assets/ticker.js?v=5"></script>
 <!-- CI-METRICS --><script defer src="assets/metrics.js?v=1"></script>
+
+<script>
+/* ---------- 1 · TU CANASTA: reponderar el IPC con el gasto del lector ------- */
+(function(){
+  const $ = s => document.querySelector(s);
+  const MAPA = {"g-vivienda":"vivienda","g-alimentos":"alimentos","g-transporte":"transporte",
+                "g-salud":"salud","g-educacion":"educacion","g-comunicacion":"comunicacion",
+                "g-restaurantes":"restaurantes","g-prendas":"prendas"};
+  const RESTO = ["equipamiento","recreacion","bebidas","varios"];
+  const EJEMPLO = {"g-vivienda":420000,"g-alimentos":380000,"g-transporte":95000,
+                   "g-salud":140000,"g-educacion":0,"g-comunicacion":45000,
+                   "g-restaurantes":80000,"g-prendas":50000,"g-resto":90000};
+  const MES = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto",
+               "septiembre","octubre","noviembre","diciembre"];
+  const nom = m => MES[+m.slice(5,7)-1] + " de " + m.slice(0,4);
+  const pct = v => v.toLocaleString("es-AR",{minimumFractionDigits:1,maximumFractionDigits:1}) + "%";
+  // La diferencia entre dos porcentajes son PUNTOS. Nunca "% mas".
+  const ptos = v => v.toLocaleString("es-AR",{minimumFractionDigits:1,maximumFractionDigits:1});
+  let D = null;
+
+  function periodos(){
+    const ms = D.meses, ult = ms[ms.length-1], sel = $("#c-periodo");
+    const ops = [];
+    if (ms.includes("2023-12")) ops.push(["2023-12","desde diciembre de 2023"]);
+    if (ms.length > 12) ops.push([ms[ms.length-13],"los últimos 12 meses"]);
+    if (ms.includes("2017-12")) ops.push(["2017-12","desde diciembre de 2017"]);
+    sel.innerHTML = ops.map(o=>`<option value="${o[0]}">${o[1]}</option>`).join("");
+    return ult;
+  }
+
+  function total(){
+    let s = 0;
+    for (const id of Object.keys(MAPA).concat(["g-resto"])) s += Math.max(0, +$("#"+id).value || 0);
+    return s;
+  }
+  function pintarTotal(){
+    const s = total();
+    $("#c-tot").innerHTML = s > 0
+      ? "gasto declarado: <b>$" + s.toLocaleString("es-AR") + "</b> por mes" : "";
+  }
+
+  function calcular(){
+    const res = $("#c-res"), t = total();
+    if (t <= 0){
+      res.className = "resultado on";
+      res.innerHTML = '<div class="err">Poné al menos un gasto para poder calcular.</div>';
+      return;
+    }
+    const i = D.meses.indexOf($("#c-periodo").value), j = D.meses.length - 1;
+    const porId = {}; D.divisiones.forEach(d => porId[d.id] = d);
+
+    // peso de cada division en el presupuesto del lector
+    const peso = {};
+    for (const [campo, div] of Object.entries(MAPA)) peso[div] = Math.max(0,+$("#"+campo).value||0)/t;
+    const resto = Math.max(0,+$("#g-resto").value||0)/t;
+    const sumaOf = RESTO.reduce((a,d)=>a+porId[d].ponderador,0);
+    RESTO.forEach(d => peso[d] = resto * porId[d].ponderador / sumaOf);
+
+    // variacion de cada division y aporte a la inflacion del lector
+    const filas = D.divisiones.map(d => {
+      const v = d.serie[j]/d.serie[i] - 1;
+      return {nombre:d.nombre, peso:peso[d.id]||0, ofic:d.ponderador/100, vari:v,
+              aporte:(peso[d.id]||0)*v};
+    });
+    const mia = filas.reduce((a,f)=>a+f.aporte,0);
+    const ofi = D.nivel_general[j]/D.nivel_general[i] - 1;
+    const dif = (mia - ofi)*100;
+
+    filas.sort((a,b)=>b.aporte-a.aporte);
+    const maxAp = Math.max(...filas.map(f=>Math.abs(f.aporte))) || 1;
+    const cuerpo = filas.filter(f=>f.peso>0).map(f=>`<tr>
+        <td><span class="barra" style="width:${Math.round(Math.abs(f.aporte)/maxAp*46)}px"></span>${f.nombre}</td>
+        <td>${pct(f.peso*100)}</td><td>${pct(f.ofic*100)}</td>
+        <td>${f.vari>=0?"+":""}${pct(f.vari*100)}</td>
+        <td class="apo">${f.aporte>=0?"+":""}${ptos(f.aporte*100)}</td></tr>`).join("");
+
+    const clase = dif > 2 ? "malo" : (dif < -2 ? "bueno" : "neutro");
+    const frase = dif > 2 ? `Son <b>${ptos(Math.abs(dif))} puntos por encima</b> del promedio.`
+                : dif < -2 ? `Son <b>${ptos(Math.abs(dif))} puntos por debajo</b> del promedio.`
+                : "Tu canasta se movió prácticamente igual que la oficial.";
+    const per = $("#c-periodo").selectedOptions[0].textContent;
+
+    res.className = "resultado on";
+    res.innerHTML = `
+      <div class="veredicto ${clase}">Tu inflación ${per} fue ${pct(mia*100)}.<br>
+      La oficial fue ${pct(ofi*100)}. ${frase}</div>
+      <div class="detalle">El aporte es cuántos puntos porcentuales de <i>tu</i> inflación puso cada rubro:
+      su peso en tu presupuesto por lo que subió. Ordenado de mayor a menor.</div>
+      <table class="tabla-rubros">
+        <thead><tr><th>Rubro</th><th>Tu peso</th><th>Peso oficial</th><th>Subió</th><th>Aporte (pp)</th></tr></thead>
+        <tbody>${cuerpo}</tbody>
+      </table>
+      <div class="fila-acc" style="margin-top:16px">
+        <button class="btn-sec" id="c-copiar">Copiar mi resultado</button>
+      </div>`;
+
+    $("#c-copiar").addEventListener("click", function(){
+      const txt = `Mi inflación ${per} fue ${pct(mia*100)}. La oficial del INDEC, ${pct(ofi*100)}.\n`
+        + `Lo que más me pegó: ${filas[0].nombre} (${filas[0].vari>=0?"+":""}${pct(filas[0].vari*100)}).\n`
+        + `Calculado en coninteres.com/herramientas.html#t-canasta`;
+      navigator.clipboard.writeText(txt).then(()=>{ this.textContent = "¡Copiado!";
+        setTimeout(()=>this.textContent="Copiar mi resultado",1800); });
+    });
+  }
+
+  fetch("data/ipc-divisiones.json").then(r=>r.json()).then(d=>{
+    D = d; const ult = periodos();
+    $("#t-canasta .t-sub").insertAdjacentHTML("beforeend",
+      ` <span class="fine">Último dato: ${nom(ult)}.</span>`);
+    $("#c-btn").addEventListener("click", calcular);
+    $("#c-ej").addEventListener("click", ()=>{
+      for (const [k,v] of Object.entries(EJEMPLO)) $("#"+k).value = v || "";
+      pintarTotal(); calcular();
+    });
+    for (const id of Object.keys(MAPA).concat(["g-resto"]))
+      $("#"+id).addEventListener("input", pintarTotal);
+  }).catch(()=>{
+    $("#c-res").className = "resultado on";
+    $("#c-res").innerHTML = '<div class="err">No pude cargar las series del INDEC. '
+      + 'Probá recargar la página.</div>';
+  });
+})();
+</script>
+
 </body>
 </html>

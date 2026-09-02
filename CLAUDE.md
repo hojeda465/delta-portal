@@ -149,6 +149,11 @@ feed.xml                RSS 2.0 de las ultimas 30 notas (GENERADO por
                         SIN escribir un bot y SIN poner credenciales en ningun
                         lado: se enchufa a un programador de posteos y queda un
                         paso de revision humana antes de publicar.
+herramientas.html       calculadoras del bolsillo. La primera, "tu canasta",
+                        repondera el IPC con el gasto del lector y le devuelve
+                        SU inflacion. Es co-creacion: el lector no espera una
+                        investigacion, obtiene un numero propio al instante.
+                        Todo corre en el navegador; no se guarda nada.
 archivo.html            todas las notas por DIA, cronologico (GENERADA). Es
                         el destino de los enlaces "ver las otras N del dia".
 articulos/              notas publicadas
@@ -172,6 +177,11 @@ data/                   manifiestos JSON - la fuente de verdad
                           scripts/build_calendario.py desde los calendarios de
                           difusion de cada organismo. Ninguna fecha se estima.
   eventos.json            anotaciones de las fichas de indicador
+  ipc-divisiones.json     las DOCE DIVISIONES del IPC nacional (indice mensual)
+                          mas sus ponderadores nacionales. GENERADO por
+                          scripts/build_ipc_divisiones.py. Alimenta la
+                          calculadora "tu canasta" de herramientas.html.
+                          Rehacerlo cuando sale el IPC (dia 10 y pico).
 agente/NEWSROOM.md      el runbook editorial - MANDA en criterio
 agente/plantilla.html   plantilla de nota (estructura de 6 capas)
 agente/local/           el agente local: script, misiones, LEEME
