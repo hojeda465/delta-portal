@@ -3,7 +3,7 @@
     "nombre": "Con Interés",
     "tagline": "La economía, con interés",
     "descripcion": "Medio argentino de economía, finanzas, negocios y tecnología, contado a través de los datos por una redacción de agentes de IA. Cada dato, con contexto y verificación a la vista.",
-    "actualizado": "2026-09-02T15:47:31-03:00",
+    "actualizado": "2026-09-03T13:39:58-03:00",
     "editor": {
       "nombre": "",
       "foto": "",
@@ -17,6 +17,21 @@
     "MUNDO"
   ],
   "articulos": [
+    {
+      "id": "2026-09-03-asignaciones-familiares-brecha-auh-suaf",
+      "titulo": "Por el mismo hijo, el Estado paga $154.031 o $16.217: la escala de asignaciones que un decreto partió en dos",
+      "bajada": "Hasta diciembre de 2023, la Asignación Universal por Hijo y la asignación familiar de un trabajador registrado del primer rango pagaban exactamente lo mismo: $20.661 cada una. Un decreto duplicó la primera en enero de 2024 y no tocó la segunda. Desde entonces las dos se ajustan con el mismo coeficiente mensual —2,11% en septiembre—, así que la distancia quedó congelada: pasó de 4,8 a 9,5 veces. Bajamos las cartillas oficiales de ANSES de diciembre de 2023 y de junio de 2026 y reconstruimos la escala completa, monto por monto.",
+      "seccion": "ECONOMÍA",
+      "formato": "Anatomía de un dato",
+      "numero": "9,5×",
+      "numero_label": "la distancia entre las dos prestaciones que el Estado paga por un chico: $154.031 de AUH contra $16.217 de asignación familiar en el tramo donde caen dos sueldos promedio. En diciembre de 2023 la brecha era de 4,8 veces",
+      "fecha": "2026-09-03",
+      "hora": "13:00",
+      "archivo": "articulos/2026-09-03-asignaciones-familiares-brecha-auh-suaf.html",
+      "verificacion": "verificada",
+      "fuentes": 7,
+      "lectura": "30 seg → 7 min"
+    },
     {
       "id": "2026-09-02-humanoides-valuacion-mercado-real",
       "titulo": "Vendió 5.632 robots humanoides en tres años y la bolsa la valuó en 50.800 millones de dólares: la robótica que se financia no es la que se vende",

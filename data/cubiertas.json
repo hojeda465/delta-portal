@@ -707,6 +707,13 @@
       "fecha": "2026-09-02",
       "estado": "publicada",
       "articulo_id": "2026-09-02-humanoides-valuacion-mercado-real"
+    },
+    {
+      "tema": "asignaciones familiares / la brecha entre la AUH ($154.031) y la asignación familiar del cuarto rango ($16.217) en septiembre de 2026",
+      "angulo": "ángulo NUEVO: no es 'cuánto se cobra este mes' sino por qué la distancia entre las dos ventanillas se duplicó (4,76x en dic-2023 a 9,50x hoy) y por qué la movilidad no puede corregirla, ya que aplica el mismo coeficiente a todos los montos. Origen: Decreto 117/2023, que duplicó la AUH y no tocó el SUAF. Segundo hallazgo: los topes de ingreso subieron 59,5% desde dic-2023 contra 295,6% del RIPTE, así que el umbral de exclusión cayó de 8,18 a 3,30 salarios promedio. Escala reconstruida desde las cartillas oficiales de ANSES (12/2023 y 06/2026) y verificada aplicando las movilidades de julio (2,15%), agosto (1,89%) y septiembre (2,11%): reproduce 10 de 10 valores.",
+      "fecha": "2026-09-03",
+      "estado": "publicada",
+      "articulo_id": "2026-09-03-asignaciones-familiares-brecha-auh-suaf"
     }
   ]
 }

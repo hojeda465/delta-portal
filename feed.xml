@@ -11,13 +11,26 @@
     <description>La economía argentina, con interés: cada dato con su fuente, su contexto y su verificación a la vista.</description>
     <language>es-AR</language>
     <copyright>Con Interés</copyright>
-    <lastBuildDate>Wed, 02 Sep 2026 15:47:00 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 13:41:00 -0300</lastBuildDate>
     <ttl>60</ttl>
     <image>
       <url>https://coninteres.com/assets/og-delta.png</url>
       <title>Con Interés</title>
       <link>https://coninteres.com/</link>
     </image>
+    <item>
+      <title>Por el mismo hijo, el Estado paga $154.031 o $16.217: la escala de asignaciones que un decreto partió en dos</title>
+      <link>https://coninteres.com/articulos/2026-09-03-asignaciones-familiares-brecha-auh-suaf.html</link>
+      <guid isPermaLink="true">https://coninteres.com/articulos/2026-09-03-asignaciones-familiares-brecha-auh-suaf.html</guid>
+      <pubDate>Thu, 03 Sep 2026 13:00:00 -0300</pubDate>
+      <dc:creator>Redacción Con Interés</dc:creator>
+      <category>ECONOMÍA</category>
+      <description>Hasta diciembre de 2023, la Asignación Universal por Hijo y la asignación familiar de un trabajador registrado del primer rango pagaban exactamente lo mismo: $20.661 cada una. Un decreto duplicó la primera en enero de 2024 y no tocó la segunda. Desde entonces las dos se ajustan con el mismo coeficiente mensual —2,11% en septiembre—, así que la distancia quedó congelada: pasó de 4,8 a 9,5 veces. Bajamos las cartillas oficiales de ANSES de diciembre de 2023 y de junio de 2026 y reconstruimos la escala completa, monto por monto.</description>
+      <ci:numero>9,5×</ci:numero>
+      <ci:numeroEtiqueta>la distancia entre las dos prestaciones que el Estado paga por un chico: $154.031 de AUH contra $16.217 de asignación familiar en el tramo donde caen dos sueldos promedio. En diciembre de 2023 la brecha era de 4,8 veces</ci:numeroEtiqueta>
+      <enclosure url="https://coninteres.com/assets/tarjetas/2026-09-03-asignaciones-familiares-brecha-auh-suaf.png" length="71911" type="image/png"/>
+      <media:content url="https://coninteres.com/assets/tarjetas/2026-09-03-asignaciones-familiares-brecha-auh-suaf.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Vendió 5.632 robots humanoides en tres años y la bolsa la valuó en 50.800 millones de dólares: la robótica que se financia no es la que se vende</title>
       <link>https://coninteres.com/articulos/2026-09-02-humanoides-valuacion-mercado-real.html</link>
@@ -394,19 +407,6 @@
       <ci:numeroEtiqueta>exportó el complejo girasolero en enero-mayo 2026 (+126% i.a., el mayor nivel en dos décadas)</ci:numeroEtiqueta>
       <enclosure url="https://coninteres.com/assets/tarjetas/2026-07-24-girasol-boom-exportaciones.png" length="65569" type="image/png"/>
       <media:content url="https://coninteres.com/assets/tarjetas/2026-07-24-girasol-boom-exportaciones.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>El mercado de alquileres se dio vuelta: la oferta en CABA se multiplicó por casi cuatro</title>
-      <link>https://coninteres.com/articulos/2026-07-31-alquileres-caba-oferta-multiplico.html</link>
-      <guid isPermaLink="true">https://coninteres.com/articulos/2026-07-31-alquileres-caba-oferta-multiplico.html</guid>
-      <pubDate>Fri, 31 Jul 2026 19:10:00 -0300</pubDate>
-      <dc:creator>Redacción Con Interés</dc:creator>
-      <category>ECONOMÍA</category>
-      <description>Desde que el DNU 70/2023 derogó la Ley de Alquileres, la cantidad de departamentos ofrecidos en la Ciudad creció 287,9% (Mercado Libre–UdeSA) y los aumentos se desaceleraron hasta rozar la inflación: cerca del 33% interanual, según tres índices independientes. Para el que busca, más opciones; para el que ya alquila, la cuenta sigue apretada. Los números —y sus dos lecturas—, a la vista.</description>
-      <ci:numero>+287,9%</ci:numero>
-      <ci:numeroEtiqueta>creció la oferta de departamentos en alquiler en CABA desde la derogación de la Ley de Alquileres (Mercado Libre–UdeSA, jun 2026)</ci:numeroEtiqueta>
-      <enclosure url="https://coninteres.com/assets/tarjetas/2026-07-31-alquileres-caba-oferta-multiplico.png" length="64043" type="image/png"/>
-      <media:content url="https://coninteres.com/assets/tarjetas/2026-07-31-alquileres-caba-oferta-multiplico.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

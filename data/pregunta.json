@@ -1,14 +1,14 @@
 {
   "descripcion": "La pregunta del día: la redacción la renueva una vez por día, derivada de la nota principal. Ver NEWSROOM.md.",
-  "fecha": "2026-09-02",
-  "pregunta": "Desde diciembre de 2023 el IPC acumuló 241,8% en 32 meses. Dentro de ese promedio, las tarifas de la vivienda subieron 530% y la ropa, 124%. Si la ropa aumentó 124% —más del doble—, ¿qué quiere decir que haya subido menos que el índice general?",
+  "fecha": "2026-09-03",
+  "pregunta": "Desde enero de 2024, la Asignación Universal por Hijo y la asignación familiar por hijo de los trabajadores registrados se actualizan todos los meses con exactamente el mismo porcentaje: 2,11% en septiembre. Si las dos suben siempre lo mismo, ¿qué pasa con la diferencia entre una y otra?",
   "opciones": [
-    "Que se abarató frente al resto de los precios: para comprar la misma ropa hace falta hoy una porción más chica del gasto total, aunque en pesos cueste más del doble",
-    "Que la ropa bajó de precio: 124% es la suba nominal, pero el dato real del INDEC muestra una caída",
-    "Que el INDEC le bajó el peso a la ropa dentro de la canasta, y por eso su suba quedó por debajo del promedio"
+    "No se mueve: multiplicar dos montos por el mismo coeficiente no cambia la proporción entre ellos, así que la brecha queda igual mes tras mes",
+    "Se achica: como la asignación familiar parte de un monto más bajo, el mismo porcentaje la hace crecer más rápido y la acerca a la AUH",
+    "Se agranda: aplicar el mismo porcentaje sobre un monto mayor suma más pesos, así que la AUH se despega cada mes un poco más"
   ],
   "correcta": 0,
-  "explicacion": "Un índice general es un promedio ponderado: adentro conviven rubros que corren muy por encima y muy por debajo. Que la ropa haya subido 124% mientras el IPC subía 241,8% no significa que esté más barata en pesos —cuesta más del doble que en diciembre de 2023—, sino que se abarató en términos relativos: perdió peso frente al resto de la canasta. Esto es lo que se llama un cambio de precios relativos, y entre el rubro que más subió y el que menos subió hay 406,7 puntos porcentuales de distancia. Ojo con los distractores: el 124% es una suba, no una baja; y los ponderadores del INDEC definen cuánto pesa cada rubro en el promedio, no cuánto sube su precio. Una advertencia final: 'se abarató en relación al promedio' no equivale a 'te alcanza para más'. Eso depende de cómo se movió tu ingreso, que es otro dato.",
-  "nota": "articulos/2026-09-01-precios-relativos-doce-divisiones-ipc.html",
-  "leccion": "lecciones/inflacion-bolsillo.html"
+  "explicacion": "La movilidad de la ley 27.160 es un único coeficiente multiplicativo que se aplica a todos los montos a la vez. Y una razón entre dos números no cambia si los multiplicás a ambos por lo mismo: 9,5 veces hoy, 9,5 veces el mes que viene, con cualquier inflación. Se comprueba en los datos: entre junio y septiembre de 2026 la AUH subió 6,2781% y el cuarto rango del SUAF, 6,2922% — la diferencia son los redondeos al peso entero. La tercera opción confunde pesos con proporciones: es cierto que la AUH suma más pesos por mes (el 2,11% de $154.031 son $3.250; el de $16.217, $342), y por eso la distancia medida en plata sí se agranda. Pero la distancia medida en veces no se mueve. La brecha de 9,5 veces no nació de la inflación: la creó un acto normativo puntual, el Decreto 117/2023, que duplicó una prestación y no tocó la otra. Solo otro acto normativo puede cambiarla.",
+  "nota": "articulos/2026-09-03-asignaciones-familiares-brecha-auh-suaf.html",
+  "leccion": "lecciones/presupuesto.html"
 }
