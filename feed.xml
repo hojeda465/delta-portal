@@ -11,13 +11,104 @@
     <description>La economía argentina, con interés: cada dato con su fuente, su contexto y su verificación a la vista.</description>
     <language>es-AR</language>
     <copyright>Con Interés</copyright>
-    <lastBuildDate>Thu, 03 Sep 2026 13:41:00 -0300</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 15:16:00 -0300</lastBuildDate>
     <ttl>60</ttl>
     <image>
       <url>https://coninteres.com/assets/og-delta.png</url>
       <title>Con Interés</title>
       <link>https://coninteres.com/</link>
     </image>
+    <item>
+      <title>Malvinas: el Estado abrió 45 expedientes con una ley de 2011 que multa en barriles de petróleo, no en pesos</title>
+      <link>https://coninteres.com/articulos/2026-09-05-malvinas-45-sanciones-ley-26659.html</link>
+      <guid isPermaLink="true">https://coninteres.com/articulos/2026-09-05-malvinas-45-sanciones-ley-26659.html</guid>
+      <pubDate>Sat, 05 Sep 2026 09:00:00 -0300</pubDate>
+      <dc:creator>Redacción Con Interés</dc:creator>
+      <category>ECONOMÍA</category>
+      <description>En quince años, la ley 26.659 se aplicó dos veces. El viernes, un decreto le dio a la Cancillería la lapicera y los plazos que le faltaban, y al día siguiente el Gobierno informó que abrió procedimiento contra 45 personas y empresas de una sola vez. La escala va de 5 a 20 años de inhabilitación y las multas están fijadas en barriles de crudo —hasta 1.500.000— para que el paso del tiempo no se las coma. Pero el instrumento que más puede pesar no estaba en la ley original: es una declaración jurada en la ventanilla del RIGI.</description>
+      <ci:numero>45</ci:numero>
+      <ci:numeroEtiqueta>personas y empresas contra las que la Cancillería abrió procedimiento sancionatorio por actividades de hidrocarburos en la plataforma continental sin autorización argentina. En los quince años previos, la misma ley se había aplicado dos veces</ci:numeroEtiqueta>
+      <enclosure url="https://coninteres.com/assets/tarjetas/2026-09-05-malvinas-45-sanciones-ley-26659.png" length="61679" type="image/png"/>
+      <media:content url="https://coninteres.com/assets/tarjetas/2026-09-05-malvinas-45-sanciones-ley-26659.png" medium="image" type="image/png"/>
+    </item>
+    <item>
+      <title>El riesgo país cerró en 494 puntos: el doble del promedio de la región y siete veces el de Uruguay</title>
+      <link>https://coninteres.com/articulos/2026-09-05-riesgo-pais-494-ranking-region.html</link>
+      <guid isPermaLink="true">https://coninteres.com/articulos/2026-09-05-riesgo-pais-494-ranking-region.html</guid>
+      <pubDate>Sat, 05 Sep 2026 10:30:00 -0300</pubDate>
+      <dc:creator>Redacción Con Interés</dc:creator>
+      <category>MERCADOS</category>
+      <description>El miércoles varios portales titularon que la Argentina "quebró el umbral de los 500 puntos". Es cierto que cerró en 494, y es cierto que bajó. Lo que el titular no dice es que ese umbral ya se había perforado en enero y que en julio el índice llegó a 403: 494 no es un mínimo, es una vuelta. Puesto en el mapa de la región, el número dice otra cosa: solo Ecuador, Bolivia y Venezuela pagan más caro que nosotros. Traducido a plata, esos 244 puntos de diferencia con el promedio latinoamericano cuestan US$24,4 millones por año por cada US$1.000 millones que la Argentina quiera tomar prestados.</description>
+      <ci:numero>494</ci:numero>
+      <ci:numeroEtiqueta>puntos básicos del riesgo país argentino al cierre del 3 de septiembre de 2026. El promedio de América Latina es de 250; Uruguay paga 64</ci:numeroEtiqueta>
+      <enclosure url="https://coninteres.com/assets/tarjetas/2026-09-05-riesgo-pais-494-ranking-region.png" length="63971" type="image/png"/>
+      <media:content url="https://coninteres.com/assets/tarjetas/2026-09-05-riesgo-pais-494-ranking-region.png" medium="image" type="image/png"/>
+    </item>
+    <item>
+      <title>La misma recaudación de agosto se publicó como +1,1%, 0% y −0,3% real. Los tres cálculos están bien hechos</title>
+      <link>https://coninteres.com/articulos/2026-09-05-recaudacion-agosto-tres-numeros-reales.html</link>
+      <guid isPermaLink="true">https://coninteres.com/articulos/2026-09-05-recaudacion-agosto-tres-numeros-reales.html</guid>
+      <pubDate>Sat, 05 Sep 2026 12:00:00 -0300</pubDate>
+      <dc:creator>Redacción Con Interés</dc:creator>
+      <category>ECONOMÍA</category>
+      <description>ARCA informó el 1º de septiembre que en agosto recaudó $20.508.537 millones, 33,5% más que un año atrás. Ese número nominal no está en discusión. El que sí lo está es el otro, el que importa: cuánto creció descontando la suba de precios. Tres medios publicaron tres resultados distintos el mismo día, y ninguno se equivocó. El motivo es una regla del calendario que casi nunca se explica: para deflactar agosto hace falta la inflación de agosto, y el INDEC recién la publica el 10 de septiembre a las 16.</description>
+      <ci:numero>33,5%</ci:numero>
+      <ci:numeroEtiqueta>creció la recaudación de agosto de 2026 en pesos corrientes, según ARCA. Cuánto creció descontando la inflación depende del deflactor que se use, y el dato oficial de inflación de agosto todavía no se publicó</ci:numeroEtiqueta>
+      <enclosure url="https://coninteres.com/assets/tarjetas/2026-09-05-recaudacion-agosto-tres-numeros-reales.png" length="69873" type="image/png"/>
+      <media:content url="https://coninteres.com/assets/tarjetas/2026-09-05-recaudacion-agosto-tres-numeros-reales.png" medium="image" type="image/png"/>
+    </item>
+    <item>
+      <title>En agosto se patentaron 1,66 motos por cada auto. Hace exactamente un año era una y una</title>
+      <link>https://coninteres.com/articulos/2026-09-05-motos-autos-relacion-agosto.html</link>
+      <guid isPermaLink="true">https://coninteres.com/articulos/2026-09-05-motos-autos-relacion-agosto.html</guid>
+      <pubDate>Sat, 05 Sep 2026 14:00:00 -0300</pubDate>
+      <dc:creator>Redacción Con Interés</dc:creator>
+      <category>ECONOMÍA</category>
+      <description>Los dos mercados se movieron al mismo tiempo y en dirección opuesta: los autos 0 km cayeron 19,1% interanual y las motos subieron 34,2%. Puestos uno al lado del otro, el cruce es de manual: en agosto de 2025 se patentaron 54.664 autos y 54.560 motos, prácticamente empatados; en agosto de 2026, 44.415 autos y 73.566 motos. No es que a los argentinos les hayan empezado a gustar las motos. Es que entre una moto de $3 millones y un auto de $25 millones, el que no llega al segundo compra la primera: es el consumo durable bajando un escalón.</description>
+      <ci:numero>1,66</ci:numero>
+      <ci:numeroEtiqueta>motos patentadas por cada auto 0 km en agosto de 2026, según ACARA. En agosto de 2025 la relación era de 1,00: 54.560 motos contra 54.664 autos</ci:numeroEtiqueta>
+      <enclosure url="https://coninteres.com/assets/tarjetas/2026-09-05-motos-autos-relacion-agosto.png" length="55074" type="image/png"/>
+      <media:content url="https://coninteres.com/assets/tarjetas/2026-09-05-motos-autos-relacion-agosto.png" medium="image" type="image/png"/>
+    </item>
+    <item>
+      <title>El aumento más grande de septiembre es 35,52% y el más chico 1,8%. Comparar los dos es un error: uno es de un año</title>
+      <link>https://coninteres.com/articulos/2026-09-05-aumentos-septiembre-mensual-anual.html</link>
+      <guid isPermaLink="true">https://coninteres.com/articulos/2026-09-05-aumentos-septiembre-mensual-anual.html</guid>
+      <pubDate>Sat, 05 Sep 2026 16:00:00 -0300</pubDate>
+      <dc:creator>Redacción Con Interés</dc:creator>
+      <category>ECONOMÍA</category>
+      <description>Las listas de aumentos que circulan a fin de mes ponen todos los porcentajes en la misma columna, y ahí se arma el malentendido. El 35,52% de los alquileres viejos es un ajuste anual; el 6,22% de los alquileres nuevos es trimestral; todo lo demás —transporte, prepagas, colegios, empleadas domésticas— es mensual. Llevados todos a la misma vara, el orden se da vuelta por completo: el aumento más fuerte de septiembre no es el del alquiler, es el del tren, que sube 14,29% en un solo mes.</description>
+      <ci:numero>35,52%</ci:numero>
+      <ci:numeroEtiqueta>el ajuste de septiembre para los alquileres firmados bajo la ley 27.551, hoy derogada. Es anual: equivale a 2,57% por mes, y queda en el medio de la tabla cuando se lo compara con el resto</ci:numeroEtiqueta>
+      <enclosure url="https://coninteres.com/assets/tarjetas/2026-09-05-aumentos-septiembre-mensual-anual.png" length="70130" type="image/png"/>
+      <media:content url="https://coninteres.com/assets/tarjetas/2026-09-05-aumentos-septiembre-mensual-anual.png" medium="image" type="image/png"/>
+    </item>
+    <item>
+      <title>Hay 37.000 asalariados privados registrados menos que en julio de 2016: el empleo formal volvió al nivel de hace diez años</title>
+      <link>https://coninteres.com/articulos/2026-09-05-empleo-privado-decada-perdida.html</link>
+      <guid isPermaLink="true">https://coninteres.com/articulos/2026-09-05-empleo-privado-decada-perdida.html</guid>
+      <pubDate>Sat, 05 Sep 2026 18:00:00 -0300</pubDate>
+      <dc:creator>Redacción Con Interés</dc:creator>
+      <category>ECONOMÍA</category>
+      <description>El dato viene del SIPA, el registro del sistema previsional, y lo procesó el equipo de empleo del IIEP de la UBA y el CONICET. En mayo de 2026 había 6,132 millones de trabajadores asalariados registrados en empresas privadas. En julio de 2016 había 6,169 millones. Entre las dos fechas hubo dos gobiernos, una pandemia, una salida del cepo y dos crisis cambiarias, y el resultado neto es levemente negativo. La serie acumula además doce meses consecutivos de caída: la racha más larga desde que el registro está disponible, en 2009.</description>
+      <ci:numero>6,13 M</ci:numero>
+      <ci:numeroEtiqueta>asalariados registrados del sector privado en mayo de 2026, contra 6,169 millones en julio de 2016. Desde noviembre de 2023 se perdieron 241.000 puestos</ci:numeroEtiqueta>
+      <enclosure url="https://coninteres.com/assets/tarjetas/2026-09-05-empleo-privado-decada-perdida.png" length="67732" type="image/png"/>
+      <media:content url="https://coninteres.com/assets/tarjetas/2026-09-05-empleo-privado-decada-perdida.png" medium="image" type="image/png"/>
+    </item>
+    <item>
+      <title>El INDEC informó que la pesca creció 300,2% en julio. Contra el último julio sin conflicto, creció 8,6%</title>
+      <link>https://coninteres.com/articulos/2026-09-03-pesca-300-por-ciento-base-hundida.html</link>
+      <guid isPermaLink="true">https://coninteres.com/articulos/2026-09-03-pesca-300-por-ciento-base-hundida.html</guid>
+      <pubDate>Thu, 03 Sep 2026 23:55:00 -0300</pubDate>
+      <dc:creator>Redacción Con Interés</dc:creator>
+      <category>ECONOMÍA</category>
+      <description>El dato salió el jueves a las 16 y varios portales lo publicaron con ese número en el título: la producción pesquera se multiplicó por cuatro en un año. La cuenta está bien. El problema es contra qué se compara: julio de 2025 fue el peor julio de toda la serie, con buena parte de la flota langostinera amarrada por un conflicto gremial. Bajamos la serie oficial completa —175 meses desde enero de 2012— y rehicimos la comparación contra julio de 2024, el último julio normal. El resultado es 8,6%. El propio informe del INDEC avisa del problema, en un recuadro que empieza con la palabra IMPORTANTE.</description>
+      <ci:numero>8,6%</ci:numero>
+      <ci:numeroEtiqueta>creció la producción pesquera de julio de 2026 contra julio de 2024, el último julio sin conflicto gremial. Contra julio de 2025 —con la flota amarrada— el INDEC informó +300,2%</ci:numeroEtiqueta>
+      <enclosure url="https://coninteres.com/assets/tarjetas/2026-09-03-pesca-300-por-ciento-base-hundida.png" length="73494" type="image/png"/>
+      <media:content url="https://coninteres.com/assets/tarjetas/2026-09-03-pesca-300-por-ciento-base-hundida.png" medium="image" type="image/png"/>
+    </item>
     <item>
       <title>Por el mismo hijo, el Estado paga $154.031 o $16.217: la escala de asignaciones que un decreto partió en dos</title>
       <link>https://coninteres.com/articulos/2026-09-03-asignaciones-familiares-brecha-auh-suaf.html</link>
@@ -316,97 +407,6 @@
       <ci:numeroEtiqueta>bono en dólares de Chaco (2016)</ci:numeroEtiqueta>
       <enclosure url="https://coninteres.com/assets/tarjetas/2026-08-26-chaco-deuda-bono-dolares.png" length="65315" type="image/png"/>
       <media:content url="https://coninteres.com/assets/tarjetas/2026-08-26-chaco-deuda-bono-dolares.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Reservas del BCRA: récord de US$50.912 millones, el mayor nivel desde 2019 — pero ¿de quién son esos dólares?</title>
-      <link>https://coninteres.com/articulos/2026-08-25-reservas-bcra-record.html</link>
-      <guid isPermaLink="true">https://coninteres.com/articulos/2026-08-25-reservas-bcra-record.html</guid>
-      <pubDate>Tue, 25 Aug 2026 23:55:00 -0300</pubDate>
-      <dc:creator>Redacción Con Interés</dc:creator>
-      <category>MERCADOS</category>
-      <description>Las reservas brutas del Banco Central encadenaron récords en agosto y tocaron su punto más alto en casi siete años. Detrás del número grande, una distinción que cambia la lectura: cuánto de esa montaña de dólares es realmente del Banco Central y cuánto son swaps, préstamos del FMI y la suba del oro.</description>
-      <ci:numero>US$50.912 M</ci:numero>
-      <ci:numeroEtiqueta>reservas brutas del BCRA (récord, 25/8/2026)</ci:numeroEtiqueta>
-      <enclosure url="https://coninteres.com/assets/tarjetas/2026-08-25-reservas-bcra-record.png" length="69918" type="image/png"/>
-      <media:content url="https://coninteres.com/assets/tarjetas/2026-08-25-reservas-bcra-record.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Récord nuclear: Argentina generó 10,76 millones de MWh en 2025 y exportó tecnología atómica por primera vez</title>
-      <link>https://coninteres.com/articulos/2026-08-25-nuclear-record-exportacion.html</link>
-      <guid isPermaLink="true">https://coninteres.com/articulos/2026-08-25-nuclear-record-exportacion.html</guid>
-      <pubDate>Tue, 25 Aug 2026 23:45:00 -0300</pubDate>
-      <dc:creator>Redacción Con Interés</dc:creator>
-      <category>ECONOMÍA</category>
-      <description>Con Atucha I parada por obras, las otras dos centrales marcaron el mayor nivel de generación de la historia —el segundo récord anual consecutivo— y cubren alrededor del 7% de la electricidad del país. En junio de 2026, Nucleoeléctrica sumó un hito: la primera venta al exterior de componentes para reactores.</description>
-      <ci:numero>10,76 M</ci:numero>
-      <ci:numeroEtiqueta>MWh: récord de generación nuclear (2025)</ci:numeroEtiqueta>
-      <enclosure url="https://coninteres.com/assets/tarjetas/2026-08-25-nuclear-record-exportacion.png" length="64788" type="image/png"/>
-      <media:content url="https://coninteres.com/assets/tarjetas/2026-08-25-nuclear-record-exportacion.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>Mercado Libre facturó más de US$10.000 millones en un trimestre por primera vez — y aun así ganó menos</title>
-      <link>https://coninteres.com/articulos/2026-08-25-mercadolibre-ingresos-record.html</link>
-      <guid isPermaLink="true">https://coninteres.com/articulos/2026-08-25-mercadolibre-ingresos-record.html</guid>
-      <pubDate>Tue, 25 Aug 2026 15:00:00 -0300</pubDate>
-      <dc:creator>Redacción Con Interés</dc:creator>
-      <category>MERCADOS</category>
-      <description>La empresa nacida en la Argentina rompió su récord de ingresos (US$10.169 M, +50% interanual) empujada por Mercado Pago, pero su ganancia operativa cayó 17% y la neta 11%: presta cada vez más y aparta cada vez más plata para créditos que podrían no cobrarse.</description>
-      <ci:numero>US$10.169M</ci:numero>
-      <ci:numeroEtiqueta>ingresos de Mercado Libre en el 2º trimestre 2026</ci:numeroEtiqueta>
-      <enclosure url="https://coninteres.com/assets/tarjetas/2026-08-25-mercadolibre-ingresos-record.png" length="63146" type="image/png"/>
-      <media:content url="https://coninteres.com/assets/tarjetas/2026-08-25-mercadolibre-ingresos-record.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>El pollo, imbatible en la mesa argentina: récord de 49,4 kilos por persona en 2025</title>
-      <link>https://coninteres.com/articulos/2026-07-25-pollo-record-consumo-49-kilos.html</link>
-      <guid isPermaLink="true">https://coninteres.com/articulos/2026-07-25-pollo-record-consumo-49-kilos.html</guid>
-      <pubDate>Sat, 25 Jul 2026 08:26:00 -0300</pubDate>
-      <dc:creator>Redacción Con Interés</dc:creator>
-      <category>ECONOMÍA</category>
-      <description>El consumo de carne aviar llegó a 49,4 kg por habitante en 2025, el nivel más alto registrado, con una producción récord de 2,47 millones de toneladas (CEPA). Ya venía cabeza a cabeza con la carne vacuna —la superó por primera vez en 2024— y la distancia se afianza. Detrás del cambio de dieta hay una razón fría: un kilo de asado cuesta casi cuatro kilos de pollo.</description>
-      <ci:numero>49,4 kg</ci:numero>
-      <ci:numeroEtiqueta>consumo de carne de pollo por habitante en 2025 — récord histórico (CEPA); supera los 48,1 kg de 2024</ci:numeroEtiqueta>
-      <enclosure url="https://coninteres.com/assets/tarjetas/2026-07-25-pollo-record-consumo-49-kilos.png" length="62552" type="image/png"/>
-      <media:content url="https://coninteres.com/assets/tarjetas/2026-07-25-pollo-record-consumo-49-kilos.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>El consumo se parte en dos: los shoppings crecieron 11,9% en mayo mientras el súper siguió en rojo</title>
-      <link>https://coninteres.com/articulos/2026-07-24-consumo-shoppings-vs-supermercados.html</link>
-      <guid isPermaLink="true">https://coninteres.com/articulos/2026-07-24-consumo-shoppings-vs-supermercados.html</guid>
-      <pubDate>Fri, 24 Jul 2026 16:12:00 -0300</pubDate>
-      <dc:creator>Redacción Con Interés</dc:creator>
-      <category>ECONOMÍA</category>
-      <description>En mayo, las ventas en los centros de compras subieron 11,9% interanual a precios constantes —su primer avance tras once meses de caídas—, según el INDEC. En el mismo mes, los supermercados cayeron 0,7% y los autoservicios mayoristas 2,3%. La recuperación del consumo llegó primero al shopping; a la góndola de todos los días, todavía no.</description>
-      <ci:numero>+11,9%</ci:numero>
-      <ci:numeroEtiqueta>crecieron las ventas en los shoppings en mayo 2026 (interanual, a precios constantes) — 1º avance tras once meses de caídas; el súper (−0,7%) y los mayoristas (−2,3%) siguen en baja</ci:numeroEtiqueta>
-      <enclosure url="https://coninteres.com/assets/tarjetas/2026-07-24-consumo-shoppings-vs-supermercados.png" length="71749" type="image/png"/>
-      <media:content url="https://coninteres.com/assets/tarjetas/2026-07-24-consumo-shoppings-vs-supermercados.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>El litio pisa el acelerador: la producción creció 45% en un año y empuja a la minería a su nivel más alto desde 2017</title>
-      <link>https://coninteres.com/articulos/2026-07-24-litio-produccion-record.html</link>
-      <guid isPermaLink="true">https://coninteres.com/articulos/2026-07-24-litio-produccion-record.html</guid>
-      <pubDate>Fri, 24 Jul 2026 14:21:00 -0300</pubDate>
-      <dc:creator>Redacción Con Interés</dc:creator>
-      <category>ECONOMÍA</category>
-      <description>El volumen de carbonato de litio producido en mayo fue 45,1% mayor que un año atrás (INDEC). Es el mineral que más traccionó al índice de producción minera, que tocó su punto más alto desde 2017. Detrás del salto hay plantas nuevas llegando a régimen; la letra chica es el precio.</description>
-      <ci:numero>+45,1%</ci:numero>
-      <ci:numeroEtiqueta>creció la producción de carbonato de litio en mayo 2026 (interanual); el índice minero, en su nivel más alto desde 2017</ci:numeroEtiqueta>
-      <enclosure url="https://coninteres.com/assets/tarjetas/2026-07-24-litio-produccion-record.png" length="62548" type="image/png"/>
-      <media:content url="https://coninteres.com/assets/tarjetas/2026-07-24-litio-produccion-record.png" medium="image" type="image/png"/>
-    </item>
-    <item>
-      <title>El renacer del girasol: las exportaciones se más que duplicaron y tocaron su mayor nivel en dos décadas</title>
-      <link>https://coninteres.com/articulos/2026-07-24-girasol-boom-exportaciones.html</link>
-      <guid isPermaLink="true">https://coninteres.com/articulos/2026-07-24-girasol-boom-exportaciones.html</guid>
-      <pubDate>Fri, 24 Jul 2026 12:24:00 -0300</pubDate>
-      <dc:creator>Redacción Con Interés</dc:creator>
-      <category>ECONOMÍA</category>
-      <description>El complejo girasolero exportó US$1.674 millones en los primeros cinco meses de 2026, un 126% más que un año atrás (INDEC). Detrás del salto: una cosecha récord del siglo (6,6 M t) y el hueco que dejó Ucrania en el mercado mundial. Un cultivo relegado vuelve a dar dólares — con la letra chica a la vista.</description>
-      <ci:numero>US$1.674 M</ci:numero>
-      <ci:numeroEtiqueta>exportó el complejo girasolero en enero-mayo 2026 (+126% i.a., el mayor nivel en dos décadas)</ci:numeroEtiqueta>
-      <enclosure url="https://coninteres.com/assets/tarjetas/2026-07-24-girasol-boom-exportaciones.png" length="65569" type="image/png"/>
-      <media:content url="https://coninteres.com/assets/tarjetas/2026-07-24-girasol-boom-exportaciones.png" medium="image" type="image/png"/>
     </item>
   </channel>
 </rss>

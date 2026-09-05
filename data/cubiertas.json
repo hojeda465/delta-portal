@@ -714,6 +714,55 @@
       "fecha": "2026-09-03",
       "estado": "publicada",
       "articulo_id": "2026-09-03-asignaciones-familiares-brecha-auh-suaf"
+    },
+    {
+      "tema": "IPI pesquero julio 2026 / el +300,2% interanual contra una base hundida por el conflicto gremial de 2025",
+      "angulo": "ángulo NUEVO: no es 'la pesca creció 300%' sino contra qué se mide ese 300%. Julio de 2025 (índice 82,4) es el julio más bajo de la serie por el conflicto que dejó la flota langostinera amarrada entre abril y julio; el propio INDEC lo advierte en un recuadro. Bajamos la serie oficial completa (serie_ipi_pesquero.xlsx, 175 meses desde ene-2012) y rehicimos la comparación contra julio de 2024 (303,5): +8,6%, no +300,2%. El acumulado ene-jul es +15,4% contra 2024, no +57,2%. Segundo hallazgo: julio de 2026 (329,6) es igual el julio más alto de la serie, superando a julio de 2023 (312,4), y junio de 2026 (335,3) es el máximo absoluto: la recuperación es real, su tamaño no es el del titular. Tercero: los moluscos (calamar) caen 71,7% contra 2024. Método validado: reproduce al decimal el 57,2%, el 2.786,8%, el -59,3% y el -0,4% publicados por el INDEC.",
+      "fecha": "2026-09-03",
+      "estado": "publicada",
+      "articulo_id": "2026-09-03-pesca-300-por-ciento-base-hundida"
+    },
+    {
+      "tema": "Malvinas: el Estado abrió 45 expedientes con una ley de 2011 que multa en barriles de petróleo, no en pesos",
+      "angulo": "angulo NUEVO: no es 'el Gobierno sanciona a 45 empresas' sino que ABRIR UN PROCEDIMIENTO NO ES SANCIONAR, y que la ley 26.659 (16/03/2011, modificada por la 26.915 del 09/12/2013) ya existia y se aplico solo DOS veces en quince anos: Rockhopper (2013) y Navitas (2022), ambas con 20 anos de inhabilitacion, y las dos siguen en Sea Lion. Lo que cambio el decreto 868/2026 (BO 04/09/2026) es la maquinaria: Cancilleria como autoridad de aplicacion, plazos de 5+10+10 dias habiles, y DDJJ obligatoria en los tramites del RIGI y de permisos hidrocarburiferos. Segundo hallazgo: las multas del art. 7 estan fijadas en BARRILES WTI (20.000-100.000 exploracion; 150.000-1.500.000 extraccion), un diseno anti-licuacion. Tercero, la escala: Sea Lion arrancaria en 55.000 b/d contra los 912.939 b/d que produjo la Argentina en julio de 2026. Reaccion de mercado: Rockhopper -6,5% en Londres y Navitas -2,3% en Tel Aviv el 04/09.",
+      "fecha": "2026-09-05",
+      "estado": "publicada",
+      "articulo_id": "2026-09-05-malvinas-45-sanciones-ley-26659"
+    },
+    {
+      "tema": "El riesgo país cerró en 494 puntos: el doble del promedio de la región y siete veces el de Uruguay",
+      "angulo": "angulo NUEVO: los 494 pb del 03/09/2026 NO son un minimo. El indice ya habia perforado los 500 en enero de 2026 (481 el 28/01), toco 446 el 11/06 y 403 en julio; 494 es el valor mas bajo desde el 17 de agosto. Superlativo degradado segun la regla de la casa. Segundo eje: la vara regional, con el ranking completo del EMBI (Uruguay 64, Chile 84, Brasil 171, promedio 250, Argentina 494) y la traduccion a plata: 4,94 pp de sobretasa sobre un Treasury de 4,78% dan ~9,7% anual en dolares, y 244 pb de brecha contra el promedio regional son US$24,4 M por ano por cada US$1.000 M. Tercero: el promedio regional de 250 incluye a Venezuela (6.145); sin ella da ~184 y la brecha se agranda. Publicamos las dos lecturas.",
+      "fecha": "2026-09-05",
+      "estado": "publicada",
+      "articulo_id": "2026-09-05-riesgo-pais-494-ranking-region"
+    },
+    {
+      "tema": "La misma recaudación de agosto se publicó como +1,1%, 0% y −0,3% real. Los tres cálculos están bien hechos",
+      "angulo": "angulo NUEVO: no es 'cuanto recaudo ARCA en agosto' sino POR QUE el mismo dato se publico como +1,1%, 0% y -0,3% real el mismo dia, y por que ninguno esta mal. Causa: para deflactar agosto hace falta el IPC de agosto, que el INDEC publica recien el 10/09 a las 16 (calendario oficial). Con un nominal de +33,5% y una inflacion estimada en torno a 33%, el signo del resultado depende del supuesto. Lo unico no discutido: $20.508.537 millones, +33,5% nominal. Segundo hallazgo: la composicion, que ningun deflactor da vuelta -> IVA neto -6,1% real, cheque -9%, seguridad social -1,2% contra DEX +91,1% y Ganancias +8,8% (por postergacion de vencimientos). Tercero: los DEX +155,1% nominal se explican por base baja de agosto 2025 (adelanto de pagos por la baja temporaria de alicuotas hasta junio 2025). Acumulado ene-ago: -3,8% real ($6,5 billones a precios de agosto). Coparticipacion: $6,85 billones, 0% real.",
+      "fecha": "2026-09-05",
+      "estado": "publicada",
+      "articulo_id": "2026-09-05-recaudacion-agosto-tres-numeros-reales"
+    },
+    {
+      "tema": "En agosto se patentaron 1,66 motos por cada auto. Hace exactamente un año era una y una",
+      "angulo": "angulo NUEVO: los patentamientos de autos y de motos se publican el mismo dia y casi siempre se cuentan por separado. Puestos juntos dan el cruce: 1,66 motos por auto en agosto de 2026 (73.566 vs 44.415) contra 1,00 en agosto de 2025 (54.560 vs 54.664). Acumulado ene-ago: 1,52 vs 0,94. Los autos perdieron 58.950 unidades en el ano y las motos ganaron 171.413. Explicacion verificable de precio: piso de moto ~$3.000.000 (jun-2026) contra $25.540.000 del auto mas barato (ene-2026). Control aritmetico: los acumulados cierran exacto con las variaciones de ACARA (-13,3% y +41,2%); las variaciones MENSUALES no (dan -18,8% y +34,8% con los niveles publicados), y lo dejamos a la vista. Lo que NO se puede afirmar: que las motos vayan al delivery (no hay fuente publica que lo mida) ni nada sobre siniestralidad.",
+      "fecha": "2026-09-05",
+      "estado": "publicada",
+      "articulo_id": "2026-09-05-motos-autos-relacion-agosto"
+    },
+    {
+      "tema": "El aumento más grande de septiembre es 35,52% y el más chico 1,8%. Comparar los dos es un error: uno es de un año",
+      "angulo": "angulo NUEVO: las listas de aumentos de fin de mes ponen en la misma columna porcentajes de periodos distintos. El 35,52% del alquiler bajo ley 27.551 es ANUAL (ICL del BCRA) y el 6,22% del alquiler nuevo es TRIMESTRAL; todo el resto es mensual. Llevados a equivalente mensual compuesto (calculo propio, raiz doceava y cubica), el orden se da vuelta: el tren manda con 14,29% mensual, el alquiler viejo cae al quinto puesto con 2,57% y el nuevo al septimo con 2,03%. Segundo hallazgo: la asimetria de caja -> el inquilino de la ley vieja recibe todo el ajuste en un solo mes. Tercero: el item que menos sube (1,8%) es un INGRESO, el de casas particulares. Discrepancias entre fuentes dejadas a la vista: colectivo del conurbano (4,3% vs 4,7% para el mismo boleto de $1.158,97) y subte (4,1% no cierra con $1.621 -> $1.753).",
+      "fecha": "2026-09-05",
+      "estado": "publicada",
+      "articulo_id": "2026-09-05-aumentos-septiembre-mensual-anual"
+    },
+    {
+      "tema": "Hay 37.000 asalariados privados registrados menos que en julio de 2016: el empleo formal volvió al nivel de hace diez años",
+      "angulo": "angulo NUEVO: el nivel de mayo de 2026 (6,132 M de asalariados privados registrados) es practicamente el de julio de 2016 (6,169 M): -37.000 en diez anos. Fuente: SIPA procesado por el EDIL (IIEP UBA-CONICET), informe del 26/08/2026. Doce meses consecutivos de caida, la racha mas larga desde 2009; -241.000 puestos desde nov-2023 (-3,8%); -4,3% contra el maximo de ago-2023. Sectorial: construccion -14,2% e industria -7,2% desde nov-2023; en mayo, comercio -4.200, industria -3.200, construccion -2.000. Reconstruimos los niveles de ago-2023 (~6,41 M) y nov-2023 (~6,37 M) desde las variaciones informadas y lo rotulamos como tal. Control de coherencia: 241.000/6,373 M = 3,78% ~ el -3,8% informado. Limite explicitado: no calculamos la tasa sobre poblacion (haria falta serie poblacional homogenea 2016-2026). Distincion metodologica clave: comparar con 2016 responde una pregunta estructural; comparar con nov-2023 responde otra, de periodo de gobierno.",
+      "fecha": "2026-09-05",
+      "estado": "publicada",
+      "articulo_id": "2026-09-05-empleo-privado-decada-perdida"
     }
   ]
 }
